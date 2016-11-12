@@ -39,10 +39,10 @@ async def planifie():
                 channel = server.get_channel(channel_)
                 permissions = channel.permissions_for(server.me)
                 if permissions.read_messages and permissions.send_messages:
-                    #logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
+                    # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
                     #    "id"           : channel.id,
                     #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
-                    #}))
+                    # }))
                     templist = []
                     for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
                         templist.append(int(thisDay + random.randint(0, 86400)))
@@ -58,7 +58,7 @@ async def get_next_duck():
     prochaincanard = {
         "time"   : 0,
         "channel": None
-        }
+    }
     # logger.debug(commons.ducks_planned)
     for channel in commons.ducks_planned.keys():  # Determination du prochain canard
         for canard in commons.ducks_planned[channel]:
@@ -67,7 +67,7 @@ async def get_next_duck():
                     prochaincanard = {
                         "time"   : canard,
                         "channel": channel
-                        }
+                    }
     timetonext = prochaincanard["time"] - time.time()
 
     if not prochaincanard["channel"]:
@@ -75,7 +75,7 @@ async def get_next_duck():
         logger.debug(
                 "No more ducks for today, wait for {demain} sec)".format(**{
                     "demain": thisDay + 86400 - time.time()
-                    }))
+                }))
 
     else:
         await comm.logwithinfos(prochaincanard["channel"], log_str="Next duck at {time} (in {timetonext} sec)".format(**{
@@ -96,7 +96,7 @@ async def spawn_duck(duck):
                                                  prefs.getPref(duck["channel"].server, "lang")).format(
                         **{
                             "channel": duck["channel"].name
-                            }))
+                        }))
                 await comm.logwithinfos(duck["channel"], player, "Envoi d'une notification de canard")
             except:
                 await comm.logwithinfos(duck["channel"], player, "Erreur lors de l'envoi d'une notification de canard")
@@ -118,8 +118,8 @@ async def spawn_duck(duck):
     if prefs.getPref(duck["channel"].server, "randomize_ducks"):
         canard_str = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri),
                                                                                                                       language=prefs.getPref(
-                                                                                                                          duck["channel"].server,
-                                                                                                                          "language"))
+                                                                                                                              duck["channel"].server,
+                                                                                                                              "language"))
     else:
         canard_str = "-,,.-'\`'°-,,.-'\`'° /_^<   QUAACK"
     try:

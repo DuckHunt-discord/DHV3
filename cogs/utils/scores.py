@@ -6,6 +6,7 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 # Constants #
 import dataset
 
+from cogs.utils import prefs
 from . import commons
 
 db = dataset.connect('sqlite:///scores.db')
@@ -13,7 +14,7 @@ db = dataset.connect('sqlite:///scores.db')
 
 def _gettable(channel):
     server = channel.server
-    if getPref(server, "global"):
+    if prefs.getPref(server, "global_scores"):
         return db[server.id]
     else:
         return db[server.id + "-" + channel.id]

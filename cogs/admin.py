@@ -39,7 +39,7 @@ class Admin:
         else:
             await self.bot.say('\N{OK HAND SIGN}')
 
-    @commands.command(name='reload', hidden=True)
+    @commands.command(name='reload_cog', hidden=True)
     @checks.is_owner()
     async def _reload(self, *, module: str):
         """Reloads a module."""

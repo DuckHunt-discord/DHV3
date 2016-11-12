@@ -6,7 +6,11 @@ from cogs.utils import commons
 
 
 def getPref(server, pref):
-    servers = JSONloadFromDisk("channels.json")
+    if not hasattr(commons, "servers"):
+        servers = JSONloadFromDisk("channels.json")
+        commons.servers = servers
+    else:
+        servers = commons.servers
     try:
         return servers[server.id]["settings"].get(pref, commons.defaultSettings[pref]["value"])
     except KeyError:
@@ -16,6 +20,7 @@ def getPref(server, pref):
 def JSONsaveToDisk(data, filename):
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, sort_keys=True, indent=4, ensure_ascii=False)
+    del commons.servers
 
 
 def JSONloadFromDisk(filename, default="{}", error=False):

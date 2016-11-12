@@ -92,7 +92,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    await comm.logwithinfos_message(message, message.content)
+    # await comm.logwithinfos_message(message, message.content)
     await bot.process_commands(message)
 
 
@@ -122,7 +122,7 @@ async def mainloop():
                 }))
                 logger.debug("Current ducks : {canards}".format(**{
                     "canards": len(commons.ducks_spawned)
-                    }))
+                }))
 
             if next_duck["time"] < now and next_duck["time"] != 0:  # CANARD !
                 await spawn_duck(next_duck)
@@ -135,8 +135,8 @@ async def mainloop():
                 if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) < int(now):  # Canard qui se barre
                     await comm.logwithinfos(canard["channel"], None,
                                             "Duck of {time} stayed for too long. (it's {now}, and it should have stayed until {shouldwaitto}).".format(**{
-                                                "time": canard["time"],
-                                                "now": now,
+                                                "time"        : canard["time"],
+                                                "now"         : now,
                                                 "shouldwaitto": str(
                                                         int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave")))
                                             }))

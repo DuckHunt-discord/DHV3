@@ -2,7 +2,9 @@ import json
 import logging
 
 import aiohttp
+
 from .utils import commons
+
 log = logging.getLogger()
 
 DISCORD_BOTS_API = 'https://bots.discord.pw/api'
@@ -20,7 +22,6 @@ class Carbonitex:
         self.bot.loop.create_task(self.session.close())
 
     async def update(self):
-
         payload = json.dumps({
             'server_count': len(self.bot.servers)
         })
