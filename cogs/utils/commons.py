@@ -133,6 +133,10 @@ def init():
                 "value": 0,
                 "type" : int
             },
+            "prefix"                    : {
+                "value": "!",
+                "type" : str
+            },
             "killed_mentions"           : {
                 "value": True,
                 "type" : bool

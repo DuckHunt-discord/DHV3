@@ -39,10 +39,10 @@ async def planifie():
                 channel = server.get_channel(channel_)
                 permissions = channel.permissions_for(server.me)
                 if permissions.read_messages and permissions.send_messages:
-                    logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
-                        "id"           : channel.id,
-                        "ducks_per_day": prefs.getPref(server, "ducks_per_day")
-                    }))
+                    #logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
+                    #    "id"           : channel.id,
+                    #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
+                    #}))
                     templist = []
                     for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
                         templist.append(int(thisDay + random.randint(0, 86400)))

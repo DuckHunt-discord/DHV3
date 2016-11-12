@@ -39,7 +39,7 @@ help_attrs = dict(hidden=True)
 
 
 def prefix(bot, message):
-    return [':duck:', "🦆", "DuckHunt", "duckhunt"].append(prefs.getPref(message.server, "prefix"))
+    return [':duck:', "🦆" "DuckHunt", "duckhunt"] + list(prefs.getPref(message.server, "prefix"))
 
 
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None, help_attrs=help_attrs)
@@ -92,6 +92,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
+    await comm.logwithinfos_message(message, message.content)
     await bot.process_commands(message)
 
 
@@ -115,7 +116,7 @@ async def mainloop():
 
             if int(now) % 60 == 0 and next_duck["time"] != 0:
                 timetonext = next_duck["time"] - now
-                await comm.logwithinfos(next_duck["channel"], None, "Next duck : {time} (dans {timetonext} sec) ".format(**{
+                await comm.logwithinfos(next_duck["channel"], None, "Next duck : {time} (in {timetonext} sec) ".format(**{
                     "timetonext": timetonext,
                     "time"      : next_duck["time"]
                 }))
@@ -166,13 +167,12 @@ if __name__ == '__main__':
 
     bot.client_id = credentials['client_id']
     bot.commands_used = Counter()
-    bot.carbon_key = credentials['carbon_key']
     bot.bots_key = credentials['bots_key']
     for extension in initial_extensions:
         try:
             bot.load_extension(extension)
         except Exception as e:
-            print('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
+            logger.exception('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
     bot.loop.create_task(mainloop())
 
     ## POST INIT IMPORTS ##
