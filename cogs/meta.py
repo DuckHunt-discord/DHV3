@@ -44,7 +44,6 @@ class Meta:
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command(name='quit', hidden=True)
     @checks.is_owner()
     async def _quit(self):
@@ -149,6 +148,7 @@ class Meta:
     @commands.command(pass_context=True)
     async def wiki(self):
         raise NotImplementedError
+
 
 def setup(bot):
     bot.add_cog(Meta(bot))

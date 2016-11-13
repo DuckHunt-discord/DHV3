@@ -24,6 +24,19 @@ def is_admin_check(message):
     return admin  # Dans la liste des admins d'un serveur (fichier json)
 
 
+def is_activated_check(message):
+    servers = prefs.JSONloadFromDisk("channels.json")
+    try:
+        if message.channel.id in servers[message.server.id]["channels"]:
+            activated = True
+        else:
+            activated = False
+    except KeyError:
+        activated = False
+
+    bot.loop.create_task(comm.logwithinfos_message(message, "Check activated here : " + str(activated)))
+    return activated
+
 def is_owner():
     return commands.check(lambda ctx: is_owner_check(ctx.message))
 
@@ -34,6 +47,10 @@ def is_not_banned():
 
 def is_admin():
     return commands.check(lambda ctx: is_owner_check(ctx.message) or is_admin_check(ctx.message))
+
+
+def is_activated_here():
+    return commands.check(lambda ctx: is_activated_check(ctx.message))
 
 
 # The permission system of the bot is based on a "just works" basis

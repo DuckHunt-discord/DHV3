@@ -16,41 +16,50 @@ logger = commons.logger
 bot = commons.bot
 
 
-async def planifie():
-    logger.debug("Replanning")
+async def planifie(channel_obj: discord.Channel = None):
+    if not channel_obj:
+        logger.debug("Replanning")
+        planification_ = {}
+        now = time.time()
+        thisDay = now - (now % 86400)
+        servers = prefs.JSONloadFromDisk("channels.json", default="{}")
+        for server_ in servers.keys():
+            server = bot.get_server(server_)
+            if not server:
+                logger.debug("Non-existant server : " + str(server_))
 
-    planification_ = {}
+            elif not "channels" in servers[server.id]:
+                # try:bot.send_message(server.default_channel, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758")
+                # except: pass
+                await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
+            else:
+                for channel_ in servers[server.id]["channels"]:
+                    channel = server.get_channel(channel_)
+                    permissions = channel.permissions_for(server.me)
+                    if permissions.read_messages and permissions.send_messages:
+                        # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
+                        #    "id"           : channel.id,
+                        #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
+                        # }))
+                        templist = []
+                        for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
+                            templist.append(int(thisDay + random.randint(0, 86400)))
+                        planification_[channel] = sorted(templist)
+                    else:
+                        await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
+        commons.ducks_planned = planification_  # {"channel":[time objects]}
 
-    now = time.time()
-    thisDay = now - (now % 86400)
-
-    servers = prefs.JSONloadFromDisk("channels.json", default="{}")
-    for server_ in servers.keys():
-        server = bot.get_server(server_)
-        if not server:
-            logger.debug("Non-existant server : " + str(server_))
-
-        elif not "channels" in servers[server.id]:
-            # try:bot.send_message(server.default_channel, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758")
-            # except: pass
-            await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
+    else:
+        templist = []
+        now = time.time()
+        thisDay = now - (now % 86400)
+        permissions = channel_obj.permissions_for(channel_obj.server.me)
+        if permissions.read_messages and permissions.send_messages:
+            for id_ in range(1, prefs.getPref(channel_obj.server, "ducks_per_day") + 1):
+                templist.append(int(thisDay + random.randint(0, 86400)))
         else:
-            for channel_ in servers[server.id]["channels"]:
-                channel = server.get_channel(channel_)
-                permissions = channel.permissions_for(server.me)
-                if permissions.read_messages and permissions.send_messages:
-                    # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
-                    #    "id"           : channel.id,
-                    #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
-                    # }))
-                    templist = []
-                    for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
-                        templist.append(int(thisDay + random.randint(0, 86400)))
-                    planification_[channel] = sorted(templist)
-                else:
-                    await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
-
-    commons.ducks_planned = planification_  # {"channel":[time objects]}
+            await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
+        commons.ducks_planned[channel_obj.id] = sorted(templist)
 
 
 async def get_next_duck():
@@ -73,7 +82,7 @@ async def get_next_duck():
     if not prochaincanard["channel"]:
         thisDay = now - (now % 86400)
         logger.debug(
-                "No more ducks for today, wait for {demain} sec)".format(**{
+                "No more ducks for today, wait for {demain} sec".format(**{
                     "demain": thisDay + 86400 - time.time()
                 }))
 
@@ -97,9 +106,9 @@ async def spawn_duck(duck):
                         **{
                             "channel": duck["channel"].name
                         }))
-                await comm.logwithinfos(duck["channel"], player, "Envoi d'une notification de canard")
+                await comm.logwithinfos(duck["channel"], player, "Sending a duck notification")
             except:
-                await comm.logwithinfos(duck["channel"], player, "Erreur lors de l'envoi d'une notification de canard")
+                await comm.logwithinfos(duck["channel"], player, "Error sending the duck notification")
                 pass
 
         servers[duck["channel"].server.id]["detecteur"].pop(duck["channel"].id)
@@ -127,3 +136,21 @@ async def spawn_duck(duck):
     except:
         pass
     commons.ducks_spawned.append(duck)
+
+
+async def del_channel(channel):
+    servers = prefs.JSONloadFromDisk("channels.json")
+    if channel.id in servers[channel.server.id]["channels"]:
+        await comm.logwithinfos(channel, author=None, log_str="Deleting channel {name} | {id} from the json file...".format(**{
+            "id"  : channel.id,
+            "name": channel.name
+        }))
+        servers[channel.server.id]["channels"].remove(channel.id)
+        prefs.JSONsaveToDisk(servers, "channels.json")
+        try:
+            commons.ducks_planned.remove(channel.id)
+        except:
+            pass
+        for duck in commons.ducks_spawned[:]:
+            if duck["channel"] == channel:
+                commons.ducks_spawned.remove(duck)

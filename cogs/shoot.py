@@ -28,6 +28,5 @@ class Shoot:
         raise NotImplementedError
 
 
-
 def setup(bot):
     bot.add_cog(Shoot(bot))

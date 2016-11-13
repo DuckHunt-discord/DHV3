@@ -3,10 +3,9 @@ import inspect
 
 from discord.ext import commands
 
+from cogs.utils import comm, commons, prefs
+from cogs.utils.commons import _
 from .utils import checks
-
-
-# to expose to the eval command
 
 
 class Admin:
@@ -92,13 +91,25 @@ class Admin:
 
     @commands.command()
     @checks.is_owner()
-    async def serverlist(self, invitations: str = None):
+    async def serverlist(self, prefs: str = ""):
         raise NotImplementedError
 
-    @commands.command()
+    @commands.command(pass_context=True)
     @checks.is_owner()
-    async def broadcast(self):
-        raise NotImplementedError
+    async def broadcast(self, ctx, *, bc: str):
+        """!broadcast [message]"""
+        language = prefs.getPref(ctx.message.server, "language")
+        await comm.message_user(ctx.message, _("Starting the broadcast", language))
+        await comm.logwithinfos_ctx(ctx, "Broadcast started")
+        for channel in commons.ducks_planned.keys():
+            try:
+                await self.bot.send_message(channel, bc)
+            except:
+                await comm.logwithinfos_ctx(ctx, "Error broadcasting to " + channel)
+                pass
+        await comm.logwithinfos_ctx(ctx, "Broadcast ended")
+        await comm.message_user(ctx.message, _("Broadcast finished", language))
+
 
 def setup(bot):
     bot.add_cog(Admin(bot))
