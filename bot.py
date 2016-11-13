@@ -20,14 +20,7 @@ from cogs.utils.commons import _
 
 description = """DuckHunt, a game about killing ducks"""
 
-initial_extensions = [
-    'cogs.meta',
-    'cogs.carbonitex',
-    'cogs.mentions',
-    'cogs.admin',
-    'cogs.shoot',
-    'cogs.serveradmin'
-]
+initial_extensions = ['cogs.admin', 'cogs.carbonitex', 'cogs.exp', 'cogs.meta', 'cogs.serveradmin', 'cogs.shoot']
 
 discord_logger = logging.getLogger('discord')
 discord_logger.setLevel(logging.CRITICAL)
@@ -60,9 +53,13 @@ async def on_command_error(error, ctx):
         print('In {0.command.qualified_name}:'.format(ctx), file=sys.stderr)
         traceback.print_tb(error.original.__traceback__)
         print('{0.__class__.__name__}: {0}'.format(error.original), file=sys.stderr)
+        await comm.message_user(ctx.message, ":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```".format(**{
+            "command": ctx.command.qualified_name,
+            "error"  : error.original.__class__.__name__,
+            "tb"     : "\n".join(traceback.format_tb(error.original.__traceback__))
+        }))
     elif isinstance(error, commands.MissingRequiredArgument):
-        await comm.message_user(ctx.message,
-                                ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event
@@ -138,16 +135,13 @@ async def mainloop():
 
             for canard in commons.ducks_spawned:
                 if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) < int(now):  # Canard qui se barre
-                    await comm.logwithinfos(canard["channel"], None,
-                                            "Duck of {time} stayed for too long. (it's {now}, and it should have stayed until {shouldwaitto}).".format(**{
-                                                "time"        : canard["time"],
-                                                "now"         : now,
-                                                "shouldwaitto": str(
-                                                        int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave")))
-                                            }))
+                    await comm.logwithinfos(canard["channel"], None, "Duck of {time} stayed for too long. (it's {now}, and it should have stayed until {shouldwaitto}).".format(**{
+                        "time"        : canard["time"],
+                        "now"         : now,
+                        "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave")))
+                    }))
                     try:
-                        await bot.send_message(canard["channel"],
-                                               _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language")))
+                        await bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language")))
                     except:
                         pass
                     try:
@@ -173,16 +167,16 @@ if __name__ == '__main__':
     bot.client_id = credentials['client_id']
     bot.commands_used = Counter()
     bot.bots_key = credentials['bots_key']
+    ## POST INIT IMPORTS ##
+    from cogs.utils.ducks import get_next_duck, planifie, spawn_duck
+    from cogs.utils import prefs, comm
+
     for extension in initial_extensions:
         try:
             bot.load_extension(extension)
         except Exception as e:
             logger.exception('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
     bot.loop.create_task(mainloop())
-
-    ## POST INIT IMPORTS ##
-    from cogs.utils.ducks import get_next_duck, planifie, spawn_duck
-    from cogs.utils import prefs, comm
 
     bot.run(token)
     handlers = log.handlers[:]

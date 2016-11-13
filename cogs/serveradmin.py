@@ -55,15 +55,13 @@ class ServerAdmin:
         Require admin powers"""
         scores.addToStat(ctx.message.channel, target, "exp", exp)
         await comm.logwithinfos_ctx(ctx, "[giveexp] Giving " + str(exp) + " exp points to " + target.mention)
-        await comm.message_user(ctx.message, _(":ok:, he now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(
-                **{
-                    "newexp": scores.getStat(ctx.message.channel, target, "exp")
-                }))
+        await comm.message_user(ctx.message, _(":ok:, he now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
+            "newexp": scores.getStat(ctx.message.channel, target, "exp")
+        }))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
     @checks.is_activated_here()
-
     async def duckplanning(self, ctx):
         raise NotImplementedError
 
@@ -108,16 +106,15 @@ class ServerAdmin:
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
         servers[ctx.message.server.id]["admins"] = [target.id]
-        await comm.logwithinfos_ctx(ctx,
-                                    "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
-                                        "admin_name" : target.name,
-                                        "admin_id"   : target.id,
-                                        "server_name": ctx.message.server.name,
-                                        "server_id"  : ctx.message.server.id
-                                    }))
+        await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
+            "admin_name" : target.name,
+            "admin_id"   : target.id,
+            "server_name": ctx.message.server.name,
+            "server_id"  : ctx.message.server.id
+        }))
         await comm.message_user(ctx.message, _(":robot: OK, {name}  was set as an admin on the server !", language).format(**{
             "name": target.name
-            }))
+        }))
 
         prefs.JSONsaveToDisk(servers, "channels.json")
 
@@ -131,17 +128,15 @@ class ServerAdmin:
         servers = prefs.JSONloadFromDisk("channels.json")
         if target.id in servers[ctx.message.server.id]["admins"]:
             servers[ctx.message.server.id]["admins"].remove(target.id)
-            await comm.logwithinfos_ctx(ctx,
-                                        "Deleting admin {admin_name} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(
-                                            **{
-                                                "admin_name" : target.name,
-                                                "admin_id"   : target.id,
-                                                "server_name": ctx.message.server.name,
-                                                "server_id"  : ctx.message.server.id
-                                            }))
+            await comm.logwithinfos_ctx(ctx, "Deleting admin {admin_name} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(**{
+                "admin_name" : target.name,
+                "admin_id"   : target.id,
+                "server_name": ctx.message.server.name,
+                "server_id"  : ctx.message.server.id
+            }))
             await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
                 "name": target.name
-                }))
+            }))
 
             prefs.JSONsaveToDisk(servers, "channels.json")
 
@@ -149,8 +144,7 @@ class ServerAdmin:
         else:
             await comm.message_user(ctx.message, _(":robot: OK, {name} is not an admin !", language).format(**{
                 "name": target.name
-                }))
-
+            }))
 
     @commands.command(pass_context=True)
     async def claimserver(self, ctx):
@@ -160,13 +154,12 @@ class ServerAdmin:
         servers = prefs.JSONloadFromDisk("channels.json")
         if not servers[ctx.message.server.id]["admins"]:
             servers[ctx.message.server.id]["admins"] = [ctx.message.author.id]
-            await comm.logwithinfos_ctx(ctx,
-                                        "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
-                                            "admin_name" : ctx.message.author.name,
-                                            "admin_id"   : ctx.message.author.id,
-                                            "server_name": ctx.message.server.name,
-                                            "server_id"  : ctx.message.server.id
-                                        }))
+            await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
+                "admin_name" : ctx.message.author.name,
+                "admin_id"   : ctx.message.author.id,
+                "server_name": ctx.message.server.name,
+                "server_id"  : ctx.message.server.id
+            }))
             await comm.message_user(ctx.message, _(":robot: OK, you have been set as an admin !", language))
         else:
             await comm.logwithinfos_ctx(ctx, "An admin already exist")

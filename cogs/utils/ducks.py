@@ -81,10 +81,9 @@ async def get_next_duck():
 
     if not prochaincanard["channel"]:
         thisDay = now - (now % 86400)
-        logger.debug(
-                "No more ducks for today, wait for {demain} sec".format(**{
-                    "demain": thisDay + 86400 - time.time()
-                }))
+        logger.debug("No more ducks for today, wait for {demain} sec".format(**{
+            "demain": thisDay + 86400 - time.time()
+        }))
 
     else:
         await comm.logwithinfos(prochaincanard["channel"], log_str="Next duck at {time} (in {timetonext} sec)".format(**{
@@ -101,11 +100,9 @@ async def spawn_duck(duck):
         for playerid in servers[duck["channel"].server.id]["detecteur"][duck["channel"].id]:
             player = discord.utils.get(duck["channel"].server.members, id=playerid)
             try:
-                await bot.send_message(player, _("There is a duck on #{channel}",
-                                                 prefs.getPref(duck["channel"].server, "lang")).format(
-                        **{
-                            "channel": duck["channel"].name
-                        }))
+                await bot.send_message(player, _("There is a duck on #{channel}", prefs.getPref(duck["channel"].server, "lang")).format(**{
+                    "channel": duck["channel"].name
+                }))
                 await comm.logwithinfos(duck["channel"], player, "Sending a duck notification")
             except:
                 await comm.logwithinfos(duck["channel"], player, "Error sending the duck notification")
@@ -122,13 +119,12 @@ async def spawn_duck(duck):
         duck["level"] = life
     else:
         duck["isSC"] = False
+        duck["level"] = 1
+        duck["SCvie"] = 1
 
     await comm.logwithinfos(duck["channel"], None, "New duck : " + str(duck))
     if prefs.getPref(duck["channel"].server, "randomize_ducks"):
-        canard_str = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri),
-                                                                                                                      language=prefs.getPref(
-                                                                                                                              duck["channel"].server,
-                                                                                                                              "language"))
+        canard_str = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri), language=prefs.getPref(duck["channel"].server, "language"))
     else:
         canard_str = "-,,.-'\`'°-,,.-'\`'° /_^<   QUAACK"
     try:

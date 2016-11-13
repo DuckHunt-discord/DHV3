@@ -4,6 +4,8 @@
 Discord-duckhunt -- database.py
 Communication avec la base de données pour stocker les stats sur les canards"""
 # Constants #
+import time
+
 import dataset
 
 from cogs.utils import prefs
@@ -87,9 +89,10 @@ def giveBack(player, channel):
     if not "exp" in user or not user["exp"]:
         user["exp"] = 0
     table.upsert({
-        "id_"      : user["id_"],
-        "chargeurs": getPlayerLevelWithExp(user["exp"])["chargeurs"],
-        "confisque": False
+        "id_"         : user["id_"],
+        "chargeurs"   : getPlayerLevelWithExp(user["exp"])["chargeurs"],
+        "confisque"   : False,
+        "lastGiveback": int(time.time())
     }, ['id_'])
 
 

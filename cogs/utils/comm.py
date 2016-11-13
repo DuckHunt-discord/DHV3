@@ -29,10 +29,7 @@ async def logwithinfos_message(message_obj, log_str: str):
 
 
 async def logwithinfos(channel, author=None, log_str=""):
-    commons.logger.debug(
-            ((channel.server.name.center(16, " ") if len(channel.server.name) < 16 else channel.server.name[:16]) if channel else "XX") + " :: " + (
-                (("#" + channel.name).center(16, " ") if len(channel.name) < 16 else channel.name[:16]) if channel else "XX") + " :: " + (
-                "<" + author.name + "> " if author else "") + log_str)
+    commons.logger.debug(((channel.server.name.center(16, " ") if len(channel.server.name) < 16 else channel.server.name[:16]) if channel else "XX") + " :: " + ((("#" + channel.name).center(16, " ") if len(channel.name) < 16 else channel.name[:16]) if channel else "XX") + " :: " + ("<" + author.name + "> " if author else "") + log_str)
 
 
 async def message_user(message, toSend, forcePv=False):
@@ -46,8 +43,7 @@ async def message_user(message, toSend, forcePv=False):
             await commons.bot.send_message(message.author, toSend)
         except discord.errors.Forbidden:
             try:
-                await commons.bot.send_message(message.channel,
-                                               str(message.author.mention) + "403 Permission denied (can't send private messages to this user)")
+                await commons.bot.send_message(message.channel, str(message.author.mention) + "403 Permission denied (can't send private messages to this user)")
                 logwithinfos_message(message, "Impossible d'envoyer des messages en privé à cet utilisateur")
             except:
                 logwithinfos_message(message, "Impossible d'envoyer des messages dans le channel")

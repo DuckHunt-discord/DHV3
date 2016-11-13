@@ -20,6 +20,7 @@ class Exp:
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
+    @checks.is_activated_here()
     async def sendexp(self, ctx, target: discord.Member, amount: int):
         message = ctx.message
         language = prefs.getPref(message.server, "language")
@@ -37,35 +38,35 @@ class Exp:
                 else:
                     taxes = 0
                 scores.addToStat(message.channel, target, "exp", amount - taxes)
-                await comm.message_user(message,
-                                        _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this transfer) !", language).format(
-                                                **{
-                                                    "amount": amount - taxes,
-                                                    "target": target.mention,
-                                                    "taxes" : taxes
-                                                }))
-                comm.logwithinfos_message(message, "[sendexp] Exp envoyé à {target} : {amount} exp et {taxes}".format(
-                        **{
-                            "amount": amount - taxes,
-                            "target": target.mention,
-                            "taxes" : taxes
-                        }))
+                await comm.message_user(message, _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this transfer) !", language).format(**{
+                    "amount": amount - taxes,
+                    "target": target.mention,
+                    "taxes" : taxes
+                }))
+                comm.logwithinfos_message(message, "[sendexp] Exp envoyé à {target} : {amount} exp et {taxes}".format(**{
+                    "amount": amount - taxes,
+                    "target": target.mention,
+                    "taxes" : taxes
+                }))
             else:
                 comm.logwithinfos_message(message, "[sendexp] manque d'experience")
                 await comm.message_user(message, _("Vous n'avez pas assez d'experience", language))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
+    @checks.is_activated_here()
     async def duckstats(self, ctx, target: discord.Member):
         raise NotImplementedError
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
+    @checks.is_activated_here()
     async def top(self, ctx, number_of_scores: int):
         raise NotImplementedError
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
+    @checks.is_activated_here()
     async def shop(self, ctx):
         raise NotImplementedError
 
