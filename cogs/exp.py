@@ -52,7 +52,7 @@ class Exp:
 
             if amount <= 0:
                 await comm.message_user(message, _(":x: You need to give a positive number for the exp to send", language))
-                comm.logwithinfos_message(message, "[sendexp] montant invalide")
+                await comm.logwithinfos_message(message, "[sendexp] montant invalide")
                 return
 
             if scores.getStat(message.channel, message.author, "exp") > amount:
@@ -67,7 +67,7 @@ class Exp:
                     "target": target.mention,
                     "taxes" : taxes
                 }))
-                comm.logwithinfos_message(message, "[sendexp] Exp points sent to {target} : {amount} exp recived, and {taxes} exp of transfer taxes percived ".format(**{
+                await comm.logwithinfos_message(message, "[sendexp] Exp points sent to {target} : {amount} exp recived, and {taxes} exp of transfer taxes percived ".format(**{
                     "amount": amount - taxes,
                     "target": target.mention,
                     "taxes" : taxes
@@ -158,7 +158,7 @@ class Exp:
     @checks.is_activated_here()
     async def shop(self, ctx):
         from cogs import shoot
-        shoot.Shoot.giveBackIfNeeded(ctx.message.channel, ctx.message.author)
+        await shoot.Shoot(self.bot).giveBackIfNeeded(ctx.message)
         if not ctx.invoked_subcommand:
             await comm.message_user(ctx.message, ":x: Incorrect syntax : `!shop [item number] [argument if applicable]`")
 
@@ -295,7 +295,7 @@ class Exp:
         !shop 10"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "clover", default=0) < int(time.time()):
+        if scores.getStat(message.channel, message.author, "trefle", default=0) < int(time.time()):
             exp = random.randint(prefs.getPref(message.server, "clover_min_exp"), prefs.getPref(message.server, "clover_max_exp"))
             await comm.message_user(message, _(":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} more exp point for the next day. You brought it for 13 exp!", language).format(**{
                 "exp": exp
@@ -318,9 +318,9 @@ class Exp:
         !shop 12"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):
+        if scores.getStat(message.channel, message.author, "mouille", default=0) > int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You have some dry clothes on you now. You looks beautiful ! ", language))
-            scores.addToStat(message.channel, message.author, "mouille", 0)
+            scores.setStat(message.channel, message.author, "mouille", 0)
             scores.addToStat(message.channel, message.author, "exp", -7)
 
         else:
@@ -355,6 +355,8 @@ class Exp:
     @shop.command(pass_context=True, name="17")
     @checks.have_exp(14)
     async def item17(self, ctx, target: discord.Member):
+        """Sabotage a weapon
+        !shop 17 [target]"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, target, "sabotee", "-") == "-":
@@ -371,6 +373,8 @@ class Exp:
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)
     async def item18(self, ctx):
+        """Buy a life insurance (10 exp)
+        !shop 18"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "AssuranceVie", default=0) < int(time.time()):
@@ -388,6 +392,8 @@ class Exp:
     @shop.command(pass_context=True, name="20")
     @checks.have_exp(8)
     async def item20(self, ctx):
+        """Buy a decoy (8 exp)
+        !shop 20"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to the decoy of {mention}. He brought it for 8 exp !", language).format(**{
@@ -408,6 +414,9 @@ class Exp:
     @shop.command(pass_context=True, name="22")
     @checks.have_exp(5)
     async def item22(self, ctx):
+
+        """Buy a ducktector (5 exp)
+        !shop 22"""
         servers = prefs.JSONloadFromDisk("channels.json", default="{}")
         message = ctx.message
         language = prefs.getPref(message.server, "language")
@@ -425,6 +434,8 @@ class Exp:
     @shop.command(pass_context=True, name="23")
     @checks.have_exp(40)
     async def item23(self, ctx):
+        """Buy a mechanical duck (40 exp)
+        !shop 23"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         await comm.message_user(message, _(":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. That's bad, but so funny !", language), forcePv=True)

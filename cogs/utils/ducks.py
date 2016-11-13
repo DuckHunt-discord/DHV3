@@ -123,7 +123,7 @@ async def spawn_duck(duck):
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     chance = random.randint(0, 100)
-    if chance < prefs.getPref(duck["channel"].server, "super_ducks_chance"):
+    if chance <= prefs.getPref(duck["channel"].server, "super_ducks_chance"):
         life = random.randint(prefs.getPref(duck["channel"].server, "super_ducks_minlife"), prefs.getPref(duck["channel"].server, "super_ducks_maxlife"))
         duck["isSC"] = True
         duck["SCvie"] = life
@@ -143,6 +143,7 @@ async def spawn_duck(duck):
     except:
         pass
     commons.ducks_spawned.append(duck)
+    logger.debug(duck)
 
 
 async def del_channel(channel):

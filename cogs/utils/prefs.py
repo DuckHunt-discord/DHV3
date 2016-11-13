@@ -40,10 +40,9 @@ def setPref(server, pref, value=None, force=False):
             return True
         if pref in servers[server.id]["settings"]:
             servers[server.id]["settings"].remove(pref)
-        else:
-            return True
-        JSONsaveToDisk(servers, "channels.json")
-        return True
+
+    JSONsaveToDisk(servers, "channels.json")
+    return True
 
 
 def JSONsaveToDisk(data, filename):
