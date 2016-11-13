@@ -18,6 +18,7 @@ from cogs.utils.commons import _
 HOUR = 3600
 DAY = 86400
 
+
 class Exp:
     """Commends to use, spend and give exp."""
 
@@ -163,7 +164,8 @@ class Exp:
     @shop.command(pass_context=True, name="1")
     @checks.have_exp(7)
     async def item1(self, ctx):
-        """Add a bullet to your weapon (7 exp)"""
+        """Add a bullet to your weapon (7 exp)
+        !shop 1"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
 
@@ -179,7 +181,8 @@ class Exp:
     @shop.command(pass_context=True, name="2")
     @checks.have_exp(13)
     async def item2(self, ctx):
-        """Add a charger to your weapon (13 exp)"""
+        """Add a charger to your weapon (13 exp)
+        !shop 2"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
@@ -193,6 +196,8 @@ class Exp:
     @shop.command(pass_context=True, name="3")
     @checks.have_exp(15)
     async def item3(self, ctx):
+        """Buy AP ammo (15 exp)
+        !shop 3"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "munAP_", default=0) < time.time():
@@ -206,6 +211,8 @@ class Exp:
     @shop.command(pass_context=True, name="4")
     @checks.have_exp(25)
     async def item4(self, ctx):
+        """Buy explosive ammo (25 exp)
+        !shop 4"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "munExplo", default=0) < time.time():
@@ -219,6 +226,8 @@ class Exp:
     @shop.command(pass_context=True, name="5")
     @checks.have_exp(40)
     async def item5(self, ctx):
+        """Get back your weapon (40 exp)
+        !shop 5"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "confisque"):
@@ -232,6 +241,8 @@ class Exp:
     @shop.command(pass_context=True, name="6")
     @checks.have_exp(8)
     async def item6(self, ctx):
+        """Buy grease for your weapon (8 exp)
+        !shop 6"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "graisse", default=0) < int(time.time()):
@@ -242,7 +253,6 @@ class Exp:
         else:
             await comm.message_user(message, _(":champagne: Your weapon is perfectly lubricated, no need for more grease", language))
 
-
     @shop.command(pass_context=True, name="7")
     async def item7(self, ctx):
         raise NotImplementedError
@@ -250,6 +260,8 @@ class Exp:
     @shop.command(pass_context=True, name="8")
     @checks.have_exp(15)
     async def item8(self, ctx):
+        """Buy an infrared detector (15 exp)
+        !shop 8"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "detecteurInfra", default=0) < int(time.time()):
@@ -263,6 +275,8 @@ class Exp:
     @shop.command(pass_context=True, name="9")
     @checks.have_exp(5)
     async def item9(self, ctx):
+        """Buy a silencer (5 exp)
+        !shop 9"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):
@@ -276,13 +290,15 @@ class Exp:
     @shop.command(pass_context=True, name="10")
     @checks.have_exp(13)
     async def item10(self, ctx):
+        """Buy a 4leaf clover (13 exp)
+        !shop 10"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "clover", default=0) < int(time.time()):
             exp = random.randint(prefs.getPref(message.server, "clover_min_exp"), prefs.getPref(message.server, "clover_max_exp"))
             await comm.message_user(message, _(":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} more exp point for the next day. You brought it for 13 exp!", language).format(**{
                 "exp": exp
-                }))
+            }))
             scores.setStat(message.channel, message.author, "trefle", int(time.time()) + 86400)
             scores.setStat(message.channel, message.author, "trefle_exp", exp)
             scores.addToStat(message.channel, message.author, "exp", -13)
@@ -297,7 +313,18 @@ class Exp:
     @shop.command(pass_context=True, name="12")
     @checks.have_exp(7)
     async def item12(self, ctx):
-        raise NotImplementedError
+        """Buy new clothes, dry ones :p (7 exp)
+        !shop 12"""
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):
+            await comm.message_user(message, _(":money_with_wings: You have some dry clothes on you now. You looks beautiful ! ", language))
+            scores.addToStat(message.channel, message.author, "mouille", 0)
+            scores.addToStat(message.channel, message.author, "exp", -7)
+
+        else:
+            scores.addToStat(message.channel, message.author, "exp", -7)
+            await comm.message_user(message, _(":money_with_wings: You brought brand new clothes, for nothing but the fact that you are mostly swag now. :cool:", language))
 
     @shop.command(pass_context=True, name="13")
     async def item13(self, ctx):
@@ -314,12 +341,31 @@ class Exp:
     @shop.command(pass_context=True, name="16")
     @checks.have_exp(10)
     async def item16(self, ctx, target: discord.Member):
-        raise NotImplementedError
+        """ Drop a water bucket on someone (10 exp)
+        !shop 16 [target]"""
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        await comm.message_user(message, _(":money_with_wings: You drop a full water bucket on {target}, frocing him to wait 1 hour for his/her clothes to dry before he/she can return hunting", language).format(**{
+            "target": target.name
+        }))
+        scores.setStat(message.channel, target, "mouille", int(time.time()) + 3600)
+        scores.addToStat(message.channel, message.author, "exp", -10)
 
     @shop.command(pass_context=True, name="17")
     @checks.have_exp(14)
     async def item17(self, ctx, target: discord.Member):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, target, "sabotee", "-") == "-":
+            await comm.message_user(message, _(":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !", language).format(**{
+                "target": target.name
+            }), forcePv=True)
+            scores.addToStat(message.channel, message.author, "exp", -14)
+            scores.setStat(message.channel, target, "sabotee", message.author.name)
+        else:
+            await comm.message_user(message, _(":ok: {target} weapon is already sabotaged!", language).format(**{
+                "target": target.name
+            }), forcePv=True)
 
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)

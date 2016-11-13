@@ -63,7 +63,7 @@ async def on_command_error(error, ctx):
     elif isinstance(error, commands.BadArgument):
         await comm.message_user(ctx.message, ":x: Bad argument provided. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.CheckFailure):
-        await comm.message_user(ctx.message, ":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command." + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, ":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event
