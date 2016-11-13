@@ -4,6 +4,7 @@
 """
 
 """
+import asyncio
 import datetime
 import random
 import time
@@ -12,7 +13,7 @@ import discord
 from discord.ext import commands
 from prettytable import PrettyTable
 
-from cogs.utils import checks, comm, prefs, scores
+from cogs.utils import checks, comm, commons, ducks, prefs, scores
 from cogs.utils.commons import _
 
 HOUR = 3600
@@ -370,7 +371,15 @@ class Exp:
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)
     async def item18(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "AssuranceVie", default=0) < int(time.time()):
+            await comm.message_user(message, _(":money_with_wings: You buy a life insurence for a week for 10 exp. If you get killed, you will earn half the level of the killer in exp", language))
+            scores.setStat(message.channel, message.author, "AssuranceVie", int(time.time()) + DAY * 7)
+            scores.addToStat(message.channel, message.author, "exp", -10)
+
+        else:
+            await comm.message_user(message, _(":money_with_wings: You are already insured.", language))
 
     @shop.command(pass_context=True, name="19")
     async def item19(self, ctx):
@@ -379,7 +388,18 @@ class Exp:
     @shop.command(pass_context=True, name="20")
     @checks.have_exp(8)
     async def item20(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to the decoy of {mention}. He brought it for 8 exp !", language).format(**{
+            "mention": message.author.mention
+            }))
+        scores.addToStat(message.channel, message.author, "exp", -8)
+        dans = random.randint(0, 60 * 10)
+        await asyncio.sleep(dans)
+        await ducks.spawn_duck({
+                                   "time": int(time.time()),
+                                   "channel": message.channel
+                                   })
 
     @shop.command(pass_context=True, name="21")
     async def item21(self, ctx):
@@ -388,12 +408,38 @@ class Exp:
     @shop.command(pass_context=True, name="22")
     @checks.have_exp(5)
     async def item22(self, ctx):
-        raise NotImplementedError
+        servers = prefs.JSONloadFromDisk("channels.json", default="{}")
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        await comm.message_user(message, _(":money_with_wings: You will be warned when the next duck on #{channel_name} spawns", language).format(**{
+            "channel_name": message.channel.name
+            }), forcePv=True)
+        if message.channel.id in servers[message.server.id]["detecteur"]:
+            servers[message.server.id]["detecteur"][message.channel.id].append(message.author.id)
+        else:
+            servers[message.server.id]["detecteur"][message.channel.id] = [message.author.id]
+        prefs.JSONsaveToDisk(servers, "channels.json")
+        scores.addToStat(message.channel, message.author, "exp", -5)
+
 
     @shop.command(pass_context=True, name="23")
     @checks.have_exp(40)
     async def item23(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        await comm.message_user(message, _(":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. That's bad, but so funny !", language), forcePv=True)
+        scores.addToStat(message.channel, message.author, "exp", -50)
+        await asyncio.sleep(75)
+        try:
+            if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:
+                await self.bot.send_message(message.channel, _("-_-'`'°-_-.-'`'° %__%   *BZAACK*", language))
+            elif prefs.getPref(message.server, "randomize_mechanical_ducks") == 1:
+                await self.bot.send_message(message.channel, "-_-'`'°-_-.-'`'° %__%    " + _(random.choice(commons.canards_cri), language=language))
+            else:
+                await self.bot.send_message(message.channel, random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri), language=language))  # ASSHOLE ^^
+
+        except:
+            pass
 
 
 def setup(bot):
