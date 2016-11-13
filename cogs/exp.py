@@ -4,9 +4,12 @@
 """
 
 """
+import datetime
+import time
 
 import discord
 from discord.ext import commands
+from prettytable import PrettyTable
 
 from cogs.utils import checks, comm, prefs, scores
 from cogs.utils.commons import _
@@ -18,6 +21,22 @@ class Exp:
     def __init__(self, bot):
         self.bot = bot
 
+    def objectTD(self, channel, target, language, object):
+        date_expiration = datetime.datetime.fromtimestamp(scores.getStat(channel, target, object, default=0))
+        td = date_expiration - datetime.datetime.now()
+        return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(**{
+            "date"        : date_expiration.strftime(_('%H:%M:%S le %d/%m', language)),
+            "dans_jours"  : _("{dans} days ").format(**{
+                "dans": td.days
+            }) if td.days else "",
+            "dans_heures" : _("{dans} hours").format(**{
+                "dans": td.seconds // 3600
+            }),
+            "dans_minutes": _("{dans} minutes").format(**{
+                "dans": (td.seconds // 60) % 60
+            })
+        })
+
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
@@ -27,7 +46,7 @@ class Exp:
         if prefs.getPref(message.server, "user_can_give_exp"):
 
             if amount <= 0:
-                await comm.message_user(message, _(":x: Essaye de préciser un montant valide, c'est a dire positif et entier", language))
+                await comm.message_user(message, _(":x: You need to give a positive number for the exp to send", language))
                 comm.logwithinfos_message(message, "[sendexp] montant invalide")
                 return
 
@@ -43,26 +62,90 @@ class Exp:
                     "target": target.mention,
                     "taxes" : taxes
                 }))
-                comm.logwithinfos_message(message, "[sendexp] Exp envoyé à {target} : {amount} exp et {taxes}".format(**{
+                comm.logwithinfos_message(message, "[sendexp] Exp points sent to {target} : {amount} exp recived, and {taxes} exp of transfer taxes percived ".format(**{
                     "amount": amount - taxes,
                     "target": target.mention,
                     "taxes" : taxes
                 }))
             else:
-                comm.logwithinfos_message(message, "[sendexp] manque d'experience")
-                await comm.message_user(message, _("Vous n'avez pas assez d'experience", language))
+                await comm.message_user(message, _("You don't have enough experience points", language))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
-    async def duckstats(self, ctx, target: discord.Member):
-        raise NotImplementedError
+    async def duckstats(self, ctx, target: discord.Member = None):
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        now = int(time.time())
+        if not target:
+            target = ctx.message.author
+        level = scores.getPlayerLevel(message.channel, target)
+        x = PrettyTable()
+        if scores.getStat(message.channel, target, "canardsTues") > 0:
+            ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "canardsTues"), 4)
+        else:
+            ratio = _("No duck killed", language)
+        x._set_field_names([_("Statistic", language), _("Value", language)])
+        x.add_row([_("Ducks killed", language), scores.getStat(message.channel, target, "canardsTues")])
+        x.add_row([_("Shots missed", language), scores.getStat(message.channel, target, "tirsManques")])
+        x.add_row([_("Shots without ducks", language), scores.getStat(message.channel, target, "tirsSansCanards")])
+        x.add_row([_("Best killing time", language), scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))])
+        x.add_row([_("Bullets in current charger", language), str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"])])
+        x.add_row([_("Chargers left", language), str(scores.getStat(message.channel, target, "chargeurs", default=level["chargeurs"])) + " / " + str(level["chargeurs"])])
+        x.add_row([_("Exp points", language), scores.getStat(message.channel, target, "exp")])
+        x.add_row([_("Ratio (exp/ducks killed)", language), ratio])
+
+        x.add_row([_("Current level", language), str(level["niveau"]) + " (" + _(level["nom"], language) + ")"])
+        x.add_row([_("Shots accuracy", language), level["precision"]])
+        x.add_row([_("Weapon fiability", language), level["fiabilitee"]])
+        if scores.getStat(message.channel, target, "graisse", default=0) > int(time.time()):
+            x.add_row([_("Object : grease", language), self.objectTD(message.channel, target, language, "graisse")])
+        if scores.getStat(message.channel, target, "detecteurInfra", default=0) > int(time.time()):
+            x.add_row([_("Object : infrared detector", language), self.objectTD(message.channel, target, language, "detecteurInfra")])
+        if scores.getStat(message.channel, target, "silencieux", default=0) > int(time.time()):
+            x.add_row([_("Object : silencer", language), self.objectTD(message.channel, target, language, "silencieux")])
+        if scores.getStat(message.channel, target, "trefle", default=0) > int(time.time()):
+            x.add_row([_("Object : clover {exp} exp", language).format(**{
+                "exp": scores.getStat(message.channel, target, "trefle_exp", default=0)
+            }), self.objectTD(message.channel, target, language, "trefle")])
+        if scores.getStat(message.channel, target, "munExplo", default=0) > int(time.time()):
+            x.add_row([_("Object : explosive ammo", language), self.objectTD(message.channel, target, language, "munExplo")])
+        elif scores.getStat(message.channel, target, "munAp_", default=0) > int(time.time()):
+            x.add_row([_("Object : AP ammo", language), self.objectTD(message.channel, target, language, "munAp_")])
+        if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
+            x.add_row([_("Effect : wet", language), self.objectTD(message.channel, target, language, "mouille")])
+
+        await comm.message_user(message, _("Statistics of {mention} : \n```{table}```\nhttps://api-d.com/snaps/table_de_progression.html", language).format(**{
+            "table"  : x.get_string(),
+            "mention": target.mention
+        }))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
-    async def top(self, ctx, number_of_scores: int):
-        raise NotImplementedError
+    async def top(self, ctx, number_of_scores: int = 10):
+        language = prefs.getPref(ctx.message.server, "language")
+
+        if number_of_scores > 200:
+            await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
+            return
+        x = PrettyTable()
+
+        x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
+
+        i = 0
+        for joueur in scores.topScores(ctx.message.channel):
+            i += 1
+            if (joueur["canardsTues"] is None) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
+                joueur["canardsTues"] = "AUCUN !"
+            if joueur["exp"] is None:
+                joueur["exp"] = 0
+            x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
+
+        await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
+            "channel_name": ctx.message.channel.name,
+            "table"       : x.get_string(end=number_of_scores, sortby=_("Position", language))
+        }), )
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()

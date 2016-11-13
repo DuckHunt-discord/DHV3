@@ -63,7 +63,13 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def duckplanning(self, ctx):
-        raise NotImplementedError
+        table = ""
+        for timestamp in commons.ducks_planned[ctx.message.channel]:
+            table += str(int((time.time() - timestamp) / 60)) + "\n"
+
+        await self.bot.send_message(ctx.message.author, _(":hammer: TimeDelta in minutes for next ducks\n```{table}```", prefs.getPref(ctx.message.server, "language")).format(**{
+            "table": table
+        }))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -169,13 +175,31 @@ class ServerAdmin:
     @commands.command(pass_context=True)
     @checks.is_admin()
     async def permissions(self, ctx):
-        raise NotImplementedError
+        permissionsToHave = ["change_nicknames", "connect", "create_instant_invite", "embed_links", "manage_messages", "mention_everyone", "read_messages", "send_messages", "send_tts_messages"]
+        permissions_str = ""
+        for permission, value in ctx.message.server.me.permissions_in(ctx.message.channel):
+            if value:
+                emo = ":white_check_mark:"
+            else:
+                emo = ":negative_squared_cross_mark:"
+            if (value and permission in permissionsToHave) or (not value and not permission in permissionsToHave):
+                pass
+            else:
+                emo += ":warning:"
+            permissions_str += "\n{value}\t{name}".format(**{
+                "value": emo,
+                "name" : str(permission)
+                })
+        await comm.message_user(ctx.message, _("Permissions : {permissions}", prefs.getPref(ctx.message.server, "language")).format(**{
+            "permissions": permissions_str
+            }))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
     @checks.is_activated_here()
     async def deleteeverysinglescoreandstatonthischannel(self, ctx):
-        raise NotImplementedError
+        scores.delChannelTable(ctx.message.channel)
+        await comm.message_user(ctx.message, _(":ok: Scores / stats of the channel were succesfully deleted.", prefs.getPref(ctx.message.server, "language")))
 
     ### SETTINGS ###
 
