@@ -40,6 +40,14 @@ def is_activated_check(message):
     return activated
 
 
+def have_exp_check(message, exp):
+    return scores.getStat(message.channel, message.author, "exp") >= exp
+
+
+def have_exp(exp):
+    return commands.check(lambda ctx: have_exp_check(ctx.message, exp))
+
+
 def is_owner():
     return commands.check(lambda ctx: is_owner_check(ctx.message))
 

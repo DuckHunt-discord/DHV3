@@ -34,23 +34,23 @@ async def logwithinfos(channel, author=None, log_str=""):
 
 async def message_user(message, toSend, forcePv=False):
     if len(toSend) > 1950:
-        logwithinfos_message(message, "Creation d'un paste...")
-        toSend = paste(toSend.replace("```", ""), "py")
+        await logwithinfos_message(message, "Creation d'un paste...")
+        toSend = await paste(toSend.replace("```", ""), "py")
         # logger.info(_("Message trop long, envoi sur hastebin avec le lien : ") + toSend)
-        logwithinfos_message(message, "Paste envoyé, lien : " + str(toSend))
+        await logwithinfos_message(message, "Paste envoyé, lien : " + str(toSend))
     if prefs.getPref(message.server, "pm_most_messages") or forcePv == True:
         try:
             await commons.bot.send_message(message.author, toSend)
         except discord.errors.Forbidden:
             try:
                 await commons.bot.send_message(message.channel, str(message.author.mention) + "403 Permission denied (can't send private messages to this user)")
-                logwithinfos_message(message, "Impossible d'envoyer des messages en privé à cet utilisateur")
+                await logwithinfos_message(message, "Impossible d'envoyer des messages en privé à cet utilisateur")
             except:
-                logwithinfos_message(message, "Impossible d'envoyer des messages dans le channel")
+                await logwithinfos_message(message, "Impossible d'envoyer des messages dans le channel")
                 pass
     else:
         try:
             await commons.bot.send_message(message.channel, str(message.author.mention) + " > " + toSend)
         except:
-            logwithinfos_message(message, "Impossible d'envoyer des messages dans ce channel.")
+            await logwithinfos_message(message, "Impossible d'envoyer des messages dans ce channel.")
             pass

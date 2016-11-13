@@ -14,6 +14,8 @@ from prettytable import PrettyTable
 from cogs.utils import checks, comm, prefs, scores
 from cogs.utils.commons import _
 
+HOUR = 3600
+DAY = 86400
 
 class Exp:
     """Commends to use, spend and give exp."""
@@ -126,9 +128,10 @@ class Exp:
     async def top(self, ctx, number_of_scores: int = 10):
         language = prefs.getPref(ctx.message.server, "language")
 
-        if number_of_scores > 200:
+        if number_of_scores > 200 or number_of_scores < 1:
             await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
             return
+
         x = PrettyTable()
 
         x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
@@ -144,36 +147,73 @@ class Exp:
 
         await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
             "channel_name": ctx.message.channel.name,
-            "table"       : x.get_string(end=number_of_scores, sortby=_("Position", language))
+            "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
         }), )
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
     async def shop(self, ctx):
-        raise NotImplementedError
+        from cogs import shoot
+        shoot.Shoot.giveBackIfNeeded(ctx.message.channel, ctx.message.author)
+        if not ctx.invoked_subcommand:
+            await comm.message_user(ctx.message, ":x: Incorrect syntax : `!shop [item number] [argument if applicable]`")
 
     @shop.command(pass_context=True, name="1")
+    @checks.have_exp(7)
     async def item1(self, ctx):
-        raise NotImplementedError
+        """Add a bullet to your weapon (7 exp)"""
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+
+        if scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]) < scores.getPlayerLevel(message.channel, message.author)["balles"]:
+
+            await comm.message_user(message, _(":money_with_wings: You add a bullet to your weapon for 7 exp points", language))
+            scores.addToStat(message.channel, message.author, "balles", 1)
+            scores.addToStat(message.channel, message.author, "exp", -7)
+
+        else:
+            await comm.message_user(message, _(":champagne: Ton chargeur est déjà plein !", language))
 
     @shop.command(pass_context=True, name="2")
+    @checks.have_exp(13)
     async def item2(self, ctx):
-        raise NotImplementedError
+        """Add a charger to your weapon (13 exp)"""
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
+            await comm.message_user(message, _(":money_with_wings: You add a charger to your backpack for 13 exp points.", language))
+            scores.addToStat(message.channel, message.author, "chargeurs", 1)
+            scores.addToStat(message.channel, message.author, "exp", -13)
+
+        else:
+            await comm.message_user(message, _(":champagne: You have enough chargers!", language))
 
     @shop.command(pass_context=True, name="3")
+    @checks.have_exp(15)
     async def item3(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "munAP_", default=0) < time.time():
+            await comm.message_user(message, _(":money_with_wings: You purchase AP ammo for your weapon. For the next 24 hours, you will deal double damage to ducks.", language))
+            scores.addToStat(message.channel, message.author, "munAP_", int(time.time() + DAY))
+            scores.addToStat(message.channel, message.author, "exp", -15)
+
+        else:
+            await comm.message_user(message, _(":champagne: You have enough AP ammo for now!", language))
 
     @shop.command(pass_context=True, name="4")
+    @checks.have_exp(25)
     async def item4(self, ctx):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="5")
+    @checks.have_exp(40)
     async def item5(self, ctx):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="6")
+    @checks.have_exp(8)
     async def item6(self, ctx):
         raise NotImplementedError
 
@@ -182,14 +222,17 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="8")
+    @checks.have_exp(15)
     async def item8(self, ctx):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="9")
+    @checks.have_exp(5)
     async def item9(self, ctx):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="10")
+    @checks.have_exp(13)
     async def item10(self, ctx):
         raise NotImplementedError
 
@@ -198,6 +241,7 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="12")
+    @checks.have_exp(7)
     async def item12(self, ctx):
         raise NotImplementedError
 
@@ -214,14 +258,17 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="16")
-    async def item16(self, ctx):
+    @checks.have_exp(10)
+    async def item16(self, ctx, target: discord.Member):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="17")
-    async def item17(self, ctx):
+    @checks.have_exp(14)
+    async def item17(self, ctx, target: discord.Member):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="18")
+    @checks.have_exp(10)
     async def item18(self, ctx):
         raise NotImplementedError
 
@@ -230,6 +277,7 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="20")
+    @checks.have_exp(8)
     async def item20(self, ctx):
         raise NotImplementedError
 
@@ -238,15 +286,13 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="22")
+    @checks.have_exp(5)
     async def item22(self, ctx):
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="23")
+    @checks.have_exp(40)
     async def item23(self, ctx):
-        raise NotImplementedError
-
-    @shop.command(pass_context=True, name="24")
-    async def item24(self, ctx):
         raise NotImplementedError
 
 

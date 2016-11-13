@@ -140,7 +140,7 @@ class ServerAdmin:
                 "server_name": ctx.message.server.name,
                 "server_id"  : ctx.message.server.id
             }))
-            await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
+            await comm.message_user(ctx.message, _(":robot: OK, {name} was removed from this server admins !", language).format(**{
                 "name": target.name
             }))
 
@@ -207,7 +207,7 @@ class ServerAdmin:
     @checks.is_activated_here()
     async def settings(self, ctx):
         if not ctx.invoked_subcommand:
-            await comm.message_user(ctx.message, "Incorrect syntax : `!settings [view/set/reset/list] [setting if applicable]`")
+            await comm.message_user(ctx.message, ":x: Incorrect syntax : `!settings [view/set/reset/list] [setting if applicable]`")
 
     @settings.command(pass_context=True, name="view")
     async def view(self, ctx, pref: str):

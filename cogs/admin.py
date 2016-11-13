@@ -1,10 +1,13 @@
 import copy
 import inspect
+import time
 
 from discord.ext import commands
+from prettytable import PrettyTable
 
 from cogs.utils import comm, commons, prefs
 from cogs.utils.commons import _
+from cogs.utils.prefs import JSONloadFromDisk
 from .utils import checks
 
 
@@ -89,10 +92,65 @@ class Admin:
         for i in range(times):
             await self.bot.process_commands(msg)
 
-    @commands.command()
+    @commands.command(pass_context=True)
     @checks.is_owner()
-    async def serverlist(self, prefs: str = ""):
-        raise NotImplementedError
+    async def serverlist(self, ctx, passed_prefs: str = ""):
+        language = prefs.getPref(ctx.message.server, "language")
+
+        x = PrettyTable()
+        args_ = passed_prefs.split(" ")
+        x._set_field_names([_("Name", language), _("Invitation", language), _("Number of enabled channels", language), _("Number of connected users", language), _("Ducks per day", language), _("Number of unneeded permissions", language), _("Number of needed permissions", language)])
+        x.reversesort = True
+
+        tmp = await self.bot.send_message(ctx.message.channel, str(ctx.message.author.mention) + _(" > En cours", language))
+        servers = JSONloadFromDisk("channels.json", default="{}")
+
+        total = len(self.bot.servers)
+        i = 0
+        lu = 0
+        for server in self.bot.servers:
+            i += 1
+            if time.time() - lu >= 1.5 or i == total:
+                lu = time.time()
+                try:
+                    await self.bot.edit_message(tmp, str(ctx.message.author.mention) + _(" > Processing servers ({done}/{total})", language).format(**{
+                        "done": i,
+                        "total": total
+                        }))
+                except:
+                    pass
+            invite = None
+
+            permissionsToHave = ["change_nicknames", "connect", "create_instant_invite", "embed_links", "manage_messages", "mention_everyone", "read_messages", "send_messages", "send_tts_messages"]
+
+            permEnMoins = 0
+            permEnPlus = 0
+            channel = server.default_channel
+            for permission, value in channel.permissions_for(server.me):
+                if not value and permission in permissionsToHave:
+                    permEnMoins += 1
+                elif value and not permission in permissionsToHave:
+                    permEnPlus += 1
+
+            if "invitations" in args_:
+                for channel in server.channels:
+                    permissions = channel.permissions_for(server.me)
+                    if permissions.create_instant_invite:
+                        try:
+                            invite = await self.bot.create_invite(channel, max_age=10 * 60)
+                            invite = invite.url
+                        except:
+                            invite = ""
+                    else:
+                        invite = ""
+            try:
+                channels = str(len(servers[server.id]["channels"]))
+            except KeyError:  # Pas de channels ou une autre merde dans le genre ?
+                channels = "0"
+
+            x.add_row([server.name, invite, channels + "/" + str(len(server.channels)), server.member_count, prefs.getPref(server, "ducks_per_day"), permEnPlus, permEnMoins])
+
+        await comm.message_user(ctx.message, "```\n" + x.get_string(sortby=_("Number of connected users", language)) + "\n```")
 
     @commands.command(pass_context=True)
     @checks.is_owner()

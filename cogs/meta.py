@@ -80,19 +80,19 @@ class Meta:
     #     perms.attach_files = True
     #     await self.bot.say(msg + discord.utils.oauth_url(self.bot.client_id, perms))
 
-    @commands.command(pass_context=True, no_pm=True)
-    @checks.admin_or_permissions(manage_server=True)
-    async def leave(self, ctx):
-        """Leaves the server.
-
-        To use this command you must have Manage Server permissions or have
-        the Bot Admin role.
-        """
-        server = ctx.message.server
-        try:
-            await self.bot.leave_server(server)
-        except:
-            await self.bot.say('Could not leave..')
+    # @commands.command(pass_context=True, no_pm=True)
+    # @checks.admin_or_permissions(manage_server=True)
+    # async def leave(self, ctx):
+    #     """Leaves the server.
+    #
+    #     To use this command you must have Manage Server permissions or have
+    #     the Bot Admin role.
+    #     """
+    #     server = ctx.message.server
+    #     try:
+    #         await self.bot.leave_server(server)
+    #     except:
+    #         await self.bot.say('Could not leave..')
 
     @commands.command()
     async def uptime(self):
@@ -205,11 +205,11 @@ class Meta:
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):
-        comm.message_user(ctx.message, "BANG OR BANG, what's the best ? :p Anyway I'm up and running")
+        await comm.message_user(ctx.message, "BANG OR BANG, what's the best ? :p Anyway I'm up and running")
 
     @commands.command(pass_context=True)
     async def wiki(self, ctx):
-        comm.message_user(ctx.message, "https://api-d.com/duckhunt/index.php/")
+        await comm.message_user(ctx.message, "https://api-d.com/duckhunt/index.php/")
 
 
 def setup(bot):

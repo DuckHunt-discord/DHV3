@@ -30,7 +30,7 @@ log.setLevel(logging.INFO)
 handler = logging.FileHandler(filename='dh.log', encoding='utf-8', mode='w')
 log.addHandler(handler)
 
-help_attrs = dict(hidden=True)
+help_attrs = dict(hidden=False)
 
 
 def prefix(bot, message):
@@ -60,6 +60,10 @@ async def on_command_error(error, ctx):
         }))
     elif isinstance(error, commands.MissingRequiredArgument):
         await comm.message_user(ctx.message, ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+    elif isinstance(error, commands.BadArgument):
+        await comm.message_user(ctx.message, ":x: Bad argument provided. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+    elif isinstance(error, commands.CheckFailure):
+        await comm.message_user(ctx.message, ":x: You are not an admin/owner, so you can't use this command. ")
 
 
 @bot.event
@@ -79,14 +83,14 @@ async def on_resumed():
 @bot.event
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
-    message = ctx.message
-    destination = None
-    if message.channel.is_private:
-        destination = 'Private Message'
-    else:
-        destination = '#{0.channel.name} ({0.server.name})'.format(message)
-
-    log.info('{0.timestamp}: {0.author.name} in {1}: {0.content}'.format(message, destination))
+    # message = ctx.message
+    # destination = None
+    # if message.channel.is_private:
+    #    destination = 'Private Message'
+    # else:
+    #    destination = '#{0.channel.name} ({0.server.name})'.format(message)
+    #
+    # log.info('{0.timestamp}: {0.author.name} in {1}: {0.content}'.format(message, destination))
 
 
 @bot.event

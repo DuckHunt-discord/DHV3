@@ -193,6 +193,7 @@ class Shoot:
     @checks.is_activated_here()
     @checks.is_not_banned()
     async def reload(self, ctx):
+        await self.giveBackIfNeeded(ctx.message)
         message = ctx.message
         language = prefs.getPref(message.server, "language")
 
