@@ -19,6 +19,15 @@ class Shoot:
         await comm.logwithinfos_ctx(ctx, "test")
         await self.bot.say("Prout")
 
+    @commands.command(pass_context=True)
+    async def bang(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    async def reload(self, ctx):
+        raise NotImplementedError
+
+
 
 def setup(bot):
     bot.add_cog(Shoot(bot))

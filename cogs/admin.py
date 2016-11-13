@@ -90,6 +90,15 @@ class Admin:
         for i in range(times):
             await self.bot.process_commands(msg)
 
+    @commands.command()
+    @checks.is_owner()
+    async def serverlist(self, invitations: str = None):
+        raise NotImplementedError
+
+    @commands.command()
+    @checks.is_owner()
+    async def broadcast(self):
+        raise NotImplementedError
 
 def setup(bot):
     bot.add_cog(Admin(bot))

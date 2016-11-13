@@ -56,6 +56,46 @@ class ServerAdmin:
                     "newexp": scores.getStat(ctx.message.channel, target, "exp")
                     }))
 
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def duckplanning(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def add_Channel(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def del_channel(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def add_admin(self, ctx, target: discord.Member):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def del_admin(self, ctx, target: discord.Member):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    async def claimserver(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def permissions(self, ctx):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def deleteeverysinglescoreandstatonthischannel(self, ctx):
+        raise NotImplementedError
+
+
     ### SETTINGS ###
 
     @commands.group(pass_context=True)

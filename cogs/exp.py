@@ -54,6 +54,117 @@ class Exp:
                 comm.logwithinfos_message(message, "[sendexp] manque d'experience")
                 await comm.message_user(message, _("Vous n'avez pas assez d'experience", language))
 
+    @commands.command(pass_context=True)
+    @checks.is_not_banned()
+    async def duckstats(self, ctx, target: discord.Member):
+        raise NotImplementedError
+
+    @commands.command(pass_context=True)
+    @checks.is_not_banned()
+    async def top(self, ctx, number_of_scores: int):
+        raise NotImplementedError
+
+    @commands.group(pass_context=True)
+    @checks.is_not_banned()
+    async def shop(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="1")
+    async def item1(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="2")
+    async def item2(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="3")
+    async def item3(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="4")
+    async def item4(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="5")
+    async def item5(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="6")
+    async def item6(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="7")
+    async def item7(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="8")
+    async def item8(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="9")
+    async def item9(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="10")
+    async def item10(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="11")
+    async def item11(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="12")
+    async def item12(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="13")
+    async def item13(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="14")
+    async def item14(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="15")
+    async def item15(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="16")
+    async def item16(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="17")
+    async def item17(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="18")
+    async def item18(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="19")
+    async def item19(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="20")
+    async def item20(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="21")
+    async def item21(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="22")
+    async def item22(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="23")
+    async def item23(self, ctx):
+        raise NotImplementedError
+
+    @shop.command(pass_context=True, name="24")
+    async def item24(self, ctx):
+        raise NotImplementedError
+
 
 def setup(bot):
     bot.add_cog(Exp(bot))
