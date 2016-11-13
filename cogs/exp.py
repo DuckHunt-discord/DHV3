@@ -8,7 +8,7 @@
 import discord
 from discord.ext import commands
 
-from cogs.utils import comm, prefs, scores
+from cogs.utils import checks, comm, prefs, scores
 from cogs.utils.commons import _
 
 
@@ -19,6 +19,7 @@ class Exp:
         self.bot = bot
 
     @commands.command(pass_context=True)
+    @checks.is_not_banned()
     async def sendexp(self, ctx, target: discord.Member, amount: int):
         message = ctx.message
         language = prefs.getPref(message.server, "language")

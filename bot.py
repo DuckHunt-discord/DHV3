@@ -1,6 +1,7 @@
 import asyncio
 import datetime
 import json
+import locale
 import logging
 import random
 import sys
@@ -12,6 +13,7 @@ from discord.ext import commands
 
 from cogs.utils import commons
 
+locale.setlocale(locale.LC_ALL, 'fr_FR')
 commons.init()
 
 from cogs.utils.commons import _
@@ -58,6 +60,9 @@ async def on_command_error(error, ctx):
         print('In {0.command.qualified_name}:'.format(ctx), file=sys.stderr)
         traceback.print_tb(error.original.__traceback__)
         print('{0.__class__.__name__}: {0}'.format(error.original), file=sys.stderr)
+    elif isinstance(error, commands.MissingRequiredArgument):
+        await comm.message_user(ctx.message,
+                                ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event

@@ -11,9 +11,9 @@ def is_owner_check(message):
     return owner  # Owner of the bot
 
 
-def is_not_banned_check(message):
-    banned = not scores.getStat(message.channel, message.author, "banned", default=False)
-    bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(banned)))
+def is_banned_check(message):
+    banned = scores.getStat(message.channel, message.author, "banned", default=False)
+    bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(not banned)))
     return banned  # Inverse d'un banissement
 
 
@@ -29,7 +29,7 @@ def is_owner():
 
 
 def is_not_banned():
-    return commands.check(lambda ctx: is_not_banned_check(ctx.message) and not is_admin_check(ctx.message))
+    return commands.check(lambda ctx: is_banned_check(ctx.message) and not is_admin_check(ctx.message) and not is_owner_check(ctx.message))
 
 
 def is_admin():
