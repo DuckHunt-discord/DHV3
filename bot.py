@@ -91,6 +91,7 @@ async def on_command(command, ctx):
 
 @bot.event
 async def on_message(message):
+    commons.number_messages += 1
     if message.author.bot:
         return
 
@@ -168,7 +169,7 @@ if __name__ == '__main__':
     bot.commands_used = Counter()
     bot.bots_key = credentials['bots_key']
     ## POST INIT IMPORTS ##
-    from cogs.utils.ducks import get_next_duck, planifie, spawn_duck
+    from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
     from cogs.utils import prefs, comm
 
     for extension in initial_extensions:
@@ -177,9 +178,23 @@ if __name__ == '__main__':
         except Exception as e:
             logger.exception('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
     bot.loop.create_task(mainloop())
+    try:
+        bot.loop.run_until_complete(bot.start(token))
+    except KeyboardInterrupt:
+        logger.warning("Arret en cours")
+    except:
+        logger.exception("Erreur impromptue, redémarrage")
 
-    bot.run(token)
-    handlers = log.handlers[:]
-    for hdlr in handlers:
-        hdlr.close()
-        log.removeHandler(hdlr)
+    finally:
+        try:
+            bot.loop.run_until_complete(allCanardsGo())
+        except:
+            pass
+        handlers = log.handlers[:]
+        for hdlr in handlers:
+            hdlr.close()
+            log.removeHandler(hdlr)
+        bot.loop.run_until_complete(bot.logout())
+
+    asyncio.sleep(3)
+    bot.loop.close()

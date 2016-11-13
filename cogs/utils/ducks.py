@@ -10,11 +10,22 @@ import time
 import discord
 
 from cogs.utils import comm, commons, prefs
+from cogs.utils.comm import logwithinfos
+from cogs.utils.prefs import getPref
 from .commons import _
 
 logger = commons.logger
 bot = commons.bot
 
+
+async def allCanardsGo():
+    for canard in commons.ducks_spawned:
+        try:
+            await bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=getPref(canard["channel"].server, "language")))
+            await logwithinfos(canard["channel"], None, "Force-leaving of duck " + str(canard))
+        except:
+            await logwithinfos(canard["channel"], None, "Force-leaving of duck FAILED " + str(canard))
+            logger.exception("Here is why : ")
 
 async def planifie(channel_obj: discord.Channel = None):
     if not channel_obj:
