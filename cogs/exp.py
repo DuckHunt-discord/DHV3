@@ -430,6 +430,8 @@ class Exp:
         await comm.message_user(message, _(":money_with_wings: You will be warned when the next duck on #{channel_name} spawns", language).format(**{
             "channel_name": message.channel.name
             }), forcePv=True)
+        if not "detecteur" in servers[message.server.id]:
+            servers[message.server.id]["detecteur"] = {}
         if message.channel.id in servers[message.server.id]["detecteur"]:
             servers[message.server.id]["detecteur"][message.channel.id].append(message.author.id)
         else:

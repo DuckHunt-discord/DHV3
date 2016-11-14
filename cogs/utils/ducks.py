@@ -107,20 +107,23 @@ async def get_next_duck():
 
 async def spawn_duck(duck):
     servers = prefs.JSONloadFromDisk("channels.json", default="{}")
-    if servers[duck["channel"].server.id]["detecteur"].get(duck["channel"].id, False):
-        for playerid in servers[duck["channel"].server.id]["detecteur"][duck["channel"].id]:
-            player = discord.utils.get(duck["channel"].server.members, id=playerid)
-            try:
-                await bot.send_message(player, _("There is a duck on #{channel}", prefs.getPref(duck["channel"].server, "lang")).format(**{
-                    "channel": duck["channel"].name
-                }))
-                await comm.logwithinfos(duck["channel"], player, "Sending a duck notification")
-            except:
-                await comm.logwithinfos(duck["channel"], player, "Error sending the duck notification")
-                pass
+    try:
+        if servers[duck["channel"].server.id]["detecteur"].get(duck["channel"].id, False):
+            for playerid in servers[duck["channel"].server.id]["detecteur"][duck["channel"].id]:
+                player = discord.utils.get(duck["channel"].server.members, id=playerid)
+                try:
+                    await bot.send_message(player, _("There is a duck on #{channel}", prefs.getPref(duck["channel"].server, "lang")).format(**{
+                        "channel": duck["channel"].name
+                    }))
+                    await comm.logwithinfos(duck["channel"], player, "Sending a duck notification")
+                except:
+                    await comm.logwithinfos(duck["channel"], player, "Error sending the duck notification")
+                    pass
 
-        servers[duck["channel"].server.id]["detecteur"].pop(duck["channel"].id)
-        prefs.JSONsaveToDisk(servers, "channels.json")
+            servers[duck["channel"].server.id]["detecteur"].pop(duck["channel"].id)
+            prefs.JSONsaveToDisk(servers, "channels.json")
+    except KeyError:
+        pass
 
     chance = random.randint(0, 100)
     if chance <= prefs.getPref(duck["channel"].server, "super_ducks_chance"):

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
 "POT-Creation-Date: 2016-11-14 13:54+0100\n"
-"PO-Revision-Date: 2016-11-14 13:57+0100\n"
+"PO-Revision-Date: 2016-11-14 20:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -870,63 +870,64 @@ msgstr ""
 
 #: cogs/utils/commons.py:506
 msgid "a stuffed duck."
-msgstr ""
+msgstr "un canard en peluche."
 
 #: cogs/utils/commons.py:507
 msgid "a rubber ducky."
-msgstr ""
+msgstr "un canard en plastique pour le bain."
 
 #: cogs/utils/commons.py:508
 msgid "a vibrating duck."
-msgstr ""
+msgstr "un canard vibrant."
 
 #: cogs/utils/commons.py:509
 msgid "a pile of feathers."
-msgstr ""
+msgstr "un tas de plumes."
 
 #: cogs/utils/commons.py:510
 msgid "a chewed chewing gum."
-msgstr ""
+msgstr "un chewing-gum mâchouillé."
 
 #: cogs/utils/commons.py:511
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr ""
+"un prospectus du CCCCC (Coalition Contre le Comité Contre les Canards)."
 
 #: cogs/utils/commons.py:512
 msgid "an old shoe."
-msgstr ""
+msgstr "une vieille chaussure."
 
 #: cogs/utils/commons.py:513
 msgid "a spring thingy."
-msgstr ""
+msgstr "un truc à ressort."
 
 #: cogs/utils/commons.py:514
 msgid "a cow dung."
-msgstr ""
+msgstr "une bouse de vache."
 
 #: cogs/utils/commons.py:515
 msgid "a dog dirt."
-msgstr ""
+msgstr "une crotte de chien."
 
 #: cogs/utils/commons.py:516
 msgid "an expired hunting license."
-msgstr ""
+msgstr "un permis de chasse expiré."
 
 #: cogs/utils/commons.py:517
 msgid "a cartridge."
-msgstr ""
+msgstr "une douille."
 
 #: cogs/utils/commons.py:518
 msgid "a cigarette butt."
-msgstr ""
+msgstr "un mégot de cigarette."
 
 #: cogs/utils/commons.py:519
 msgid "a used condom."
-msgstr ""
+msgstr "un préservatif usagé."
 
 #: cogs/utils/commons.py:520
 msgid "a broken sight."
-msgstr ""
+msgstr "une lunette de visée cassée."
 
 #: cogs/utils/commons.py:521
 msgid "a broken infrared detector."
@@ -938,7 +939,7 @@ msgstr "un silencieux tordu."
 
 #: cogs/utils/commons.py:523
 msgid "an empty box of AP ammo."
-msgstr ""
+msgstr "une boîte vide de munitions AP."
 
 #: cogs/utils/commons.py:524
 msgid "an empty box of explosive ammo."
@@ -946,27 +947,27 @@ msgstr "une boîte vide de munitions explosives."
 
 #: cogs/utils/commons.py:525
 msgid "a four-leaf clover with only 3 left."
-msgstr ""
+msgstr "un trèfle à 4 feuilles auquel il en manque une."
 
 #: cogs/utils/commons.py:526
 msgid "a broken decoy."
-msgstr ""
+msgstr "un leurre cassé."
 
 #: cogs/utils/commons.py:527
 msgid "a broken mirror."
-msgstr ""
+msgstr "un détecteur infrarouge cassé."
 
 #: cogs/utils/commons.py:528
 msgid "a rusty mechanical duck."
-msgstr ""
+msgstr "un canard mécanique rouillé."
 
 #: cogs/utils/commons.py:529
 msgid "a pair of sunglasses without glasses."
-msgstr ""
+msgstr "une paire de lunettes de soleil sans ses verres."
 
 #: cogs/utils/commons.py:530
 msgid "Donald's beret."
-msgstr ""
+msgstr "le béret de Donald."
 
 #: cogs/utils/commons.py:531
 msgid "a half-melted peppermint."

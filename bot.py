@@ -9,6 +9,7 @@ import time
 import traceback
 from collections import Counter
 
+import discord
 from discord.ext import commands
 
 from cogs.utils import commons
@@ -72,6 +73,7 @@ async def on_ready():
     logger.info('Logged in as:')
     logger.info('Username: ' + bot.user.name)
     logger.info('ID: ' + bot.user.id)
+    await bot.change_presence(game=discord.Game(name="Killing ducks | !help"))
     if not hasattr(bot, 'uptime'):
         bot.uptime = datetime.datetime.utcnow()
 
@@ -103,6 +105,19 @@ async def on_message(message):
     # await comm.logwithinfos_message(message, message.content)
     await bot.process_commands(message)
 
+
+@bot.event
+async def on_channel_delete(channel):
+    from cogs.utils import ducks
+    await ducks.del_channel(channel)
+
+
+@bot.event
+async def on_server_remove(server):
+    from cogs.utils import ducks
+
+    for channel in server.channels:
+        await ducks.del_channel(channel)
 
 def load_credentials():
     with open('credentials.json') as f:

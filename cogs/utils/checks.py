@@ -1,19 +1,18 @@
 import discord.utils
 from discord.ext import commands
 
-from cogs.utils import comm, prefs, scores
-from cogs.utils.commons import bot
+from cogs.utils import prefs, scores
 
 
 def is_owner_check(message):
     owner = message.author.id in ['138751484517941259']
-    bot.loop.create_task(comm.logwithinfos_message(message, "Check owner : " + str(owner)))
+    # bot.loop.create_task(comm.logwithinfos_message(message, "Check owner : " + str(owner)))
     return owner  # Owner of the bot
 
 
 def is_banned_check(message):
     banned = not scores.getStat(message.channel, message.author, "banned", default=False)
-    bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(banned)))
+    #bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(banned)))
     return banned  # Inverse d'un banissement
 
 
@@ -24,7 +23,7 @@ def is_admin_check(message):
         admin = message.author.id in servers[message.server.id]["admins"]
     except KeyError:
         admin = False
-    bot.loop.create_task(comm.logwithinfos_message(message, "Check admin : " + str(admin)))
+    #bot.loop.create_task(comm.logwithinfos_message(message, "Check admin : " + str(admin)))
 
     return admin  # Dans la liste des admins d'un serveur (fichier json)
 
@@ -40,7 +39,7 @@ def is_activated_check(message):
     except KeyError:
         activated = False
 
-    bot.loop.create_task(comm.logwithinfos_message(message, "Check activated here : " + str(activated)))
+    #bot.loop.create_task(comm.logwithinfos_message(message, "Check activated here : " + str(activated)))
     return activated
 
 
