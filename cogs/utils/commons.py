@@ -22,7 +22,7 @@ def init():
 
     # Settings, config & translation
 
-    global lang, owners, support_server, _, defaultSettings, levels
+    global lang, owners, support_server, defaultSettings, levels
     lang = "en"  # Language specified here is for console messages, everything that is not sent to a server
     owners = [138751484517941259]
     support_server = [195260081036591104]
@@ -40,11 +40,12 @@ def init():
                 rv = self._translations[language] = gettext.translation(self._domain, languages=[language], localedir="language", fallback=True)
                 return rv
 
-        def get(self, msg, language=lang):
+        def get(self, msg: str, language: str = lang):
             # logger.debug("Language > " + str(language))
             return self._get_translation(language).gettext(msg)
 
-    _ = Domain("default").get
+    def _(string):
+        return string  # Fake definition pour la traduction
 
     defaultSettings = {
         "delete_commands"           : {
@@ -503,9 +504,8 @@ def init():
 
     canards_bye = [_("Le canard prend la fuite.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard va voir ailleurs.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard n'a pas le temps pour ça.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard est parti.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard se dissipe dans l'espace-temps.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard en a ras le bol d'être ignoré et fuit.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard ne veut pas etre canardé.  ·°'\`'°-.,¸¸.·°'\`")]
 
-    aideMsg = "Nouveau wiki, plus clair, plus simple : https://api-d.com/duckhunt/index.php/Accueil | Old wiki but in english : https://github.com/DuckHunt-discord/DuckHunt-Discord/wiki/Aide | Support server : https://discord.gg/4MK2KyM"
-    inutilite = [_("un canard en peluche."), _("un canard en plastique pour le bain."), _("un canard vibrant."), _("un tas de plumes."), _("un chewing-gum mâchouillé."), _("un prospectus du CCCCC (Coalition Contre le Comité Contre les Canards)."), _("une vieille chaussure."), _("un truc à ressort."), _("une bouse de vache."), _("une crotte de chien."), _("un permis de chasse expiré."), _("une douille."), _("un mégot."), _("un préservatif usagé."), _("une lunette de visée cassée."), _("un détecteur infrarouge cassé."), _("un silencieux tordu."), _("une boîte vide de munitions AP."), _("une boîte vide de munitions explosives."), _("un trèfle à 4 feuilles auquel il en manque une."), _("un appeau cassé."), _("un miroir cassé."), _("un canard mécanique rouillé."), _("une paire de lunettes de soleil sans ses verres."), _("le béret de Donald."), _("une pastille de menthe à moitié fondue."), _("une boîte de nettoyant Abraxo."), _("un fusil avec le bout du canon en fleur."),
-                 _("un vieux couteau de chasse."), _("un vieil enregistrement vidéo : http://tinyurl.com/zbejktu"), _("une vieille photo de chasse : http://tinyurl.com/hmn4r88"), _("une vieille carte postale : http://tinyurl.com/hbnkpzr"), _("une photo de super-canard : http://tinyurl.com/hle8fjf"), _("un pin's de chasseur : http://tinyurl.com/hqy7fhq"), _("des buissons."), _("100 balles et un mars."), _("Une tomate : http://i2.cdn.turner.com/cnnnext/dam/assets/150918221030-duck-shaped-tomato-found-in-garden-pkg-00005828-full-169.jpg"), _("un hippie qui te propose de tirer une douille sur son bang")]
+    inutilite = [_("a stuffed duck."), _("a rubber ducky."), _("a vibrating duck."), _("a pile of feathers."), _("a chewed chewing gum."), _("a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."), _("an old shoe."), _("a spring thingy."), _("a cow dung."), _("a dog dirt."), _("an expired hunting license."), _("a cartridge."), _("a cigarette butt."), _("a used condom."), _("a broken sight."), _("a broken infrared detector."), _("a bent silencer."), _("an empty box of AP ammo."), _("an empty box of explosive ammo."), _("a four-leaf clover with only 3 left."), _("a broken decoy."), _("a broken mirror."), _("a rusty mechanical duck."), _("a pair of sunglasses without glasses."), _("Donald's beret."), _("a half-melted peppermint."), _("a box of Abraxo cleaner."), _("a gun with banana peeled barrel."), _("an old hunting knife."), _("an old video recording: http://tinyurl.com/zbejktu"), _("an old hunting photo: http://tinyurl.com/hmn4r88"),
+                 _("an old postcard: http://tinyurl.com/hbnkpzr"), _("a golden duck photo: http://tinyurl.com/hle8fjf"), _("a hunter pin: http://tinyurl.com/hqy7fhq"), _("bushes.")]
 
     # Logger
     global logger
@@ -521,4 +521,8 @@ def init():
     steam_handler.setLevel(logging.DEBUG)
     steam_handler.setFormatter(formatter)
     logger.addHandler(steam_handler)
-    return logger
+
+    # TRAD
+    del _
+    global _
+    _ = Domain("default").get

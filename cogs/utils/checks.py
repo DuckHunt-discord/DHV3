@@ -20,7 +20,10 @@ def is_banned_check(message):
 def is_admin_check(message):
     servers = prefs.JSONloadFromDisk("channels.json")
 
-    admin = message.author.id in servers[message.server.id]["admins"]
+    try:
+        admin = message.author.id in servers[message.server.id]["admins"]
+    except KeyError:
+        admin = False
     bot.loop.create_task(comm.logwithinfos_message(message, "Check admin : " + str(admin)))
 
     return admin  # Dans la liste des admins d'un serveur (fichier json)
@@ -28,6 +31,7 @@ def is_admin_check(message):
 
 def is_activated_check(message):
     servers = prefs.JSONloadFromDisk("channels.json")
+
     try:
         if message.channel.id in servers[message.server.id]["channels"]:
             activated = True

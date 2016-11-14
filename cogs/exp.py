@@ -158,9 +158,16 @@ class Exp:
     @checks.is_activated_here()
     async def shop(self, ctx):
         from cogs import shoot
+        language = prefs.getPref(ctx.message.server, "language")
+
         await shoot.Shoot(self.bot).giveBackIfNeeded(ctx.message)
         if not ctx.invoked_subcommand:
-            await comm.message_user(ctx.message, ":x: Incorrect syntax : `!shop [item number] [argument if applicable]`")
+            await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`", language))
+
+    @shop.command(pass_context=True)
+    async def list(self, ctx):
+        language = prefs.getPref(ctx.message.server, "language")
+        await comm.message_user(ctx.message, _("The list of items is available here : https://api-d.com/duckhunt/index.php/Objets_du_Shop", language))
 
     @shop.command(pass_context=True, name="1")
     @checks.have_exp(7)
@@ -247,7 +254,7 @@ class Exp:
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "graisse", default=0) < int(time.time()):
-            await comm.message_user(message, _(":money_with_wings: You add grease in your weapon to reduce jamming risks by 50% for a day, for only 8 exp points.", language))
+            await comm.message_user(message, _(":money_with_wings: You add grease in your weapon to reduce jamming risks by 50 percent for a day, for only 8 exp points.", language))
             scores.addToStat(message.channel, message.author, "graisse", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -8)
 

@@ -45,25 +45,26 @@ logger = commons.logger
 
 @bot.event
 async def on_command_error(error, ctx):
+    language = prefs.getPref(ctx.message.server, "language")
     if isinstance(error, commands.NoPrivateMessage):
-        await bot.send_message(ctx.message.author, 'This command cannot be used in private messages.')
+        await bot.send_message(ctx.message.author, _(':x: This command cannot be used in private messages.', language))
     elif isinstance(error, commands.DisabledCommand):
-        await bot.send_message(ctx.message.author, 'Sorry. This command is disabled and cannot be used.')
+        await bot.send_message(ctx.message.author, _(':x: Sorry. This command is disabled and cannot be used.', language))
     elif isinstance(error, commands.CommandInvokeError):
         print('In {0.command.qualified_name}:'.format(ctx), file=sys.stderr)
         traceback.print_tb(error.original.__traceback__)
         print('{0.__class__.__name__}: {0}'.format(error.original), file=sys.stderr)
-        await comm.message_user(ctx.message, ":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```".format(**{
+        await comm.message_user(ctx.message, _(":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```", language).format(**{
             "command": ctx.command.qualified_name,
             "error"  : error.original.__class__.__name__,
             "tb"     : "\n".join(traceback.format_tb(error.original.__traceback__))
         }))
     elif isinstance(error, commands.MissingRequiredArgument):
-        await comm.message_user(ctx.message, ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):
-        await comm.message_user(ctx.message, ":x: Bad argument provided. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, _(":x: Bad argument provided. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.CheckFailure):
-        await comm.message_user(ctx.message, ":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, _(":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event
@@ -185,9 +186,9 @@ if __name__ == '__main__':
     try:
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:
-        logger.warning("Arret en cours")
+        logger.warning("Shutdown in progress")
     except:
-        logger.exception("Erreur impromptue, redémarrage")
+        logger.exception("Unknown error, restarting")
 
     finally:
         try:

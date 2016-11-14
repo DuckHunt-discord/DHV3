@@ -24,11 +24,11 @@ async def logwithinfos_ctx(ctx_obj, log_str):
     await logwithinfos_message(ctx_obj.message, log_str)
 
 
-async def logwithinfos_message(message_obj, log_str: str):
+async def logwithinfos_message(message_obj: discord.Message, log_str: str):
     await logwithinfos(message_obj.channel, message_obj.author, log_str)
 
 
-async def logwithinfos(channel, author=None, log_str=""):
+async def logwithinfos(channel: discord.Channel, author=None, log_str=""):
     commons.logger.debug(((channel.server.name.center(16, " ") if len(channel.server.name) < 16 else channel.server.name[:16]) if channel else "XX") + " :: " + ((("#" + channel.name).center(16, " ") if len(channel.name) < 16 else channel.name[:16]) if channel else "XX") + " :: " + ("<" + author.name + "> " if author else "") + log_str)
 
 

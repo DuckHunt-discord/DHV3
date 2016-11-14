@@ -14,7 +14,7 @@ def getPref(server, pref):
     try:
         return servers[server.id]["settings"].get(pref, commons.defaultSettings[pref]["value"])
     except KeyError:
-        return commons.defaultSettings[pref]
+        return commons.defaultSettings[pref]["value"]
 
 
 def setPref(server, pref, value=None, force=False):

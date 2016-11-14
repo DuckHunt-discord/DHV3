@@ -1,0 +1,1014 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Duck Hunt\n"
+"POT-Creation-Date: 2016-11-14 13:54+0100\n"
+"PO-Revision-Date: 2016-11-14 13:57+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: bot.py:50
+msgid ":x: This command cannot be used in private messages."
+msgstr ""
+
+#: bot.py:52
+msgid ":x: Sorry. This command is disabled and cannot be used."
+msgstr ""
+
+#: bot.py:57
+#, python-brace-format
+msgid ""
+":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
+"{tb}\n"
+"```"
+msgstr ""
+
+#: bot.py:63
+msgid ":x: Missing a required argument. "
+msgstr ""
+
+#: bot.py:65
+msgid ":x: Bad argument provided. "
+msgstr ""
+
+#: bot.py:67
+msgid ""
+":x: You are not an admin/owner, you don't have enough exp to use this "
+"command, or you are banned from the channel, so you can't use this command. "
+msgstr ""
+
+#: cogs/admin.py:102
+msgid "Name"
+msgstr "nom"
+
+#: cogs/admin.py:102
+msgid "Invitation"
+msgstr "Invitation"
+
+#: cogs/admin.py:102
+msgid "Number of enabled channels"
+msgstr "Nombre de canaux actifs"
+
+#: cogs/admin.py:102 cogs/admin.py:153
+msgid "Number of connected users"
+msgstr "Nombre d’utilisateurs connectés"
+
+#: cogs/admin.py:102
+msgid "Ducks per day"
+msgstr "Canards par jour"
+
+#: cogs/admin.py:102
+msgid "Number of unneeded permissions"
+msgstr "Nombre d’autorisations inutiles"
+
+#: cogs/admin.py:102
+msgid "Number of needed permissions"
+msgstr "Nombre d’autorisations nécessaires"
+
+#: cogs/admin.py:105
+msgid " > En cours"
+msgstr "> En cours"
+
+#: cogs/admin.py:116
+#, python-brace-format
+msgid " > Processing servers ({done}/{total})"
+msgstr " > Traitement des serveurs ({done} / {total})"
+
+#: cogs/admin.py:160
+msgid "Starting the broadcast"
+msgstr "Demarrage de la diffusion \"broadcast\""
+
+#: cogs/admin.py:169
+msgid "Broadcast finished"
+msgstr "Broadcast terminé"
+
+#: cogs/exp.py:32
+#, python-brace-format
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (dans {dans_jours}{dans_heures} et {dans_minutes})"
+
+#: cogs/exp.py:33
+msgid "%H:%M:%S le %d/%m"
+msgstr "%H:%M:%S le %d/%m"
+
+#: cogs/exp.py:34
+#, python-brace-format
+msgid "{dans} days "
+msgstr "{dans} jours"
+
+#: cogs/exp.py:37
+#, python-brace-format
+msgid "{dans} hours"
+msgstr "{dans} heures"
+
+#: cogs/exp.py:40
+#, python-brace-format
+msgid "{dans} minutes"
+msgstr "minutes de {dans}"
+
+#: cogs/exp.py:54
+msgid ":x: You need to give a positive number for the exp to send"
+msgstr ":x: Vous devez donner un nombre positif pour envoyer de l'experience"
+
+#: cogs/exp.py:65
+#, python-brace-format
+msgid ""
+"You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
+"transfer) !"
+msgstr ""
+"Vous avez envoyé {amount} exp  à{target} (et payé {taxes} exp de taxe pour "
+"ce transfert)!"
+
+#: cogs/exp.py:76
+msgid "You don't have enough experience points"
+msgstr "Vous ne disposez pas de suffisamment de points d'expérience"
+
+#: cogs/exp.py:92
+msgid "No duck killed"
+msgstr "Aucun canard tué"
+
+#: cogs/exp.py:93
+msgid "Statistic"
+msgstr "Statistique"
+
+#: cogs/exp.py:93
+msgid "Value"
+msgstr "Valeur"
+
+#: cogs/exp.py:94 cogs/exp.py:140
+msgid "Ducks killed"
+msgstr "Canards tués"
+
+#: cogs/exp.py:95
+msgid "Shots missed"
+msgstr "Tirs manqués"
+
+#: cogs/exp.py:96
+msgid "Shots without ducks"
+msgstr "Tirs sans canards"
+
+#: cogs/exp.py:97
+msgid "Best killing time"
+msgstr "Meilleur temps de tir"
+
+#: cogs/exp.py:98
+msgid "Bullets in current charger"
+msgstr "Balles dans le chargeur actuel"
+
+#: cogs/exp.py:99
+msgid "Chargers left"
+msgstr "Chargeurs restants"
+
+#: cogs/exp.py:100 cogs/exp.py:140
+msgid "Exp points"
+msgstr "Points d'exp"
+
+#: cogs/exp.py:101
+msgid "Ratio (exp/ducks killed)"
+msgstr "Ratio (exp / canards tués)"
+
+#: cogs/exp.py:103
+msgid "Current level"
+msgstr "Niveau actuel"
+
+#: cogs/exp.py:104
+msgid "Shots accuracy"
+msgstr "Précision des tirs"
+
+#: cogs/exp.py:105
+msgid "Weapon fiability"
+msgstr "Fiabilité de l'arme"
+
+#: cogs/exp.py:107
+msgid "Object : grease"
+msgstr "Objet : graisse"
+
+#: cogs/exp.py:109
+msgid "Object : infrared detector"
+msgstr "Objet : détecteur infrarouge"
+
+#: cogs/exp.py:111
+msgid "Object : silencer"
+msgstr "Objet : silencieux"
+
+#: cogs/exp.py:113
+#, python-brace-format
+msgid "Object : clover {exp} exp"
+msgstr "Objet: trèfle {exp} exp"
+
+#: cogs/exp.py:117
+msgid "Object : explosive ammo"
+msgstr "Objet: munitions explosives"
+
+#: cogs/exp.py:119
+msgid "Object : AP ammo"
+msgstr "Objet: munitions AP"
+
+#: cogs/exp.py:121
+msgid "Effect : wet"
+msgstr "Effet: mouillé"
+
+#: cogs/exp.py:123
+#, python-brace-format
+msgid ""
+"Statistics of {mention} : \n"
+"```{table}```\n"
+"https://api-d.com/snaps/table_de_progression.html"
+msgstr ""
+"Statistiques de {mention} : \n"
+"```{table}```\n"
+"https://api-d.com/snaps/table_de_progression.html"
+
+#: cogs/exp.py:135
+msgid ""
+":x: The maximum number of scores that can be shown on a topscores table is "
+"200."
+msgstr ""
+":x: Le nombre maximal de scores qui peuvent êtres affichés dans le topscores "
+"est de 200"
+
+#: cogs/exp.py:140 cogs/exp.py:153
+msgid "Rank"
+msgstr "Rang"
+
+#: cogs/exp.py:140
+msgid "Nickname"
+msgstr "Pseudo"
+
+#: cogs/exp.py:151
+#, python-brace-format
+msgid ""
+":cocktail: Best scores for #{channel_name} : :cocktail:\n"
+"```{table}```"
+msgstr ""
+":cocktail: Meilleurs scores pour #{channel_name} : :cocktail:\n"
+"```{table}```"
+
+#: cogs/exp.py:165
+msgid ""
+":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
+msgstr ""
+
+#: cogs/exp.py:170
+msgid ""
+"The list of items is available here : https://api-d.com/duckhunt/index.php/"
+"Objets_du_Shop"
+msgstr ""
+
+#: cogs/exp.py:182
+msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
+msgstr ""
+":money_with_wings: Tu ajoutes une balle à ton arme pour 7 points d'experience"
+
+#: cogs/exp.py:187
+msgid ":champagne: Your charger is full !"
+msgstr ":champagne: Votre chargeur est plein!"
+
+#: cogs/exp.py:197
+msgid ""
+":money_with_wings: You add a charger to your backpack for 13 exp points."
+msgstr ""
+":money_with_wings: Vous ajoutez un chargeur dans votre réserve pour 13 "
+"points d'experience"
+
+#: cogs/exp.py:202
+msgid ":champagne: You have enough chargers!"
+msgstr ":champagne: Vous avez assez de chargeurs!"
+
+#: cogs/exp.py:212
+msgid ""
+":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
+"hours, you will deal double damage to ducks."
+msgstr ""
+":money_with_wings: Tu achetes des munitions AP, qui doubleront tes dégats "
+"pendant une journée"
+
+#: cogs/exp.py:217
+msgid ":champagne: You have enough AP ammo for now!"
+msgstr ":champagne: Vous avez largement assez de munitions AP"
+
+#: cogs/exp.py:227
+msgid ""
+":money_with_wings: You purchase explosive ammo for your weapon. For the next "
+"24 hours, you will deal triple damage to ducks."
+msgstr ""
+":money_with_wings: Tu achetes des munitions explosives, qui tripleront tes "
+"dégats pendant une journée"
+
+#: cogs/exp.py:232
+msgid ":champagne: You have enough explosive ammo for now!"
+msgstr ":champagne: Vous avez largement assez de munitions explosives"
+
+#: cogs/exp.py:242
+msgid ":money_with_wings: You take your weapon back for 40 exp points"
+msgstr ":money_with_wings: Tu récupéres ton arme pour 40 points d'experience"
+
+#: cogs/exp.py:247
+msgid ""
+":champagne: You haven't kill anyone today, you have your weapon, what do you "
+"want to buy ? :p"
+msgstr ""
+":champagne: Vous n'avez tué personne aujourd'hui, pourquoi voulez vous "
+"récupérer votre arme ? :p"
+
+#: cogs/exp.py:257
+msgid ""
+":money_with_wings: You add grease in your weapon to reduce jamming risks by "
+"50 percent for a day, for only 8 exp points."
+msgstr ""
+":money_with_wings: Tu mets de la graisse dans ton arme, ce qui réduit ses "
+"chances d'enrayement de 50% pendant 24h ! Cela te coûte 8 points d'expérience"
+
+#: cogs/exp.py:262
+msgid ""
+":champagne: Your weapon is perfectly lubricated, no need for more grease"
+msgstr ":champagne: Ton arme est déjà bien lubrifiée!"
+
+#: cogs/exp.py:276
+msgid ""
+":money_with_wings: You add an infrared detector to your weapon, that will "
+"prevent any waste of ammo for a day. Cost : 15 exp points."
+msgstr ""
+":money_with_wings: Tu ajoutes un détecteur infrarouge à ton arme pour 15 "
+"exp. Tu ne peux plus tirer lorsque aucun canard n'est présent."
+
+#: cogs/exp.py:281
+msgid ":champagne: You do have an infrared detector on your weapon, right ?"
+msgstr ""
+":champagne: Tu ne peux pas mettre deux détecteurs infrarouges sur ton arme!"
+
+#: cogs/exp.py:291
+msgid ""
+":money_with_wings: You add a silencer to your weapon, no duck will ever be "
+"frightened by one of your shots for a day. Cost : 5 exp points, what a good "
+"deal !"
+msgstr ""
+":money_with_wings: Tu ajoutes un silencieux à ton arme pour 5 exp. Tes tirs "
+"n'effrayent plus les canards."
+
+#: cogs/exp.py:296
+msgid ":champagne: You do have a silencer on your weapon, right ?"
+msgstr ":champagne: Tu as déjà un silencieux monté sur ton arme"
+
+#: cogs/exp.py:307
+#, python-brace-format
+msgid ""
+":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
+"more exp point for the next day. You brought it for 13 exp!"
+msgstr ""
+":money_with_wings: Tu achetes un trefle à 4 feuilles, qui te donnera {exp} "
+"points d'exp supplémentaires à chaque canard tué pendant 24 heures!"
+
+#: cogs/exp.py:315
+msgid ""
+":champagne: You're too lucky, but I don't have any clover left for you "
+"today :'(. Too much luck, maybe ??"
+msgstr ""
+":champagne: Je n'ai plus de trèfles pour toi aujourd'hui... Vous êtes peut-"
+"être trop chanceux ?"
+
+#: cogs/exp.py:329
+msgid ""
+":money_with_wings: You have some dry clothes on you now. You looks "
+"beautiful ! "
+msgstr ""
+":money_with_wings: Tu te changes et repart chasser avec des vétements secs, "
+"pour seulement 7 exp"
+
+#: cogs/exp.py:335
+msgid ""
+":money_with_wings: You brought brand new clothes, for nothing but the fact "
+"that you are mostly swag now. :cool:"
+msgstr ""
+":money_with_wings: Vous avez acheté de nouveaux vêtements de marque, pour "
+"rien, à part le fait que vous ayez l'air swag maintenant. :cool:"
+
+#: cogs/exp.py:356
+#, python-brace-format
+msgid ""
+":money_with_wings: You drop a full water bucket on {target}, frocing him to "
+"wait 1 hour for his/her clothes to dry before he/she can return hunting"
+msgstr ""
+":money_with_wings: Tu jettes un seau d'eau sur {target}, l'obligeant ainsi à "
+"attendre 1 heure avant de retourner chasser"
+
+#: cogs/exp.py:370
+#, python-brace-format
+msgid ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
+msgstr ""
+":ok: l'arme de {target} est sabotée ... Mais il ne sait pas: D (14 exp)!"
+
+#: cogs/exp.py:376
+#, python-brace-format
+msgid ":ok: {target} weapon is already sabotaged!"
+msgstr ":ok: L'arme de {target} est déjà sabotée"
+
+#: cogs/exp.py:388
+msgid ""
+":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
+"get killed, you will earn half the level of the killer in exp"
+msgstr ""
+":money_with_wings: Tu souscris à une assurance vie pour 10 exp, qui dure une "
+"semaine"
+
+#: cogs/exp.py:393
+msgid ":money_with_wings: You are already insured."
+msgstr ":money_with_wings: Tu es déjà assuré !"
+
+#: cogs/exp.py:406
+#, python-brace-format
+msgid ""
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to the decoy of {mention}. He brought it for 8 exp !"
+msgstr ""
+
+#: cogs/exp.py:430
+#, python-brace-format
+msgid ""
+":money_with_wings: You will be warned when the next duck on #{channel_name} "
+"spawns"
+msgstr ""
+
+#: cogs/exp.py:448
+msgid ""
+":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
+"That's bad, but so funny !"
+msgstr ""
+":money_with_wings: Tu prépares un canard mécanique sur le chan pour 50 "
+"points d'experience. C'est méchant, mais tellement drôle !"
+
+#: cogs/exp.py:453
+msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
+msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
+
+#: cogs/meta.py:169
+#, python-brace-format
+msgid ""
+"Statistiques de DuckHunt:\n"
+"\n"
+"    DuckHunt est actif dans `{nbre_channels_actives}` channels, sur "
+"`{nbre_serveurs}` serveurs. Il voit `{nbre_channels}` channels, et plus de "
+"`{nbre_utilisateurs}` utilisateurs.\n"
+"    Dans la planification d'aujourd'hui sont prévus et ont été lancés au "
+"total `{nbre_canards}` canards (soit `{nbre_canards_minute}` canards par "
+"minute).\n"
+"    Au total, le bot connait `{nbre_serveurs_francais}` serveurs francais, "
+"`{nbre_serveurs_anglais}` serveurs anglais et `{nbre_serveurs_etrangers}` "
+"serveurs étrangers.\n"
+"    Il a reçu au total durant la session `{messages}` message(s) (soit "
+"`{messages_minute}` message(s) par minute), dont `{commandes}` commandes "
+"(soit `{commandes_minute}` commandes(s) par minute).\n"
+"    Le bot est lancé depuis `{uptime_sec}` seconde(s), ce qui équivaut à "
+"`{uptime_min}` minute(s) ou encore `{uptime_heures}` heure(s), ou, en jours, "
+"`{uptime_jours}` jour(s).\n"
+"    Sur l'ensemble des serveurs, `{servsDon}` ont activé le don "
+"d'experience, `{plusde100cj}` serveurs font apparaitre plus de 100 canards "
+"par jour, `{plusde24cj}` serveurs en font plus de 24 par jours, tandis que "
+"`{moinsde24cj}` en font apparaitre moins de 24 par jour!\n"
+"    Le bot utilise actuellement `{memory_used}` MB de ram.\n"
+"\n"
+"    Le bot est lancé avec Python ```{python_version}```"
+msgstr ""
+
+#: cogs/serveradmin.py:59
+#, python-brace-format
+msgid ":ok:, he now have {newexp} exp points !"
+msgstr ":ok:, il a maintenant {newexp} points d'experience !"
+
+#: cogs/serveradmin.py:73
+#, python-brace-format
+msgid ""
+":hammer: TimeDelta in minutes for next ducks\n"
+"```{table}```"
+msgstr ""
+":hammer: TimeDelta en minutes pour les canards sur le chan\n"
+"```{table}```"
+
+#: cogs/serveradmin.py:93
+msgid ":robot: Channel added !"
+msgstr ":robot: Canal ajouté avec succés"
+
+#: cogs/serveradmin.py:97
+msgid ":x: This channel already exists in the game."
+msgstr ":x: Ce canal existe déjà dans le jeu."
+
+#: cogs/serveradmin.py:124
+#, python-brace-format
+msgid ":robot: OK, {name}  was set as an admin on the server !"
+msgstr ":robot: OK, {name} a été défini comme un admin sur le serveur!"
+
+#: cogs/serveradmin.py:146
+#, python-brace-format
+msgid ":robot: OK, {name} was removed from this server admins !"
+msgstr ":robot: OK, {name} a été retiré de la liste des admins de ce serveur!"
+
+#: cogs/serveradmin.py:154
+#, python-brace-format
+msgid ":robot: OK, {name} is not an admin !"
+msgstr ":robot: OK, {name} n'est pas un admin!"
+
+#: cogs/serveradmin.py:172
+msgid ":robot: OK, you have been set as an admin !"
+msgstr ":robot: OK, vous avez été défini comme un admin!"
+
+#: cogs/serveradmin.py:175
+msgid ":x: An admin exist on this server ! Try !addadmin"
+msgstr ""
+":x: Un administrateur existe déjà sur ce serveur! Essayez avec !addadmin"
+
+#: cogs/serveradmin.py:198
+#, python-brace-format
+msgid "Permissions : {permissions}"
+msgstr "Autorisations: {permissions}"
+
+#: cogs/serveradmin.py:209
+msgid ":ok: Scores / stats of the channel were succesfully deleted."
+msgstr ":ok: Les scores / stats de la channel ont bien étés supprimés."
+
+#: cogs/shoot.py:55
+#, python-brace-format
+msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
+msgstr ""
+"Vous n'êtes pas sec, vous ne pouvez pas partir à la chasse! Attendre "
+"{temps_restant} minutes."
+
+#: cogs/shoot.py:61
+msgid "You don't have a weapon"
+msgstr "Vous ne disposez pas d'une arme"
+
+#: cogs/shoot.py:65
+msgid "Your gun jammed, it must be reloaded to unstuck."
+msgstr "Votre arme s'est enrayée, il vous faut la recharger pour la décoincer."
+
+#: cogs/shoot.py:69
+#, python-brace-format
+msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
+msgstr ""
+"Votre arme est sabotée, remerciez {assaillant} pour cette mauvaise blague."
+
+#: cogs/shoot.py:77
+#, python-brace-format
+msgid ""
+"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"{balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}"
+msgstr ""
+"** CHARGEUR VIDE ** | Munitions dans l'arme: {balles_actuelles} / "
+"{balles_max} | Chargeurs restant: {chargeurs_actuels} / {chargeurs_max}"
+
+#: cogs/shoot.py:86
+msgid "Your weapon jammed, reload to unstuck."
+msgstr "Votre arme s'est enrayée, il vous faut la recharger pour la décoincer."
+
+#: cogs/shoot.py:105
+msgid ""
+"Luckily you missed, what were you aiming at exactly? There are no duck "
+"here... [missed : -1 xp] [wild shot: -1 xp]"
+msgstr ""
+"Par chance tu as raté, mais tu visais qui au juste ? Il n'y a aucun canard "
+"dans le coin...   [raté : -1 xp] [tir sauvage : -1 xp]"
+
+#: cogs/shoot.py:111
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : "
+"-1 xp]"
+msgstr ""
+"** FLAPP ** Effrayé par tant de bruit, le canard a fui! FÉLICITATIONS ! "
+"[raté: -1 xp]"
+
+#: cogs/shoot.py:125
+#, python-brace-format
+msgid ""
+"**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
+"[hunting accident : -2 xp] [weapon confiscated]"
+msgstr ""
+"**BANG**\tTu as raté le canard... Et tu as tiré sur {player}. ! [raté : -1 "
+"xp] [accident de chasse : -2 xp] [arme confisquée]"
+
+#: cogs/shoot.py:129
+msgid ""
+"**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
+"little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
+"accident : -2 xp] [weapon confiscated]"
+msgstr ""
+"> **BANG**\tTu as raté le canard... Et tu t'es tiré dessus. Apprends à tenir "
+"ton fusil à l'endroit la prochaine fois, boulet ! [raté : -1 xp] [accident "
+"de chasse : -2 xp] [arme confisquée]"
+
+#: cogs/shoot.py:134
+#, python-brace-format
+msgid " > You won {exp} with your life insurance"
+msgstr " > Tu gagnes {exp} avec ton assurance vie"
+
+#: cogs/shoot.py:173
+#, python-brace-format
+msgid ""
+":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
+"now at a grand total of {total} duck (of which {supercanards} were super-"
+"ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
+msgstr ""
+"> :skull_crossbones: **BOUM**\tTu l'as eu en {time} secondes, ce qui te fait "
+"un total de {total} canards (dont {supercanards} supercanards) sur "
+"#{channel}.     \\_X<   *COUAC*   [{exp} xp]"
+
+#: cogs/shoot.py:184
+#, python-brace-format
+msgid "Searching the brushes arround the duck, you find {inutilitee}"
+msgstr ""
+"En cherchant dans les buissons à coté du canard, tu trouves {inutilitee}"
+
+#: cogs/shoot.py:189
+#, python-brace-format
+msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
+msgstr ""
+":gun: Le canard à survécu, essaye encore [life : -{vie}] *SUPER CANARD "
+"DETECTE*"
+
+#: cogs/shoot.py:203
+msgid "Your weapon had been confiscated"
+msgstr "Ton arme à été confisquée"
+
+#: cogs/shoot.py:206
+msgid "You unstuck your weapon."
+msgstr "Tu décoinces ton arme"
+
+#: cogs/shoot.py:221
+#, python-brace-format
+msgid ""
+"{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : "
+"{chargeurs_actuels}/{chargeurs_max}"
+msgstr ""
+"{greet} | Munitions dans l'arme: {balles_actuelles} / {balles_max} | "
+"Chargeurs restant: {chargeurs_actuels} / {chargeurs_max}"
+
+#: cogs/utils/commons.py:151
+msgid "danger public"
+msgstr "danger public"
+
+#: cogs/utils/commons.py:159
+msgid "touriste"
+msgstr ""
+
+#: cogs/utils/commons.py:167
+msgid "noob"
+msgstr ""
+
+#: cogs/utils/commons.py:175
+msgid "stagiaire"
+msgstr ""
+
+#: cogs/utils/commons.py:183
+msgid "rateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:191
+msgid "membre du Comité Contre les Canards"
+msgstr ""
+
+#: cogs/utils/commons.py:199
+msgid "détesteur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:207
+msgid "harceleur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:215
+msgid "emmerdeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:223
+msgid "déplumeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:231
+msgid "chasseur"
+msgstr ""
+
+#: cogs/utils/commons.py:239
+msgid "retourneur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:247
+msgid "assommeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:255
+msgid "mâchouilleur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:263
+msgid "bouffeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:271
+msgid "aplatisseur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:279
+msgid "démonteur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:287
+msgid "démolisseur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:295
+msgid "tueur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:303
+msgid "écorcheur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:311
+msgid "prédateur"
+msgstr ""
+
+#: cogs/utils/commons.py:319
+msgid "découpeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:327
+msgid "décortiqueur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:335
+msgid "fraggeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:343
+msgid "éclateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:351
+msgid "défonceur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:359
+msgid "bousilleur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:367
+msgid "poutreur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:375
+msgid "empaleur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:383
+msgid "éventreur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:391
+msgid "terreur des canards"
+msgstr ""
+
+#: cogs/utils/commons.py:399
+msgid "exploseur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:407
+msgid "destructeur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:415
+msgid "pulvérisateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:423
+msgid "démolécularisateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:431
+msgid "désintégrateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:439
+msgid "atomiseur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:447
+msgid "annihilateur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:455
+msgid "serial duck killer"
+msgstr ""
+
+#: cogs/utils/commons.py:463
+msgid "génocideur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:471
+msgid "Chômeur pour cause d'extinction de l'espèce"
+msgstr ""
+
+#: cogs/utils/commons.py:479
+msgid "Toasteur de canards"
+msgstr ""
+
+#: cogs/utils/commons.py:487
+msgid "Vieux noob"
+msgstr ""
+
+#: cogs/utils/commons.py:502
+msgid "*sifflote*"
+msgstr ""
+
+#: cogs/utils/commons.py:502
+msgid "Hello world"
+msgstr ""
+
+#: cogs/utils/commons.py:502
+msgid "c'est ici pour le casting ?"
+msgstr ""
+
+#: cogs/utils/commons.py:502
+msgid "pourvu que personne ne me remarque..."
+msgstr ""
+
+#: cogs/utils/commons.py:502
+msgid "Canard un jour, canard de bain"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard prend la fuite.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard va voir ailleurs.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard n'a pas le temps pour ça.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard est parti.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard se dissipe dans l'espace-temps.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard en a ras le bol d'être ignoré et fuit.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:504
+msgid "Le canard ne veut pas etre canardé.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/utils/commons.py:506
+msgid "a stuffed duck."
+msgstr ""
+
+#: cogs/utils/commons.py:507
+msgid "a rubber ducky."
+msgstr ""
+
+#: cogs/utils/commons.py:508
+msgid "a vibrating duck."
+msgstr ""
+
+#: cogs/utils/commons.py:509
+msgid "a pile of feathers."
+msgstr ""
+
+#: cogs/utils/commons.py:510
+msgid "a chewed chewing gum."
+msgstr ""
+
+#: cogs/utils/commons.py:511
+msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
+msgstr ""
+
+#: cogs/utils/commons.py:512
+msgid "an old shoe."
+msgstr ""
+
+#: cogs/utils/commons.py:513
+msgid "a spring thingy."
+msgstr ""
+
+#: cogs/utils/commons.py:514
+msgid "a cow dung."
+msgstr ""
+
+#: cogs/utils/commons.py:515
+msgid "a dog dirt."
+msgstr ""
+
+#: cogs/utils/commons.py:516
+msgid "an expired hunting license."
+msgstr ""
+
+#: cogs/utils/commons.py:517
+msgid "a cartridge."
+msgstr ""
+
+#: cogs/utils/commons.py:518
+msgid "a cigarette butt."
+msgstr ""
+
+#: cogs/utils/commons.py:519
+msgid "a used condom."
+msgstr ""
+
+#: cogs/utils/commons.py:520
+msgid "a broken sight."
+msgstr ""
+
+#: cogs/utils/commons.py:521
+msgid "a broken infrared detector."
+msgstr "un détecteur infrarouge cassé."
+
+#: cogs/utils/commons.py:522
+msgid "a bent silencer."
+msgstr "un silencieux tordu."
+
+#: cogs/utils/commons.py:523
+msgid "an empty box of AP ammo."
+msgstr ""
+
+#: cogs/utils/commons.py:524
+msgid "an empty box of explosive ammo."
+msgstr "une boîte vide de munitions explosives."
+
+#: cogs/utils/commons.py:525
+msgid "a four-leaf clover with only 3 left."
+msgstr ""
+
+#: cogs/utils/commons.py:526
+msgid "a broken decoy."
+msgstr ""
+
+#: cogs/utils/commons.py:527
+msgid "a broken mirror."
+msgstr ""
+
+#: cogs/utils/commons.py:528
+msgid "a rusty mechanical duck."
+msgstr ""
+
+#: cogs/utils/commons.py:529
+msgid "a pair of sunglasses without glasses."
+msgstr ""
+
+#: cogs/utils/commons.py:530
+msgid "Donald's beret."
+msgstr ""
+
+#: cogs/utils/commons.py:531
+msgid "a half-melted peppermint."
+msgstr "une pastille à la menthe à moitiée fondue"
+
+#: cogs/utils/commons.py:532
+msgid "a box of Abraxo cleaner."
+msgstr "une boîte de nettoyant Abraxo."
+
+#: cogs/utils/commons.py:533
+msgid "a gun with banana peeled barrel."
+msgstr "un fusil au canon tordu"
+
+#: cogs/utils/commons.py:534
+msgid "an old hunting knife."
+msgstr "un vieux couteau de chasse."
+
+#: cogs/utils/commons.py:535
+msgid "an old video recording: http://tinyurl.com/zbejktu"
+msgstr "un vieil enregistrement vidéo : http://tinyurl.com/zbejktu"
+
+#: cogs/utils/commons.py:536
+msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
+msgstr "une vieille photo de chasse : http://tinyurl.com/hmn4r88"
+
+#: cogs/utils/commons.py:537
+msgid "an old postcard: http://tinyurl.com/hbnkpzr"
+msgstr "une anciene carte postale : http://tinyurl.com/hbnkpzr"
+
+#: cogs/utils/commons.py:538
+msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
+msgstr "une photo d'un super canard: http://tinyurl.com/hle8fjf"
+
+#: cogs/utils/commons.py:539
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "Un pin's de chasseur : http://tinyurl.com/hqy7fhq"
+
+#: cogs/utils/commons.py:540
+msgid "bushes."
+msgstr "des buissons."
+
+#: cogs/utils/ducks.py:114
+#, python-brace-format
+msgid "There is a duck on #{channel}"
+msgstr "Il y a un canard sur #{channel}"

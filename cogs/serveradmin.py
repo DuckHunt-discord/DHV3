@@ -21,8 +21,8 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def coin(self, ctx):
-        """!coin
-        Spawn a duck on the current channel """
+        """Spawn a duck on the current channel
+        !coin"""
         from cogs.utils.ducks import spawn_duck
         await spawn_duck({
             "channel": ctx.message.channel,
@@ -33,8 +33,8 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def game_ban(self, ctx, member: discord.Member):
-        """!game_ban [member]
-        Ban someone from the bot on the current channel"""
+        """Ban someone from the bot on the current channel
+        !game_ban [member]"""
         scores.setStat(ctx.message.channel, member, "banned", True)
         await comm.message_user(ctx.message, ":ok: Done, user banned :gun:")
 
@@ -42,8 +42,8 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def game_unban(self, ctx, member: discord.Member):
-        """!game_unban [member]
-        Unban someone from the bot on the current channel"""
+        """Unban someone from the bot on the current channel
+        !game_unban [member]"""
         scores.setStat(ctx.message.channel, member, "banned", False)
         await comm.message_user(ctx.message, ":ok: Done, user unbanned :eyes:")
 
@@ -51,8 +51,9 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def give_exp(self, ctx, target: discord.Member, exp: int):
-        """!give_exp [target] [exp]
-        Require admin powers"""
+        """Give exp to a player.
+        Require admin powers
+        !give_exp [target] [exp]"""
         scores.addToStat(ctx.message.channel, target, "exp", exp)
         await comm.logwithinfos_ctx(ctx, "[giveexp] Giving " + str(exp) + " exp points to " + target.mention)
         await comm.message_user(ctx.message, _(":ok:, he now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
@@ -63,6 +64,8 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def duckplanning(self, ctx):
+        """See ducks planned.
+        !duckplanning"""
         table = ""
         for timestamp in commons.ducks_planned[ctx.message.channel]:
             table += str(int((time.time() - timestamp) / 60)) + "\n"
@@ -79,6 +82,8 @@ class ServerAdmin:
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
+        if not "channels" in ctx.message.server.id:
+            servers[ctx.message.server.id]["channels"] = []
 
         if not ctx.message.channel.id in servers[ctx.message.server.id]["channels"]:
             await comm.logwithinfos_ctx(ctx, "Adding channel {name} | {id} to channels.json...".format(**{
@@ -154,11 +159,13 @@ class ServerAdmin:
 
     @commands.command(pass_context=True)
     async def claimserver(self, ctx):
-        """!claimserver
-        Sets yourself as an admin if there are no admin configured, IE: when you just added the bot to a server"""
+        """Sets yourself as an admin if there are no admin configured, IE: when you just added the bot to a server
+        !claimserver"""
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
-        if not servers[ctx.message.server.id]["admins"]:
+        if not ctx.message.server.id in servers:
+            servers[ctx.message.server.id] = {}
+        if not "admins" in servers[ctx.message.server.id] or not servers[ctx.message.server.id]["admins"]:
             servers[ctx.message.server.id]["admins"] = [ctx.message.author.id]
             await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
                 "admin_name" : ctx.message.author.name,
@@ -175,6 +182,8 @@ class ServerAdmin:
     @commands.command(pass_context=True)
     @checks.is_admin()
     async def permissions(self, ctx):
+        """Check permissions given to the bot. You'll need admin powers
+        !permissions"""
         permissionsToHave = ["change_nicknames", "connect", "create_instant_invite", "embed_links", "manage_messages", "mention_everyone", "read_messages", "send_messages", "send_tts_messages"]
         permissions_str = ""
         for permission, value in ctx.message.server.me.permissions_in(ctx.message.channel):
@@ -198,6 +207,8 @@ class ServerAdmin:
     @checks.is_admin()
     @checks.is_activated_here()
     async def deleteeverysinglescoreandstatonthischannel(self, ctx):
+        """Delete scores and stats of players on this channel. You'll need admin powers
+        !deleteeverysinglescoreandstatonthischannel"""
         scores.delChannelTable(ctx.message.channel)
         await comm.message_user(ctx.message, _(":ok: Scores / stats of the channel were succesfully deleted.", prefs.getPref(ctx.message.server, "language")))
 
