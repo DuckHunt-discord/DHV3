@@ -149,7 +149,7 @@ def init():
     levels = [{
         "niveau"    : 0,
         "expMin"    : -999,
-        "nom"       : _("danger public"),
+        "nom"       : _("public danger"),
         "precision" : 55,
         "fiabilitee": 85,
         "balles"    : 6,
@@ -157,7 +157,7 @@ def init():
     }, {
         "niveau"    : 1,
         "expMin"    : -4,
-        "nom"       : _("touriste"),
+        "nom"       : _("tourist"),
         "precision" : 55,
         "fiabilitee": 85,
         "balles"    : 6,
@@ -173,7 +173,7 @@ def init():
     }, {
         "niveau"    : 3,
         "expMin"    : 50,
-        "nom"       : _("stagiaire"),
+        "nom"       : _("trainee"),
         "precision" : 57,
         "fiabilitee": 87,
         "balles"    : 6,
@@ -181,7 +181,7 @@ def init():
     }, {
         "niveau"    : 4,
         "expMin"    : 90,
-        "nom"       : _("rateur de canards"),
+        "nom"       : _("duck misser"),
         "precision" : 58,
         "fiabilitee": 88,
         "balles"    : 6,
@@ -189,7 +189,7 @@ def init():
     }, {
         "niveau"    : 5,
         "expMin"    : 140,
-        "nom"       : _("membre du Comité Contre les Canards"),
+        "nom"       : _("member of the Comitee Against Ducks"),
         "precision" : 59,
         "fiabilitee": 89,
         "balles"    : 6,
@@ -197,7 +197,7 @@ def init():
     }, {
         "niveau"    : 6,
         "expMin"    : 200,
-        "nom"       : _("détesteur de canards"),
+        "nom"       : _("duck hater"),
         "precision" : 60,
         "fiabilitee": 90,
         "balles"    : 6,
@@ -205,7 +205,7 @@ def init():
     }, {
         "niveau"    : 7,
         "expMin"    : 270,
-        "nom"       : _("harceleur de canards"),
+        "nom"       : _("duck pest"),
         "precision" : 65,
         "fiabilitee": 93,
         "balles"    : 4,
@@ -213,7 +213,7 @@ def init():
     }, {
         "niveau"    : 8,
         "expMin"    : 350,
-        "nom"       : _("emmerdeur de canards"),
+        "nom"       : _("duck hassler"),
         "precision" : 67,
         "fiabilitee": 93,
         "balles"    : 4,
@@ -221,7 +221,7 @@ def init():
     }, {
         "niveau"    : 9,
         "expMin"    : 440,
-        "nom"       : _("déplumeur de canards"),
+        "nom"       : _("duck plucker"),
         "precision" : 69,
         "fiabilitee": 93,
         "balles"    : 4,
@@ -229,7 +229,7 @@ def init():
     }, {
         "niveau"    : 10,
         "expMin"    : 540,
-        "nom"       : _("chasseur"),
+        "nom"       : _("hunter"),
         "precision" : 71,
         "fiabilitee": 94,
         "balles"    : 4,
@@ -237,7 +237,7 @@ def init():
     }, {
         "niveau"    : 11,
         "expMin"    : 650,
-        "nom"       : _("retourneur de canards"),
+        "nom"       : _("inside out duck turner"),
         "precision" : 73,
         "fiabilitee": 94,
         "balles"    : 4,
@@ -245,7 +245,7 @@ def init():
     }, {
         "niveau"    : 12,
         "expMin"    : 770,
-        "nom"       : _("assommeur de canards"),
+        "nom"       : _("duck clobber"),
         "precision" : 73,
         "fiabilitee": 94,
         "balles"    : 4,
@@ -253,7 +253,7 @@ def init():
     }, {
         "niveau"    : 13,
         "expMin"    : 900,
-        "nom"       : _("mâchouilleur de canards"),
+        "nom"       : _("duck chewer"),
         "precision" : 74,
         "fiabilitee": 95,
         "balles"    : 4,
@@ -261,7 +261,7 @@ def init():
     }, {
         "niveau"    : 14,
         "expMin"    : 1040,
-        "nom"       : _("bouffeur de canards"),
+        "nom"       : _("duck eater"),
         "precision" : 74,
         "fiabilitee": 95,
         "balles"    : 4,
@@ -269,7 +269,7 @@ def init():
     }, {
         "niveau"    : 15,
         "expMin"    : 1190,
-        "nom"       : _("aplatisseur de canards"),
+        "nom"       : _("duck flattener"),
         "precision" : 75,
         "fiabilitee": 95,
         "balles"    : 4,
@@ -277,7 +277,7 @@ def init():
     }, {
         "niveau"    : 16,
         "expMin"    : 1350,
-        "nom"       : _("démonteur de canards"),
+        "nom"       : _("duck disassembler"),
         "precision" : 80,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -285,7 +285,7 @@ def init():
     }, {
         "niveau"    : 17,
         "expMin"    : 1520,
-        "nom"       : _("démolisseur de canards"),
+        "nom"       : _("duck demolisher"),
         "precision" : 81,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -293,7 +293,7 @@ def init():
     }, {
         "niveau"    : 18,
         "expMin"    : 1700,
-        "nom"       : _("tueur de canards"),
+        "nom"       : _("duck killer"),
         "precision" : 81,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -301,7 +301,7 @@ def init():
     }, {
         "niveau"    : 19,
         "expMin"    : 1890,
-        "nom"       : _("écorcheur de canards"),
+        "nom"       : _("duck skinner"),
         "precision" : 82,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -309,7 +309,7 @@ def init():
     }, {
         "niveau"    : 20,
         "expMin"    : 2090,
-        "nom"       : _("prédateur"),
+        "nom"       : _("predator"),
         "precision" : 82,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -317,7 +317,7 @@ def init():
     }, {
         "niveau"    : 21,
         "expMin"    : 2300,
-        "nom"       : _("découpeur de canards"),
+        "nom"       : _("duck chopper"),
         "precision" : 83,
         "fiabilitee": 98,
         "balles"    : 2,
@@ -325,7 +325,7 @@ def init():
     }, {
         "niveau"    : 22,
         "expMin"    : 2520,
-        "nom"       : _("décortiqueur de canards"),
+        "nom"       : _("duck decorticator"),
         "precision" : 83,
         "fiabilitee": 98,
         "balles"    : 2,
@@ -333,7 +333,7 @@ def init():
     }, {
         "niveau"    : 23,
         "expMin"    : 2750,
-        "nom"       : _("fraggeur de canards"),
+        "nom"       : _("duck fragger"),
         "precision" : 84,
         "fiabilitee": 98,
         "balles"    : 2,
@@ -341,7 +341,7 @@ def init():
     }, {
         "niveau"    : 24,
         "expMin"    : 2990,
-        "nom"       : _("éclateur de canards"),
+        "nom"       : _("duck shatterer"),
         "precision" : 84,
         "fiabilitee": 98,
         "balles"    : 2,
@@ -349,7 +349,7 @@ def init():
     }, {
         "niveau"    : 25,
         "expMin"    : 3240,
-        "nom"       : _("défonceur de canards"),
+        "nom"       : _("duck smasher"),
         "precision" : 85,
         "fiabilitee": 98,
         "balles"    : 2,
@@ -357,7 +357,7 @@ def init():
     }, {
         "niveau"    : 26,
         "expMin"    : 3500,
-        "nom"       : _("bousilleur de canards"),
+        "nom"       : _("duck breaker"),
         "precision" : 90,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -365,7 +365,7 @@ def init():
     }, {
         "niveau"    : 27,
         "expMin"    : 3770,
-        "nom"       : _("poutreur de canards"),
+        "nom"       : _("duck wrecker"),
         "precision" : 91,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -373,7 +373,7 @@ def init():
     }, {
         "niveau"    : 28,
         "expMin"    : 4050,
-        "nom"       : _("empaleur de canards"),
+        "nom"       : _("duck impaler"),
         "precision" : 91,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -381,7 +381,7 @@ def init():
     }, {
         "niveau"    : 29,
         "expMin"    : 4340,
-        "nom"       : _("éventreur de canards"),
+        "nom"       : _("duck eviscerator"),
         "precision" : 92,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -389,7 +389,7 @@ def init():
     }, {
         "niveau"    : 30,
         "expMin"    : 4640,
-        "nom"       : _("terreur des canards"),
+        "nom"       : _("ducks terror"),
         "precision" : 92,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -397,7 +397,7 @@ def init():
     }, {
         "niveau"    : 31,
         "expMin"    : 4950,
-        "nom"       : _("exploseur de canards"),
+        "nom"       : _("duck exploder"),
         "precision" : 93,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -405,7 +405,7 @@ def init():
     }, {
         "niveau"    : 32,
         "expMin"    : 5270,
-        "nom"       : _("destructeur de canards"),
+        "nom"       : _("duck destructor"),
         "precision" : 93,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -413,7 +413,7 @@ def init():
     }, {
         "niveau"    : 33,
         "expMin"    : 5600,
-        "nom"       : _("pulvérisateur de canards"),
+        "nom"       : _("duck blaster"),
         "precision" : 94,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -421,7 +421,7 @@ def init():
     }, {
         "niveau"    : 34,
         "expMin"    : 5940,
-        "nom"       : _("démolécularisateur de canards"),
+        "nom"       : _("duck pulverizer"),
         "precision" : 94,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -429,7 +429,7 @@ def init():
     }, {
         "niveau"    : 35,
         "expMin"    : 6290,
-        "nom"       : _("désintégrateur de canards"),
+        "nom"       : _("duck disintegrator"),
         "precision" : 95,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -437,7 +437,7 @@ def init():
     }, {
         "niveau"    : 36,
         "expMin"    : 6650,
-        "nom"       : _("atomiseur de canards"),
+        "nom"       : _("duck atomizer"),
         "precision" : 95,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -445,7 +445,7 @@ def init():
     }, {
         "niveau"    : 37,
         "expMin"    : 7020,
-        "nom"       : _("annihilateur de canards"),
+        "nom"       : _("duck annihilator"),
         "precision" : 96,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -461,7 +461,7 @@ def init():
     }, {
         "niveau"    : 39,
         "expMin"    : 7790,
-        "nom"       : _("génocideur de canards"),
+        "nom"       : _("duck genocider"),
         "precision" : 97,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -469,7 +469,7 @@ def init():
     }, {
         "niveau"    : 40,
         "expMin"    : 8200,
-        "nom"       : _("Chômeur pour cause d'extinction de l'espèce"),
+        "nom"       : _("unemployed due to extinction of the duck specie"),
         "precision" : 97,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -477,7 +477,7 @@ def init():
     }, {
         "niveau"    : 41,
         "expMin"    : 9999,
-        "nom"       : _("Toasteur de canards"),
+        "nom"       : _("duck toaster"),
         "precision" : 98,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -485,7 +485,7 @@ def init():
     }, {
         "niveau"    : 42,
         "expMin"    : 11111,
-        "nom"       : _("Vieux noob"),
+        "nom"       : _("old noob"),
         "precision" : 99,
         "fiabilitee": 99,
         "balles"    : 1,
@@ -502,7 +502,7 @@ def init():
                         "\\_Õ\{", "\\_õ\{", "\\_Ô\{", "\\_ô\{", "\\_Ö\{", "\\_ö\{", "\\_Ø\{", "\\_ø\{", "\\_Ò\{", "\\_ò\{", "\\_Ó\{", "\\_ó\{", "\\_0\{", "\\_©\{", "\\_@\{", "\\_º\{", "\\_°\{", "\\_^\{", "/_O\{", "/_o\{", "/_Õ\{", "/_õ\{", "/_Ô\{", "/_ô\{", "/_Ö\{", "/_ö\{", "/_Ø\{", "/_ø\{", "/_Ò\{", "/_ò\{", "/_Ó\{", "/_ó\{", "/_0\{", "/_©\{", "/_@\{", "/_^\{", "§_O\{", "§_o\{", "§_Õ\{", "§_õ\{", "§_Ô\{", "§_ô\{", "§_Ö\{", "§_ö\{", "§_Ø\{", "§_ø\{", "§_Ò\{", "§_ò\{", "§_Ó\{", "§_ó\{", "§_0\{", "§_©\{", "§_@\{", "§_º\{", "§_°\{", "§_^\{"]
     canards_cri = ["COIN", "COIN", "COIN", "COIN", "COIN", "KWAK", "KWAK", "KWAAK", "KWAAK", "KWAAAK", "KWAAAK", "COUAK", "COUAK", "COUAAK", "COUAAK", "COUAAAK", "COUAAAK", "QUAK", "QUAK", "QUAAK", "QUAAK", "QUAAAK", "QUAAAK", "QUACK", "QUACK", "QUAACK", "QUAACK", "QUAAACK", "QUAAACK", "COUAC", "COUAC", "COUAAC", "COUAAC", "COUAAAC", "COUAAAC", "COUACK", "COUACK", "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI ?", "PIOU ?", _("*sifflote*"), _("Hello world"), _("c'est ici pour le casting ?"), _("pourvu que personne ne me remarque..."), "http://tinyurl.com/2qc9pl", _("Canard un jour, canard de bain")]
 
-    canards_bye = [_("Le canard prend la fuite.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard va voir ailleurs.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard n'a pas le temps pour ça.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard est parti.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard se dissipe dans l'espace-temps.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard en a ras le bol d'être ignoré et fuit.  ·°'\`'°-.,¸¸.·°'\`"), _("Le canard ne veut pas etre canardé.  ·°'\`'°-.,¸¸.·°'\`")]
+    canards_bye = [_("The duck went away  ·°'\`'°-.,¸¸.·°'\`"), _("The ducks went to another world  ·°'\`'°-.,¸¸.·°'\`"), _("The duck did not have time for this  ·°'\`'°-.,¸¸.·°'\`"), _("The duck left.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck dissipate in space-time.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck leave of boredoom.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck don't want to be sniped.  ·°'\`'°-.,¸¸.·°'\`")]
 
     inutilite = [_("a stuffed duck."), _("a rubber ducky."), _("a vibrating duck."), _("a pile of feathers."), _("a chewed chewing gum."), _("a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."), _("an old shoe."), _("a spring thingy."), _("a cow dung."), _("a dog dirt."), _("an expired hunting license."), _("a cartridge."), _("a cigarette butt."), _("a used condom."), _("a broken sight."), _("a broken infrared detector."), _("a bent silencer."), _("an empty box of AP ammo."), _("an empty box of explosive ammo."), _("a four-leaf clover with only 3 left."), _("a broken decoy."), _("a broken mirror."), _("a rusty mechanical duck."), _("a pair of sunglasses without glasses."), _("Donald's beret."), _("a half-melted peppermint."), _("a box of Abraxo cleaner."), _("a gun with banana peeled barrel."), _("an old hunting knife."), _("an old video recording: http://tinyurl.com/zbejktu"), _("an old hunting photo: http://tinyurl.com/hmn4r88"),
                  _("an old postcard: http://tinyurl.com/hbnkpzr"), _("a golden duck photo: http://tinyurl.com/hle8fjf"), _("a hunter pin: http://tinyurl.com/hqy7fhq"), _("bushes.")]

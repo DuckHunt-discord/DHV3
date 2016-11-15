@@ -142,7 +142,8 @@ class Exp:
         i = 0
         for joueur in scores.topScores(ctx.message.channel):
             i += 1
-            if (joueur["canardsTues"] is None) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
+
+            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
                 joueur["canardsTues"] = "AUCUN !"
             if joueur["exp"] is None:
                 joueur["exp"] = 0

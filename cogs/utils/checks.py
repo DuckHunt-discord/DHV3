@@ -1,7 +1,8 @@
 import discord.utils
 from discord.ext import commands
 
-from cogs.utils import prefs, scores
+from cogs.utils import comm, commons, prefs, scores
+from cogs.utils.commons import _
 
 
 def is_owner_check(message):
@@ -47,21 +48,43 @@ def have_exp_check(message, exp):
     return scores.getStat(message.channel, message.author, "exp") >= exp
 
 
-def have_exp(exp):
-    return commands.check(lambda ctx: have_exp_check(ctx.message, exp))
+def have_exp(exp, warn=True):
+    def check(ctx, exp, warn):
+        exp_ = have_exp_check(ctx.message, exp)
+        if not exp_ and warn:
+            commons.bot.loop.create_task(comm.message_user(ctx.message, _(":x: You can't use this command, you don't have at least {exp} exp points!", prefs.getPref(ctx.message.server, "language")).format(**{
+                "exp": exp
+                })))
+        return exp_
+
+    exp_ = commands.check(lambda ctx: check(ctx, exp, warn))
+    return exp_
 
 
-def is_owner():
-    return commands.check(lambda ctx: is_owner_check(ctx.message))
+def is_owner(warn=True):
+    def check(ctx, warn):
+        owner = is_owner_check(ctx.message)
+        if not owner and warn:
+            commons.bot.loop.create_task(comm.message_user(ctx.message, _(":x: You can't use this command, you are not the owner of the bot !", prefs.getPref(ctx.message.server, "language"))))
+        return owner
+
+    owner = commands.check(lambda ctx: check(ctx, warn))
+    return owner
 
 
 def is_not_banned():
     return commands.check(lambda ctx: is_banned_check(ctx.message) or is_admin_check(ctx.message) or is_owner_check(ctx.message))
 
 
-def is_admin():
-    return commands.check(lambda ctx: is_owner_check(ctx.message) or is_admin_check(ctx.message))
+def is_admin(warn=True):
+    def check(ctx, warn):
+        admin = is_owner_check(ctx.message) or is_admin_check(ctx.message)
+        if not admin and warn:
+            commons.bot.loop.create_task(comm.message_user(ctx.message, _(":x: You can't use this command, you are not an admin on this server!", prefs.getPref(ctx.message.server, "language"))))
+        return admin
 
+    admin = commands.check(lambda ctx: check(ctx, warn))
+    return admin
 
 def is_activated_here():
     return commands.check(lambda ctx: is_activated_check(ctx.message))

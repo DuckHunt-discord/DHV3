@@ -151,17 +151,20 @@ async def spawn_duck(duck):
 
 async def del_channel(channel):
     servers = prefs.JSONloadFromDisk("channels.json")
-    if channel.id in servers[channel.server.id]["channels"]:
-        await comm.logwithinfos(channel, author=None, log_str="Deleting channel {name} | {id} from the json file...".format(**{
-            "id"  : channel.id,
-            "name": channel.name
-        }))
-        servers[channel.server.id]["channels"].remove(channel.id)
-        prefs.JSONsaveToDisk(servers, "channels.json")
-        try:
-            commons.ducks_planned.remove(channel.id)
-        except:
-            pass
-        for duck in commons.ducks_spawned[:]:
-            if duck["channel"] == channel:
-                commons.ducks_spawned.remove(duck)
+    try:
+        if channel.id in servers[channel.server.id]["channels"]:
+            await comm.logwithinfos(channel, author=None, log_str="Deleting channel {name} | {id} from the json file...".format(**{
+                "id"  : channel.id,
+                "name": channel.name
+            }))
+            servers[channel.server.id]["channels"].remove(channel.id)
+            prefs.JSONsaveToDisk(servers, "channels.json")
+            try:
+                commons.ducks_planned.remove(channel.id)
+            except:
+                pass
+            for duck in commons.ducks_spawned[:]:
+                if duck["channel"] == channel:
+                    commons.ducks_spawned.remove(duck)
+    except KeyError:
+        pass

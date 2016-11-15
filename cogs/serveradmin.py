@@ -67,12 +67,15 @@ class ServerAdmin:
         """See ducks planned.
         !duckplanning"""
         table = ""
-        for timestamp in commons.ducks_planned[ctx.message.channel]:
-            table += str(int((time.time() - timestamp) / 60)) + "\n"
+        try:
+            for timestamp in commons.ducks_planned[ctx.message.channel]:
+                table += str(int((time.time() - timestamp) / 60)) + "\n"
 
-        await self.bot.send_message(ctx.message.author, _(":hammer: TimeDelta in minutes for next ducks\n```{table}```", prefs.getPref(ctx.message.server, "language")).format(**{
-            "table": table
-        }))
+            await self.bot.send_message(ctx.message.author, _(":hammer: TimeDelta in minutes for next ducks\n```{table}```", prefs.getPref(ctx.message.server, "language")).format(**{
+                "table": table
+            }))
+        except KeyError:
+            await self.bot.send_message(ctx.message.author, _("No ducks are planned today !", prefs.getPref(ctx.message.server, "language")))
 
     @commands.command(pass_context=True)
     @checks.is_admin()

@@ -31,7 +31,7 @@ log.setLevel(logging.INFO)
 handler = logging.FileHandler(filename='dh.log', encoding='utf-8', mode='w')
 log.addHandler(handler)
 
-help_attrs = dict(hidden=False)
+help_attrs = dict(hidden=True)
 
 
 def prefix(bot, message):
@@ -64,8 +64,8 @@ async def on_command_error(error, ctx):
         await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):
         await comm.message_user(ctx.message, _(":x: Bad argument provided. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
-    elif isinstance(error, commands.CheckFailure):
-        await comm.message_user(ctx.message, _(":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        # elif isinstance(error, commands.CheckFailure):
+        # await comm.message_user(ctx.message, _(":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event
