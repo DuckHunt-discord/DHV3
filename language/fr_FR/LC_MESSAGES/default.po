@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
-"POT-Creation-Date: 2016-11-14 22:24+0100\n"
-"PO-Revision-Date: 2016-11-14 22:34+0100\n"
+"POT-Creation-Date: 2016-11-15 20:52+0100\n"
+"PO-Revision-Date: 2016-11-15 20:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,15 +15,15 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: bot.py:51
+#: bot.py:55
 msgid ":x: This command cannot be used in private messages."
 msgstr ":x: Cette commande ne peut pas être utilisé dans les messages privés."
 
-#: bot.py:53
+#: bot.py:57
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Cette commande est désactivée et ne peut être utilisée"
 
-#: bot.py:58
+#: bot.py:62
 #, python-brace-format
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
@@ -33,11 +33,11 @@ msgstr ""
 ":x: une erreur ({error}) s’est passé dans {command}, voici le traceback à "
 "transmettre pour les rapports de bugs : ''' {tb} '''"
 
-#: bot.py:64
+#: bot.py:68
 msgid ":x: Missing a required argument. "
 msgstr ":x: un argument requis manquant."
 
-#: bot.py:66
+#: bot.py:70
 msgid ":x: Bad argument provided. "
 msgstr ":x: mauvais argument fourni."
 
@@ -656,7 +656,7 @@ msgstr ""
 "{greet} | Munitions dans l'arme: {balles_actuelles} / {balles_max} | "
 "Chargeurs restant: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/utils/checks.py:59
+#: cogs/utils/checks.py:55
 #, python-brace-format
 msgid ""
 ":x: You can't use this command, you don't have at least {exp} exp points!"
@@ -664,13 +664,13 @@ msgstr ""
 ":x: vous ne pouvez pas utiliser cette commande, vous n’avez pas au moins "
 "{exp} points d'expérience !"
 
-#: cogs/utils/checks.py:69
+#: cogs/utils/checks.py:68
 msgid ":x: You can't use this command, you are not the owner of the bot !"
 msgstr ""
 ":x: vous ne pouvez pas utiliser cette commande, vous n’êtes pas le "
 "propriétaire du bot !"
 
-#: cogs/utils/checks.py:82
+#: cogs/utils/checks.py:83
 msgid ":x: You can't use this command, you are not an admin on this server!"
 msgstr ""
 ":x: vous ne pouvez pas utiliser cette commande, vous n’êtes pas "
@@ -849,24 +849,24 @@ msgid "old noob"
 msgstr "vieux noob"
 
 #: cogs/utils/commons.py:503
-msgid "*sifflote*"
-msgstr ""
+msgid "*cries*"
+msgstr "*pleure*"
 
 #: cogs/utils/commons.py:503
 msgid "Hello world"
-msgstr ""
+msgstr "Hello world"
 
 #: cogs/utils/commons.py:503
-msgid "c'est ici pour le casting ?"
-msgstr ""
+msgid "How are you today?"
+msgstr "Comment allez-vous aujourd'hui?"
 
 #: cogs/utils/commons.py:503
-msgid "pourvu que personne ne me remarque..."
-msgstr ""
+msgid "Please don't kill me..."
+msgstr "S'il vous plaît, appelez-moi Duck."
 
 #: cogs/utils/commons.py:503
-msgid "Canard un jour, canard de bain"
-msgstr ""
+msgid "Me too, I love you !"
+msgstr "Moi aussi, je t’aime !"
 
 #: cogs/utils/commons.py:505
 msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"

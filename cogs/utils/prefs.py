@@ -48,7 +48,8 @@ def setPref(server, pref, value=None, force=False):
 def JSONsaveToDisk(data, filename):
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, sort_keys=True, indent=4, ensure_ascii=False)
-    del commons.servers
+    if commons.servers:
+        del commons.servers
 
 
 def JSONloadFromDisk(filename, default="{}", error=False):

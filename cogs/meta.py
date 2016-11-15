@@ -130,9 +130,9 @@ class Meta:
         for server in self.bot.servers:
             serveurs += 1
             slang = getPref(server, "language")
-            if slang == "fr":
+            if slang == "fr_FR":
                 servsFr += 1
-            elif slang == "en":
+            elif slang == "en_EN":
                 servsEn += 1
             else:
                 commons.logger.debug("Serveur étranger : {lang : " + str(slang) + ", server:" + str(server.name) + "|" + str(server.id) + "}")

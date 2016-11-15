@@ -14,7 +14,11 @@ from discord.ext import commands
 
 from cogs.utils import commons
 
-locale.setlocale(locale.LC_ALL, 'fr_FR')
+try:
+    locale.setlocale(locale.LC_ALL, 'fr_FR')
+except locale.Error:
+    pass
+
 commons.init()
 
 from cogs.utils.commons import _
@@ -108,16 +112,15 @@ async def on_message(message):
 
 @bot.event
 async def on_channel_delete(channel):
-    from cogs.utils import ducks
-    await ducks.del_channel(channel)
+    # await ducks.del_channel(channel)
+    pass
 
 
 @bot.event
 async def on_server_remove(server):
-    from cogs.utils import ducks
-
     for channel in server.channels:
-        await ducks.del_channel(channel)
+        # await ducks.del_channel(channel)
+        pass
 
 def load_credentials():
     with open('credentials.json') as f:
