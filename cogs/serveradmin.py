@@ -99,8 +99,9 @@ class ServerAdmin:
             }))
             servers[ctx.message.server.id]["channels"].append(ctx.message.channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
-            await comm.message_user(ctx.message, _(":robot: Channel added !", language))
             await ducks.planifie(ctx.message.channel)
+            await comm.message_user(ctx.message, _(":robot: Channel added !", language))
+
         else:
             await comm.logwithinfos_ctx(ctx, "Channel exists")
             await comm.message_user(ctx.message, _(":x: This channel already exists in the game.", language))
@@ -123,7 +124,7 @@ class ServerAdmin:
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
-        servers[ctx.message.server.id]["admins"] = [target.id]
+        servers[ctx.message.server.id]["admins"] += [target.id]
         await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
             "admin_name" : target.name,
             "admin_id"   : target.id,
@@ -183,8 +184,23 @@ class ServerAdmin:
             await comm.message_user(ctx.message, _(":robot: OK, you have been set as an admin !", language))
         else:
             await comm.logwithinfos_ctx(ctx, "An admin already exist")
-            await comm.message_user(ctx.message, _(":x: An admin exist on this server ! Try !addadmin", language))
+            await comm.message_user(ctx.message, _(":x: An admin exist on this server ! Try !add_admin", language))
         prefs.JSONsaveToDisk(servers, "channels.json")
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
+    async def purgemessages(self, ctx, number: int = 500):
+        """Delete last messages in the channel
+        !purgemessages <number of messages>"""
+        language = prefs.getPref(ctx.message.server, "language")
+
+        if ctx.message.channel.permissions_for(ctx.message.server.me).manage_messages:
+            deleted = await self.bot.purge_from(ctx.message.channel, limit=number)
+            await comm.message_user(ctx.message, _("{deleted} message(s) deleted", language).format(**{
+                "deleted": len(deleted)
+                }))
+        else:
+            await comm.message_user(ctx.message, _("0 message(s) supprimés : permission refusée", language))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -250,7 +266,16 @@ class ServerAdmin:
         language = prefs.getPref(ctx.message.server, "language")
 
         if pref in commons.defaultSettings.keys():
-            if prefs.setPref(ctx.message.server, pref, value):
+            try:
+                if pref == "ducks_per_day":
+                    maxCJ = int(125 + (ctx.message.server.member_count / (5 + (ctx.message.server.member_count / 300))))
+                    if int(value) >= maxCJ:
+                        value = maxCJ
+            except TypeError:
+                await comm.message_user(ctx.message, _(":x: Incorrect value", language))
+                return
+
+            if prefs.setPref(ctx.message.server, pref=pref, value=value):
                 await comm.message_user(ctx.message, _(":ok: The setting {pref} was set at `{value}` on this server.", language).format(**{
                     "value": prefs.getPref(ctx.message.server, pref),
                     "pref" : pref

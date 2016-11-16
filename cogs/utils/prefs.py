@@ -24,10 +24,12 @@ def setPref(server, pref, value=None, force=False):
     else:
         servers = commons.servers
 
-    if value:
+    if value is not None:
+
         if not "settings" in servers[server.id]:
             servers[server.id]["settings"] = {}
         try:
+            print(commons.defaultSettings[pref]["type"](value))
             servers[server.id]["settings"][pref] = commons.defaultSettings[pref]["type"](value)
         except ValueError:
             if force:

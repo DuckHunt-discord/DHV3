@@ -8,3 +8,4 @@ psutil
 aiohttp
 cchardet
 aiodns
+kyoukai

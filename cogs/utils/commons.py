@@ -47,10 +47,14 @@ def init():
     def _(string):
         return string  # Fake definition pour la traduction
 
+    def bool_(b):
+        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']
+
+
     defaultSettings = {
         "delete_commands"           : {
             "value": False,
-            "type" : bool
+            "type" : bool_
         },
         "ducks_per_day"             : {
             "value": 24,
@@ -58,7 +62,7 @@ def init():
         },
         "users_can_find_objects"    : {
             "value": True,
-            "type" : bool
+            "type" : bool_
         },
         "chance_to_kill_on_missed"  : {
             "value": 5,
@@ -66,7 +70,7 @@ def init():
         },
         "pm_most_messages"          : {
             "value": False,
-            "type" : bool
+            "type" : bool_
         },
         "time_before_ducks_leave"   : {
             "value": 11 * 60,
@@ -86,7 +90,7 @@ def init():
         },
         "randomize_ducks"           : {
             "value": True,
-            "type" : bool
+            "type" : bool_
         },
         "super_ducks_chance"        : {
             "value": 10,
@@ -110,7 +114,7 @@ def init():
         },
         "global_scores"             : {
             "value": False,
-            "type" : bool
+            "type" : bool_
         },
         "clover_min_exp"            : {
             "value": 1,
@@ -126,7 +130,7 @@ def init():
         },
         "user_can_give_exp"         : {
             "value": True,
-            "type" : bool
+            "type" : bool_
         },
         "tax_on_user_give"          : {
             "value": 0,
@@ -138,7 +142,7 @@ def init():
         },
         "killed_mentions"           : {
             "value": True,
-            "type" : bool
+            "type" : bool_
         }
     }
 
@@ -520,6 +524,7 @@ def init():
 
     # TRAD
     del _
+
     try:
         global _
     except SyntaxWarning:

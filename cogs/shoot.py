@@ -96,7 +96,7 @@ class Shoot:
                     break
 
         if not current_duck and scores.getStat(message.channel, message.author, "detecteurInfra", default=0) > int(time.time()):  # No ducks but infrared detector
-            await comm.message_user(message, "There are no duck here, but the bullet didn't fired because the infrared detector you added to your weapon is doing it's job!")
+            await comm.message_user(message, _("There are no duck here, but the bullet didn't fired because the infrared detector you added to your weapon is doing it's job!", language))
             return
 
         scores.addToStat(message.channel, message.author, "balles", -1)
@@ -108,7 +108,7 @@ class Shoot:
 
         if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):  # Duck frightened
             scores.addToStat(message.channel, message.author, "exp", -1)
-            await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]"))
+            await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]", language))
             return
 
         if random.randint(1, 100) > scores.getPlayerLevel(message.channel, message.author)["precision"]:
@@ -131,14 +131,14 @@ class Shoot:
                 if scores.getStat(message.channel, victim, "AssuranceVie", default=0) > int(time.time()):
                     exp = int(scores.getPlayerLevel(message.channel, message.author)["niveau"] / 2)
                     scores.addToStat(message.channel, victim, "exp", exp)
-                    await self.bot.send_message(message.channel, str(victim.mention) + _(" > You won {exp} with your life insurance".format(**{
+                    await self.bot.send_message(message.channel, str(victim.mention) + _(" > You won {exp} with your life insurance", language).format(**{
                         "exp": exp
-                    })))
+                    }))
                 return
             else:  # Missed and none was shot
                 scores.addToStat(message.channel, message.author, "exp", -1)
                 scores.addToStat(message.channel, message.author, "tirsManques", 1)
-                await self.sendBangMessage(message, "**PIEWW**\tYou missed the duck ! [missed : -1 xp]")
+                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
                 return
 
         if scores.getStat(message.channel, message.author, "munExplo", default=0) > int(time.time()):

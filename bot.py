@@ -90,6 +90,7 @@ async def on_resumed():
 @bot.event
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
+    await comm.logwithinfos_message(ctx.message, str(command))
     # message = ctx.message
     # destination = None
     # if message.channel.is_private:
@@ -195,6 +196,9 @@ if __name__ == '__main__':
     from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
+    import plugins.api as api
+
+
 
 
     for extension in initial_extensions:
@@ -203,7 +207,9 @@ if __name__ == '__main__':
         except Exception as e:
             logger.exception('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
     bot.loop.create_task(mainloop())
+    # noinspection PyBroadException
     try:
+        bot.loop.create_task(api.kyk.start(port=5566))
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:
         logger.warning("Shutdown in progress")
@@ -211,6 +217,7 @@ if __name__ == '__main__':
         logger.exception("Unknown error, restarting")
 
     finally:
+        # noinspection PyBroadException
         try:
             bot.loop.run_until_complete(allCanardsGo())
         except:

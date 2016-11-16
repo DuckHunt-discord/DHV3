@@ -25,7 +25,7 @@ async def logwithinfos_ctx(ctx_obj, log_str):
 
 
 async def logwithinfos_message(message_obj: discord.Message, log_str: str):
-    await logwithinfos(message_obj.channel, message_obj.author, log_str)
+    await logwithinfos(message_obj.channel, author=message_obj.author, log_str=log_str)
 
 
 async def logwithinfos(channel: discord.Channel, author=None, log_str=""):
