@@ -211,7 +211,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "munAP_", default=0) < time.time():
             await comm.message_user(message, _(":money_with_wings: You purchase AP ammo for your weapon. For the next 24 hours, you will deal double damage to ducks.", language))
-            scores.addToStat(message.channel, message.author, "munAP_", int(time.time() + DAY))
+            scores.setStat(message.channel, message.author, "munAP_", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -15)
 
         else:
@@ -226,7 +226,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "munExplo", default=0) < time.time():
             await comm.message_user(message, _(":money_with_wings: You purchase explosive ammo for your weapon. For the next 24 hours, you will deal triple damage to ducks.", language))
-            scores.addToStat(message.channel, message.author, "munExplo", int(time.time() + DAY))
+            scores.setStat(message.channel, message.author, "munExplo", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -25)
 
         else:
@@ -239,13 +239,13 @@ class Exp:
         !shop 5"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "confisque"):
+        if scores.getStat(message.channel, message.author, "confisque", default=False):
             await comm.message_user(message, _(":money_with_wings: You take your weapon back for 40 exp points", language))
-            scores.addToStat(message.channel, message.author, "confisque", False)
+            scores.setStat(message.channel, message.author, "confisque", False)
             scores.addToStat(message.channel, message.author, "exp", -40)
 
         else:
-            await comm.message_user(message, _(":champagne: You haven't kill anyone today, you have your weapon, what do you want to buy ? :p", language))
+            await comm.message_user(message, _(":champagne: You haven't killed anyone today, you have your weapon, what do you want to buy ? :p", language))
 
     @shop.command(pass_context=True, name="6")
     @checks.have_exp(8)
@@ -256,7 +256,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "graisse", default=0) < int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You add grease in your weapon to reduce jamming risks by 50 percent for a day, for only 8 exp points.", language))
-            scores.addToStat(message.channel, message.author, "graisse", time.time() + DAY)
+            scores.setStat(message.channel, message.author, "graisse", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -8)
 
         else:
@@ -275,7 +275,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "detecteurInfra", default=0) < int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You add an infrared detector to your weapon, that will prevent any waste of ammo for a day. Cost : 15 exp points.", language))
-            scores.addToStat(message.channel, message.author, "detecteurInfra", time.time() + DAY)
+            scores.setStat(message.channel, message.author, "detecteurInfra", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -15)
 
         else:
@@ -290,7 +290,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You add a silencer to your weapon, no duck will ever be frightened by one of your shots for a day. Cost : 5 exp points, what a good deal !", language))
-            scores.addToStat(message.channel, message.author, "silencieux", time.time() + DAY)
+            scores.setStat(message.channel, message.author, "silencieux", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -5)
 
         else:
