@@ -156,7 +156,7 @@ class Shoot:
             try:
                 commons.ducks_spawned.remove(current_duck)
             except ValueError:
-                await self.sendBangMessage(message, "That was close, you almost killed the duck, but the other hunter got it first ! [exp -1]")
+                await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [exp -1]", language))
                 scores.addToStat(message.channel, message.author, "exp", -1)
                 scores.addToStat(message.channel, message.author, "tirsManques", 1)
                 return
@@ -212,11 +212,11 @@ class Shoot:
             if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) > 0:
                 scores.setStat(message.channel, message.author, "balles", scores.getPlayerLevel(message.channel, message.author)["balles"])
                 scores.addToStat(message.channel, message.author, "chargeurs", -1)
-                greet = "You reload your weapon"
+                greet = _("You reload your weapon", language)
             else:
-                greet = "You dont have any ammo left !"
+                greet = _("You dont have any ammo left !", language)
         else:
-            greet = "You don't need to reload your weapon"
+            greet = _("You don't need to reload your weapon", language)
 
         await comm.message_user(message, _("{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : {chargeurs_actuels}/{chargeurs_max}", language).format(**{
             "greet"            : greet,

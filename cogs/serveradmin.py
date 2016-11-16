@@ -35,8 +35,10 @@ class ServerAdmin:
     async def game_ban(self, ctx, member: discord.Member):
         """Ban someone from the bot on the current channel
         !game_ban [member]"""
+        language = prefs.getPref(ctx.message.server, "language")
+
         scores.setStat(ctx.message.channel, member, "banned", True)
-        await comm.message_user(ctx.message, ":ok: Done, user banned :gun:")
+        await comm.message_user(ctx.message, _(":ok: Done, user banned :gun:", language))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -44,8 +46,10 @@ class ServerAdmin:
     async def game_unban(self, ctx, member: discord.Member):
         """Unban someone from the bot on the current channel
         !game_unban [member]"""
+        language = prefs.getPref(ctx.message.server, "language")
+
         scores.setStat(ctx.message.channel, member, "banned", False)
-        await comm.message_user(ctx.message, ":ok: Done, user unbanned :eyes:")
+        await comm.message_user(ctx.message, _(":ok: Done, user unbanned :eyes:", language))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -80,8 +84,8 @@ class ServerAdmin:
     @commands.command(pass_context=True)
     @checks.is_admin()
     async def add_channel(self, ctx):
-        """!del_channel
-        Add the current channel to the server
+        """Add the current channel to the server
+        !del_channel
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
@@ -220,55 +224,64 @@ class ServerAdmin:
     @commands.group(pass_context=True)
     @checks.is_activated_here()
     async def settings(self, ctx):
+        language = prefs.getPref(ctx.message.server, "language")
+
         if not ctx.invoked_subcommand:
-            await comm.message_user(ctx.message, ":x: Incorrect syntax : `!settings [view/set/reset/list] [setting if applicable]`")
+            await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!settings [view/set/reset/list] [setting if applicable]`", language))
 
     @settings.command(pass_context=True, name="view")
     async def view(self, ctx, pref: str):
         """!settings view [pref]"""
+        language = prefs.getPref(ctx.message.server, "language")
+
         if pref in commons.defaultSettings.keys():
-            await comm.message_user(ctx.message, "The setting {pref} is set at {value} on this server.".format(**{
+            await comm.message_user(ctx.message, _("The setting {pref} is set at {value} on this server.", language).format(**{
                 "value": prefs.getPref(ctx.message.server, pref),
                 "pref" : pref
             }))
         else:
-            await comm.message_user(ctx.message, ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`")
+            await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo ? Check the list with `!settings list`", language))
 
     @settings.command(pass_context=True, name="set")
     @checks.is_admin()
     async def set(self, ctx, pref: str, value: str):
         """!settings set [pref] [value]
         Admin powers required"""
+        language = prefs.getPref(ctx.message.server, "language")
 
         if pref in commons.defaultSettings.keys():
             if prefs.setPref(ctx.message.server, pref, value):
-                await comm.message_user(ctx.message, ":ok: The setting {pref} was set at `{value}` on this server.".format(**{
+                await comm.message_user(ctx.message, _(":ok: The setting {pref} was set at `{value}` on this server.", language).format(**{
                     "value": prefs.getPref(ctx.message.server, pref),
                     "pref" : pref
                 }))
             else:
-                await comm.message_user(ctx.message, ":x: Incorrect value")
+                await comm.message_user(ctx.message, _(":x: Incorrect value", language))
         else:
-            await comm.message_user(ctx.message, ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`")
+            await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo ? Check the list with `!settings list`", language))
 
     @settings.command(pass_context=True, name="reset")
     @checks.is_admin()
     async def reset(self, ctx, pref: str):
         """!settings reset [pref]
         Admin powers required"""
+        language = prefs.getPref(ctx.message.server, "language")
+
         if pref in commons.defaultSettings.keys():
             await prefs.setPref(ctx.message.server, pref)
-            await comm.message_user(ctx.message, ":ok: The setting {pref} reset to it's defalut value on this server : `{value}` ".format(**{
+            await comm.message_user(ctx.message, _(":ok: The setting {pref} reset to it's defalut value on this server : `{value}` ", language).format(**{
                 "value": prefs.getPref(ctx.message.server, pref),
                 "pref" : pref
             }))
         else:
-            await comm.message_user(ctx.message, ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`")
+            await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo ? Check the list with `!settings list`", language))
 
     @settings.command(pass_context=True, name="list")
     async def list(self, ctx):
         """!settings list"""
-        await comm.message_user(ctx.message, "List of preferences is available on the wiki : https://api-d.com/duckhunt/index.php/Configuration ")
+        language = prefs.getPref(ctx.message.server, "language")
+
+        await comm.message_user(ctx.message, _("List of preferences is available on the wiki : https://api-d.com/duckhunt/index.php/Configuration", language))
 
 
 def setup(bot):

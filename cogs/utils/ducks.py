@@ -157,10 +157,11 @@ async def del_channel(channel):
                 "id"  : channel.id,
                 "name": channel.name
             }))
-            servers[channel.server.id]["channels"].remove(channel.id)
+            # servers[channel.server.id]["channels"].remove(channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
             try:
                 commons.ducks_planned.remove(channel.id)
+                pass
             except:
                 pass
             for duck in commons.ducks_spawned[:]:

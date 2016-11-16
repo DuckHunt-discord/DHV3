@@ -88,10 +88,6 @@ def init():
             "value": True,
             "type" : bool
         },
-        "hunt_down_fake_ducks"      : {
-            "value": False,
-            "type" : bool
-        },
         "super_ducks_chance"        : {
             "value": 10,
             "type" : int

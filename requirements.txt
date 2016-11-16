@@ -5,3 +5,6 @@ lxml
 requests
 prettytable
 psutil
+aiohttp
+cchardet
+aiodns

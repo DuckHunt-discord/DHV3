@@ -35,7 +35,7 @@ log.setLevel(logging.INFO)
 handler = logging.FileHandler(filename='dh.log', encoding='utf-8', mode='w')
 log.addHandler(handler)
 
-help_attrs = dict(hidden=True)
+help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
 
 def prefix(bot, message):
@@ -112,15 +112,15 @@ async def on_message(message):
 
 @bot.event
 async def on_channel_delete(channel):
-    # await ducks.del_channel(channel)
-    pass
+    await ducks.del_channel(channel)
+
 
 
 @bot.event
 async def on_server_remove(server):
     for channel in server.channels:
-        # await ducks.del_channel(channel)
-        pass
+        await ducks.del_channel(channel)
+
 
 def load_credentials():
     with open('credentials.json') as f:
@@ -194,6 +194,8 @@ if __name__ == '__main__':
     ## POST INIT IMPORTS ##
     from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
     from cogs.utils import prefs, comm
+    from cogs.utils import ducks
+
 
     for extension in initial_extensions:
         try:
