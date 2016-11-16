@@ -50,7 +50,7 @@ def setPref(server, pref, value=None, force=False):
 def JSONsaveToDisk(data, filename):
     with open(filename, 'w') as outfile:
         json.dump(data, outfile, sort_keys=True, indent=4, ensure_ascii=False)
-    if commons.servers:
+    if hasattr(commons, "servers"):
         del commons.servers
 
 

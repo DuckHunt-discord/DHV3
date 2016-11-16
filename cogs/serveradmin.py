@@ -89,7 +89,7 @@ class ServerAdmin:
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
-        if not "channels" in ctx.message.server.id:
+        if not "channels" in servers[ctx.message.server.id]:
             servers[ctx.message.server.id]["channels"] = []
 
         if not ctx.message.channel.id in servers[ctx.message.server.id]["channels"]:
@@ -97,7 +97,7 @@ class ServerAdmin:
                 "id"  : ctx.message.channel.id,
                 "name": ctx.message.channel.name
             }))
-            servers[ctx.message.server.id]["channels"].append(ctx.message.channel.id)
+            servers[ctx.message.server.id]["channels"] += [ctx.message.channel.id]
             prefs.JSONsaveToDisk(servers, "channels.json")
             await ducks.planifie(ctx.message.channel)
             await comm.message_user(ctx.message, _(":robot: Channel added !", language))
@@ -274,6 +274,11 @@ class ServerAdmin:
             except TypeError:
                 await comm.message_user(ctx.message, _(":x: Incorrect value", language))
                 return
+
+            except ValueError:
+                await comm.message_user(ctx.message, _(":x: Incorrect value", language))
+                return
+
 
             if prefs.setPref(ctx.message.server, pref=pref, value=value):
                 await comm.message_user(ctx.message, _(":ok: The setting {pref} was set at `{value}` on this server.", language).format(**{

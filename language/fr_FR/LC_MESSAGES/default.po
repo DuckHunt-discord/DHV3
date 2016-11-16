@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
 "POT-Creation-Date: 2016-11-16 16:45+0100\n"
-"PO-Revision-Date: 2016-11-16 16:45+0100\n"
+"PO-Revision-Date: 2016-11-16 18:43+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -719,7 +719,7 @@ msgstr ""
 #, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
-":gun: Le canard à survécu, essaye encore [life : -{vie}] *SUPER CANARD "
+":gun: Le canard à survécu, essaye encore [vie : -{vie}] *SUPER CANARD "
 "DETECTE*"
 
 #: cogs/shoot.py:203
