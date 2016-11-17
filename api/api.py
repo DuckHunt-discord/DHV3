@@ -4,56 +4,21 @@
 """
 
 """
-import json
-import time
-
-from kyoukai import HTTPRequestContext, Kyoukai
-
-from cogs.utils import commons, prefs, scores
-
-kyk = Kyoukai("dh_api", debug=False)
-API_VERSION = "Duckhunt API, 0.0.1 ALPHA"
-
-commons.api = kyk
-commons.API_VERSION = API_VERSION
-
-
-async def is_channel_activated(channel):
-    servers = prefs.JSONloadFromDisk("channels.json")
-
-    try:
-        if channel.id in servers[channel.server.id]["channels"]:
-            activated = True
-        else:
-            activated = False
-    except KeyError:
-        activated = False
-
-    return activated
-
-
-async def prepare_resp(resp_payload, code=200, error_msg="OK"):
-    resp = {
-        "generated_at": int(time.time()),
-        "payload"     : resp_payload,
-        "error"       : {
-            "code"     : code,
-            "error_msg": error_msg
-        },
-        "api_version" : API_VERSION
-    }
-    return json.dumps(resp), code, {
-        "Content-Type": "application/json"
-    }
-
 
 ############
 #
 #   GUILDS
 #
 ############
+from kyoukai import HTTPRequestContext
 
-@kyk.route("/guilds")
+import api.API_commons as apcom
+from cogs.utils import commons, prefs, scores
+
+apcom.init()
+
+
+@apcom.kyk.route("/guilds")
 async def guilds(ctx: HTTPRequestContext):
     await commons.bot.wait_until_ready()
     resp = []
@@ -70,10 +35,10 @@ async def guilds(ctx: HTTPRequestContext):
         # }
         resp.append(server.id)
 
-    return await prepare_resp(resp)
+    return await apcom.prepare_resp(resp)
 
 
-@kyk.route("/guilds/([^/]+)")  # /guild/server_id
+@apcom.kyk.route("/guilds/([^/]+)")  # /guild/server_id
 async def guild_info(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
@@ -84,7 +49,7 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
         for channel in server.channels:
             channels[channel.id] = {
                 "name"         : channel.name,
-                "with_duckhunt": await is_channel_activated(channel)
+                "with_duckhunt": await apcom.is_channel_activated(channel)
             }
         settings = {}
         for setting in commons.defaultSettings.keys():
@@ -99,16 +64,16 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
 
         }
 
-        return await prepare_resp(resp)
+        return await apcom.prepare_resp(resp)
 
     else:
         resp = {}
         code = 404
         error_msg = "Guild not found on this bot"
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
 
-@kyk.route("/guilds/([^/]+)/users")  # /guilds/server_id/users
+@apcom.kyk.route("/guilds/([^/]+)/users")  # /guilds/server_id/users
 async def guild_users(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
@@ -120,16 +85,16 @@ async def guild_users(ctx: HTTPRequestContext, server_id: str):
             "members"  : server.members
         }
 
-        return await prepare_resp(resp)
+        return await apcom.prepare_resp(resp)
 
     else:
         resp = {}
         code = 404
         error_msg = "Guild not found on this bot"
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
 
-@kyk.route("/guilds/([^/]+)/channels")  # /guild/server_id/channels
+@apcom.kyk.route("/guilds/([^/]+)/channels")  # /guild/server_id/channels
 async def guild_channels(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
     servers = prefs.JSONloadFromDisk("channels.json")
@@ -151,17 +116,17 @@ async def guild_channels(ctx: HTTPRequestContext, server_id: str):
                                 "with_duckhunt": activated
                                 })
 
-        return await prepare_resp(channels)
+        return await apcom.prepare_resp(channels)
 
 
     else:
         resp = {}
         code = 404
         error_msg = "Guild not found on this bot"
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
 
-@kyk.route("/guilds/([^/]+)/channels/([^/]+)")  # /guilds/server_id/channel/channel_id
+@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)")  # /guilds/server_id/channel/channel_id
 async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
@@ -172,7 +137,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
         code = 404
         error_msg = "Guild not found on this bot"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     channel = server.get_channel(channel_id)
     if not channel:
@@ -182,7 +147,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
         code = 404
         error_msg = "Channel not found on this server"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     try:
         if channel_id in servers[server_id]["channels"]:
@@ -200,7 +165,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
         code = 404
         error_msg = "DuckHunt is not enabled on this channel"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
     i = 0
     resp = []
     for joueur in scores.topScores(ctx.message.channel):
@@ -218,10 +183,10 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
                         "name"        : joueur["name"]
                         })
 
-    return await prepare_resp(resp)
+    return await apcom.prepare_resp(resp)
 
 
-@kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)")  # /guilds/server_id/channel/channel_id/users/user_id
+@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)")  # /guilds/server_id/channel/channel_id/users/user_id
 async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_id: str, member_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
@@ -232,7 +197,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
         code = 404
         error_msg = "Guild not found on this bot"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     channel = server.get_channel(channel_id)
     if not channel:
@@ -242,7 +207,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
         code = 404
         error_msg = "Channel not found on this server"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     try:
         if channel_id in servers[server_id]["channels"]:
@@ -260,7 +225,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
         code = 404
         error_msg = "DuckHunt is not enabled on this channel"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     member = server.get_member(member_id)
 
@@ -272,7 +237,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
         code = 404
         error_msg = "User not found on this server"
 
-        return await prepare_resp(resp, code=code, error_msg=error_msg)
+        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
     resp = {
         "server_id"             : server_id,
@@ -306,7 +271,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
         "time_infrared_detector": scores.getStat(channel, member, "detecteurInfra"),
         "time_silencer"         : scores.getStat(channel, member, "silencieux")
     }
-    return await prepare_resp(resp)
+    return await apcom.prepare_resp(resp)
 
 
 ############
@@ -316,12 +281,12 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
 ############
 
 
-@kyk.route("/stats/messages_recived")
+@apcom.kyk.route("/stats/messages_recived")
 async def messages_recived(ctx: HTTPRequestContext):
     resp = commons.number_messages
-    return await prepare_resp(resp)
+    return await apcom.prepare_resp(resp)
 
 
-@kyk.root.errorhandler(500)
+@apcom.kyk.root.errorhandler(500)
 async def handle_500(ctx: HTTPRequestContext, exception_to_handle: Exception):
     return repr(exception_to_handle)

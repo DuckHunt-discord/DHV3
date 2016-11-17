@@ -196,7 +196,7 @@ if __name__ == '__main__':
     from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
-    import plugins.api as api
+    import api.api as api
 
 
 
