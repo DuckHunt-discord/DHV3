@@ -45,12 +45,13 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
     servers = prefs.JSONloadFromDisk("channels.json")
 
     if server:
-        channels = {}
+        channels = []
         for channel in server.channels:
-            channels[channel.id] = {
-                "name"         : channel.name,
-                "with_duckhunt": await apcom.is_channel_activated(channel)
-            }
+            if apcom.is_channel_activated(channel):
+                channels.append({
+                                    "id": channel.id,
+                                    "name": channel.name
+                                    })
         settings = {}
         for setting in commons.defaultSettings.keys():
             settings[setting] = prefs.getPref(server, setting)
@@ -103,13 +104,7 @@ async def guild_channels(ctx: HTTPRequestContext, server_id: str):
     if server:
 
         for channel in server.channels:
-            try:
-                if channel.id in servers[server_id]["channels"]:
-                    activated = True
-                else:
-                    activated = False
-            except KeyError:
-                activated = False
+            activated = apcom.is_channel_activated(channel)
             channels.append({
                                 "name"         : channel.name,
                                 "id"           : channel.id,
@@ -190,7 +185,6 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
 async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_id: str, member_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
-    servers = prefs.JSONloadFromDisk("channels.json")
 
     if not server:
         resp = {}
@@ -209,15 +203,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
 
         return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
-    try:
-        if channel_id in servers[server_id]["channels"]:
-            activated = True
-        else:
-            activated = False
-    except KeyError:
-        activated = False
-
-    if not activated:
+    if not apcom.is_channel_activated(channel):
         resp = {
             "server_id" : server_id,
             "channel_id": channel_id
@@ -239,38 +225,7 @@ async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_i
 
         return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
 
-    resp = {
-        "server_id"             : server_id,
-        "channel_id"            : channel_id,
-        "user_id"               : member.id,
-        "name"                  : member.name,
-        "nick"                  : member.nick,
-        "discriminator"         : member.discriminator,
-        "avatar_url"            : member.avatar_url,
-        "weapon_confiscated"    : scores.getStat(channel, member, "confique"),
-        "weapon_jammed"         : scores.getStat(channel, member, "enrayee"),
-        "weapon_sabotaged"      : scores.getStat(channel, member, "sabotee"),
-        "exp"                   : scores.getStat(channel, member, "exp"),
-        "bullets"               : scores.getStat(channel, member, "balles"),
-        "shots_without_ducks"   : scores.getStat(channel, member, "tirsSansCanards"),
-        "ducks_killed"          : scores.getStat(channel, member, "canardsTues"),
-        "best_time"             : scores.getStat(channel, member, "meilleurTemps", default=prefs.getPref(server, "time_before_ducks_leave")),
-        "shoots_missed"         : scores.getStat(channel, member, "tirsManques"),
-        "chargers"              : scores.getStat(channel, member, "chargeurs"),
-        "banned"                : scores.getStat(channel, member, "banni"),
-        "hunters_killed"        : scores.getStat(channel, member, "chasseursTues"),
-        "super_ducks_killed"    : scores.getStat(channel, member, "superCanardsTues"),
-        "last_giveback"         : scores.getStat(channel, member, "lastGiveback"),
-        "wet"                   : scores.getStat(channel, member, "mouille"),
-        "time_explosive_ammo"   : scores.getStat(channel, member, "munExplo"),
-        "time_AP_ammo"          : scores.getStat(channel, member, "munAP_"),
-        "time_grease"           : scores.getStat(channel, member, "graisse"),
-        "time_life_insurence"   : scores.getStat(channel, member, "AssuranceVie"),
-        "time_clover"           : scores.getStat(channel, member, "trefle"),
-        "clover_exp"            : scores.getStat(channel, member, "trefle_exp"),
-        "time_infrared_detector": scores.getStat(channel, member, "detecteurInfra"),
-        "time_silencer"         : scores.getStat(channel, member, "silencieux")
-    }
+    resp = apcom.get_user_scores(channel, member)
     return await apcom.prepare_resp(resp)
 
 
