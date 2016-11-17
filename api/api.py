@@ -15,7 +15,9 @@ from kyoukai import HTTPRequestContext
 import api.API_commons as apcom
 from cogs.utils import commons, prefs, scores
 
-apcom.init()
+
+async def init():
+    await apcom.init()
 
 
 @apcom.kyk.route("/guilds")
