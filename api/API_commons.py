@@ -7,15 +7,13 @@
 import json
 import time
 
+from kyoukai import Kyoukai
+
 from cogs.utils import prefs, scores
 
-
-async def init():
-    from kyoukai import Kyoukai
-
-    global kyk, API_VERSION
-    kyk = Kyoukai("dh_api", debug=False)
-    API_VERSION = "Duckhunt API, 0.0.1 ALPHA"
+global kyk, API_VERSION
+kyk = Kyoukai("dh_api", debug=False)
+API_VERSION = "Duckhunt API, 0.0.1 ALPHA"
 
 
 async def is_channel_activated(channel):
