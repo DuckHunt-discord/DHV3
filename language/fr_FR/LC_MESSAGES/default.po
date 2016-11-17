@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
 "POT-Creation-Date: 2016-11-16 16:45+0100\n"
-"PO-Revision-Date: 2016-11-16 18:43+0100\n"
+"PO-Revision-Date: 2016-11-17 09:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -688,7 +688,7 @@ msgstr " > Tu gagnes {exp} avec ton assurance vie"
 
 #: cogs/shoot.py:141
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "** PIEWW ** vous avez manqué le canard ! [raté : -1 xp]"
+msgstr "** PIEWW ** Vous avez manqué le canard ! [raté : -1 xp]"
 
 #: cogs/shoot.py:159
 msgid ""
@@ -756,19 +756,19 @@ msgstr ""
 msgid ""
 ":x: You can't use this command, you don't have at least {exp} exp points!"
 msgstr ""
-":x: vous ne pouvez pas utiliser cette commande, vous n’avez pas au moins "
+":x: Vous ne pouvez pas utiliser cette commande, vous n’avez pas au moins "
 "{exp} points d'expérience !"
 
 #: cogs/utils/checks.py:68
 msgid ":x: You can't use this command, you are not the owner of the bot !"
 msgstr ""
-":x: vous ne pouvez pas utiliser cette commande, vous n’êtes pas le "
+":x: Vous ne pouvez pas utiliser cette commande, vous n’êtes pas le "
 "propriétaire du bot !"
 
 #: cogs/utils/checks.py:83
 msgid ":x: You can't use this command, you are not an admin on this server!"
 msgstr ""
-":x: vous ne pouvez pas utiliser cette commande, vous n’êtes pas "
+":x: Vous ne pouvez pas utiliser cette commande, vous n’êtes pas "
 "administrateur du serveur !"
 
 #: cogs/utils/commons.py:152

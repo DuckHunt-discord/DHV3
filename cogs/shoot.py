@@ -107,8 +107,12 @@ class Shoot:
             return
 
         if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):  # Duck frightened
-            scores.addToStat(message.channel, message.author, "exp", -1)
-            await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]", language))
+            try:
+                commons.ducks_spawned.remove(current_duck)
+                scores.addToStat(message.channel, message.author, "exp", -1)
+                await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]", language))
+            except ValueError:
+                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
             return
 
         if random.randint(1, 100) > scores.getPlayerLevel(message.channel, message.author)["precision"]:
