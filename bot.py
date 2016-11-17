@@ -209,7 +209,7 @@ if __name__ == '__main__':
     bot.loop.create_task(mainloop())
     # noinspection PyBroadException
     try:
-        bot.loop.create_task(api.init())
+
         bot.loop.create_task(api.apcom.kyk.start(port=5566))
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:
