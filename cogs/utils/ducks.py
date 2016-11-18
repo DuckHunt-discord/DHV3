@@ -35,7 +35,7 @@ async def planifie(channel_obj: discord.Channel = None):
         thisDay = now - (now % 86400)
         servers = prefs.JSONloadFromDisk("channels.json", default="{}")
         for server_ in servers.keys():
-            server = bot.get_server(server_)
+            server = bot.get_server(str(server_))
             if not server:
                 logger.debug("Non-existant server : " + str(server_))
 
@@ -46,19 +46,22 @@ async def planifie(channel_obj: discord.Channel = None):
                 pass
             else:
                 for channel_ in servers[server.id]["channels"]:
-                    channel = server.get_channel(channel_)
-                    permissions = channel.permissions_for(server.me)
-                    if permissions.read_messages and permissions.send_messages:
-                        # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
-                        #    "id"           : channel.id,
-                        #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
-                        # }))
-                        templist = []
-                        for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
-                            templist.append(int(thisDay + random.randint(0, 86400)))
-                        planification_[channel] = sorted(templist)
+                    channel = server.get_channel(str(channel_))
+                    if channel:
+                        permissions = channel.permissions_for(server.me)
+                        if permissions.read_messages and permissions.send_messages:
+                            # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
+                            #    "id"           : channel.id,
+                            #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
+                            # }))
+                            templist = []
+                            for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
+                                templist.append(int(thisDay + random.randint(0, 86400)))
+                            planification_[channel] = sorted(templist)
+                        else:
+                            await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
                     else:
-                        await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
+                        pass
         commons.ducks_planned = planification_  # {"channel":[time objects]}
 
     else:

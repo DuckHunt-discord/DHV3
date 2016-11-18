@@ -167,6 +167,9 @@ class Shoot:
 
             exp = prefs.getPref(message.server, "exp_won_per_duck_killed")
             exp += prefs.getPref(message.server, "super_ducks_exp_multiplier") * (current_duck["level"] - 1) * prefs.getPref(message.server, "exp_won_per_duck_killed")
+            if scores.getStat(message.channel, message.author, "trefle") >= time.time():
+                exp += scores.getStat(message.channel, message.author, "trefle_exp")
+
             exp = int(exp)
             now = int(time.time())
             scores.addToStat(message.channel, message.author, "exp", exp)

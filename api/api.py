@@ -183,7 +183,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
 @apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)")  # /guilds/server_id/channel/channel_id/users/user_id
 async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_id: str, member_id: str):
     await commons.bot.wait_until_ready()
-    server = commons.bot.get_server(server_id)
+    server = commons.bot.Ìget_server(server_id)
 
     if not server:
         resp = {}
