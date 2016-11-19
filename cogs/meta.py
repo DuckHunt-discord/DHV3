@@ -3,6 +3,7 @@ import os
 import re
 import sys
 
+import discord
 import psutil
 from discord.ext import commands
 
@@ -115,6 +116,11 @@ class Meta:
     @commands.command(pass_context=True)
     async def stats(self, ctx):
         language = getPref(ctx.message.server, "language")
+        embed = discord.Embed(description=_("Usage statistics of duckhunt", language))
+        embed.title = "DUCKHUNT STATS"
+        # embed.set_author(name=str(target), icon_url=target.avatar_url)
+        embed.set_thumbnail(url=self.bot.user.avatar_url)
+        embed.url = 'https://api-d.com/duckhunt/'
         compteurCanards = 0
         serveurs = 0
         channels = 0
@@ -161,47 +167,35 @@ class Meta:
         pid = os.getpid()
         py = psutil.Process(pid)
         memoryUsed = py.memory_info()[0] / 2. ** 30
-        uptime = self.get_bot_uptime()
         now = datetime.datetime.utcnow()
         delta = now - self.bot.uptime
         uptime = delta.total_seconds()
 
-        await comm.message_user(ctx.message, _("""Statistiques de DuckHunt:
+        embed.add_field(name=_("Number of activeted channels", language), value=str(len(commons.ducks_planned)))
+        embed.add_field(name=_("Number of servers", language), value=str(serveurs))
+        embed.add_field(name=_("Number of french servers", language), value=str(servsFr))
+        embed.add_field(name=_("Number of english servers", language), value=str(servsEn))
+        embed.add_field(name=_("Number of servers with another langugae setup", language), value=str(servsEt))
+        embed.add_field(name=_("Number of channels", language), value=str(channels))
+        embed.add_field(name=_("Number of users", language), value=str(membres))
+        embed.add_field(name=_("Number of ducks", language), value=str(compteurCanards))
+        embed.add_field(name=_("Number of ducks per minute", language), value=str(round(compteurCanards / 1440, 4)))
+        embed.add_field(name=_("Number of messages recived", language), value=str(commons.number_messages))
+        embed.add_field(name=_("Number of commands recived", language), value=str(sum(self.bot.commands_used.values())))
+        embed.add_field(name=_("Number of commands per minute", language), value=str(round(sum(self.bot.commands_used.values()) / (uptime / 60), 4)))
+        embed.add_field(name=_("Number of messages per minute", language), value=str(round(commons.number_messages / (uptime / 60), 4), ))
+        embed.add_field(name=_("Uptime in seconds", language), value=str(uptime))
+        embed.add_field(name=_("Uptime in hours", language), value=str(int(uptime / 60 / 60)))
+        embed.add_field(name=_("Uptime in days", language), value=str(int(uptime / 60 / 60 / 24)))
+        embed.add_field(name=_("Servers with send exp activated", language), value=str(servsDon))
+        embed.add_field(name=_("Servers with more than 100 ducks per day", language), value=str(p100cj))
+        embed.add_field(name=_("Servers with more than 50 ducks per day", language), value=str(p50cj))
+        embed.add_field(name=_("Servers with more than 24 ducks per day", language), value=str(p24cj))
+        embed.add_field(name=_("Servers with less than 24 ducks per day", language), value=str(m24cj))
+        embed.add_field(name=_("Memory used (MB)", language), value=str(round(memoryUsed * 1000, 5)))
+        embed.set_footer(text='Python version : ' + str(sys.version), icon_url='http://cloudpassage.github.io/halo-toolbox/images/python_icon.png')
 
-    DuckHunt est actif dans `{nbre_channels_actives}` channels, sur `{nbre_serveurs}` serveurs. Il voit `{nbre_channels}` channels, et plus de `{nbre_utilisateurs}` utilisateurs.
-    Dans la planification d'aujourd'hui sont prévus et ont été lancés au total `{nbre_canards}` canards (soit `{nbre_canards_minute}` canards par minute).
-    Au total, le bot connait `{nbre_serveurs_francais}` serveurs francais, `{nbre_serveurs_anglais}` serveurs anglais et `{nbre_serveurs_etrangers}` serveurs étrangers.
-    Il a reçu au total durant la session `{messages}` message(s) (soit `{messages_minute}` message(s) par minute), dont `{commandes}` commandes (soit `{commandes_minute}` commandes(s) par minute).
-    Le bot est lancé depuis `{uptime_sec}` seconde(s), ce qui équivaut à `{uptime_min}` minute(s) ou encore `{uptime_heures}` heure(s), ou, en jours, `{uptime_jours}` jour(s).
-    Sur l'ensemble des serveurs, `{servsDon}` ont activé le don d'experience, `{plusde100cj}` serveurs font apparaitre plus de 100 canards par jour, `{plusde24cj}` serveurs en font plus de 24 par jours, tandis que `{moinsde24cj}` en font apparaitre moins de 24 par jour!
-    Le bot utilise actuellement `{memory_used}` MB de ram.
-
-    Le bot est lancé avec Python ```{python_version}```""", language).format(**{
-            "nbre_channels_actives"  : len(commons.ducks_planned),
-            "nbre_serveurs"          : serveurs,
-            "nbre_serveurs_francais" : servsFr,
-            "nbre_serveurs_anglais"  : servsEn,
-            "nbre_serveurs_etrangers": servsEt,
-            "nbre_channels"          : channels,
-            "nbre_utilisateurs"      : membres,
-            "nbre_canards"           : compteurCanards,
-            "nbre_canards_minute"    : round(compteurCanards / 1440, 4),
-            "messages"               : commons.number_messages,
-            "commandes"              : sum(self.bot.commands_used.values()),
-            "messages_minute"        : round(commons.number_messages / (uptime / 60), 4),
-            "commandes_minute"       : round(sum(self.bot.commands_used.values()) / (uptime / 60), 4),
-            "uptime_sec"             : uptime,
-            "uptime_min"             : int(uptime / 60),
-            "uptime_heures"          : int(uptime / 60 / 60),
-            "uptime_jours"           : int(uptime / 60 / 60 / 24),
-            "servsDon"               : servsDon,
-            "plusde100cj"            : p100cj,
-            "plusde50cj"             : p50cj,  # NU
-            "plusde24cj"             : p24cj,
-            "moinsde24cj"            : m24cj,
-            "memory_used"            : round(memoryUsed * 1000, 5),
-            "python_version"         : str(sys.version)
-        }))
+        await self.bot.say(embed=embed)
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):

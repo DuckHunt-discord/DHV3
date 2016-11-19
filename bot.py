@@ -104,6 +104,7 @@ async def on_command(command, ctx):
 @bot.event
 async def on_message(message):
     commons.number_messages += 1
+
     if message.author.bot:
         return
 

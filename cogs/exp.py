@@ -94,7 +94,9 @@ class Exp:
         # embed.set_author(name=str(target), icon_url=target.avatar_url)
         embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
         embed.url = 'https://api-d.com/duckhunt/'
-        embed.timestamp = datetime.datetime.now()
+        embed.colour = discord.Colour.green()
+
+        # embed.timestamp = datetime.datetime.now()
 
         if scores.getStat(message.channel, target, "canardsTues") > 0:
             ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "canardsTues"), 4)
