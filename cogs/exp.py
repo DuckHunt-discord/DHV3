@@ -85,44 +85,51 @@ class Exp:
         if not target:
             target = ctx.message.author
         level = scores.getPlayerLevel(message.channel, target)
-        x = PrettyTable()
+
+        embed = discord.Embed(description=_("Statistics of {player} on #{channel}", language).format(**{
+            "player" : target.name,
+            "channel": message.channel.name
+        }))
+        embed.title = "DUCKSTATS"
+        # embed.set_author(name=str(target), icon_url=target.avatar_url)
+        embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
+        embed.url = 'https://api-d.com/duckhunt/'
+        embed.timestamp = datetime.datetime.now()
+
         if scores.getStat(message.channel, target, "canardsTues") > 0:
             ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "canardsTues"), 4)
         else:
             ratio = _("No duck killed", language)
-        x._set_field_names([_("Statistic", language), _("Value", language)])
-        x.add_row([_("Ducks killed", language), scores.getStat(message.channel, target, "canardsTues")])
-        x.add_row([_("Shots missed", language), scores.getStat(message.channel, target, "tirsManques")])
-        x.add_row([_("Shots without ducks", language), scores.getStat(message.channel, target, "tirsSansCanards")])
-        x.add_row([_("Best killing time", language), scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))])
-        x.add_row([_("Bullets in current charger", language), str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"])])
-        x.add_row([_("Chargers left", language), str(scores.getStat(message.channel, target, "chargeurs", default=level["chargeurs"])) + " / " + str(level["chargeurs"])])
-        x.add_row([_("Exp points", language), scores.getStat(message.channel, target, "exp")])
-        x.add_row([_("Ratio (exp/ducks killed)", language), ratio])
-        x.add_row([_("Current level", language), str(level["niveau"]) + " (" + _(level["nom"], language) + ")"])
-        x.add_row([_("Shots accuracy", language), level["precision"]])
-        x.add_row([_("Weapon fiability", language), level["fiabilitee"]])
+        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "canardsTues")))
+        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "tirsManques")))
+        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "tirsSansCanards")))
+        embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
+        embed.add_field(name=_("Bullets in current charger", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
+        embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
+        embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
+        embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
+        embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
+        embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
         if scores.getStat(message.channel, target, "graisse", default=0) > int(time.time()):
-            x.add_row([_("Object : grease", language), self.objectTD(message.channel, target, language, "graisse")])
+            embed.add_field(name=_("Object : grease", language), value=str(self.objectTD(message.channel, target, language, "graisse")))
         if scores.getStat(message.channel, target, "detecteurInfra", default=0) > int(time.time()):
-            x.add_row([_("Object : infrared detector", language), self.objectTD(message.channel, target, language, "detecteurInfra")])
+            embed.add_field(name=_("Object : infrared detector", language), value=str(self.objectTD(message.channel, target, language, "detecteurInfra")))
         if scores.getStat(message.channel, target, "silencieux", default=0) > int(time.time()):
-            x.add_row([_("Object : silencer", language), self.objectTD(message.channel, target, language, "silencieux")])
+            embed.add_field(name=_("Object : silencer", language), value=str(self.objectTD(message.channel, target, language, "silencieux")))
         if scores.getStat(message.channel, target, "trefle", default=0) > int(time.time()):
-            x.add_row([_("Object : clover {exp} exp", language).format(**{
+            embed.add_field(name=_("Object : clover {exp} exp", language).format(**{
                 "exp": scores.getStat(message.channel, target, "trefle_exp", default=0)
-            }), self.objectTD(message.channel, target, language, "trefle")])
+            }), value=str(self.objectTD(message.channel, target, language, "trefle")))
         if scores.getStat(message.channel, target, "munExplo", default=0) > int(time.time()):
-            x.add_row([_("Object : explosive ammo", language), self.objectTD(message.channel, target, language, "munExplo")])
+            embed.add_field(name=_("Object : explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "munExplo")))
         elif scores.getStat(message.channel, target, "munAp_", default=0) > int(time.time()):
-            x.add_row([_("Object : AP ammo", language), self.objectTD(message.channel, target, language, "munAp_")])
+            embed.add_field(name=_("Object : AP ammo", language), value=str(self.objectTD(message.channel, target, language, "munAp_")))
         if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
-            x.add_row([_("Effect : wet", language), self.objectTD(message.channel, target, language, "mouille")])
+            embed.add_field(name=_("Effect : wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
 
-        await comm.message_user(message, _("Statistics of {mention} : \n```{table}```\nhttps://api-d.com/snaps/table_de_progression.html", language).format(**{
-            "table"  : x.get_string(),
-            "mention": target.mention
-        }))
+        embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
+
+        await self.bot.say(embed=embed)
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
@@ -405,14 +412,14 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to the decoy of {mention}. He brought it for 8 exp !", language).format(**{
             "mention": message.author.mention
-            }))
+        }))
         scores.addToStat(message.channel, message.author, "exp", -8)
         dans = random.randint(0, 60 * 10)
         await asyncio.sleep(dans)
         await ducks.spawn_duck({
-                                   "time": int(time.time()),
-                                   "channel": message.channel
-                                   })
+            "time"   : int(time.time()),
+            "channel": message.channel
+        })
 
     @shop.command(pass_context=True, name="21")
     async def item21(self, ctx):
@@ -429,7 +436,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         await comm.message_user(message, _(":money_with_wings: You will be warned when the next duck on #{channel_name} spawns", language).format(**{
             "channel_name": message.channel.name
-            }), forcePv=True)
+        }), forcePv=True)
         if not "detecteur" in servers[message.server.id]:
             servers[message.server.id]["detecteur"] = {}
         if message.channel.id in servers[message.server.id]["detecteur"]:
@@ -438,7 +445,6 @@ class Exp:
             servers[message.server.id]["detecteur"][message.channel.id] = [message.author.id]
         prefs.JSONsaveToDisk(servers, "channels.json")
         scores.addToStat(message.channel, message.author, "exp", -5)
-
 
     @shop.command(pass_context=True, name="23")
     @checks.have_exp(40)
