@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
 "POT-Creation-Date: 2016-11-16 16:45+0100\n"
-"PO-Revision-Date: 2016-11-17 09:28+0100\n"
+"PO-Revision-Date: 2016-11-19 09:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -266,7 +266,8 @@ msgstr ""
 #: cogs/exp.py:183
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
 msgstr ""
-":money_with_wings: Tu ajoutes une balle à ton arme pour 7 points d'experience"
+":money_with_wings: Vous ajoutez une balle à votre arme pour 7 points "
+"d'experience"
 
 #: cogs/exp.py:188
 msgid ":champagne: Your charger is full !"
@@ -288,7 +289,7 @@ msgid ""
 ":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
 msgstr ""
-":money_with_wings: Tu achetes des munitions AP, qui doubleront tes dégats "
+":money_with_wings: Vous achetez des munitions AP, qui doubleront vos dégats "
 "pendant une journée"
 
 #: cogs/exp.py:218
@@ -300,7 +301,7 @@ msgid ""
 ":money_with_wings: You purchase explosive ammo for your weapon. For the next "
 "24 hours, you will deal triple damage to ducks."
 msgstr ""
-":money_with_wings: Tu achetes des munitions explosives, qui tripleront tes "
+":money_with_wings: Vous achetez des munitions explosives, qui tripleront vos "
 "dégats pendant une journée"
 
 #: cogs/exp.py:233
@@ -309,7 +310,8 @@ msgstr ":champagne: Vous avez largement assez de munitions explosives"
 
 #: cogs/exp.py:243
 msgid ":money_with_wings: You take your weapon back for 40 exp points"
-msgstr ":money_with_wings: Tu récupéres ton arme pour 40 points d'experience"
+msgstr ""
+":money_with_wings: Vous récupérez votre arme pour 40 points d'experience"
 
 #: cogs/exp.py:248
 msgid ""
@@ -324,26 +326,28 @@ msgid ""
 ":money_with_wings: You add grease in your weapon to reduce jamming risks by "
 "50 percent for a day, for only 8 exp points."
 msgstr ""
-":money_with_wings: Tu mets de la graisse dans ton arme, ce qui réduit ses "
-"chances d'enrayement de 50% pendant 24h ! Cela te coûte 8 points d'expérience"
+":money_with_wings: Vous mettez de la graisse dans ton arme, ce qui réduit "
+"ses chances d'enrayement de 50% pendant 24h ! Cela vous coûte 8 points "
+"d'expérience"
 
 #: cogs/exp.py:263
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, no need for more grease"
-msgstr ":champagne: Ton arme est déjà bien lubrifiée!"
+msgstr ":champagne: Votre arme est déjà bien lubrifiée!"
 
 #: cogs/exp.py:277
 msgid ""
 ":money_with_wings: You add an infrared detector to your weapon, that will "
 "prevent any waste of ammo for a day. Cost : 15 exp points."
 msgstr ""
-":money_with_wings: Tu ajoutes un détecteur infrarouge à ton arme pour 15 "
-"exp. Tu ne peux plus tirer lorsque aucun canard n'est présent."
+":money_with_wings: Vous ajoutez un détecteur infrarouge à votre arme pour 15 "
+"exp. Vous ne pouvez plus tirer lorsque aucun canard n'est présent."
 
 #: cogs/exp.py:282
 msgid ":champagne: You do have an infrared detector on your weapon, right ?"
 msgstr ""
-":champagne: Tu ne peux pas mettre deux détecteurs infrarouges sur ton arme!"
+":champagne: Vous ne pouvez pas mettre deux détecteurs infrarouges sur votre "
+"arme!"
 
 #: cogs/exp.py:292
 msgid ""
@@ -351,12 +355,12 @@ msgid ""
 "frightened by one of your shots for a day. Cost : 5 exp points, what a good "
 "deal !"
 msgstr ""
-":money_with_wings: Tu ajoutes un silencieux à ton arme pour 5 exp. Tes tirs "
-"n'effrayent plus les canards."
+":money_with_wings: Vous ajoutez un silencieux à votre arme pour 5 exp. Vos "
+"tirs n'effrayent plus les canards."
 
 #: cogs/exp.py:297
 msgid ":champagne: You do have a silencer on your weapon, right ?"
-msgstr ":champagne: Tu as déjà un silencieux monté sur ton arme"
+msgstr ":champagne: Vous avez déjà un silencieux monté sur votre arme"
 
 #: cogs/exp.py:308
 #, python-brace-format
@@ -364,15 +368,15 @@ msgid ""
 ":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
 "more exp point for the next day. You brought it for 13 exp!"
 msgstr ""
-":money_with_wings: Tu achetes un trefle à 4 feuilles, qui te donnera {exp} "
-"points d'exp supplémentaires à chaque canard tué pendant 24 heures!"
+":money_with_wings: Vous achetez un trefle à 4 feuilles, qui vous donnera "
+"{exp} points d'exp supplémentaires à chaque canard tué pendant 24 heures!"
 
 #: cogs/exp.py:316
 msgid ""
 ":champagne: You're too lucky, but I don't have any clover left for you "
 "today :'(. Too much luck, maybe ??"
 msgstr ""
-":champagne: Je n'ai plus de trèfles pour toi aujourd'hui... Vous êtes peut-"
+":champagne: Je n'ai plus de trèfles pour vous aujourd'hui... Vous êtes peut-"
 "être trop chanceux ?"
 
 #: cogs/exp.py:330
@@ -380,8 +384,8 @@ msgid ""
 ":money_with_wings: You have some dry clothes on you now. You looks "
 "beautiful ! "
 msgstr ""
-":money_with_wings: Tu te changes et repart chasser avec des vétements secs, "
-"pour seulement 7 exp"
+":money_with_wings: Vous vous changez et repartez chasser avec des vétements "
+"secs, pour seulement 7 exp"
 
 #: cogs/exp.py:336
 msgid ""
@@ -397,8 +401,8 @@ msgid ""
 ":money_with_wings: You drop a full water bucket on {target}, frocing him to "
 "wait 1 hour for his/her clothes to dry before he/she can return hunting"
 msgstr ""
-":money_with_wings: Tu jettes un seau d'eau sur {target}, l'obligeant ainsi à "
-"attendre 1 heure avant de retourner chasser"
+":money_with_wings: Vous jetez un seau d'eau sur {target}, l'obligeant ainsi "
+"à attendre 1 heure avant de retourner chasser"
 
 #: cogs/exp.py:371
 #, python-brace-format
@@ -416,12 +420,12 @@ msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
 "get killed, you will earn half the level of the killer in exp"
 msgstr ""
-":money_with_wings: Tu souscris à une assurance vie pour 10 exp, qui dure une "
-"semaine"
+":money_with_wings: Vous souscrivez à une assurance vie pour 10 exp, qui dure "
+"une semaine"
 
 #: cogs/exp.py:394
 msgid ":money_with_wings: You are already insured."
-msgstr ":money_with_wings: Tu es déjà assuré !"
+msgstr ":money_with_wings: Vous etes déjà assuré !"
 
 #: cogs/exp.py:407
 #, python-brace-format
@@ -430,7 +434,7 @@ msgid ""
 "thanks to the decoy of {mention}. He brought it for 8 exp !"
 msgstr ""
 ":money_with_wings: Un canard apparaîtra dans les 10 prochaines minutes sur "
-"le canal, grâce à l'appeau de {mention}. Il a pour 8 exp!"
+"le canal, grâce à l'appeau de {mention}. Il a payé 8 exp!"
 
 #: cogs/exp.py:431
 #, python-brace-format
@@ -438,15 +442,15 @@ msgid ""
 ":money_with_wings: You will be warned when the next duck on #{channel_name} "
 "spawns"
 msgstr ""
-":money_with_wings: Tu seras prévenu quand le prochain canard apparaîtra sur "
-"#{channel_name}"
+":money_with_wings: Vous serez prévenu quand le prochain canard apparaîtra "
+"sur #{channel_name}"
 
 #: cogs/exp.py:451
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
 "That's bad, but so funny !"
 msgstr ""
-":money_with_wings: Tu prépares un canard mécanique sur le chan pour 50 "
+":money_with_wings: Vous préparez un canard mécanique sur le chan pour 50 "
 "points d'experience. C'est méchant, mais tellement drôle !"
 
 #: cogs/exp.py:456
@@ -651,8 +655,8 @@ msgid ""
 "Luckily you missed, what were you aiming at exactly? There are no duck "
 "here... [missed : -1 xp] [wild shot: -1 xp]"
 msgstr ""
-"Par chance tu as raté, mais tu visais qui au juste ? Il n'y a aucun canard "
-"dans le coin...   [raté : -1 xp] [tir sauvage : -1 xp]"
+"Par chance vous avez raté, mais qui visiez-vous au juste ? Il n'y a aucun "
+"canard dans le coin...   [raté : -1 xp] [tir sauvage : -1 xp]"
 
 #: cogs/shoot.py:111
 msgid ""
@@ -668,8 +672,8 @@ msgid ""
 "**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
 "[hunting accident : -2 xp] [weapon confiscated]"
 msgstr ""
-"**BANG**\tTu as raté le canard... Et tu as tiré sur {player}. ! [raté : -1 "
-"xp] [accident de chasse : -2 xp] [arme confisquée]"
+"**BANG**\tVous avez raté le canard... Et vous avez tiré sur {player}. ! "
+"[raté : -1 xp] [accident de chasse : -2 xp] [arme confisquée]"
 
 #: cogs/shoot.py:129
 msgid ""
@@ -677,14 +681,14 @@ msgid ""
 "little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
 "accident : -2 xp] [weapon confiscated]"
 msgstr ""
-"**BANG**\tTu as raté le canard... Et tu t'es tiré dessus. Apprends à tenir "
-"ton fusil à l'endroit la prochaine fois, boulet ! [raté : -1 xp] [accident "
-"de chasse : -2 xp] [arme confisquée]"
+"**BANG**\tVous avez raté le canard... Et vous vous êtes tiré dessus. "
+"Apprends à tenir ton fusil à l'endroit la prochaine fois, boulet ! [raté : "
+"-1 xp] [accident de chasse : -2 xp] [arme confisquée]"
 
 #: cogs/shoot.py:134
 #, python-brace-format
 msgid " > You won {exp} with your life insurance"
-msgstr " > Tu gagnes {exp} avec ton assurance vie"
+msgstr " > Vous gagnez {exp} exp avec votre assurance vie"
 
 #: cogs/shoot.py:141
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
@@ -695,7 +699,7 @@ msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first ! [exp -1]"
 msgstr ""
-"Pas loin, tu as presque tué le canard, ça c'est joué à peu de choses... "
+"Pas loin, vous avez presque tué le canard, ça c'est joué à peu de choses... "
 " Mais l'autre chasseur l'as eu en premier ! [exp -1]"
 
 #: cogs/shoot.py:173
@@ -705,34 +709,34 @@ msgid ""
 "now at a grand total of {total} duck (of which {supercanards} were super-"
 "ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
 msgstr ""
-":skull_crossbones: **BOUM**\tTu l'as eu en {time} secondes, ce qui te fait "
-"un total de {total} canards (dont {supercanards} supercanards) sur "
+":skull_crossbones: **BOUM**\tVous l’avez eu en {time} secondes, ce qui vous "
+"fait un total de {total} canards (dont {supercanards} supercanards) sur "
 "#{channel}.     \\_X<   *COUAC*   [{exp} xp]"
 
 #: cogs/shoot.py:184
 #, python-brace-format
 msgid "Searching the brushes arround the duck, you find {inutilitee}"
 msgstr ""
-"En cherchant dans les buissons à coté du canard, tu trouves {inutilitee}"
+"En cherchant dans les buissons à coté du canard, vous trouvez {inutilitee}"
 
 #: cogs/shoot.py:189
 #, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
-":gun: Le canard à survécu, essaye encore [vie : -{vie}] *SUPER CANARD "
+":gun: Le canard à survécu, essayez encore [vie : -{vie}] *SUPER CANARD "
 "DETECTE*"
 
 #: cogs/shoot.py:203
 msgid "Your weapon had been confiscated"
-msgstr "Ton arme à été confisquée"
+msgstr "Votre arme à été confisquée"
 
 #: cogs/shoot.py:206
 msgid "You unstuck your weapon."
-msgstr "Tu décoinces ton arme"
+msgstr "Vous décoincez votre arme"
 
 #: cogs/shoot.py:215
 msgid "You reload your weapon"
-msgstr "Tu recharges ton arme"
+msgstr "Vous rechargez votre arme"
 
 #: cogs/shoot.py:217
 msgid "You dont have any ammo left !"

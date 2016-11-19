@@ -99,7 +99,6 @@ class Exp:
         x.add_row([_("Chargers left", language), str(scores.getStat(message.channel, target, "chargeurs", default=level["chargeurs"])) + " / " + str(level["chargeurs"])])
         x.add_row([_("Exp points", language), scores.getStat(message.channel, target, "exp")])
         x.add_row([_("Ratio (exp/ducks killed)", language), ratio])
-
         x.add_row([_("Current level", language), str(level["niveau"]) + " (" + _(level["nom"], language) + ")"])
         x.add_row([_("Shots accuracy", language), level["precision"]])
         x.add_row([_("Weapon fiability", language), level["fiabilitee"]])

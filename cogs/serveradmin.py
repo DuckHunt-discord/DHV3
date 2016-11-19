@@ -195,12 +195,15 @@ class ServerAdmin:
         language = prefs.getPref(ctx.message.server, "language")
 
         if ctx.message.channel.permissions_for(ctx.message.server.me).manage_messages:
-            deleted = await self.bot.purge_from(ctx.message.channel, limit=number)
+            def not_pinned(m):
+                return not m.pinned
+
+            deleted = await self.bot.purge_from(ctx.message.channel, limit=number, check=not_pinned)
             await comm.message_user(ctx.message, _("{deleted} message(s) deleted", language).format(**{
                 "deleted": len(deleted)
                 }))
         else:
-            await comm.message_user(ctx.message, _("0 message(s) supprimés : permission refusée", language))
+            await comm.message_user(ctx.message, _("0 message(s) deleted : permission denied", language))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
