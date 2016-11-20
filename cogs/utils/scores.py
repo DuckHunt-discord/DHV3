@@ -83,7 +83,7 @@ def topScores(channel, stat="exp"):
     try:
         return sorted(table.all(), key=lambda k: defaultInt(k[stat]), reverse=True)  # Retourne l'ensemble des joueurs dans une liste par stat
     except:
-        return None
+        return []
 
 
 def giveBack(player, channel):

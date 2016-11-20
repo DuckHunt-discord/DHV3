@@ -24,7 +24,7 @@ def init():
 
     global lang, owners, support_server, defaultSettings, levels
     lang = "en_EN"  # Language specified here is for console messages, everything that is not sent to a server
-    owners = [138751484517941259]
+    owners = ["138751484517941259"]
     support_server = [195260081036591104]
 
     class Domain:  # gettext config | http://stackoverflow.com/a/38004947/3738545

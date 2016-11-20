@@ -175,7 +175,7 @@ class Meta:
         embed.add_field(name=_("Number of servers", language), value=str(serveurs))
         embed.add_field(name=_("Number of french servers", language), value=str(servsFr))
         embed.add_field(name=_("Number of english servers", language), value=str(servsEn))
-        embed.add_field(name=_("Number of servers with another langugae setup", language), value=str(servsEt))
+        embed.add_field(name=_("Number of servers with another language setup", language), value=str(servsEt))
         embed.add_field(name=_("Number of channels", language), value=str(channels))
         embed.add_field(name=_("Number of users", language), value=str(membres))
         embed.add_field(name=_("Number of ducks", language), value=str(compteurCanards))
@@ -193,18 +193,25 @@ class Meta:
         embed.add_field(name=_("Servers with more than 24 ducks per day", language), value=str(p24cj))
         embed.add_field(name=_("Servers with less than 24 ducks per day", language), value=str(m24cj))
         embed.add_field(name=_("Memory used (MB)", language), value=str(round(memoryUsed * 1000, 5)))
-        embed.set_footer(text='Python version : ' + str(sys.version), icon_url='http://cloudpassage.github.io/halo-toolbox/images/python_icon.png')
+        embed.set_footer(text=_('Python version : ', language) + str(sys.version), icon_url='http://cloudpassage.github.io/halo-toolbox/images/python_icon.png')
 
-        await self.bot.say(embed=embed)
+        try:
+            await self.bot.say(embed=embed)
+        except:
+            commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
+            await comm.message_user(ctx.message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):
-        await comm.message_user(ctx.message, "BANG OR BANG, what's the best ? :p Anyway I'm up and running")
+        await comm.message_user(ctx.message, _("BANG OR BANG, what's the best ? :p Anyway I'm up and running", getPref(ctx.message.server, "language")))
 
     @commands.command(pass_context=True)
     async def wiki(self, ctx):
         await comm.message_user(ctx.message, "https://api-d.com/duckhunt/index.php/")
 
+    @commands.command(pass_context=True)
+    async def help(self, ctx):
+        await comm.message_user(ctx.message, "The list of command is on the wiki now ! https://api-d.com/duckhunt/index.php/")
 
 def setup(bot):
     bot.add_cog(Meta(bot))

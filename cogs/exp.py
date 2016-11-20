@@ -130,8 +130,11 @@ class Exp:
             embed.add_field(name=_("Effect : wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
 
         embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
-
-        await self.bot.say(embed=embed)
+        try:
+            await self.bot.say(embed=embed)
+        except:
+            commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
+            await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
