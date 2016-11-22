@@ -56,14 +56,16 @@ def addToStat(channel, player, stat, value, announce=True):
         level = getPlayerLevel(channel, player)
         if ancien_niveau["niveau"] > level["niveau"]:
             embed.title = _("You leveled down!", language)
+            embed.colour = discord.Colour.red()
         elif ancien_niveau["niveau"] < level["niveau"]:
             embed.title = _("You leveled up!", language)
+            embed.colour = discord.Colour.green()
         else:
             return
 
         embed.set_thumbnail(url=player.avatar_url if player.avatar_url else commons.bot.user.avatar_url)
         embed.url = 'https://api-d.com/duckhunt/'
-        embed.colour = discord.Colour.green()
+
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))

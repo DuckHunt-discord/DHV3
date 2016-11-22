@@ -81,7 +81,7 @@ class Admin:
             await self.bot.say(python.format(type(e).__name__ + ': ' + str(e)))
             return
 
-        await self.bot.say(python.format(result))
+        await comm.message_user(ctx.message, python.format(result))
 
     @commands.command(pass_context=True, hidden=True)
     @checks.is_owner()
