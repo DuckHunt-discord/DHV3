@@ -30,7 +30,7 @@ class Exp:
         date_expiration = datetime.datetime.fromtimestamp(scores.getStat(channel, target, object, default=0))
         td = date_expiration - datetime.datetime.now()
         return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(**{
-            "date"        : date_expiration.strftime(_('%H:%M:%S le %d/%m', language)),
+            "date"        : date_expiration.strftime(_('%m/%d at %H:%M:%S', language)),
             "dans_jours"  : _("{dans} days ").format(**{
                 "dans": td.days
             }) if td.days else "",
@@ -49,6 +49,9 @@ class Exp:
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if prefs.getPref(message.server, "user_can_give_exp"):
+            if scores.getStat(message.channel, message.author, "confisque", default=False):  # No weapon
+                await comm.message_user(message, _(":x: To prevent abuse, you can't send exp when you don't have a weapon.", language))
+                return
 
             if amount <= 0:
                 await comm.message_user(message, _(":x: You need to give a positive number for the exp to send", language))
@@ -74,6 +77,9 @@ class Exp:
                 }))
             else:
                 await comm.message_user(message, _("You don't have enough experience points", language))
+        else:
+            await comm.message_user(message, _(":x: Sending exp is disabled on this server", language))
+
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
