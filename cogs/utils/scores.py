@@ -7,8 +7,10 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 import time
 
 import dataset
+import discord
 
 from cogs.utils import prefs
+from cogs.utils.commons import _
 from . import commons
 
 db = dataset.connect('sqlite:///scores.db')
@@ -32,13 +34,50 @@ def updatePlayerInfo(channel, info):
     table.upsert(info, ["id_"])
 
 
-def addToStat(channel, player, stat, value):
+def addToStat(channel, player, stat, value, announce=True):
+    if stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce:
+        ancien_niveau = getPlayerLevel(channel, player)
+
     dict_ = {
         "name": player.name,
         "id_" : player.id,
         stat  : int(getStat(channel, player, stat)) + value
     }
     updatePlayerInfo(channel, dict_)
+
+    if stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce:
+        language = prefs.getPref(channel.server, "language")
+
+        embed = discord.Embed(description=_("Level of {player} on #{channel}", language).format(**{
+            "player" : player.name,
+            "channel": channel.name
+        }))
+
+        level = getPlayerLevel(channel, player)
+        if ancien_niveau["niveau"] > level["niveau"]:
+            embed.title = _("You leveled down!", language)
+        elif ancien_niveau["niveau"] < level["niveau"]:
+            embed.title = _("You leveled up!", language)
+        else:
+            return
+
+        embed.set_thumbnail(url=player.avatar_url if player.avatar_url else commons.bot.user.avatar_url)
+        embed.url = 'https://api-d.com/duckhunt/'
+        embed.colour = discord.Colour.green()
+        embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
+        embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")
+        embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
+        embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
+        embed.add_field(name=_("Exp points", language), value=str(getStat(channel, player, "exp")))
+        embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
+        try:
+            commons.bot.loop.create_task(commons.bot.send_message(channel, embed=embed))
+        except:
+            commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
+            commons.bot.loop.create_task(commons.bot.send_message(channel, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language)))
+
+
+
 
 
 def setStat(channel, player, stat, value):

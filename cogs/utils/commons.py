@@ -140,6 +140,10 @@ def init():
             "value": "!",
             "type" : str
         },
+        "announce_level_up"         : {
+            "value": True,
+            "type" : bool_
+        },
         "killed_mentions"           : {
             "value": True,
             "type" : bool_

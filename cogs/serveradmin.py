@@ -85,7 +85,7 @@ class ServerAdmin:
     @checks.is_admin()
     async def add_channel(self, ctx):
         """Add the current channel to the server
-        !del_channel
+        !add_channel
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
