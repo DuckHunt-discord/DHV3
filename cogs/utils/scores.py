@@ -23,7 +23,6 @@ def _gettable(channel):
     else:
         return db[server.id + "-" + channel.id]
 
-
 def getChannelTable(channel):
     table = _gettable(channel)
     return table

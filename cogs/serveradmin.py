@@ -5,6 +5,7 @@ import time
 
 import discord
 from discord.ext import commands
+from prettytable import PrettyTable
 
 from cogs.utils import comm, commons, ducks, prefs, scores
 from cogs.utils.commons import _
@@ -246,7 +247,7 @@ class ServerAdmin:
         language = prefs.getPref(ctx.message.server, "language")
 
         if not ctx.invoked_subcommand:
-            await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!settings [view/set/reset/list] [setting if applicable]`", language))
+            await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting if applicable]`", language))
 
     @settings.command(pass_context=True, name="view")
     async def view(self, ctx, pref: str):
@@ -321,6 +322,21 @@ class ServerAdmin:
 
         await comm.message_user(ctx.message, _("List of preferences is available on the wiki : https://api-d.com/duckhunt/index.php/Configuration", language))
 
+    @settings.command(pass_context=True, name="modified")
+    async def listm(self, ctx):
+        """!settings modified"""
+        language = prefs.getPref(ctx.message.server, "language")
+        defaultSettings = commons.defaultSettings
+        x = PrettyTable()
+
+        x._set_field_names([_("Parameter", language), _("Value", language), _("Default value", language)])
+        for param in defaultSettings.keys():
+            if prefs.getPref(ctx.message.server, param) != defaultSettings[param]["value"]:
+                x.add_row([param, prefs.getPref(ctx.message.server, param), defaultSettings[param]["value"]])
+
+        await comm.message_user(ctx.message, _("List of modified parameters : \n```{table}```", language).format(**{
+            "table": x.get_string(sortby=_("Parameter", language))
+            }))
 
 def setup(bot):
     bot.add_cog(ServerAdmin(bot))

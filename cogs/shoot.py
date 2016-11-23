@@ -171,21 +171,21 @@ class Shoot:
                 exp += scores.getStat(message.channel, message.author, "trefle_exp")
 
             exp = int(exp)
-            now = int(time.time())
+            now = time.time()
             scores.addToStat(message.channel, message.author, "exp", exp)
             scores.addToStat(message.channel, message.author, "canardsTues", 1)
             if current_duck["level"] > 1:
                 scores.addToStat(message.channel, message.author, "superCanardsTues", 1)
 
             await self.sendBangMessage(message, _(":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} duck (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
-                "time"        : int(now - current_duck["time"]),
+                "time"        : round(now - current_duck["time"], 4),
                 "total"       : scores.getStat(message.channel, message.author, "canardsTues"),
                 "channel"     : message.channel,
                 "exp"         : exp,
                 "supercanards": scores.getStat(message.channel, message.author, "superCanardsTues")
             }))
             if scores.getStat(message.channel, message.author, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave")) > int(now - current_duck["time"]):
-                scores.setStat(message.channel, message.author, "meilleurTemps", int(now - current_duck["time"]))
+                scores.setStat(message.channel, message.author, "meilleurTemps", round(now - current_duck["time"], 6))
             if prefs.getPref(message.server, "users_can_find_objects"):
                 if random.randint(0, 100) < 25:
                     await comm.message_user(message, _("Searching the brushes arround the duck, you find {inutilitee}", language).format(**{

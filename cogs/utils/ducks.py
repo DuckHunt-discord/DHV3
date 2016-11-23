@@ -141,6 +141,7 @@ async def spawn_duck(duck):
         duck["SCvie"] = 1
 
     await comm.logwithinfos(duck["channel"], None, "New duck : " + str(duck))
+    duck["time"] = time.time()
     if prefs.getPref(duck["channel"].server, "randomize_ducks"):
         canard_str = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri), language=prefs.getPref(duck["channel"].server, "language"))
     else:
@@ -156,12 +157,12 @@ async def spawn_duck(duck):
 async def del_channel(channel):
     servers = prefs.JSONloadFromDisk("channels.json")
     try:
-        if channel.id in servers[channel.server.id]["channels"]:
+        if str(channel.id) in servers[channel.server.id]["channels"]:
             await comm.logwithinfos(channel, author=None, log_str="Deleting channel {name} | {id} from the json file...".format(**{
                 "id"  : channel.id,
                 "name": channel.name
             }))
-            # servers[channel.server.id]["channels"].remove(channel.id)
+            servers[channel.server.id]["channels"].remove(channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
             try:
                 commons.ducks_planned.remove(channel.id)

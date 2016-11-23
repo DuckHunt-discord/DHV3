@@ -45,6 +45,13 @@ class Exp:
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
+    async def resetbesttime(self, ctx):
+        message = ctx.message
+        scores.setStat(message.channel, message.author, "meilleurTemps", prefs.getPref(message.server, "time_before_ducks_leave"))
+        await comm.message_user(message, _(":ok: Your best time was reset.", prefs.getPref(message.server, "language")))
+    @commands.command(pass_context=True)
+    @checks.is_not_banned()
+    @checks.is_activated_here()
     async def sendexp(self, ctx, target: discord.Member, amount: int):
         message = ctx.message
         language = prefs.getPref(message.server, "language")
