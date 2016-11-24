@@ -273,7 +273,7 @@ class ServerAdmin:
             try:
                 if pref == "ducks_per_day":
                     maxCJ = int(125 + (ctx.message.server.member_count / (5 + (ctx.message.server.member_count / 300))))
-                    if int(value) >= maxCJ:
+                    if int(value) > maxCJ:
                         if ctx.message.author.id in commons.owners:
                             await comm.message_user(ctx.message, _("Bypassing the max_ducks_per_day check as you are the bot owner. It would be {max}", language).format(**{
                                 "max": maxCJ
