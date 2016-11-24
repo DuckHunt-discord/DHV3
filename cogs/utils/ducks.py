@@ -42,7 +42,7 @@ async def planifie(channel_obj: discord.Channel = None):
             elif not "channels" in servers[server.id]:
                 # try:bot.send_message(server.default_channel, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758")
                 # except: pass
-                # await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
+                await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
                 pass
             else:
                 for channel_ in servers[server.id]["channels"]:
@@ -74,7 +74,11 @@ async def planifie(channel_obj: discord.Channel = None):
                 templist.append(int(thisDay + random.randint(0, 86400)))
         else:
             await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
+        # commons.logger.debug("Before " + str(commons.ducks_planned[channel_obj]))
         commons.ducks_planned[channel_obj] = sorted(templist)
+        #commons.logger.debug("After " + str(commons.ducks_planned[channel_obj]))
+
+
 
 
 async def get_next_duck():

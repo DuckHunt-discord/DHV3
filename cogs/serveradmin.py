@@ -288,8 +288,9 @@ class ServerAdmin:
                 await comm.message_user(ctx.message, _(":x: Incorrect value", language))
                 return
 
-
             if prefs.setPref(ctx.message.server, pref=pref, value=value):
+                if pref == "ducks_per_day":
+                    await ducks.planifie(ctx.message.channel)
                 await comm.message_user(ctx.message, _(":ok: The setting {pref} was set at `{value}` on this server.", language).format(**{
                     "value": prefs.getPref(ctx.message.server, pref),
                     "pref" : pref
