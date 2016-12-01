@@ -74,9 +74,7 @@ async def planifie(channel_obj: discord.Channel = None):
                 templist.append(int(thisDay + random.randint(0, 86400)))
         else:
             await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
-        # commons.logger.debug("Before " + str(commons.ducks_planned[channel_obj]))
         commons.ducks_planned[channel_obj] = sorted(templist)
-        #commons.logger.debug("After " + str(commons.ducks_planned[channel_obj]))
 
 
 
@@ -169,7 +167,7 @@ async def del_channel(channel):
             servers[channel.server.id]["channels"].remove(channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
             try:
-                commons.ducks_planned.remove(channel.id)
+                commons.ducks_planned.pop(channel.id)
                 pass
             except:
                 pass

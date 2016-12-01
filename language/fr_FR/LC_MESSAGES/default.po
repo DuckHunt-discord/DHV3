@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
-"POT-Creation-Date: 2016-11-23 21:01+0100\n"
-"PO-Revision-Date: 2016-11-23 21:01+0100\n"
+"POT-Creation-Date: 2016-11-28 22:15+0100\n"
+"PO-Revision-Date: 2016-11-28 22:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -172,7 +172,7 @@ msgstr "Meilleur temps de tir"
 msgid "Bullets in current charger"
 msgstr "Balles dans le chargeur actuel"
 
-#: cogs/exp.py:123 cogs/exp.py:164 cogs/utils/scores.py:74
+#: cogs/exp.py:123 cogs/exp.py:164 cogs/utils/scores.py:72
 msgid "Exp points"
 msgstr "Points d'exp"
 
@@ -180,15 +180,15 @@ msgstr "Points d'exp"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Ratio (exp / canards tués)"
 
-#: cogs/exp.py:125 cogs/utils/scores.py:70
+#: cogs/exp.py:125 cogs/utils/scores.py:68
 msgid "Current level"
 msgstr "Niveau actuel"
 
-#: cogs/exp.py:126 cogs/utils/scores.py:72
+#: cogs/exp.py:126 cogs/utils/scores.py:70
 msgid "Shots accuracy"
 msgstr "Précision des tirs"
 
-#: cogs/exp.py:127 cogs/utils/scores.py:73
+#: cogs/exp.py:127 cogs/utils/scores.py:71
 msgid "Weapon fiability"
 msgstr "Fiabilité de l'arme"
 
@@ -221,7 +221,7 @@ msgstr "Objet: munitions AP"
 msgid "Effect : wet"
 msgstr "Effet: mouillé"
 
-#: cogs/exp.py:150 cogs/meta.py:202 cogs/utils/scores.py:80
+#: cogs/exp.py:150 cogs/meta.py:202 cogs/utils/scores.py:78
 msgid ""
 ":warning: Error sending embed, check if the bot have the permission "
 "embed_links and try again !"
@@ -404,7 +404,7 @@ msgstr ""
 #: cogs/exp.py:381
 #, python-brace-format
 msgid ""
-":money_with_wings: You drop a full water bucket on {target}, frocing him to "
+":money_with_wings: You drop a full water bucket on {target}, forcing him to "
 "wait 1 hour for his/her clothes to dry before he/she can return hunting"
 msgstr ""
 ":money_with_wings: Vous jetez un seau d'eau sur {target}, l'obligeant ainsi "
@@ -414,7 +414,7 @@ msgstr ""
 #, python-brace-format
 msgid ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
 msgstr ""
-":ok: l'arme de {target} est sabotée ... Mais il ne sait pas: D (14 exp)!"
+":ok: l'arme de {target} est sabotée ... Mais il ne sait pas :D (14 exp)!"
 
 #: cogs/exp.py:401
 #, python-brace-format
@@ -660,7 +660,7 @@ msgstr ""
 msgid "The setting {pref} is set at {value} on this server."
 msgstr ":ok: le paramètre {pref} est défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:263 cogs/serveradmin.py:300 cogs/serveradmin.py:316
+#: cogs/serveradmin.py:263 cogs/serveradmin.py:301 cogs/serveradmin.py:317
 msgid ""
 ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
 msgstr ""
@@ -676,16 +676,16 @@ msgstr ""
 "Vous contournez la vérification du nombre maximal de canard qui aurait "
 "limité la préférence à {max} car vous êtes propriétaire du bot."
 
-#: cogs/serveradmin.py:284 cogs/serveradmin.py:288 cogs/serveradmin.py:298
+#: cogs/serveradmin.py:284 cogs/serveradmin.py:288 cogs/serveradmin.py:299
 msgid ":x: Incorrect value"
 msgstr ":x: Valeur incorrecte"
 
-#: cogs/serveradmin.py:293
+#: cogs/serveradmin.py:294
 #, python-brace-format
 msgid ":ok: The setting {pref} was set at `{value}` on this server."
 msgstr ":ok: le paramètre {pref} a été défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:311
+#: cogs/serveradmin.py:312
 #, python-brace-format
 msgid ""
 ":ok: The setting {pref} reset to it's defalut value on this server : `{value}"
@@ -694,7 +694,7 @@ msgstr ""
 ":ok: Le paramètre {pref} à été réinitialisé a sa valeur par défaut : `{value}"
 "`"
 
-#: cogs/serveradmin.py:323
+#: cogs/serveradmin.py:324
 msgid ""
 "List of preferences is available on the wiki : https://api-d.com/duckhunt/"
 "index.php/Configuration"
@@ -702,15 +702,15 @@ msgstr ""
 "La liste des préférences est disponible sur le wiki : https://api-d.com/"
 "duckhunt/index.php/Configuration"
 
-#: cogs/serveradmin.py:332 cogs/serveradmin.py:339
+#: cogs/serveradmin.py:333 cogs/serveradmin.py:339
 msgid "Parameter"
 msgstr "Paramètre"
 
-#: cogs/serveradmin.py:332
+#: cogs/serveradmin.py:333
 msgid "Value"
 msgstr "Valeur actuelle"
 
-#: cogs/serveradmin.py:332
+#: cogs/serveradmin.py:333
 msgid "Default value"
 msgstr "Valeur par défaut"
 
@@ -843,7 +843,7 @@ msgstr ""
 
 #: cogs/shoot.py:210
 msgid "Your weapon had been confiscated"
-msgstr "Votre arme à été confisquée"
+msgstr "Votre arme a été confisquée"
 
 #: cogs/shoot.py:213
 msgid "You unstuck your weapon."
@@ -1251,25 +1251,25 @@ msgstr "Un pin's de chasseur : http://tinyurl.com/hqy7fhq"
 msgid "bushes."
 msgstr "des buissons."
 
-#: cogs/utils/ducks.py:119
+#: cogs/utils/ducks.py:121
 #, python-brace-format
 msgid "There is a duck on #{channel}"
 msgstr "Il y a un canard sur #{channel}"
 
-#: cogs/utils/scores.py:52
+#: cogs/utils/scores.py:50
 #, python-brace-format
 msgid "Level of {player} on #{channel}"
 msgstr "Niveau de {player} sur #{channel}"
 
-#: cogs/utils/scores.py:59
+#: cogs/utils/scores.py:57
 msgid "You leveled down!"
 msgstr "Vous perdez en niveau!"
 
-#: cogs/utils/scores.py:62
+#: cogs/utils/scores.py:60
 msgid "You leveled up!"
 msgstr "Vous gagnez en niveau!"
 
-#: cogs/utils/scores.py:71
+#: cogs/utils/scores.py:69
 msgid "Previous level"
 msgstr "Niveau antérieur"
 

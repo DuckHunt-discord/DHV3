@@ -378,7 +378,7 @@ class Exp:
         !shop 16 [target]"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        await comm.message_user(message, _(":money_with_wings: You drop a full water bucket on {target}, frocing him to wait 1 hour for his/her clothes to dry before he/she can return hunting", language).format(**{
+        await comm.message_user(message, _(":money_with_wings: You drop a full water bucket on {target}, forcing him to wait 1 hour for his/her clothes to dry before he/she can return hunting", language).format(**{
             "target": target.name
         }))
         scores.setStat(message.channel, target, "mouille", int(time.time()) + 3600)
