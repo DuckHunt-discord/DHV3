@@ -40,9 +40,13 @@ async def planifie(channel_obj: discord.Channel = None):
                 logger.debug("Non-existant server : " + str(server_))
 
             elif not "channels" in servers[server.id]:
-                # try:bot.send_message(server.default_channel, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758")
-                # except: pass
                 await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
+                try:
+                    await bot.send_message(server, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758 | https://discord.gg/2BksEkV")
+                    await comm.logwithinfos(server.default_channel, log_str="Unconfigured message sent...")
+                except:
+                    await comm.logwithinfos(server.default_channel, log_str="Error sending the unconfigured message to the default channel on the server.")
+
                 pass
             else:
                 for channel_ in servers[server.id]["channels"]:

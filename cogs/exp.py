@@ -155,28 +155,97 @@ class Exp:
     async def top(self, ctx, number_of_scores: int = 10):
         language = prefs.getPref(ctx.message.server, "language")
 
-        if number_of_scores > 200 or number_of_scores < 1:
-            await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
-            return
+        if number_of_scores != 10:
+            if number_of_scores > 200 or number_of_scores < 1:
+                await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
+                return
 
-        x = PrettyTable()
+            x = PrettyTable()
 
-        x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
+            x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
 
-        i = 0
-        for joueur in scores.topScores(ctx.message.channel):
-            i += 1
+            i = 0
+            for joueur in scores.topScores(ctx.message.channel):
+                i += 1
 
-            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
-                joueur["canardsTues"] = "AUCUN !"
-            if joueur["exp"] is None:
-                joueur["exp"] = 0
-            x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
+                if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
+                    joueur["canardsTues"] = "AUCUN !"
+                if joueur["exp"] is None:
+                    joueur["exp"] = 0
+                x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
 
-        await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
-            "channel_name": ctx.message.channel.name,
-            "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
-        }), )
+            await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
+                "channel_name": ctx.message.channel.name,
+                "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
+            }), )
+        else:
+            top_scores = scores.topScores(ctx.message.channel)
+            # \N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is >>|
+            # \N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is |<<
+            reaction = True
+            changed = True
+
+            next_emo = "\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
+            prev_emo = "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
+
+            current_page = 1
+
+            message = await self.bot.send_message(ctx.message.channel, _("Generating topscores for your channel, please wait!", language))
+            await self.bot.add_reaction(message, prev_emo)
+            await self.bot.add_reaction(message, next_emo)
+
+            while reaction:
+                if changed:
+
+                    i = current_page * 10 - 10
+
+                    scores_to_process = scores.topScores(ctx.message.channel)[i:i + 10]
+
+                    if scores_to_process:
+
+                        x = PrettyTable()
+                        x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
+
+                        for joueur in scores_to_process:
+                            i += 1
+                            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
+                                joueur["canardsTues"] = "AUCUN !"
+                            if joueur["exp"] is None:
+                                joueur["exp"] = 0
+                            x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
+
+                        await self.bot.edit_message(message, _(":cocktail: (page {page}) Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
+                            "channel_name": ctx.message.channel.name,
+                            "table"       : x.get_string(sortby=_("Rank", language)),
+                            "page"        : current_page
+                        }))
+                        changed = False
+                    else:
+                        current_page -= 1
+                        await self.bot.send_message(_("There is nothing more...", language))
+
+                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo], message=message)
+
+                if res:
+                    reaction, user = res
+                    emoji = reaction.emoji
+                    if emoji == next_emo:
+                        changed = True
+                        current_page += 1
+                        try:
+                            await self.bot.remove_reaction(message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(_("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                    elif emoji == prev_emo:
+                        if current_page > 1:
+                            changed = True
+                            current_page -= 1
+                        try:
+                            await self.bot.remove_reaction(message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(_("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                else:
+                    reaction = False
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
@@ -192,7 +261,7 @@ class Exp:
     @shop.command(pass_context=True)
     async def list(self, ctx):
         language = prefs.getPref(ctx.message.server, "language")
-        await comm.message_user(ctx.message, _("The list of items is available here : https://api-d.com/duckhunt/index.php/Objets_du_Shop", language))
+        await comm.message_user(ctx.message, _("The list of items is available here : https://api-d.com/duckhunt/index.php/Shop", language))
 
     @shop.command(pass_context=True, name="1")
     @checks.have_exp(7)
