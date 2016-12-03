@@ -155,7 +155,7 @@ class Exp:
     async def top(self, ctx, number_of_scores: int = 10):
         language = prefs.getPref(ctx.message.server, "language")
 
-        if number_of_scores != 10:
+        if number_of_scores != 10 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled"):
             if number_of_scores > 200 or number_of_scores < 1:
                 await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
                 return

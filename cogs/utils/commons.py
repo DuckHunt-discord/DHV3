@@ -50,101 +50,104 @@ def init():
     def bool_(b):
         return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']
 
-
     defaultSettings = {
-        "delete_commands"           : {
+        "delete_commands"              : {
             "value": False,
             "type" : bool_
         },
-        "ducks_per_day"             : {
+        "ducks_per_day"                : {
             "value": 24,
             "type" : int
         },
-        "users_can_find_objects"    : {
+        "interactive_topscores_enabled": {
             "value": True,
             "type" : bool_
         },
-        "chance_to_kill_on_missed"  : {
+        "users_can_find_objects"       : {
+            "value": True,
+            "type" : bool_
+        },
+        "chance_to_kill_on_missed"     : {
             "value": 5,
             "type" : int
         },
-        "pm_most_messages"          : {
+        "pm_most_messages"             : {
             "value": False,
             "type" : bool_
         },
-        "time_before_ducks_leave"   : {
+        "time_before_ducks_leave"      : {
             "value": 11 * 60,
             "type" : int
         },
-        "bang_lag"                  : {
+        "bang_lag"                     : {
             "value": .5,
             "type" : float
         },
-        "exp_won_per_duck_killed"   : {
+        "exp_won_per_duck_killed"      : {
             "value": 10,
             "type" : int
         },
-        "language"                  : {
+        "language"                     : {
             "value": lang,
             "type" : str
         },
-        "randomize_ducks"           : {
+        "randomize_ducks"              : {
             "value": True,
             "type" : bool_
         },
-        "super_ducks_chance"        : {
+        "super_ducks_chance"           : {
             "value": 10,
             "type" : int
         },
-        "super_ducks_minlife"       : {
+        "super_ducks_minlife"          : {
             "value": 3,
             "type" : int
         },
-        "super_ducks_maxlife"       : {
+        "super_ducks_maxlife"          : {
             "value": 7,
             "type" : int
         },
-        "super_ducks_exp_multiplier": {
+        "super_ducks_exp_multiplier"   : {
             "value": 1.10,
             "type" : float
         },
-        "duck_frighten_chance"      : {
+        "duck_frighten_chance"         : {
             "value": 5,
             "type" : int
         },
-        "global_scores"             : {
+        "global_scores"                : {
             "value": False,
             "type" : bool_
         },
-        "clover_min_exp"            : {
+        "clover_min_exp"               : {
             "value": 1,
             "type" : int
         },
-        "clover_max_exp"            : {
+        "clover_max_exp"               : {
             "value": 10,
             "type" : int
         },
-        "randomize_mechanical_ducks": {
+        "randomize_mechanical_ducks"   : {
             "value": 0,
             "type" : int
         },
-        "user_can_give_exp"         : {
+        "user_can_give_exp"            : {
             "value": True,
             "type" : bool_
         },
-        "tax_on_user_give"          : {
+        "tax_on_user_give"             : {
             "value": 0,
             "type" : int
         },
-        "prefix"                    : {
+        "prefix"                       : {
             "value": "!",
             "type" : str
         },
-        "announce_level_up"         : {
+        "announce_level_up"            : {
             "value": True,
             "type" : bool_
         },
-        "killed_mentions"           : {
+        "killed_mentions"              : {
             "value": True,
             "type" : bool_
         }
