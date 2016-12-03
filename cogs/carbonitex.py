@@ -11,7 +11,7 @@ DISCORD_BOTS_API = 'https://bots.discord.pw/api'
 
 
 class Carbonitex:
-    """Cog for updating  bots.discord.pw bot information."""
+    """Cog for updating bots.discord.pw bot information."""
 
     def __init__(self, bot):
         self.bot = bot

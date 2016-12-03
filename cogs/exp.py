@@ -222,9 +222,9 @@ class Exp:
                         changed = False
                     else:
                         current_page -= 1
-                        await self.bot.send_message(_("There is nothing more...", language))
+                        await self.bot.send_message(message.channel, _("There is nothing more...", language))
 
-                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo], message=message)
+                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo], message=message, timeout=1200)
 
                 if res:
                     reaction, user = res
@@ -246,6 +246,8 @@ class Exp:
                             await self.bot.send_message(_("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 else:
                     reaction = False
+                    await self.bot.edit_message(message, _("use `!top` to view topscores !", language))
+
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
