@@ -157,7 +157,6 @@ async def spawn_duck(duck):
     except:
         pass
     commons.ducks_spawned.append(duck)
-    logger.debug(duck)
 
 
 async def del_channel(channel):

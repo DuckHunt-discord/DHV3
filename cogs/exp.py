@@ -235,7 +235,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(_("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                     elif emoji == prev_emo:
                         if current_page > 1:
                             changed = True
@@ -243,7 +243,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(_("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 else:
                     reaction = False
                     await self.bot.edit_message(message, _("use `!top` to view topscores !", language))
