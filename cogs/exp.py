@@ -197,32 +197,56 @@ class Exp:
             while reaction:
                 if changed:
 
+
                     i = current_page * 10 - 10
 
                     scores_to_process = scores.topScores(ctx.message.channel)[i:i + 10]
 
                     if scores_to_process:
+                        embed = discord.Embed(description="Page #{i}".format(i=current_page))
+                        embed.title = _(":cocktail: Best scores for #{channel_name} :cocktail:", language).format(**{
+                            "channel_name": ctx.message.channel.name,
+                        })
+                        embed.url = 'https://api-d.com/duckhunt/'
+                        embed.colour = discord.Colour.green()
+                        # embed.timestamp = datetime.datetime.now()
+                        embed.url = 'https://api-d.com/duckhunt/'  # TODO: get the webinterface url and add it here inplace
 
-                        x = PrettyTable()
-                        x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
+                        players_list = ""
+                        exp_list = ""
+                        ducks_killed_list = ""
+
 
                         for joueur in scores_to_process:
                             i += 1
-                            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
-                                joueur["canardsTues"] = "AUCUN !"
+                            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False) or joueur["canardsTues"] is None:
+                                joueur["canardsTues"] = _("AUCUN !", language)
                             if joueur["exp"] is None:
                                 joueur["exp"] = 0
-                            x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
 
-                        await self.bot.edit_message(message, _(":cocktail: (page {page}) Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
-                            "channel_name": ctx.message.channel.name,
-                            "table"       : x.get_string(sortby=_("Rank", language)),
-                            "page"        : current_page
-                        }))
+                            member = message.server.get_member(joueur["id_"])
+
+                            mention = member.mention if member else joueur["name"][:10]
+                            # mention = mention if len(mention) < 20 else joueur["name"]
+                            mention = mention if member and len(member.display_name) < 10 else joueur["name"][:10]
+
+                            players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
+                            exp_list += str(joueur["exp"]) + "\n\n"
+                            ducks_killed_list += str(joueur["canardsTues"]) + "\n\n"
+
+                        embed.add_field(name=_("Player", language), value=players_list, inline=True)
+                        embed.add_field(name=_("Experience points", language), value=exp_list, inline=True)
+                        embed.add_field(name=_("Number of ducks killed", language), value=ducks_killed_list, inline=True)
+
+                        try:
+                            await self.bot.edit_message(message, ":duck:", embed=embed)
+                        except discord.errors.Forbidden:
+                            await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+
                         changed = False
                     else:
                         current_page -= 1
-                        await self.bot.send_message(message.channel, _("There is nothing more...", language))
+                        await self.bot.edit_message(message, _("There is nothing more...", language))
 
                 res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo], message=message, timeout=1200)
 

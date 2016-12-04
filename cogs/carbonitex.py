@@ -36,9 +36,11 @@ class Carbonitex:
             commons.logger.info('DBots statistics returned {0.status} for {1}'.format(resp, payload))
 
     async def on_server_join(self, server):
+        commons.logger.info("## New server {name} + {members} members ##".format(name=server.name, members=server.member_count))
         await self.update()
 
     async def on_server_remove(self, server):
+        commons.logger.info("## Server removed {name} - {members} members ##".format(name=server.name, members=server.member_count))
         await self.update()
 
     async def on_ready(self):

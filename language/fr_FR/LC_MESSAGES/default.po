@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
-"POT-Creation-Date: 2016-12-03 23:43+0100\n"
-"PO-Revision-Date: 2016-12-03 23:43+0100\n"
+"POT-Creation-Date: 2016-12-04 00:25+0100\n"
+"PO-Revision-Date: 2016-12-04 00:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -152,7 +152,7 @@ msgstr "Statistiques de {player} sur #{channel}"
 msgid "No duck killed"
 msgstr "Aucun canard tué"
 
-#: cogs/exp.py:118 cogs/exp.py:165 cogs/exp.py:207
+#: cogs/exp.py:118 cogs/exp.py:165
 msgid "Ducks killed"
 msgstr "Canards tués"
 
@@ -172,7 +172,7 @@ msgstr "Meilleur temps de tir"
 msgid "Bullets in current charger"
 msgstr "Balles dans le chargeur actuel"
 
-#: cogs/exp.py:123 cogs/exp.py:165 cogs/exp.py:207 cogs/utils/scores.py:72
+#: cogs/exp.py:123 cogs/exp.py:165 cogs/utils/scores.py:72
 msgid "Exp points"
 msgstr "Points d'exp"
 
@@ -221,7 +221,7 @@ msgstr "Objet: munitions AP"
 msgid "Effect : wet"
 msgstr "Effet: mouillé"
 
-#: cogs/exp.py:150 cogs/meta.py:202 cogs/utils/scores.py:78
+#: cogs/exp.py:150 cogs/exp.py:243 cogs/meta.py:202 cogs/utils/scores.py:78
 msgid ""
 ":warning: Error sending embed, check if the bot have the permission "
 "embed_links and try again !"
@@ -237,11 +237,11 @@ msgstr ""
 ":x: Le nombre maximal de scores qui peuvent êtres affichés dans le topscores "
 "est de 200"
 
-#: cogs/exp.py:165 cogs/exp.py:179 cogs/exp.py:207 cogs/exp.py:219
+#: cogs/exp.py:165 cogs/exp.py:179
 msgid "Rank"
 msgstr "Rang"
 
-#: cogs/exp.py:165 cogs/exp.py:207
+#: cogs/exp.py:165
 msgid "Nickname"
 msgstr "Pseudo"
 
@@ -258,20 +258,28 @@ msgstr ""
 msgid "Generating topscores for your channel, please wait!"
 msgstr "Génération des meilleurs scores pour votre canal, veuillez patienter !"
 
-#: cogs/exp.py:217
+#: cogs/exp.py:207
 #, python-brace-format
-msgid ""
-":cocktail: (page {page}) Best scores for #{channel_name} : :cocktail:\n"
-"```{table}```"
-msgstr ""
-":cocktail: Meilleurs scores pour #{channel_name} (page {page}) : :cocktail:\n"
-"```{table}```"
+msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
+msgstr ":cocktail: Meilleurs scores pour #{channel_name} :cocktail:"
 
-#: cogs/exp.py:225
+#: cogs/exp.py:235
+msgid "Player"
+msgstr "Joueur"
+
+#: cogs/exp.py:236
+msgid "Experience points"
+msgstr "Points d'expérience"
+
+#: cogs/exp.py:237
+msgid "Number of ducks killed"
+msgstr "Nombre de canards tués"
+
+#: cogs/exp.py:248
 msgid "There is nothing more..."
 msgstr "Il n’y a rien de plus..."
 
-#: cogs/exp.py:238 cogs/exp.py:246
+#: cogs/exp.py:261 cogs/exp.py:269
 msgid ""
 "I don't have the `manage_messages` permissions, I can't remove reactions. "
 "Warn an admin for me, please ;)"
@@ -279,18 +287,18 @@ msgstr ""
 "Je n’ai pas les autorisations de `manage_messages`, je ne peux pas supprimer "
 "les réactions. Avertissez un admin pour moi, s’il vous plaît  ;)"
 
-#: cogs/exp.py:249
+#: cogs/exp.py:272
 msgid "use `!top` to view topscores !"
 msgstr "Utilisez '!top' pour afficher les meilleurs scores !"
 
-#: cogs/exp.py:261
+#: cogs/exp.py:284
 msgid ""
 ":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
 msgstr ""
 ":x: Syntaxe de commande incorrecte : `!shop [list/numero de l'item] "
 "[argument si nécéssaire]`"
 
-#: cogs/exp.py:266
+#: cogs/exp.py:289
 msgid ""
 "The list of items is available here : https://api-d.com/duckhunt/index.php/"
 "Shop"
@@ -298,28 +306,28 @@ msgstr ""
 "La liste des objets est disponible ici : https://api-d.com/duckhunt/index."
 "php/Shop"
 
-#: cogs/exp.py:278
+#: cogs/exp.py:301
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
 msgstr ""
 ":money_with_wings: Vous ajoutez une balle à votre arme pour 7 points "
 "d'experience"
 
-#: cogs/exp.py:283
+#: cogs/exp.py:306
 msgid ":champagne: Your charger is full !"
 msgstr ":champagne: Votre chargeur est plein!"
 
-#: cogs/exp.py:293
+#: cogs/exp.py:316
 msgid ""
 ":money_with_wings: You add a charger to your backpack for 13 exp points."
 msgstr ""
 ":money_with_wings: Vous ajoutez un chargeur dans votre réserve pour 13 "
 "points d'experience"
 
-#: cogs/exp.py:298
+#: cogs/exp.py:321
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Vous avez assez de chargeurs!"
 
-#: cogs/exp.py:308
+#: cogs/exp.py:331
 msgid ""
 ":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
@@ -327,11 +335,11 @@ msgstr ""
 ":money_with_wings: Vous achetez des munitions AP, qui doubleront vos dégats "
 "pendant une journée"
 
-#: cogs/exp.py:313
+#: cogs/exp.py:336
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Vous avez largement assez de munitions AP"
 
-#: cogs/exp.py:323
+#: cogs/exp.py:346
 msgid ""
 ":money_with_wings: You purchase explosive ammo for your weapon. For the next "
 "24 hours, you will deal triple damage to ducks."
@@ -339,16 +347,16 @@ msgstr ""
 ":money_with_wings: Vous achetez des munitions explosives, qui tripleront vos "
 "dégats pendant une journée"
 
-#: cogs/exp.py:328
+#: cogs/exp.py:351
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Vous avez largement assez de munitions explosives"
 
-#: cogs/exp.py:338
+#: cogs/exp.py:361
 msgid ":money_with_wings: You take your weapon back for 40 exp points"
 msgstr ""
 ":money_with_wings: Vous récupérez votre arme pour 40 points d'experience"
 
-#: cogs/exp.py:343
+#: cogs/exp.py:366
 msgid ""
 ":champagne: You haven't killed anyone today, you have your weapon, what do "
 "you want to buy ? :p"
@@ -356,7 +364,7 @@ msgstr ""
 ":champagne: Vous n'avez tué personne aujourd'hui, pourquoi voulez vous "
 "récupérer votre arme ? :p"
 
-#: cogs/exp.py:353
+#: cogs/exp.py:376
 msgid ""
 ":money_with_wings: You add grease in your weapon to reduce jamming risks by "
 "50 percent for a day, for only 8 exp points."
@@ -365,12 +373,12 @@ msgstr ""
 "ses chances d'enrayement de 50% pendant 24h ! Cela vous coûte 8 points "
 "d'expérience"
 
-#: cogs/exp.py:358
+#: cogs/exp.py:381
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, no need for more grease"
 msgstr ":champagne: Votre arme est déjà bien lubrifiée!"
 
-#: cogs/exp.py:372
+#: cogs/exp.py:395
 msgid ""
 ":money_with_wings: You add an infrared detector to your weapon, that will "
 "prevent any waste of ammo for a day. Cost : 15 exp points."
@@ -378,13 +386,13 @@ msgstr ""
 ":money_with_wings: Vous ajoutez un détecteur infrarouge à votre arme pour 15 "
 "exp. Vous ne pouvez plus tirer lorsque aucun canard n'est présent."
 
-#: cogs/exp.py:377
+#: cogs/exp.py:400
 msgid ":champagne: You do have an infrared detector on your weapon, right ?"
 msgstr ""
 ":champagne: Vous ne pouvez pas mettre deux détecteurs infrarouges sur votre "
 "arme!"
 
-#: cogs/exp.py:387
+#: cogs/exp.py:410
 msgid ""
 ":money_with_wings: You add a silencer to your weapon, no duck will ever be "
 "frightened by one of your shots for a day. Cost : 5 exp points, what a good "
@@ -393,11 +401,11 @@ msgstr ""
 ":money_with_wings: Vous ajoutez un silencieux à votre arme pour 5 exp. Vos "
 "tirs n'effrayent plus les canards."
 
-#: cogs/exp.py:392
+#: cogs/exp.py:415
 msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ":champagne: Vous avez déjà un silencieux monté sur votre arme"
 
-#: cogs/exp.py:403
+#: cogs/exp.py:426
 #, python-brace-format
 msgid ""
 ":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
@@ -406,7 +414,7 @@ msgstr ""
 ":money_with_wings: Vous achetez un trefle à 4 feuilles, qui vous donnera "
 "{exp} points d'exp supplémentaires à chaque canard tué pendant 24 heures!"
 
-#: cogs/exp.py:411
+#: cogs/exp.py:434
 msgid ""
 ":champagne: You're too lucky, but I don't have any clover left for you "
 "today :'(. Too much luck, maybe ??"
@@ -414,7 +422,7 @@ msgstr ""
 ":champagne: Je n'ai plus de trèfles pour vous aujourd'hui... Vous êtes peut-"
 "être trop chanceux ?"
 
-#: cogs/exp.py:425
+#: cogs/exp.py:448
 msgid ""
 ":money_with_wings: You have some dry clothes on you now. You looks "
 "beautiful ! "
@@ -422,7 +430,7 @@ msgstr ""
 ":money_with_wings: Vous vous changez et repartez chasser avec des vétements "
 "secs, pour seulement 7 exp"
 
-#: cogs/exp.py:431
+#: cogs/exp.py:454
 msgid ""
 ":money_with_wings: You brought brand new clothes, for nothing but the fact "
 "that you are mostly swag now. :cool:"
@@ -430,7 +438,7 @@ msgstr ""
 ":money_with_wings: Vous avez acheté de nouveaux vêtements de marque, pour "
 "rien, à part le fait que vous ayez l'air swag maintenant. :cool:"
 
-#: cogs/exp.py:452
+#: cogs/exp.py:475
 #, python-brace-format
 msgid ""
 ":money_with_wings: You drop a full water bucket on {target}, forcing him to "
@@ -439,18 +447,18 @@ msgstr ""
 ":money_with_wings: Vous jetez un seau d'eau sur {target}, l'obligeant ainsi "
 "à attendre 1 heure avant de retourner chasser"
 
-#: cogs/exp.py:466
+#: cogs/exp.py:489
 #, python-brace-format
 msgid ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
 msgstr ""
 ":ok: l'arme de {target} est sabotée ... Mais il ne sait pas :D (14 exp)!"
 
-#: cogs/exp.py:472
+#: cogs/exp.py:495
 #, python-brace-format
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: L'arme de {target} est déjà sabotée"
 
-#: cogs/exp.py:484
+#: cogs/exp.py:507
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
 "get killed, you will earn half the level of the killer in exp"
@@ -458,11 +466,11 @@ msgstr ""
 ":money_with_wings: Vous souscrivez à une assurance vie pour 10 exp, qui dure "
 "une semaine"
 
-#: cogs/exp.py:489
+#: cogs/exp.py:512
 msgid ":money_with_wings: You are already insured."
 msgstr ":money_with_wings: Vous etes déjà assuré !"
 
-#: cogs/exp.py:502
+#: cogs/exp.py:525
 #, python-brace-format
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
@@ -471,7 +479,7 @@ msgstr ""
 ":money_with_wings: Un canard apparaîtra dans les 10 prochaines minutes sur "
 "le canal, grâce à l'appeau de {mention}. Il a payé 8 exp!"
 
-#: cogs/exp.py:526
+#: cogs/exp.py:549
 #, python-brace-format
 msgid ""
 ":money_with_wings: You will be warned when the next duck on #{channel_name} "
@@ -480,7 +488,7 @@ msgstr ""
 ":money_with_wings: Vous serez prévenu quand le prochain canard apparaîtra "
 "sur #{channel_name}"
 
-#: cogs/exp.py:545
+#: cogs/exp.py:568
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
 "That's bad, but so funny !"
@@ -488,7 +496,7 @@ msgstr ""
 ":money_with_wings: Vous préparez un canard mécanique sur le chan pour 50 "
 "points d'experience. C'est méchant, mais tellement drôle !"
 
-#: cogs/exp.py:550
+#: cogs/exp.py:573
 msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 
@@ -1301,6 +1309,17 @@ msgstr "Vous gagnez en niveau!"
 #: cogs/utils/scores.py:69
 msgid "Previous level"
 msgstr "Niveau antérieur"
+
+#~ msgid "exp"
+#~ msgstr "Points d'exp"
+
+#~ msgid ""
+#~ ":cocktail: (page {page}) Best scores for #{channel_name} : :cocktail:\n"
+#~ "```{table}```"
+#~ msgstr ""
+#~ ":cocktail: Meilleurs scores pour #{channel_name} (page {page}) : :"
+#~ "cocktail:\n"
+#~ "```{table}```"
 
 #~ msgid "%H:%M:%S le %d/%m"
 #~ msgstr "%H:%M:%S le %d/%m"
