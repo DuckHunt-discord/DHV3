@@ -41,7 +41,7 @@ def setPref(server, pref, value=None, force=False):
         if not "settings" in servers[server.id]:
             return True
         if pref in servers[server.id]["settings"]:
-            servers[server.id]["settings"].remove(pref)
+            servers[server.id]["settings"].pop(pref)
 
     JSONsaveToDisk(servers, "channels.json")
     return True

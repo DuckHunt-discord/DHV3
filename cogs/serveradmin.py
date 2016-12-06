@@ -115,7 +115,7 @@ class ServerAdmin:
         Remove the current channel from the server
         """
         await ducks.del_channel(ctx.message.channel)
-        await comm.message_user(ctx.message, ":ok: Channel deleted")
+        await comm.message_user(ctx.message, _(":ok: Channel deleted", prefs.getPref(ctx.message.server, "language")))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -132,7 +132,7 @@ class ServerAdmin:
             "server_name": ctx.message.server.name,
             "server_id"  : ctx.message.server.id
         }))
-        await comm.message_user(ctx.message, _(":robot: OK, {name}  was set as an admin on the server !", language).format(**{
+        await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
             "name": target.name
         }))
 
@@ -308,7 +308,7 @@ class ServerAdmin:
         language = prefs.getPref(ctx.message.server, "language")
 
         if pref in commons.defaultSettings.keys():
-            await prefs.setPref(ctx.message.server, pref)
+            prefs.setPref(ctx.message.server, pref)
             await comm.message_user(ctx.message, _(":ok: The setting {pref} reset to it's defalut value on this server : `{value}` ", language).format(**{
                 "value": prefs.getPref(ctx.message.server, pref),
                 "pref" : pref

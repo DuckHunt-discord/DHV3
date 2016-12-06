@@ -63,6 +63,10 @@ def init():
             "value": True,
             "type" : bool_
         },
+        "mention_in_topscores"         : {
+            "value": False,
+            "type" : bool_
+        },
         "users_can_find_objects"       : {
             "value": True,
             "type" : bool_

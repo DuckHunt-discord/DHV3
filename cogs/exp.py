@@ -155,7 +155,7 @@ class Exp:
     async def top(self, ctx, number_of_scores: int = 10):
         language = prefs.getPref(ctx.message.server, "language")
 
-        if number_of_scores != 10 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled"):
+        if number_of_scores != 10 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled"):  # TODO: check manage messages + embed_links permissions
             if number_of_scores > 200 or number_of_scores < 1:
                 await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
                 return
@@ -185,12 +185,14 @@ class Exp:
             reaction = True
             changed = True
 
-            next_emo = "\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
-            prev_emo = "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
+            next_emo = "\N{BLACK RIGHT-POINTING TRIANGLE}"
+            prev_emo = "\N{BLACK LEFT-POINTING TRIANGLE}"
+            first_page_emo = "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
 
             current_page = 1
 
             message = await self.bot.send_message(ctx.message.channel, _("Generating topscores for your channel, please wait!", language))
+            await self.bot.add_reaction(message, first_page_emo)
             await self.bot.add_reaction(message, prev_emo)
             await self.bot.add_reaction(message, next_emo)
 
@@ -226,9 +228,14 @@ class Exp:
 
                             member = message.server.get_member(joueur["id_"])
 
-                            mention = member.mention if member else joueur["name"][:10]
-                            # mention = mention if len(mention) < 20 else joueur["name"]
-                            mention = mention if member and len(member.display_name) < 10 else joueur["name"][:10]
+                            if prefs.getPref(ctx.message.server, "mention_in_topscores"):
+
+                                mention = member.mention if member else joueur["name"][:10]
+
+                                # mention = mention if len(mention) < 20 else joueur["name"]
+                                mention = mention if member and len(member.display_name) < 10 else joueur["name"][:10]
+                            else:
+                                mention = joueur["name"][:10]
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
                             exp_list += str(joueur["exp"]) + "\n\n"
@@ -248,7 +255,7 @@ class Exp:
                         current_page -= 1
                         await self.bot.edit_message(message, _("There is nothing more...", language))
 
-                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo], message=message, timeout=1200)
+                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=message, timeout=1200)
 
                 if res:
                     reaction, user = res
@@ -268,9 +275,17 @@ class Exp:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
                             await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                    elif emoji == first_page_emo:
+                        if current_page > 1:
+                            changed = True
+                            current_page = 1
+                        try:
+                            await self.bot.remove_reaction(message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 else:
                     reaction = False
-                    await self.bot.edit_message(message, _("use `!top` to view topscores !", language))
+                    await self.bot.edit_message(message, _("use `!top` to view topscores !", language), embed=None)
 
 
     @commands.group(pass_context=True)

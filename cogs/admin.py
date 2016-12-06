@@ -163,7 +163,7 @@ class Admin:
             try:
                 await self.bot.send_message(channel, bc)
             except:
-                await comm.logwithinfos_ctx(ctx, "Error broadcasting to " + channel)
+                await comm.logwithinfos_ctx(ctx, "Error broadcasting to " + str(channel.name))
                 pass
         await comm.logwithinfos_ctx(ctx, "Broadcast ended")
         await comm.message_user(ctx.message, _("Broadcast finished", language))
