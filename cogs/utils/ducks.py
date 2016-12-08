@@ -122,7 +122,7 @@ async def spawn_duck(duck):
             for playerid in servers[duck["channel"].server.id]["detecteur"][duck["channel"].id]:
                 player = discord.utils.get(duck["channel"].server.members, id=playerid)
                 try:
-                    await bot.send_message(player, _("There is a duck on #{channel}", prefs.getPref(duck["channel"].server, "lang")).format(**{
+                    await bot.send_message(player, _("There is a duck on #{channel}", prefs.getPref(duck["channel"].server, "language")).format(**{
                         "channel": duck["channel"].name
                     }))
                     await comm.logwithinfos(duck["channel"], player, "Sending a duck notification")
