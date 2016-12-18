@@ -23,7 +23,7 @@ Ouvrez une issue !
 
 # Des badges ?
 
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/44fdd1f721e5479881d3b4a98be2654a/badge.svg)](https://www.quantifiedcode.com/app/project/44fdd1f721e5479881d3b4a98be2654a)
+[![Dependency Status](https://gemnasium.com/badges/github.com/DuckHunt-discord/DHV2.svg)](https://gemnasium.com/github.com/DuckHunt-discord/DHV2)
 
 # Licence
 
