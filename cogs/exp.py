@@ -285,7 +285,10 @@ class Exp:
                             await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 else:
                     reaction = False
-                    await self.bot.edit_message(message, _("use `!top` to view topscores !", language), embed=None)
+                    try:
+                        await self.bot.delete_message(message)
+                    except:
+                        pass
 
 
     @commands.group(pass_context=True)

@@ -1,10 +1,7 @@
-dataset
+aiohttp==1.1.5
+dataset==0.7.1
 git+https://github.com/Rapptz/discord.py@master#egg=discord.py[voice]
-lxml
-requests
-prettytable
-psutil
-aiohttp
-cchardet
-aiodns
-kyoukai
+Kyoukai==1.9.2.1
+prettytable==0.7.2
+psutil==5.0.0
+requests==2.10.0

@@ -9,7 +9,7 @@ import time
 
 import discord
 
-from cogs.utils import comm, commons, prefs
+from cogs.utils import comm, commons, prefs, scores
 from cogs.utils.comm import logwithinfos
 from cogs.utils.prefs import getPref
 from .commons import _
@@ -34,10 +34,12 @@ async def planifie(channel_obj: discord.Channel = None):
         now = time.time()
         thisDay = now - (now % 86400)
         servers = prefs.JSONloadFromDisk("channels.json", default="{}")
-        for server_ in servers.keys():
+        for server_ in list(servers.keys()):
             server = bot.get_server(str(server_))
             if not server:
                 logger.debug("Non-existant server : " + str(server_))
+                servers.pop(server_)
+                scores.delServerTables(id=server_)
 
             elif not "channels" in servers[server.id]:
                 await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
@@ -67,6 +69,7 @@ async def planifie(channel_obj: discord.Channel = None):
                     else:
                         pass
         commons.ducks_planned = planification_  # {"channel":[time objects]}
+        prefs.JSONsaveToDisk(servers, "channels.json")
 
     else:
         templist = []

@@ -109,6 +109,14 @@ def getStat(channel, player, stat, default=0):
 
 def topScores(channel, stat="exp"):
     table = getChannelTable(channel)
+    players_list = []
+    for player in table.all():
+        if ((not "canardsTues" in player) or (player["canardsTues"] == 0) or player["canardsTues"] is None) and (not "exp" in player) or (player["exp"] == 0 or player["exp"] is None):
+            pass
+        else:
+            # print(str(player["name"]) + " | " + str(player["exp"]) + "|" +  str(player["canardsTues"]))
+            players_list.append(player)
+
 
     def defaultInt(s):
         try:
@@ -121,7 +129,7 @@ def topScores(channel, stat="exp"):
             return 0
 
     try:
-        return sorted(table.all(), key=lambda k: defaultInt(k[stat]), reverse=True)  # Retourne l'ensemble des joueurs dans une liste par stat
+        return sorted(players_list, key=lambda k: defaultInt(k[stat]), reverse=True)  # Retourne l'ensemble des joueurs dans une liste par stat
     except:
         return []
 
@@ -174,10 +182,14 @@ def getPlayerLevelWithExp(exp):
     return level
 
 
-def delServerTables(server):
+def delServerTables(server=None, id=None):
+    if not id:
+        id = str(server.id)
+
     for table_name in db.tables:
-        table_name.split("-")
-        if str(table_name[0]) == str(server.id):
+        table_name_ = table_name.split("-")
+        if str(table_name_[0]) == str(id):
+            print("Deleting table " + str(table_name))
             table_ = db.load_table(table_name=table_name)
             table_.drop()
 
