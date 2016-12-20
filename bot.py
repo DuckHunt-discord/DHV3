@@ -195,9 +195,11 @@ if __name__ == '__main__':
     bot.bots_key = credentials['bots_key']
     ## POST INIT IMPORTS ##
     from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
+    from cogs.utils.analytics import analytics_loop
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
     import api.api as api
+
 
 
 
@@ -208,6 +210,8 @@ if __name__ == '__main__':
         except Exception as e:
             logger.exception('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
     bot.loop.create_task(mainloop())
+    bot.loop.create_task(analytics_loop())
+
     # noinspection PyBroadException
     try:
 

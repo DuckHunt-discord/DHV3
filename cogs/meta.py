@@ -171,7 +171,7 @@ class Meta:
         delta = now - self.bot.uptime
         uptime = delta.total_seconds()
 
-        embed.add_field(name=_("Number of activeted channels", language), value=str(len(commons.ducks_planned)))
+        embed.add_field(name=_("Number of activated channels", language), value=str(len(commons.ducks_planned)))
         embed.add_field(name=_("Number of servers", language), value=str(serveurs))
         embed.add_field(name=_("Number of french servers", language), value=str(servsFr))
         embed.add_field(name=_("Number of english servers", language), value=str(servsEn))
