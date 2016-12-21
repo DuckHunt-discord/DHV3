@@ -93,9 +93,9 @@ async def on_command(command, ctx):
     await comm.logwithinfos_message(ctx.message, str(command))
     if prefs.getPref(ctx.message.server, "delete_commands"):
         try:
-            bot.delete_message(ctx.message)
+            await bot.delete_message(ctx.message)
         except discord.Forbidden:
-            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
 
     # message = ctx.message
     # destination = None
