@@ -30,11 +30,19 @@ def setPref(server, pref, value=None, force=False):
             servers[server.id]["settings"] = {}
         try:
             # print(commons.defaultSettings[pref]["type"](value))
+            if "min" in commons.defaultSettings[pref].keys():
+                if commons.defaultSettings[pref]["type"](value) < commons.defaultSettings[pref]["min"]:
+                    return False
+
+            if "max" in commons.defaultSettings[pref].keys():
+                if commons.defaultSettings[pref]["type"](value) > commons.defaultSettings[pref]["max"]:
+                    return False
+
             servers[server.id]["settings"][pref] = commons.defaultSettings[pref]["type"](value)
+
         except ValueError:
             if force:
                 servers[server.id]["settings"][pref] = value
-                return True
             else:
                 return False
     else:

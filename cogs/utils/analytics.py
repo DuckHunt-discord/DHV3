@@ -85,22 +85,29 @@ async def update_ducks_dest():
 
     py.plot([go.Pie(labels=labels,values=values)], filename="Ducks Dest",fileopt="overwrite", auto_open=False)
 
+async def update_ducks(ducks_graph):
+    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+    y = len(commons.ducks_spawned)
+    ducks_graph.write(dict(x=x, y=y))
 
 async def analytics_loop():
     try:
         await commons.bot.wait_until_ready()
         await asyncio.sleep(120) # Wait for the cache to be populated, plus don't spam the plotly api if we restart frequently
         commons.logger.debug("[analytics] Creating graphs")
-        mem_graph = await create_stream("mem_used", "Memory used in mb")
+        mem_graph = await create_stream("mem_used", "Memory used in mb", mode="append")
         activated_channels_graph = await create_stream("active_channels", "Channels activated", mode="extend")
         servers_graph = await create_stream("connected_servers", "Number of servers seen by the bot", mode="extend")
         users_graph = await create_stream("number_users", "Number of users", mode="extend")
+        ducks_graph = await create_stream("numbver_ducks", "Number of ducks spaned")
+
         commons.logger.debug("[analytics] HEARTBEATs STARTED")
         await update_servers(servers_graph)
         await update_channels(activated_channels_graph)
         await update_memory(mem_graph)
         await update_users(users_graph)
         await update_ducks_dest()
+        await update_ducks(ducks_graph)
 
         i = 0
         while True:
@@ -123,6 +130,7 @@ async def analytics_loop():
 
             if i % 10 == 0:
                 await update_users(users_graph)
+                await update_ducks(ducks_graph)
 
             await asyncio.sleep(60)
     except:

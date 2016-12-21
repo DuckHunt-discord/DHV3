@@ -75,6 +75,8 @@ def init():
             "type" : bool_
         },
         "chance_to_kill_on_missed"     : {
+            "min"  : 0,
+            "max" : 100,
             "value": 5,
             "type" : int
         },
@@ -83,14 +85,20 @@ def init():
             "type" : bool_
         },
         "time_before_ducks_leave"      : {
+            "min"  : 60,
+            "max" : 2 * 60 * 60,
             "value": 11 * 60,
             "type" : int
         },
         "bang_lag"                     : {
+            "min"  : 0,
+            "max" : 10,
             "value": .5,
             "type" : float
         },
         "exp_won_per_duck_killed"      : {
+            "min"  : 1,
+            "max" : 500,
             "value": 10,
             "type" : int
         },
@@ -103,22 +111,32 @@ def init():
             "type" : bool_
         },
         "super_ducks_chance"           : {
+            "min"  : 0,
+            "max" : 100,
             "value": 10,
             "type" : int
         },
         "super_ducks_minlife"          : {
+            "min"  : 1,
+            "max" : 50,
             "value": 3,
             "type" : int
         },
         "super_ducks_maxlife"          : {
+            "min"  : 2,
+            "max" : 51,
             "value": 7,
             "type" : int
         },
         "super_ducks_exp_multiplier"   : {
+            "min"  : 0,
+            "max" : 10,
             "value": 1.10,
             "type" : float
         },
         "duck_frighten_chance"         : {
+            "min"  : 0,
+            "max" : 100,
             "value": 5,
             "type" : int
         },
@@ -127,14 +145,20 @@ def init():
             "type" : bool_
         },
         "clover_min_exp"               : {
+            "min"  : 0,
+            "max" : 500,
             "value": 1,
             "type" : int
         },
         "clover_max_exp"               : {
+            "min"  : 0,
+            "max" : 500,
             "value": 10,
             "type" : int
         },
         "randomize_mechanical_ducks"   : {
+            "min"  : 0,
+            "max" : 3,
             "value": 0,
             "type" : int
         },
@@ -143,6 +167,8 @@ def init():
             "type" : bool_
         },
         "tax_on_user_give"             : {
+            "min"  : 0,
+            "max" : 100,
             "value": 0,
             "type" : int
         },
