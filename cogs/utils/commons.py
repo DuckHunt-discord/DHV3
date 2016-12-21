@@ -17,8 +17,11 @@ def init():
 
     # Stats
 
-    global number_messages
+    global number_messages, n_ducks_killed, n_ducks_flew, n_ducks_spawned
     number_messages = 0
+    n_ducks_killed = 0
+    n_ducks_flew = 0
+    n_ducks_spawned = 0
 
     # Settings, config & translation
 

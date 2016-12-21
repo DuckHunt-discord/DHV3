@@ -78,6 +78,14 @@ async def update_users(users_graph):
     users_graph.write(dict(x=x, y=y))
     #commons.logger.debug("<3 HEARTBEAT USERS <3")
 
+async def update_ducks_dest():
+    labels=['Ducks killed','Ducks bored']
+
+    values=[commons.n_ducks_killed,commons.n_ducks_flew]
+
+    py.plot([go.Pie(labels=labels,values=values)], filename="Ducks Dest",fileopt="overwrite", auto_open=False)
+
+
 async def analytics_loop():
     try:
         await commons.bot.wait_until_ready()
@@ -92,6 +100,7 @@ async def analytics_loop():
         await update_channels(activated_channels_graph)
         await update_memory(mem_graph)
         await update_users(users_graph)
+        await update_ducks_dest()
 
         i = 0
         while True:
@@ -104,6 +113,7 @@ async def analytics_loop():
             ## MEM GRAPH UPDATE
             if i % 60 == 0:
                 await update_servers(servers_graph)
+                await update_ducks_dest()
 
             if i % 30 == 0:
                 await update_channels(activated_channels_graph)

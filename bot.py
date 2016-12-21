@@ -172,6 +172,7 @@ async def mainloop():
                         pass
                     try:
                         commons.ducks_spawned.remove(canard)
+                        commons.n_ducks_flew += 1
                     except:
                         logger.warning("Oops, error when removing duck : " + str(canard))
 

@@ -109,6 +109,7 @@ class Shoot:
         if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(message.channel, message.author, "silencieux", default=0) < int(time.time()):  # Duck frightened
             try:
                 commons.ducks_spawned.remove(current_duck)
+                commons.n_ducks_flew += 1
                 scores.addToStat(message.channel, message.author, "exp", -1)
                 await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]", language))
             except ValueError:
@@ -159,6 +160,7 @@ class Shoot:
         if current_duck["SCvie"] <= 0:  # Duck killed
             try:
                 commons.ducks_spawned.remove(current_duck)
+                commons.n_ducks_killed += 1
             except ValueError:
                 await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [exp -1]", language))
                 scores.addToStat(message.channel, message.author, "exp", -1)

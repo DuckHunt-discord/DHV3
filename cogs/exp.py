@@ -71,7 +71,11 @@ class Exp:
                     taxes = amount * (prefs.getPref(message.server, "tax_on_user_give") / 100)
                 else:
                     taxes = 0
-                scores.addToStat(message.channel, target, "exp", amount - taxes)
+                try:
+                    scores.addToStat(message.channel, target, "exp", amount - taxes)
+                except OverflowError:
+                    await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.",  language))
+                    return
                 await comm.message_user(message, _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this transfer) !", language).format(**{
                     "amount": amount - taxes,
                     "target": target.mention,

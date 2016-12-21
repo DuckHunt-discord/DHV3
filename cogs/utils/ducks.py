@@ -159,6 +159,7 @@ async def spawn_duck(duck):
         await bot.send_message(duck["channel"], canard_str)
     except:
         pass
+    commons.n_ducks_spawned += 1
     commons.ducks_spawned.append(duck)
 
 
@@ -180,5 +181,6 @@ async def del_channel(channel):
             for duck in commons.ducks_spawned[:]:
                 if duck["channel"] == channel:
                     commons.ducks_spawned.remove(duck)
+                    commons.n_ducks_flew += 1
     except KeyError:
         pass

@@ -59,7 +59,11 @@ class ServerAdmin:
         """Give exp to a player.
         Require admin powers
         !give_exp [target] [exp]"""
-        scores.addToStat(ctx.message.channel, target, "exp", exp)
+        try:
+            scores.addToStat(ctx.message.channel, target, "exp", exp)
+        except OverflowError:
+            await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.",  prefs.getPref(ctx.message.server, "language")))
+            return
         await comm.logwithinfos_ctx(ctx, "[giveexp] Giving " + str(exp) + " exp points to " + target.mention)
         await comm.message_user(ctx.message, _(":ok:, he now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
             "newexp": scores.getStat(ctx.message.channel, target, "exp")

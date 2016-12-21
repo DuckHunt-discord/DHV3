@@ -108,7 +108,7 @@ class Admin:
         total = len(self.bot.servers)
         i = 0
         lu = 0
-        for server in self.bot.servers:
+        for server in list(self.bot.servers):
             i += 1
             if time.time() - lu >= 1.5 or i == total:
                 lu = time.time()
