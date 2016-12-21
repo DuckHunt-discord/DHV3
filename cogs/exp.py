@@ -518,6 +518,10 @@ class Exp:
             await comm.message_user(message, _(":ok: {target} weapon is already sabotaged!", language).format(**{
                 "target": target.name
             }), forcePv=True)
+        try:
+            self.bot.delete_message(ctx.message)
+        except discord.Forbidden:
+            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
 
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)
@@ -590,6 +594,10 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         await comm.message_user(message, _(":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. That's bad, but so funny !", language), forcePv=True)
         scores.addToStat(message.channel, message.author, "exp", -50)
+        try:
+            self.bot.delete_message(ctx.message)
+        except discord.Forbidden:
+            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
         await asyncio.sleep(75)
         try:
             if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:

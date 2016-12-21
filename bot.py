@@ -91,6 +91,12 @@ async def on_resumed():
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
     await comm.logwithinfos_message(ctx.message, str(command))
+    if prefs.getPref(ctx.message.server, "delete_commands"):
+        try:
+            bot.delete_message(ctx.message)
+        except discord.Forbidden:
+            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+
     # message = ctx.message
     # destination = None
     # if message.channel.is_private:
