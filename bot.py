@@ -91,7 +91,7 @@ async def on_resumed():
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
     await comm.logwithinfos_message(ctx.message, str(command))
-    if prefs.getPref(ctx.message.server, "delete_commands"):
+    if prefs.getPref(ctx.message.server, "delete_commands") and checks.is_activated_check(ctx.message):
         try:
             await bot.delete_message(ctx.message)
         except discord.Forbidden:
@@ -205,6 +205,7 @@ if __name__ == '__main__':
     from cogs.utils.analytics import analytics_loop
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
+    from cogs.utils import checks
     import api.api as api
 
 
