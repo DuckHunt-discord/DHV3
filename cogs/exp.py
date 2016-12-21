@@ -226,7 +226,7 @@ class Exp:
                         for joueur in scores_to_process:
                             i += 1
                             if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False) or joueur["canardsTues"] is None:
-                                joueur["canardsTues"] = _("AUCUN !", language)
+                                joueur["canardsTues"] = _("None !", language)
                             if joueur["exp"] is None:
                                 joueur["exp"] = 0
 
