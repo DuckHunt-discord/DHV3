@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
-"POT-Creation-Date: 2016-12-21 15:13+0100\n"
-"PO-Revision-Date: 2016-12-21 15:13+0100\n"
+"POT-Creation-Date: 2016-12-21 17:32+0100\n"
+"PO-Revision-Date: 2016-12-21 17:33+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -1309,8 +1309,8 @@ msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
 #: cogs/utils/commons.py:548
-msgid "A fish."
-msgstr "Un poisson."
+msgid "a fish."
+msgstr "un poisson."
 
 #: cogs/utils/ducks.py:128
 #, python-brace-format
