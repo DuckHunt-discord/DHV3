@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duck Hunt\n"
-"POT-Creation-Date: 2016-12-21 17:32+0100\n"
-"PO-Revision-Date: 2016-12-21 17:33+0100\n"
+"POT-Creation-Date: 2016-12-21 23:13+0100\n"
+"PO-Revision-Date: 2016-12-21 23:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -466,7 +466,7 @@ msgstr ""
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: L'arme de {target} est déjà sabotée"
 
-#: cogs/exp.py:530
+#: cogs/exp.py:534
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
 "get killed, you will earn half the level of the killer in exp"
@@ -474,11 +474,11 @@ msgstr ""
 ":money_with_wings: Vous souscrivez à une assurance vie pour 10 exp, qui dure "
 "une semaine"
 
-#: cogs/exp.py:535
+#: cogs/exp.py:539
 msgid ":money_with_wings: You are already insured."
 msgstr ":money_with_wings: Vous etes déjà assuré !"
 
-#: cogs/exp.py:548
+#: cogs/exp.py:552
 #, python-brace-format
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
@@ -487,7 +487,7 @@ msgstr ""
 ":money_with_wings: Un canard apparaîtra dans les 10 prochaines minutes sur "
 "le canal, grâce à l'appeau de {mention}. Il a payé 8 exp!"
 
-#: cogs/exp.py:572
+#: cogs/exp.py:576
 #, python-brace-format
 msgid ""
 ":money_with_wings: You will be warned when the next duck on #{channel_name} "
@@ -496,7 +496,7 @@ msgstr ""
 ":money_with_wings: Vous serez prévenu quand le prochain canard apparaîtra "
 "sur #{channel_name}"
 
-#: cogs/exp.py:591
+#: cogs/exp.py:595
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
 "That's bad, but so funny !"
@@ -504,7 +504,7 @@ msgstr ""
 ":money_with_wings: Vous préparez un canard mécanique sur le chan pour 50 "
 "points d'experience. C'est méchant, mais tellement drôle !"
 
-#: cogs/exp.py:596
+#: cogs/exp.py:604
 msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 
@@ -1134,6 +1134,10 @@ msgstr "S'il vous plaît, appelez-moi Duck."
 #: cogs/utils/commons.py:543
 msgid "Me too, I love you !"
 msgstr "Moi aussi, je t’aime !"
+
+#: cogs/utils/commons.py:543
+msgid "Don't shot me ! I'm a fake duck !"
+msgstr "Tirez pas, je suis un fake !"
 
 #: cogs/utils/commons.py:545
 msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
