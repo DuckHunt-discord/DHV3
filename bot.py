@@ -101,13 +101,13 @@ async def on_command(command, ctx):
 
 
             # message = ctx.message
-    # destination = None
-    # if message.channel.is_private:
-    #    destination = 'Private Message'
-    # else:
-    #    destination = '#{0.channel.name} ({0.server.name})'.format(message)
-    #
-    # log.info('{0.timestamp}: {0.author.name} in {1}: {0.content}'.format(message, destination))
+            # destination = None
+            # if message.channel.is_private:
+            #    destination = 'Private Message'
+            # else:
+            #    destination = '#{0.channel.name} ({0.server.name})'.format(message)
+            #
+            # log.info('{0.timestamp}: {0.author.name} in {1}: {0.content}'.format(message, destination))
 
 
 @bot.event
@@ -209,10 +209,6 @@ if __name__ == '__main__':
     from cogs.utils import ducks
     from cogs.utils import checks
     import api.api as api
-
-
-
-
 
     for extension in initial_extensions:
         try:
