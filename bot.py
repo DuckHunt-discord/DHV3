@@ -96,8 +96,11 @@ async def on_command(command, ctx):
             await bot.delete_message(ctx.message)
         except discord.Forbidden:
             await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+        except discord.NotFound:
+            await comm.logwithinfos_ctx(ctx, "Error deleting command : not found (normal if a pugemessages was done)")
 
-    # message = ctx.message
+
+            # message = ctx.message
     # destination = None
     # if message.channel.is_private:
     #    destination = 'Private Message'
