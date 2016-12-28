@@ -174,7 +174,7 @@ async def del_channel(channel):
             servers[channel.server.id]["channels"].remove(channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
             try:
-                commons.ducks_planned.pop(channel.id)
+                commons.ducks_planned.pop(channel) # Remove from planification
                 pass
             except:
                 pass

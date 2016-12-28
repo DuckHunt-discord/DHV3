@@ -123,7 +123,6 @@ async def on_channel_delete(channel):
     await ducks.del_channel(channel)
 
 
-
 @bot.event
 async def on_server_remove(server):
     for channel in server.channels:

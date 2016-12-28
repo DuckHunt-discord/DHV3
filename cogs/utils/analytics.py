@@ -99,7 +99,7 @@ async def analytics_loop():
         activated_channels_graph = await create_stream("active_channels", "Channels activated", mode="extend")
         servers_graph = await create_stream("connected_servers", "Number of servers seen by the bot", mode="extend")
         users_graph = await create_stream("number_users", "Number of users", mode="extend")
-        ducks_graph = await create_stream("numbver_ducks", "Number of ducks spaned")
+        ducks_graph = await create_stream("number_ducks", "Number of ducks spawned")
 
         commons.logger.debug("[analytics] HEARTBEATs STARTED")
         await update_servers(servers_graph)
