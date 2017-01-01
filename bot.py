@@ -34,6 +34,7 @@ log = logging.getLogger()
 log.setLevel(logging.INFO)
 handler = logging.FileHandler(filename='dh.log', encoding='utf-8', mode='w')
 log.addHandler(handler)
+logger = commons.logger
 
 help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
@@ -45,7 +46,7 @@ def prefix(bot, message):
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None, help_attrs=help_attrs)
 commons.bot = bot
 
-logger = commons.logger
+
 
 
 @bot.event
@@ -90,7 +91,7 @@ async def on_resumed():
 @bot.event
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
-    await comm.logwithinfos_message(ctx.message, str(command))
+    await comm.logwithinfos_message(ctx.message, str(command) + " (" + ctx.message.clean_content + ") ")
     if prefs.getPref(ctx.message.server, "delete_commands") and checks.is_activated_check(ctx.message):
         try:
             await bot.delete_message(ctx.message)

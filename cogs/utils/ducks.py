@@ -151,10 +151,15 @@ async def spawn_duck(duck):
 
     await comm.logwithinfos(duck["channel"], None, "New duck : " + str(duck))
     duck["time"] = time.time()
-    if prefs.getPref(duck["channel"].server, "randomize_ducks"):
-        canard_str = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri), language=prefs.getPref(duck["channel"].server, "language"))
+    if prefs.getPref(duck["channel"].server, "emoji_ducks"):
+        corps = ":duck: < "
     else:
-        canard_str = "-,,.-'\`'°-,,.-'\`'° /_^<   QUAACK"
+        corps = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  "
+
+    if prefs.getPref(duck["channel"].server, "randomize_ducks"):
+        canard_str = corps + _(random.choice(commons.canards_cri), language=prefs.getPref(duck["channel"].server, "language"))
+    else:
+        canard_str = corps + "QUAACK"
     try:
         await bot.send_message(duck["channel"], canard_str)
     except:
