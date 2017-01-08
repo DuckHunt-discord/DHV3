@@ -40,7 +40,7 @@ help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
 
 def prefix(bot, message):
-    return [':duck:', "\U0001F986 " "DuckHunt", "duckhunt"] + list(prefs.getPref(message.server, "prefix"))
+    return ["DuckHunt", "duckhunt", "dh!", "dh"] + list(prefs.getPref(message.server, "prefix"))
 
 
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None, help_attrs=help_attrs)
