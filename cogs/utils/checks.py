@@ -4,7 +4,6 @@ from discord.ext import commands
 from cogs.utils import comm, commons, prefs, scores
 from cogs.utils.commons import _
 
-
 def is_owner_check(message):
     owner = message.author.id in ['138751484517941259']
     # bot.loop.create_task(comm.logwithinfos_message(message, "Check owner : " + str(owner)))
