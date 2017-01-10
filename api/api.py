@@ -9,10 +9,12 @@
 #
 #   GUILDS
 #
+#   Le premier qui me dit que mon code est laid, il se prend une paire de claques :D
 ############
 from kyoukai import HTTPRequestContext
 from discord.enums import ChannelType
 from collections import defaultdict
+from operator import attrgetter, itemgetter
 
 import api.API_commons as apcom
 from cogs.utils import commons, prefs, scores
@@ -28,6 +30,7 @@ async def guilds(ctx: HTTPRequestContext):
     for server in commons.bot.servers:
         channel_count = 0
         player_count = 0
+        players = []
 
         global_scores = prefs.getPref(server, "global_scores")
 
@@ -44,6 +47,15 @@ async def guilds(ctx: HTTPRequestContext):
             for member in server.members:
                 if await apcom.is_player_check(first_chan, member):
                     player_count += 1
+
+                    players.append({
+                        "id": member.id,
+                        "name": member.name,
+                        "kills": scores.getStat(first_chan, member, "canardsTues"),
+                        "exp": scores.getStat(first_chan, member, "exp"),
+                        "best_time": scores.getStat(first_chan, member, "meilleurTemps", default=prefs.getPref(first_chan.server, "time_before_ducks_leave"))
+                    })
+
                     stats['total_player_count'] += 1
                     stats['total_killed_ducks'] += scores.getStat(first_chan, member, "canardsTues")
                     stats['total_killed_super_ducks'] += scores.getStat(first_chan, member, "superCanardsTues")
@@ -59,6 +71,15 @@ async def guilds(ctx: HTTPRequestContext):
                     if activated and channel.type == ChannelType.text:
                         if await apcom.is_player_check(channel, member) and not done:
                             player_count += 1
+
+                            players.append({
+                                "id": member.id,
+                                "name": member.name,
+                                "kills": scores.getStat(channel, member, "canardsTues"),
+                                "exp": scores.getStat(channel, member, "exp"),
+                                "best_time": scores.getStat(channel, member, "meilleurTemps", default=prefs.getPref(channel.server, "time_before_ducks_leave"))
+                            })
+
                             stats['total_player_count'] += 1
                             stats['total_killed_ducks'] += scores.getStat(channel, member, "canardsTues")
                             stats['total_killed_super_ducks'] += scores.getStat(channel, member, "superCanardsTues")
@@ -67,13 +88,24 @@ async def guilds(ctx: HTTPRequestContext):
                             done = True
 
         if channel_count > 0 and player_count > 0:
+            players.sort(key=lambda x: x['name'])
+            players.sort(key=lambda x: x['best_time'])
+            players.sort(key=lambda x: x['exp'], reverse=True)
+            players.sort(key=lambda x: x['kills'], reverse=True)
+
             servers.append({
                                 "id": server.id,
                                 "name": server.name,
                                 "channel_count": channel_count,
                                 "player_count": player_count,
-                                "global_scores": global_scores
+                                "global_scores": global_scores,
+                                "best_player": players[0]
                             })
+
+    servers.sort(key=lambda x: x['name'])
+    servers.sort(key=lambda x: x['best_player']['best_time'])
+    servers.sort(key=lambda x: x['best_player']['exp'], reverse=True)
+    servers.sort(key=lambda x: x['best_player']['kills'], reverse=True)
 
     stats['total_server_count'] = len(servers)
     resp['servers'] = servers
