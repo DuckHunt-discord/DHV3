@@ -11,10 +11,12 @@
 #
 #   Le premier qui me dit que mon code est laid, il se prend une paire de claques :D
 ############
+
+# TODO: vérifier la validité des serv/chan ids à chaque fois
+
 from kyoukai import HTTPRequestContext
 from discord.enums import ChannelType
 from collections import defaultdict
-from operator import attrgetter, itemgetter
 
 import api.API_commons as apcom
 from cogs.utils import commons, prefs, scores
@@ -73,6 +75,7 @@ async def guilds(ctx: HTTPRequestContext):
                             if not counted:
                                 player_count += 1
                                 stats['player_count'] += 1
+                                counted = True
 
                             players.append({
                                 "id": member.id,
@@ -87,7 +90,6 @@ async def guilds(ctx: HTTPRequestContext):
                             stats['killed_super_ducks'] += scores.getStat(channel, member, "superCanardsTues")
                             stats['killed_players'] += scores.getStat(channel, member, "chasseursTues")
                             stats['missed_shots'] += scores.getStat(channel, member, "tirsManques")
-                            counted = True
 
         if channel_count > 0 and player_count > 0:
             players.sort(key=lambda x: x['name'])
@@ -116,7 +118,7 @@ async def guilds(ctx: HTTPRequestContext):
 
     return await apcom.prepare_resp(resp)
 
-@apcom.kyk.route("/guilds/([^/]+)/?")  # /guild/server_id
+@apcom.kyk.route("/guilds/([^/]+)/?")  # /guilds/server_id
 async def guild_info(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
 
@@ -178,6 +180,7 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
                             if not counted:
                                 player_count += 1
                                 stats['player_count'] += 1
+                                counted = True
 
                             players.append({
                                 "id": member.id,
@@ -192,8 +195,6 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
                             stats['killed_super_ducks'] += scores.getStat(channel, member, "superCanardsTues")
                             stats['killed_players'] += scores.getStat(channel, member, "chasseursTues")
                             stats['missed_shots'] += scores.getStat(channel, member, "tirsManques")
-
-                            counted = True
 
         players.sort(key=lambda x: x['name'])
         players.sort(key=lambda x: x['best_time'])
@@ -217,6 +218,43 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
         return await apcom.prepare_resp(None, 404, "Guild not found.")
 
 
+@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channels/channel_id
+async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
+    await commons.bot.wait_until_ready()
+
+    server = commons.bot.get_server(server_id)
+
+    if server:
+        channel = server.get_channel(channel_id)
+        if channel:
+            activated = await apcom.is_channel_activated(channel)
+            if activated:
+                members = []
+
+                for member in server.members:
+                    if await apcom.is_player_check(channel, member):
+                        members.append({
+                            "id": member.id,
+                            "name": member.display_name,
+                            "avatar": member.avatar_url or member.default_avatar_url
+                        })
+            else:
+                return await apcom.prepare_resp(None, 404, "Channel not activated.")
+        else:
+            return await apcom.prepare_resp(None, 404, "Channel not found.")
+    else:
+        return await apcom.prepare_resp(None, 404, "Guild not found.")
+
+    members.sort(key=lambda x: x['name'])
+
+    resp = {
+        "name": channel.name,
+        "members": members
+    }
+
+    return await apcom.prepare_resp(resp)
+
+
 @apcom.kyk.route("/guilds/([^/]+)/users/?")  # /guilds/server_id/users
 async def guild_users(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
@@ -233,88 +271,7 @@ async def guild_users(ctx: HTTPRequestContext, server_id: str):
         return await apcom.prepare_resp(None, 404, "Guild not found.")
 
 
-"""@apcom.kyk.route("/guilds/([^/]+)/channels/?")  # /guild/server_id/channels
-async def guild_channels(ctx: HTTPRequestContext, server_id: str):
-    await commons.bot.wait_until_ready()
-    servers = prefs.JSONloadFromDisk("channels.json")
-    server = commons.bot.get_server(server_id)
-    channels = []
-
-    if server:
-        for channel in server.channels:
-            activated = await apcom.is_channel_activated(channel)
-
-            if activated and channel.type == ChannelType.text:
-                channels.append({
-                                    "id"   : channel.id,
-                                    "name" : channel.name
-                                })
-
-        return await apcom.prepare_resp(channels)
-    else:
-        return await apcom.prepare_resp({}, 404, "Guild not found.")"""
-
-@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channel/channel_id
-async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
-    await commons.bot.wait_until_ready()
-    server = commons.bot.get_server(server_id)
-    servers = prefs.JSONloadFromDisk("channels.json")
-
-    if not server:
-        resp = {}
-        code = 404
-        error_msg = "Guild not found on this bot"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    channel = server.get_channel(channel_id)
-    if not channel:
-        resp = {
-            "server_id": server_id
-        }
-        code = 404
-        error_msg = "Channel not found on this server"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    try:
-        if channel_id in servers[server_id]["channels"]:
-            activated = True
-        else:
-            activated = False
-    except KeyError:
-        activated = False
-
-    if not activated:
-        resp = {
-            "server_id" : server_id,
-            "channel_id": channel_id
-        }
-        code = 404
-        error_msg = "DuckHunt is not enabled on this channel"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-    i = 0
-    resp = []
-    for joueur in scores.topScores(ctx.message.channel):
-        i += 1
-
-        if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
-            joueur["canardsTues"] = 0
-        if joueur["exp"] is None:
-            joueur["exp"] = 0
-        resp.append({
-                        "position"    : i,
-                        "user_id"     : joueur["id_"],
-                        "exp"         : joueur["exp"],
-                        "ducks_killed": joueur["canardsTues"],
-                        "name"        : joueur["name"]
-                        })
-
-    return await apcom.prepare_resp(resp)
-
-
-@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channel/channel_id/users/user_id
+@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
 async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_id: str, member_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
