@@ -183,7 +183,6 @@ class Exp:
                 "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
             }), )
         else:
-            top_scores = scores.topScores(ctx.message.channel)
             # \N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is >>|
             # \N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is |<<
             reaction = True
