@@ -573,4 +573,6 @@ def init():
         global _
     except SyntaxWarning:
         pass
+    except SyntaxError:
+        pass
     _ = Domain("default").get

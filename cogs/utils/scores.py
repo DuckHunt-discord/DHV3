@@ -121,8 +121,7 @@ def topScores(channel, stat="exp"):
 
     def defaultInt(s):
         try:
-            int(s)
-            return s
+            return int(s)
         except ValueError:
             return 0
 
