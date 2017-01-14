@@ -456,8 +456,20 @@ class Exp:
             await comm.message_user(message, _(":champagne: You're too lucky, but I don't have any clover left for you today :'(. Too much luck, maybe ??", language))
 
     @shop.command(pass_context=True, name="11")
+    @checks.have_exp(5)
     async def item11(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "sunglasses", default=0) > int(time.time()):
+            await comm.message_user(message, _(":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now immune to sunlight for a day", language))
+            scores.setStat(message.channel, message.author, "sunglasses", int(time.time()) + 3600)
+            scores.setStat(message.channel, message.author, "dazzled", False)
+            scores.addToStat(message.channel, message.author, "exp", -5)
+
+        else:
+            scores.addToStat(message.channel, message.author, "exp", -5)
+            await comm.message_user(message, _(":money_with_wings: You brought brand new sunglasses, for nothing but the fact that you are mostly swag now. :cool:", language))
+
 
     @shop.command(pass_context=True, name="12")
     @checks.have_exp(7)
@@ -480,8 +492,19 @@ class Exp:
         raise NotImplementedError
 
     @shop.command(pass_context=True, name="14")
-    async def item14(self, ctx):
-        raise NotImplementedError
+    @checks.have_exp(5)
+    async def item14(self, ctx, target: discord.Member):
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, target, "sunglasses", default=0) < int(time.time()):
+            await comm.message_user(message, _(":x: No way ! {mention} have some sunglasses ! He is immune to this ! ", language).format(mention=target.mention))
+
+        else:
+            scores.addToStat(message.channel, message.author, "exp", -5)
+            scores.setStat(message.channel, target, "dazzled", True)
+            await comm.message_user(message, _(":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next shot !", language).format(mention=target.mention))
+
+
 
     @shop.command(pass_context=True, name="15")
     async def item15(self, ctx):

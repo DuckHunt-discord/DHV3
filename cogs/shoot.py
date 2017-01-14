@@ -116,7 +116,14 @@ class Shoot:
                 await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
             return
 
-        if random.randint(1, 100) > scores.getPlayerLevel(message.channel, message.author)["precision"]:
+        if scores.getStat(message.channel, message.author, "dazzled", True):
+            accuracy = 200  # 50% moins de chance de toucher
+
+            scores.setStat(message.channel, message.author, "dazzled", False)
+        else:
+            accuracy = 100
+
+        if random.randint(1, accuracy) > scores.getPlayerLevel(message.channel, message.author)["precision"]:
 
             if random.randint(1, 100) < prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
 
