@@ -403,8 +403,17 @@ class Exp:
             await comm.message_user(message, _(":champagne: Your weapon is perfectly lubricated, no need for more grease", language))
 
     @shop.command(pass_context=True, name="7")
+    @checks.have_exp(5)
     async def item7(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if not scores.getStat(message.channel, message.author, "sight", default=0):
+            await comm.message_user(message, _(":money_with_wings: You add a sight to your weapon, for 5 exp points, your aiming was improved using this formulae : (100 - current accuracy) / 3. ", language))
+            scores.setStat(message.channel, message.author, "sight", 6)
+        else:
+            await comm.message_user(message, _(":champagne: You already have a sight to your weapon. ", language))
+
+
 
     @shop.command(pass_context=True, name="8")
     @checks.have_exp(15)
@@ -448,7 +457,7 @@ class Exp:
             await comm.message_user(message, _(":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} more exp point for the next day. You brought it for 13 exp!", language).format(**{
                 "exp": exp
             }))
-            scores.setStat(message.channel, message.author, "trefle", int(time.time()) + 86400)
+            scores.setStat(message.channel, message.author, "trefle", int(time.time()) + DAY)
             scores.setStat(message.channel, message.author, "trefle_exp", exp)
             scores.addToStat(message.channel, message.author, "exp", -13)
 
@@ -462,7 +471,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "sunglasses", default=0) > int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now immune to sunlight for a day", language))
-            scores.setStat(message.channel, message.author, "sunglasses", int(time.time()) + 3600)
+            scores.setStat(message.channel, message.author, "sunglasses", int(time.time()) + DAY)
             scores.setStat(message.channel, message.author, "dazzled", False)
             scores.addToStat(message.channel, message.author, "exp", -5)
 
@@ -520,7 +529,7 @@ class Exp:
         await comm.message_user(message, _(":money_with_wings: You drop a full water bucket on {target}, forcing him to wait 1 hour for his/her clothes to dry before he/she can return hunting", language).format(**{
             "target": target.name
         }))
-        scores.setStat(message.channel, target, "mouille", int(time.time()) + 3600)
+        scores.setStat(message.channel, target, "mouille", int(time.time()) + HOUR)
         scores.addToStat(message.channel, message.author, "exp", -10)
 
     @shop.command(pass_context=True, name="17")

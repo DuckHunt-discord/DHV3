@@ -123,7 +123,13 @@ class Shoot:
         else:
             accuracy = 100
 
-        if random.randint(1, accuracy) > scores.getPlayerLevel(message.channel, message.author)["precision"]:
+        precision = scores.getPlayerLevel(message.channel, message.author)["precision"]
+        sight = scores.getStat(message.channel, message.author, "sight", default=0)
+        if sight:
+            precision += (100 - precision) / 3
+            scores.setStat(message.channel, message.author, "exp", sight - 1)
+
+        if random.randint(1, accuracy) > precision:
 
             if random.randint(1, 100) < prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
 
