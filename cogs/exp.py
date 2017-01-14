@@ -497,8 +497,15 @@ class Exp:
             await comm.message_user(message, _(":money_with_wings: You brought brand new clothes, for nothing but the fact that you are mostly swag now. :cool:", language))
 
     @shop.command(pass_context=True, name="13")
+    @checks.have_exp(6)
     async def item13(self, ctx):
-        raise NotImplementedError
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        scores.setStat(message.channel, message.author, "sabotee", "-")
+        scores.setStat(message.channel, message.author, "sand", False)
+        scores.addToStat(message.channel, message.author, "exp", -6)
+        await comm.message_user(message, _(":champagne: You clean your weapon for 6 exp. If you had sand, or if your weapon was sabtaged, it's fixed now !", language))
+
 
     @shop.command(pass_context=True, name="14")
     @checks.have_exp(5)
@@ -516,8 +523,14 @@ class Exp:
 
 
     @shop.command(pass_context=True, name="15")
-    async def item15(self, ctx):
-        raise NotImplementedError
+    @checks.have_exp(7)
+    async def item15(self, ctx, target: discord.Member):
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        scores.setStat(message.channel, target, "sand", True)
+        scores.setStat(message.channel, message.author, "graisse", 0)
+        scores.addToStat(message.channel, message.author, "exp", -6)
+        await comm.message_user(message, _(":champagne: You throw sand on {mention} weapon!", language).format(mention=target.mention))
 
     @shop.command(pass_context=True, name="16")
     @checks.have_exp(10)

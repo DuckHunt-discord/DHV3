@@ -82,7 +82,13 @@ class Shoot:
             }))
             return
 
-        if not random.randint(1, 100) < scores.getPlayerLevel(message.channel, message.author)["fiabilitee"] and not (scores.getStat(message.channel, message.author, "graisse", default=0) > int(time.time())):  # Weapon jammed just now
+        fiabilite = scores.getPlayerLevel(message.channel, message.author)["fiabilitee"]
+
+        if scores.getStat(message.channel, message.author, "sand", default=False):
+            fiabilite /= 50
+            scores.setStat(message.channel, message.author, "sand", False)
+
+        if not random.randint(1, 100) < fiabilite and not (scores.getStat(message.channel, message.author, "graisse", default=0) > int(time.time())):  # Weapon jammed just now
             await comm.message_user(message, _("Your weapon jammed, reload to unstuck.", language))
             scores.setStat(message.channel, message.author, "enrayee", True)
             return
