@@ -5,3 +5,4 @@ Kyoukai>=1.0.0,<2.0.0
 prettytable<0.8.0
 psutil>=5.0.0,<5.1.0
 requests>=2.12.0,<2.13.0
+plotly

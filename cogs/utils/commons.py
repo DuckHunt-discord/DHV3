@@ -7,6 +7,8 @@ DuckhuntV2 -- commons
 
 # noinspection PyGlobalUndefined
 def init():
+    global _
+
     import logging
     import gettext
     # Ducks
@@ -569,10 +571,4 @@ def init():
     # TRAD
     del _
 
-    try:
-        global _
-    except SyntaxWarning:
-        pass
-    except SyntaxError:
-        pass
     _ = Domain("default").get
