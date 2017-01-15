@@ -133,7 +133,7 @@ class Shoot:
         sight = scores.getStat(message.channel, message.author, "sight", default=0)
         if sight:
             precision += (100 - precision) / 3
-            scores.setStat(message.channel, message.author, "exp", sight - 1)
+            scores.setStat(message.channel, message.author, "sight", sight - 1)
 
         if random.randint(1, accuracy) > precision:
 

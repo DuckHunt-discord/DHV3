@@ -410,6 +410,7 @@ class Exp:
         if not scores.getStat(message.channel, message.author, "sight", default=0):
             await comm.message_user(message, _(":money_with_wings: You add a sight to your weapon, for 5 exp points, your aiming was improved using this formulae : (100 - current accuracy) / 3. ", language))
             scores.setStat(message.channel, message.author, "sight", 6)
+            scores.addToStat(message.channel, message.author, "exp", -5)
         else:
             await comm.message_user(message, _(":champagne: You already have a sight to your weapon. ", language))
 

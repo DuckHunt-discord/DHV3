@@ -2,6 +2,7 @@ import copy
 import inspect
 import time
 
+import discord
 from discord.ext import commands
 from prettytable import PrettyTable
 
@@ -167,6 +168,14 @@ class Admin:
                 pass
         await comm.logwithinfos_ctx(ctx, "Broadcast ended")
         await comm.message_user(ctx.message, _("Broadcast finished", language))
+
+    @commands.command(pass_context=True)
+    @checks.is_owner()
+    async def send_message(self, ctx, server_name: str, channel_name: str, *, message: str):
+        language = prefs.getPref(ctx.message.server, "language")
+
+        await self.bot.send_message(discord.utils.find(lambda m: m.name == channel_name, discord.utils.find(lambda m: m.name == server_name, self.bot.servers).channels), message)
+        await comm.message_user(ctx.message, _("Message ({message}) sent to {server} #{channel} ", language).format(message=message, server=server_name, channel=channel_name))
 
 
 def setup(bot):
