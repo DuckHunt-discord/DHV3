@@ -513,7 +513,7 @@ class Exp:
     async def item14(self, ctx, target: discord.Member):
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, target, "sunglasses", default=0) < int(time.time()):
+        if scores.getStat(message.channel, target, "sunglasses", default=0) > int(time.time()):
             await comm.message_user(message, _(":x: No way ! {mention} have some sunglasses ! He is immune to this ! ", language).format(mention=target.mention))
 
         else:
