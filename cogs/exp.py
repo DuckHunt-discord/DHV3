@@ -150,7 +150,7 @@ class Exp:
         try:
             await self.bot.say(embed=embed)
         except:
-            commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
+            commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
             await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
 
     @commands.command(pass_context=True)
