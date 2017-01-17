@@ -647,9 +647,9 @@ class Exp:
         try:
             if prefs.getPref(message.server, "emoji_ducks"):
                 if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:
-                    await self.bot.send_message(message.channel, _(":duck: < *BZAACK*", language))
+                    await self.bot.send_message(message.channel, prefs.getPref(message.server, "emoji_used") + _(" < *BZAACK*", language))
                 else:
-                    await self.bot.send_message(message.channel, _(":duck: < " + _(random.choice(commons.canards_cri), language)))
+                    await self.bot.send_message(message.channel, _(prefs.getPref(message.server, "emoji_used") + " < " + _(random.choice(commons.canards_cri), language)))
             else:
 
                 if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:

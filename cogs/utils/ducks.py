@@ -152,7 +152,7 @@ async def spawn_duck(duck):
     await comm.logwithinfos(duck["channel"], None, "New duck : " + str(duck))
     duck["time"] = time.time()
     if prefs.getPref(duck["channel"].server, "emoji_ducks"):
-        corps = ":duck: < "
+        corps = prefs.getPref(duck["channel"].server, "emoji_used") + " < "
     else:
         corps = random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  "
 

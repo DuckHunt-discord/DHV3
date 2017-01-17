@@ -196,7 +196,7 @@ class Admin:
             failed = 0
             for server in to_clean:
                 try:
-                    await self.bot.send_message(server, ":warning: If you don't configure me, I'll leave to prevent resources abuse. Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take.")
+                    await self.bot.send_message(server, ":warning: FINAL WARNING :warning: If you don't configure me, I'll leave to prevent resources abuse. Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take.")
                 except:
                     failed += 1
                     pass

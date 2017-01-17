@@ -164,29 +164,33 @@ def init():
             "value": 0,
             "type" : int
         },
-        "user_can_give_exp"         : {
+        "user_can_give_exp": {
             "value": True,
             "type" : bool_
         },
-        "tax_on_user_give"          : {
+        "tax_on_user_give" : {
             "min"  : 0,
             "max"  : 100,
             "value": 0,
             "type" : int
         },
-        "prefix"                    : {
+        "prefix"           : {
             "value": "!",
             "type" : str
         },
-        "announce_level_up"         : {
+        "announce_level_up": {
             "value": True,
             "type" : bool_
         },
-        "emoji_ducks"               : {
+        "emoji_ducks"      : {
             "value": False,
             "type" : bool_
         },
-        "killed_mentions"           : {
+        "emoji_used"       : {
+            "value": ":duck:",
+            "type" : str
+        },
+        "killed_mentions"  : {
             "value": True,
             "type" : bool_
         }
