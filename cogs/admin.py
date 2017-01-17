@@ -1,5 +1,7 @@
 import copy
 import inspect
+import random
+import string
 import time
 
 import discord
@@ -155,6 +157,56 @@ class Admin:
 
     @commands.command(pass_context=True)
     @checks.is_owner()
+    async def cleanup_servers(self, ctx):
+        language = prefs.getPref(ctx.message.server, "language")
+
+        await comm.message_user(ctx.message, _("Serching for servers to leave", language))
+        to_clean = []
+        total_members_lost = 0
+        servers = JSONloadFromDisk("channels.json", default="{}")
+
+        for server in list(self.bot.servers):
+
+            try:
+                if len(servers[server.id]["channels"]) == 0:
+                    to_clean.append(server)
+                    total_members_lost += server.member_count
+
+            except KeyError:  # Pas de channels ou une autre merde dans le genre ?
+                to_clean.append(server)
+                total_members_lost += server.member_count
+
+        def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+            return ''.join(random.choice(chars) for _ in range(size))
+
+        random_str = id_generator()
+
+        await comm.message_user(ctx.message, _("Cleaning {servers} unused servers (accounting for {members} members in total)", language).format(servers=len(to_clean), members=total_members_lost))
+        await comm.message_user(ctx.message, _("To confirm, please type {random_str} now.", language).format(random_str=random_str))
+
+        def is_random_str(m):
+            return m.content == random_str
+
+        guess = await self.bot.wait_for_message(timeout=10.0, author=ctx.message.author, check=is_random_str)
+
+        if guess is None:
+            await comm.message_user(ctx.message, _(":x: Operation canceled, you took too long to answer.", language).format(random_str=random_str))
+
+        else:
+            failed = 0
+            for server in to_clean:
+                try:
+                    await self.bot.send_message(server, ":warning: If you don't configure me, I'll leave to prevent resources abuse. Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take.")
+                except:
+                    failed += 1
+                    pass
+
+            await comm.message_user(ctx.message, _(":ok: Finished, failed for {failed} servers.", language).format(failed=failed))
+
+            # await self.bot.leave_server(server)
+
+    @commands.command(pass_context=True)
+    @checks.is_owner()
     async def broadcast(self, ctx, *, bc: str):
         """!broadcast [message]"""
         language = prefs.getPref(ctx.message.server, "language")
@@ -176,6 +228,13 @@ class Admin:
 
         await self.bot.send_message(discord.utils.find(lambda m: m.name == channel_name, discord.utils.find(lambda m: m.name == server_name, self.bot.servers).channels), message)
         await comm.message_user(ctx.message, _("Message ({message}) sent to {server} #{channel} ", language).format(message=message, server=server_name, channel=channel_name))
+
+
+    @commands.command(pass_context=True)
+    @checks.is_owner()
+    async def say(self, ctx, *, message: str):
+
+        await self.bot.send_message(ctx.message.channel, message)
 
 
 def setup(bot):
