@@ -196,10 +196,14 @@ class Admin:
             failed = 0
             for server in to_clean:
                 try:
-                    await self.bot.send_message(server, ":warning: FINAL WARNING :warning: If you don't configure me, I'll leave to prevent resources abuse. Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take.")
+                    await self.bot.send_message(server, ":warning: I'll now leave the server, as you have not configured me... Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take to bring me back.")
                 except:
                     failed += 1
                     pass
+                try:
+                    await self.bot.leave_server(server)
+                except:
+                    commons.logger.exception("")
 
             await comm.message_user(ctx.message, _(":ok: Finished, failed for {failed} servers.", language).format(failed=failed))
 
