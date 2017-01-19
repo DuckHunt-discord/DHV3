@@ -19,8 +19,8 @@ class ServerAdmin:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def coin(self, ctx):
         """Spawn a duck on the current channel
         !coin"""
@@ -31,8 +31,8 @@ class ServerAdmin:
         })
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def game_ban(self, ctx, member: discord.Member):
         """Ban someone from the bot on the current channel
         !game_ban [member]"""
@@ -42,8 +42,8 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":ok: Done, user banned :gun:", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def game_unban(self, ctx, member: discord.Member):
         """Unban someone from the bot on the current channel
         !game_unban [member]"""
@@ -53,8 +53,8 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":ok: Done, user unbanned :eyes:", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def give_exp(self, ctx, target: discord.Member, exp: int):
         """Give exp to a player.
         Require admin powers
@@ -70,8 +70,8 @@ class ServerAdmin:
         }))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def duckplanning(self, ctx):
         """See ducks planned.
         !duckplanning"""
@@ -112,8 +112,8 @@ class ServerAdmin:
             await comm.message_user(ctx.message, _(":x: This channel already exists in the game.", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def del_channel(self, ctx):
         """!del_channel
         Remove the current channel from the server
@@ -235,8 +235,8 @@ class ServerAdmin:
             }))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def deleteeverysinglescoreandstatonthischannel(self, ctx):
         """Delete scores and stats of players on this channel. You'll need admin powers
         !deleteeverysinglescoreandstatonthischannel"""
