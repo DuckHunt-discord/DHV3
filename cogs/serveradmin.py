@@ -133,7 +133,7 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
             "name": target.name
         }))
-
+ 
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     @commands.command(pass_context=True)
