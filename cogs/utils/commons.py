@@ -14,7 +14,7 @@ def init():
     # Ducks
 
     global ducks_planned, ducks_spawned
-    ducks_planned = {}  # format : {discord.channel: [list, of, int, timestamps]}
+    ducks_planned = {}  # format : {discord.channel: number_of_ducks_needed_for_today# }
     ducks_spawned = []  # format : [{"channel": discord.channel, "spawned_at": int(timestamp), "is_super": True, "life": int(life), "max_life" : int(max_life)]
 
     # Stats

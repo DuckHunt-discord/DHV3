@@ -69,22 +69,7 @@ class ServerAdmin:
             "newexp": scores.getStat(ctx.message.channel, target, "exp")
         }))
 
-    @commands.command(pass_context=True)
-    @checks.is_activated_here()
-    @checks.is_admin()
-    async def duckplanning(self, ctx):
-        """See ducks planned.
-        !duckplanning"""
-        table = ""
-        try:
-            for timestamp in commons.ducks_planned[ctx.message.channel]:
-                table += str(int((time.time() - timestamp) / 60)) + "\n"
 
-            await self.bot.send_message(ctx.message.author, _(":hammer: TimeDelta in minutes for next ducks\n```{table}```", prefs.getPref(ctx.message.server, "language")).format(**{
-                "table": table
-            }))
-        except KeyError:
-            await self.bot.send_message(ctx.message.author, _("No ducks are planned today !", prefs.getPref(ctx.message.server, "language")))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -120,6 +105,15 @@ class ServerAdmin:
         """
         await ducks.del_channel(ctx.message.channel)
         await comm.message_user(ctx.message, _(":ok: Channel deleted", prefs.getPref(ctx.message.server, "language")))
+
+    @commands.command(pass_context=True)
+    @checks.is_activated_here()
+    @checks.is_admin()
+    async def duckplanning(self, ctx):
+        """!duckplanning
+        DEPRECATED ! Get the number of ducks left to spawn on the channel
+        """
+        await comm.message_user(ctx.message, _("There is {ducks} ducks left to spawn today !", prefs.getPref(ctx.message.server, "language")).format(ducks=commons.ducks_planned[ctx.message.channel]))
 
     @commands.command(pass_context=True)
     @checks.is_admin()

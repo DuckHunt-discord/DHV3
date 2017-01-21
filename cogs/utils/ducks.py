@@ -31,8 +31,10 @@ async def planifie(channel_obj: discord.Channel = None):
     if not channel_obj:
         logger.debug("Replanning")
         planification_ = {}
-        now = time.time()
+        now = int(time.time())
         thisDay = now - (now % 86400)
+        seconds_left = 86400 - (now - thisDay)
+        multiplicator = seconds_left / 86400
         servers = prefs.JSONloadFromDisk("channels.json", default="{}")
         for server_ in list(servers.keys()):
             server = bot.get_server(str(server_))
@@ -60,10 +62,7 @@ async def planifie(channel_obj: discord.Channel = None):
                             #    "id"           : channel.id,
                             #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
                             # }))
-                            templist = []
-                            for id_ in range(1, prefs.getPref(server, "ducks_per_day") + 1):
-                                templist.append(int(thisDay + random.randint(0, 86400)))
-                            planification_[channel] = sorted(templist)
+                            planification_[channel] = round(prefs.getPref(server, "ducks_per_day") * multiplicator)
                         else:
                             await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
                     else:
@@ -72,51 +71,16 @@ async def planifie(channel_obj: discord.Channel = None):
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     else:
-        templist = []
-        now = time.time()
+        now = int(time.time())
         thisDay = now - (now % 86400)
+        seconds_left = 86400 - (now - thisDay)
+        multiplicator = seconds_left / 86400
         permissions = channel_obj.permissions_for(channel_obj.server.me)
         if permissions.read_messages and permissions.send_messages:
-            for id_ in range(1, prefs.getPref(channel_obj.server, "ducks_per_day") + 1):
-                templist.append(int(thisDay + random.randint(0, 86400)))
+            pass
         else:
             await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
-        commons.ducks_planned[channel_obj] = sorted(templist)
-
-
-
-
-async def get_next_duck():
-    now = time.time()
-    prochaincanard = {
-        "time"   : 0,
-        "channel": None
-    }
-    # logger.debug(commons.ducks_planned)
-    for channel in commons.ducks_planned.keys():  # Determination du prochain canard
-        for canard in commons.ducks_planned[channel]:
-            if canard > now:
-                if canard < prochaincanard["time"] or prochaincanard["time"] == 0:
-                    prochaincanard = {
-                        "time"   : canard,
-                        "channel": channel
-                    }
-    timetonext = prochaincanard["time"] - time.time()
-
-    if not prochaincanard["channel"]:
-        thisDay = now - (now % 86400)
-        logger.debug("No more ducks for today, wait for {demain} sec".format(**{
-            "demain": thisDay + 86400 - time.time()
-        }))
-
-    else:
-        await comm.logwithinfos(prochaincanard["channel"], log_str="Next duck at {time} (in {timetonext} sec)".format(**{
-            "timetonext": timetonext,
-            "time"      : prochaincanard["time"]
-        }))
-
-    return prochaincanard
-
+        commons.ducks_planned[channel_obj] = round(prefs.getPref(channel_obj.server, "ducks_per_day") * multiplicator)
 
 async def spawn_duck(duck):
     servers = prefs.JSONloadFromDisk("channels.json", default="{}")

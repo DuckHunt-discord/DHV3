@@ -162,7 +162,7 @@ class Meta:
             for channel in server.channels:
                 channels += 1
                 if channel in commons.ducks_planned.keys():
-                    compteurCanards += len(commons.ducks_planned[channel])
+                    compteurCanards += commons.ducks_planned[channel]
             membres += len(server.members)
         pid = os.getpid()
         py = psutil.Process(pid)
