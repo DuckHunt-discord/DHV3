@@ -19,8 +19,8 @@ class ServerAdmin:
         self.bot = bot
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def coin(self, ctx):
         """Spawn a duck on the current channel
         !coin"""
@@ -31,8 +31,8 @@ class ServerAdmin:
         })
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def game_ban(self, ctx, member: discord.Member):
         """Ban someone from the bot on the current channel
         !game_ban [member]"""
@@ -42,8 +42,8 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":ok: Done, user banned :gun:", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def game_unban(self, ctx, member: discord.Member):
         """Unban someone from the bot on the current channel
         !game_unban [member]"""
@@ -53,8 +53,8 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":ok: Done, user unbanned :eyes:", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def give_exp(self, ctx, target: discord.Member, exp: int):
         """Give exp to a player.
         Require admin powers
@@ -69,22 +69,7 @@ class ServerAdmin:
             "newexp": scores.getStat(ctx.message.channel, target, "exp")
         }))
 
-    @commands.command(pass_context=True)
-    @checks.is_admin()
-    @checks.is_activated_here()
-    async def duckplanning(self, ctx):
-        """See ducks planned.
-        !duckplanning"""
-        table = ""
-        try:
-            for timestamp in commons.ducks_planned[ctx.message.channel]:
-                table += str(int((time.time() - timestamp) / 60)) + "\n"
 
-            await self.bot.send_message(ctx.message.author, _(":hammer: TimeDelta in minutes for next ducks\n```{table}```", prefs.getPref(ctx.message.server, "language")).format(**{
-                "table": table
-            }))
-        except KeyError:
-            await self.bot.send_message(ctx.message.author, _("No ducks are planned today !", prefs.getPref(ctx.message.server, "language")))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -112,14 +97,23 @@ class ServerAdmin:
             await comm.message_user(ctx.message, _(":x: This channel already exists in the game.", language))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def del_channel(self, ctx):
         """!del_channel
         Remove the current channel from the server
         """
         await ducks.del_channel(ctx.message.channel)
         await comm.message_user(ctx.message, _(":ok: Channel deleted", prefs.getPref(ctx.message.server, "language")))
+
+    @commands.command(pass_context=True)
+    @checks.is_activated_here()
+    @checks.is_admin()
+    async def duckplanning(self, ctx):
+        """!duckplanning
+        DEPRECATED ! Get the number of ducks left to spawn on the channel
+        """
+        await comm.message_user(ctx.message, _("There is {ducks} ducks left to spawn today !", prefs.getPref(ctx.message.server, "language")).format(ducks=commons.ducks_planned[ctx.message.channel]))
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -139,7 +133,7 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
             "name": target.name
         }))
-
+ 
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     @commands.command(pass_context=True)
@@ -235,8 +229,8 @@ class ServerAdmin:
             }))
 
     @commands.command(pass_context=True)
-    @checks.is_admin()
     @checks.is_activated_here()
+    @checks.is_admin()
     async def deleteeverysinglescoreandstatonthischannel(self, ctx):
         """Delete scores and stats of players on this channel. You'll need admin powers
         !deleteeverysinglescoreandstatonthischannel"""

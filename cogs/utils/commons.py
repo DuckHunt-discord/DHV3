@@ -14,7 +14,7 @@ def init():
     # Ducks
 
     global ducks_planned, ducks_spawned
-    ducks_planned = {}  # format : {discord.channel: [list, of, int, timestamps]}
+    ducks_planned = {}  # format : {discord.channel: number_of_ducks_needed_for_today# }
     ducks_spawned = []  # format : [{"channel": discord.channel, "spawned_at": int(timestamp), "is_super": True, "life": int(life), "max_life" : int(max_life)]
 
     # Stats
@@ -164,29 +164,33 @@ def init():
             "value": 0,
             "type" : int
         },
-        "user_can_give_exp"         : {
+        "user_can_give_exp": {
             "value": True,
             "type" : bool_
         },
-        "tax_on_user_give"          : {
+        "tax_on_user_give" : {
             "min"  : 0,
             "max"  : 100,
             "value": 0,
             "type" : int
         },
-        "prefix"                    : {
+        "prefix"           : {
             "value": "!",
             "type" : str
         },
-        "announce_level_up"         : {
+        "announce_level_up": {
             "value": True,
             "type" : bool_
         },
-        "emoji_ducks"               : {
+        "emoji_ducks"      : {
             "value": False,
             "type" : bool_
         },
-        "killed_mentions"           : {
+        "emoji_used"       : {
+            "value": ":duck:",
+            "type" : str
+        },
+        "killed_mentions"  : {
             "value": True,
             "type" : bool_
         }

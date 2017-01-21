@@ -142,31 +142,27 @@ async def mainloop():
     try:
         await bot.wait_until_ready()
         planday = 0
-        next_duck = await get_next_duck()
         while not bot.is_closed:
-            now = time.time()
+            now = int(time.time())
+            thisDay = now - (now % 86400)
+            seconds_left = int(86400 - (now - thisDay))
             if int((int(now)) / 86400) != planday:
                 # database.giveBack(logger)
                 planday = int(int(now) / 86400)
                 await planifie()
-                next_duck = await get_next_duck()
 
-            if int(now) % 60 == 0 and next_duck["time"] != 0:
-                timetonext = next_duck["time"] - now
-                await comm.logwithinfos(next_duck["channel"], None, "Next duck : {time} (in {timetonext} sec) ".format(**{
-                    "timetonext": timetonext,
-                    "time"      : next_duck["time"]
-                }))
+            if int(now) % 60 == 0:
                 logger.debug("Current ducks : {canards}".format(**{
                     "canards": len(commons.ducks_spawned)
                 }))
-
-            if next_duck["time"] < now and next_duck["time"] != 0:  # CANARD !
-                await spawn_duck(next_duck)
-                next_duck = await get_next_duck()
-
-            if next_duck["time"] == 0:  # No more ducks
-                next_duck = await get_next_duck()
+            for channel in list(commons.ducks_planned.keys()):
+                if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
+                    commons.ducks_planned[channel] -= 1
+                    duck = {
+                        "channel": channel,
+                        "time"   : now
+                    }
+                    await ducks.spawn_duck(duck)
 
             for canard in commons.ducks_spawned:
                 if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) < int(now):  # Canard qui se barre
@@ -204,7 +200,7 @@ if __name__ == '__main__':
     bot.commands_used = Counter()
     bot.bots_key = credentials['bots_key']
     ## POST INIT IMPORTS ##
-    from cogs.utils.ducks import get_next_duck, planifie, spawn_duck, allCanardsGo
+    from cogs.utils.ducks import planifie, allCanardsGo
     from cogs.utils.analytics import analytics_loop
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
