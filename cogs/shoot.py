@@ -209,7 +209,7 @@ class Shoot:
                 scores.setStat(message.channel, message.author, "meilleurTemps", round(now - current_duck["time"], 6))
             if prefs.getPref(message.server, "users_can_find_objects"):
                 if random.randint(0, 100) < 25:
-                    await comm.message_user(message, _("Searching the bushes around the duck, you find {inutilitee}", language).format(**{
+                    await comm.message_user(message, _("While searching the bushes around the duck, you found {inutilitee}", language).format(**{
                         "inutilitee": _(random.choice(commons.inutilite), language)
                     }))
 
