@@ -62,7 +62,7 @@ class Shoot:
             return
 
         if scores.getStat(message.channel, message.author, "enrayee", default=False):  # Jammed
-            await comm.message_user(message, _("Your gun jammed, it must be reloaded to unstuck.", language))
+            await comm.message_user(message, _("Your weapon is jammed, it must be reloaded to unstuck it.", language))
             return
 
         if scores.getStat(message.channel, message.author, "sabotee", default="-") is not "-":  # Sabotaged
@@ -89,7 +89,7 @@ class Shoot:
             scores.setStat(message.channel, message.author, "sand", False)
 
         if not random.randint(1, 100) < fiabilite and not (scores.getStat(message.channel, message.author, "graisse", default=0) > int(time.time())):  # Weapon jammed just now
-            await comm.message_user(message, _("Your weapon jammed, reload to unstuck.", language))
+            await comm.message_user(message, _("Your weapon is jammed, reload to unstuck it.", language))
             scores.setStat(message.channel, message.author, "enrayee", True)
             return
 
@@ -102,13 +102,13 @@ class Shoot:
                     break
 
         if not current_duck and scores.getStat(message.channel, message.author, "detecteurInfra", default=0) > int(time.time()):  # No ducks but infrared detector
-            await comm.message_user(message, _("There are no duck here, but the bullet didn't fired because the infrared detector you added to your weapon is doing it's job!", language))
+            await comm.message_user(message, _("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing it's job!", language))
             return
 
         scores.addToStat(message.channel, message.author, "balles", -1)
 
         if not current_duck:  # No duck
-            await self.sendBangMessage(message, _("Luckily you missed, what were you aiming at exactly? There are no duck here... [missed : -1 xp] [wild shot: -1 xp]", language))
+            await self.sendBangMessage(message, _("Luckily you missed, what were you aiming at exactly? There isn't any duck in here... [missed : -1 xp] [wild shot: -1 xp]", language))
             scores.addToStat(message.channel, message.author, "exp", -2)
             return
 
@@ -198,7 +198,7 @@ class Shoot:
             if current_duck["level"] > 1:
                 scores.addToStat(message.channel, message.author, "superCanardsTues", 1)
 
-            await self.sendBangMessage(message, _(":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} duck (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
+            await self.sendBangMessage(message, _(":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
                 "time"        : round(now - current_duck["time"], 4),
                 "total"       : scores.getStat(message.channel, message.author, "canardsTues"),
                 "channel"     : message.channel,
