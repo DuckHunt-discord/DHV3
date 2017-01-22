@@ -3,6 +3,7 @@ import datetime
 import json
 import locale
 import logging
+import os
 import random
 import sys
 import time
@@ -13,6 +14,12 @@ import discord
 from discord.ext import commands
 
 from cogs.utils import commons
+
+if os.geteuid() == 0:
+    print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk.")
+    sys.exit(1)
+
+
 
 try:
     locale.setlocale(locale.LC_ALL, 'fr_FR')

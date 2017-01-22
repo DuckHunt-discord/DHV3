@@ -7,6 +7,9 @@ DuckhuntV2 -- commons
 
 # noinspection PyGlobalUndefined
 def init():
+    if os.geteuid() == 0:
+        print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk. And please, don't try to disable these checks, they are here for a reason.")
+        sys.exit(1)
     global _
 
     import logging
