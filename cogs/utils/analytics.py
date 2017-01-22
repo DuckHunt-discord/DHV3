@@ -118,19 +118,19 @@ async def analytics_loop():
 
 
             ## MEM GRAPH UPDATE
-            if i % 60 == 0:
+            if i % 20 == 0:
                 await update_servers(servers_graph)
                 await update_ducks_dest()
 
-            if i % 30 == 0:
+            if i % 15 == 0:
                 await update_channels(activated_channels_graph)
 
-            if i % 15 == 0:
-                await update_memory(mem_graph)
-
-            if i % 10 == 0:
+            if i % 5 == 0:
                 await update_users(users_graph)
                 await update_ducks(ducks_graph)
+
+            if i % 1 == 0:
+                await update_memory(mem_graph)
 
             await asyncio.sleep(60)
     except:
