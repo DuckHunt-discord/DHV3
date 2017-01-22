@@ -49,6 +49,18 @@ class Exp:
         message = ctx.message
         scores.setStat(message.channel, message.author, "meilleurTemps", prefs.getPref(message.server, "time_before_ducks_leave"))
         await comm.message_user(message, _(":ok: Your best time was reset.", prefs.getPref(message.server, "language")))
+
+    @commands.command(pass_context=True)
+    @checks.is_not_banned()
+    @checks.is_activated_here()
+    async def freetime(self, ctx):
+        now = int(time.time())
+        thisDay = now - (now % 86400)
+        seconds_left = 86400 - (now - thisDay)
+        hours = int(seconds_left / 3600)
+        minutes = int((seconds_left - (3600 * hours)) / 60)
+        await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and chargers in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
+
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
