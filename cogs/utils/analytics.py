@@ -56,19 +56,19 @@ async def update_servers(servers_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = len(commons.bot.servers)
     servers_graph.write(dict(x=x, y=y))
-    #commons.logger.debug("<3 HEARTBEAT SERVERS <3")
+    commons.logger.debug("Updating server analytics")
 
 async def update_channels(activated_channels_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = len(commons.ducks_planned)
     activated_channels_graph.write(dict(x=x, y=y))
-    #commons.logger.debug("<3 HEARTBEAT CHANNELS <3")
+    commons.logger.debug("Updating channels analytics")
 
 async def update_memory(mem_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = round(psutil.Process(os.getpid()).memory_info()[0] / 2. ** 30 * 1000, 5)
     mem_graph.write(dict(x=x, y=y))
-    #commons.logger.debug("<3 HEARTBEAT MEMORY <3")
+    commons.logger.debug("Updating memory analytics")
 
 async def update_users(users_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -76,7 +76,7 @@ async def update_users(users_graph):
     for server in commons.bot.servers:
         y += server.member_count
     users_graph.write(dict(x=x, y=y))
-    #commons.logger.debug("<3 HEARTBEAT USERS <3")
+    commons.logger.debug("Updating users analytics")
 
 async def update_ducks_dest():
     labels=['Ducks killed','Ducks bored']
@@ -129,8 +129,7 @@ async def analytics_loop():
                 await update_users(users_graph)
                 await update_ducks(ducks_graph)
 
-            if i % 1 == 0:
-                await update_memory(mem_graph)
+            await update_memory(mem_graph)
 
             await asyncio.sleep(60)
     except:
