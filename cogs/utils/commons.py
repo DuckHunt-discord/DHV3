@@ -3,7 +3,7 @@
 """
 DuckhuntV2 -- commons
 """
-
+import os
 
 # noinspection PyGlobalUndefined
 def init():
