@@ -34,7 +34,9 @@ async def planifie(channel_obj: discord.Channel = None):
         now = int(time.time())
         thisDay = now - (now % 86400)
         seconds_left = 86400 - (now - thisDay)
-        multiplicator = seconds_left / 86400
+        multiplicator = round(seconds_left / 86400, 5)
+        if multiplicator == 0:
+            multiplicator = 1
         servers = prefs.JSONloadFromDisk("channels.json", default="{}")
         for server_ in list(servers.keys()):
             server = bot.get_server(str(server_))
@@ -74,7 +76,7 @@ async def planifie(channel_obj: discord.Channel = None):
         now = int(time.time())
         thisDay = now - (now % 86400)
         seconds_left = 86400 - (now - thisDay)
-        multiplicator = seconds_left / 86400
+        multiplicator = round(seconds_left / 86400, 5)
         permissions = channel_obj.permissions_for(channel_obj.server.me)
         if permissions.read_messages and permissions.send_messages:
             pass
