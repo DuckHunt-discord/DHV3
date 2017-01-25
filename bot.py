@@ -100,10 +100,9 @@ async def on_command_error(error, ctx):
                     await bot.edit_message(msg, _(":anger_right: Sending error report...", language))
 
                     await bot.send_message(support_channel, _(":hammer: {date} :hammer:").format(date=int(time.time())))
-                    await bot.send_message(support_channel, _("`{cause}`\n\n```{tb}```").format(cause=error.original.__class__.__name__,
-                                                                                                tb="\n".join(traceback.format_tb(error.original.__traceback__))))
+                    await bot.send_message(support_channel, await comm.paste(_("{cause}\n\n{tb}").format(cause=error.original.__class__.__name__,
+                                                                                                         tb="\n".join(traceback.format_tb(error.original.__traceback__))), "py"))
                     await bot.send_message(support_channel, invite)
-
                     await bot.edit_message(msg, _(":ok: Error message sent, thanks :)", language))
                     return
             await comm.message_user(ctx.message, _("OK, I won't send an error report", language))
