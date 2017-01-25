@@ -67,11 +67,54 @@ async def on_command_error(error, ctx):
         print('In {0.command.qualified_name}:'.format(ctx), file=sys.stderr)
         traceback.print_tb(error.original.__traceback__)
         print('{0.__class__.__name__}: {0}'.format(error.original), file=sys.stderr)
-        await comm.message_user(ctx.message, _(":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```", language).format(**{
-            "command": ctx.command.qualified_name,
-            "error"  : error.original.__class__.__name__,
-            "tb"     : "\n".join(traceback.format_tb(error.original.__traceback__))
+
+        myperms = ctx.message.channel.permissions_for(ctx.message.server.me)
+        can_send = myperms.add_reactions and myperms.create_instant_invite
+        if can_send:
+            error_report = _("Send error report ? ", language)
+        else:
+            error_report = _("Sadly, I need `add_reactions` and `create_instant_invite` permissions to be able to send an error report.", language)
+
+        msg = await comm.message_user(ctx.message, _(":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```\n{error_report}", language).format(**{
+            "command"     : ctx.command.qualified_name,
+            "error"       : error.original.__class__.__name__,
+            "tb"          : "\n".join(traceback.format_tb(error.original.__traceback__, 4)),
+            "error_report": error_report
         }))
+
+        if can_send:
+            yes = "\N{THUMBS UP SIGN}"
+            no = "\N{THUMBS DOWN SIGN}"
+            await bot.add_reaction(msg, yes)
+            await bot.add_reaction(msg, no)
+            res = await bot.wait_for_reaction(emoji=[yes, no], user=ctx.message.author, message=msg, timeout=120)
+            if res:
+                reaction, user = res
+                emoji = reaction.emoji
+                if emoji == yes:
+
+                    msg = await comm.message_user(ctx.message, _(":anger_right: Creating an invite for the error report...", language))
+                    support_channel = discord.utils.find(lambda c: str(c.id) == '273930986314792960', discord.utils.find(lambda s: str(s.id) == '195260081036591104', bot.servers).channels)
+                    invite = await bot.create_invite(ctx.message.channel, max_uses=5)
+                    invite = invite.url
+                    await bot.edit_message(msg, _(":anger_right: Sending error report...", language))
+
+                    await bot.send_message(support_channel, _(":hammer: {date} :hammer:").format(date=int(time.time())))
+                    await bot.send_message(support_channel, _("`{cause}`\n\n```{tb}```").format(cause=error.original.__class__.__name__,
+                                                                                                tb="\n".join(traceback.format_tb(error.original.__traceback__))))
+                    await bot.send_message(support_channel, invite)
+
+                    await bot.edit_message(msg, _(":ok: Error message sent, thanks :)", language))
+                    return
+            await comm.message_user(ctx.message, _("OK, I won't send an error report", language))
+
+
+
+
+
+
+
+
     elif isinstance(error, commands.MissingRequiredArgument):
         await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):

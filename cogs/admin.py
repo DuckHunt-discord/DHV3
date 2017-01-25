@@ -240,6 +240,11 @@ class Admin:
 
         await self.bot.send_message(ctx.message.channel, message)
 
+    @commands.command(pass_context=True)
+    @checks.is_owner()
+    async def bug(self, ctx):
+
+        raise RuntimeError("May the gods be upon you!")
 
 def setup(bot):
     bot.add_cog(Admin(bot))
