@@ -5,7 +5,6 @@
 
 """
 import json
-import time
 
 from kyoukai import Kyoukai
 
@@ -66,7 +65,7 @@ async def get_user_scores(channel, member):
         "last_giveback"         : scores.getStat(channel, member, "lastGiveback"),
         "wet"                   : scores.getStat(channel, member, "mouille"),
         "time_explosive_ammo"   : scores.getStat(channel, member, "munExplo"),
-        "time_AP_ammo"          : scores.getStat(channel, member, "munAP_"),
+        "time_AP_ammo"          : scores.getStat(channel, member, "ap_ammo"),
         "time_grease"           : scores.getStat(channel, member, "graisse"),
         "time_life_insurence"   : scores.getStat(channel, member, "AssuranceVie"),
         "time_clover"           : scores.getStat(channel, member, "trefle"),

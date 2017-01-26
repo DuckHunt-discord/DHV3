@@ -153,8 +153,8 @@ class Exp:
             }), value=str(self.objectTD(message.channel, target, language, "trefle")))
         if scores.getStat(message.channel, target, "munExplo", default=0) > int(time.time()):
             embed.add_field(name=_("Object : explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "munExplo")))
-        elif scores.getStat(message.channel, target, "munAp_", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : AP ammo", language), value=str(self.objectTD(message.channel, target, language, "munAp_")))
+        elif scores.getStat(message.channel, target, "ap_ammo", default=0) > int(time.time()):
+            embed.add_field(name=_("Object : AP ammo", language), value=str(self.objectTD(message.channel, target, language, "ap_ammo")))
         if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
             embed.add_field(name=_("Effect : wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
 
@@ -361,9 +361,9 @@ class Exp:
         !shop 3"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "munAP_", default=0) < time.time():
+        if scores.getStat(message.channel, message.author, "ap_ammo", default=0) < time.time():
             await comm.message_user(message, _(":money_with_wings: You purchase AP ammo for your weapon. For the next 24 hours, you will deal double damage to ducks.", language))
-            scores.setStat(message.channel, message.author, "munAP_", int(time.time() + DAY))
+            scores.setStat(message.channel, message.author, "ap_ammo", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -15)
 
         else:

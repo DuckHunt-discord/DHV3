@@ -109,11 +109,6 @@ async def on_command_error(error, ctx):
 
 
 
-
-
-
-
-
     elif isinstance(error, commands.MissingRequiredArgument):
         await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):

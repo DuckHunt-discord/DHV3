@@ -168,7 +168,7 @@ class Shoot:
         if scores.getStat(message.channel, message.author, "munExplo", default=0) > int(time.time()):
             current_duck["SCvie"] -= 3
             vieenmoins = 3
-        elif scores.getStat(message.channel, message.author, "munAp_", default=0) > int(time.time()):
+        elif scores.getStat(message.channel, message.author, "ap_ammo", default=0) > int(time.time()):
             current_duck["SCvie"] -= 2
             vieenmoins = 2
         else:
