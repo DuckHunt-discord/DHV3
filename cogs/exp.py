@@ -135,7 +135,7 @@ class Exp:
         embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "tirsManques")))
         embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "tirsSansCanards")))
         embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
-        embed.add_field(name=_("Bullets in current charger", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
+        embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
         embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
         embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
