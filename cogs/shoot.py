@@ -212,6 +212,7 @@ class Shoot:
                     await comm.message_user(message, _("While searching the bushes around the duck, you found {inutilitee}", language).format(**{
                         "inutilitee": _(random.choice(commons.inutilite), language)
                     }))
+                    scores.addToStat(message.channel, message.author, "trashFound", 1)
 
         else:  # Duck harmed
             await self.sendBangMessage(message, _(":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]", language).format(**{

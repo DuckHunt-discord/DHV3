@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-01-22 22:34+0100\n"
-"PO-Revision-Date: 2017-01-22 22:38+0100\n"
+"POT-Creation-Date: 2017-01-28 22:41+0100\n"
+"PO-Revision-Date: 2017-01-28 22:51+0100\n"
 "Last-Translator: Arthur Jojo <jovart.arthur@gmail.com>, 2017\n"
 "Language-Team: French (France) (https://www.transifex.com/none-441/"
 "teams/70749/fr_FR/)\n"
@@ -27,23 +27,72 @@ msgstr ":x: Cette commande ne peut pas être utilisé dans les messages privés.
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Cette commande est désactivée et ne peut être utilisée"
 
-#: bot.py:70
+#: bot.py:74
+msgid "Send error report ? "
+msgstr "Envoyer le rapport d'erreur ?"
+
+#: bot.py:76
+msgid ""
+"Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
+"able to send an error report."
+msgstr ""
+"Malheureusement, j'ai besoin des permissions `add_reactions` et "
+"`create_instant_invite` pour envoyer un rapport d'erreur !"
+
+#: bot.py:78
 #, python-brace-format
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
 "{tb}\n"
-"```"
+"```\n"
+"{error_report}"
 msgstr ""
-":x: une erreur ({error}) s’est passé dans {command}, voici le traceback à "
-"transmettre pour les rapports de bugs : ```\n"
+":x: Une erreur ({error}) est survenue dans la commande {command}, voici le "
+"traceback : ```\n"
+"\n"
 "{tb}\n"
-"```"
+"\n"
+"```\n"
+"\n"
+"{error_report}"
 
-#: bot.py:76
+#: bot.py:96
+msgid ":anger_right: Creating an invite for the error report..."
+msgstr ":anger_right: Création d'une invitation pour le rapport d'erreur..."
+
+#: bot.py:100
+msgid ":anger_right: Sending error report..."
+msgstr ":anger_right: Envoi du rapport d'erreur"
+
+#: bot.py:102
+#, python-brace-format
+msgid ":hammer: {date} :hammer:"
+msgstr ":hammer: {date} :hammer:"
+
+#: bot.py:103
+#, python-brace-format
+msgid ""
+"{cause}\n"
+"\n"
+"{tb}"
+msgstr ""
+"{cause}\n"
+"\n"
+"{tb}"
+
+#: bot.py:106
+msgid ":ok: Error message sent, thanks :)"
+msgstr ":ok: Message d'erreur envoyé, merci :)"
+
+#: bot.py:108
+msgid "OK, I won't send an error report"
+msgstr "OK, je n'envoie pas le rapport d'erreur"
+
+#: bot.py:113
 msgid ":x: Missing a required argument. "
 msgstr ":x: un argument requis manquant."
 
-#: bot.py:78
+#: bot.py:115
 msgid ":x: Bad argument provided. "
 msgstr ":x: mauvais argument fourni."
 
@@ -989,34 +1038,34 @@ msgid "While searching the bushes around the duck, you found {inutilitee}"
 msgstr ""
 "En cherchant dans les buissons à coté du canard, vous trouvez {inutilitee}"
 
-#: cogs/shoot.py:217
+#: cogs/shoot.py:218
 #, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
 ":gun: Le canard a survécu, essayez encore [vie : -{vie}] *SUPER CANARD "
 "DÉTECTÉ*"
 
-#: cogs/shoot.py:231
+#: cogs/shoot.py:232
 msgid "Your weapon had been confiscated"
 msgstr "Votre arme a été confisquée"
 
-#: cogs/shoot.py:234
+#: cogs/shoot.py:235
 msgid "You unstuck your weapon."
 msgstr "Vous décoincez votre arme"
 
-#: cogs/shoot.py:243
+#: cogs/shoot.py:244
 msgid "You reload your weapon"
 msgstr "Vous rechargez votre arme"
 
-#: cogs/shoot.py:245
+#: cogs/shoot.py:246
 msgid "You dont have any ammo left !"
 msgstr "Vous n’avez aucune munition restante!"
 
-#: cogs/shoot.py:247
+#: cogs/shoot.py:248
 msgid "You don't need to reload your weapon"
 msgstr "Vous n’avez pas besoin de recharger votre arme"
 
-#: cogs/shoot.py:249
+#: cogs/shoot.py:250
 #, python-brace-format
 msgid ""
 "{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
@@ -1422,7 +1471,7 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "un poisson."
 
-#: cogs/utils/ducks.py:92
+#: cogs/utils/ducks.py:94
 #, python-brace-format
 msgid "There is a duck on #{channel}"
 msgstr "Il y a un canard sur #{channel}"
