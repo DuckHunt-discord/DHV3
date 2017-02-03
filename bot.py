@@ -200,13 +200,18 @@ async def mainloop():
                     "canards": len(commons.ducks_spawned)
                 }))
             for channel in list(commons.ducks_planned.keys()):
-                if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
-                    commons.ducks_planned[channel] -= 1
-                    duck = {
-                        "channel": channel,
-                        "time"   : now
-                    }
-                    await ducks.spawn_duck(duck)
+                try:
+                    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
+                        commons.ducks_planned[channel] -= 1
+                        duck = {
+                            "channel": channel,
+                            "time"   : now
+                        }
+                        await ducks.spawn_duck(duck)
+                except KeyError:  # Race condition
+                    # for channel in list(commons.ducks_planned.keys()): <= channel not deletied, so in this list
+                    #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
+                    pass
 
             for canard in commons.ducks_spawned:
                 if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) < int(now):  # Canard qui se barre
