@@ -85,7 +85,7 @@ class Shoot:
         fiabilite = scores.getPlayerLevel(message.channel, message.author)["fiabilitee"]
 
         if scores.getStat(message.channel, message.author, "sand", default=False):
-            fiabilite /= 50
+            fiabilite /= 2
             scores.setStat(message.channel, message.author, "sand", False)
 
         if not random.randint(1, 100) < fiabilite and not (scores.getStat(message.channel, message.author, "graisse", default=0) > int(time.time())):  # Weapon jammed just now
