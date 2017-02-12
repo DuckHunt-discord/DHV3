@@ -14,11 +14,17 @@ global kyk, API_VERSION
 kyk = Kyoukai("dh_api", debug=False)
 API_VERSION = "Duckhunt API, 0.0.1 ALPHA"
 
-async def is_player_check(channel, member):
-    if scores.getStat(channel, member, "canardsTues") > 0 or scores.getStat(channel, member, "superCanardsTues") > 0 or scores.getStat(channel, member, "tirsManques") > 0 or scores.getStat(channel, member, "tirsSansCanards") > 0:
-        return True
+async def is_player_check(member, channel=None, isRow=False):
+    if isRow:
+        if member['canardsTues'] > 0 or member['superCanardsTues'] > 0 or member['tirsManques'] > 0 or member['tirsSansCanards'] > 0:
+            return True
+        else:
+            return False
     else:
-        return False
+        if scores.getStat(channel, member, "canardsTues") > 0 or scores.getStat(channel, member, "superCanardsTues") > 0 or scores.getStat(channel, member, "tirsManques") > 0 or scores.getStat(channel, member, "tirsSansCanards") > 0:
+            return True
+        else:
+            return False
 
 async def is_channel_activated(channel):
     servers = prefs.JSONloadFromDisk("channels.json")

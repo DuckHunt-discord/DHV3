@@ -26,94 +26,37 @@ async def guilds(ctx: HTTPRequestContext):
     await commons.bot.wait_until_ready()
 
     servers = []
-    stats = defaultdict(int)
+    server_count = 0
 
     for server in commons.bot.servers:
-        channel_count = 0
-        player_count = 0
-        players = []
-
         global_scores = prefs.getPref(server, "global_scores")
+        channel_count = 0
+        hasPlayers = False
 
         for channel in server.channels:
             activated = await apcom.is_channel_activated(channel)
-
             if activated and channel.type == ChannelType.text:
                 channel_count += 1
-                stats['channel_count'] += 1
+                if not hasPlayers:
+                    table = scores.getChannelTable(channel)
+                    for member in table:
+                        if await apcom.is_player_check(member=member, isRow=True):
+                            hasPlayers = True
+                            break
 
-        if global_scores:
-            first_chan = next(iter(server.channels))
-
-            for member in server.members:
-                if await apcom.is_player_check(first_chan, member):
-                    player_count += 1
-                    stats['player_count'] += 1
-
-                    players.append({
-                        "id": member.id,
-                        "name": member.name,
-                        "kills": scores.getStat(first_chan, member, "canardsTues"),
-                        "exp": scores.getStat(first_chan, member, "exp"),
-                        "best_time": scores.getStat(first_chan, member, "meilleurTemps", default=prefs.getPref(first_chan.server, "time_before_ducks_leave"))
-                    })
-
-                    stats['all_killed_ducks'] += scores.getStat(first_chan, member, "canardsTues") + scores.getStat(first_chan, member, "superCanardsTues")
-                    stats['killed_ducks'] += scores.getStat(first_chan, member, "canardsTues")
-                    stats['killed_super_ducks'] += scores.getStat(first_chan, member, "superCanardsTues")
-                    stats['killed_players'] += scores.getStat(first_chan, member, "chasseursTues")
-                    stats['missed_shots'] += scores.getStat(first_chan, member, "tirsManques")
-        else:
-            for member in server.members:
-                counted = False
-
-                for channel in server.channels:
-                    activated = await apcom.is_channel_activated(channel)
-
-                    if activated and channel.type == ChannelType.text:
-                        if await apcom.is_player_check(channel, member):
-                            if not counted:
-                                player_count += 1
-                                stats['player_count'] += 1
-                                counted = True
-
-                            players.append({
-                                "id": member.id,
-                                "name": member.name,
-                                "kills": scores.getStat(channel, member, "canardsTues") + scores.getStat(channel, member, "superCanardsTues"),
-                                "exp": scores.getStat(channel, member, "exp"),
-                                "best_time": scores.getStat(channel, member, "meilleurTemps", default=prefs.getPref(channel.server, "time_before_ducks_leave"))
-                            })
-
-                            stats['all_killed_ducks'] += scores.getStat(channel, member, "canardsTues") + scores.getStat(channel, member, "superCanardsTues")
-                            stats['killed_ducks'] += scores.getStat(channel, member, "canardsTues")
-                            stats['killed_super_ducks'] += scores.getStat(channel, member, "superCanardsTues")
-                            stats['killed_players'] += scores.getStat(channel, member, "chasseursTues")
-                            stats['missed_shots'] += scores.getStat(channel, member, "tirsManques")
-
-        if channel_count > 0 and player_count > 0:
-            players.sort(key=lambda x: x['name'])
-            players.sort(key=lambda x: x['best_time'])
-            players.sort(key=lambda x: x['exp'], reverse=True)
-            players.sort(key=lambda x: x['kills'], reverse=True)
-
+        if channel_count > 0 and hasPlayers:
+            server_count += 1
             servers.append({
                                 "id": server.id,
                                 "name": server.name,
-                                "icon": server.icon_url or None,
-                                "channel_count": channel_count,
-                                "player_count": player_count,
-                                "best_player": players[0]
+                                "icon": server.icon_url or None
                             })
 
     servers.sort(key=lambda x: x['name'])
-    servers.sort(key=lambda x: x['player_count'], reverse=True)
-
-    stats['server_count'] = len(servers)
 
     resp = {
         "servers": servers,
-        "stats": stats
+        "server_count": server_count
     }
 
     return await apcom.prepare_resp(resp)
@@ -133,85 +76,44 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
 
         stats = defaultdict(int)
 
-        #settings = []
+        if not global_scores:
+            for channel in server.channels:
+                activated = await apcom.is_channel_activated(channel)
+                if activated and channel.type == ChannelType.text:
+                    table = scores.getChannelTable(channel)
+                    for member in table:
+                        if await apcom.is_player_check(member=member, isRow=True):
+                            channels.append({
+                                                "id": channel.id,
+                                                "name": channel.name
+                                            })
+                            break
 
-        #for setting in commons.defaultSettings.keys():
-            #settings[setting] = prefs.getPref(server, setting)
+            channels.sort(key=lambda x: x['name'])
 
-        for channel in server.channels:
-            activated = await apcom.is_channel_activated(channel)
+            resp = {
+                "server": {"name": server.name, "channels": channels},
+                "global_scores": global_scores
+            }
+        else:
+            players = []
 
-            if activated and channel.type == ChannelType.text:
-                channels.append({
-                                    "id": channel.id,
-                                    "name": channel.name
-                                })
-
-        if global_scores:
-            first_chan = next(iter(server.channels))
-
-            for member in server.members:
-                if await apcom.is_player_check(first_chan, member):
-                    player_count += 1
-                    stats['player_count'] += 1
+            table = scores.getChannelTable(next(iter(server.channels)))
+            for member in table:
+                if await apcom.is_player_check(member=member, isRow=True):
+                    player = server.get_member(member['id_'])
 
                     players.append({
-                        "id": member.id,
-                        "name": member.name,
-                        "kills": scores.getStat(first_chan, member, "canardsTues"),
-                        "exp": scores.getStat(first_chan, member, "exp"),
-                        "best_time": scores.getStat(first_chan, member, "meilleurTemps", default=prefs.getPref(server, "time_before_ducks_leave"))
+                        "id": player.id,
+                        "name": player.display_name,
+                        "avatar": player.avatar_url or player.default_avatar_url
                     })
 
-                    stats['all_killed_ducks'] += scores.getStat(first_chan, member, "canardsTues") + scores.getStat(first_chan, member, "superCanardsTues")
-                    stats['killed_ducks'] += scores.getStat(first_chan, member, "canardsTues")
-                    stats['killed_super_ducks'] += scores.getStat(first_chan, member, "superCanardsTues")
-                    stats['killed_players'] += scores.getStat(first_chan, member, "chasseursTues")
-                    stats['missed_shots'] += scores.getStat(first_chan, member, "tirsManques")
-        else:
-            for member in server.members:
-                counted = False
-
-                for channel in server.channels:
-                    activated = await apcom.is_channel_activated(channel)
-
-                    if activated and channel.type == ChannelType.text:
-                        if await apcom.is_player_check(channel, member):
-                            if not counted:
-                                player_count += 1
-                                stats['player_count'] += 1
-                                counted = True
-
-                            players.append({
-                                "id": member.id,
-                                "name": member.name,
-                                "kills": scores.getStat(channel, member, "canardsTues") + scores.getStat(channel, member, "superCanardsTues"),
-                                "exp": scores.getStat(channel, member, "exp"),
-                                "best_time": scores.getStat(channel, member, "meilleurTemps", default=prefs.getPref(server, "time_before_ducks_leave"))
-                            })
-
-                            stats['all_killed_ducks'] += scores.getStat(channel, member, "canardsTues") + scores.getStat(channel, member, "superCanardsTues")
-                            stats['killed_ducks'] += scores.getStat(channel, member, "canardsTues")
-                            stats['killed_super_ducks'] += scores.getStat(channel, member, "superCanardsTues")
-                            stats['killed_players'] += scores.getStat(channel, member, "chasseursTues")
-                            stats['missed_shots'] += scores.getStat(channel, member, "tirsManques")
-
-        players.sort(key=lambda x: x['name'])
-        players.sort(key=lambda x: x['best_time'])
-        players.sort(key=lambda x: x['exp'], reverse=True)
-        players.sort(key=lambda x: x['kills'], reverse=True)
-
-        info = {
-            "id": server.id,
-            "name": server.name,
-            "channels": channels,
-            "best_player": players[0]
-        }
-
-        resp = {
-            "server": info,
-            "stats": stats
-        }
+            resp = {
+                "server": {"id": server.id, "name": server.name},
+                "players": players,
+                "global_scores": global_scores
+            }
 
         return await apcom.prepare_resp(resp)
     else:
@@ -229,14 +131,17 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
         if channel:
             activated = await apcom.is_channel_activated(channel)
             if activated:
-                members = []
+                players = []
 
-                for member in server.members:
-                    if await apcom.is_player_check(channel, member):
-                        members.append({
-                            "id": member.id,
-                            "name": member.display_name,
-                            "avatar": member.avatar_url or member.default_avatar_url
+                table = scores.getChannelTable(channel)
+                for member in table:
+                    if await apcom.is_player_check(member=member, isRow=True):
+                        player = server.get_member(member['id_'])
+
+                        players.append({
+                            "id": player.id,
+                            "name": player.display_name,
+                            "avatar": player.avatar_url or player.default_avatar_url
                         })
             else:
                 return await apcom.prepare_resp(None, 404, "Channel not activated.")
@@ -245,11 +150,11 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
     else:
         return await apcom.prepare_resp(None, 404, "Guild not found.")
 
-    members.sort(key=lambda x: x['name'])
+    players.sort(key=lambda x: x['name'])
 
     resp = {
         "name": channel.name,
-        "members": members
+        "players": players
     }
 
     return await apcom.prepare_resp(resp)
