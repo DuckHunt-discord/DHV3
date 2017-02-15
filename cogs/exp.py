@@ -655,7 +655,7 @@ class Exp:
             self.bot.delete_message(ctx.message)
         except discord.Forbidden:
             comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
-        await asyncio.sleep(75)
+        await asyncio.sleep(90)
         try:
             if prefs.getPref(message.server, "emoji_ducks"):
                 if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:
