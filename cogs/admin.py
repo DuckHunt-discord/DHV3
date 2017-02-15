@@ -201,7 +201,7 @@ class Admin:
                     failed += 1
                     pass
                 try:
-                    await self.bot.leave_server(server)
+                    await self.bot.leave_server(server)  # Good Bye :'(
                 except:
                     commons.logger.exception("")
 
