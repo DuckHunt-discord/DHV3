@@ -192,10 +192,13 @@ class ServerAdmin:
         """Delete last messages in the channel
         !purgemessages <number of messages>"""
         language = prefs.getPref(ctx.message.server, "language")
+        import datetime
+        weeks = datetime.datetime.now() - datetime.timedelta(days=13)
+
 
         if ctx.message.channel.permissions_for(ctx.message.server.me).manage_messages:
             def not_pinned(m):
-                return not m.pinned
+                return not m.pinned and not m.timestamp < weeks
 
             deleted = await self.bot.purge_from(ctx.message.channel, limit=number, check=not_pinned)
             await comm.message_user(ctx.message, _("{deleted} message(s) deleted", language).format(**{

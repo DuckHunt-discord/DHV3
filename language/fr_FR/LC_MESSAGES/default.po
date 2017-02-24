@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-01-28 22:41+0100\n"
-"PO-Revision-Date: 2017-01-28 22:51+0100\n"
+"POT-Creation-Date: 2017-02-19 14:46-0500\n"
+"PO-Revision-Date: 2017-02-19 14:48-0500\n"
 "Last-Translator: Arthur Jojo <jovart.arthur@gmail.com>, 2017\n"
 "Language-Team: French (France) (https://www.transifex.com/none-441/"
 "teams/70749/fr_FR/)\n"
@@ -271,7 +271,7 @@ msgid "Best killing time"
 msgstr "Meilleur temps de tir"
 
 #: cogs/exp.py:138
-msgid "Bullets in current charger"
+msgid "Bullets in current magazine"
 msgstr "Balles dans le chargeur actuel"
 
 #: cogs/exp.py:139 cogs/exp.py:181 cogs/utils/scores.py:73
