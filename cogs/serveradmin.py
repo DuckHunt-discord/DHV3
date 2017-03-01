@@ -209,6 +209,26 @@ class ServerAdmin:
 
     @commands.command(pass_context=True)
     @checks.is_admin()
+    async def purge_messages_criteria(self, ctx, *, remove: str):
+        language = prefs.getPref(ctx.message.server, "language")
+        import datetime
+        weeks = datetime.datetime.now() - datetime.timedelta(days=13)
+
+        if ctx.message.channel.permissions_for(ctx.message.server.me).manage_messages:
+            def check(m):
+                return remove in m.content and not m.timestamp < weeks
+
+            deleted = await ctx.bot.purge_from(ctx.message.channel, limit=100, check=check)
+            await comm.message_user(ctx.message, _("{deleted} message(s) deleted", language).format(**{
+                "deleted": len(deleted)
+            }))
+        else:
+            await comm.message_user(ctx.message, _("0 message(s) deleted : permission denied", language))
+
+
+
+    @commands.command(pass_context=True)
+    @checks.is_admin()
     async def permissions(self, ctx):
         """Check permissions given to the bot. You'll need admin powers
         !permissions"""
