@@ -4,9 +4,9 @@ import json
 
 from cogs.utils import commons
 
-
+cache = False
 def getPref(server, pref):
-    if not hasattr(commons, "servers"):
+    if not cache or not hasattr(commons, "servers"):
         servers = JSONloadFromDisk("channels.json")
         commons.servers = servers
     else:
@@ -18,7 +18,7 @@ def getPref(server, pref):
 
 
 def setPref(server, pref, value=None, force=False):
-    if not hasattr(commons, "servers"):
+    if not cache or not hasattr(commons, "servers"):
         servers = JSONloadFromDisk("channels.json")
         commons.servers = servers
     else:

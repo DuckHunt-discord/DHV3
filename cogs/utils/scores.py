@@ -198,18 +198,18 @@ def delChannelTable(channel):
     table = _gettable(channel)
     table.drop()
 
-def convert():
-    import dataset
-    db_old = dataset.connect('sqlite:///scores.db')
-    db_new = dataset.connect('mysql://root:root@localhost/duckhunt?charset=utf8', engine_kwargs={"encoding":'utf8'})
-    i = 0
-    for table in list(set(db_old.tables) - set(db_new.tables)):
-        i+= 1
-        print("Working on {i}/{total}".format(i=i,total=len(list(set(db_old.tables) - set(db_new.tables)))))
-        print("|" + str(table))
-        try:
-            db_new[table].insert_many(db_old[table].all(), ensure=True)
-        except:
-            pass
+# def convert():
+#     import dataset
+#     db_old = dataset.connect('sqlite:///scores.db')
+#     db_new = dataset.connect('mysql://root:root@localhost/duckhunt?charset=utf8', engine_kwargs={"encoding":'utf8'})
+#     i = 0
+#     for table in list(set(db_old.tables) - set(db_new.tables)):
+#         i+= 1
+#         print("Working on {i}/{total}".format(i=i,total=len(list(set(db_old.tables) - set(db_new.tables)))))
+#         print("|" + str(table))
+#         try:
+#             db_new[table].insert_many(db_old[table].all(), ensure=True)
+#         except:
+#             pass
 
 #convert()

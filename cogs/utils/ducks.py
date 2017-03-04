@@ -106,7 +106,16 @@ async def spawn_duck(duck):
 
     chance = random.randint(0, 100)
     if chance <= prefs.getPref(duck["channel"].server, "super_ducks_chance"):
-        life = random.randint(prefs.getPref(duck["channel"].server, "super_ducks_minlife"), prefs.getPref(duck["channel"].server, "super_ducks_maxlife"))
+        minl = prefs.getPref(duck["channel"].server, "super_ducks_minlife")
+        maxl = prefs.getPref(duck["channel"].server, "super_ducks_maxlife")
+        if minl != maxl:
+            if maxl < minl:
+                maxl, minl = minl, maxl
+                comm.logwithinfos(duck["channel"], None, "Minl et maxl inversés")
+            life = random.randint(minl, maxl)
+        else:
+            life = minl
+
         duck["isSC"] = True
         duck["SCvie"] = life
         duck["level"] = life
