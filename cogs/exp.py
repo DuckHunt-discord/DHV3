@@ -595,9 +595,9 @@ class Exp:
         else:
             await comm.message_user(message, _(":money_with_wings: You are already insured.", language))
 
-    @shop.command(pass_context=True, name="19")
-    async def item19(self, ctx):
-        raise NotImplementedError
+    # @shop.command(pass_context=True, name="19")
+    # async def item19(self, ctx):
+    #    raise NotImplementedError
 
     @shop.command(pass_context=True, name="20")
     @checks.have_exp(8)
@@ -617,9 +617,9 @@ class Exp:
             "channel": message.channel
         })
 
-    @shop.command(pass_context=True, name="21")
-    async def item21(self, ctx):
-        raise NotImplementedError
+    # @shop.command(pass_context=True, name="21")
+    # async def item21(self, ctx):
+    #    raise NotImplementedError
 
     @shop.command(pass_context=True, name="22")
     @checks.have_exp(5)

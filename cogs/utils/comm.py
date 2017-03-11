@@ -43,7 +43,7 @@ async def message_user(message, toSend, forcePv=False):
             return await commons.bot.send_message(message.author, toSend)
         except discord.errors.Forbidden:
             try:
-                await commons.bot.send_message(message.channel, str(message.author.mention) + "403 Permission denied (can't send private messages to this user)")
+                await commons.bot.send_message(message.channel, str(message.author.mention) + " > 403 Permission denied (can't send private messages to this user)")
                 await logwithinfos_message(message, "Impossible to send private messages to this user")
             except:
                 await logwithinfos_message(message, "Impossible to send messages in the channel")

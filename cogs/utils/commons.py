@@ -56,7 +56,7 @@ def init():
         return string  # Fake definition pour la traduction
 
     def bool_(b):
-        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']
+        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh', 'oui', 'ok', 'on']
 
     defaultSettings = {
         "delete_commands"              : {
