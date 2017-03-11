@@ -136,7 +136,7 @@ def topScores(channel, stat="exp"):
 
 def giveBack(player, channel):
     table = _gettable(channel)
-    user = getChannelTable(channel).find_one(id_=player.id)
+    user = table.find_one(id_=player.id)
     if not "exp" in user or not user["exp"]:
         user["exp"] = 0
     table.upsert({
@@ -145,6 +145,7 @@ def giveBack(player, channel):
         "confisque"   : False,
         "lastGiveback": int(time.time())
     }, ['id_'])
+
 
 
 def getPlayerLevel(channel, player):
@@ -198,6 +199,13 @@ def delChannelTable(channel):
     table = _gettable(channel)
     table.drop()
 
+
+def freeze():
+    for table in db.tables:
+        print("ok")
+        dataset.freeze(db[table], format='json', filename='./bck/' + str(table) + '.json')
+
+
 # def convert():
 #     import dataset
 #     db_old = dataset.connect('sqlite:///scores.db')
@@ -213,3 +221,5 @@ def delChannelTable(channel):
 #             pass
 
 #convert()
+
+        # freeze()

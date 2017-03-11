@@ -207,11 +207,11 @@ class Meta:
 
     @commands.command(pass_context=True)
     async def wiki(self, ctx):
-        await comm.message_user(ctx.message, "https://api-d.com/duckhunt/index.php/")
+        await comm.message_user(ctx.message, "https://api-d.com/")
 
     @commands.command(pass_context=True)
     async def help(self, ctx):
-        await comm.message_user(ctx.message, _("The command list is on the wiki now ! https://api-d.com/duckhunt/index.php/", getPref(ctx.message.server, "language")))
+        await comm.message_user(ctx.message, _("Check out our new website ! http://api-d.com/command-list.html", getPref(ctx.message.server, "language")))
 
 def setup(bot):
     bot.add_cog(Meta(bot))

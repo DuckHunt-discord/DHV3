@@ -111,7 +111,7 @@ async def spawn_duck(duck):
         if minl != maxl:
             if maxl < minl:
                 maxl, minl = minl, maxl
-                comm.logwithinfos(duck["channel"], None, "Minl et maxl inversés")
+                await comm.logwithinfos(duck["channel"], None, "Minl and maxl swapped")
             life = random.randint(minl, maxl)
         else:
             life = minl

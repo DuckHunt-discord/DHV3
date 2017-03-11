@@ -254,7 +254,6 @@ if __name__ == '__main__':
     from cogs.utils import prefs, comm
     from cogs.utils import ducks
     from cogs.utils import checks
-    import api.api as api
 
     for extension in initial_extensions:
         try:
@@ -267,12 +266,12 @@ if __name__ == '__main__':
     # noinspection PyBroadException
     try:
 
-        bot.loop.create_task(api.apcom.kyk.start(port=5566))
+        # bot.loop.create_task(api.apcom.kyk.start(port=5566))
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:
         logger.warning("Shutdown in progress")
     except:
-        logger.exception("Unknown error, restarting")
+        logger.exception("Unknown error, restarting")  # No pls no no no
 
     finally:
         # noinspection PyBroadException

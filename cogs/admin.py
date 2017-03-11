@@ -97,6 +97,16 @@ class Admin:
 
     @commands.command(pass_context=True)
     @checks.is_owner()
+    async def dbtable(self, ctx):
+        if not prefs.getPref(ctx.message.server, "global_scores"):
+            await comm.message_user(ctx.message, str(ctx.message.server.id) + "-" + str(ctx.message.channel.id))
+        else:
+            await comm.message_user(ctx.message, str(ctx.message.server.id))
+
+
+
+    @commands.command(pass_context=True)
+    @checks.is_owner()
     async def serverlist(self, ctx, passed_prefs: str = ""):
         language = prefs.getPref(ctx.message.server, "language")
 
