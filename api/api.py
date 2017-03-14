@@ -40,7 +40,7 @@ async def guilds(ctx: HTTPRequestContext):
                 if not hasPlayers:
                     table = scores.getChannelTable(channel)
                     for member in table:
-                        if await apcom.is_player_check(member=member, isRow=True):
+                        if await apcom.is_player_check(member):
                             hasPlayers = True
                             break
 
@@ -62,7 +62,7 @@ async def guilds(ctx: HTTPRequestContext):
     return await apcom.prepare_resp(resp)
 
 @apcom.kyk.route("/guilds/([^/]+)/?")  # /guilds/server_id
-async def guild_info(ctx: HTTPRequestContext, server_id: str):
+async def guild(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
 
     server = commons.bot.get_server(server_id)
@@ -82,7 +82,7 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
                 if activated and channel.type == ChannelType.text:
                     table = scores.getChannelTable(channel)
                     for member in table:
-                        if await apcom.is_player_check(member=member, isRow=True):
+                        if await apcom.is_player_check(member):
                             channels.append({
                                                 "id": channel.id,
                                                 "name": channel.name
@@ -100,7 +100,7 @@ async def guild_info(ctx: HTTPRequestContext, server_id: str):
 
             table = scores.getChannelTable(next(iter(server.channels)))
             for member in table:
-                if await apcom.is_player_check(member=member, isRow=True):
+                if await apcom.is_player_check(member):
                     player = server.get_member(member['id_'])
 
                     players.append({
@@ -135,7 +135,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
 
                 table = scores.getChannelTable(channel)
                 for member in table:
-                    if await apcom.is_player_check(member=member, isRow=True):
+                    if await apcom.is_player_check(member):
                         player = server.get_member(member['id_'])
 
                         players.append({
@@ -160,68 +160,27 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
     return await apcom.prepare_resp(resp)
 
 
-@apcom.kyk.route("/guilds/([^/]+)/users/?")  # /guilds/server_id/users
-async def guild_users(ctx: HTTPRequestContext, server_id: str):
+@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
+async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id: str, user_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
 
     if server:
-        resp = {
-            "server_id": server_id,
-            "members"  : server.members
-        }
+        channel = server.get_channel(channel_id)
+        if channel:
+            activated = await apcom.is_channel_activated(channel)
+            if activated:
+                table = scores.getChannelTable(channel)
 
-        return await apcom.prepare_resp(resp)
+                player = table.find_one(id_=user_id)
+            else:
+                return await apcom.prepare_resp(None, 404, "Channel not activated.")
+        else:
+            return await apcom.prepare_resp(None, 404, "Channel not found.")
     else:
         return await apcom.prepare_resp(None, 404, "Guild not found.")
 
-
-@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
-async def guild_channel_users(ctx: HTTPRequestContext, server_id: str, channel_id: str, member_id: str):
-    await commons.bot.wait_until_ready()
-    server = commons.bot.get_server(server_id)
-
-    if not server:
-        resp = {}
-        code = 404
-        error_msg = "Guild not found on this bot"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    channel = server.get_channel(channel_id)
-    if not channel:
-        resp = {
-            "server_id": server_id
-        }
-        code = 404
-        error_msg = "Channel not found on this server"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    if not await apcom.is_channel_activated(channel):
-        resp = {
-            "server_id" : server_id,
-            "channel_id": channel_id
-        }
-        code = 404
-        error_msg = "DuckHunt is not enabled on this channel"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    member = server.get_member(member_id)
-
-    if not member:
-        resp = {
-            "server_id" : server_id,
-            "channel_id": channel_id
-        }
-        code = 404
-        error_msg = "User not found on this server"
-
-        return await apcom.prepare_resp(resp, code=code, error_msg=error_msg)
-
-    resp = await apcom.get_user_scores(channel, member)
-    return await apcom.prepare_resp(resp)
+    return await apcom.prepare_resp(player)
 
 
 ############

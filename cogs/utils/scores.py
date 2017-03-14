@@ -13,20 +13,19 @@ from cogs.utils import prefs
 from cogs.utils.commons import _
 from . import commons
 
+#db = sqlite3.connect('scores.db')
+#sql = conn.cursor()
 db = dataset.connect('sqlite:///scores.db')
 #db = dataset.connect('mysql://root:root@localhost/duckhunt?charset=utf8', engine_kwargs={"encoding":'utf8'})
 
-
-def _gettable(channel):
+def getChannelTable(channel):
     server = channel.server
     if prefs.getPref(server, "global_scores"):
         return db[server.id]
+        #return sql.execute('SELECT * FROM ?', (server.id,))
     else:
         return db[server.id + "-" + channel.id]
-
-def getChannelTable(channel):
-    table = _gettable(channel)
-    return table
+        #return sql.execute('SELECT * FROM ?-?', (server.id, channel.id))
 
 
 def updatePlayerInfo(channel, info):
@@ -43,6 +42,7 @@ def addToStat(channel, player, stat, value, announce=True):
         "id_" : player.id,
         stat  : int(getStat(channel, player, stat)) + value
     }
+
     updatePlayerInfo(channel, dict_)
 
     if stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce:
@@ -77,9 +77,6 @@ def addToStat(channel, player, stat, value, announce=True):
         except:
             commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
             commons.bot.loop.create_task(commons.bot.send_message(channel, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language)))
-
-
-
 
 
 def setStat(channel, player, stat, value):
@@ -135,17 +132,18 @@ def topScores(channel, stat="exp"):
 
 
 def giveBack(player, channel):
-    table = _gettable(channel)
+    table = getChannelTable(channel)
     user = table.find_one(id_=player.id)
+
     if not "exp" in user or not user["exp"]:
         user["exp"] = 0
+
     table.upsert({
         "id_"         : user["id_"],
         "chargeurs"   : getPlayerLevelWithExp(user["exp"])["chargeurs"],
         "confisque"   : False,
         "lastGiveback": int(time.time())
     }, ['id_'])
-
 
 
 def getPlayerLevel(channel, player):
@@ -196,7 +194,7 @@ def delServerTables(server=None, id=None):
 
 
 def delChannelTable(channel):
-    table = _gettable(channel)
+    table = getChannelTable(channel)
     table.drop()
 
 
