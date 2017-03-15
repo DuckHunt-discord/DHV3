@@ -320,7 +320,7 @@ class Exp:
     @shop.command(pass_context=True)
     async def list(self, ctx):
         language = prefs.getPref(ctx.message.server, "language")
-        await comm.message_user(ctx.message, _("The list of items is available here : https://api-d.com/duckhunt/index.php/Shop", language))
+        await comm.message_user(ctx.message, _("The list of items is available here : http://api-d.com/shop-items.html", language))
 
     @shop.command(pass_context=True, name="1")
     @checks.have_exp(7)

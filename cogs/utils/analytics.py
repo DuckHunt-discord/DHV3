@@ -74,7 +74,9 @@ async def update_users(users_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = 0
     for server in commons.bot.servers:
-        y += server.member_count
+        for member in server.members:
+            if not member.bot:
+                y += 1
     users_graph.write(dict(x=x, y=y))
     commons.logger.debug("Updating users analytics")
 
