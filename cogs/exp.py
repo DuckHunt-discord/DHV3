@@ -133,7 +133,7 @@ class Exp:
             ratio = _("No duck killed", language)
         embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "canardsTues")))
         embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "tirsManques")))
-        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "tirsSansCanards")))
+        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "shoots_no_duck")))
         embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
         embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
         embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
