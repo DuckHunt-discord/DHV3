@@ -5,10 +5,9 @@
 
 """
 import json
-
 import discord
-from kyoukai import Kyoukai
 
+from kyoukai import Kyoukai
 from cogs.utils import prefs, scores
 
 global kyk, API_VERSION
@@ -19,10 +18,13 @@ async def is_player_check(member, channel=None):
     if isinstance(member, discord.Member):
         member = scores.getChannelTable(channel).find_one(id_=member.id)
 
-    if member['canardsTues'] > 0 or member['superCanardsTues'] > 0 or member['tirsManques'] > 0 or member['shoots_no_duck'] > 0:
-        return True
-    else:
-        return False
+    try:
+        if member['canardsTues'] > 0 or member['superCanardsTues'] > 0 or member['tirsManques'] > 0 or member['tirsSansCanards'] > 0 or member['shoots_no_duck'] > 0:
+            return True
+        else:
+            return False
+    except:
+        pass
 
 async def is_channel_activated(channel):
     servers = prefs.JSONloadFromDisk("channels.json")

@@ -171,8 +171,10 @@ async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id
             activated = await apcom.is_channel_activated(channel)
             if activated:
                 table = scores.getChannelTable(channel)
+                player = server.get_member(user_id)
 
-                player = table.find_one(id_=user_id)
+                resp = table.find_one(id_=user_id)
+                resp['avatar'] = player.avatar_url or player.default_avatar_url
             else:
                 return await apcom.prepare_resp(None, 404, "Channel not activated.")
         else:
@@ -180,7 +182,7 @@ async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id
     else:
         return await apcom.prepare_resp(None, 404, "Guild not found.")
 
-    return await apcom.prepare_resp(player)
+    return await apcom.prepare_resp(resp)
 
 
 ############
