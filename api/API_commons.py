@@ -19,7 +19,7 @@ async def is_player_check(member, channel=None):
         member = scores.getChannelTable(channel).find_one(id_=member.id)
 
     try:
-        if member['canardsTues'] > 0 or member['superCanardsTues'] > 0 or member['tirsManques'] > 0 or member['tirsSansCanards'] > 0 or member['shoots_no_duck'] > 0:
+        if member['shoots_fired'] > 0:
             return True
         else:
             return False

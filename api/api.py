@@ -9,7 +9,6 @@
 #
 #   GUILDS
 #
-#   Le premier qui me dit que mon code est laid, il se prend une paire de claques :D
 ############
 
 # TODO: vérifier la validité des serv/chan ids à chaque fois
@@ -20,6 +19,47 @@ from collections import defaultdict
 
 import api.API_commons as apcom
 from cogs.utils import commons, prefs, scores
+
+async def list_members(server_id, channel_id):
+    server = commons.bot.get_server(server_id)
+
+    if server:
+        channel = server.get_channel(channel_id)
+        if channel:
+            activated = await apcom.is_channel_activated(channel)
+
+            if activated or prefs.getPref(server, "global_scores"):
+                players = []
+                table = scores.getChannelTable(channel)
+
+                for member in table:
+                    if await apcom.is_player_check(member):
+                        try:
+                            player = server.get_member(member['id_'])
+
+                            players.append({
+                                "id": player.id,
+                                "name": player.display_name,
+                                "avatar": player.avatar_url or player.default_avatar_url
+                            })
+                        except:
+                            pass
+            else:
+                return None # Channel not activated
+        else:
+            return None # Channel not found
+    else:
+        return None # Guild not found
+
+    players.sort(key=lambda x: x['name'])
+
+    data = {
+        "server": server,
+        "channel": channel,
+        "players": players
+    }
+
+    return data
 
 @apcom.kyk.route("/guilds/?")
 async def guilds(ctx: HTTPRequestContext):
@@ -70,7 +110,6 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
     if server:
         player_count = 0
         channels = []
-        players = []
 
         global_scores = prefs.getPref(server, "global_scores")
 
@@ -96,24 +135,16 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
                 "global_scores": global_scores
             }
         else:
-            players = []
+            data = await list_members(server_id, server_id)
 
-            table = scores.getChannelTable(next(iter(server.channels)))
-            for member in table:
-                if await apcom.is_player_check(member):
-                    player = server.get_member(member['id_'])
-
-                    players.append({
-                        "id": player.id,
-                        "name": player.display_name,
-                        "avatar": player.avatar_url or player.default_avatar_url
-                    })
-
-            resp = {
-                "server": {"id": server.id, "name": server.name},
-                "players": players,
-                "global_scores": global_scores
-            }
+            if data:
+                resp = {
+                    "server": {"id": data['server'].id, "name": data['server'].name},
+                    "players": data['players'],
+                    "global_scores": global_scores
+                }
+            else:
+                return await apcom.prepare_resp(None, 404, "Error.")
 
         return await apcom.prepare_resp(resp)
     else:
@@ -124,38 +155,15 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
 async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
     await commons.bot.wait_until_ready()
 
-    server = commons.bot.get_server(server_id)
+    data = await list_members(server_id, channel_id)
 
-    if server:
-        channel = server.get_channel(channel_id)
-        if channel:
-            activated = await apcom.is_channel_activated(channel)
-            if activated:
-                players = []
-
-                table = scores.getChannelTable(channel)
-                for member in table:
-                    if await apcom.is_player_check(member):
-                        player = server.get_member(member['id_'])
-
-                        players.append({
-                            "id": player.id,
-                            "name": player.display_name,
-                            "avatar": player.avatar_url or player.default_avatar_url
-                        })
-            else:
-                return await apcom.prepare_resp(None, 404, "Channel not activated.")
-        else:
-            return await apcom.prepare_resp(None, 404, "Channel not found.")
+    if data:
+        resp = {
+            "name": data['channel'].name,
+            "players": data['players']
+        }
     else:
-        return await apcom.prepare_resp(None, 404, "Guild not found.")
-
-    players.sort(key=lambda x: x['name'])
-
-    resp = {
-        "name": channel.name,
-        "players": players
-    }
+        return await apcom.prepare_resp(None, 404, "Error.")
 
     return await apcom.prepare_resp(resp)
 
