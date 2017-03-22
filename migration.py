@@ -1,16 +1,24 @@
 import sqlite3
-import dataset
 
 print("Correction des données...")
 
 # Fix données
-db = dataset.connect("sqlite:///scores.db")
+db = sqlite3.connect("scores.db")
+db.isolation_level = None
+db.row_factory = sqlite3.Row
+sql = db.cursor()
 
-db.begin()
+tables = sql.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+
 try:
-    for table in db.tables:
-        for user in db[table]:
-            db[table].update(dict(id_=user['id_'], \
+    sql.execute("BEGIN")
+
+    for table in tables:
+        users = sql.execute("SELECT * FROM {0}".format(table[0])).fetchall()
+        for user in users:
+            sql.execute("UPDATE '{table}' SET shoots_fired='{shoots_fired}', shoots_missed='{shoots_missed}', shoots_no_duck='{shoots_no_duck}', tirsManques='{tirsManques}', tirsSansCanards='{tirsSansCanards}' WHERE id_='{id_}'".format( \
+                id_=user[0], \
+                table=table[0], \
                 shoots_fired=((user.get('tirsManques', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0) \
                     + (user.get('shoots_no_duck', 0) or 0) \
@@ -21,28 +29,21 @@ try:
                 shoots_no_duck=((user.get('shoots_no_duck', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0)), \
                 tirsManques=None, \
-                tirsSansCanards=None), ['id_'])
+                tirsSansCanards=None))
+            print("Données de l'utilisateur {0} corrigées sur la table {1}.".format(user['name'], table[0]))
+        print("Données de la table {0} corrigées.".format(table[0]))
 
-            print("Données de l'utilisateur {0} corrigées sur la table {1}.".format(user['name'], table))
-        print("Données de la table {} corrigées.".format(user['name'], table))
+    print("Veuillez patienter...")
+    sql.execute("COMMIT")
 except:
     print("Erreur !")
-    db.rollback()
-
-print("Veuillez patienter...")
-db.commit()
+    sql.execute("ROLLBACK")
 
 print("Correction des données terminée.")
 print("")
 print("Correction des colonnes...")
 
 # Fix colonnes
-db = sqlite3.connect("scores.db")
-db.isolation_level = None
-sql = db.cursor()
-
-tables = sql.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
-
 renameColumns = {
     'superCanardsTues': 'killed_super_ducks',
     'canardsTues':            'killed_ducks',
@@ -64,6 +65,7 @@ try:
             print("{0} renommé en {1} sur {2}.".format(old, new, table[0]))
 
     sql.execute("PRAGMA writable_schema=0")
+    print("Veuillez patienter...")
     sql.execute("COMMIT")
 except:
     print("Erreur !")
