@@ -47,7 +47,7 @@ class Exp:
     @checks.is_activated_here()
     async def resetbesttime(self, ctx):
         message = ctx.message
-        scores.setStat(message.channel, message.author, "meilleurTemps", prefs.getPref(message.server, "time_before_ducks_leave"))
+        scores.setStat(message.channel, message.author, "best_time", prefs.getPref(message.server, "time_before_ducks_leave"))
         await comm.message_user(message, _(":ok: Your best time was reset.", prefs.getPref(message.server, "language")))
 
     @commands.command(pass_context=True)
@@ -127,14 +127,14 @@ class Exp:
 
         # embed.timestamp = datetime.datetime.now()
 
-        if scores.getStat(message.channel, target, "canardsTues") > 0:
-            ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "canardsTues"), 4)
+        if scores.getStat(message.channel, target, "killed_ducks") > 0:
+            ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "killed_ducks"), 4)
         else:
             ratio = _("No duck killed", language)
-        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "canardsTues")))
-        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "tirsManques")))
+        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "killed_ducks")))
+        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "shoots_missed")))
         embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "shoots_no_duck")))
-        embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
+        embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
         embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
         embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
         embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
@@ -151,8 +151,8 @@ class Exp:
             embed.add_field(name=_("Object : clover {exp} exp", language).format(**{
                 "exp": scores.getStat(message.channel, target, "trefle_exp", default=0)
             }), value=str(self.objectTD(message.channel, target, language, "trefle")))
-        if scores.getStat(message.channel, target, "munExplo", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "munExplo")))
+        if scores.getStat(message.channel, target, "explosive_ammo", default=0) > int(time.time()):
+            embed.add_field(name=_("Object : explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "explosive_ammo")))
         elif scores.getStat(message.channel, target, "ap_ammo", default=0) > int(time.time()):
             embed.add_field(name=_("Object : AP ammo", language), value=str(self.objectTD(message.channel, target, language, "ap_ammo")))
         if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
@@ -184,11 +184,11 @@ class Exp:
             for joueur in scores.topScores(ctx.message.channel):
                 i += 1
 
-                if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False):
-                    joueur["canardsTues"] = "AUCUN !"
+                if (not "killed_ducks" in joueur) or (joueur["killed_ducks"] == 0) or ("killed_ducks" in joueur == False):
+                    joueur["killed_ducks"] = "AUCUN !"
                 if joueur["exp"] is None:
                     joueur["exp"] = 0
-                x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["canardsTues"]])
+                x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["killed_ducks"]])
 
             await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
                 "channel_name": ctx.message.channel.name,
@@ -236,8 +236,8 @@ class Exp:
 
                         for joueur in scores_to_process:
                             i += 1
-                            if (not "canardsTues" in joueur) or (joueur["canardsTues"] == 0) or ("canardTues" in joueur == False) or joueur["canardsTues"] is None:
-                                joueur["canardsTues"] = _("None !", language)
+                            if (not "killed_ducks" in joueur) or (joueur["killed_ducks"] == 0) or ("killed_ducks" in joueur == False) or joueur["killed_ducks"] is None:
+                                joueur["killed_ducks"] = _("None !", language)
                             if joueur["exp"] is None:
                                 joueur["exp"] = 0
 
@@ -254,7 +254,7 @@ class Exp:
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
                             exp_list += str(joueur["exp"]) + "\n\n"
-                            ducks_killed_list += str(joueur["canardsTues"]) + "\n\n"
+                            ducks_killed_list += str(joueur["killed_ducks"]) + "\n\n"
 
                         embed.add_field(name=_("Player", language), value=players_list, inline=True)
                         embed.add_field(name=_("Experience points", language), value=exp_list, inline=True)
@@ -376,9 +376,9 @@ class Exp:
         !shop 4"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "munExplo", default=0) < time.time():
+        if scores.getStat(message.channel, message.author, "explosive_ammo", default=0) < time.time():
             await comm.message_user(message, _(":money_with_wings: You purchase explosive ammo for your weapon. For the next 24 hours, you will deal triple damage to ducks.", language))
-            scores.setStat(message.channel, message.author, "munExplo", int(time.time() + DAY))
+            scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -25)
 
         else:
@@ -587,9 +587,9 @@ class Exp:
         !shop 18"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "AssuranceVie", default=0) < int(time.time()):
+        if scores.getStat(message.channel, message.author, "life_insurance", default=0) < int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You buy a life insurence for a week for 10 exp. If you get killed, you will earn half the level of the killer in exp", language))
-            scores.setStat(message.channel, message.author, "AssuranceVie", int(time.time()) + DAY * 7)
+            scores.setStat(message.channel, message.author, "life_insurance", int(time.time()) + DAY * 7)
             scores.addToStat(message.channel, message.author, "exp", -10)
 
         else:

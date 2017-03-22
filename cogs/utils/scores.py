@@ -109,10 +109,10 @@ def topScores(channel, stat="exp"):
     table = getChannelTable(channel)
     players_list = []
     for player in table.all():
-        if ((not "canardsTues" in player) or (player["canardsTues"] == 0) or player["canardsTues"] is None) and (not "exp" in player) or (player["exp"] == 0 or player["exp"] is None):
+        if ((not "killed_ducks" in player) or (player["killed_ducks"] == 0) or player["killed_ducks"] is None) and (not "exp" in player) or (player["exp"] == 0 or player["exp"] is None):
             pass
         else:
-            # print(str(player["name"]) + " | " + str(player["exp"]) + "|" +  str(player["canardsTues"]))
+            # print(str(player["name"]) + " | " + str(player["exp"]) + "|" +  str(player["killed_ducks"]))
             players_list.append(player)
 
 

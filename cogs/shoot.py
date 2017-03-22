@@ -152,8 +152,8 @@ class Shoot:
             if random.randint(1, 100) < prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
 
                 scores.addToStat(message.channel, message.author, "exp", -3)
-                scores.addToStat(message.channel, message.author, "tirsManques", 1)
-                scores.addToStat(message.channel, message.author, "chasseursTues", 1)
+                scores.addToStat(message.channel, message.author, "shoots_missed", 1)
+                scores.addToStat(message.channel, message.author, "killed_players", 1)
                 scores.setStat(message.channel, message.author, "confisque", True)
 
                 victim = random.choice(list(message.server.members))
@@ -165,7 +165,7 @@ class Shoot:
                     await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a little before shooting the next time, maybe ? [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language))
                     scores.addToStat(message.channel, message.author, "self_killing_shoots", 1)
 
-                if scores.getStat(message.channel, victim, "AssuranceVie", default=0) > int(time.time()):
+                if scores.getStat(message.channel, victim, "life_insurance", default=0) > int(time.time()):
                     exp = int(scores.getPlayerLevel(message.channel, message.author)["niveau"] / 2)
                     scores.addToStat(message.channel, victim, "exp", exp)
                     await self.bot.send_message(message.channel, str(victim.mention) + _(" > You won {exp} with your life insurance", language).format(**{
@@ -175,12 +175,11 @@ class Shoot:
                 return
             else:  # Missed and none was shot
                 scores.addToStat(message.channel, message.author, "exp", -1)
-                scores.addToStat(message.channel, message.author, "tirsManques", 1)
-                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
                 scores.addToStat(message.channel, message.author, "shoots_missed", 1)
+                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
                 return
 
-        if scores.getStat(message.channel, message.author, "munExplo", default=0) > int(time.time()):
+        if scores.getStat(message.channel, message.author, "explosive_ammo", default=0) > int(time.time()):
             current_duck["SCvie"] -= 3
             vieenmoins = 3
         elif scores.getStat(message.channel, message.author, "ap_ammo", default=0) > int(time.time()):
@@ -198,7 +197,7 @@ class Shoot:
             except ValueError:
                 await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [exp -1]", language))
                 scores.addToStat(message.channel, message.author, "exp", -1)
-                scores.addToStat(message.channel, message.author, "tirsManques", 1)
+                scores.addToStat(message.channel, message.author, "shoots_missed", 1)
                 scores.addToStat(message.channel, message.author, "shoots_almost_killed", 1)
                 return
 
@@ -212,19 +211,19 @@ class Shoot:
             exp = int(exp)
             now = time.time()
             scores.addToStat(message.channel, message.author, "exp", exp)
-            scores.addToStat(message.channel, message.author, "canardsTues", 1)
+            scores.addToStat(message.channel, message.author, "killed_ducks", 1)
             if current_duck["level"] > 1:
-                scores.addToStat(message.channel, message.author, "superCanardsTues", 1)
+                scores.addToStat(message.channel, message.author, "killed_super_ducks", 1)
 
             await self.sendBangMessage(message, _(":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
                 "time"        : round(now - current_duck["time"], 4),
-                "total"       : scores.getStat(message.channel, message.author, "canardsTues"),
+                "total"       : scores.getStat(message.channel, message.author, "killed_ducks"),
                 "channel"     : message.channel,
                 "exp"         : exp,
-                "supercanards": scores.getStat(message.channel, message.author, "superCanardsTues")
+                "supercanards": scores.getStat(message.channel, message.author, "killed_super_ducks")
             }))
-            if scores.getStat(message.channel, message.author, "meilleurTemps", default=prefs.getPref(message.server, "time_before_ducks_leave")) > int(now - current_duck["time"]):
-                scores.setStat(message.channel, message.author, "meilleurTemps", round(now - current_duck["time"], 6))
+            if scores.getStat(message.channel, message.author, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave")) > int(now - current_duck["time"]):
+                scores.setStat(message.channel, message.author, "best_time", round(now - current_duck["time"], 6))
             if prefs.getPref(message.server, "users_can_find_objects"):
                 if random.randint(0, 100) < 25:
                     await comm.message_user(message, _("While searching the bushes around the duck, you found {inutilitee}", language).format(**{
