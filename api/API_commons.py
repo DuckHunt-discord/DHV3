@@ -5,9 +5,10 @@
 
 """
 import json
-import discord
 
+import discord
 from kyoukai import Kyoukai
+
 from cogs.utils import prefs, scores
 
 global kyk, API_VERSION
@@ -37,7 +38,7 @@ async def is_channel_activated(channel):
     return activated
 
 
-async def prepare_resp(resp_payload, code=200, error_msg="OK"):
+async def prepare_resp(resp_payload, code=200):
     return json.dumps(resp_payload), code, {
         "Content-Type": "application/json"
     }
