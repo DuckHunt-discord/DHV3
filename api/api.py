@@ -144,11 +144,11 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
                     "global_scores": global_scores
                 }
             else:
-                return await apcom.prepare_resp(None, 404, "Error.")
+                return await apcom.prepare_resp(None, 404) # Error
 
         return await apcom.prepare_resp(resp)
     else:
-        return await apcom.prepare_resp(None, 404, "Guild not found.")
+        return await apcom.prepare_resp(None, 404) # Guild not found
 
 
 @apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channels/channel_id
@@ -163,7 +163,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
             "players": data['players']
         }
     else:
-        return await apcom.prepare_resp(None, 404, "Error.")
+        return await apcom.prepare_resp(None, 404) # Error
 
     return await apcom.prepare_resp(resp)
 
@@ -184,11 +184,11 @@ async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id
                 resp = table.find_one(id_=user_id)
                 resp['avatar'] = player.avatar_url or player.default_avatar_url
             else:
-                return await apcom.prepare_resp(None, 404, "Channel not activated.")
+                return await apcom.prepare_resp(None, 404) # Channel not activated
         else:
-            return await apcom.prepare_resp(None, 404, "Channel not found.")
+            return await apcom.prepare_resp(None, 404) # Channel not found
     else:
-        return await apcom.prepare_resp(None, 404, "Guild not found.")
+        return await apcom.prepare_resp(None, 404) # Guild not found
 
     return await apcom.prepare_resp(resp)
 

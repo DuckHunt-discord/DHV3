@@ -4,15 +4,16 @@ import logging
 def dictrow(row):
     return dict(zip(row.keys(), row))
 
-print("Correction des données...")
-
-# Fix données
+# Fix data
 db = sqlite3.connect("scores.db")
 db.isolation_level = None
 db.row_factory = sqlite3.Row
 sql = db.cursor()
 
 tables = sql.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+
+todo = len(tables)
+done = 0
 
 columns = [
     'shoots_fired',
@@ -21,6 +22,8 @@ columns = [
     'tirsManques',
     'tirsSansCanards'
 ]
+
+print("Correcting data... ({0}/{1})".format(done, todo))
 
 sql.execute("BEGIN")
 for table in tables:
@@ -38,7 +41,6 @@ try:
         users = sql.execute("SELECT * FROM '{0}'".format(table['name'])).fetchall()
         for user in users:
             user = dictrow(user)
-            print(table['name'])
             sql.execute("UPDATE '{0}' SET shoots_fired=:shoots_fired, shoots_missed=:shoots_missed, shoots_no_duck=:shoots_no_duck, tirsManques=NULL, tirsSansCanards=NULL WHERE id_=:id_".format(table['name']), { \
                 'shoots_fired': ((user.get('tirsManques', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0) \
@@ -50,20 +52,19 @@ try:
                 'shoots_no_duck': ((user.get('shoots_no_duck', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0)), \
                 'id_': user['id_']})
-            print("Données de l'utilisateur {0} corrigées sur la table {1}.".format(user['name'], table[0]))
-        print("Données de la table {0} corrigées.".format(table[0]))
 
-    print("Veuillez patienter...")
+        done += 1
+        print("Correcting data... ({0}/{1})".format(done, todo))
+
     sql.execute("COMMIT")
 except:
-    logging.exception("Erreur !")
+    logging.exception("Error !")
     sql.execute("ROLLBACK")
 
-print("Correction des données terminée.")
-print("")
-print("Correction des colonnes...")
+done = 0
+print("\nData corrected.\n\nCorrecting columns... ({0}/{1})".format(done, todo))
 
-# Fix colonnes
+# Fix columns
 renameColumns = {
     'superCanardsTues': 'killed_super_ducks',
     'canardsTues':            'killed_ducks',
@@ -82,17 +83,15 @@ try:
     for table in tables:
         for old, new in renameColumns.items():
             sql.execute("UPDATE sqlite_master SET SQL=REPLACE(SQL, '{0}', '{1}') WHERE name='{2}'".format(old, new, table[0]))
-            print("{0} renommé en {1} sur {2}.".format(old, new, table[0]))
+        done += 1
+        print("Correcting columns... ({0}/{1})".format(done, todo))
 
     sql.execute("PRAGMA writable_schema=0")
-    print("Veuillez patienter...")
     sql.execute("COMMIT")
 except:
-    print("Erreur !")
+    logging.exception("Error !")
     sql.execute("ROLLBACK")
 
-print("Correction des colonnes terminée.")
-print("")
-print("Base de données corrigée ! Analyse...")
+print("\nColumns corrected.\n\nAnalyzing database...")
 sql.execute('ANALYZE')
-print("Analyse terminée.")
+print("Analyze finished.\n\nDatabase migrated !")
