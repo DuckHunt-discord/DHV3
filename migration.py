@@ -1,4 +1,8 @@
 import sqlite3
+import logging
+
+def dictrow(row):
+    return dict(zip(row.keys(), row))
 
 print("Correction des données...")
 
@@ -10,33 +14,49 @@ sql = db.cursor()
 
 tables = sql.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
 
+columns = [
+    'shoots_fired',
+    'shoots_missed',
+    'shoots_no_duck',
+    'tirsManques',
+    'tirsSansCanards'
+]
+
+sql.execute("BEGIN")
+for table in tables:
+    for column in columns:
+        try:
+            sql.execute("ALTER TABLE '{0}' ADD COLUMN {1}".format(table['name'], column))
+        except:
+            pass
+sql.execute("COMMIT")
+
 try:
     sql.execute("BEGIN")
 
     for table in tables:
-        users = sql.execute("SELECT * FROM {0}".format(table[0])).fetchall()
+        users = sql.execute("SELECT * FROM '{0}'".format(table['name'])).fetchall()
         for user in users:
-            sql.execute("UPDATE '{table}' SET shoots_fired='{shoots_fired}', shoots_missed='{shoots_missed}', shoots_no_duck='{shoots_no_duck}', tirsManques='{tirsManques}', tirsSansCanards='{tirsSansCanards}' WHERE id_='{id_}'".format( \
-                id_=user[0], \
-                table=table[0], \
-                shoots_fired=((user.get('tirsManques', 0) or 0) \
+            user = dictrow(user)
+            print(table['name'])
+            sql.execute("UPDATE '{0}' SET shoots_fired=:shoots_fired, shoots_missed=:shoots_missed, shoots_no_duck=:shoots_no_duck, tirsManques=NULL, tirsSansCanards=NULL WHERE id_=:id_".format(table['name']), { \
+                'shoots_fired': ((user.get('tirsManques', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0) \
                     + (user.get('shoots_no_duck', 0) or 0) \
                     + (user.get('canardsTues', 0) or 0) \
                     + (user.get('shoots_harmed_duck', 0) or 0) \
                     + (user.get('shoots_frightened', 0) or 0)), \
-                shoots_missed=(user.get('tirsManques', 0) or 0), \
-                shoots_no_duck=((user.get('shoots_no_duck', 0) or 0) \
+                'shoots_missed': (user.get('tirsManques', 0) or 0), \
+                'shoots_no_duck': ((user.get('shoots_no_duck', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0)), \
-                tirsManques=None, \
-                tirsSansCanards=None))
+                'id_': user['id_']})
             print("Données de l'utilisateur {0} corrigées sur la table {1}.".format(user['name'], table[0]))
         print("Données de la table {0} corrigées.".format(table[0]))
 
     print("Veuillez patienter...")
     sql.execute("COMMIT")
 except:
-    print("Erreur !")
+    logging.exception("Erreur !")
     sql.execute("ROLLBACK")
 
 print("Correction des données terminée.")

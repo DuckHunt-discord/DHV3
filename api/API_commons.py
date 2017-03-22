@@ -5,10 +5,9 @@
 
 """
 import json
-
 import discord
-from kyoukai import Kyoukai
 
+from kyoukai import Kyoukai
 from cogs.utils import prefs, scores
 
 global kyk, API_VERSION
