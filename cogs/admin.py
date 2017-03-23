@@ -112,7 +112,7 @@ class Admin:
 
         x = PrettyTable()
         args_ = passed_prefs.split(" ")
-        x._set_field_names([_("Name", language), _("Invitation", language), _("Number of enabled channels", language), _("Number of connected users", language), _("Ducks per day", language), _("Number of unneeded permissions", language), _("Number of needed permissions", language)])
+        x._set_field_names([_("Name", language), _("Invitation", language), _("Server ID", language), _("Number of enabled channels", language), _("Number of connected users", language), _("Ducks per day", language), _("Number of unneeded permissions", language), _("Number of needed permissions", language)])
         x.reversesort = True
 
         tmp = await self.bot.send_message(ctx.message.channel, str(ctx.message.author.mention) + _(" > En cours", language))
@@ -150,7 +150,7 @@ class Admin:
                     permissions = channel.permissions_for(server.me)
                     if permissions.create_instant_invite:
                         try:
-                            invite = await self.bot.create_invite(channel, max_age=10 * 60)
+                            invite = await self.bot.create_invite(channel, max_age=120 * 60)
                             invite = invite.url
                         except:
                             invite = ""
@@ -161,7 +161,7 @@ class Admin:
             except KeyError:  # Pas de channels ou une autre merde dans le genre ?
                 channels = "0"
 
-            x.add_row([server.name, invite, channels + "/" + str(len(server.channels)), server.member_count, prefs.getPref(server, "ducks_per_day"), permEnPlus, permEnMoins])
+            x.add_row([server.name, invite, str(server.id), channels + "/" + str(len(server.channels)), server.member_count, prefs.getPref(server, "ducks_per_day"), permEnPlus, permEnMoins])
 
         await comm.message_user(ctx.message, "```\n" + x.get_string(sortby=_("Number of connected users", language)) + "\n```")
 
@@ -226,7 +226,7 @@ class Admin:
         language = prefs.getPref(ctx.message.server, "language")
         await comm.message_user(ctx.message, _("Starting the broadcast", language))
         await comm.logwithinfos_ctx(ctx, "Broadcast started")
-        for channel in commons.ducks_planned.keys():
+        for channel in list(commons.ducks_planned.keys()):
             try:
                 await self.bot.send_message(channel, bc)
             except:
