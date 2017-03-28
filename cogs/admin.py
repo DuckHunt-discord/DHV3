@@ -240,7 +240,7 @@ class Admin:
     async def send_message(self, ctx, server_name: str, channel_name: str, *, message: str):
         language = prefs.getPref(ctx.message.server, "language")
 
-        await self.bot.send_message(discord.utils.find(lambda m: m.name == channel_name, discord.utils.find(lambda m: m.name == server_name, self.bot.servers).channels), message)
+        await self.bot.send_message(discord.utils.find(lambda m: m.name == channel_name, discord.utils.find(lambda m: m.name == server_name or str(m.id) == str(server_name), self.bot.servers).channels), message)
         await comm.message_user(ctx.message, _("Message ({message}) sent to {server} #{channel} ", language).format(message=message, server=server_name, channel=channel_name))
 
 
