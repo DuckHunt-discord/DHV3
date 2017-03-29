@@ -65,7 +65,7 @@ class ServerAdmin:
             await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.",  prefs.getPref(ctx.message.server, "language")))
             return
         await comm.logwithinfos_ctx(ctx, "[giveexp] Giving " + str(exp) + " exp points to " + target.mention)
-        await comm.message_user(ctx.message, _(":ok:, he now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
+        await comm.message_user(ctx.message, _(":ok:, they now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
             "newexp": scores.getStat(ctx.message.channel, target, "exp")
         }))
 
@@ -342,7 +342,7 @@ class ServerAdmin:
         """!settings list"""
         language = prefs.getPref(ctx.message.server, "language")
 
-        await comm.message_user(ctx.message, _("List of preferences is available on the wiki : https://api-d.com/duckhunt/index.php/Configuration", language))
+        await comm.message_user(ctx.message, _("List of preferences is available on the new website : https://api-d.com/bot-settings.html", language))
 
     @settings.command(pass_context=True, name="modified")
     async def listm(self, ctx):
