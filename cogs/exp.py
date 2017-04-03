@@ -29,15 +29,19 @@ class Exp:
     def objectTD(self, channel, target, language, object):
         date_expiration = datetime.datetime.fromtimestamp(scores.getStat(channel, target, object, default=0))
         td = date_expiration - datetime.datetime.now()
-        return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(**{
+        return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language). \
+            format(**{
             "date"        : date_expiration.strftime(_('%m/%d at %H:%M:%S', language)),
-            "dans_jours"  : _("{dans} days ").format(**{
+            "dans_jours"  : _("{dans} days ", language).
+                   format(**{
                 "dans": td.days
             }) if td.days else "",
-            "dans_heures" : _("{dans} hours").format(**{
+            "dans_heures" : _("{dans} hours", language).
+                   format(**{
                 "dans": td.seconds // 3600
             }),
-            "dans_minutes": _("{dans} minutes").format(**{
+            "dans_minutes": _("{dans} minutes", language).
+                   format(**{
                 "dans": (td.seconds // 60) % 60
             })
         })

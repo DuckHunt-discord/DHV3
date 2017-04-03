@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-02-19 14:46-0500\n"
-"PO-Revision-Date: 2017-02-19 14:48-0500\n"
+"POT-Creation-Date: 2017-03-29 09:52+0200\n"
+"PO-Revision-Date: 2017-03-29 10:03+0200\n"
 "Last-Translator: Arthur Jojo <jovart.arthur@gmail.com>, 2017\n"
 "Language-Team: French (France) (https://www.transifex.com/none-441/"
 "teams/70749/fr_FR/)\n"
@@ -96,48 +96,52 @@ msgstr ":x: un argument requis manquant."
 msgid ":x: Bad argument provided. "
 msgstr ":x: mauvais argument fourni."
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
 msgid "Name"
 msgstr "nom"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
 msgid "Invitation"
 msgstr "Invitation"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
+msgid "Server ID"
+msgstr "Numéro du serveur"
+
+#: cogs/admin.py:115
 msgid "Number of enabled channels"
 msgstr "Nombre de canaux actifs"
 
-#: cogs/admin.py:105 cogs/admin.py:156
+#: cogs/admin.py:115 cogs/admin.py:166
 msgid "Number of connected users"
 msgstr "Nombre d’utilisateurs connectés"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
 msgid "Ducks per day"
 msgstr "Canards par jour"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
 msgid "Number of unneeded permissions"
 msgstr "Nombre d’autorisations inutiles"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:115
 msgid "Number of needed permissions"
 msgstr "Nombre d’autorisations nécessaires"
 
-#: cogs/admin.py:108
+#: cogs/admin.py:118
 msgid " > En cours"
 msgstr "> En cours"
 
-#: cogs/admin.py:119
+#: cogs/admin.py:129
 #, python-brace-format
 msgid " > Processing servers ({done}/{total})"
 msgstr " > Traitement des serveurs ({done} / {total})"
 
-#: cogs/admin.py:163
+#: cogs/admin.py:173
 msgid "Serching for servers to leave"
 msgstr "Recherche de serveurs à quitter"
 
-#: cogs/admin.py:184
+#: cogs/admin.py:194
 #, python-brace-format
 msgid ""
 "Cleaning {servers} unused servers (accounting for {members} members in "
@@ -146,29 +150,29 @@ msgstr ""
 "Supression de {servers} serveurs inutilisés (soit {members} membres au "
 "total)"
 
-#: cogs/admin.py:185
+#: cogs/admin.py:195
 #, python-brace-format
 msgid "To confirm, please type {random_str} now."
 msgstr "Pour confirmer cette action, veuillez taper {random_str} maintenent."
 
-#: cogs/admin.py:193
+#: cogs/admin.py:203
 msgid ":x: Operation canceled, you took too long to answer."
 msgstr ":x: Opération annulée, vous avez pris trop longtemps pour répondre"
 
-#: cogs/admin.py:208
+#: cogs/admin.py:218
 #, python-brace-format
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Terminé, raté pour {failed} servers."
 
-#: cogs/admin.py:217
+#: cogs/admin.py:227
 msgid "Starting the broadcast"
 msgstr "Demarrage de la diffusion \"broadcast\""
 
-#: cogs/admin.py:226
+#: cogs/admin.py:236
 msgid "Broadcast finished"
 msgstr "Broadcast terminé"
 
-#: cogs/admin.py:234
+#: cogs/admin.py:244
 #, python-brace-format
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Message ({message}) envoyé sur {server} #{channel}"
@@ -402,12 +406,9 @@ msgstr ""
 "[argument si nécéssaire]`"
 
 #: cogs/exp.py:323
-msgid ""
-"The list of items is available here : https://api-d.com/duckhunt/index.php/"
-"Shop"
+msgid "The list of items is available here : http://api-d.com/shop-items.html"
 msgstr ""
-"La liste des objets est disponible ici : https://api-d.com/duckhunt/index."
-"php/Shop"
+"La liste des objets est disponible ici : http://api-d.com/shop-items.html"
 
 #: cogs/exp.py:335
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
@@ -772,11 +773,9 @@ msgstr ""
 "BANG ou BANG, qui est le meilleur ? : p En tout cas, je suis bien lancé"
 
 #: cogs/meta.py:214
-msgid ""
-"The command list is on the wiki now ! https://api-d.com/duckhunt/index.php/"
+msgid "Check out our new website ! http://api-d.com/command-list.html"
 msgstr ""
-"La liste des préférences est disponible sur le wiki : https://api-d.com/"
-"duckhunt/index.php/Configuration"
+"Venez visiter notre nouveau site web ! http://api-d.com/command-list.html"
 
 #: cogs/serveradmin.py:42
 msgid ":ok: Done, user banned :gun:"
@@ -788,7 +787,7 @@ msgstr "L’utilisateur a été réintégré dans le jeu :eyes:"
 
 #: cogs/serveradmin.py:68
 #, python-brace-format
-msgid ":ok:, he now have {newexp} exp points !"
+msgid ":ok:, they now have {newexp} exp points !"
 msgstr ":ok:, il a maintenant {newexp} points d'experience !"
 
 #: cogs/serveradmin.py:93
@@ -832,25 +831,25 @@ msgid ":x: An admin exist on this server ! Try !add_admin"
 msgstr ""
 ":x: Un administrateur existe déjà sur ce serveur! Essayez avec !add_admin"
 
-#: cogs/serveradmin.py:201
+#: cogs/serveradmin.py:204 cogs/serveradmin.py:222
 #, python-brace-format
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} message(s) supprimés"
 
-#: cogs/serveradmin.py:205
+#: cogs/serveradmin.py:208 cogs/serveradmin.py:226
 msgid "0 message(s) deleted : permission denied"
 msgstr "0 message (s) supprimé: autorisation refusée"
 
-#: cogs/serveradmin.py:227
+#: cogs/serveradmin.py:250
 #, python-brace-format
 msgid "Permissions : {permissions}"
 msgstr "Autorisations: {permissions}"
 
-#: cogs/serveradmin.py:238
+#: cogs/serveradmin.py:261
 msgid ":ok: Scores / stats of the channel were succesfully deleted."
 msgstr ":ok: Les scores / stats de la channel ont bien étés supprimés."
 
-#: cogs/serveradmin.py:248
+#: cogs/serveradmin.py:271
 msgid ""
 ":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting "
 "if applicable]`"
@@ -858,19 +857,19 @@ msgstr ""
 ":x: Syntaxe de commande incorrecte : `!settings [view/set/reset/list/"
 "modified] [préférence si nécessaire]`"
 
-#: cogs/serveradmin.py:256
+#: cogs/serveradmin.py:279
 #, python-brace-format
 msgid "The setting {pref} is set at {value} on this server."
 msgstr ":ok: le paramètre {pref} est défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:261 cogs/serveradmin.py:299 cogs/serveradmin.py:315
+#: cogs/serveradmin.py:284 cogs/serveradmin.py:322 cogs/serveradmin.py:338
 msgid ""
 ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
 msgstr ""
 ":x: Préférence non valide, peut-être une faute de frappe ? La liste est "
 "dans `!settings list`"
 
-#: cogs/serveradmin.py:276
+#: cogs/serveradmin.py:299
 #, python-brace-format
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would be "
@@ -879,16 +878,16 @@ msgstr ""
 "Vous contournez la vérification du nombre maximal de canard qui aurait "
 "limité la préférence à {max} car vous êtes propriétaire du bot."
 
-#: cogs/serveradmin.py:282 cogs/serveradmin.py:286 cogs/serveradmin.py:297
+#: cogs/serveradmin.py:305 cogs/serveradmin.py:309 cogs/serveradmin.py:320
 msgid ":x: Incorrect value"
 msgstr ":x: Valeur incorrecte"
 
-#: cogs/serveradmin.py:292
+#: cogs/serveradmin.py:315
 #, python-brace-format
 msgid ":ok: The setting {pref} was set at `{value}` on this server."
 msgstr ":ok: le paramètre {pref} a été défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:310
+#: cogs/serveradmin.py:333
 #, python-brace-format
 msgid ""
 ":ok: The setting {pref} reset to it's defalut value on this server : "
@@ -897,27 +896,27 @@ msgstr ""
 ":ok: Le paramètre {pref} à été réinitialisé a sa valeur par défaut : "
 "`{value}`"
 
-#: cogs/serveradmin.py:322
+#: cogs/serveradmin.py:345
 msgid ""
-"List of preferences is available on the wiki : https://api-d.com/duckhunt/"
-"index.php/Configuration"
+"List of preferences is available on the new website : https://api-d.com/bot-"
+"settings.html"
 msgstr ""
-"La liste des préférences est disponible sur le wiki : https://api-d.com/"
-"duckhunt/index.php/Configuration"
+"La liste des préférences est disponible sur le nouveau site web : https://"
+"api-d.com/bot-settings.html"
 
-#: cogs/serveradmin.py:331 cogs/serveradmin.py:337
+#: cogs/serveradmin.py:354 cogs/serveradmin.py:360
 msgid "Parameter"
 msgstr "Paramètre"
 
-#: cogs/serveradmin.py:331
+#: cogs/serveradmin.py:354
 msgid "Value"
 msgstr "Valeur actuelle"
 
-#: cogs/serveradmin.py:331
+#: cogs/serveradmin.py:354
 msgid "Default value"
 msgstr "Valeur par défaut"
 
-#: cogs/serveradmin.py:336
+#: cogs/serveradmin.py:359
 #, python-brace-format
 msgid ""
 "List of modified parameters : \n"
@@ -926,28 +925,28 @@ msgstr ""
 "Liste des paramètres modifiés : \n"
 "```{table}```"
 
-#: cogs/shoot.py:55
+#: cogs/shoot.py:56
 #, python-brace-format
 msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
 msgstr ""
 "Vous n'êtes pas sec, vous ne pouvez pas partir à la chasse! Attendre "
 "{temps_restant} minutes."
 
-#: cogs/shoot.py:61
+#: cogs/shoot.py:63
 msgid "You don't have a weapon"
 msgstr "Vous ne disposez pas d'une arme"
 
-#: cogs/shoot.py:65
+#: cogs/shoot.py:68
 msgid "Your weapon is jammed, it must be reloaded to unstuck it."
 msgstr "Votre arme s'est enrayée, rechargez pour la décoincer."
 
-#: cogs/shoot.py:69
+#: cogs/shoot.py:73
 #, python-brace-format
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Votre arme est sabotée, remerciez {assaillant} pour cette mauvaise blague."
 
-#: cogs/shoot.py:77
+#: cogs/shoot.py:82
 #, python-brace-format
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
@@ -956,12 +955,12 @@ msgstr ""
 "** CHARGEUR VIDE ** | Munitions dans l'arme: {balles_actuelles} / "
 "{balles_max} | Chargeurs restant: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/shoot.py:92
+#: cogs/shoot.py:98
 msgid "Your weapon is jammed, reload to unstuck it."
 msgstr ""
 "Votre arme s'est enrayée, il vous faut la recharger pour la décoincer."
 
-#: cogs/shoot.py:105
+#: cogs/shoot.py:112
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing it's job!"
@@ -969,7 +968,7 @@ msgstr ""
 "Il n’y a aucun canard ici, mais la balle n'est pas partie parce que le "
 "détecteur infrarouge que vous avez ajouté à votre arme fait son travail !"
 
-#: cogs/shoot.py:111
+#: cogs/shoot.py:120
 msgid ""
 "Luckily you missed, what were you aiming at exactly? There isn't any duck "
 "in here... [missed : -1 xp] [wild shot: -1 xp]"
@@ -977,7 +976,7 @@ msgstr ""
 "Par chance vous avez raté, mais qui visiez-vous au juste ? Il n'y a aucun "
 "canard dans le coin...   [raté : -1 xp] [tir sauvage : -1 xp]"
 
-#: cogs/shoot.py:120
+#: cogs/shoot.py:130
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! "
 "[missed : -1 xp]"
@@ -985,11 +984,11 @@ msgstr ""
 "** FLAPP ** Effrayé par tant de bruit, le canard a fui! FÉLICITATIONS ! "
 "[raté: -1 xp]"
 
-#: cogs/shoot.py:122 cogs/shoot.py:165
+#: cogs/shoot.py:133 cogs/shoot.py:179
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
 msgstr "** PIEWW ** Vous avez manqué le canard ! [raté : -1 xp]"
 
-#: cogs/shoot.py:149
+#: cogs/shoot.py:161
 #, python-brace-format
 msgid ""
 "**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
@@ -998,7 +997,7 @@ msgstr ""
 "**BANG**\tVous avez raté le canard... Et vous avez tiré sur {player}. ! "
 "[raté : -1 xp] [accident de chasse : -2 xp] [arme confisquée]"
 
-#: cogs/shoot.py:153
+#: cogs/shoot.py:165
 msgid ""
 "**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
 "little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
@@ -1008,12 +1007,12 @@ msgstr ""
 "Apprends à tenir ton fusil à l'endroit la prochaine fois, boulet ! [raté : "
 "-1 xp] [accident de chasse : -2 xp] [arme confisquée]"
 
-#: cogs/shoot.py:158
+#: cogs/shoot.py:171
 #, python-brace-format
 msgid " > You won {exp} with your life insurance"
 msgstr " > Vous gagnez {exp} exp avec votre assurance vie"
 
-#: cogs/shoot.py:184
+#: cogs/shoot.py:198
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first ! [exp -1]"
@@ -1021,7 +1020,7 @@ msgstr ""
 "Pas loin, vous avez presque tué le canard, ça c'est joué à peu de choses... "
 " Mais l'autre chasseur l'as eu en premier ! [exp -1]"
 
-#: cogs/shoot.py:201
+#: cogs/shoot.py:218
 #, python-brace-format
 msgid ""
 ":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
@@ -1032,40 +1031,40 @@ msgstr ""
 "fait un total de {total} canards (dont {supercanards} supercanards) sur "
 "#{channel}.     \\_X<   *COUAC*   [{exp} xp]"
 
-#: cogs/shoot.py:212
+#: cogs/shoot.py:229
 #, python-brace-format
 msgid "While searching the bushes around the duck, you found {inutilitee}"
 msgstr ""
 "En cherchant dans les buissons à coté du canard, vous trouvez {inutilitee}"
 
-#: cogs/shoot.py:218
+#: cogs/shoot.py:235
 #, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
 ":gun: Le canard a survécu, essayez encore [vie : -{vie}] *SUPER CANARD "
 "DÉTECTÉ*"
 
-#: cogs/shoot.py:232
+#: cogs/shoot.py:250
 msgid "Your weapon had been confiscated"
 msgstr "Votre arme a été confisquée"
 
-#: cogs/shoot.py:235
+#: cogs/shoot.py:253
 msgid "You unstuck your weapon."
 msgstr "Vous décoincez votre arme"
 
-#: cogs/shoot.py:244
+#: cogs/shoot.py:263
 msgid "You reload your weapon"
 msgstr "Vous rechargez votre arme"
 
-#: cogs/shoot.py:246
+#: cogs/shoot.py:265
 msgid "You dont have any ammo left !"
 msgstr "Vous n’avez aucune munition restante!"
 
-#: cogs/shoot.py:248
+#: cogs/shoot.py:268
 msgid "You don't need to reload your weapon"
 msgstr "Vous n’avez pas besoin de recharger votre arme"
 
-#: cogs/shoot.py:250
+#: cogs/shoot.py:271
 #, python-brace-format
 msgid ""
 "{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
@@ -1319,7 +1318,7 @@ msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Le canard s'ennuie et part.  ·°'\\`'°-.,¸¸.· °'\\`"
 
 #: cogs/utils/commons.py:558
-msgid "The duck don't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Le canard ne veut pas se faire tirer dessus"
 
 #: cogs/utils/commons.py:560
@@ -1471,7 +1470,7 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "un poisson."
 
-#: cogs/utils/ducks.py:94
+#: cogs/utils/ducks.py:90
 #, python-brace-format
 msgid "There is a duck on #{channel}"
 msgstr "Il y a un canard sur #{channel}"
