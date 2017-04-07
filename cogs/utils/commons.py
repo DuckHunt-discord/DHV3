@@ -196,6 +196,10 @@ def init():
         "killed_mentions"  : {
             "value": True,
             "type" : bool_
+        },
+        "tts_ducks"        : {
+            "value": False,
+            "type" : bool_
         }
     }
 

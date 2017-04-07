@@ -132,7 +132,7 @@ async def spawn_duck(duck):
     else:
         canard_str = corps + "QUAACK"
     try:
-        await bot.send_message(duck["channel"], canard_str)
+        await bot.send_message(duck["channel"], canard_str, tts=prefs.getPref(duck["channel"].server, "tts_ducks"))
     except:
         pass
     commons.n_ducks_spawned += 1
