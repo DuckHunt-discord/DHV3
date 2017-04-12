@@ -1,5 +1,4 @@
 aiohttp>=1.2.0,<2.0.0
-dataset<1.0.0
 git+https://github.com/Rapptz/discord.py@master#egg=discord.py[voice]
 Kyoukai>=2.0.0, <3.0.0
 prettytable<0.8.0
