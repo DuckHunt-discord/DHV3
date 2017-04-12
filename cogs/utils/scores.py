@@ -6,11 +6,11 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 
 # Constants #
 import time
-import sqlite3
-import discord
 
+import discord
 from mysql import connector
-from cogs.utils import prefs, checks, commons
+
+from cogs.utils import checks, commons, prefs
 from cogs.utils.commons import _, credentials
 
 db = connector.connect(host=credentials['mysql_host'], port=credentials['mysql_port'], user=credentials['mysql_user'], password=credentials['mysql_pass'], database=credentials['mysql_db'], charset='utf8mb4', collation='utf8mb4_unicode_ci')
@@ -70,12 +70,13 @@ def getChannelPlayers(channel, columns=['*'], match_id=None):
     return sql.fetchall()
 
 def addToStat(channel, player, stat, value, announce=True):
-    if stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce:
+    cond = stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce
+    if cond:
         ancien_niveau = getPlayerLevel(channel, player)
 
     setStat(channel, player, stat, int(getStat(channel, player, stat)) + value)
 
-    if stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce:
+    if cond:
         language = prefs.getPref(channel.server, "language")
 
         embed = discord.Embed(description=_("Level of {player} on #{channel}", language).format(**{
