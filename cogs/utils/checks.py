@@ -28,12 +28,17 @@ def is_admin_check(message):
 
     return admin  # Dans la liste des admins d'un serveur (fichier json)
 
+def is_player_check(member, channel=None):
+    if isinstance(member, discord.Member):
+        member = scores.getChannelPlayers(channel, columns=['shoots_fired'], match_id=member.id)
 
-def is_activated_check(message):
+    return (True if (member.get('shoots_fired', 0) or 0) else False)
+
+def is_activated_check(channel):
     servers = prefs.JSONloadFromDisk("channels.json")
 
     try:
-        if message.channel.id in servers[message.server.id]["channels"]:
+        if channel.id in servers[channel.server.id]["channels"]:
             activated = True
         else:
             activated = False
@@ -87,7 +92,7 @@ def is_admin(warn=True):
     return admin
 
 def is_activated_here():
-    return commands.check(lambda ctx: is_activated_check(ctx.message))
+    return commands.check(lambda ctx: is_activated_check(ctx.message.channel))
 
 
 # The permission system of the bot is based on a "just works" basis

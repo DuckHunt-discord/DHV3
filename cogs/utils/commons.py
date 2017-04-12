@@ -14,6 +14,7 @@ def init():
 
     import logging
     import gettext
+    import json
     # Ducks
 
     global ducks_planned, ducks_spawned
@@ -33,7 +34,11 @@ def init():
 
     # Settings, config & translation
 
-    global lang, owners, support_server, defaultSettings, levels
+    global lang, owners, support_server, defaultSettings, levels, credentials
+
+    with open('credentials.json') as f:
+        credentials = json.load(f)
+
     lang = "en_EN"  # Language specified here is for console messages, everything that is not sent to a server
     owners = ["138751484517941259"]
     support_server = [195260081036591104]

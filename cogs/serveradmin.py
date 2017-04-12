@@ -257,7 +257,7 @@ class ServerAdmin:
     async def deleteeverysinglescoreandstatonthischannel(self, ctx):
         """Delete scores and stats of players on this channel. You'll need admin powers
         !deleteeverysinglescoreandstatonthischannel"""
-        scores.delChannelTable(ctx.message.channel)
+        scores.delChannelPlayers(ctx.message.channel)
         await comm.message_user(ctx.message, _(":ok: Scores / stats of the channel were succesfully deleted.", prefs.getPref(ctx.message.server, "language")))
 
     ### SETTINGS ###

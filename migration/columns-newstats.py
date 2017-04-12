@@ -1,9 +1,6 @@
 import sqlite3
 import logging
 
-def dictrow(row):
-    return dict(zip(row.keys(), row))
-
 # Fix data
 db = sqlite3.connect("scores.db")
 db.isolation_level = None
@@ -40,7 +37,7 @@ try:
     for table in tables:
         users = sql.execute("SELECT * FROM '{0}'".format(table['name'])).fetchall()
         for user in users:
-            user = dictrow(user)
+            user = dict(user)
             sql.execute("UPDATE '{0}' SET shoots_fired=:shoots_fired, shoots_missed=:shoots_missed, shoots_no_duck=:shoots_no_duck, tirsManques=NULL, tirsSansCanards=NULL WHERE id_=:id_".format(table['name']), { \
                 'shoots_fired': ((user.get('tirsManques', 0) or 0) \
                     + (user.get('tirsSansCanards', 0) or 0) \

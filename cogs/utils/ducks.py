@@ -43,7 +43,7 @@ async def planifie(channel_obj: discord.Channel = None):
             if not server:
                 logger.debug("Non-existant server : " + str(server_))
                 servers.pop(server_)
-                scores.delServerTables(id=server_)
+                scores.delServerPlayers(sid=server_)
 
             elif not "channels" in servers[server.id]:
                 await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)

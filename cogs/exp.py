@@ -131,14 +131,18 @@ class Exp:
 
         # embed.timestamp = datetime.datetime.now()
 
+        best_time = scores.getStat(message.channel, target, "best_time", default=None)
+        best_time = (int(best_time) if int(best_time) == float(best_time) else float(best_time)) if best_time else _('No best time.', language)
+
         if scores.getStat(message.channel, target, "killed_ducks") > 0:
             ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "killed_ducks"), 4)
         else:
             ratio = _("No duck killed", language)
+
         embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "killed_ducks")))
         embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "shoots_missed")))
         embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "shoots_no_duck")))
-        embed.add_field(name=_("Best killing time", language), value=str(scores.getStat(message.channel, target, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave"))))
+        embed.add_field(name=_("Best killing time", language), value=best_time)
         embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
         embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
         embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
@@ -194,7 +198,7 @@ class Exp:
             for joueur in scores.topScores(ctx.message.channel):
                 i += 1
 
-                if (not "killed_ducks" in joueur) or (joueur["killed_ducks"] == 0) or ("killed_ducks" in joueur == False):
+                if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                     joueur["killed_ducks"] = "AUCUN !"
                 if joueur["exp"] is None:
                     joueur["exp"] = 0
@@ -246,9 +250,9 @@ class Exp:
 
                         for joueur in scores_to_process:
                             i += 1
-                            if (not "killed_ducks" in joueur) or (joueur["killed_ducks"] == 0) or ("killed_ducks" in joueur == False) or joueur["killed_ducks"] is None:
+                            if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                                 joueur["killed_ducks"] = _("None !", language)
-                            if joueur["exp"] is None:
+                            if not joueur["exp"]:
                                 joueur["exp"] = 0
 
                             member = message.server.get_member(joueur["id_"])

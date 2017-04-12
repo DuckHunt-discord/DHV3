@@ -28,7 +28,7 @@ except locale.Error:
 
 commons.init()
 
-from cogs.utils.commons import _
+from cogs.utils.commons import _, credentials
 
 description = """DuckHunt, a game about killing ducks"""
 
@@ -180,11 +180,6 @@ async def on_server_remove(server):
         await ducks.del_channel(channel)
 
 
-def load_credentials():
-    with open('credentials.json') as f:
-        return json.load(f)
-
-
 async def mainloop():
     try:
         await bot.wait_until_ready()
@@ -240,7 +235,6 @@ async def mainloop():
 
 
 if __name__ == '__main__':
-    credentials = load_credentials()
     debug = any('debug' in arg.lower() for arg in sys.argv)
     if debug:
         bot.command_prefix = '$'

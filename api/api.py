@@ -12,13 +12,19 @@
 ############
 
 # TODO: vérifier la validité des serv/chan ids à chaque fois
+import json
 
-from kyoukai import HTTPRequestContext
+from kyoukai import Kyoukai, HTTPRequestContext
 from discord.enums import ChannelType
 from collections import defaultdict
+from cogs.utils import commons, prefs, scores, checks
 
-import api.API_commons as apcom
-from cogs.utils import commons, prefs, scores
+api = Kyoukai('dh_api')
+
+async def prepare_resp(resp_payload, code=200):
+    return json.dumps(resp_payload), code, {
+        "Content-Type": "application/json"
+    }
 
 async def list_members(server_id, channel_id):
     server = commons.bot.get_server(server_id)
@@ -26,21 +32,21 @@ async def list_members(server_id, channel_id):
     if server:
         channel = server.get_channel(channel_id)
         if channel:
-            activated = await apcom.is_channel_activated(channel)
+            activated = checks.is_activated_check(channel)
 
             if activated or prefs.getPref(server, "global_scores"):
                 players = []
-                table = scores.getChannelTable(channel)
+                table = scores.getChannelPlayers(channel, columns=['shoots_fired'])
 
                 for member in table:
-                    if await apcom.is_player_check(member):
+                    if checks.is_player_check(member):
                         try:
                             player = server.get_member(member['id_'])
 
                             players.append({
                                 "id": player.id,
                                 "name": player.display_name,
-                                "avatar": player.avatar_url or player.default_avatar_url
+                                "avatar": player.avatar_url.replace('.webp', '.png') or player.default_avatar_url # Tempfix pour le png
                             })
                         except:
                             pass
@@ -61,7 +67,12 @@ async def list_members(server_id, channel_id):
 
     return data
 
-@apcom.kyk.route("/guilds/?")
+def check_int(func):
+    def wrapper(**kwargs):
+        return func({k: (v if isinstance(v, HTTPRequestContext) else int(v)) for (k, v) in kwargs})
+    return wrapper
+
+@api.route("/guilds/?")
 async def guilds(ctx: HTTPRequestContext):
     await commons.bot.wait_until_ready()
 
@@ -74,13 +85,13 @@ async def guilds(ctx: HTTPRequestContext):
         hasPlayers = False
 
         for channel in server.channels:
-            activated = await apcom.is_channel_activated(channel)
+            activated = checks.is_activated_check(channel)
             if activated and channel.type == ChannelType.text:
                 channel_count += 1
                 if not hasPlayers:
-                    table = scores.getChannelTable(channel)
+                    table = scores.getChannelPlayers(channel, columns=['shoots_fired'])
                     for member in table:
-                        if await apcom.is_player_check(member):
+                        if checks.is_player_check(member):
                             hasPlayers = True
                             break
 
@@ -89,7 +100,7 @@ async def guilds(ctx: HTTPRequestContext):
             servers.append({
                                 "id": server.id,
                                 "name": server.name,
-                                "icon": server.icon_url or None
+                                "icon": server.icon_url or 'https://placeholdit.imgix.net/~text?txtsize=64&txt={}&w=128&h=128'.format(server.name[0])
                             })
 
     servers.sort(key=lambda x: x['name'])
@@ -99,10 +110,11 @@ async def guilds(ctx: HTTPRequestContext):
         "server_count": server_count
     }
 
-    return await apcom.prepare_resp(resp)
+    return await prepare_resp(resp)
 
-@apcom.kyk.route("/guilds/([^/]+)/?")  # /guilds/server_id
-async def guild(ctx: HTTPRequestContext, server_id: str):
+@check_int
+@api.route("/guilds/([^/]+)/?")  # /guilds/server_id
+async def guild(ctx: HTTPRequestContext, server_id: int):
     await commons.bot.wait_until_ready()
 
     server = commons.bot.get_server(server_id)
@@ -117,11 +129,11 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
 
         if not global_scores:
             for channel in server.channels:
-                activated = await apcom.is_channel_activated(channel)
+                activated = checks.is_activated_check(channel)
                 if activated and channel.type == ChannelType.text:
-                    table = scores.getChannelTable(channel)
+                    table = scores.getChannelPlayers(channel, columns=['shoots_fired'])
                     for member in table:
-                        if await apcom.is_player_check(member):
+                        if checks.is_player_check(member):
                             channels.append({
                                                 "id": channel.id,
                                                 "name": channel.name
@@ -144,15 +156,16 @@ async def guild(ctx: HTTPRequestContext, server_id: str):
                     "global_scores": global_scores
                 }
             else:
-                return await apcom.prepare_resp(None, 404) # Error
+                return await prepare_resp(None, 404) # Error
 
-        return await apcom.prepare_resp(resp)
+        return await prepare_resp(resp)
     else:
-        return await apcom.prepare_resp(None, 404) # Guild not found
+        return await prepare_resp(None, 404) # Guild not found
 
 
-@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channels/channel_id
-async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
+@check_int
+@api.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channels/channel_id
+async def guild_channel(ctx: HTTPRequestContext, server_id: int, channel_id: int):
     await commons.bot.wait_until_ready()
 
     data = await list_members(server_id, channel_id)
@@ -163,34 +176,35 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str
             "players": data['players']
         }
     else:
-        return await apcom.prepare_resp(None, 404) # Error
+        return await prepare_resp(None, 404) # Error
 
-    return await apcom.prepare_resp(resp)
+    return await prepare_resp(resp)
 
 
-@apcom.kyk.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
-async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id: str, user_id: str):
+@check_int
+@api.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
+async def guild_channel_user(ctx: HTTPRequestContext, server_id: int, channel_id: int, user_id: int):
+
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
 
     if server:
         channel = server.get_channel(channel_id)
         if channel:
-            activated = await apcom.is_channel_activated(channel)
+            activated = checks.is_activated_check(channel)
             if activated:
-                table = scores.getChannelTable(channel)
                 player = server.get_member(user_id)
 
-                resp = table.find_one(id_=user_id)
-                resp['avatar'] = player.avatar_url or player.default_avatar_url
+                resp = scores.getChannelPlayers(channel, match_id=user_id)[0]
+                resp['avatar'] = player.avatar_url.replace('.webp', '.png') or player.default_avatar_url
             else:
-                return await apcom.prepare_resp(None, 404) # Channel not activated
+                return await prepare_resp(None, 404) # Channel not activated
         else:
-            return await apcom.prepare_resp(None, 404) # Channel not found
+            return await prepare_resp(None, 404) # Channel not found
     else:
-        return await apcom.prepare_resp(None, 404) # Guild not found
+        return await prepare_resp(None, 404) # Guild not found
 
-    return await apcom.prepare_resp(resp)
+    return await prepare_resp(resp)
 
 
 ############
@@ -200,12 +214,12 @@ async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id
 ############
 
 
-@apcom.kyk.route("/stats/messages_recived/?")
+@api.route("/stats/messages_recived/?")
 async def messages_recived(ctx: HTTPRequestContext):
     resp = commons.number_messages
-    return await apcom.prepare_resp(resp)
+    return await prepare_resp(resp)
 
 
-@apcom.kyk.root.errorhandler(500)
+@api.root.errorhandler(500)
 async def handle_500(ctx: HTTPRequestContext, exception_to_handle: Exception):
     return repr(exception_to_handle)
