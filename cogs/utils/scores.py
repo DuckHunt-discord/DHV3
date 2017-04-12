@@ -121,7 +121,7 @@ def getStat(channel, player, stat, default=0):
             pass
         return default
 
-def topScores(channel, stat=['exp']):
+def topScores(channel, stat='exp'):
     table = getChannelPlayers(channel, columns=['name', 'killed_ducks', stat])
     players_list = []
 
