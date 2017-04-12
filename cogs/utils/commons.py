@@ -28,6 +28,9 @@ def init():
     n_ducks_flew = 0
     n_ducks_spawned = 0
 
+    global blocked_users
+    blocked_users = ["301780614166609920", "281865584784703489", "301780485254807552"]
+
     # Settings, config & translation
 
     global lang, owners, support_server, defaultSettings, levels

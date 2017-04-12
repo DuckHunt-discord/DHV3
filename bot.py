@@ -3,14 +3,14 @@ import datetime
 import json
 import locale
 import logging
-import os
 import random
 import sys
 import time
 import traceback
-from collections import Counter
 
 import discord
+import os
+from collections import Counter
 from discord.ext import commands
 
 from cogs.utils import commons
@@ -160,6 +160,9 @@ async def on_message(message):
     commons.number_messages += 1
 
     if message.author.bot:
+        return
+
+    if str(message.author.id) in commons.blocked_users:
         return
 
     # await comm.logwithinfos_message(message, message.content)
