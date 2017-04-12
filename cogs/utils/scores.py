@@ -18,12 +18,26 @@ sql = db.cursor(buffered=True, dictionary=True)
 
 def getChannelId(channel):
     server = channel.server
-    sql.execute("SELECT id FROM channels WHERE server = %(server)s AND channel = %(channel)s", {
-        'server': int(server.id),
-        'channel': (0 if prefs.getPref(server, "global_scores") else int(channel.id))
-    })
 
-    return sql.fetchone()['id']
+    def getit():
+        sql.execute("SELECT id FROM channels WHERE server = %(server)s AND channel = %(channel)s", {
+            'server': int(server.id),
+            'channel': (0 if prefs.getPref(server, "global_scores") else int(channel.id))
+        })
+
+    getit()
+    result = sql.fetchone()
+
+    if result:
+        return result['id']
+    else:
+        sql.execute("INSERT INTO channels (server, channel) VALUES (%(server)s, %(channel)s)", {
+            'server': int(server.id),
+            'channel': (0 if prefs.getPref(server, "global_scores") else int(channel.id))
+        })
+        getit()
+
+        return sql.fetchone()['id']
 
 
 def getChannelPlayers(channel, columns=['*'], match_id=None):
@@ -122,7 +136,7 @@ def getStat(channel, player, stat, default=0):
         return default
 
 def topScores(channel, stat='exp'):
-    table = getChannelPlayers(channel, columns=['name', 'killed_ducks', stat])
+    table = getChannelPlayers(channel, columns=['name', 'killed_ducks', 'shoots_fired', stat])
     players_list = []
 
     for player in table:
