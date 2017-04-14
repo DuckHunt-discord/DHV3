@@ -65,7 +65,7 @@ def getChannelPlayers(channel, columns=None, match_id=None):
         data.update({'match_id': match_id})
         cond = " AND id_ = %(match_id)s"
 
-    if not columns[0] is '*':
+    if columns[0] is not '*':
         columns.insert(0, 'id_')
 
     sql.execute("SELECT {columns} FROM players WHERE channel_id = %(channel_id)s{cond}".format(columns=', '.join(columns), cond=cond), data)
