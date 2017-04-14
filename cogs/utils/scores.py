@@ -40,7 +40,7 @@ def getChannelId(channel):
         return sql.fetchone()['id']
 
 
-def getChannelPlayers(channel, columns=['*'], match_id=None):
+def getChannelPlayers(channel, columns=None, match_id=None):
     """Retourne une liste composée de dicts correspondant aux joueurs et contenant leurs stats (gère automatiquement le global_scores).
 
     Paramètres :
@@ -54,6 +54,8 @@ def getChannelPlayers(channel, columns=['*'], match_id=None):
             contenant qu'une seule entrée, correspondant au
             joueur (sur le channel spécifié).
     """
+    if columns is None:
+        columns = ['*']
 
     channel_id = getChannelId(channel)
     data = {'channel_id': channel_id}
