@@ -27,6 +27,7 @@ async def allCanardsGo():
             await logwithinfos(canard["channel"], None, "Force-leaving of duck FAILED " + str(canard))
             logger.exception("Here is why : ")
 
+
 async def planifie(channel_obj: discord.Channel = None):
     now = int(time.time())
     thisDay = now - (now % 86400)
@@ -79,6 +80,7 @@ async def planifie(channel_obj: discord.Channel = None):
         else:
             await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
         commons.ducks_planned[channel_obj] = round(prefs.getPref(channel_obj.server, "ducks_per_day") * multiplicator)
+
 
 async def spawn_duck(duck):
     servers = prefs.JSONloadFromDisk("channels.json", default="{}")
@@ -150,7 +152,7 @@ async def del_channel(channel):
             servers[channel.server.id]["channels"].remove(channel.id)
             prefs.JSONsaveToDisk(servers, "channels.json")
             try:
-                commons.ducks_planned.pop(channel) # Remove from planification
+                commons.ducks_planned.pop(channel)  # Remove from planification
                 pass
             except:
                 pass

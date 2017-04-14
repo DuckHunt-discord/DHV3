@@ -62,14 +62,12 @@ class ServerAdmin:
         try:
             scores.addToStat(ctx.message.channel, target, "exp", exp)
         except OverflowError:
-            await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.",  prefs.getPref(ctx.message.server, "language")))
+            await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.", prefs.getPref(ctx.message.server, "language")))
             return
         await comm.logwithinfos_ctx(ctx, "[giveexp] Giving " + str(exp) + " exp points to " + target.mention)
         await comm.message_user(ctx.message, _(":ok:, they now have {newexp} exp points !", prefs.getPref(ctx.message.server, "language")).format(**{
             "newexp": scores.getStat(ctx.message.channel, target, "exp")
         }))
-
-
 
     @commands.command(pass_context=True)
     @checks.is_admin()
@@ -133,7 +131,7 @@ class ServerAdmin:
         await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server !", language).format(**{
             "name": target.name
         }))
- 
+
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     @commands.command(pass_context=True)
@@ -195,7 +193,6 @@ class ServerAdmin:
         import datetime
         weeks = datetime.datetime.now() - datetime.timedelta(days=13)
 
-
         if ctx.message.channel.permissions_for(ctx.message.server.me).manage_messages:
             def not_pinned(m):
                 return not m.pinned and not m.timestamp < weeks
@@ -203,7 +200,7 @@ class ServerAdmin:
             deleted = await self.bot.purge_from(ctx.message.channel, limit=number, check=not_pinned)
             await comm.message_user(ctx.message, _("{deleted} message(s) deleted", language).format(**{
                 "deleted": len(deleted)
-                }))
+            }))
         else:
             await comm.message_user(ctx.message, _("0 message(s) deleted : permission denied", language))
 
@@ -225,8 +222,6 @@ class ServerAdmin:
         else:
             await comm.message_user(ctx.message, _("0 message(s) deleted : permission denied", language))
 
-
-
     @commands.command(pass_context=True)
     @checks.is_admin()
     async def permissions(self, ctx):
@@ -246,10 +241,10 @@ class ServerAdmin:
             permissions_str += "\n{value}\t{name}".format(**{
                 "value": emo,
                 "name" : str(permission)
-                })
+            })
         await comm.message_user(ctx.message, _("Permissions : {permissions}", prefs.getPref(ctx.message.server, "language")).format(**{
             "permissions": permissions_str
-            }))
+        }))
 
     @commands.command(pass_context=True)
     @checks.is_activated_here()
@@ -298,7 +293,7 @@ class ServerAdmin:
                         if ctx.message.author.id in commons.owners:
                             await comm.message_user(ctx.message, _("Bypassing the max_ducks_per_day check as you are the bot owner. It would be {max}", language).format(**{
                                 "max": maxCJ
-                                }))
+                            }))
                         else:
                             value = maxCJ
             except TypeError:
@@ -358,7 +353,8 @@ class ServerAdmin:
 
         await comm.message_user(ctx.message, _("List of modified parameters : \n```{table}```", language).format(**{
             "table": x.get_string(sortby=_("Parameter", language))
-            }))
+        }))
+
 
 def setup(bot):
     bot.add_cog(ServerAdmin(bot))

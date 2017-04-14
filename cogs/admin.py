@@ -103,8 +103,6 @@ class Admin:
         else:
             await comm.message_user(ctx.message, str(ctx.message.server.id))
 
-
-
     @commands.command(pass_context=True)
     @checks.is_owner()
     async def serverlist(self, ctx, passed_prefs: str = ""):
@@ -127,9 +125,9 @@ class Admin:
                 lu = time.time()
                 try:
                     await self.bot.edit_message(tmp, str(ctx.message.author.mention) + _(" > Processing servers ({done}/{total})", language).format(**{
-                        "done": i,
+                        "done" : i,
                         "total": total
-                        }))
+                    }))
                 except:
                     pass
             invite = None
@@ -243,7 +241,6 @@ class Admin:
         await self.bot.send_message(discord.utils.find(lambda m: m.name == channel_name, discord.utils.find(lambda m: m.name == server_name or str(m.id) == str(server_name), self.bot.servers).channels), message)
         await comm.message_user(ctx.message, _("Message ({message}) sent to {server} #{channel} ", language).format(message=message, server=server_name, channel=channel_name))
 
-
     @commands.command(pass_context=True)
     @checks.is_owner()
     async def say(self, ctx, *, message: str):
@@ -255,6 +252,7 @@ class Admin:
     async def bug(self, ctx):
 
         raise RuntimeError("May the gods be upon you!")
+
 
 def setup(bot):
     bot.add_cog(Admin(bot))

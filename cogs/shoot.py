@@ -189,7 +189,6 @@ class Shoot:
             current_duck["SCvie"] -= 1
             vieenmoins = 1
 
-
         if current_duck["SCvie"] <= 0:  # Duck killed
             try:
                 commons.ducks_spawned.remove(current_duck)

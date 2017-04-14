@@ -13,7 +13,7 @@ def is_owner_check(message):
 
 def is_banned_check(message):
     banned = not scores.getStat(message.channel, message.author, "banned", default=False)
-    #bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(banned)))
+    # bot.loop.create_task(comm.logwithinfos_message(message, "Check not banned : " + str(banned)))
     return banned  # Inverse d'un banissement
 
 
@@ -24,15 +24,17 @@ def is_admin_check(message):
         admin = message.author.id in servers[message.server.id]["admins"]
     except KeyError:
         admin = False
-    #bot.loop.create_task(comm.logwithinfos_message(message, "Check admin : " + str(admin)))
+    # bot.loop.create_task(comm.logwithinfos_message(message, "Check admin : " + str(admin)))
 
     return admin  # Dans la liste des admins d'un serveur (fichier json)
+
 
 def is_player_check(member, channel=None):
     if isinstance(member, discord.Member):
         member = scores.getChannelPlayers(channel, columns=['shoots_fired'], match_id=member.id)
 
     return True if (member.get('shoots_fired', 0) or 0) else False
+
 
 def is_activated_check(channel):
     servers = prefs.JSONloadFromDisk("channels.json")
@@ -45,7 +47,7 @@ def is_activated_check(channel):
     except KeyError:
         activated = False
 
-    #bot.loop.create_task(comm.logwithinfos_message(message, "Check activated here : " + str(activated)))
+    # bot.loop.create_task(comm.logwithinfos_message(message, "Check activated here : " + str(activated)))
     return activated
 
 
@@ -59,7 +61,7 @@ def have_exp(exp, warn=True):
         if not exp_ and warn:
             commons.bot.loop.create_task(comm.message_user(ctx.message, _(":x: You can't use this command, you don't have at least {exp} exp points!", prefs.getPref(ctx.message.server, "language")).format(**{
                 "exp": exp
-                })))
+            })))
         return exp_
 
     exp_ = commands.check(lambda ctx: check(ctx, exp, warn))
@@ -90,6 +92,7 @@ def is_admin(warn=True):
 
     admin = commands.check(lambda ctx: check(ctx, warn))
     return admin
+
 
 def is_activated_here():
     return commands.check(lambda ctx: is_activated_check(ctx.message.channel))

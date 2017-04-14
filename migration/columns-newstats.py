@@ -1,5 +1,5 @@
-import sqlite3
 import logging
+import sqlite3
 
 # Fix data
 db = sqlite3.connect("scores.db")
@@ -39,16 +39,17 @@ try:
         for user in users:
             user = dict(user)
             sql.execute("UPDATE '{0}' SET shoots_fired=:shoots_fired, shoots_missed=:shoots_missed, shoots_no_duck=:shoots_no_duck, tirsManques=NULL, tirsSansCanards=NULL WHERE id_=:id_".format(table['name']), { \
-                'shoots_fired': ((user.get('tirsManques', 0) or 0) \
-                    + (user.get('tirsSansCanards', 0) or 0) \
-                    + (user.get('shoots_no_duck', 0) or 0) \
-                    + (user.get('canardsTues', 0) or 0) \
-                    + (user.get('shoots_harmed_duck', 0) or 0) \
-                    + (user.get('shoots_frightened', 0) or 0)), \
-                'shoots_missed': (user.get('tirsManques', 0) or 0), \
+                'shoots_fired'  : ((user.get('tirsManques', 0) or 0) \
+                                   + (user.get('tirsSansCanards', 0) or 0) \
+                                   + (user.get('shoots_no_duck', 0) or 0) \
+                                   + (user.get('canardsTues', 0) or 0) \
+                                   + (user.get('shoots_harmed_duck', 0) or 0) \
+                                   + (user.get('shoots_frightened', 0) or 0)), \
+                'shoots_missed' : (user.get('tirsManques', 0) or 0), \
                 'shoots_no_duck': ((user.get('shoots_no_duck', 0) or 0) \
-                    + (user.get('tirsSansCanards', 0) or 0)), \
-                'id_': user['id_']})
+                                   + (user.get('tirsSansCanards', 0) or 0)), \
+                'id_'           : user['id_']
+            })
 
         done += 1
         print("Correcting data... ({0}/{1})".format(done, todo))
@@ -64,13 +65,13 @@ print("\nData corrected.\n\nCorrecting columns... ({0}/{1})".format(done, todo))
 # Fix columns
 renameColumns = {
     'superCanardsTues': 'killed_super_ducks',
-    'canardsTues':            'killed_ducks',
-    'chasseursTues':        'killed_players',
-    'meilleurTemps':             'best_time',
-    'AssuranceVie':         'life_insurance',
-    'munExplo':             'explosive_ammo',
-    'tirsManques':             'IGNORE_ME_1',
-    'tirsSansCanards':         'IGNORE_ME_2'
+    'canardsTues'     : 'killed_ducks',
+    'chasseursTues'   : 'killed_players',
+    'meilleurTemps'   : 'best_time',
+    'AssuranceVie'    : 'life_insurance',
+    'munExplo'        : 'explosive_ammo',
+    'tirsManques'     : 'IGNORE_ME_1',
+    'tirsSansCanards' : 'IGNORE_ME_2'
 }
 
 try:

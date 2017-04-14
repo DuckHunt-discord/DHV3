@@ -90,7 +90,7 @@ class Exp:
                 try:
                     scores.addToStat(message.channel, target, "exp", amount - taxes)
                 except OverflowError:
-                    await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.",  language))
+                    await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.", language))
                     return
                 await comm.message_user(message, _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this transfer) !", language).format(**{
                     "amount": amount - taxes,
@@ -106,7 +106,6 @@ class Exp:
                 await comm.message_user(message, _("You don't have enough experience points", language))
         else:
             await comm.message_user(message, _(":x: Sending exp is disabled on this server", language))
-
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
@@ -228,7 +227,6 @@ class Exp:
             while reaction:
                 if changed:
 
-
                     i = current_page * 10 - 10
 
                     scores_to_process = scores.topScores(ctx.message.channel)[i:i + 10]
@@ -246,7 +244,6 @@ class Exp:
                         players_list = ""
                         exp_list = ""
                         ducks_killed_list = ""
-
 
                         for joueur in scores_to_process:
                             i += 1
@@ -318,7 +315,6 @@ class Exp:
                         await self.bot.delete_message(message)
                     except:
                         pass
-
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
@@ -440,8 +436,6 @@ class Exp:
         else:
             await comm.message_user(message, _(":champagne: You already have a sight to your weapon. ", language))
 
-
-
     @shop.command(pass_context=True, name="8")
     @checks.have_exp(15)
     async def item8(self, ctx):
@@ -506,7 +500,6 @@ class Exp:
             scores.addToStat(message.channel, message.author, "exp", -5)
             await comm.message_user(message, _(":money_with_wings: You brought brand new sunglasses, for nothing but the fact that you are mostly swag now. :cool:", language))
 
-
     @shop.command(pass_context=True, name="12")
     @checks.have_exp(7)
     async def item12(self, ctx):
@@ -533,7 +526,6 @@ class Exp:
         scores.addToStat(message.channel, message.author, "exp", -6)
         await comm.message_user(message, _(":champagne: You clean your weapon for 6 exp. If you had sand, or if your weapon was sabtaged, it's fixed now !", language))
 
-
     @shop.command(pass_context=True, name="14")
     @checks.have_exp(5)
     async def item14(self, ctx, target: discord.Member):
@@ -546,8 +538,6 @@ class Exp:
             scores.addToStat(message.channel, message.author, "exp", -5)
             scores.setStat(message.channel, target, "dazzled", True)
             await comm.message_user(message, _(":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next shot !", language).format(mention=target.mention))
-
-
 
     @shop.command(pass_context=True, name="15")
     @checks.have_exp(7)

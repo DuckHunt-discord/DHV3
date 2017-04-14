@@ -1,9 +1,9 @@
 import datetime
-import os
 import re
 import sys
 
 import discord
+import os
 import psutil
 from discord.ext import commands
 
@@ -99,7 +99,6 @@ class Meta:
     async def uptime(self):
         """Tells you how long the bot has been up for."""
         await self.bot.say('Uptime: **{}**'.format(self.get_bot_uptime()))
-
 
     @commands.command(rest_is_raw=True, hidden=True)
     @checks.is_owner()
@@ -212,6 +211,7 @@ class Meta:
     @commands.command(pass_context=True)
     async def help(self, ctx):
         await comm.message_user(ctx.message, _("Check out our new website ! http://api-d.com/command-list.html", getPref(ctx.message.server, "language")))
+
 
 def setup(bot):
     bot.add_cog(Meta(bot))

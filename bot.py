@@ -18,8 +18,6 @@ if os.geteuid() == 0:
     print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk.")
     sys.exit(1)
 
-
-
 try:
     locale.setlocale(locale.LC_ALL, 'fr_FR')
 except locale.Error:
@@ -51,8 +49,6 @@ def prefix(bot, message):
 
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None, help_attrs=help_attrs)
 commons.bot = bot
-
-
 
 
 @bot.event

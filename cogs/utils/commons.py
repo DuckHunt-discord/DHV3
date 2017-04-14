@@ -5,6 +5,7 @@ DuckhuntV2 -- commons
 """
 import os
 
+
 # noinspection PyGlobalUndefined
 def init():
     if os.geteuid() == 0:
@@ -123,47 +124,47 @@ def init():
             "value": True,
             "type" : bool_
         },
-        "super_ducks_chance"           : {
+        "super_ducks_chance"        : {
             "min"  : 0,
             "max"  : 100,
             "value": 10,
             "type" : int
         },
-        "super_ducks_minlife"          : {
+        "super_ducks_minlife"       : {
             "min"  : 1,
             "max"  : 50,
             "value": 3,
             "type" : int
         },
-        "super_ducks_maxlife"          : {
+        "super_ducks_maxlife"       : {
             "min"  : 2,
             "max"  : 51,
             "value": 7,
             "type" : int
         },
-        "super_ducks_exp_multiplier"   : {
+        "super_ducks_exp_multiplier": {
             "min"  : 0,
             "max"  : 10,
             "value": 1.10,
             "type" : float
         },
-        "duck_frighten_chance"         : {
+        "duck_frighten_chance"      : {
             "min"  : 0,
             "max"  : 100,
             "value": 5,
             "type" : int
         },
-        "global_scores"                : {
+        "global_scores"             : {
             "value": False,
             "type" : bool_
         },
-        "clover_min_exp"               : {
+        "clover_min_exp"            : {
             "min"  : 0,
             "max"  : 500,
             "value": 1,
             "type" : int
         },
-        "clover_max_exp"               : {
+        "clover_max_exp"            : {
             "min"  : 0,
             "max"  : 500,
             "value": 10,
@@ -175,37 +176,37 @@ def init():
             "value": 0,
             "type" : int
         },
-        "user_can_give_exp": {
+        "user_can_give_exp"         : {
             "value": True,
             "type" : bool_
         },
-        "tax_on_user_give" : {
+        "tax_on_user_give"          : {
             "min"  : 0,
             "max"  : 100,
             "value": 0,
             "type" : int
         },
-        "prefix"           : {
+        "prefix"                    : {
             "value": "!",
             "type" : str
         },
-        "announce_level_up": {
+        "announce_level_up"         : {
             "value": True,
             "type" : bool_
         },
-        "emoji_ducks"      : {
+        "emoji_ducks"               : {
             "value": False,
             "type" : bool_
         },
-        "emoji_used"       : {
+        "emoji_used"                : {
             "value": ":duck:",
             "type" : str
         },
-        "killed_mentions"  : {
+        "killed_mentions"           : {
             "value": True,
             "type" : bool_
         },
-        "tts_ducks"        : {
+        "tts_ducks"                 : {
             "value": False,
             "type" : bool_
         }

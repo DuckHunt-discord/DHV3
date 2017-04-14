@@ -16,12 +16,13 @@ from cogs.utils.commons import _, credentials
 db = connector.connect(host=credentials['mysql_host'], port=credentials['mysql_port'], user=credentials['mysql_user'], password=credentials['mysql_pass'], database=credentials['mysql_db'], charset='utf8mb4', collation='utf8mb4_unicode_ci')
 sql = db.cursor(buffered=True, dictionary=True)
 
+
 def getChannelId(channel):
     server = channel.server
 
     def getit():
         sql.execute("SELECT id FROM channels WHERE server = %(server)s AND channel = %(channel)s", {
-            'server': int(server.id),
+            'server' : int(server.id),
             'channel': (0 if prefs.getPref(server, "global_scores") else int(channel.id))
         })
 
@@ -32,7 +33,7 @@ def getChannelId(channel):
         return result['id']
     else:
         sql.execute("INSERT INTO channels (server, channel) VALUES (%(server)s, %(channel)s)", {
-            'server': int(server.id),
+            'server' : int(server.id),
             'channel': (0 if prefs.getPref(server, "global_scores") else int(channel.id))
         })
         getit()
@@ -58,11 +59,15 @@ def getChannelPlayers(channel, columns=None, match_id=None):
         columns = ['*']
 
     channel_id = getChannelId(channel)
-    data = {'channel_id': channel_id}
+    data = {
+        'channel_id': channel_id
+    }
 
     cond = ''
     if match_id:
-        data.update({'match_id': match_id})
+        data.update({
+            'match_id': match_id
+        })
         cond = " AND id_ = %(match_id)s"
 
     if columns[0] is not '*':
@@ -70,6 +75,7 @@ def getChannelPlayers(channel, columns=None, match_id=None):
 
     sql.execute("SELECT {columns} FROM players WHERE channel_id = %(channel_id)s{cond}".format(columns=', '.join(columns), cond=cond), data)
     return sql.fetchall()
+
 
 def addToStat(channel, player, stat, value, announce=True):
     cond = stat == "exp" and prefs.getPref(channel.server, "announce_level_up") and announce
@@ -115,10 +121,10 @@ def addToStat(channel, player, stat, value, announce=True):
 def setStat(channel, player, stat, value):
     """Définit la valeur d'une stat d'un joueur. Ne pas passer de valeurs entrées par un user via le paramètre stat."""
     sql.execute("INSERT INTO players (id_, name, channel_id, {stat}) VALUES (%(id)s, %(name)s, %(channel_id)s, %(value)s) ON DUPLICATE KEY UPDATE name = %(name)s, {stat} = %(value)s".format(stat=stat), {
-        'id': player.id,
-        'name': player.name,
+        'id'        : player.id,
+        'name'      : player.name,
         'channel_id': getChannelId(channel),
-        'value': value
+        'value'     : value
     })
     db.commit()
 
@@ -137,6 +143,7 @@ def getStat(channel, player, stat, default=0):
         except:
             pass
         return default
+
 
 def topScores(channel, stat='exp'):
     table = getChannelPlayers(channel, columns=['name', 'killed_ducks', 'shoots_fired', stat])
@@ -157,10 +164,10 @@ def giveBack(player, channel):
     exp = getStat(channel, player, 'exp')
 
     sql.execute("INSERT INTO players (id_, channel_id, chargeurs, confisque, lastGiveback) VALUES (%(id)s, %(channel_id)s, %(chargeurs)s, %(confisque)s, %(lastGiveback)s) ON DUPLICATE KEY UPDATE chargeurs = %(chargeurs)s, confisque = %(confisque)s, lastGiveback = %(lastGiveback)s", {
-        'id': player.id,
-        'channel_id': getChannelId(channel),
-        'chargeurs': getPlayerLevelWithExp(exp)["chargeurs"],
-        'confisque': False,
+        'id'          : player.id,
+        'channel_id'  : getChannelId(channel),
+        'chargeurs'   : getPlayerLevelWithExp(exp)["chargeurs"],
+        'confisque'   : False,
         'lastGiveback': int(time.time())
     })
     db.commit()
@@ -192,21 +199,31 @@ def delServerPlayers(server=None, sid=None):
     if not sid:
         sid = server.id
 
-    sql.execute("SELECT * FROM channels WHERE server = %(server)s", {'server': sid})
+    sql.execute("SELECT * FROM channels WHERE server = %(server)s", {
+        'server': sid
+    })
     channels = sql.fetchall()
 
     for channel in channels:
-        sql.execute("DELETE FROM players WHERE channel_id = %(channel_id)s", {'channel_id': channel['id']})
+        sql.execute("DELETE FROM players WHERE channel_id = %(channel_id)s", {
+            'channel_id': channel['id']
+        })
 
-    sql.execute("DELETE FROM channels WHERE server = %(server)s", {'server': sid})
+    sql.execute("DELETE FROM channels WHERE server = %(server)s", {
+        'server': sid
+    })
     db.commit()
 
 
 def delChannelPlayers(channel):
-    sql.execute("DELETE FROM players WHERE channel_id = %(channel_id)s", {'channel_id': getChannelId(channel)})
-    sql.execute("DELETE FROM channels WHERE server = %(server)s AND channel = %(channel)s", {'server': channel.server.id, 'channel': channel.id})
+    sql.execute("DELETE FROM players WHERE channel_id = %(channel_id)s", {
+        'channel_id': getChannelId(channel)
+    })
+    sql.execute("DELETE FROM channels WHERE server = %(server)s AND channel = %(channel)s", {
+        'server' : channel.server.id,
+        'channel': channel.id
+    })
     db.commit()
-
 
 # def freeze():
 #     for table in db.tables:
