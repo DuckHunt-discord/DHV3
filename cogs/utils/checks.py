@@ -32,7 +32,7 @@ def is_player_check(member, channel=None):
     if isinstance(member, discord.Member):
         member = scores.getChannelPlayers(channel, columns=['shoots_fired'], match_id=member.id)
 
-    return (True if (member.get('shoots_fired', 0) or 0) else False)
+    return True if (member.get('shoots_fired', 0) or 0) else False
 
 def is_activated_check(channel):
     servers = prefs.JSONloadFromDisk("channels.json")

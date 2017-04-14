@@ -135,7 +135,7 @@ async def on_resumed():
 async def on_command(command, ctx):
     bot.commands_used[command.name] += 1
     await comm.logwithinfos_message(ctx.message, str(command) + " (" + ctx.message.clean_content + ") ")
-    if prefs.getPref(ctx.message.server, "delete_commands") and checks.is_activated_check(ctx.message):
+    if prefs.getPref(ctx.message.server, "delete_commands") and checks.is_activated_check(ctx.message.channel):
         try:
             await bot.delete_message(ctx.message)
         except discord.Forbidden:
