@@ -1,6 +1,5 @@
 import asyncio
 import datetime
-import json
 import locale
 import logging
 import random
@@ -142,7 +141,7 @@ async def on_command(command, ctx):
         except discord.Forbidden:
             await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
         except discord.NotFound:
-            await comm.logwithinfos_ctx(ctx, "Error deleting command : not found (normal if a pugemessages was done)")
+            await comm.logwithinfos_ctx(ctx, "Error deleting command : not found (normal if a purgemessages was done)")
 
 
             # message = ctx.message
