@@ -1,0 +1,16 @@
+node_modules/*
+!/credentials_example.json
+*.json
+*.pyc
+.DS_Store
+.idea/
+DHV2.iml
+LICENSE.txt
+__pycache__/
+cogs/__pycache__/
+cogs/utils/__pycache__/
+dh.log
+scores.db
+language/english.mo
+language/english.po
+
