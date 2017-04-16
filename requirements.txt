@@ -5,4 +5,3 @@ prettytable<0.8.0
 psutil>=5.0.0,<6.0.0
 requests>=2.12.0,<3.0.0
 mysql-connector-python-rf>=2.0.0,<2.3.0
-plotly

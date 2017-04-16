@@ -1,0 +1,66 @@
+<html>
+<head>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.0.0/dygraph.min.js"></script>
+    <link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/dygraph/2.0.0/dygraph.min.css"/>
+</head>
+<body>
+<h1>Experimental duckhunt statistics</h1>
+
+<h2>Number of servers seen by the bot</h2>
+<div id="servers"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g2 = new Dygraph(
+        document.getElementById("servers"),
+        "csv/servers.csv", // path to CSV file
+        {}          // options
+    );
+</script>
+
+<h2>Number of channels seen by the bot</h2>
+<div id="channels"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g2 = new Dygraph(
+        document.getElementById("channels"),
+        "csv/channels.csv", // path to CSV file
+        {}          // options
+    );
+</script>
+
+<h2>Number of users (no bots) seen by the bot</h2>
+<div id="users"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g2 = new Dygraph(
+        document.getElementById("users"),
+        "csv/users.csv", // path to CSV file
+        {}          // options
+    );
+</script>
+
+<h2>Memory used by the bot</h2>
+<div id="memory"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g2 = new Dygraph(
+        document.getElementById("memory"),
+        "csv/memory.csv", // path to CSV file
+        {}          // options
+    );
+</script>
+
+<h2>Number of ducks spawned</h2>
+<div id="ducks"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g2 = new Dygraph(
+        document.getElementById("ducks"),
+        "csv/ducks.csv", // path to CSV file
+        {}          // options
+    );
+</script>
+
+</body>
+</html>

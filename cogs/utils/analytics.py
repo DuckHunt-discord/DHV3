@@ -6,110 +6,73 @@
 """
 import asyncio
 import datetime
-import socket
+import sys
 
 import os
-import plotly.graph_objs as go
-import plotly.plotly as py
-import plotly.tools as tls
 import psutil
 
 from cogs.utils import commons
-from cogs.utils.commons import _
 
-# tls.set_credentials_file(username='-', api_key='-')
-
-
-#stream_ids = ["-", "-", "-", "-"]
-stream_ids = tls.get_credentials_file()['stream_ids']
+CSV_root = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/"
 
 
-async def create_stream(name, title, points=60 * 60, mode="overwrite"):
-    # Make a figure object
-    stream_id = stream_ids.pop()
-    fig = go.Figure(data=go.Data([go.Scatter(
-            x=[],
-            y=[],
-            mode='lines+markers',
-            stream=go.Stream(
-                    token=stream_id,  # link stream id to 'token' key
-                    maxpoints=points  # keep a max of 900 pts (15 min) on screen
-            )  # (!) embed stream id, 1 per trace
-    )]), layout=go.Layout(title=title))
-
-    # Send fig to Plotly, initialize streaming plot, open new tab
-    py.plot(fig, filename=name, fileopt=mode, auto_open=False)
-
-    # We will provide the stream link object the same token that's associated with the trace we wish to stream to
-    s = py.Stream(stream_id)
-
-    # We then open a connection
-    try:
-        s.open()
-    except socket.error:
-        commons.logger.error(_("Error sending heartbeat"))
-        raise
-    return s
+async def get_date():
+    return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
 
 
-async def update_servers(servers_graph):
-    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+async def csv_write(file, x, y):
+    with open(CSV_root + file, "a") as f:
+        f.write("{x},{y}\n".format(x=x, y=y))
+
+
+async def update_servers():
+    x = await get_date()
     y = len(commons.bot.servers)
-    servers_graph.write(dict(x=x, y=y))
+    await csv_write("servers.csv", x, y)
     commons.logger.debug("Updating server analytics")
 
-async def update_channels(activated_channels_graph):
-    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+
+async def update_channels():
+    x = await get_date()
     y = len(commons.ducks_planned)
-    activated_channels_graph.write(dict(x=x, y=y))
+    await csv_write("channels.csv", x, y)
     commons.logger.debug("Updating channels analytics")
 
-async def update_memory(mem_graph):
-    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+
+async def update_memory():
+    x = await get_date()
     y = round(psutil.Process(os.getpid()).memory_info()[0] / 2. ** 30 * 1000, 5)
-    mem_graph.write(dict(x=x, y=y))
+    await csv_write("memory.csv", x, y)
     commons.logger.debug("Updating memory analytics")
 
-async def update_users(users_graph):
-    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+
+async def update_users():
+    x = await get_date()
     y = 0
     for server in commons.bot.servers:
         for member in server.members:
             if not member.bot:
                 y += 1
-    users_graph.write(dict(x=x, y=y))
+    await csv_write("users.csv", x, y)
     commons.logger.debug("Updating users analytics")
 
-async def update_ducks_dest():
-    labels = ['Ducks killed', 'Ducks bored']
 
-    values = [commons.n_ducks_killed, commons.n_ducks_flew]
-
-    py.plot([go.Pie(labels=labels, values=values)], filename="Ducks Dest", fileopt="overwrite", auto_open=False)
-
-async def update_ducks(ducks_graph):
-    x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+async def update_ducks():
+    x = await get_date()
     y = len(commons.ducks_spawned)
-    ducks_graph.write(dict(x=x, y=y))
+    await csv_write("ducks.csv", x, y)
+    commons.logger.debug("Updating ducks analytics")
 
 async def analytics_loop():
     try:
-        await commons.bot.wait_until_ready()
-        await asyncio.sleep(120)  # Wait for the cache to be populated, plus don't spam the plotly api if we restart frequently
-        commons.logger.debug("[analytics] Creating graphs")
-        mem_graph = await create_stream("mem_used", "Memory used in mb", mode="append")
-        activated_channels_graph = await create_stream("active_channels", "Channels activated", mode="extend")
-        servers_graph = await create_stream("connected_servers", "Number of servers seen by the bot", mode="extend")
-        users_graph = await create_stream("number_users", "Number of users", mode="extend")
-        ducks_graph = await create_stream("number_ducks", "Number of ducks spawned")
+        await commons.bot.wait_until_ready()  # Wait for the bot to be operational
 
         commons.logger.debug("[analytics] HEARTBEATs STARTED")
-        await update_servers(servers_graph)
-        await update_channels(activated_channels_graph)
-        await update_memory(mem_graph)
-        await update_users(users_graph)
-        await update_ducks_dest()
-        await update_ducks(ducks_graph)
+        await update_servers()
+        await update_channels()
+        await update_memory()
+        await update_users()
+        await update_ducks()
 
         i = 0
         while True:
@@ -117,21 +80,16 @@ async def analytics_loop():
 
             # Current time on x-axis, random numbers on y-axis
 
+            if i % 6 == 0:
+                await update_servers()
 
-            ## MEM GRAPH UPDATE
-            if i % 60 == 0:
-                await update_servers(servers_graph)
-                await update_ducks_dest()
+            if i % 3 == 0:
+                await update_channels()
 
-            if i % 30 == 0:
-                await update_channels(activated_channels_graph)
-
-            if i % 15 == 0:
-                await update_memory(mem_graph)
-
-            if i % 10 == 0:
-                await update_users(users_graph)
-                await update_ducks(ducks_graph)
+            if i % 1 == 0:
+                await update_memory()
+                await update_users()
+                await update_ducks()
 
             await asyncio.sleep(60)
     except:
