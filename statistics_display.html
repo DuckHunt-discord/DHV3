@@ -309,6 +309,9 @@
         {}          // options
     );
 </script>
-<script>var sync = Dygraph.synchronize(g1, g2, g3, g4, g5, {selection: true, zoom: true})</script>
+
+<script>
+    var sync = Dygraph.synchronize([g1, g2, g3, g4, g5], {selection: true, zoom: true, range: false})
+</script>
 </body>
 </html>
