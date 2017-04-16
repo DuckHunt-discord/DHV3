@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-01-28 22:41+0100\n"
-"PO-Revision-Date: 2017-01-29 18:23+0100\n"
+"POT-Creation-Date: 2017-04-16 20:04+0200\n"
+"PO-Revision-Date: 2017-04-16 21:18+0200\n"
 "Last-Translator: Juliett Wonder <ertomb778@gmail.com>, 2017\n"
 "Language-Team: Hungarian (Hungary) (https://www.transifex.com/none-441/"
 "teams/70749/hu_HU/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: language\n"
 
-#: bot.py:63
+#: bot.py:58
 msgid ":x: This command cannot be used in private messages."
 msgstr ":x: Ez a parancs nem használható privát üzenetekben."
 
-#: bot.py:65
+#: bot.py:60
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Bocs, ez a parancs le van tiltva és nem használható."
 
-#: bot.py:74
+#: bot.py:69
 msgid "Send error report ? "
 msgstr "Küldesz hibajelentést?"
 
-#: bot.py:76
+#: bot.py:71
 msgid ""
 "Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
 "able to send an error report."
@@ -41,7 +41,7 @@ msgstr ""
 "Sajnálatosan, nekem 'add_reactions' és 'create_instant_invite' engedélyek "
 "szükségesek arra, hogy hibajelentést küldhessek."
 
-#: bot.py:78
+#: bot.py:73
 #, python-brace-format
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
@@ -53,20 +53,20 @@ msgstr ""
 " {tb}\n"
 " {error_report}"
 
-#: bot.py:96
+#: bot.py:91
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Meghívót készít a hibajelentés miatt..."
 
-#: bot.py:100
+#: bot.py:95
 msgid ":anger_right: Sending error report..."
 msgstr ":anger_right: Hibajelentést küld..."
 
-#: bot.py:102
+#: bot.py:97
 #, python-brace-format
 msgid ":hammer: {date} :hammer:"
 msgstr ":hammer:  {date} :hammer:"
 
-#: bot.py:103
+#: bot.py:98
 #, python-brace-format
 msgid ""
 "{cause}\n"
@@ -77,64 +77,68 @@ msgstr ""
 "\n"
 " {tb}"
 
-#: bot.py:106
+#: bot.py:101
 msgid ":ok: Error message sent, thanks :)"
 msgstr ":ok: Hibajelentés elküldve, köszönöm :)"
 
-#: bot.py:108
+#: bot.py:103
 msgid "OK, I won't send an error report"
 msgstr "OK, nem küldök hibajelentést"
 
-#: bot.py:113
+#: bot.py:108
 msgid ":x: Missing a required argument. "
 msgstr ":x: Hiányzik a szükséges érv."
 
-#: bot.py:115
+#: bot.py:110
 msgid ":x: Bad argument provided. "
 msgstr ":x: Helytelen érv."
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
 msgid "Name"
 msgstr "Név"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
 msgid "Invitation"
 msgstr "Meghívás"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
+msgid "Server ID"
+msgstr "Szerver ID"
+
+#: cogs/admin.py:113
 msgid "Number of enabled channels"
 msgstr "Elérhető csatornák száma"
 
-#: cogs/admin.py:105 cogs/admin.py:156
+#: cogs/admin.py:113 cogs/admin.py:164
 msgid "Number of connected users"
 msgstr "Csatlakozott felhasználók száma"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
 msgid "Ducks per day"
 msgstr "Kacsák naponta"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
 msgid "Number of unneeded permissions"
 msgstr "Szükségtelen engedélyek száma"
 
-#: cogs/admin.py:105
+#: cogs/admin.py:113
 msgid "Number of needed permissions"
 msgstr "Szükséges engedélyek száma"
 
-#: cogs/admin.py:108
+#: cogs/admin.py:116
 msgid " > En cours"
 msgstr "> Folyamatban"
 
-#: cogs/admin.py:119
+#: cogs/admin.py:127
 #, python-brace-format
 msgid " > Processing servers ({done}/{total})"
 msgstr "Szerverek feldolgozása ({done}/ {total})"
 
-#: cogs/admin.py:163
+#: cogs/admin.py:171
 msgid "Serching for servers to leave"
 msgstr "Elhagyható szerverek keresése"
 
-#: cogs/admin.py:184
+#: cogs/admin.py:192
 #, python-brace-format
 msgid ""
 "Cleaning {servers} unused servers (accounting for {members} members in "
@@ -143,29 +147,29 @@ msgstr ""
 "Takarít  {servers} nem használt szervereket (regisztrál  {members} tagért "
 "összesen)"
 
-#: cogs/admin.py:185
+#: cogs/admin.py:193
 #, python-brace-format
 msgid "To confirm, please type {random_str} now."
 msgstr "Hogy elfogadd, kérlek írd  {random_str} most."
 
-#: cogs/admin.py:193
+#: cogs/admin.py:201
 msgid ":x: Operation canceled, you took too long to answer."
 msgstr ":x: Akció lefújva, túl sokáig tartott válaszolnod."
 
-#: cogs/admin.py:208
+#: cogs/admin.py:216
 #, python-brace-format
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Befejezve, megbukott a  {failed} szervereken"
 
-#: cogs/admin.py:217
+#: cogs/admin.py:225
 msgid "Starting the broadcast"
 msgstr "Rádióadás kezdése"
 
-#: cogs/admin.py:226
+#: cogs/admin.py:234
 msgid "Broadcast finished"
 msgstr "Rádióadás befejezve"
 
-#: cogs/admin.py:234
+#: cogs/admin.py:242
 #, python-brace-format
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Üzenet ({message}) elküldve  {server} #  {channel} nek"
@@ -175,30 +179,30 @@ msgstr "Üzenet ({message}) elküldve  {server} #  {channel} nek"
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} ({dans_jours}{dans_heures} ban és {dans_minutes} ben)"
 
-#: cogs/exp.py:33
+#: cogs/exp.py:34
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d %H:%M:%S nál"
 
-#: cogs/exp.py:34
+#: cogs/exp.py:35
 #, python-brace-format
 msgid "{dans} days "
 msgstr "{dans} nap"
 
-#: cogs/exp.py:37
+#: cogs/exp.py:39
 #, python-brace-format
 msgid "{dans} hours"
 msgstr "{dans} óra"
 
-#: cogs/exp.py:40
+#: cogs/exp.py:43
 #, python-brace-format
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
-#: cogs/exp.py:51
+#: cogs/exp.py:55
 msgid ":ok: Your best time was reset."
 msgstr ":ok: A legjobb időd vissza lett állítva."
 
-#: cogs/exp.py:62
+#: cogs/exp.py:66
 #, python-brace-format
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
@@ -207,17 +211,17 @@ msgstr ""
 ":alarm_clock: A következő újraosztása a fegyvereknek és töltőknek  {sec} "
 "perc múlva történik ({hours} óra és  {minutes} perc)."
 
-#: cogs/exp.py:72
+#: cogs/exp.py:76
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Hogy meggátoljuk a visszaéléseket, nem küldhetsz tapasztalatpontot, ha "
 "nincs fegyvered."
 
-#: cogs/exp.py:76
+#: cogs/exp.py:80
 msgid ":x: You need to give a positive number for the exp to send"
 msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
 
-#: cogs/exp.py:89 cogs/serveradmin.py:65
+#: cogs/exp.py:93 cogs/serveradmin.py:65
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number "
 "I'm able to store."
@@ -225,7 +229,7 @@ msgstr ""
 "Gratula, te küldtél / kaptál több xp-t, mint a maximum összeg amit "
 "raktározni tudok."
 
-#: cogs/exp.py:91
+#: cogs/exp.py:95
 #, python-brace-format
 msgid ""
 "You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
@@ -234,93 +238,97 @@ msgstr ""
 "Elküldtél  {amount} xp-t  {target} nek (és fizettél {taxes} xp-t adónak "
 "ezért a szállítmányért) !"
 
-#: cogs/exp.py:102
+#: cogs/exp.py:106
 msgid "You don't have enough experience points"
 msgstr "Nincs elég tapasztalatpontod"
 
-#: cogs/exp.py:104
+#: cogs/exp.py:108
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Tapasztalatküldés nem engedélyezett ezen a szerveren"
 
-#: cogs/exp.py:118
+#: cogs/exp.py:121
 #, python-brace-format
 msgid "Statistics of {player} on #{channel}"
 msgstr "{player} statisztikái # {channel} en "
 
-#: cogs/exp.py:133
+#: cogs/exp.py:134
+msgid "No best time."
+msgstr "Nincs legjobb idő."
+
+#: cogs/exp.py:139
 msgid "No duck killed"
 msgstr "Nem ölt kacsát"
 
-#: cogs/exp.py:134 cogs/exp.py:181
+#: cogs/exp.py:141 cogs/exp.py:194
 msgid "Ducks killed"
 msgstr "Kacsát ölt"
 
-#: cogs/exp.py:135
+#: cogs/exp.py:142
 msgid "Shots missed"
 msgstr "Elvétett lövések"
 
-#: cogs/exp.py:136
+#: cogs/exp.py:143
 msgid "Shots without ducks"
 msgstr "Vaklövések"
 
-#: cogs/exp.py:137
+#: cogs/exp.py:144
 msgid "Best killing time"
 msgstr "Leggyorsabb ölés"
 
-#: cogs/exp.py:138
-msgid "Bullets in current charger"
+#: cogs/exp.py:145
+msgid "Bullets in current magazine"
 msgstr "Lövedékek a mostani töltetben"
 
-#: cogs/exp.py:139 cogs/exp.py:181 cogs/utils/scores.py:73
+#: cogs/exp.py:146 cogs/exp.py:194 cogs/utils/scores.py:112
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
 
-#: cogs/exp.py:140
+#: cogs/exp.py:147
 msgid "Ratio (exp/ducks killed)"
 msgstr "Arány (xp/megölt kacsák)"
 
-#: cogs/exp.py:141 cogs/utils/scores.py:69
+#: cogs/exp.py:148 cogs/utils/scores.py:108
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
-#: cogs/exp.py:142 cogs/utils/scores.py:71
+#: cogs/exp.py:149 cogs/utils/scores.py:110
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/exp.py:143 cogs/utils/scores.py:72
+#: cogs/exp.py:150 cogs/utils/scores.py:111
 msgid "Weapon fiability"
 msgstr "Fegyver hatékonysága"
 
-#: cogs/exp.py:145
-msgid "Object : grease"
+#: cogs/exp.py:152
+msgid "Object: grease"
 msgstr "Tárgy: zsír"
 
-#: cogs/exp.py:147
-msgid "Object : infrared detector"
+#: cogs/exp.py:154
+msgid "Object: infrared detector"
 msgstr "Tárgy: infravörös detektor"
 
-#: cogs/exp.py:149
-msgid "Object : silencer"
+#: cogs/exp.py:156
+msgid "Object: silencer"
 msgstr "Tárgy: hangtompító"
 
-#: cogs/exp.py:151
+#: cogs/exp.py:158
 #, python-brace-format
-msgid "Object : clover {exp} exp"
-msgstr "Tárgy: lóhere  {exp} tapasztalat"
+msgid "Object: clover {exp} exp"
+msgstr "Tárgy: lóhere {exp} xp"
 
-#: cogs/exp.py:155
-msgid "Object : explosive ammo"
-msgstr "Tárgy: robbanó lövedék"
+#: cogs/exp.py:162
+msgid "Object: explosive ammo"
+msgstr "Tárgy: robbanótöltet"
 
-#: cogs/exp.py:157
-msgid "Object : AP ammo"
-msgstr "Tárgy: muníció"
+#: cogs/exp.py:164
+msgid "Object: AP ammo"
+msgstr "Tárgy: AP töltet"
 
-#: cogs/exp.py:159
-msgid "Effect : wet"
-msgstr "Effekt: nedvesség"
+#: cogs/exp.py:166
+msgid "Effect: wet"
+msgstr "Effekt: nedves"
 
-#: cogs/exp.py:166 cogs/exp.py:266 cogs/meta.py:202 cogs/utils/scores.py:79
+#: cogs/exp.py:173 cogs/exp.py:277 cogs/meta.py:201 cogs/utils/scores.py:118
 msgid ""
 ":warning: Error sending embed, check if the bot have the permission "
 "embed_links and try again !"
@@ -328,21 +336,21 @@ msgstr ""
 ":warning: Hibajelentés behelyezve, nézd meg hogy van-e engedélyem "
 "embed_links -hez és próbáld újra!"
 
-#: cogs/exp.py:176
+#: cogs/exp.py:189
 msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
 msgstr ":x: A maximum szám amit látható a ranglistán az 200."
 
-#: cogs/exp.py:181 cogs/exp.py:195
+#: cogs/exp.py:194 cogs/exp.py:208
 msgid "Rank"
 msgstr "Rang"
 
-#: cogs/exp.py:181
+#: cogs/exp.py:194
 msgid "Nickname"
 msgstr "Becenév"
 
-#: cogs/exp.py:193
+#: cogs/exp.py:206
 #, python-brace-format
 msgid ""
 ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
@@ -351,36 +359,36 @@ msgstr ""
 ":cocktail: Legjobb pontszáma #{channel_name} : :cocktail: \n"
 "```{table}```"
 
-#: cogs/exp.py:209
+#: cogs/exp.py:222
 msgid "Generating topscores for your channel, please wait!"
 msgstr "Pontszámokat generál a szerveren, kérlek várj!"
 
-#: cogs/exp.py:224
+#: cogs/exp.py:236
 #, python-brace-format
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Legjobb pontszáma #{channel_name} :cocktail:"
 
-#: cogs/exp.py:240
+#: cogs/exp.py:251
 msgid "None !"
 msgstr "Nincs!"
 
-#: cogs/exp.py:259
+#: cogs/exp.py:270
 msgid "Player"
 msgstr "Játékos"
 
-#: cogs/exp.py:260
+#: cogs/exp.py:271
 msgid "Experience points"
 msgstr "Tapasztalatpontok"
 
-#: cogs/exp.py:261
+#: cogs/exp.py:272
 msgid "Number of ducks killed"
 msgstr "Megölt kacsák száma"
 
-#: cogs/exp.py:271
+#: cogs/exp.py:282
 msgid "There is nothing more..."
 msgstr "Nincs több..."
 
-#: cogs/exp.py:284 cogs/exp.py:292 cogs/exp.py:300
+#: cogs/exp.py:295 cogs/exp.py:303 cogs/exp.py:311
 msgid ""
 "I don't have the `manage_messages` permissions, I can't remove reactions. "
 "Warn an admin for me, please ;)"
@@ -388,41 +396,38 @@ msgstr ""
 "Nincs meg az engedélyem `manage_messages`hez, nem tudom kitörölni a "
 "reakciókat. Riassz fel egy admint nekem, kérlek. :)"
 
-#: cogs/exp.py:318
+#: cogs/exp.py:328
 msgid ""
 ":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
 msgstr ""
 ":x: Helytelen parancs: `!shop [list/item number] [argument if applicable]`"
 
-#: cogs/exp.py:323
-msgid ""
-"The list of items is available here : https://api-d.com/duckhunt/index.php/"
-"Shop"
-msgstr ""
-"A tárgyak listája itt elérhető:  https://api-d.com/duckhunt/index.php/Shop"
+#: cogs/exp.py:333
+msgid "The list of items is available here : http://api-d.com/shop-items.html"
+msgstr "A tárgyak listája itt elérhető: http://api-d.com/shop-items.html"
 
-#: cogs/exp.py:335
+#: cogs/exp.py:345
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
 msgstr ""
 ":money_with_wings: Hozzáadtál egy lövedéket a fegyveredhez 7 "
 "tapasztalatpontért"
 
-#: cogs/exp.py:340
+#: cogs/exp.py:350
 msgid ":champagne: Your charger is full !"
 msgstr ":champagne: A tölteted teljes!"
 
-#: cogs/exp.py:350
+#: cogs/exp.py:360
 msgid ""
 ":money_with_wings: You add a charger to your backpack for 13 exp points."
 msgstr ""
 ":money_with_wings: Hozzáadtál egy töltetet a hátizsákodba 13 "
 "tapasztalatpontért."
 
-#: cogs/exp.py:355
+#: cogs/exp.py:365
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Van elég tölteted!"
 
-#: cogs/exp.py:365
+#: cogs/exp.py:375
 msgid ""
 ":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
@@ -430,11 +435,11 @@ msgstr ""
 ":money_with_wings: AP muníciót szereztél be a fegyveredhez. A következő 24 "
 "órában dupla kárt okozol a kacsáknak."
 
-#: cogs/exp.py:370
+#: cogs/exp.py:380
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
 
-#: cogs/exp.py:380
+#: cogs/exp.py:390
 msgid ""
 ":money_with_wings: You purchase explosive ammo for your weapon. For the "
 "next 24 hours, you will deal triple damage to ducks."
@@ -442,15 +447,15 @@ msgstr ""
 ":money_with_wings: Robbanótöltetet szereztél be a fegyveredhez. A következő "
 "24 órában tripla kárt okozol a kacsáknak."
 
-#: cogs/exp.py:385
+#: cogs/exp.py:395
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 
-#: cogs/exp.py:395
+#: cogs/exp.py:405
 msgid ":money_with_wings: You take your weapon back for 40 exp points"
 msgstr ":money_with_wings: Visszavetted a fegyveredet 40 tapasztalatpontért"
 
-#: cogs/exp.py:400
+#: cogs/exp.py:410
 msgid ""
 ":champagne: You haven't killed anyone today, you have your weapon, what do "
 "you want to buy ? :p"
@@ -458,7 +463,7 @@ msgstr ""
 ":champagne: Senkit sem öltél meg na, és megvan a fegyvered, mit szeretnél "
 "venni? :p"
 
-#: cogs/exp.py:410
+#: cogs/exp.py:420
 msgid ""
 ":money_with_wings: You add grease in your weapon to reduce jamming risks by "
 "50 percent for a day, for only 8 exp points."
@@ -466,12 +471,12 @@ msgstr ""
 ":money_with_wings: Zsírt adtál a fegyveredhez, hogy megelőzd a beragadás "
 "kockázatát 50%-al egy napra, csak 8 tapasztalatpontért."
 
-#: cogs/exp.py:415
+#: cogs/exp.py:425
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, no need for more grease"
 msgstr ":champagne: A fegyvered tökéletesen meg van kenve, nem kell több zsír"
 
-#: cogs/exp.py:423
+#: cogs/exp.py:433
 msgid ""
 ":money_with_wings: You add a sight to your weapon, for 5 exp points, your "
 "aiming was improved using this formulae : (100 - current accuracy) / 3. "
@@ -480,11 +485,11 @@ msgstr ""
 "tapasztalatpontért, a célzásod ilyen mértékben fejlődött: (100 - mostani "
 "célzás) / 3."
 
-#: cogs/exp.py:427
+#: cogs/exp.py:437
 msgid ":champagne: You already have a sight to your weapon. "
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
 
-#: cogs/exp.py:439
+#: cogs/exp.py:447
 msgid ""
 ":money_with_wings: You add an infrared detector to your weapon, that will "
 "prevent any waste of ammo for a day. Cost : 15 exp points."
@@ -493,11 +498,11 @@ msgstr ""
 "meg minden muníció elvesztegetését megakadályozza egy napra. Ár: 15 "
 "tapasztalatpont."
 
-#: cogs/exp.py:444
+#: cogs/exp.py:452
 msgid ":champagne: You do have an infrared detector on your weapon, right ?"
 msgstr ":champagne: Már van egy infravörös detektor a fegyvereden, nem?"
 
-#: cogs/exp.py:454
+#: cogs/exp.py:462
 msgid ""
 ":money_with_wings: You add a silencer to your weapon, no duck will ever be "
 "frightened by one of your shots for a day. Cost : 5 exp points, what a good "
@@ -507,11 +512,11 @@ msgstr ""
 "fog elrepülni a lövéseid miatt. Ár: 5 tapasztalatpont, micsoda remek "
 "ajánlat!"
 
-#: cogs/exp.py:459
+#: cogs/exp.py:467
 msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ":champagne: Már van hangtompító a fegyvereden, nem?"
 
-#: cogs/exp.py:470
+#: cogs/exp.py:478
 #, python-brace-format
 msgid ""
 ":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
@@ -520,7 +525,7 @@ msgstr ""
 ":money_with_wings: Vettél egy friss 4-levelű lóherét, ami {exp} vel több "
 "tapasztalatpontot ad a következő napra. 13 xp-ért vetted!"
 
-#: cogs/exp.py:478
+#: cogs/exp.py:486
 msgid ""
 ":champagne: You're too lucky, but I don't have any clover left for you "
 "today :'(. Too much luck, maybe ??"
@@ -528,7 +533,7 @@ msgstr ""
 ":champagne: Nagyon szerencsés vagy, de nincs neked semmilxen lóherém "
 "mára. :'( Talán túl sok a szerencse?"
 
-#: cogs/exp.py:486
+#: cogs/exp.py:494
 msgid ""
 ":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
 "immune to sunlight for a day"
@@ -536,7 +541,7 @@ msgstr ""
 ":money_with_wings: Vettél egy napszemüveget 5 tapasztalatpontért! Most már "
 "immunis vagy a napsugárzásra egy napra"
 
-#: cogs/exp.py:493
+#: cogs/exp.py:501
 msgid ""
 ":money_with_wings: You brought brand new sunglasses, for nothing but the "
 "fact that you are mostly swag now. :cool:"
@@ -544,13 +549,13 @@ msgstr ""
 ":money_with_wings: Vettél új napszemüveget a semmiért, de most legalább te "
 "vagy a legswagebb a szobában. :cool:"
 
-#: cogs/exp.py:504
+#: cogs/exp.py:511
 msgid ""
 ":money_with_wings: You have some dry clothes on you now. You looks "
 "beautiful ! "
 msgstr ":money_with_wings: Már száraz ruha van rajtad. Csodálatosan nézel ki!"
 
-#: cogs/exp.py:510
+#: cogs/exp.py:517
 msgid ""
 ":money_with_wings: You brought brand new clothes, for nothing but the fact "
 "that you are mostly swag now. :cool:"
@@ -558,7 +563,7 @@ msgstr ""
 ":money_with_wings:  Vettél új ruhákat a semmiért, de most legalább te vagy "
 "a legswagebb a szobában. :cool:"
 
-#: cogs/exp.py:520
+#: cogs/exp.py:527
 msgid ""
 ":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
 "weapon was sabtaged, it's fixed now !"
@@ -566,12 +571,12 @@ msgstr ""
 ":champagne: Kitisztítottad a fegyvered 6 tapasztalatpontért. Ha homok volt "
 "benne, vagy szabotálták, már meg van javítva!"
 
-#: cogs/exp.py:529
+#: cogs/exp.py:535
 #, python-brace-format
 msgid ":x: No way ! {mention} have some sunglasses ! He is immune to this ! "
 msgstr ":x: Na ne! {mention} nek napszemüvege van! Immunis erre!"
 
-#: cogs/exp.py:534
+#: cogs/exp.py:540
 #, python-brace-format
 msgid ""
 ":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next "
@@ -580,12 +585,12 @@ msgstr ""
 ":money_with_wings: Elvakítottad {mention}! A következő lövésénél 50% "
 "pontosságot veszt!"
 
-#: cogs/exp.py:546
+#: cogs/exp.py:550
 #, python-brace-format
 msgid ":champagne: You throw sand on {mention} weapon!"
 msgstr ":champagne: Homokot dobtál {mention} fegyverébe!"
 
-#: cogs/exp.py:555
+#: cogs/exp.py:559
 #, python-brace-format
 msgid ""
 ":money_with_wings: You drop a full water bucket on {target}, forcing him to "
@@ -595,18 +600,18 @@ msgstr ""
 "arra, hogy várjon 1 órát a ruháinak száradására, mielőtt vissza tudna menni "
 "vadászni."
 
-#: cogs/exp.py:569
+#: cogs/exp.py:573
 #, python-brace-format
 msgid ""
 ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
 msgstr ":ok:  {target} fegyverét elrontottad... de nem is tudja :D (14 xp) !"
 
-#: cogs/exp.py:575
+#: cogs/exp.py:579
 #, python-brace-format
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: {target} fegyverét már elrontottad!"
 
-#: cogs/exp.py:591
+#: cogs/exp.py:595
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
 "get killed, you will earn half the level of the killer in exp"
@@ -614,11 +619,11 @@ msgstr ""
 ":money_with_wings: Vettél életbiztosítást egy hétre 10 xp-ért. Ha megölnek, "
 "a gyilkos szintjének a felét megkapod tapasztalatpontban"
 
-#: cogs/exp.py:596
+#: cogs/exp.py:600
 msgid ":money_with_wings: You are already insured."
 msgstr ":money_with_wings: Már biztosítva vagy. "
 
-#: cogs/exp.py:609
+#: cogs/exp.py:613
 #, python-brace-format
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
@@ -627,7 +632,7 @@ msgstr ""
 ":money_with_wings: Egy kacsa fog megjelenni a következő 10 percben a "
 "szobában, köszönhetően {mention} csalijának. 8 xp-ért vette!"
 
-#: cogs/exp.py:633
+#: cogs/exp.py:637
 #, python-brace-format
 msgid ""
 ":money_with_wings: You will be warned when the next duck on #{channel_name} "
@@ -636,7 +641,7 @@ msgstr ""
 ":money_with_wings: Figyelmeztetve leszel, amikor jön a következő kacsa "
 "#{channel_name} ra"
 
-#: cogs/exp.py:652
+#: cogs/exp.py:656
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
 "That's bad, but so funny !"
@@ -644,122 +649,121 @@ msgstr ""
 ":money_with_wings: Készitettél egy robotkacsát a szobádba 50 "
 "tapasztalatért. Ez rossz, de annyira vicces!  "
 
-#: cogs/exp.py:662
+#: cogs/exp.py:666
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/exp.py:664
+#: cogs/exp.py:668
 msgid " < "
 msgstr "<"
 
-#: cogs/exp.py:668
+#: cogs/exp.py:672
 msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
 msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
 
-#: cogs/meta.py:119
+#: cogs/meta.py:118
 msgid "Usage statistics of duckhunt"
 msgstr "A DuckHunt használati statisztikái"
 
-#: cogs/meta.py:174
+#: cogs/meta.py:173
 msgid "Number of activated channels"
 msgstr "Aktivált szobák száma"
 
-#: cogs/meta.py:175
+#: cogs/meta.py:174
 msgid "Number of servers"
 msgstr "Szerverek száma"
 
-#: cogs/meta.py:176
+#: cogs/meta.py:175
 msgid "Number of french servers"
 msgstr "Francia szerverek száma"
 
-#: cogs/meta.py:177
+#: cogs/meta.py:176
 msgid "Number of english servers"
 msgstr "Angol szerverek száma"
 
-#: cogs/meta.py:178
+#: cogs/meta.py:177
 msgid "Number of servers with another language setup"
 msgstr "Másfajta nyelvvel rendelkező szerverek száma"
 
-#: cogs/meta.py:179
+#: cogs/meta.py:178
 msgid "Number of channels"
 msgstr "Csatornák száma"
 
-#: cogs/meta.py:180
+#: cogs/meta.py:179
 msgid "Number of users"
 msgstr "Felhasználók száma"
 
-#: cogs/meta.py:181
+#: cogs/meta.py:180
 msgid "Number of ducks"
 msgstr "Kacsák száma"
 
-#: cogs/meta.py:182
+#: cogs/meta.py:181
 msgid "Number of ducks per minute"
 msgstr "Kacsák száma percenként"
 
-#: cogs/meta.py:183
+#: cogs/meta.py:182
 msgid "Number of messages recived"
 msgstr "Fogadott üzenetek száma"
 
-#: cogs/meta.py:184
+#: cogs/meta.py:183
 msgid "Number of commands recived"
 msgstr "Fogadott parancsok száma"
 
-#: cogs/meta.py:185
+#: cogs/meta.py:184
 msgid "Number of commands per minute"
 msgstr "Parancsok száma percenként"
 
-#: cogs/meta.py:186
+#: cogs/meta.py:185
 msgid "Number of messages per minute"
 msgstr "Üzenetek száma percenként"
 
-#: cogs/meta.py:187
+#: cogs/meta.py:186
 msgid "Uptime in seconds"
 msgstr "Aktivitási idő percekben"
 
-#: cogs/meta.py:188
+#: cogs/meta.py:187
 msgid "Uptime in hours"
 msgstr "Aktivitási idő órákban"
 
-#: cogs/meta.py:189
+#: cogs/meta.py:188
 msgid "Uptime in days"
 msgstr "Aktivitási idő napokban"
 
-#: cogs/meta.py:190
+#: cogs/meta.py:189
 msgid "Servers with send exp activated"
 msgstr "Tapasztalatküldést engedélyező szerverek "
 
-#: cogs/meta.py:191
+#: cogs/meta.py:190
 msgid "Servers with more than 100 ducks per day"
 msgstr "Szerverek több mint 100 kacsával naponta"
 
-#: cogs/meta.py:192
+#: cogs/meta.py:191
 msgid "Servers with more than 50 ducks per day"
 msgstr "Szerverek több mint 50 kacsával naponta"
 
-#: cogs/meta.py:193
+#: cogs/meta.py:192
 msgid "Servers with more than 24 ducks per day"
 msgstr "Szerverek több mint 24 kacsával naponta"
 
-#: cogs/meta.py:194
+#: cogs/meta.py:193
 msgid "Servers with less than 24 ducks per day"
 msgstr "Szerverek kevesebb mint 24 kacsával naponta"
 
-#: cogs/meta.py:195
+#: cogs/meta.py:194
 msgid "Memory used (MB)"
 msgstr "Memória használva (megabájt)"
 
-#: cogs/meta.py:196
+#: cogs/meta.py:195
 msgid "Python version : "
 msgstr "Python verzió:"
 
-#: cogs/meta.py:206
+#: cogs/meta.py:205
 msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
 msgstr "BANG vagy BANG, melyik a jobb? :p Amúgy fenn vagyok és futok"
 
-#: cogs/meta.py:214
-msgid ""
-"The command list is on the wiki now ! https://api-d.com/duckhunt/index.php/"
-msgstr "A parancslista a wikin van! https://api-d.com/duckhunt/index.php/"
+#: cogs/meta.py:213
+msgid "Check out our new website ! http://api-d.com/command-list.html"
+msgstr "Nézd meg az új honlapunkat: http://api-d.com/command-list.html"
 
 #: cogs/serveradmin.py:42
 msgid ":ok: Done, user banned :gun:"
@@ -771,68 +775,68 @@ msgstr ":ok: Kész, felhasználó visszavéve :eyes:"
 
 #: cogs/serveradmin.py:68
 #, python-brace-format
-msgid ":ok:, he now have {newexp} exp points !"
+msgid ":ok:, they now have {newexp} exp points !"
 msgstr ":ok:, nekünk már {newexp} tapasztalatpontunk van!"
 
-#: cogs/serveradmin.py:93
+#: cogs/serveradmin.py:91
 msgid ":robot: Channel added !"
 msgstr ":robot: Csatorna hozzáadva!"
 
-#: cogs/serveradmin.py:97
+#: cogs/serveradmin.py:95
 msgid ":x: This channel already exists in the game."
 msgstr ":x: Ez a csatorna már létezik a játékban."
 
-#: cogs/serveradmin.py:107
+#: cogs/serveradmin.py:105
 msgid ":ok: Channel deleted"
 msgstr ":ok: Csatorna törölve"
 
-#: cogs/serveradmin.py:116
+#: cogs/serveradmin.py:114
 #, python-brace-format
 msgid "There is {ducks} ducks left to spawn today !"
 msgstr "Ma {ducks} kacsa jött erre a szerverre!"
 
-#: cogs/serveradmin.py:133
+#: cogs/serveradmin.py:131
 #, python-brace-format
 msgid ":robot: OK, {name} was set as an admin on the server !"
 msgstr ":robot: OK, {name} egy újabb admin a szerveren!"
 
-#: cogs/serveradmin.py:155
+#: cogs/serveradmin.py:153
 #, python-brace-format
 msgid ":robot: OK, {name} was removed from this server admins !"
 msgstr ":robot: OK, {name} törölve a szerver adminjai közül!"
 
-#: cogs/serveradmin.py:163
+#: cogs/serveradmin.py:161
 #, python-brace-format
 msgid ":robot: OK, {name} is not an admin !"
 msgstr ":robot: OK, {name} nem admin többé!"
 
-#: cogs/serveradmin.py:183
+#: cogs/serveradmin.py:181
 msgid ":robot: OK, you have been set as an admin !"
 msgstr ":robot: OK, admin lettél!"
 
-#: cogs/serveradmin.py:186
+#: cogs/serveradmin.py:184
 msgid ":x: An admin exist on this server ! Try !add_admin"
 msgstr ":x: Egy admin már létezik a szerveren! Próbáld !add_admin"
 
-#: cogs/serveradmin.py:201
+#: cogs/serveradmin.py:201 cogs/serveradmin.py:219
 #, python-brace-format
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} üzenet(ek) törölve"
 
-#: cogs/serveradmin.py:205
+#: cogs/serveradmin.py:205 cogs/serveradmin.py:223
 msgid "0 message(s) deleted : permission denied"
 msgstr "0 üzenet(ek) törölve: engedély elutasítva"
 
-#: cogs/serveradmin.py:227
+#: cogs/serveradmin.py:245
 #, python-brace-format
 msgid "Permissions : {permissions}"
 msgstr "Engedélyek:  {permissions}"
 
-#: cogs/serveradmin.py:238
+#: cogs/serveradmin.py:256
 msgid ":ok: Scores / stats of the channel were succesfully deleted."
 msgstr ":ok: Pontszámok / statisztikák a szerveren sikeresen törölve."
 
-#: cogs/serveradmin.py:248
+#: cogs/serveradmin.py:266
 msgid ""
 ":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting "
 "if applicable]`"
@@ -840,19 +844,19 @@ msgstr ""
 "Helytelen parancs: `!settings [view/set/reset/list/modified] [setting if "
 "applicable]`"
 
-#: cogs/serveradmin.py:256
+#: cogs/serveradmin.py:274
 #, python-brace-format
 msgid "The setting {pref} is set at {value} on this server."
 msgstr "A szabályozás {pref}  {value} ra lett állítva ezen a szerveren"
 
-#: cogs/serveradmin.py:261 cogs/serveradmin.py:299 cogs/serveradmin.py:315
+#: cogs/serveradmin.py:279 cogs/serveradmin.py:317 cogs/serveradmin.py:333
 msgid ""
 ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
 msgstr ""
 ":x: Helytelen kérés, talás egy nyelvtani hiba? Nézd meg a listát `!settings "
 "list` paranccsal."
 
-#: cogs/serveradmin.py:276
+#: cogs/serveradmin.py:294
 #, python-brace-format
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would be "
@@ -861,16 +865,16 @@ msgstr ""
 "Kitérni a max_ducks_per_day ellenőrzés alól, ha te vagy a bot gazdája Ez "
 "{max} lenne"
 
-#: cogs/serveradmin.py:282 cogs/serveradmin.py:286 cogs/serveradmin.py:297
+#: cogs/serveradmin.py:300 cogs/serveradmin.py:304 cogs/serveradmin.py:315
 msgid ":x: Incorrect value"
 msgstr ":x: Helytelen összeg"
 
-#: cogs/serveradmin.py:292
+#: cogs/serveradmin.py:310
 #, python-brace-format
 msgid ":ok: The setting {pref} was set at `{value}` on this server."
 msgstr ":ok: A szabályozást {pref}  {value} ra állították ezen a szerveren."
 
-#: cogs/serveradmin.py:310
+#: cogs/serveradmin.py:328
 #, python-brace-format
 msgid ""
 ":ok: The setting {pref} reset to it's defalut value on this server : "
@@ -879,27 +883,27 @@ msgstr ""
 "A szabályozás {pref} visszaállítva az alapmértékre ezen a szerveren: "
 "`{value}`"
 
-#: cogs/serveradmin.py:322
+#: cogs/serveradmin.py:340
 msgid ""
-"List of preferences is available on the wiki : https://api-d.com/duckhunt/"
-"index.php/Configuration"
+"List of preferences is available on the new website : https://api-d.com/bot-"
+"settings.html"
 msgstr ""
-"A beállítások listája a wikin elérhető: https://api-d.com/duckhunt/index."
-"php/Configuration"
+"A bot beállításainak listája itt található: https://api-d.com/bot-settings."
+"html"
 
-#: cogs/serveradmin.py:331 cogs/serveradmin.py:337
+#: cogs/serveradmin.py:349 cogs/serveradmin.py:355
 msgid "Parameter"
 msgstr "Paraméter"
 
-#: cogs/serveradmin.py:331
+#: cogs/serveradmin.py:349
 msgid "Value"
 msgstr "Érték"
 
-#: cogs/serveradmin.py:331
+#: cogs/serveradmin.py:349
 msgid "Default value"
 msgstr "Alapérték"
 
-#: cogs/serveradmin.py:336
+#: cogs/serveradmin.py:354
 #, python-brace-format
 msgid ""
 "List of modified parameters : \n"
@@ -908,25 +912,25 @@ msgstr ""
 "Megváltoztatott paraméterek listája: \n"
 "```{table}```"
 
-#: cogs/shoot.py:55
+#: cogs/shoot.py:56
 #, python-brace-format
 msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
 msgstr "Nem vagy száraz, nem mehetsz vadászni! Várj {temps_restant} percet."
 
-#: cogs/shoot.py:61
+#: cogs/shoot.py:63
 msgid "You don't have a weapon"
 msgstr "Nincsen fegyvered "
 
-#: cogs/shoot.py:65
+#: cogs/shoot.py:68
 msgid "Your weapon is jammed, it must be reloaded to unstuck it."
 msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
 
-#: cogs/shoot.py:69
+#: cogs/shoot.py:73
 #, python-brace-format
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
 
-#: cogs/shoot.py:77
+#: cogs/shoot.py:82
 #, python-brace-format
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
@@ -935,11 +939,11 @@ msgstr ""
 "** TÖLTET ÜRES ** | Muníció a fegyverben:  {balles_actuelles} /  "
 "{balles_max} | Maradék töltet:   {chargeurs_actuels} /  {chargeurs_max}"
 
-#: cogs/shoot.py:92
+#: cogs/shoot.py:98
 msgid "Your weapon is jammed, reload to unstuck it."
 msgstr "A fegyvered besült, töltsd újra a használathoz. "
 
-#: cogs/shoot.py:105
+#: cogs/shoot.py:112
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing it's job!"
@@ -947,7 +951,7 @@ msgstr ""
 "Itt egyáltalán nincsenek kacsák, de a lövedéket nem lőtted ki, mert az "
 "infravörös detektor amit hozzáadtál a fegyverhez teszi a dolgát!"
 
-#: cogs/shoot.py:111
+#: cogs/shoot.py:120
 msgid ""
 "Luckily you missed, what were you aiming at exactly? There isn't any duck "
 "in here... [missed : -1 xp] [wild shot: -1 xp]"
@@ -955,7 +959,7 @@ msgstr ""
 "Szerencsére elvétetted, mire céloztál egyáltalán? Itt nincsenek kacsák... "
 "[elvétve: -1 xp] [vaklövés: -1 xp]"
 
-#: cogs/shoot.py:120
+#: cogs/shoot.py:130
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! "
 "[missed : -1 xp]"
@@ -963,11 +967,11 @@ msgstr ""
 "**FLAPP** A túl sok zajtól megijedve, a kacsa elrepült! GRATULA! [elvétve: "
 "-1 xp]"
 
-#: cogs/shoot.py:122 cogs/shoot.py:165
+#: cogs/shoot.py:133 cogs/shoot.py:179
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "**PIEWW**\t Nem találtad el a kacsát! [elvétve: -1 xp]"
+msgstr "**PIEWW**⇥ Nem találtad el a kacsát! [elvétve: -1 xp]"
 
-#: cogs/shoot.py:149
+#: cogs/shoot.py:161
 #, python-brace-format
 msgid ""
 "**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
@@ -976,7 +980,7 @@ msgstr ""
 "**BANG** Nem találtad el a kacsát... De lelőtted {player}! [elvétve: -1 xp] "
 "[vadászbaleset: -2 xp] [fegyver elkobozva]"
 
-#: cogs/shoot.py:153
+#: cogs/shoot.py:165
 msgid ""
 "**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
 "little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
@@ -986,12 +990,12 @@ msgstr ""
 "fordítsd el egy kicsit a fegyveredet, mielőtt lősz, rendben? [elvétve: -1 "
 "xp] [vadászbaleset: -2 xp] [fegyver elkobozva]"
 
-#: cogs/shoot.py:158
+#: cogs/shoot.py:171
 #, python-brace-format
 msgid " > You won {exp} with your life insurance"
 msgstr "Nyertél egy kis {exp} az életbiztosításoddal."
 
-#: cogs/shoot.py:184
+#: cogs/shoot.py:197
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first ! [exp -1]"
@@ -999,7 +1003,7 @@ msgstr ""
 "Ez közel volt, majdnem megölted a kacsát, de a másik vadász kapta meg "
 "először! [xp -1]"
 
-#: cogs/shoot.py:201
+#: cogs/shoot.py:217
 #, python-brace-format
 msgid ""
 ":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
@@ -1010,38 +1014,38 @@ msgstr ""
 "már {total} kacsa lett az áldozatod (amelyekből  {supercanards} "
 "szuperkacsa) a #{channel} csatornán.  \\_X< *COUAC* [{exp} exp]"
 
-#: cogs/shoot.py:212
+#: cogs/shoot.py:228
 #, python-brace-format
 msgid "While searching the bushes around the duck, you found {inutilitee}"
 msgstr "Miközben keresgéltél a bokrok közt, a kezedbe akadt  {inutilitee}"
 
-#: cogs/shoot.py:218
+#: cogs/shoot.py:234
 #, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
 ":gun: A kacsa túlélte, próbáld újra *SZUPERKACSA ÉSZLELVE*  [élet: -{vie}]"
 
-#: cogs/shoot.py:232
+#: cogs/shoot.py:249
 msgid "Your weapon had been confiscated"
 msgstr "A fegyvered el lett kobozva"
 
-#: cogs/shoot.py:235
+#: cogs/shoot.py:252
 msgid "You unstuck your weapon."
 msgstr "Kilazítottad a fegyvered."
 
-#: cogs/shoot.py:244
+#: cogs/shoot.py:262
 msgid "You reload your weapon"
 msgstr "Újratöltötted a fegyvered"
 
-#: cogs/shoot.py:246
+#: cogs/shoot.py:264
 msgid "You dont have any ammo left !"
 msgstr "Nincs több lőszered! "
 
-#: cogs/shoot.py:248
+#: cogs/shoot.py:267
 msgid "You don't need to reload your weapon"
 msgstr "Nem kell újratöltened a fegyvered. "
 
-#: cogs/shoot.py:250
+#: cogs/shoot.py:270
 #, python-brace-format
 msgid ""
 "{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
@@ -1054,7 +1058,7 @@ msgstr ""
 msgid "Error sending heartbeat"
 msgstr "Hiba küldő szívdobogás "
 
-#: cogs/utils/checks.py:55
+#: cogs/utils/checks.py:62
 #, python-brace-format
 msgid ""
 ":x: You can't use this command, you don't have at least {exp} exp points!"
@@ -1062,404 +1066,408 @@ msgstr ""
 ":x: Nem használhatod ezt a parancsot, kell hogy legyen neked legalább  "
 "{exp} tapasztalatpontod!"
 
-#: cogs/utils/checks.py:68
+#: cogs/utils/checks.py:75
 msgid ":x: You can't use this command, you are not the owner of the bot !"
 msgstr ":x: Nem használhatod ezt a parancsot, nem te vagy a bot gazdája!"
 
-#: cogs/utils/checks.py:83
+#: cogs/utils/checks.py:90
 msgid ":x: You can't use this command, you are not an admin on this server!"
 msgstr "Nem használhatod ezt a parancsot, nem vagy Admin a szerveren! "
 
-#: cogs/utils/commons.py:205
+#: cogs/utils/commons.py:218
 msgid "public danger"
 msgstr "közveszélyes "
 
-#: cogs/utils/commons.py:213
+#: cogs/utils/commons.py:226
 msgid "tourist"
 msgstr "turista "
 
-#: cogs/utils/commons.py:221
+#: cogs/utils/commons.py:234
 msgid "noob"
 msgstr "pancser "
 
-#: cogs/utils/commons.py:229
+#: cogs/utils/commons.py:242
 msgid "trainee"
 msgstr "újonc "
 
-#: cogs/utils/commons.py:237
+#: cogs/utils/commons.py:250
 msgid "duck misser"
 msgstr "kacsatévesztő"
 
-#: cogs/utils/commons.py:245
+#: cogs/utils/commons.py:258
 msgid "member of the Comitee Against Ducks"
 msgstr "tagja a Kacsaellenes Egyesületnek"
 
-#: cogs/utils/commons.py:253
+#: cogs/utils/commons.py:266
 msgid "duck hater"
 msgstr "kacsautáló"
 
-#: cogs/utils/commons.py:261
+#: cogs/utils/commons.py:274
 msgid "duck pest"
 msgstr "a kacsák átka"
 
-#: cogs/utils/commons.py:269
+#: cogs/utils/commons.py:282
 msgid "duck hassler"
 msgstr "kacsavágó"
 
-#: cogs/utils/commons.py:277
+#: cogs/utils/commons.py:290
 msgid "duck plucker"
 msgstr "kacsatépő"
 
-#: cogs/utils/commons.py:285
+#: cogs/utils/commons.py:298
 msgid "hunter"
 msgstr "vadász"
 
-#: cogs/utils/commons.py:293
+#: cogs/utils/commons.py:306
 msgid "inside out duck turner"
 msgstr "kacsák belsejéből kifordítója"
 
-#: cogs/utils/commons.py:301
+#: cogs/utils/commons.py:314
 msgid "duck clobber"
 msgstr "kacsáknak kesztyűbe dudálástanító"
 
-#: cogs/utils/commons.py:309
+#: cogs/utils/commons.py:322
 msgid "duck chewer"
 msgstr "kacsa... bagózó?"
 
-#: cogs/utils/commons.py:317
+#: cogs/utils/commons.py:330
 msgid "duck eater"
 msgstr "kacsaevő"
 
-#: cogs/utils/commons.py:325
+#: cogs/utils/commons.py:338
 msgid "duck flattener"
 msgstr "kacsakalapácsoló"
 
-#: cogs/utils/commons.py:333
+#: cogs/utils/commons.py:346
 msgid "duck disassembler"
 msgstr "kacsaszétszedő"
 
-#: cogs/utils/commons.py:341
+#: cogs/utils/commons.py:354
 msgid "duck demolisher"
 msgstr "kacsapusztító"
 
-#: cogs/utils/commons.py:349
+#: cogs/utils/commons.py:362
 msgid "duck killer"
 msgstr "kacsaölő"
 
-#: cogs/utils/commons.py:357
+#: cogs/utils/commons.py:370
 msgid "duck skinner"
 msgstr "kacsanyúzó"
 
-#: cogs/utils/commons.py:365
+#: cogs/utils/commons.py:378
 msgid "predator"
 msgstr "predátor"
 
-#: cogs/utils/commons.py:373
+#: cogs/utils/commons.py:386
 msgid "duck chopper"
 msgstr "kacsacafatoló"
 
-#: cogs/utils/commons.py:381
+#: cogs/utils/commons.py:394
 msgid "duck decorticator"
 msgstr "kacsahámozó"
 
-#: cogs/utils/commons.py:389
+#: cogs/utils/commons.py:402
 msgid "duck fragger"
 msgstr "kacsadaraboló"
 
-#: cogs/utils/commons.py:397
+#: cogs/utils/commons.py:410
 msgid "duck shatterer"
 msgstr "kacsazúzó"
 
-#: cogs/utils/commons.py:405
+#: cogs/utils/commons.py:418
 msgid "duck smasher"
 msgstr "kacsaütő"
 
-#: cogs/utils/commons.py:413
+#: cogs/utils/commons.py:426
 msgid "duck breaker"
 msgstr "kacsatörő"
 
-#: cogs/utils/commons.py:421
+#: cogs/utils/commons.py:434
 msgid "duck wrecker"
 msgstr "kacsaroncsoló"
 
-#: cogs/utils/commons.py:429
+#: cogs/utils/commons.py:442
 msgid "duck impaler"
 msgstr "kacsák karóba húzója"
 
-#: cogs/utils/commons.py:437
+#: cogs/utils/commons.py:450
 msgid "duck eviscerator"
 msgstr "kacsabelező"
 
-#: cogs/utils/commons.py:445
+#: cogs/utils/commons.py:458
 msgid "ducks terror"
 msgstr "kacsák réme"
 
-#: cogs/utils/commons.py:453
+#: cogs/utils/commons.py:466
 msgid "duck exploder"
 msgstr "kacsarobbantó"
 
-#: cogs/utils/commons.py:461
+#: cogs/utils/commons.py:474
 msgid "duck destructor"
 msgstr "kacsasemmisítő"
 
-#: cogs/utils/commons.py:469
+#: cogs/utils/commons.py:482
 msgid "duck blaster"
 msgstr "kacsarobbantó"
 
-#: cogs/utils/commons.py:477
+#: cogs/utils/commons.py:490
 msgid "duck pulverizer"
 msgstr "kacsaporlasztó"
 
-#: cogs/utils/commons.py:485
+#: cogs/utils/commons.py:498
 msgid "duck disintegrator"
 msgstr "kacsaaprító"
 
-#: cogs/utils/commons.py:493
+#: cogs/utils/commons.py:506
 msgid "duck atomizer"
 msgstr "kacsaatomizáló"
 
-#: cogs/utils/commons.py:501
+#: cogs/utils/commons.py:514
 msgid "duck annihilator"
 msgstr "a kacsákat földdel egyenlővé tevő"
 
-#: cogs/utils/commons.py:509
+#: cogs/utils/commons.py:522
 msgid "serial duck killer"
 msgstr "sorozatos kacsagyilkos"
 
-#: cogs/utils/commons.py:517
+#: cogs/utils/commons.py:530
 msgid "duck genocider"
 msgstr "kacsairtó"
 
-#: cogs/utils/commons.py:525
+#: cogs/utils/commons.py:538
 msgid "unemployed due to extinction of the duck specie"
 msgstr "munkanélküli a teljes kacsapopuláció kiirtása miatt"
 
-#: cogs/utils/commons.py:533
+#: cogs/utils/commons.py:546
 msgid "duck toaster"
 msgstr "kacsapirító"
 
-#: cogs/utils/commons.py:541
+#: cogs/utils/commons.py:554
 msgid "old noob"
 msgstr "nyomi veterán"
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "*cries*"
 msgstr "*sír*"
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "Hello world"
 msgstr "Hello világ"
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "How are you today?"
 msgstr "Hogy vagy ma? "
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "Please don't kill me..."
 msgstr "Kérlek ne ölj meg... "
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "Me too, I love you !"
 msgstr "Én is szeretlek!"
 
-#: cogs/utils/commons.py:556
+#: cogs/utils/commons.py:569
 msgid "Don't shoot me ! I'm a fake duck !"
 msgstr "Ne lőjj le! Hamis kacsa vagyok!"
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elhagyott minket ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa átment egy másik világba ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsának nincs erre ideje ·°'\\`'°-.,¸¸.·°'\\` "
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elment. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elveszett a tér-időben. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:558
+#: cogs/utils/commons.py:571
 msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa hazament unalmában. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:558
-msgid "The duck don't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+#: cogs/utils/commons.py:571
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa nem akarta, hogy lelőjék. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:571
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa felsétált a limonádéstandra. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/utils/commons.py:573
 msgid "a stuffed duck."
 msgstr "egy kitömött kacsa."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a rubber ducky."
 msgstr "egy gumikacsa."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a vibrating duck."
 msgstr "egy kacsavibrátor."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a pile of feathers."
 msgstr "egy tollkupac."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a chewed chewing gum."
 msgstr "egy megrágott rágógumi."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "egy szórólap a KKEEtől (Koalíció a Kacsaellenes Egyesület Ellen)."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an old shoe."
 msgstr "egy régi bakancs."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a spring thingy."
 msgstr "egy rugószerűség."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a cow dung."
 msgstr "egy szaftos kis tehénfos."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a dog dirt."
 msgstr "egy friss kutyakaki."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an expired hunting license."
 msgstr "egy lejárt vadászliszensz."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a cartridge."
 msgstr "egy patron."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a cigarette butt."
 msgstr "egy cigarettavég."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a used condom."
 msgstr "egy használt óvszer."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a broken sight."
 msgstr "egy törött látcső."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a broken infrared detector."
 msgstr "egy törött infravörös detektor."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a bent silencer."
 msgstr "egy görbe hangtompító."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an empty box of AP ammo."
 msgstr "egy üres AP muníciósláda."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an empty box of explosive ammo."
 msgstr "egy üres robbanó muníciósláda."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a four-leaf clover with only 3 left."
 msgstr "egy négylevelű lóhere, de csak 3 levéllel."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a broken decoy."
 msgstr "egy törött csapda."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a broken mirror."
 msgstr "egy törött tükör."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a rusty mechanical duck."
 msgstr "egy rozsdás robotkacsa."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a pair of sunglasses without glasses."
 msgstr "egy napszemüveg üveg nélkül."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "Donald's beret."
 msgstr "Donald kacsa svájcisapkája."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a half-melted peppermint."
 msgstr "félig megrágcsált borsmenta."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a box of Abraxo cleaner."
 msgstr "egy Abraxo tiszítós doboz."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "a gun with banana peeled barrel."
 msgstr "egy fegyver egy banánnal a csövén."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an old hunting knife."
 msgstr "egy régi vadászkés."
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "egy régi videófelvétel: http://tinyurl.com/zbejktu"
 
-#: cogs/utils/commons.py:560
+#: cogs/utils/commons.py:573
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "egy régi vadászfotó: http://tinyurl.com/hmn4r88"
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "egy régi képeslap: http://tinyurl.com/hbnkpzr"
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "egy aranykacsa fotója: http://tinyurl.com/hle8fjf"
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr "egy vadászjelvény: http://tinyurl.com/hqy7fhq"
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "bushes."
 msgstr "bokrok."
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY "
 
-#: cogs/utils/commons.py:561
+#: cogs/utils/commons.py:574
 msgid "a fish."
 msgstr "egy hal."
 
-#: cogs/utils/ducks.py:94
+#: cogs/utils/ducks.py:92
 #, python-brace-format
 msgid "There is a duck on #{channel}"
 msgstr "Van egy kacsa # {channel} en"
 
-#: cogs/utils/scores.py:51
+#: cogs/utils/scores.py:90
 #, python-brace-format
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje # {channel} en"
 
-#: cogs/utils/scores.py:58
+#: cogs/utils/scores.py:97
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/utils/scores.py:61
+#: cogs/utils/scores.py:100
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/utils/scores.py:70
+#: cogs/utils/scores.py:109
 msgid "Previous level"
 msgstr "Előző szint"
