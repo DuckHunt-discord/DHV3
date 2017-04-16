@@ -4,7 +4,7 @@ import json
 
 from cogs.utils import commons
 
-cache = False
+cache = True
 
 
 def getPref(server, pref):

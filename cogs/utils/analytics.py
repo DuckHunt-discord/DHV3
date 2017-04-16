@@ -20,7 +20,7 @@ from cogs.utils.commons import _
 # tls.set_credentials_file(username='-', api_key='-')
 
 
-# stream_ids = ["-", "-", "-", "-"]
+#stream_ids = ["-", "-", "-", "-"]
 stream_ids = tls.get_credentials_file()['stream_ids']
 
 
@@ -58,20 +58,17 @@ async def update_servers(servers_graph):
     servers_graph.write(dict(x=x, y=y))
     commons.logger.debug("Updating server analytics")
 
-
 async def update_channels(activated_channels_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = len(commons.ducks_planned)
     activated_channels_graph.write(dict(x=x, y=y))
     commons.logger.debug("Updating channels analytics")
 
-
 async def update_memory(mem_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = round(psutil.Process(os.getpid()).memory_info()[0] / 2. ** 30 * 1000, 5)
     mem_graph.write(dict(x=x, y=y))
     commons.logger.debug("Updating memory analytics")
-
 
 async def update_users(users_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -83,7 +80,6 @@ async def update_users(users_graph):
     users_graph.write(dict(x=x, y=y))
     commons.logger.debug("Updating users analytics")
 
-
 async def update_ducks_dest():
     labels = ['Ducks killed', 'Ducks bored']
 
@@ -91,12 +87,10 @@ async def update_ducks_dest():
 
     py.plot([go.Pie(labels=labels, values=values)], filename="Ducks Dest", fileopt="overwrite", auto_open=False)
 
-
 async def update_ducks(ducks_graph):
     x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
     y = len(commons.ducks_spawned)
     ducks_graph.write(dict(x=x, y=y))
-
 
 async def analytics_loop():
     try:
@@ -143,3 +137,4 @@ async def analytics_loop():
     except:
         commons.logger.exception("")
         raise
+

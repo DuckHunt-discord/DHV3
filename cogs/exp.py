@@ -149,21 +149,21 @@ class Exp:
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
         embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
         if scores.getStat(message.channel, target, "graisse", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : grease", language), value=str(self.objectTD(message.channel, target, language, "graisse")))
+            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(message.channel, target, language, "graisse")))
         if scores.getStat(message.channel, target, "detecteurInfra", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : infrared detector", language), value=str(self.objectTD(message.channel, target, language, "detecteurInfra")))
+            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(message.channel, target, language, "detecteurInfra")))
         if scores.getStat(message.channel, target, "silencieux", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : silencer", language), value=str(self.objectTD(message.channel, target, language, "silencieux")))
+            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(message.channel, target, language, "silencieux")))
         if scores.getStat(message.channel, target, "trefle", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : clover {exp} exp", language).format(**{
+            embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
                 "exp": scores.getStat(message.channel, target, "trefle_exp", default=0)
             }), value=str(self.objectTD(message.channel, target, language, "trefle")))
         if scores.getStat(message.channel, target, "explosive_ammo", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "explosive_ammo")))
+            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "explosive_ammo")))
         elif scores.getStat(message.channel, target, "ap_ammo", default=0) > int(time.time()):
-            embed.add_field(name=_("Object : AP ammo", language), value=str(self.objectTD(message.channel, target, language, "ap_ammo")))
+            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(message.channel, target, language, "ap_ammo")))
         if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
-            embed.add_field(name=_("Effect : wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
+            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
 
         embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
         try:
