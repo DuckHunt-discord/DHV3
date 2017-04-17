@@ -1,31 +1,26 @@
 # DuckHunt Version 2
-Un super bot pour discord. idée du jeu par MenzAgitat, porté selon son idée (http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html)
+Un super bot pour discord. Idée du jeu par MenzAgitat, porté selon [son idée](http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html).
 
 Merci Menz' :D
 
-# Qu'est-ce que c'est ?
-Le but du jeu est de tuer les canards dès que vous les voyez ! C'est un peu un fps, mais pour discord :°)
+## Qu'est-ce que c'est ?
+Le but du jeu est de tuer les canards dès que vous les voyez ! C'est un peu un fps, mais pour discord. :°)
 
-# Ou est l'aide du bot ?
-Elle se trouve ici : 
+## Ou est l'aide du bot ?
+Elle se trouve ici : http://api-d.com
 
-https://github.com/DuckHunt-discord/DuckHunt-Discord/wiki/Aide
-
-# Comment avoir le bot sur son serveur ?
-
+## Comment avoir le bot sur son serveur ?
 Deux moyens :
-- l'inviter et taper !claimserver, puis ajouter chacune des channels avec !add_channel. > https://discordapp.com/oauth2/authorize?&client_id=187636051135823872&scope=bot&permissions=-1
-- L'héberger vous meme, ce qui vous permet d'avoir plus de contrôle sur les préférances du bot. Pour cela, il vous faut python 3.5+. 
+- L'inviter et taper !claimserver, puis ajouter chaque channel de jeu avec !add_channel. > https://discordapp.com/oauth2/authorize?&client_id=187636051135823872&scope=bot&permissions=68320256
+- L'héberger vous-même, ce qui vous permet d'avoir plus de contrôle sur les préférences du bot. Pour cela, il vous faut Python 3.5+.
 
-# J'ai besoin d'aide, que faire ?
+## J'ai besoin d'aide, que faire ?
+Ouvrez une [issue](https://github.com/DuckHunt-discord/DHV2/issues/new), ou passez sur [notre Discord](https://discord.gg/2BksEkV) !
 
-Ouvrez une issue ! 
-
-# Des badges ?
-
+## Des badges ?
 [![Dependency Status](https://gemnasium.com/badges/github.com/DuckHunt-discord/DHV2.svg)](https://gemnasium.com/github.com/DuckHunt-discord/DHV2)
 
-# Licence
+## Licence
 
 		Cette création est mise à disposition selon le Contrat
 		Attribution-NonCommercial-ShareAlike 3.0 Unported disponible en ligne
