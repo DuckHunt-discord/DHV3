@@ -158,6 +158,7 @@ class Shoot:
                 memberlist = list(message.server.members)
                 victim = random.choice(memberlist)
                 while not checks.is_player_check(victim, message.channel):
+                    memberlist.remove(victim)
                     victim = random.choice(memberlist)
 
                 if victim is not message.author:
