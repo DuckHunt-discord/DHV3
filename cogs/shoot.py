@@ -5,10 +5,9 @@ import time
 import discord
 from discord.ext import commands
 
-from cogs.utils import comm, commons, prefs, scores
+from cogs.utils import checks, comm, commons, prefs, scores
 from cogs.utils.comm import logwithinfos
 from cogs.utils.commons import _
-from .utils import checks
 
 
 # to expose to the eval command
@@ -157,6 +156,9 @@ class Shoot:
                 scores.setStat(message.channel, message.author, "confisque", True)
 
                 victim = random.choice(list(message.server.members))
+                while not checks.is_player_check(victim, message.channel):
+                    victim = random.choice(list(message.server.members))
+
                 if victim is not message.author:
                     await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language).format(**{
                         "player": victim.mention if prefs.getPref(message.server, "killed_mentions") else victim.name
