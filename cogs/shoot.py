@@ -155,9 +155,10 @@ class Shoot:
                 scores.addToStat(message.channel, message.author, "killed_players", 1)
                 scores.setStat(message.channel, message.author, "confisque", True)
 
-                victim = random.choice(list(message.server.members))
+                memberlist = list(message.server.members)
+                victim = random.choice(memberlist)
                 while not checks.is_player_check(victim, message.channel):
-                    victim = random.choice(list(message.server.members))
+                    victim = random.choice(memberlist)
 
                 if victim is not message.author:
                     await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language).format(**{
