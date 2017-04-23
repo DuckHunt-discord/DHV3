@@ -579,10 +579,11 @@ class Exp:
             await comm.message_user(message, _(":ok: {target} weapon is already sabotaged!", language).format(**{
                 "target": target.name
             }), forcePv=True)
+
         try:
             self.bot.delete_message(ctx.message)
         except discord.Forbidden:
-            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
 
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)
@@ -658,7 +659,7 @@ class Exp:
         try:
             self.bot.delete_message(ctx.message)
         except discord.Forbidden:
-            comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
         await asyncio.sleep(90)
         try:
             if prefs.getPref(message.server, "emoji_ducks"):

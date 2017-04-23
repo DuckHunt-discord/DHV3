@@ -253,60 +253,99 @@
 
     })();
 </script>
+<style> .dygraph-legend {
+    text-align: right;
+}</style>
 <h1>Experimental duckhunt statistics</h1>
 
-<h2>Number of servers seen by the bot</h2>
+<!--<h2>Number of servers seen by the bot</h2>-->
 <div id="servers"
      style="height:300px;"></div>
 <script type="text/javascript">
     g1 = new Dygraph(
         document.getElementById("servers"),
         "csv/servers.csv", // path to CSV file
-        {}          // options
+        {
+            title: 'Number of servers seen by the bot',
+            ylabel: 'Servers',
+            legend: 'always',
+            showRangeSelector: true,
+            labelsKMB: true,
+
+
+        }          // options
     );
 </script>
 
-<h2>Number of channels seen by the bot</h2>
+<!--<h2>Number of channels seen by the bot</h2>-->
 <div id="channels"
      style="height:300px;"></div>
 <script type="text/javascript">
     g2 = new Dygraph(
         document.getElementById("channels"),
         "csv/channels.csv", // path to CSV file
-        {}          // options
+        {
+            title: 'Number of channels seen by the bot',
+            ylabel: 'Channels',
+            legend: 'always',
+            showRangeSelector: true,
+            labelsKMB: true,
+
+        }          // options
     );
 </script>
 
-<h2>Number of users (no bots) seen by the bot</h2>
+<!--<h2>Number of users (no bots) seen by the bot</h2>-->
 <div id="users"
      style="height:300px;"></div>
 <script type="text/javascript">
     g3 = new Dygraph(
         document.getElementById("users"),
         "csv/users.csv", // path to CSV file
-        {}          // options
+        {
+            title: 'Number of users (no bots) seen by the bot',
+            ylabel: 'Users',
+            legend: 'always',
+            showRangeSelector: true,
+            labelsKMB: true,
+        }          // options
     );
 </script>
 
-<h2>Memory used by the bot</h2>
+<!--<h2>Memory used by the bot</h2>-->
 <div id="memory"
      style="height:300px;"></div>
 <script type="text/javascript">
     g4 = new Dygraph(
         document.getElementById("memory"),
         "csv/memory.csv", // path to CSV file
-        {}          // options
+        {
+            title: 'Memory used by the bot',
+            ylabel: 'Memory (mb)',
+            legend: 'always',
+            showRangeSelector: true,
+
+
+        }          // options
     );
 </script>
 
-<h2>Number of ducks spawned</h2>
+<!--<h2>Number of ducks spawned</h2>-->
 <div id="ducks"
      style="height:300px;"></div>
 <script type="text/javascript">
     g5 = new Dygraph(
         document.getElementById("ducks"),
         "csv/ducks.csv", // path to CSV file
-        {}          // options
+        {
+            title: 'Number of ducks spawned',
+            ylabel: 'Ducks',
+            legend: 'always',
+            showRangeSelector: true,
+            labelsKMB: true,
+
+
+        }          // options
     );
 </script>
 

@@ -202,7 +202,7 @@ async def mainloop():
                         }
                         await ducks.spawn_duck(duck)
                 except KeyError:  # Race condition
-                    # for channel in list(commons.ducks_planned.keys()): <= channel not deletied, so in this list
+                    # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
                     #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
                     pass
 

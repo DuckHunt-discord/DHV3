@@ -17,7 +17,7 @@ CSV_root = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/"
 
 
 async def get_date():
-    return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+    return datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
 
 
 async def csv_write(file, x, y):
@@ -91,7 +91,7 @@ async def analytics_loop():
                 await update_users()
                 await update_ducks()
 
-            await asyncio.sleep(60)
+            await asyncio.sleep(70)
     except:
         commons.logger.exception("")
         raise
