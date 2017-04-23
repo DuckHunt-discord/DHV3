@@ -581,7 +581,7 @@ class Exp:
             }), forcePv=True)
 
         try:
-            self.bot.delete_message(ctx.message)
+            await self.bot.delete_message(ctx.message)
         except discord.Forbidden:
             await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
 
