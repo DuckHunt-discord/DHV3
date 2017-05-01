@@ -8,8 +8,9 @@ import random
 import time
 
 import discord
-
 from cogs.utils import comm, commons, prefs, scores
+from collections import defaultdict
+
 from cogs.utils.comm import logwithinfos
 from cogs.utils.prefs import getPref
 from .commons import _
@@ -35,6 +36,7 @@ async def planifie(channel_obj: discord.Channel = None):
     multiplicator = round(seconds_left / 86400, 5)
     if not channel_obj:
         logger.debug("Replanning")
+        commons.bread = defaultdict(int)
         planification_ = {}
         if multiplicator == 0:
             multiplicator = 1
@@ -74,6 +76,7 @@ async def planifie(channel_obj: discord.Channel = None):
         prefs.JSONsaveToDisk(servers, "channels.json")
 
     else:
+        commons.bread[channel_obj] = 0
         permissions = channel_obj.permissions_for(channel_obj.server.me)
         if permissions.read_messages and permissions.send_messages:
             pass

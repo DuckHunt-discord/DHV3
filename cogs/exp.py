@@ -10,10 +10,10 @@ import random
 import time
 
 import discord
+from cogs.utils import checks, comm, commons, ducks, prefs, scores
 from discord.ext import commands
 from prettytable import PrettyTable
 
-from cogs.utils import checks, comm, commons, ducks, prefs, scores
 from cogs.utils.commons import _
 
 HOUR = 3600
@@ -622,9 +622,17 @@ class Exp:
             "channel": message.channel
         })
 
-    # @shop.command(pass_context=True, name="21")
-    # async def item21(self, ctx):
-    #    raise NotImplementedError
+    @shop.command(pass_context=True, name="21")
+    @checks.have_exp(2)
+    async def item21(self, ctx):
+        message = ctx.message
+        language = prefs.getPref(message.server, "language")
+        if random.randint(1, 6) == 1:
+            commons.ducks_planned[message.channel] += 1
+        commons.bread[message.channel] += 20
+
+        await comm.message_user(message, _(":money_with_wings: You place some bread on the channel to attract ducks. They will leave 20 seconds later for the rest of the day !", language))
+        scores.addToStat(message.channel, message.author, "exp", -2)
 
     @shop.command(pass_context=True, name="22")
     @checks.have_exp(5)

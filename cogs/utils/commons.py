@@ -5,7 +5,7 @@ DuckhuntV2 -- commons
 """
 import os
 
-
+from collections import defaultdict
 # noinspection PyGlobalUndefined
 def init():
     if os.geteuid() == 0:
@@ -21,6 +21,7 @@ def init():
     global ducks_planned, ducks_spawned
     ducks_planned = {}  # format : {discord.channel: number_of_ducks_needed_for_today# }
     ducks_spawned = []  # format : [{"channel": discord.channel, "spawned_at": int(timestamp), "is_super": True, "life": int(life), "max_life" : int(max_life)]
+    bread = defaultdict(int)
 
     # Stats
 

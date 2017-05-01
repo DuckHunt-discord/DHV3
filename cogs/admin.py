@@ -5,10 +5,10 @@ import string
 import time
 
 import discord
+from cogs.utils import comm, commons, prefs
 from discord.ext import commands
 from prettytable import PrettyTable
 
-from cogs.utils import comm, commons, prefs
 from cogs.utils.commons import _
 from cogs.utils.prefs import JSONloadFromDisk
 from .utils import checks
@@ -105,7 +105,7 @@ class Admin:
 
     @commands.command(pass_context=True)
     @checks.is_owner()
-    async def serverlist(self, ctx, passed_prefs: str = ""):
+    async def serverlist(self, ctx, passed_prefs: str = "", maxservs: int = None):
         language = prefs.getPref(ctx.message.server, "language")
 
         x = PrettyTable()
@@ -116,10 +116,14 @@ class Admin:
         tmp = await self.bot.send_message(ctx.message.channel, str(ctx.message.author.mention) + _(" > En cours", language))
         servers = JSONloadFromDisk("channels.json", default="{}")
 
-        total = len(self.bot.servers)
+
         i = 0
         lu = 0
-        for server in list(self.bot.servers):
+
+        slist = sorted(list(self.bot.servers), key=lambda s: int(s.member_count), reverse=True)[:maxservs]
+        total = len(slist)
+
+        for server in list(slist):
             i += 1
             if time.time() - lu >= 1.5 or i == total:
                 lu = time.time()

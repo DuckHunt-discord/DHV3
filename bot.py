@@ -9,10 +9,9 @@ import traceback
 
 import discord
 import os
+from cogs.utils import commons
 from collections import Counter
 from discord.ext import commands
-
-from cogs.utils import commons
 
 if os.geteuid() == 0:
     print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk.")
@@ -207,11 +206,11 @@ async def mainloop():
                     pass
 
             for canard in commons.ducks_spawned:
-                if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) < int(now):  # Canard qui se barre
+                if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) + commons.bread[canard["channel"]] < int(now):  # Canard qui se barre
                     await comm.logwithinfos(canard["channel"], None, "Duck of {time} stayed for too long. (it's {now}, and it should have stayed until {shouldwaitto}).".format(**{
                         "time"        : canard["time"],
                         "now"         : now,
-                        "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave")))
+                        "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave"))) + (" + " + str(commons.bread[canard["channel"]])) if commons.bread[canard["channel"]] != 0 else ""
                     }))
                     try:
                         await bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language")))
