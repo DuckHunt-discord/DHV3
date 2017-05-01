@@ -10,7 +10,6 @@ import sys
 
 import os
 import psutil
-
 from cogs.utils import commons
 
 CSV_root = os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/"
@@ -66,6 +65,7 @@ async def update_ducks():
 async def analytics_loop():
     try:
         await commons.bot.wait_until_ready()  # Wait for the bot to be operational
+        await asyncio.sleep(60)  # It might not be the right time to do that. I've seen 0 channels logged, even after on_ready...
 
         commons.logger.debug("[analytics] HEARTBEATs STARTED")
         await update_servers()
