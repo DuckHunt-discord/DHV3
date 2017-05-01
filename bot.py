@@ -210,7 +210,7 @@ async def mainloop():
                     await comm.logwithinfos(canard["channel"], None, "Duck of {time} stayed for too long. (it's {now}, and it should have stayed until {shouldwaitto}).".format(**{
                         "time"        : canard["time"],
                         "now"         : now,
-                        "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave"))) + (" + " + str(commons.bread[canard["channel"]])) if commons.bread[canard["channel"]] != 0 else ""
+                        "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave"))) + (" + " + str(commons.bread[canard["channel"]]) if commons.bread[canard["channel"]] != 0 else "")
                     }))
                     try:
                         await bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language")))
