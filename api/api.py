@@ -13,18 +13,21 @@
 
 # TODO: vérifier la validité des serv/chan ids à chaque fois
 import json
-
+import decimal
 from collections import defaultdict
 from discord.enums import ChannelType
 from kyoukai import HTTPRequestContext, Kyoukai
-
 from cogs.utils import checks, commons, prefs, scores
 
 api = Kyoukai('dh_api')
 
+def json_default(obj):
+    if isinstance(obj, decimal.Decimal):
+        return float(obj)
+    raise TypeError
 
 async def prepare_resp(resp_payload, code=200):
-    return json.dumps(resp_payload), code, {
+    return json.dumps(resp_payload, default=json_default), code, {
         "Content-Type": "application/json"
     }
 
@@ -44,7 +47,7 @@ async def list_members(server_id, channel_id):
                 for member in table:
                     if checks.is_player_check(member):
                         try:
-                            player = server.get_member(member['id_'])
+                            player = server.get_member(str(member['id_']))
 
                             players.append({
                                 "id"    : player.id,
@@ -71,10 +74,9 @@ async def list_members(server_id, channel_id):
     return data
 
 
-def check_int(func):
-    def wrapper(**kwargs):
-        return func({k: (v if isinstance(v, HTTPRequestContext) else int(v)) for (k, v) in kwargs})
-
+def check_int(func, *args):
+    def wrapper(args):
+        return func(*[v for v in args if isinstance(v, HTTPRequestContext) or int(v)])
     return wrapper
 
 
@@ -106,7 +108,7 @@ async def guilds(ctx: HTTPRequestContext):
             servers.append({
                 "id"  : server.id,
                 "name": server.name,
-                "icon": server.icon_url or 'https://placeholdit.imgix.net/~text?txtsize=64&txt={}&w=128&h=128'.format(server.name[0])
+                "icon": server.icon_url
             })
 
     servers.sort(key=lambda x: x['name'])
@@ -121,7 +123,7 @@ async def guilds(ctx: HTTPRequestContext):
 
 @check_int
 @api.route("/guilds/([^/]+)/?")  # /guilds/server_id
-async def guild(ctx: HTTPRequestContext, server_id: int):
+async def guild(ctx: HTTPRequestContext, server_id: str):
     await commons.bot.wait_until_ready()
 
     server = commons.bot.get_server(server_id)
@@ -178,7 +180,7 @@ async def guild(ctx: HTTPRequestContext, server_id: int):
 
 @check_int
 @api.route("/guilds/([^/]+)/channels/([^/]+)/?")  # /guilds/server_id/channels/channel_id
-async def guild_channel(ctx: HTTPRequestContext, server_id: int, channel_id: int):
+async def guild_channel(ctx: HTTPRequestContext, server_id: str, channel_id: str):
     await commons.bot.wait_until_ready()
 
     data = await list_members(server_id, channel_id)
@@ -196,7 +198,7 @@ async def guild_channel(ctx: HTTPRequestContext, server_id: int, channel_id: int
 
 @check_int
 @api.route("/guilds/([^/]+)/channels/([^/]+)/users/([^/]+)/?")  # /guilds/server_id/channels/channel_id/users/user_id
-async def guild_channel_user(ctx: HTTPRequestContext, server_id: int, channel_id: int, user_id: int):
+async def guild_channel_user(ctx: HTTPRequestContext, server_id: str, channel_id: str, user_id: str):
     await commons.bot.wait_until_ready()
     server = commons.bot.get_server(server_id)
 

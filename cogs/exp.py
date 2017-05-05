@@ -10,6 +10,7 @@ import random
 import time
 
 import discord
+from cogs import shoot
 from cogs.utils import checks, comm, commons, ducks, prefs, scores
 from discord.ext import commands
 from prettytable import PrettyTable
@@ -21,7 +22,7 @@ DAY = 86400
 
 
 class Exp:
-    """Commends to use, spend and give exp."""
+    """Commands to use, spend and give exp."""
 
     def __init__(self, bot):
         self.bot = bot
@@ -59,10 +60,10 @@ class Exp:
     @checks.is_activated_here()
     async def freetime(self, ctx):
         now = int(time.time())
-        thisDay = now - (now % 86400)
-        seconds_left = 86400 - (now - thisDay)
-        hours = int(seconds_left / 3600)
-        minutes = int((seconds_left - (3600 * hours)) / 60)
+        thisDay = now - (now % DAY)
+        seconds_left = DAY - (now - thisDay)
+        hours = int(seconds_left / HOUR)
+        minutes = int((seconds_left - (HOUR * hours)) / 60)
         await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and chargers in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
 
     @commands.command(pass_context=True)
@@ -320,7 +321,6 @@ class Exp:
     @checks.is_not_banned()
     @checks.is_activated_here()
     async def shop(self, ctx):
-        from cogs import shoot
         language = prefs.getPref(ctx.message.server, "language")
 
         await shoot.Shoot(self.bot).giveBackIfNeeded(ctx.message)

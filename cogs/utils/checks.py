@@ -31,9 +31,12 @@ def is_admin_check(message):
 
 def is_player_check(member, channel=None):
     if isinstance(member, discord.Member):
-        member = scores.getChannelPlayers(channel, columns=['shoots_fired'], match_id=member.id)
+        try:
+            member = scores.getChannelPlayers(channel, columns=['shoots_fired'], match_id=member.id)[0]
+        except IndexError:
+            return False
 
-    return True if (member.get('shoots_fired', 0) or 0) else False
+    return member.get('shoots_fired', 0) or 0
 
 
 def is_activated_check(channel):
