@@ -83,6 +83,14 @@ class Mods:
             embed.colour = discord.Colour.green()
         elif case["action"] == "Warn":
             embed.colour = discord.Colour.orange()
+        elif case["action"] == "Mute":
+            embed.colour = discord.Colour.orange()
+        elif case["action"] == "Unmute":
+            embed.colour = discord.Colour.green()
+        elif case["action"] == "Deafen":
+            embed.colour = discord.Colour.orange()
+        elif case["action"] == "Undeafen":
+            embed.colour = discord.Colour.green()
         elif case["action"] == "Kick":
             embed.colour = discord.Colour.red()
         else:
@@ -209,6 +217,63 @@ class Mods:
         case = await self.add_action(user=user, action="Warn", by=ctx.message.author, reason=reason)
         embed = await self.get_case_embed(case)
         await self.bot.send_message(ctx.message.channel, embed=embed)
+
+    @checks.have_required_level(3)
+    @commands.command(pass_context=True)
+    async def mute(self, ctx, user: discord.Member, *, reason: str = default_reason):
+        """
+        Warns a user. This command require multiple arguments
+        :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
+        :param reason: Reason given for the warn. 
+        :return case_numer: Return the case and the case number.
+        """
+        await self.bot.server_voice_state(user, mute=True)
+        case = await self.add_action(user=user, action="Mute", by=ctx.message.author, reason=reason)
+        embed = await self.get_case_embed(case)
+        await self.bot.send_message(ctx.message.channel, embed=embed)
+
+    @checks.have_required_level(3)
+    @commands.command(pass_context=True)
+    async def unmute(self, ctx, user: discord.Member, *, reason: str = default_reason):
+        """
+        Warns a user. This command require multiple arguments
+        :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
+        :param reason: Reason given for the warn. 
+        :return case_numer: Return the case and the case number.
+        """
+        await self.bot.server_voice_state(user, mute=False)
+        case = await self.add_action(user=user, action="Unmute", by=ctx.message.author, reason=reason)
+        embed = await self.get_case_embed(case)
+        await self.bot.send_message(ctx.message.channel, embed=embed)
+
+    @checks.have_required_level(3)
+    @commands.command(pass_context=True)
+    async def deafen(self, ctx, user: discord.Member, *, reason: str = default_reason):
+        """
+        Warns a user. This command require multiple arguments
+        :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
+        :param reason: Reason given for the warn. 
+        :return case_numer: Return the case and the case number.
+        """
+        await self.bot.server_voice_state(user, deafen=True)
+        case = await self.add_action(user=user, action="Deafen", by=ctx.message.author, reason=reason)
+        embed = await self.get_case_embed(case)
+        await self.bot.send_message(ctx.message.channel, embed=embed)
+
+    @checks.have_required_level(3)
+    @commands.command(pass_context=True)
+    async def undeafen(self, ctx, user: discord.Member, *, reason: str = default_reason):
+        """
+        Warns a user. This command require multiple arguments
+        :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
+        :param reason: Reason given for the warn. 
+        :return case_numer: Return the case and the case number.
+        """
+        await self.bot.server_voice_state(user, deafen=False)
+        case = await self.add_action(user=user, action="Undeafen", by=ctx.message.author, reason=reason)
+        embed = await self.get_case_embed(case)
+        await self.bot.send_message(ctx.message.channel, embed=embed)
+
 
     @checks.have_required_level(2)
     @commands.command(pass_context=True)
