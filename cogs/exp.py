@@ -200,7 +200,7 @@ class Exp:
                     embed.add_field(name=_("Shoots without ducks", language), value=str(gs("shoots_no_duck")))
                     embed.add_field(name=_("Shoots that frightened a duck", language), value=str(gs("shoots_frightened")))
                     embed.add_field(name=_("Shoots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
-                    embed.add_field(name=_("Shoots stopped by the infrared detector", language), value=str(gs("shoots_infrared_detector")))
+                    embed.add_field(name=_("Shoots stopped by the detector", language), value=str(gs("shoots_infrared_detector")))
                     embed.add_field(name=_("Shoots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
                     embed.add_field(name=_("Shoots without a duck", language), value=str(gs("shoots_no_duck")))
                     embed.add_field(name=_("Shoots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
