@@ -27,6 +27,7 @@ class Get_Stats:
         self.target = target
 
     def __call__(self, stat, default=None):
+        commons.logger.debug("GS called for :" + str(stat) + " with default : " + str(default))
         return scores.getStat(self.channel, self.target, stat, default=default)
 
 
@@ -124,8 +125,6 @@ class Exp:
         message = ctx.message
         channel = message.channel
         language = prefs.getPref(message.server, "language")
-
-
 
         if not target:
             target = ctx.message.author
@@ -253,49 +252,50 @@ class Exp:
                 except:
                     commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
                     await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+                    return
 
                 changed = False
 
-                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=duckstats_message, timeout=1200)
+            res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=duckstats_message, timeout=1200)
 
-                if res:
-                    reaction, user = res
-                    emoji = reaction.emoji
-                    if emoji == next_emo:
-                        changed = True
-                        if current_page == total_page:
-                            current_page = 1
-                        else:
-                            current_page += 1
-
-                        try:
-                            await self.bot.remove_reaction(duckstats_message, emoji, user)
-                        except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
-                    elif emoji == prev_emo:
-                        changed = True
-                        if current_page > 1:
-                            current_page -= 1
-                        else:
-                            current_page = total_page
-                        try:
-                            await self.bot.remove_reaction(duckstats_message, emoji, user)
-                        except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
-                    elif emoji == first_page_emo:
-                        if current_page > 1:
-                            changed = True
-                            current_page = 1
-                        try:
-                            await self.bot.remove_reaction(duckstats_message, emoji, user)
-                        except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
-                else:
-                    reaction = False
+            if res:
+                reaction, user = res
+                emoji = reaction.emoji
+                if emoji == next_emo:
+                    changed = True
+                    if current_page == total_page:
+                        current_page = 1
+                    else:
+                        current_page += 1
                     try:
-                        await self.bot.delete_message(message)
-                    except:
-                        pass
+                        await self.bot.remove_reaction(duckstats_message, emoji, user)
+                    except discord.errors.Forbidden:
+                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                elif emoji == prev_emo:
+                    changed = True
+                    if current_page > 1:
+                        current_page -= 1
+                    else:
+                        current_page = total_page
+                    try:
+                        await self.bot.remove_reaction(duckstats_message, emoji, user)
+                    except discord.errors.Forbidden:
+                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                elif emoji == first_page_emo:
+                    if current_page > 1:
+                        changed = True
+                        current_page = 1
+                    try:
+                        await self.bot.remove_reaction(duckstats_message, emoji, user)
+                    except discord.errors.Forbidden:
+                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+            else:
+                reaction = False
+                try:
+                    await self.bot.delete_message(message)
+                except:
+                    pass
+                return
 
 
     @commands.command(pass_context=True)
