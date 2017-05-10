@@ -126,107 +126,178 @@ class Exp:
         language = prefs.getPref(message.server, "language")
 
 
+
         if not target:
             target = ctx.message.author
 
         gs = Get_Stats(channel, target)
 
         level = scores.getPlayerLevel(channel, target)
+        reaction = True
+        changed = True
 
-        embed = discord.Embed(description=_("Statistics of {player} on #{channel}", language).format(**{
-            "player" : target.name,
-            "channel": channel.name
-        }))
+        next_emo = "\N{BLACK RIGHT-POINTING TRIANGLE}"
+        prev_emo = "\N{BLACK LEFT-POINTING TRIANGLE}"
+        first_page_emo = "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
 
-        if gs("killed_ducks"):
-            embed.description += _("Confiscated weapon !", language)
+        current_page = 1
+        total_page = 4
 
-        embed.title = "DUCKSTATS"
-        # embed.set_author(name=str(target), icon_url=target.avatar_url)
-        embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
-        embed.url = 'https://api-d.com/duckhunt/'
-        embed.colour = discord.Colour.green()
-        embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
+        duckstats_message = await self.bot.send_message(ctx.message.channel, _("Generating duckstats for you, please wait!", language))
+        await self.bot.add_reaction(duckstats_message, first_page_emo)
+        await self.bot.add_reaction(duckstats_message, prev_emo)
+        await self.bot.add_reaction(duckstats_message, next_emo)
 
-        best_time = scores.getStat(channel, target, "best_time", default=None)
-        if best_time:
-            if int(best_time) == float(best_time):
-                best_time = int(best_time)
-            else:
-                best_time = float(best_time)
-        else:
-            best_time = _('No best time.', language)
+        while reaction:
+            if changed:
 
-        if gs("killed_ducks") > 0:
-            ratio = round(gs("exp") / gs("killed_ducks"), 4)
-        else:
-            ratio = _("No duck killed", language)
+                embed = discord.Embed(description=_("Page {current}/{max}", language).format(current=current_page, max=total_page))
 
-        embed.add_field(name=_("Ducks killed", language), value=str(gs("killed_ducks")))
-        embed.add_field(name=_("Super ducks killed", language), value=str(gs("killed_super_ducks")))
-        embed.add_field(name=_("Players killed", language), value=str(gs("killed_players")))
-        embed.add_field(name=_("Self-killing shots", language), value=str(gs("self_killing_shots")))
+                if gs("confisque"):
+                    embed.description += _("\nConfiscated weapon !", language)
 
-        embed.add_field(name=_("Best killing time", language), value=best_time)
-        embed.add_field(name=_("Bullets in current magazine", language), value=str(gs("balles", default=level["balles"])) + " / " + str(level["balles"]))
-        embed.add_field(name=_("Exp points", language), value=str(gs("exp")))
-        embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
-        embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
-        embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
-        embed.add_field(name=_("Weapon reliability", language), value=str(level["fiabilitee"]))
+                embed.set_author(name=str(target), icon_url=target.avatar_url)
+                embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
+                embed.url = 'https://api-d.com/duckhunt/'
+                embed.colour = discord.Colour.green()
+                embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
 
-        embed.add_field(name=_("Shots fired", language), value=str(gs("shoots_fired")))
-        embed.add_field(name=_("Shots missed", language), value=str(gs("shoots_missed")))
-        embed.add_field(name=_("Shots without ducks", language), value=str(gs("shoots_no_duck")))
-        embed.add_field(name=_("Shoots that frightened a duck", language), value=str(gs("shoots_frightened")))
-        embed.add_field(name=_("Shoots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
-        embed.add_field(name=_("Shoots stopped by the infrared detector", language), value=str(gs("shoots_infrared_detector")))
-        embed.add_field(name=_("Shoots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
-        embed.add_field(name=_("Shoots without a duck", language), value=str(gs("shoots_no_duck")))
-        embed.add_field(name=_("Shoots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
-        embed.add_field(name=_("Shoots with a jammed weapon", language), value=str(gs("shoots_with_jammed_weapon")))
-        embed.add_field(name=_("Shoots without bullets", language), value=str(gs("shoots_without_bullets")))
-        embed.add_field(name=_("Shoots without weapon", language), value=str(gs("shoots_without_weapon")))
-        embed.add_field(name=_("Shoots when wet", language), value=str(gs("shoots_tried_while_wet")))
+                if current_page == 1:
+                    embed.title = _("General statistics", language)
 
-        embed.add_field(name=_("Reloads", language), value=str(gs("reloads")))
-        embed.add_field(name=_("Reloads without chargers", language), value=str(gs("reloads_without_chargers")))
-        embed.add_field(name=_("Reloads not needed", language), value=str(gs("unneeded_reloads")))
+                    best_time = scores.getStat(channel, target, "best_time", default=None)
+                    if best_time:
+                        if int(best_time) == float(best_time):
+                            best_time = int(best_time)
+                        else:
+                            best_time = float(best_time)
+                    else:
+                        best_time = _('No best time.', language)
 
-        embed.add_field(name=_("Trash found in bushes", language), value=str(gs("trashFound")))
+                    if gs("killed_ducks") > 0:
+                        ratio = round(gs("exp") / gs("killed_ducks"), 4)
+                    else:
+                        ratio = _("No duck killed", language)
 
-        embed.add_field(name=_("Exp earned with a clover", language), value=str(gs("exp_won_with_clover")))
-        embed.add_field(name=_("Life insurence rewards", language), value=str(gs("life_insurence_rewards")))
-        embed.add_field(name=_("Free givebacks used", language), value=str(gs("givebacks")))
+                    embed.add_field(name=_("Ducks killed", language), value=str(gs("killed_ducks")))
+                    embed.add_field(name=_("Super ducks killed", language), value=str(gs("killed_super_ducks")))
+                    embed.add_field(name=_("Players killed", language), value=str(gs("killed_players")))
+                    embed.add_field(name=_("Self-killing shots", language), value=str(gs("self_killing_shots")))
 
+                    embed.add_field(name=_("Best killing time", language), value=best_time)
+                    embed.add_field(name=_("Bullets in current magazine", language), value=str(gs("balles", default=level["balles"])) + " / " + str(level["balles"]))
+                    embed.add_field(name=_("Exp points", language), value=str(gs("exp")))
+                    embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
+                    embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
+                    embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
+                    embed.add_field(name=_("Weapon reliability", language), value=str(level["fiabilitee"]))
 
-        if gs("graisse") > int(time.time()):
-            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(gs, language, "graisse")))
+                elif current_page == 2:
+                    embed.title = _("Shoots statistics", language)
 
-        if gs("detecteurInfra") > int(time.time()):
-            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(gs, language, "detecteurInfra")))
+                    embed.add_field(name=_("Shoots fired", language), value=str(gs("shoots_fired")))
+                    embed.add_field(name=_("Shoots missed", language), value=str(gs("shoots_missed")))
+                    embed.add_field(name=_("Shoots without ducks", language), value=str(gs("shoots_no_duck")))
+                    embed.add_field(name=_("Shoots that frightened a duck", language), value=str(gs("shoots_frightened")))
+                    embed.add_field(name=_("Shoots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
+                    embed.add_field(name=_("Shoots stopped by the infrared detector", language), value=str(gs("shoots_infrared_detector")))
+                    embed.add_field(name=_("Shoots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
+                    embed.add_field(name=_("Shoots without a duck", language), value=str(gs("shoots_no_duck")))
+                    embed.add_field(name=_("Shoots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
+                    embed.add_field(name=_("Shoots with a jammed weapon", language), value=str(gs("shoots_with_jammed_weapon")))
+                    embed.add_field(name=_("Shoots without bullets", language), value=str(gs("shoots_without_bullets")))
+                    embed.add_field(name=_("Shoots without weapon", language), value=str(gs("shoots_without_weapon")))
+                    embed.add_field(name=_("Shoots when wet", language), value=str(gs("shoots_tried_while_wet")))
 
-        if gs("silencieux") > int(time.time()):
-            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(gs, language, "silencieux")))
+                elif current_page == 3:
 
-        if gs("trefle") > int(time.time()):
-            embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
-                "exp": gs("trefle_exp")
-            }), value=str(self.objectTD(gs, language, "trefle")))
+                    embed.title = _("Reloads and items statistics", language)
 
-        if gs("explosive_ammo") > int(time.time()):
-            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(gs, language, "explosive_ammo")))
-        elif gs("ap_ammo") > int(time.time()):
-            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(gs, language, "ap_ammo")))
+                    embed.add_field(name=_("Reloads", language), value=str(gs("reloads")))
+                    embed.add_field(name=_("Reloads without chargers", language), value=str(gs("reloads_without_chargers")))
+                    embed.add_field(name=_("Reloads not needed", language), value=str(gs("unneeded_reloads")))
 
-        if gs("mouille") > int(time.time()):
-            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(gs, language, "mouille")))
+                    embed.add_field(name=_("Trash found in bushes", language), value=str(gs("trashFound")))
 
-        try:
-            await self.bot.say(embed=embed)
-        except:
-            commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
-            await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+                    embed.add_field(name=_("Exp earned with a clover", language), value=str(gs("exp_won_with_clover")))
+                    embed.add_field(name=_("Life insurence rewards", language), value=str(gs("life_insurence_rewards")))
+                    embed.add_field(name=_("Free givebacks used", language), value=str(gs("givebacks")))
+
+                elif current_page == 4:
+
+                    embed.title = _("Possesed items and effects", language)
+
+                    if gs("graisse") > int(time.time()):
+                        embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(gs, language, "graisse")))
+
+                    if gs("detecteurInfra") > int(time.time()):
+                        embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(gs, language, "detecteurInfra")))
+
+                    if gs("silencieux") > int(time.time()):
+                        embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(gs, language, "silencieux")))
+
+                    if gs("trefle") > int(time.time()):
+                        embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
+                            "exp": gs("trefle_exp")
+                        }), value=str(self.objectTD(gs, language, "trefle")))
+
+                    if gs("explosive_ammo") > int(time.time()):
+                        embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(gs, language, "explosive_ammo")))
+                    elif gs("ap_ammo") > int(time.time()):
+                        embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(gs, language, "ap_ammo")))
+
+                    if gs("mouille") > int(time.time()):
+                        embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(gs, language, "mouille")))
+
+                try:
+                    await self.bot.edit_message(duckstats_message, ":duck:", embed=embed)
+                except:
+                    commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
+                    await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+
+                changed = False
+
+                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=duckstats_message, timeout=1200)
+
+                if res:
+                    reaction, user = res
+                    emoji = reaction.emoji
+                    if emoji == next_emo:
+                        changed = True
+                        if current_page == total_page:
+                            current_page = 1
+                        else:
+                            current_page += 1
+
+                        try:
+                            await self.bot.remove_reaction(duckstats_message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                    elif emoji == prev_emo:
+                        changed = True
+                        if current_page > 1:
+                            current_page -= 1
+                        else:
+                            current_page = total_page
+                        try:
+                            await self.bot.remove_reaction(duckstats_message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                    elif emoji == first_page_emo:
+                        if current_page > 1:
+                            changed = True
+                            current_page = 1
+                        try:
+                            await self.bot.remove_reaction(duckstats_message, emoji, user)
+                        except discord.errors.Forbidden:
+                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                else:
+                    reaction = False
+                    try:
+                        await self.bot.delete_message(message)
+                    except:
+                        pass
+
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
