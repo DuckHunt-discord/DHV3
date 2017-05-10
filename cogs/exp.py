@@ -21,14 +21,23 @@ HOUR = 3600
 DAY = 86400
 
 
+class Get_Stats:
+    def __init__(self, channel, target):
+        self.channel = channel
+        self.target = target
+
+    def __call__(self, stat, default=None):
+        return scores.getStat(self.channel, self.target, stat, default=default)
+
+
 class Exp:
     """Commands to use, spend and give exp."""
 
     def __init__(self, bot):
         self.bot = bot
 
-    def objectTD(self, channel, target, language, object):
-        date_expiration = datetime.datetime.fromtimestamp(scores.getStat(channel, target, object, default=0))
+    def objectTD(self, gs, language, object):
+        date_expiration = datetime.datetime.fromtimestamp(gs(object))
         td = date_expiration - datetime.datetime.now()
         return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language). \
             format(**{
@@ -116,8 +125,11 @@ class Exp:
         channel = message.channel
         language = prefs.getPref(message.server, "language")
 
+
         if not target:
             target = ctx.message.author
+
+        gs = Get_Stats(channel, target)
 
         level = scores.getPlayerLevel(channel, target)
 
@@ -140,42 +152,42 @@ class Exp:
         best_time = (int(best_time) if int(best_time) == float(best_time) else float(best_time)) if best_time else _('No best time.', language)
 
         if scores.getStat(channel, target, "killed_ducks") > 0:
-            ratio = round(scores.getStat(channel, target, "exp") / scores.getStat(channel, target, "killed_ducks"), 4)
+            ratio = round(gs("exp") / gs("killed_ducks"), 4)
         else:
             ratio = _("No duck killed", language)
 
-        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(channel, target, "killed_ducks")))
-        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(channel, target, "shoots_missed")))
-        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(channel, target, "shoots_no_duck")))
+        embed.add_field(name=_("Ducks killed", language), value=str(gs("killed_ducks")))
+        embed.add_field(name=_("Shots missed", language), value=str(gs("shoots_missed")))
+        embed.add_field(name=_("Shots without ducks", language), value=str(gs("shoots_no_duck")))
         embed.add_field(name=_("Best killing time", language), value=best_time)
-        embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
-        embed.add_field(name=_("Exp points", language), value=str(scores.getStat(channel, target, "exp")))
+        embed.add_field(name=_("Bullets in current magazine", language), value=str(gs("balles", default=level["balles"])) + " / " + str(level["balles"]))
+        embed.add_field(name=_("Exp points", language), value=str(gs("exp")))
         embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
         embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
 
         if scores.getStat(channel, target, "graisse") > int(time.time()):
-            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(channel, target, language, "graisse")))
+            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(gs, language, "graisse")))
 
         if scores.getStat(channel, target, "detecteurInfra") > int(time.time()):
-            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(channel, target, language, "detecteurInfra")))
+            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(gs, language, "detecteurInfra")))
 
         if scores.getStat(channel, target, "silencieux") > int(time.time()):
-            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(channel, target, language, "silencieux")))
+            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(gs, language, "silencieux")))
 
         if scores.getStat(channel, target, "trefle") > int(time.time()):
             embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
                 "exp": scores.getStat(channel, target, "trefle_exp")
-            }), value=str(self.objectTD(channel, target, language, "trefle")))
+            }), value=str(self.objectTD(gs, language, "trefle")))
 
         if scores.getStat(channel, target, "explosive_ammo") > int(time.time()):
-            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(channel, target, language, "explosive_ammo")))
+            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(gs, language, "explosive_ammo")))
         elif scores.getStat(channel, target, "ap_ammo") > int(time.time()):
-            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(channel, target, language, "ap_ammo")))
+            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(gs, language, "ap_ammo")))
 
         if scores.getStat(channel, target, "mouille") > int(time.time()):
-            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(channel, target, language, "mouille")))
+            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(gs, language, "mouille")))
 
         try:
             await self.bot.say(embed=embed)
