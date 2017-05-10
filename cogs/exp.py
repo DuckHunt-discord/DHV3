@@ -113,60 +113,64 @@ class Exp:
     @checks.is_activated_here()
     async def duckstats(self, ctx, target: discord.Member = None):
         message = ctx.message
+        channel = message.channel
         language = prefs.getPref(message.server, "language")
-        now = int(time.time())
+
         if not target:
             target = ctx.message.author
-        level = scores.getPlayerLevel(message.channel, target)
+
+        level = scores.getPlayerLevel(channel, target)
 
         embed = discord.Embed(description=_("Statistics of {player} on #{channel}", language).format(**{
             "player" : target.name,
-            "channel": message.channel.name
+            "channel": channel.name
         }))
+
+        if scores.getStat(channel, target, "killed_ducks"):
+            embed.description += _("Confiscated weapon !", language)
+
         embed.title = "DUCKSTATS"
         # embed.set_author(name=str(target), icon_url=target.avatar_url)
         embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
         embed.url = 'https://api-d.com/duckhunt/'
         embed.colour = discord.Colour.green()
+        embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
 
-        # embed.timestamp = datetime.datetime.now()
-
-        best_time = scores.getStat(message.channel, target, "best_time", default=None)
+        best_time = scores.getStat(channel, target, "best_time", default=None)
         best_time = (int(best_time) if int(best_time) == float(best_time) else float(best_time)) if best_time else _('No best time.', language)
 
-        if scores.getStat(message.channel, target, "killed_ducks") > 0:
-            ratio = round(scores.getStat(message.channel, target, "exp") / scores.getStat(message.channel, target, "killed_ducks"), 4)
+        if scores.getStat(channel, target, "killed_ducks") > 0:
+            ratio = round(scores.getStat(channel, target, "exp") / scores.getStat(channel, target, "killed_ducks"), 4)
         else:
             ratio = _("No duck killed", language)
 
-        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(message.channel, target, "killed_ducks")))
-        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(message.channel, target, "shoots_missed")))
-        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(message.channel, target, "shoots_no_duck")))
+        embed.add_field(name=_("Ducks killed", language), value=str(scores.getStat(channel, target, "killed_ducks")))
+        embed.add_field(name=_("Shots missed", language), value=str(scores.getStat(channel, target, "shoots_missed")))
+        embed.add_field(name=_("Shots without ducks", language), value=str(scores.getStat(channel, target, "shoots_no_duck")))
         embed.add_field(name=_("Best killing time", language), value=best_time)
-        embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(message.channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
-        embed.add_field(name=_("Exp points", language), value=str(scores.getStat(message.channel, target, "exp")))
+        embed.add_field(name=_("Bullets in current magazine", language), value=str(scores.getStat(channel, target, "balles", default=level["balles"])) + " / " + str(level["balles"]))
+        embed.add_field(name=_("Exp points", language), value=str(scores.getStat(channel, target, "exp")))
         embed.add_field(name=_("Ratio (exp/ducks killed)", language), value=str(ratio))
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
         embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
-        if scores.getStat(message.channel, target, "graisse", default=0) > int(time.time()):
-            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(message.channel, target, language, "graisse")))
-        if scores.getStat(message.channel, target, "detecteurInfra", default=0) > int(time.time()):
-            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(message.channel, target, language, "detecteurInfra")))
-        if scores.getStat(message.channel, target, "silencieux", default=0) > int(time.time()):
-            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(message.channel, target, language, "silencieux")))
-        if scores.getStat(message.channel, target, "trefle", default=0) > int(time.time()):
+        if scores.getStat(channel, target, "graisse", default=0) > int(time.time()):
+            embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(channel, target, language, "graisse")))
+        if scores.getStat(channel, target, "detecteurInfra", default=0) > int(time.time()):
+            embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(channel, target, language, "detecteurInfra")))
+        if scores.getStat(channel, target, "silencieux", default=0) > int(time.time()):
+            embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(channel, target, language, "silencieux")))
+        if scores.getStat(channel, target, "trefle", default=0) > int(time.time()):
             embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
-                "exp": scores.getStat(message.channel, target, "trefle_exp", default=0)
-            }), value=str(self.objectTD(message.channel, target, language, "trefle")))
-        if scores.getStat(message.channel, target, "explosive_ammo", default=0) > int(time.time()):
-            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(message.channel, target, language, "explosive_ammo")))
-        elif scores.getStat(message.channel, target, "ap_ammo", default=0) > int(time.time()):
-            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(message.channel, target, language, "ap_ammo")))
-        if scores.getStat(message.channel, target, "mouille", default=0) > int(time.time()):
-            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(message.channel, target, language, "mouille")))
+                "exp": scores.getStat(channel, target, "trefle_exp", default=0)
+            }), value=str(self.objectTD(channel, target, language, "trefle")))
+        if scores.getStat(channel, target, "explosive_ammo", default=0) > int(time.time()):
+            embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(channel, target, language, "explosive_ammo")))
+        elif scores.getStat(channel, target, "ap_ammo", default=0) > int(time.time()):
+            embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(channel, target, language, "ap_ammo")))
+        if scores.getStat(channel, target, "mouille", default=0) > int(time.time()):
+            embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(channel, target, language, "mouille")))
 
-        embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
         try:
             await self.bot.say(embed=embed)
         except:
