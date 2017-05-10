@@ -163,8 +163,10 @@ class Exp:
             ratio = _("No duck killed", language)
 
         embed.add_field(name=_("Ducks killed", language), value=str(gs("killed_ducks")))
-        embed.add_field(name=_("Shots missed", language), value=str(gs("shoots_missed")))
-        embed.add_field(name=_("Shots without ducks", language), value=str(gs("shoots_no_duck")))
+        embed.add_field(name=_("Super ducks killed", language), value=str(gs("killed_super_ducks")))
+        embed.add_field(name=_("Players killed", language), value=str(gs("killed_players")))
+        embed.add_field(name=_("Self-killing shots", language), value=str(gs("self_killing_shots")))
+
         embed.add_field(name=_("Best killing time", language), value=best_time)
         embed.add_field(name=_("Bullets in current magazine", language), value=str(gs("balles", default=level["balles"])) + " / " + str(level["balles"]))
         embed.add_field(name=_("Exp points", language), value=str(gs("exp")))
@@ -172,6 +174,31 @@ class Exp:
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
         embed.add_field(name=_("Weapon reliability", language), value=str(level["fiabilitee"]))
+
+        embed.add_field(name=_("Shots fired", language), value=str(gs("shoots_fired")))
+        embed.add_field(name=_("Shots missed", language), value=str(gs("shoots_missed")))
+        embed.add_field(name=_("Shots without ducks", language), value=str(gs("shoots_no_duck")))
+        embed.add_field(name=_("Shoots that frightened a duck", language), value=str(gs("shoots_frightened")))
+        embed.add_field(name=_("Shoots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
+        embed.add_field(name=_("Shoots stopped by the infrared detector", language), value=str(gs("shoots_infrared_detector")))
+        embed.add_field(name=_("Shoots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
+        embed.add_field(name=_("Shoots without a duck", language), value=str(gs("shoots_no_duck")))
+        embed.add_field(name=_("Shoots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
+        embed.add_field(name=_("Shoots with a jammed weapon", language), value=str(gs("shoots_with_jammed_weapon")))
+        embed.add_field(name=_("Shoots without bullets", language), value=str(gs("shoots_without_bullets")))
+        embed.add_field(name=_("Shoots without weapon", language), value=str(gs("shoots_without_weapon")))
+        embed.add_field(name=_("Shoots when wet", language), value=str(gs("shoots_tried_while_wet")))
+
+        embed.add_field(name=_("Reloads", language), value=str(gs("reloads")))
+        embed.add_field(name=_("Reloads without chargers", language), value=str(gs("reloads_without_chargers")))
+        embed.add_field(name=_("Reloads not needed", language), value=str(gs("unneeded_reloads")))
+
+        embed.add_field(name=_("Trash found in bushes", language), value=str(gs("trashFound")))
+
+        embed.add_field(name=_("Exp earned with a clover", language), value=str(gs("exp_won_with_clover")))
+        embed.add_field(name=_("Life insurence rewards", language), value=str(gs("life_insurence_rewards")))
+        embed.add_field(name=_("Free givebacks used", language), value=str(gs("givebacks")))
+
 
         if gs("graisse") > int(time.time()):
             embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(gs, language, "graisse")))
