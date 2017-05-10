@@ -154,21 +154,27 @@ class Exp:
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
         embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
-        if scores.getStat(channel, target, "graisse", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "graisse") > int(time.time()):
             embed.add_field(name=_("Object: grease", language), value=str(self.objectTD(channel, target, language, "graisse")))
-        if scores.getStat(channel, target, "detecteurInfra", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "detecteurInfra") > int(time.time()):
             embed.add_field(name=_("Object: infrared detector", language), value=str(self.objectTD(channel, target, language, "detecteurInfra")))
-        if scores.getStat(channel, target, "silencieux", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "silencieux") > int(time.time()):
             embed.add_field(name=_("Object: silencer", language), value=str(self.objectTD(channel, target, language, "silencieux")))
-        if scores.getStat(channel, target, "trefle", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "trefle") > int(time.time()):
             embed.add_field(name=_("Object: clover {exp} exp", language).format(**{
-                "exp": scores.getStat(channel, target, "trefle_exp", default=0)
+                "exp": scores.getStat(channel, target, "trefle_exp")
             }), value=str(self.objectTD(channel, target, language, "trefle")))
-        if scores.getStat(channel, target, "explosive_ammo", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "explosive_ammo") > int(time.time()):
             embed.add_field(name=_("Object: explosive ammo", language), value=str(self.objectTD(channel, target, language, "explosive_ammo")))
-        elif scores.getStat(channel, target, "ap_ammo", default=0) > int(time.time()):
+        elif scores.getStat(channel, target, "ap_ammo") > int(time.time()):
             embed.add_field(name=_("Object: AP ammo", language), value=str(self.objectTD(channel, target, language, "ap_ammo")))
-        if scores.getStat(channel, target, "mouille", default=0) > int(time.time()):
+
+        if scores.getStat(channel, target, "mouille") > int(time.time()):
             embed.add_field(name=_("Effect: wet", language), value=str(self.objectTD(channel, target, language, "mouille")))
 
         try:
