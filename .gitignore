@@ -11,6 +11,6 @@ cogs/__pycache__/
 cogs/utils/__pycache__/
 dh.log
 scores.db
-language/english.mo
-language/english.po
+default.LC_MESSAGES/english.mo
+default.LC_MESSAGES/english.po
 
