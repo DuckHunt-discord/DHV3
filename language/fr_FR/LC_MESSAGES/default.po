@@ -197,7 +197,8 @@ msgstr "Page {current} / {max}"
 
 msgid "\n"
 "Confiscated weapon !"
-msgstr "Arme confisquée!"
+msgstr "\n"
+"Arme confisquée!"
 
 msgid "General statistics"
 msgstr "Statistiques générales"

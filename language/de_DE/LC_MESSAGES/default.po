@@ -45,9 +45,10 @@ msgid ""
 "{error_report}"
 msgstr ""
 ":x: Ein Fehler ({error}) wurde durch den Befehl {command} ausgelöst. "
-"Fehlermeldung: ```{tb}```\n"
-"{error_report}\n"
-"```"
+"Fehlermeldung: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Generiere Einladung zum Melden des Fehlers..."
@@ -62,6 +63,7 @@ msgid "{cause}\n"
 "\n"
 "{tb}"
 msgstr "{cause}\n"
+"\n"
 "{tb}"
 
 msgid ":ok: Error message sent, thanks :)"
@@ -162,27 +164,6 @@ msgstr "Aktuelles Level"
 
 msgid "Shots accuracy"
 msgstr "Treffergenauigkeit"
-
-msgid "Shoots fired"
-msgstr "Schüsse"
-
-msgid "Shoots missed"
-msgstr "Verfehlte Schüsse"
-
-msgid "Shoots without ducks"
-msgstr "Schüsse ohne Enten"
-
-msgid "Shoots that frightened a duck"
-msgstr "Schüsse, die eine Ente verjagt haben"
-
-msgid "Shoots with a sabotaged weapon"
-msgstr "Schüsse mit sabotierter Waffe"
-
-msgid "Shoots without bullets"
-msgstr "Schüsse ohne Munition"
-
-msgid "Shoots without weapon"
-msgstr "Schüsse ohne Waffe"
 
 msgid "Object: grease"
 msgstr "Objekt: Schmierfett"
