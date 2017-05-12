@@ -1,40 +1,33 @@
 # Translators:
-# Pavel Popov <areisp.dh@gmail.com>, 2017
-# Arthur <jovart.arthur@gmail.com>, 2017
+# Luc Lenôtre <luc14860@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2017-05-10 12:06+0200\n"
-"PO-Revision-Date: 2017-05-12 23:49+0200\n"
-"Last-Translator: Arthur <jovart.arthur@gmail.com>, 2017\n"
-"Language-Team: Russian (Russia) (https://www.transifex.com/none-441/"
-"teams/70749/ru_RU/)\n"
+"PO-Revision-Date: 2017-05-12 23:52+0200\n"
+"Last-Translator: Luc Lenôtre <luc14860@gmail.com>, 2017\n"
+"Language-Team: Swedish (Sweden) (https://www.transifex.com/none-441/teams/"
+"70749/sv_SE/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: language\n"
+"Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:57
 msgid ":x: This command cannot be used in private messages."
 msgstr ":x: Эта команда не может быть использована в личных сообщениях."
 
-#: bot.py:59
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: К сожалению, эта команда отключена и не может быть использована."
 
-#: bot.py:68
 msgid "Send error report ? "
 msgstr "Отправить отчет об ошибке?"
 
-#: bot.py:70
 msgid ""
 "Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
 "able to send an error report."
@@ -42,8 +35,6 @@ msgstr ""
 "К сожалению, мне требуются разрешения `add_reactions` и "
 "`create_instant_invite` для того, чтобы отправить отчет об ошибке."
 
-#: bot.py:72
-#, python-brace-format
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
 "{tb}\n"
@@ -55,405 +46,131 @@ msgstr ""
 "```\n"
 "{error_report}"
 
-#: bot.py:90
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Создание приглашения для отчета об ошибке..."
 
-#: bot.py:94
 msgid ":anger_right: Sending error report..."
 msgstr ":anger_right: Отправка отчета об ошибке..."
 
-#: bot.py:96
-#, python-brace-format
 msgid ":hammer: {date} :hammer:"
 msgstr "hammer: {date} :hammer:"
 
-#: bot.py:97
-#, python-brace-format
-msgid ""
-"{cause}\n"
+msgid "{cause}\n"
 "\n"
 "{tb}"
-msgstr ""
-"{cause}\n"
+msgstr "{cause}\n"
 "\n"
 "{tb}"
 
-#: bot.py:100
 msgid ":ok: Error message sent, thanks :)"
 msgstr ":ok: Сообщение об ошибке отправлено, спасибо :)"
 
-#: bot.py:102
 msgid "OK, I won't send an error report"
 msgstr "Хорошо, я не буду отправлять отчет об ошибке"
 
-#: bot.py:107
 msgid ":x: Missing a required argument. "
 msgstr ":x: Пропущен обязательный параметр."
 
-#: bot.py:109
 msgid ":x: Bad argument provided. "
 msgstr ":x: Неверный параметр."
 
-#: cogs/admin.py:113
 msgid "Name"
 msgstr "Имя"
 
-#: cogs/admin.py:113
 msgid "Invitation"
 msgstr "Приглашение"
 
-#: cogs/admin.py:113
-msgid "Server ID"
-msgstr ""
-
-#: cogs/admin.py:113
 msgid "Number of enabled channels"
 msgstr "Число включенных каналов"
 
-#: cogs/admin.py:113 cogs/admin.py:168
 msgid "Number of connected users"
 msgstr "Число подключенных пользователей"
 
-#: cogs/admin.py:113
 msgid "Ducks per day"
 msgstr "Уток в день"
 
-#: cogs/admin.py:113
 msgid "Number of unneeded permissions"
 msgstr "Число не требуемых разрешений"
 
-#: cogs/admin.py:113
 msgid "Number of needed permissions"
 msgstr "Число требуемых разрешений"
 
-#: cogs/admin.py:116
-msgid " > En cours"
-msgstr ""
-
-#: cogs/admin.py:131
-#, python-brace-format
-msgid " > Processing servers ({done}/{total})"
-msgstr ""
-
-#: cogs/admin.py:175
-msgid "Serching for servers to leave"
-msgstr ""
-
-#: cogs/admin.py:196
-#, python-brace-format
-msgid ""
-"Cleaning {servers} unused servers (accounting for {members} members in "
-"total)"
-msgstr ""
-
-#: cogs/admin.py:197
-#, python-brace-format
 msgid "To confirm, please type {random_str} now."
 msgstr "Для подтверждения, наберите {random_str}."
 
-#: cogs/admin.py:205
 msgid ":x: Operation canceled, you took too long to answer."
 msgstr ":x: Операция отменена, слишком долго не было подтверждения."
 
-#: cogs/admin.py:220
-#, python-brace-format
-msgid ":ok: Finished, failed for {failed} servers."
-msgstr ""
-
-#: cogs/admin.py:229
-msgid "Starting the broadcast"
-msgstr ""
-
-#: cogs/admin.py:238
-msgid "Broadcast finished"
-msgstr ""
-
-#: cogs/admin.py:246
-#, python-brace-format
-msgid "Message ({message}) sent to {server} #{channel} "
-msgstr ""
-
-#: cogs/exp.py:42
-#, python-brace-format
-msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
-msgstr ""
-
-#: cogs/exp.py:44
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d в %H:%M:%S"
 
-#: cogs/exp.py:45
-#, python-brace-format
 msgid "{dans} days "
 msgstr "{dans} дней"
 
-#: cogs/exp.py:49
-#, python-brace-format
 msgid "{dans} hours"
 msgstr "{dans} часов"
 
-#: cogs/exp.py:53
-#, python-brace-format
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
-#: cogs/exp.py:65
 msgid ":ok: Your best time was reset."
 msgstr ":ok: Ваше лучшее время обнулено."
 
-#: cogs/exp.py:76
-#, python-brace-format
-msgid ""
-":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-
-#: cogs/exp.py:86
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Для предотвращения злоупотреблений, вы не можете передать очки опыта, "
 "пока ваше оружие конфисковано"
 
-#: cogs/exp.py:90
 msgid ":x: You need to give a positive number for the exp to send"
 msgstr ""
 ":x: Вам необходимо указать положительное число очков опыта, которые нужно "
 "передать"
 
-#: cogs/exp.py:103 cogs/serveradmin.py:65
 msgid ""
-"Congratulations, you sent / gave more experience than the maximum number "
-"I'm able to store."
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
 msgstr ""
 "Поздравляем, вы отправили / получили настолько много очков опыта, что я не "
 "могу сохранить это число."
 
-#: cogs/exp.py:105
-#, python-brace-format
 msgid ""
 "You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
 "transfer) !"
 msgstr ""
-"Вы отправили {amount} очков опыта пользователю {target} (и заплатили налог "
-"в {taxes} очков за эту операцию) !"
+"Вы отправили {amount} очков опыта пользователю {target} (и заплатили налог в "
+"{taxes} очков за эту операцию) !"
 
-#: cogs/exp.py:116
 msgid "You don't have enough experience points"
 msgstr "У вас нет достаточного колличества очков опыта"
 
-#: cogs/exp.py:118
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Передача очков опыта отключена на этом сервере"
 
-#: cogs/exp.py:146
-msgid "Generating duckstats for you, please wait!"
-msgstr ""
-
-#: cogs/exp.py:154
-#, python-brace-format
-msgid "Page {current}/{max}"
-msgstr ""
-
-#: cogs/exp.py:157
-msgid ""
-"\n"
-"Confiscated weapon !"
-msgstr ""
-
-#: cogs/exp.py:166
-msgid "General statistics"
-msgstr ""
-
-#: cogs/exp.py:175
-msgid "No best time."
-msgstr ""
-
-#: cogs/exp.py:180
-msgid "No duck killed"
-msgstr ""
-
-#: cogs/exp.py:182 cogs/exp.py:321
 msgid "Ducks killed"
 msgstr "Уток убито"
 
-#: cogs/exp.py:183
-msgid "Super ducks killed"
-msgstr ""
-
-#: cogs/exp.py:184
-msgid "Players killed"
-msgstr ""
-
-#: cogs/exp.py:185
-msgid "Self-killing shots"
-msgstr ""
-
-#: cogs/exp.py:187
 msgid "Best killing time"
 msgstr "Лучшее время"
 
-#: cogs/exp.py:188
-msgid "Bullets in current magazine"
-msgstr ""
-
-#: cogs/exp.py:189 cogs/exp.py:321 cogs/utils/scores.py:112
 msgid "Exp points"
 msgstr "Очков опыта"
 
-#: cogs/exp.py:190
 msgid "Ratio (exp/ducks killed)"
 msgstr "Соотношение (опыт/уток убито)"
 
-#: cogs/exp.py:191 cogs/utils/scores.py:108
 msgid "Current level"
 msgstr "Текущий уровень"
 
-#: cogs/exp.py:192 cogs/utils/scores.py:110
 msgid "Shots accuracy"
 msgstr "Точность"
 
-#: cogs/exp.py:193
-msgid "Weapon reliability"
-msgstr ""
-
-#: cogs/exp.py:196
-msgid "Shoots statistics"
-msgstr ""
-
-#: cogs/exp.py:198
-msgid "Shoots fired"
-msgstr ""
-
-#: cogs/exp.py:199
-msgid "Shoots missed"
-msgstr ""
-
-#: cogs/exp.py:200
-msgid "Shoots without ducks"
-msgstr ""
-
-#: cogs/exp.py:201
-msgid "Shoots that frightened a duck"
-msgstr ""
-
-#: cogs/exp.py:202
-msgid "Shoots that harmed a duck"
-msgstr ""
-
-#: cogs/exp.py:203
-msgid "Shoots stopped by the detector"
-msgstr ""
-
-#: cogs/exp.py:204
-msgid "Shoots jamming a weapon"
-msgstr ""
-
-#: cogs/exp.py:205
-msgid "Shoots without a duck"
-msgstr ""
-
-#: cogs/exp.py:206
-msgid "Shoots with a sabotaged weapon"
-msgstr ""
-
-#: cogs/exp.py:207
-msgid "Shoots with a jammed weapon"
-msgstr ""
-
-#: cogs/exp.py:208
-msgid "Shoots without bullets"
-msgstr ""
-
-#: cogs/exp.py:209
-msgid "Shoots without weapon"
-msgstr ""
-
-#: cogs/exp.py:210
-msgid "Shoots when wet"
-msgstr ""
-
-#: cogs/exp.py:214
-msgid "Reloads and items statistics"
-msgstr ""
-
-#: cogs/exp.py:216
-msgid "Reloads"
-msgstr ""
-
-#: cogs/exp.py:217
-msgid "Reloads without chargers"
-msgstr ""
-
-#: cogs/exp.py:218
-msgid "Reloads not needed"
-msgstr ""
-
-#: cogs/exp.py:220
-msgid "Trash found in bushes"
-msgstr ""
-
-#: cogs/exp.py:222
-msgid "Exp earned with a clover"
-msgstr ""
-
-#: cogs/exp.py:223
-msgid "Life insurence rewards"
-msgstr ""
-
-#: cogs/exp.py:224
-msgid "Free givebacks used"
-msgstr ""
-
-#: cogs/exp.py:228
-msgid "Possesed items and effects"
-msgstr ""
-
-#: cogs/exp.py:231
-msgid "Object: grease"
-msgstr ""
-
-#: cogs/exp.py:234
-msgid "Object: infrared detector"
-msgstr ""
-
-#: cogs/exp.py:237
-msgid "Object: silencer"
-msgstr ""
-
-#: cogs/exp.py:240
-#, python-brace-format
-msgid "Object: clover {exp} exp"
-msgstr ""
-
-#: cogs/exp.py:245
-msgid "Object: explosive ammo"
-msgstr ""
-
-#: cogs/exp.py:247
-msgid "Object: AP ammo"
-msgstr ""
-
-#: cogs/exp.py:250
-msgid "Effect: wet"
-msgstr ""
-
-#: cogs/exp.py:256 cogs/exp.py:404 cogs/meta.py:201 cogs/utils/scores.py:118
-msgid ""
-":warning: Error sending embed, check if the bot have the permission "
-"embed_links and try again !"
-msgstr ""
-
-#: cogs/exp.py:275 cogs/exp.py:285 cogs/exp.py:293 cogs/exp.py:422
-#: cogs/exp.py:430 cogs/exp.py:438
 msgid ""
 "I don't have the `manage_messages` permissions, I can't remove reactions. "
 "Warn an admin for me, please ;)"
 msgstr ""
-"У меня нет разрешения `manage_messages`, я не могу удалять реакции. "
-"Позовите админа, пожалуйста ;)"
+"У меня нет разрешения `manage_messages`, я не могу удалять реакции. Позовите "
+"админа, пожалуйста ;)"
 
-#: cogs/exp.py:316
 msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
@@ -461,81 +178,58 @@ msgstr ""
 ":x: Максимальное число строк в таблице лидеров, которое можно отобразить - "
 "200"
 
-#: cogs/exp.py:321 cogs/exp.py:335
 msgid "Rank"
 msgstr "Ранг"
 
-#: cogs/exp.py:321
 msgid "Nickname"
 msgstr "Ник"
 
-#: cogs/exp.py:333
-#, python-brace-format
-msgid ""
-":cocktail: Best scores for #{channel_name} : :cocktail:\n"
+msgid ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
 "```{table}```"
 msgstr ""
 ":cocktail: Лучшие результаты для канала #{channel_name} : :cocktail:\n"
 "```{table}```"
 
-#: cogs/exp.py:349
 msgid "Generating topscores for your channel, please wait!"
 msgstr "Генерируем таблицу лидеров для вашего канала, подождите!"
 
-#: cogs/exp.py:363
-#, python-brace-format
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Лучшие результаты для канала #{channel_name} :cocktail:"
 
-#: cogs/exp.py:378
 msgid "None !"
 msgstr "Пусто !"
 
-#: cogs/exp.py:397
 msgid "Player"
 msgstr "Игрок"
 
-#: cogs/exp.py:398
 msgid "Experience points"
 msgstr "Очков опыта"
 
-#: cogs/exp.py:399
 msgid "Number of ducks killed"
 msgstr "Число убитых уток"
 
-#: cogs/exp.py:409
 msgid "There is nothing more..."
 msgstr "Больше ничего нет..."
 
-#: cogs/exp.py:454
 msgid ""
 ":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
 msgstr ""
 ":x: Неверный синтаксис : `!shop [list / номер предмета] [аргумент, если "
 "требуется]`"
 
-#: cogs/exp.py:459
-msgid "The list of items is available here : http://api-d.com/shop-items.html"
-msgstr ""
-
-#: cogs/exp.py:471
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
 msgstr ":money_with_wings: Вы добавили патрон в ваше оружие за 7 очков опыта"
 
-#: cogs/exp.py:476
 msgid ":champagne: Your charger is full !"
 msgstr ":champagne: Ваш магазин полон !"
 
-#: cogs/exp.py:486
 msgid ""
 ":money_with_wings: You add a charger to your backpack for 13 exp points."
 msgstr ":money_with_wings: Вы приобрели запасной магазин за 13 очков опыта."
 
-#: cogs/exp.py:491
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: У вас достаточно запасных магазинов!"
 
-#: cogs/exp.py:501
 msgid ""
 ":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
@@ -543,27 +237,22 @@ msgstr ""
 ":money_with_wings: Вы приобрели бронебойные патроны для вашего оружия. В "
 "течении следующих 24 часов вы будете наносить двойной урон уткам."
 
-#: cogs/exp.py:506
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: У вас уже есть бронебойные патроны!"
 
-#: cogs/exp.py:516
 msgid ""
-":money_with_wings: You purchase explosive ammo for your weapon. For the "
-"next 24 hours, you will deal triple damage to ducks."
+":money_with_wings: You purchase explosive ammo for your weapon. For the next "
+"24 hours, you will deal triple damage to ducks."
 msgstr ""
 ":money_with_wings: Вы приобрели разрывные патроны для вашего оружия. В "
 "течении следующих 24 часов вы будете наносить тройной урон уткам."
 
-#: cogs/exp.py:521
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
 
-#: cogs/exp.py:531
 msgid ":money_with_wings: You take your weapon back for 40 exp points"
 msgstr ":money_with_wings: Вы вернули свое оружие за 40 очков опыта"
 
-#: cogs/exp.py:536
 msgid ""
 ":champagne: You haven't killed anyone today, you have your weapon, what do "
 "you want to buy ? :p"
@@ -571,7 +260,6 @@ msgstr ""
 ":champagne: Вы еще никого не убили сегодня, у вас есть оружие. Что вы "
 "желаете приобрести? :p"
 
-#: cogs/exp.py:546
 msgid ""
 ":money_with_wings: You add grease in your weapon to reduce jamming risks by "
 "50 percent for a day, for only 8 exp points."
@@ -579,12 +267,10 @@ msgstr ""
 ":money_with_wings: Вы приобрели смазку для вашего оружия, что уменьшит риск "
 "его заклинивания на 50 процентов в течении дня. Всего за 8 очков опыта."
 
-#: cogs/exp.py:551
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, no need for more grease"
 msgstr ":champagne: Ваше оружие отлично смазано, больше не требуется"
 
-#: cogs/exp.py:559
 msgid ""
 ":money_with_wings: You add a sight to your weapon, for 5 exp points, your "
 "aiming was improved using this formulae : (100 - current accuracy) / 3. "
@@ -593,11 +279,9 @@ msgstr ""
 "Ваша аккуратность улучшилась согласно такой формуле : (100 - текущая "
 "аккуратность) / 3."
 
-#: cogs/exp.py:563
 msgid ":champagne: You already have a sight to your weapon. "
 msgstr ":champagne: На вашем оружии уже есть прицел."
 
-#: cogs/exp.py:573
 msgid ""
 ":money_with_wings: You add an infrared detector to your weapon, that will "
 "prevent any waste of ammo for a day. Cost : 15 exp points."
@@ -605,11 +289,9 @@ msgstr ""
 ":money_with_wings: Вы приобрели ифракрасный датчик для вашего оружия, что "
 "предотвратит пустую трату патронов в течении дня. Цена: 15 очков опыта."
 
-#: cogs/exp.py:578
 msgid ":champagne: You do have an infrared detector on your weapon, right ?"
 msgstr ":champagne: У вас уже есть инфракрасный детектор, не так ли?"
 
-#: cogs/exp.py:588
 msgid ""
 ":money_with_wings: You add a silencer to your weapon, no duck will ever be "
 "frightened by one of your shots for a day. Cost : 5 exp points, what a good "
@@ -619,12 +301,9 @@ msgstr ""
 "не спугнут ни одну утку в течении дня. Стоимость : 5 очков опыта, отличная "
 "сделка!"
 
-#: cogs/exp.py:593
 msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ":champagne: У вас уже есть глушитель, не так ли?"
 
-#: cogs/exp.py:604
-#, python-brace-format
 msgid ""
 ":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
 "more exp point for the next day. You brought it for 13 exp!"
@@ -632,15 +311,13 @@ msgstr ""
 ":money_with_wings: Вы купили свежий 4-х листный клевер, что дало вам "
 "прибавку в {exp} очков опыта на весь день. Вы приобрели его за 13 очков!"
 
-#: cogs/exp.py:612
 msgid ""
-":champagne: You're too lucky, but I don't have any clover left for you "
-"today :'(. Too much luck, maybe ??"
+":champagne: You're too lucky, but I don't have any clover left for you today "
+":'(. Too much luck, maybe ??"
 msgstr ""
 ":champagne: Вы слишком удачливы, однако сегодня у меня не осталось больше "
 "клеверов :'(. Может быть, слишком много удачи??"
 
-#: cogs/exp.py:620
 msgid ""
 ":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
 "immune to sunlight for a day"
@@ -648,29 +325,25 @@ msgstr ""
 ":money_with_wings: Вы приобрели солнцезащитные очки за 5 очков опыта. В "
 "течении дня солнце вам не помешает"
 
-#: cogs/exp.py:627
 msgid ""
 ":money_with_wings: You brought brand new sunglasses, for nothing but the "
 "fact that you are mostly swag now. :cool:"
 msgstr ":money_with_wings: Вы приобрели новые солнцезащитные очки. "
 
-#: cogs/exp.py:637
 msgid ""
-":money_with_wings: You have some dry clothes on you now. You looks "
-"beautiful ! "
+":money_with_wings: You have some dry clothes on you now. You looks beautiful "
+"! "
 msgstr ""
 ":money_with_wings: На вас теперь сухой комплект одежды. Выглядите "
 "замечательно!"
 
-#: cogs/exp.py:643
 msgid ""
 ":money_with_wings: You brought brand new clothes, for nothing but the fact "
 "that you are mostly swag now. :cool:"
 msgstr ""
-":money_with_wings: Вы приобрели новый комплект одежды. Никаких плюсов, "
-"кроме того, что теперь SWAG - это про вас :cool:"
+":money_with_wings: Вы приобрели новый комплект одежды. Никаких плюсов, кроме "
+"того, что теперь SWAG - это про вас :cool:"
 
-#: cogs/exp.py:653
 msgid ""
 ":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
 "weapon was sabtaged, it's fixed now !"
@@ -678,13 +351,9 @@ msgstr ""
 ":champagne: Вы почистили оружие за 6 очков опыта. Если против вас "
 "использовали песок или диверсию, теперь все в порядке!"
 
-#: cogs/exp.py:661
-#, python-brace-format
 msgid ":x: No way ! {mention} have some sunglasses ! He is immune to this ! "
 msgstr ":x: Не выйдет! У {mention} есть солнцезащитные очки!"
 
-#: cogs/exp.py:666
-#, python-brace-format
 msgid ""
 ":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next "
 "shot !"
@@ -692,13 +361,9 @@ msgstr ""
 ":money_with_wings: Вы ослепили {mention}! Его следующий выстрел станет на "
 "50% менее точным!"
 
-#: cogs/exp.py:676
-#, python-brace-format
 msgid ":champagne: You throw sand on {mention} weapon!"
 msgstr ":champagne: Вы набросали песка на оружие {mention}!"
 
-#: cogs/exp.py:685
-#, python-brace-format
 msgid ""
 ":money_with_wings: You drop a full water bucket on {target}, forcing him to "
 "wait 1 hour for his/her clothes to dry before he/she can return hunting"
@@ -706,20 +371,15 @@ msgstr ""
 ":money_with_wings: Вы опрокинули целое ведро воды на {target}, заставив его "
 "сушить свою одежду, что не позволит ему продолжить охоту в течении 1 часа"
 
-#: cogs/exp.py:699
-#, python-brace-format
 msgid ""
 ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
 msgstr ""
 ":ok: оружие {target} саботировано... Однако он об этом еще не знает :D (14 "
 "exp)!"
 
-#: cogs/exp.py:705
-#, python-brace-format
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: оружие {target} уже саботировано!"
 
-#: cogs/exp.py:722
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
 "get killed, you will earn half the level of the killer in exp"
@@ -728,35 +388,23 @@ msgstr ""
 "Если вас подстрелят, вы получите очки опыта в размере половины уровня "
 "нападающего"
 
-#: cogs/exp.py:727
 msgid ":money_with_wings: You are already insured."
 msgstr ":money_with_wings: Вы уже застрахованы."
 
-#: cogs/exp.py:740
-#, python-brace-format
 msgid ""
-":money_with_wings: A duck will appear in the next 10 minutes on the "
-"channel, thanks to the decoy of {mention}. He brought it for 8 exp !"
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to the decoy of {mention}. He brought it for 8 exp !"
 msgstr ""
-":money_with_wings: Благодаря приманке {mention}, купленной за 8 очков "
-"опыта, в ближайшие 10 минут на канале появится утка!"
+":money_with_wings: Благодаря приманке {mention}, купленной за 8 очков опыта, "
+"в ближайшие 10 минут на канале появится утка!"
 
-#: cogs/exp.py:760
-msgid ""
-":money_with_wings: You place some bread on the channel to attract ducks. "
-"They will leave 20 seconds later for the rest of the day !"
-msgstr ""
-
-#: cogs/exp.py:772
-#, python-brace-format
 msgid ""
 ":money_with_wings: You will be warned when the next duck on #{channel_name} "
 "spawns"
 msgstr ""
-":money_with_wings: Вас предупредят, когда на канале #{channel_name} "
-"появится утка"
+":money_with_wings: Вас предупредят, когда на канале #{channel_name} появится "
+"утка"
 
-#: cogs/exp.py:791
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
 "That's bad, but so funny !"
@@ -764,289 +412,187 @@ msgstr ""
 ":money_with_wings: За 50 опыта на канале появится фальшивая механическую "
 "утка. Это плохо, но весело!"
 
-#: cogs/exp.py:801
-msgid " < *BZAACK*"
-msgstr ""
-
-#: cogs/exp.py:803
-msgid " < "
-msgstr ""
-
-#: cogs/exp.py:807
-msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
-msgstr ""
-
-#: cogs/meta.py:118
 msgid "Usage statistics of duckhunt"
 msgstr "Статистика использования бота"
 
-#: cogs/meta.py:173
 msgid "Number of activated channels"
 msgstr "Число включенных каналов"
 
-#: cogs/meta.py:174
 msgid "Number of servers"
 msgstr "Число серверов"
 
-#: cogs/meta.py:175
 msgid "Number of french servers"
 msgstr "Число французских серверов"
 
-#: cogs/meta.py:176
 msgid "Number of english servers"
 msgstr "Число английских серверов"
 
-#: cogs/meta.py:177
 msgid "Number of servers with another language setup"
 msgstr "Число серверов с другой настройкой языка"
 
-#: cogs/meta.py:178
 msgid "Number of channels"
 msgstr "Число каналов"
 
-#: cogs/meta.py:179
 msgid "Number of users"
 msgstr "Число пользователей"
 
-#: cogs/meta.py:180
 msgid "Number of ducks"
 msgstr "Число уток"
 
-#: cogs/meta.py:181
 msgid "Number of ducks per minute"
 msgstr "Число уток в минуту"
 
-#: cogs/meta.py:182
 msgid "Number of messages recived"
 msgstr "Число полученных сообщений"
 
-#: cogs/meta.py:183
 msgid "Number of commands recived"
 msgstr "Число полученных команд"
 
-#: cogs/meta.py:184
 msgid "Number of commands per minute"
 msgstr "Число команд в минуту"
 
-#: cogs/meta.py:185
 msgid "Number of messages per minute"
 msgstr "Число сообщений в минуту"
 
-#: cogs/meta.py:186
 msgid "Uptime in seconds"
 msgstr "Время работы в секундах"
 
-#: cogs/meta.py:187
 msgid "Uptime in hours"
 msgstr "Время работы в часах"
 
-#: cogs/meta.py:188
 msgid "Uptime in days"
 msgstr "Время работы в днях"
 
-#: cogs/meta.py:189
 msgid "Servers with send exp activated"
 msgstr "Сервера с разрешенной отправкой опыта"
 
-#: cogs/meta.py:190
 msgid "Servers with more than 100 ducks per day"
 msgstr "Сервера, где больше 100 уток в день"
 
-#: cogs/meta.py:191
 msgid "Servers with more than 50 ducks per day"
 msgstr "Сервера, где больше 50 уток в день"
 
-#: cogs/meta.py:192
 msgid "Servers with more than 24 ducks per day"
 msgstr "Сервера, где больше 24 уток в день"
 
-#: cogs/meta.py:193
 msgid "Servers with less than 24 ducks per day"
 msgstr "Сервера, где меньше 24 уток в день"
 
-#: cogs/meta.py:194
 msgid "Memory used (MB)"
 msgstr "Использовано памяти (MB)"
 
-#: cogs/meta.py:195
 msgid "Python version : "
 msgstr "Версия Python:"
 
-#: cogs/meta.py:205
 msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
 msgstr ""
 "BANG ИЛИ BANG, что же лучше? :p В любом случае, я нормально функционирую"
 
-#: cogs/meta.py:213
-msgid "Check out our new website ! http://api-d.com/command-list.html"
-msgstr ""
-
-#: cogs/serveradmin.py:42
 msgid ":ok: Done, user banned :gun:"
 msgstr ":ok: Готово, пользователь забанен :gun:"
 
-#: cogs/serveradmin.py:53
 msgid ":ok: Done, user unbanned :eyes:"
 msgstr ":ok: Готово, пользователь разбанен :eyes:"
 
-#: cogs/serveradmin.py:68
-#, python-brace-format
-msgid ":ok:, they now have {newexp} exp points !"
-msgstr ""
-
-#: cogs/serveradmin.py:91
 msgid ":robot: Channel added !"
 msgstr ":robot: Канал добавлен!"
 
-#: cogs/serveradmin.py:95
 msgid ":x: This channel already exists in the game."
 msgstr ":x: Этот канал уже подключен к игре."
 
-#: cogs/serveradmin.py:105
 msgid ":ok: Channel deleted"
 msgstr ":ok: Канал удален"
 
-#: cogs/serveradmin.py:114
-#, python-brace-format
-msgid "There is {ducks} ducks left to spawn today !"
-msgstr ""
-
-#: cogs/serveradmin.py:131
-#, python-brace-format
 msgid ":robot: OK, {name} was set as an admin on the server !"
 msgstr ":robot: OK, {name} теперь админ на этом сервере!"
 
-#: cogs/serveradmin.py:153
-#, python-brace-format
 msgid ":robot: OK, {name} was removed from this server admins !"
 msgstr ":robot: OK, {name} больше не админ на этом сервере!"
 
-#: cogs/serveradmin.py:161
-#, python-brace-format
 msgid ":robot: OK, {name} is not an admin !"
 msgstr ":robot: OK, {name} не админ!"
 
-#: cogs/serveradmin.py:181
 msgid ":robot: OK, you have been set as an admin !"
 msgstr ":robot: OK, теперь вы админ!"
 
-#: cogs/serveradmin.py:184
 msgid ":x: An admin exist on this server ! Try !add_admin"
 msgstr ":x: На этом сервере уже есть админ! Попробуйте !add_admin"
 
-#: cogs/serveradmin.py:201 cogs/serveradmin.py:219
-#, python-brace-format
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} сообщений удалено"
 
-#: cogs/serveradmin.py:205 cogs/serveradmin.py:223
 msgid "0 message(s) deleted : permission denied"
 msgstr "0 сообщений удалено: доступ запрещен"
 
-#: cogs/serveradmin.py:245
-#, python-brace-format
 msgid "Permissions : {permissions}"
 msgstr "Разрешения: {permissions}"
 
-#: cogs/serveradmin.py:256
 msgid ":ok: Scores / stats of the channel were succesfully deleted."
 msgstr ":ok: Рекорды и статистика для этого канала были успешно удалены."
 
-#: cogs/serveradmin.py:266
 msgid ""
-":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting "
-"if applicable]`"
+":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting if "
+"applicable]`"
 msgstr ""
 ":x: Неверный синтаксис : `!settings [view/set/reset/list/modified] [setting "
 "если применимо]`"
 
-#: cogs/serveradmin.py:274
-#, python-brace-format
 msgid "The setting {pref} is set at {value} on this server."
 msgstr "Параметру {pref} установлено значение {value} на этом сервере."
 
-#: cogs/serveradmin.py:279 cogs/serveradmin.py:317 cogs/serveradmin.py:333
 msgid ""
 ":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
 msgstr ""
 ":x: Неверное название параметра. Может быть, опечатка? Проверьте список с "
 "помощью `!settings list`"
 
-#: cogs/serveradmin.py:294
-#, python-brace-format
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would be "
 "{max}"
 msgstr ""
-"Обход проверки максимального количества уток в день, т.к. вы - владелец "
-"бота. Это было бы {max}"
+"Обход проверки максимального количества уток в день, т.к. вы - владелец бота."
+" Это было бы {max}"
 
-#: cogs/serveradmin.py:300 cogs/serveradmin.py:304 cogs/serveradmin.py:315
 msgid ":x: Incorrect value"
 msgstr ":x: Неверное значение"
 
-#: cogs/serveradmin.py:310
-#, python-brace-format
 msgid ":ok: The setting {pref} was set at `{value}` on this server."
 msgstr "Параметру {pref} было установлено значение `{value}` на этом сервере."
 
-#: cogs/serveradmin.py:328
-#, python-brace-format
 msgid ""
 ":ok: The setting {pref} reset to it's defalut value on this server : "
 "`{value}` "
 msgstr ":ok: Параметр {pref} был сброшен к значению по умолчанию: `{value}`"
 
-#: cogs/serveradmin.py:340
-msgid ""
-"List of preferences is available on the new website : https://api-d.com/bot-"
-"settings.html"
-msgstr ""
-
-#: cogs/serveradmin.py:349 cogs/serveradmin.py:355
 msgid "Parameter"
 msgstr "Параметр"
 
-#: cogs/serveradmin.py:349
 msgid "Value"
 msgstr "Значение"
 
-#: cogs/serveradmin.py:349
 msgid "Default value"
 msgstr "Значение по умолчанию"
 
-#: cogs/serveradmin.py:354
-#, python-brace-format
-msgid ""
-"List of modified parameters : \n"
+msgid "List of modified parameters : \n"
 "```{table}```"
-msgstr ""
-"Список измененных параметров:\n"
+msgstr "Список измененных параметров:\n"
 "```{table}```"
 
-#: cogs/shoot.py:58
-#, python-brace-format
 msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
 msgstr ""
 "Вы еще не высохли, не получится продолжить охоту! Подождите {temps_restant} "
 "минут."
 
-#: cogs/shoot.py:65
 msgid "You don't have a weapon"
 msgstr "У вас нет оружия"
 
-#: cogs/shoot.py:70
 msgid "Your weapon is jammed, it must be reloaded to unstuck it."
 msgstr "Ваше оружие заклинило, необходимо его перезарядить."
 
-#: cogs/shoot.py:75
-#, python-brace-format
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше оружие было саботировано, спасибо {assaillant} за эту плохую шутку."
 
-#: cogs/shoot.py:84
-#, python-brace-format
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -1054,11 +600,9 @@ msgstr ""
 "** МАГАЗИН ПУСТ ** | Патронов в магазине: {balles_actuelles} / {balles_max} "
 "| Запасных магазинов: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/shoot.py:100
 msgid "Your weapon is jammed, reload to unstuck it."
 msgstr "Ваше оружие заклинило, перезарядите его."
 
-#: cogs/shoot.py:114
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing it's job!"
@@ -1066,27 +610,22 @@ msgstr ""
 "В округе нет уток, однако выстрела не произошло. Инфракрасный датчик "
 "прекрасно справляется со своей работой!"
 
-#: cogs/shoot.py:122
 msgid ""
-"Luckily you missed, what were you aiming at exactly? There isn't any duck "
-"in here... [missed : -1 xp] [wild shot: -1 xp]"
+"Luckily you missed, what were you aiming at exactly? There isn't any duck in "
+"here... [missed : -1 xp] [wild shot: -1 xp]"
 msgstr ""
 "К счастью, вы промахнулись. Куда именно вы целились? В округе нет уток... "
 "[промах: -1 xp] [выстрел в пустоту: -1 xp]"
 
-#: cogs/shoot.py:132
 msgid ""
-"**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! "
-"[missed : -1 xp]"
+"**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : "
+"-1 xp]"
 msgstr ""
 "**FLAPP**  Утка улетела, испуганная шумом! ПОЗДРАВЛЯЕМ! [промах: -1 xp]"
 
-#: cogs/shoot.py:135 cogs/shoot.py:188
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
 msgstr "**PIEWW**  Вы промахнулись! [промах: -1 xp]"
 
-#: cogs/shoot.py:170
-#, python-brace-format
 msgid ""
 "**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
 "[hunting accident : -2 xp] [weapon confiscated]"
@@ -1094,7 +633,6 @@ msgstr ""
 "**BANG**  Вы промахнулись... И подстрелили {player}! [промах: -1 xp] "
 "[несчастный случай на охоте: -2 xp] [оружие конфисковано]"
 
-#: cogs/shoot.py:174
 msgid ""
 "**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
 "little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
@@ -1104,12 +642,9 @@ msgstr ""
 "немного повернуть оружие? [промах: -1 xp] [несчастный случай на охоте: -2 "
 "xp] [оружие конфисковано]"
 
-#: cogs/shoot.py:180
-#, python-brace-format
 msgid " > You won {exp} with your life insurance"
 msgstr "> Вы получили {exp} очков опыта благодаря своей страховке"
 
-#: cogs/shoot.py:206
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first ! [exp -1]"
@@ -1117,8 +652,6 @@ msgstr ""
 "Это было близко, вы почти убили утку, но другой охотник оказался быстрее! "
 "[exp -1]"
 
-#: cogs/shoot.py:226
-#, python-brace-format
 msgid ""
 ":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
 "now at a grand total of {total} ducks (of which {supercanards} were super-"
@@ -1128,461 +661,230 @@ msgstr ""
 "теперь {total} уток (среди них супер-уток: {supercanards}) убито на канале "
 "#{channel}. \\_X< *COUAC* [{exp} exp]"
 
-#: cogs/shoot.py:237
-#, python-brace-format
 msgid "While searching the bushes around the duck, you found {inutilitee}"
 msgstr "Поискав в кустах вокруг утки, вы обнаружили {inutilitee}"
 
-#: cogs/shoot.py:243
-#, python-brace-format
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
 ":gun: Утка выжила, попробуйте еще раз *ОБНАРУЖЕНА СУПЕР УТКА* [жизни: -"
 "{vie}]"
 
-#: cogs/shoot.py:258
 msgid "Your weapon had been confiscated"
 msgstr "Ваше оружие было конфисковано."
 
-#: cogs/shoot.py:261
 msgid "You unstuck your weapon."
 msgstr "Вы справились с заклинившим оружием, теперь оно в порядке."
 
-#: cogs/shoot.py:271
 msgid "You reload your weapon"
 msgstr "Вы перезарядили оружие."
 
-#: cogs/shoot.py:273
 msgid "You dont have any ammo left !"
 msgstr "У вас не осталось патронов!"
 
-#: cogs/shoot.py:276
 msgid "You don't need to reload your weapon"
 msgstr "Перезаряжать оружие не требуется."
 
-#: cogs/shoot.py:279
-#, python-brace-format
 msgid ""
-"{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
-"left : {chargeurs_actuels}/{chargeurs_max}"
+"{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : "
+"{chargeurs_actuels}/{chargeurs_max}"
 msgstr ""
-"{greet} | Патронов в магазине:  {balles_actuelles}/ {balles_max} | "
-"Магазинов в запасе:  {chargeurs_actuels}/{chargeurs_max}"
+"{greet} | Патронов в магазине:  {balles_actuelles}/ {balles_max} | Магазинов "
+"в запасе:  {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/utils/checks.py:65
-#, python-brace-format
 msgid ""
 ":x: You can't use this command, you don't have at least {exp} exp points!"
 msgstr ""
 ":x: Вы не можете использовать эту команду, у вас должно быть как минимум  "
 "{exp} очков опыта!"
 
-#: cogs/utils/checks.py:78
 msgid ":x: You can't use this command, you are not the owner of the bot !"
 msgstr ":x: Вы не можете использовать эту команду, вы не владелец бота!"
 
-#: cogs/utils/checks.py:93
 msgid ":x: You can't use this command, you are not an admin on this server!"
 msgstr ":x: Вы не можете использовать эту команду, вы не админ этого сервера!"
 
-#: cogs/utils/commons.py:219
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/utils/commons.py:227
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/utils/commons.py:235
 msgid "noob"
 msgstr "нуб"
 
-#: cogs/utils/commons.py:243
 msgid "trainee"
 msgstr "стажер"
 
-#: cogs/utils/commons.py:251
-msgid "duck misser"
-msgstr ""
-
-#: cogs/utils/commons.py:259
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/utils/commons.py:267
-msgid "duck hater"
-msgstr ""
-
-#: cogs/utils/commons.py:275
-msgid "duck pest"
-msgstr ""
-
-#: cogs/utils/commons.py:283
-msgid "duck hassler"
-msgstr ""
-
-#: cogs/utils/commons.py:291
-msgid "duck plucker"
-msgstr ""
-
-#: cogs/utils/commons.py:299
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/utils/commons.py:307
 msgid "inside out duck turner"
 msgstr "выворачиватель уток наизнанку"
 
-#: cogs/utils/commons.py:315
-msgid "duck clobber"
-msgstr ""
-
-#: cogs/utils/commons.py:323
-msgid "duck chewer"
-msgstr ""
-
-#: cogs/utils/commons.py:331
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/utils/commons.py:339
-msgid "duck flattener"
-msgstr ""
-
-#: cogs/utils/commons.py:347
-msgid "duck disassembler"
-msgstr ""
-
-#: cogs/utils/commons.py:355
-msgid "duck demolisher"
-msgstr ""
-
-#: cogs/utils/commons.py:363
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/utils/commons.py:371
-msgid "duck skinner"
-msgstr ""
-
-#: cogs/utils/commons.py:379
 msgid "predator"
 msgstr "хищник"
 
-#: cogs/utils/commons.py:387
-msgid "duck chopper"
-msgstr ""
-
-#: cogs/utils/commons.py:395
-msgid "duck decorticator"
-msgstr ""
-
-#: cogs/utils/commons.py:403
-msgid "duck fragger"
-msgstr ""
-
-#: cogs/utils/commons.py:411
-msgid "duck shatterer"
-msgstr ""
-
-#: cogs/utils/commons.py:419
-msgid "duck smasher"
-msgstr ""
-
-#: cogs/utils/commons.py:427
-msgid "duck breaker"
-msgstr ""
-
-#: cogs/utils/commons.py:435
-msgid "duck wrecker"
-msgstr ""
-
-#: cogs/utils/commons.py:443
-msgid "duck impaler"
-msgstr ""
-
-#: cogs/utils/commons.py:451
-msgid "duck eviscerator"
-msgstr ""
-
-#: cogs/utils/commons.py:459
-msgid "ducks terror"
-msgstr ""
-
-#: cogs/utils/commons.py:467
-msgid "duck exploder"
-msgstr ""
-
-#: cogs/utils/commons.py:475
-msgid "duck destructor"
-msgstr ""
-
-#: cogs/utils/commons.py:483
-msgid "duck blaster"
-msgstr ""
-
-#: cogs/utils/commons.py:491
-msgid "duck pulverizer"
-msgstr ""
-
-#: cogs/utils/commons.py:499
-msgid "duck disintegrator"
-msgstr ""
-
-#: cogs/utils/commons.py:507
-msgid "duck atomizer"
-msgstr ""
-
-#: cogs/utils/commons.py:515
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/utils/commons.py:523
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/utils/commons.py:531
-msgid "duck genocider"
-msgstr ""
-
-#: cogs/utils/commons.py:539
-msgid "unemployed due to extinction of the duck specie"
-msgstr ""
-
-#: cogs/utils/commons.py:547
-msgid "duck toaster"
-msgstr ""
-
-#: cogs/utils/commons.py:555
 msgid "old noob"
 msgstr "старый нуб"
 
-#: cogs/utils/commons.py:570
 msgid "*cries*"
 msgstr "*плачет*"
 
-#: cogs/utils/commons.py:570
 msgid "Hello world"
 msgstr "Привет мир"
 
-#: cogs/utils/commons.py:570
 msgid "How are you today?"
 msgstr "Как дела сегодня?"
 
-#: cogs/utils/commons.py:570
 msgid "Please don't kill me..."
 msgstr "Пожалуйста, не убивай меня..."
 
-#: cogs/utils/commons.py:570
 msgid "Me too, I love you !"
 msgstr "Я тоже, я тебя люблю!"
 
-#: cogs/utils/commons.py:570
 msgid "Don't shoot me ! I'm a fake duck !"
 msgstr "Не стреляй в меня! Я не настоящая утка!"
 
-#: cogs/utils/commons.py:572
 msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка улетела прочь ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:572
 msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка улетела в другой мир ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:572
 msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "У утки нет времени для этого ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:572
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка улетела ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:572
 msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка рассеялась в пространстве-времени ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:572
-msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-
-#: cogs/utils/commons.py:572
-msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-
-#: cogs/utils/commons.py:572
-msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-
-#: cogs/utils/commons.py:574
 msgid "a stuffed duck."
 msgstr "фаршированную утку."
 
-#: cogs/utils/commons.py:574
 msgid "a rubber ducky."
 msgstr "резиновую уточку."
 
-#: cogs/utils/commons.py:574
 msgid "a vibrating duck."
 msgstr "дрожащую утку."
 
-#: cogs/utils/commons.py:574
 msgid "a pile of feathers."
 msgstr "кучу перьев."
 
-#: cogs/utils/commons.py:574
 msgid "a chewed chewing gum."
 msgstr "жеванную жевательную резинку."
 
-#: cogs/utils/commons.py:574
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "листовку из CACAD (Коалиция Против Комитета Против Уток)"
 
-#: cogs/utils/commons.py:574
 msgid "an old shoe."
 msgstr "старый башмак."
 
-#: cogs/utils/commons.py:574
-msgid "a spring thingy."
-msgstr ""
-
-#: cogs/utils/commons.py:574
 msgid "a cow dung."
 msgstr "коровий навоз."
 
-#: cogs/utils/commons.py:574
-msgid "a dog dirt."
-msgstr ""
-
-#: cogs/utils/commons.py:574
 msgid "an expired hunting license."
 msgstr "просроченную охотничью лицензию."
 
-#: cogs/utils/commons.py:574
 msgid "a cartridge."
 msgstr "патрон."
 
-#: cogs/utils/commons.py:574
 msgid "a cigarette butt."
 msgstr "окурок."
 
-#: cogs/utils/commons.py:574
 msgid "a used condom."
 msgstr "использованный презерватив."
 
-#: cogs/utils/commons.py:574
 msgid "a broken sight."
 msgstr "сломанный прицел."
 
-#: cogs/utils/commons.py:574
 msgid "a broken infrared detector."
 msgstr "сломанный инфракрасный датчик."
 
-#: cogs/utils/commons.py:574
 msgid "a bent silencer."
 msgstr "погнутый глушитель."
 
-#: cogs/utils/commons.py:574
 msgid "an empty box of AP ammo."
 msgstr "пустую коробку от бронебойных патронов."
 
-#: cogs/utils/commons.py:574
 msgid "an empty box of explosive ammo."
 msgstr "пустую коробку от разрывных патронов."
 
-#: cogs/utils/commons.py:574
 msgid "a four-leaf clover with only 3 left."
 msgstr "четырехлистный клевер с тремя оставшимися листьями."
 
-#: cogs/utils/commons.py:574
 msgid "a broken decoy."
 msgstr "сломанную приманку."
 
-#: cogs/utils/commons.py:574
 msgid "a broken mirror."
 msgstr "сломанное зеркало."
 
-#: cogs/utils/commons.py:574
 msgid "a rusty mechanical duck."
 msgstr "ржавую механическую утку."
 
-#: cogs/utils/commons.py:574
 msgid "a pair of sunglasses without glasses."
 msgstr "пару солнцезащитных очков без линз."
 
-#: cogs/utils/commons.py:574
 msgid "Donald's beret."
 msgstr "берет Дональда."
 
-#: cogs/utils/commons.py:574
-msgid "a half-melted peppermint."
-msgstr ""
-
-#: cogs/utils/commons.py:574
-msgid "a box of Abraxo cleaner."
-msgstr ""
-
-#: cogs/utils/commons.py:574
 msgid "a gun with banana peeled barrel."
 msgstr "ружье с разорванным стволом."
 
-#: cogs/utils/commons.py:574
 msgid "an old hunting knife."
 msgstr "старый охотничий нож."
 
-#: cogs/utils/commons.py:574
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "старую видеозапись: http://tinyurl.com/zbejktu"
 
-#: cogs/utils/commons.py:574
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "старое охотничье фото: http://tinyurl.com/hmn4r88"
 
-#: cogs/utils/commons.py:575
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "старую почтовую марку: http://tinyurl.com/hbnkpzr"
 
-#: cogs/utils/commons.py:575
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "фото золотой утки: http://tinyurl.com/hle8fjf"
 
-#: cogs/utils/commons.py:575
-msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
-msgstr ""
-
-#: cogs/utils/commons.py:575
 msgid "bushes."
 msgstr "кусты."
 
-#: cogs/utils/commons.py:575
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/utils/commons.py:575
 msgid "a fish."
 msgstr "рыбу."
 
-#: cogs/utils/ducks.py:95
-#, python-brace-format
 msgid "There is a duck on #{channel}"
 msgstr "На канале #{channel} есть утка"
 
-#: cogs/utils/scores.py:90
-#, python-brace-format
 msgid "Level of {player} on #{channel}"
 msgstr "Уровень игрока {player} на канале #{channel}"
 
-#: cogs/utils/scores.py:97
 msgid "You leveled down!"
 msgstr "Ваш уровень уменьшен!"
 
-#: cogs/utils/scores.py:100
 msgid "You leveled up!"
 msgstr "Ваш уровень увеличен!"
 
-#: cogs/utils/scores.py:109
 msgid "Previous level"
 msgstr "Предыдущий уровень"
 
-#: cogs/utils/scores.py:111
 msgid "Weapon fiability"
 msgstr "Надежность оружия"
