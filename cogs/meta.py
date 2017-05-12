@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import datetime
 import re
 import sys
@@ -5,9 +6,9 @@ import sys
 import discord
 import os
 import psutil
+from cogs.utils import comm, commons
 from discord.ext import commands
 
-from cogs.utils import comm, commons
 from cogs.utils.commons import _
 from cogs.utils.prefs import getPref
 from .utils import checks

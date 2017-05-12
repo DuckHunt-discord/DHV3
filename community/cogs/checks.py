@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import discord
 from discord.ext import commands
 
@@ -21,10 +22,10 @@ def get_level(user: discord.user):
 
 def have_required_level(required: int = 0, warn: bool = True):
     """
-    Check if a player have the required access to perform a command. 
-    
+    Check if a player have the required access to perform a command.
+
     Access integers translate to the following roles :
-    
+
     0 : banned user
     1 : normal user
     2 : helper user

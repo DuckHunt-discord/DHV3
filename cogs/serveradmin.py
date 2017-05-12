@@ -1,13 +1,13 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
 import time
 
 import discord
+from cogs.utils import comm, commons, ducks, prefs, scores
 from discord.ext import commands
 from prettytable import PrettyTable
 
-from cogs.utils import comm, commons, ducks, prefs, scores
 from cogs.utils.commons import _
 from .utils import checks
 

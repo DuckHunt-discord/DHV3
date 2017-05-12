@@ -1,4 +1,4 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
 """
@@ -129,13 +129,13 @@ class Mods:
                     case_dict = json.load(infile)
                 actions[case_dict["action"]].append(case)
             await self.bot.send_message(ctx.message.channel,
-                                        """{mention} was targeted by mods {total} times. He recived : 
-                                                                    
+                                        """{mention} was targeted by mods {total} times. He recived :
+
                                             - **{kick}** kick(s) {list_kicks},
                                             - **{warns}** warning(s) {list_warns},
                                             - **{bans}** ban(s) {list_bans},
                                             - **{unbans}** unban(s) {list_unbans}
-                                        
+
                                         Such a mod abooooose :o
                                         """.format(mention="<@" + user_id + ">",
                                                    total=len(user_log),
@@ -156,7 +156,7 @@ class Mods:
         Bans a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
         :param purge: Purge user messages for X days. Default to 0.
-        :param reason: Reason given for the ban. 
+        :param reason: Reason given for the ban.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.ban(user, delete_message_days=purge)
@@ -171,7 +171,7 @@ class Mods:
         Bans a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
         :param purge: Purge user messages for X messages. Default to 5000.
-        :param reason: Reason given for the ban. 
+        :param reason: Reason given for the ban.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.kick(user)
@@ -191,7 +191,7 @@ class Mods:
         """
         Bans a user. This command require multiple arguments
         :param user_str: The user you would like to ban. Can be a userID or a username#discrim combo
-        :param reason: Reason given for the unban. 
+        :param reason: Reason given for the unban.
         :return case_numer: Return the case and the case number.
         """
         bans = await self.bot.get_bans(ctx.message.server)
@@ -211,7 +211,7 @@ class Mods:
         """
         Warns a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
-        :param reason: Reason given for the warn. 
+        :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
         """
         case = await self.add_action(user=user, action="Warn", by=ctx.message.author, reason=reason)
@@ -224,7 +224,7 @@ class Mods:
         """
         Warns a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
-        :param reason: Reason given for the warn. 
+        :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.server_voice_state(user, mute=True)
@@ -238,7 +238,7 @@ class Mods:
         """
         Warns a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
-        :param reason: Reason given for the warn. 
+        :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.server_voice_state(user, mute=False)
@@ -252,7 +252,7 @@ class Mods:
         """
         Warns a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
-        :param reason: Reason given for the warn. 
+        :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.server_voice_state(user, deafen=True)
@@ -266,7 +266,7 @@ class Mods:
         """
         Warns a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
-        :param reason: Reason given for the warn. 
+        :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
         """
         await self.bot.server_voice_state(user, deafen=False)
@@ -280,7 +280,7 @@ class Mods:
     async def user_log(self, ctx, user: discord.User):
         """
         Get every moderator actions for a specific user
-        
+
         :param user: The user you would like to see actions.
         """
         await self.send_user_log(ctx, user.id)
@@ -311,7 +311,7 @@ class Mods:
     @checks.have_required_level(3)
     async def remove(self, ctx):  # borrowed from the RDanny code
         """Removes messages that meet a criteria.
-        
+
         When the command is done doing its work, you will get a private message
         detailing which users got removed and how many messages got removed.
         """

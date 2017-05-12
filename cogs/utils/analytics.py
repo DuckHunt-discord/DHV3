@@ -1,4 +1,4 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
 """
@@ -95,4 +95,3 @@ async def analytics_loop():
     except:
         commons.logger.exception("")
         raise
-

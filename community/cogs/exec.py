@@ -1,9 +1,7 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
-"""
-
-"""
+'''Module for an embeded python interpreter. More or less the same as the debugger module but with embeds.'''
 
 import collections
 import inspect
@@ -16,8 +14,6 @@ import discord
 import requests
 from cogs import checks
 from discord.ext import commands
-
-'''Module for an embeded python interpreter. More or less the same as the debugger module but with embeds.'''
 
 
 class EmbedShell:

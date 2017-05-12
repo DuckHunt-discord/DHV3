@@ -8,7 +8,6 @@
     -   id: end-of-file-fixer
     -   id: fix-encoding-pragma
     -   id: pretty-format-json
-        - args: ['--autofix']
+        args: ['--autofix']
     -   id: requirements-txt-fixer
     -   id: trailing-whitespace
-

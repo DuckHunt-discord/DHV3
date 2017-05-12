@@ -1,4 +1,4 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
 """
@@ -12,12 +12,13 @@
 ############
 
 # TODO: vérifier la validité des serv/chan ids à chaque fois
-import json
 import decimal
+import json
+
+from cogs.utils import checks, commons, prefs, scores
 from collections import defaultdict
 from discord.enums import ChannelType
 from kyoukai import HTTPRequestContext, Kyoukai
-from cogs.utils import checks, commons, prefs, scores
 
 api = Kyoukai('dh_api')
 

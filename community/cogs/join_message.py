@@ -1,4 +1,4 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 
 """
@@ -9,7 +9,7 @@
 class WelcomeMessage:
     def __init__(self, bot):
         self.bot = bot
-        self.message = """Hello and welcome to the DuckHunt server. 
+        self.message = """Hello and welcome to the DuckHunt server.
 I know welcome messages can be annoying for you, but if you read this one, you will likely find an answer.
 
 **FAQ** :
@@ -27,7 +27,7 @@ Please ask an admin for the @Server admin rank.
 
 **Rules** :
 
-1/ Use your mind. Thanks. 
+1/ Use your mind. Thanks.
 2/ Moderators are always right"""
 
     async def on_member_join(self, member):

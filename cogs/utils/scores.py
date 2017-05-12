@@ -1,4 +1,4 @@
-# -*- coding:Utf-8 -*-
+# -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
 """
 Discord-duckhunt -- database.py
@@ -8,9 +8,9 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 import time
 
 import discord
+from cogs.utils import checks, commons, prefs
 from mysql import connector
 
-from cogs.utils import checks, commons, prefs
 from cogs.utils.commons import _, credentials
 
 db = connector.connect(host=credentials['mysql_host'], port=credentials['mysql_port'], user=credentials['mysql_user'], password=credentials['mysql_pass'], database=credentials['mysql_db'], charset='utf8mb4', collation='utf8mb4_unicode_ci')

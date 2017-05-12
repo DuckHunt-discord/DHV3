@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 import discord.utils
+from cogs.utils import comm, commons, prefs, scores
 from discord.ext import commands
 
-from cogs.utils import comm, commons, prefs, scores
 from cogs.utils.commons import _
 
 
