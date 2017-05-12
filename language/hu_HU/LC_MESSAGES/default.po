@@ -41,9 +41,10 @@ msgid ""
 "```\n"
 "{error_report}"
 msgstr ""
-":x: Egy hiba ({error}) keletkezett a  {command} ban, itt a jelentés:  \n"
+":x: Egy hiba ({error}) keletkezett a  {command} ban, itt a jelentés: ``` \n"
 " {tb}\n"
-" {error_report}"
+"```\n"
+"{error_report}"
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Meghívót készít a hibajelentés miatt..."
@@ -239,45 +240,6 @@ msgstr "Fegyver hatékonysága"
 
 msgid "Shoots statistics"
 msgstr "Lövésstatisztika"
-
-msgid "Shoots fired"
-msgstr "Kilőtt töltények"
-
-msgid "Shoots missed"
-msgstr "Elvétett lövések"
-
-msgid "Shoots without ducks"
-msgstr "Vaklövések"
-
-msgid "Shoots that frightened a duck"
-msgstr "Lövesek, amelyek elijesztettek egy kacsát"
-
-msgid "Shoots that harmed a duck"
-msgstr "Lövések, amelyek megsebeztek egy kacsát"
-
-msgid "Shoots stopped by the detector"
-msgstr "Lövések, amelyeket detektor állított meg"
-
-msgid "Shoots jamming a weapon"
-msgstr "Lövések, amelyek miatt beragadt a fegyver"
-
-msgid "Shoots without a duck"
-msgstr "Vaklövések"
-
-msgid "Shoots with a sabotaged weapon"
-msgstr "Lövések egy szabotált fegyverből"
-
-msgid "Shoots with a jammed weapon"
-msgstr "Beragadt töltények"
-
-msgid "Shoots without bullets"
-msgstr "Lövések töltény nélkül"
-
-msgid "Shoots without weapon"
-msgstr "Lövések fegyver nélkül"
-
-msgid "Shoots when wet"
-msgstr "Lövések vizes fegyverrel"
 
 msgid "Reloads and items statistics"
 msgstr "Újratöltések és tárgyak statisztikája"
