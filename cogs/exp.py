@@ -194,18 +194,18 @@ class Exp:
                 elif current_page == 2:
                     embed.title = _("Shoots statistics", language)
 
-                    embed.add_field(name=_("Shoots fired", language), value=str(gs("shoots_fired")))
-                    embed.add_field(name=_("Shoots missed", language), value=str(gs("shoots_missed")))
-                    embed.add_field(name=_("Shoots without ducks", language), value=str(gs("shoots_no_duck")))
-                    embed.add_field(name=_("Shoots that frightened a duck", language), value=str(gs("shoots_frightened")))
-                    embed.add_field(name=_("Shoots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
-                    embed.add_field(name=_("Shoots stopped by the detector", language), value=str(gs("shoots_infrared_detector")))
-                    embed.add_field(name=_("Shoots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
-                    embed.add_field(name=_("Shoots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
-                    embed.add_field(name=_("Shoots with a jammed weapon", language), value=str(gs("shoots_with_jammed_weapon")))
-                    embed.add_field(name=_("Shoots without bullets", language), value=str(gs("shoots_without_bullets")))
-                    embed.add_field(name=_("Shoots without weapon", language), value=str(gs("shoots_without_weapon")))
-                    embed.add_field(name=_("Shoots when wet", language), value=str(gs("shoots_tried_while_wet")))
+                    embed.add_field(name=_("Shots fired", language), value=str(gs("shoots_fired")))
+                    embed.add_field(name=_("Shots missed", language), value=str(gs("shoots_missed")))
+                    embed.add_field(name=_("Shots without ducks", language), value=str(gs("shoots_no_duck")))
+                    embed.add_field(name=_("Shots that frightened a duck", language), value=str(gs("shoots_frightened")))
+                    embed.add_field(name=_("Shots that harmed a duck", language), value=str(gs("shoots_harmed_duck")))
+                    embed.add_field(name=_("Shots stopped by the detector", language), value=str(gs("shoots_infrared_detector")))
+                    embed.add_field(name=_("Shots jamming a weapon", language), value=str(gs("shoots_jamming_weapon")))
+                    embed.add_field(name=_("Shots with a sabotaged weapon", language), value=str(gs("shoots_sabotaged")))
+                    embed.add_field(name=_("Shots with a jammed weapon", language), value=str(gs("shoots_with_jammed_weapon")))
+                    embed.add_field(name=_("Shots without bullets", language), value=str(gs("shoots_without_bullets")))
+                    embed.add_field(name=_("Shots without weapon", language), value=str(gs("shoots_without_weapon")))
+                    embed.add_field(name=_("Shots when wet", language), value=str(gs("shoots_tried_while_wet")))
 
                 elif current_page == 3:
 
@@ -270,7 +270,8 @@ class Exp:
                     try:
                         await self.bot.remove_reaction(duckstats_message, emoji, user)
                     except discord.errors.Forbidden:
-                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                        pass
+                        # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 elif emoji == prev_emo:
                     changed = True
                     if current_page > 1:
@@ -280,7 +281,8 @@ class Exp:
                     try:
                         await self.bot.remove_reaction(duckstats_message, emoji, user)
                     except discord.errors.Forbidden:
-                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                        pass
+                        # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 elif emoji == first_page_emo:
                     if current_page > 1:
                         changed = True
@@ -288,7 +290,8 @@ class Exp:
                     try:
                         await self.bot.remove_reaction(duckstats_message, emoji, user)
                     except discord.errors.Forbidden:
-                        await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                        pass
+                        # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
             else:
                 reaction = False
                 try:
