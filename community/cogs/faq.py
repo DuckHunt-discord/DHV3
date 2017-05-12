@@ -120,8 +120,8 @@ class Faq():
         embed.description = "In the past, a lot of users wanted to self host their own copy of duckhunt. Self hosting is possible, but I **strongly** discourage it."
         embed.add_field(name="1st reason", value="Servers Admins want to self host to have a better uptime, or more control, but the official bot already have 99.8% of uptime. A lot of control is provided with the settings command, there isn't anything else to configure. ", inline=False)
         embed.add_field(name="2nd reason", value="Self hosting is bad because I can't see bugs, stats and a lot of metrics I use to guess what I should do first", inline=False)
-        embed.add_field(name="3rd reason", value="Self hosting the bot leans you'll get (almost) no support and you will be left alone trying to install it. Updates to the git repo are frequent and you'll have to do them quickly on each release. ", inline=False)
-        embed.add_field(name="4rd reason", value="If you self hosted and want to go back to the official version, you can. I can't merge two databases, as this implies a security risk for me and the users.", inline=False)
+        embed.add_field(name="3rd reason", value="Self hosting the bot means you'll get (almost) no support and you will be left alone trying to install it. Updates to the git repo are frequent and you'll have to do them quickly on each release. ", inline=False)
+        embed.add_field(name="4rd reason", value="If you self hosted and want to go back to the official version, you can't. I can't merge two databases, as this implies a security risk for me and the users.", inline=False)
         embed.add_field(name="Need more help ?", value="A lot of others resons exist. You may discuss that with us on the official duckhunt discord server at https://discordapp.com/invite/2BksEkV", inline=False)
         # embed.set_image(url="https://api-d.com/duckhunt.jpg")
         embed.set_footer(text=self.footer, icon_url=self.bot.user.avatar_url)
