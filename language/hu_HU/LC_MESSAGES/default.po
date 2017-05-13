@@ -202,8 +202,14 @@ msgstr "Összes statisztika"
 msgid "No best time."
 msgstr "Nincs legjobb idő."
 
+msgid "Shots missed"
+msgstr "Elvétett lövések"
+
 msgid "No duck killed"
 msgstr "Nem ölt kacsát"
+
+msgid "Shots without ducks"
+msgstr "Kacsa nélküli lövések"
 
 msgid "Ducks killed"
 msgstr "Kacsát ölt"
