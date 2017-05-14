@@ -8,7 +8,7 @@ python:
   - "3.6"
 install: "pip install -r requirements.txt"
 before_script:
-- pip install pybabel
+- pip install Babel
 script:
 - pybabel extract -o language/EN/LC_MESSAGES/default.po ./
 - for dirr in ./language/* ; do msgfmt ${dirr}/LC_MESSAGES/default.po -o ${dirr}/LC_MESSAGES/default.mo ; echo ${dirr} compiled; done
