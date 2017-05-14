@@ -10,6 +10,7 @@ before_script:
 - pip install Babel
 script:
 - git checkout master
+- git pull
 - pybabel extract -o language/EN/LC_MESSAGES/default.po ./
 - for dirr in ./language/* ; do msgfmt ${dirr}/LC_MESSAGES/default.po -o ${dirr}/LC_MESSAGES/default.mo ; echo ${dirr} compiled; done
 - openssl aes-256-cbc -K $encrypted_03e55cc3139f_key -iv $encrypted_03e55cc3139f_iv -in deploy-key.enc -out deploy-key -d
