@@ -1,6 +1,5 @@
 env:
   global:
-  - GIT_NAME: "'Markdown autodeploy'"
   - GIT_EMAIL: jovart.arthur@gmail.com
   - GH_REF: git@github.com:DuckHunt-discord/DHV2.git
 language: python
@@ -20,4 +19,5 @@ script:
 - git config user.email "${GIT_EMAIL}"
 - git remote add gh-token "${GH_REF}";
 - git fetch gh-token
+- git commit -a -m " travis-ci auto-update of translations"
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi;
