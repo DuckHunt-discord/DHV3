@@ -19,6 +19,7 @@ Ouvrez une [issue](https://github.com/DuckHunt-discord/DHV2/issues/new), ou pass
 
 ## Des badges ?
 [![Dependency Status](https://gemnasium.com/badges/github.com/DuckHunt-discord/DHV2.svg)](https://gemnasium.com/github.com/DuckHunt-discord/DHV2)
+[![Build Status](https://travis-ci.org/DuckHunt-discord/DHV2.svg?branch=master)](https://travis-ci.org/DuckHunt-discord/DHV2)
 
 ## Licence
 
