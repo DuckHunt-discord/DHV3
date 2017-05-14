@@ -145,7 +145,7 @@ class Shoot:
             accuracy = 100
 
         precision = scores.getPlayerLevel(channel, author)["precision"]
-        sight = scores.getStat(channel, author, "sight", default=0)
+        sight = scores.getStat(channel, author, "sight")
         if sight:
             precision += (100 - precision) / 3
             scores.setStat(channel, author, "sight", sight - 1)
@@ -175,7 +175,7 @@ class Shoot:
                     await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a little before shooting the next time, maybe ? [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language))
                     scores.addToStat(channel, author, "self_killing_shoots", 1)
 
-                if scores.getStat(channel, victim, "life_insurance", default=0) > int(time.time()):
+                if scores.getStat(channel, victim, "life_insurance") > int(time.time()):
                     exp = int(scores.getPlayerLevel(channel, author)["niveau"] / 2)
                     scores.addToStat(channel, victim, "exp", exp)
                     await self.bot.send_message(channel, str(victim.mention) + _(" > You won {exp} with your life insurance", language).format(**{
