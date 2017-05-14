@@ -806,9 +806,9 @@ class Exp:
             else:
 
                 if prefs.getPref(message.server, "randomize_mechanical_ducks") == 0:
-                    await self.bot.send_message(message.channel, _("-_-'`'°-_-.-'`'° %__%   *BZAACK*", language))
+                    await self.bot.send_message(message.channel, _("-_-'\`'°-_-.-'\`'° %__%   *BZAACK*", language))
                 elif prefs.getPref(message.server, "randomize_mechanical_ducks") == 1:
-                    await self.bot.send_message(message.channel, "-_-'`'°-_-.-'`'° %__%    " + _(random.choice(commons.canards_cri), language=language))
+                    await self.bot.send_message(message.channel, "-_-'\`'°-_-.-'\`'° %__%    " + _(random.choice(commons.canards_cri), language=language))
                 else:
                     await self.bot.send_message(message.channel, random.choice(commons.canards_trace) + "  " + random.choice(commons.canards_portrait) + "  " + _(random.choice(commons.canards_cri), language=language))  # ASSHOLE ^^
 
