@@ -4,8 +4,10 @@ env:
   - GIT_EMAIL: jovart.arthur@gmail.com
   - GH_REF: git@github.com:DuckHunt-discord/DHV2.git
 language: python
+python:
+  - "3.6"
+install: "pip install -r requirements.txt"
 before_script:
-- pip install -r requirements.txt
 - pip install pybabel
 script:
 - pybabel extract -o language/EN/LC_MESSAGES/default.po ./
