@@ -19,5 +19,5 @@ script:
 - git config user.name "travis-ci - Automatic Publish"
 - git config user.email "${GIT_EMAIL}"
 - git remote add gh-token "${GH_REF}";
-- git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
-- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push origin master gh-token; fi;
+- git fetch gh-token
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi;
