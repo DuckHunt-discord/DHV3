@@ -189,10 +189,10 @@ class Shoot:
                 await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
                 return
 
-        if scores.getStat(channel, author, "explosive_ammo", default=0) > int(time.time()):
+        if scores.getStat(channel, author, "explosive_ammo") > int(time.time()):
             current_duck["SCvie"] -= 3
             vieenmoins = 3
-        elif scores.getStat(channel, author, "ap_ammo", default=0) > int(time.time()):
+        elif scores.getStat(channel, author, "ap_ammo") > int(time.time()):
             current_duck["SCvie"] -= 2
             vieenmoins = 2
         else:
