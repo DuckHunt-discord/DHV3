@@ -6,13 +6,16 @@ env:
 language: python
 before_script:
 - pip install -r requirements.txt
+- pip install pybabel
 script:
+- pybabel extract -o language/EN/LC_MESSAGES/default.po ./
+- for dirr in ./language/* ; do msgfmt ${dirr}/LC_MESSAGES/default.po -o ${dirr}/LC_MESSAGES/default.mo ; echo ${dirr} compiled; done
 - openssl aes-256-cbc -K $encrypted_03e55cc3139f_key -iv $encrypted_03e55cc3139f_iv -in deploy-key.enc -out deploy-key -d
 - chmod 600 deploy-key
 - eval `ssh-agent -s`
 - ssh-add deploy-key
-- git config user.name "Automatic Publish"
+- git config user.name "travis-ci - Automatic Publish"
 - git config user.email "${GIT_EMAIL}"
 - git remote add gh-token "${GH_REF}";
 - git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
-- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; PYTHONPATH=src/ mkdocs gh-deploy -v --clean --remote-name gh-token; git push gh-token gh-pages; fi;
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push origin master gh-token; fi;
