@@ -96,10 +96,11 @@ class Meta:
     #     except:
     #         await self.bot.say('Could not leave..')
 
-    @commands.command()
-    async def uptime(self):
+    @commands.command(pass_context=True)
+    async def uptime(self, ctx):
         """Tells you how long the bot has been up for."""
-        await self.bot.say('Uptime: **{}**'.format(self.get_bot_uptime()))
+        language = getPref(ctx.message.server, "language")
+        await self.bot.say(_('Uptime: **{}**', language).format(self.get_bot_uptime()))
 
     @commands.command(rest_is_raw=True, hidden=True)
     @checks.is_owner()
