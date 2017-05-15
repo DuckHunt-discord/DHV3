@@ -11,7 +11,7 @@ before_script:
 script:
 - git checkout master
 - git pull
-- pybabel extract -o language/EN/LC_MESSAGES/default.po ./
+- pybabel extract -o language/EN/LC_MESSAGES/default.pot ./
 - for dirr in ./language/* ; do msgfmt ${dirr}/LC_MESSAGES/default.po -o ${dirr}/LC_MESSAGES/default.mo ; echo ${dirr} compiled; done
 - openssl aes-256-cbc -K $encrypted_03e55cc3139f_key -iv $encrypted_03e55cc3139f_iv -in deploy-key.enc -out deploy-key -d
 - chmod 600 deploy-key
@@ -22,5 +22,5 @@ script:
 - git remote add gh-token "${GH_REF}";
 - git fetch gh-token
 - git config --global push.default simple
-- if [ `git diff --numstat` != "1 1 language/EN/LC_MESSAGES/default.po"; then git commit -a -m " travis-ci auto-update of translations"; fi
+- if [ `git diff --numstat` != "1 1 language/EN/LC_MESSAGES/default.pot"; then git commit -a -m " travis-ci auto-update of translations"; fi
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi;
