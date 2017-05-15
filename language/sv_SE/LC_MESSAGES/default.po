@@ -1,22 +1,18 @@
-# Translators:
-# Luc Lenôtre <luc14860@gmail.com>, 2017
+# Translations template for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2017-05-10 12:06+0200\n"
-"PO-Revision-Date: 2017-05-12 23:52+0200\n"
-"Last-Translator: Luc Lenôtre <luc14860@gmail.com>, 2017\n"
-"Language-Team: Swedish (Sweden) (https://www.transifex.com/none-441/teams/"
-"70749/sv_SE/)\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-05-15 14:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv_SE\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: language\n"
+"Generated-By: Babel 2.4.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 msgid ":x: This command cannot be used in private messages."
@@ -90,9 +86,6 @@ msgstr "< *BZAACK*"
 
 msgid " < "
 msgstr "<"
-
-msgid "-_-'`'°-_-.-'`'° %__%   *BZAACK*"
-msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
 
 msgid "Number of servers"
 msgstr "Antal servrar"
