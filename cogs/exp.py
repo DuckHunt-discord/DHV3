@@ -483,7 +483,8 @@ class Exp:
         """Add a charger to your weapon (13 exp)
         !shop 2"""
         message = ctx.message
-²                       9        if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
+        language = prefs.getPref(message.server, "language")
+        if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
             await comm.message_user(message, _(":money_with_wings: You add a charger to your backpack for 13 exp points.", language))
             scores.addToStat(message.channel, message.author, "chargeurs", 1)
             scores.addToStat(message.channel, message.author, "exp", -13)
