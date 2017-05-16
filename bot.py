@@ -193,6 +193,18 @@ async def mainloop():
                     "canards": len(commons.ducks_spawned)
                 }))
             for channel in list(commons.ducks_planned.keys()):
+                # Ici, on est au momement ou la logique s'opere:
+                # Si les canards ne dorment jamais, faire comme avant, c'est à dire
+                # prendre un nombre aléatoire entre 0 et le nombre de secondes restantes avec randrange
+                # et le comparer au nombre de canards restants à faire apparaitre dans la journée
+                #
+                # Par contre, si on est dans un serveur ou les canards peuvent dormir (==)
+                # sleeping_ducks_start != sleeping_ducks_stop, alors par exemple :
+                # 00:00 |-----==========---------| 23:59 (= quand les canards dorment)
+                # dans ce cas, il faut juste modifier la valeur de seconds_left pour enlever le nombre d'heure
+                # (en seconde) afin d'augmenter la probabilité qu'un canard apparaisse pendant le reste de la journée
+
+
                 try:
                     if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
                         commons.ducks_planned[channel] -= 1
