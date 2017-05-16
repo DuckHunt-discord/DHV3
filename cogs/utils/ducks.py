@@ -148,7 +148,7 @@ async def del_channel(channel):
     servers = prefs.JSONloadFromDisk("channels.json")
     try:
         if str(channel.id) in servers[channel.server.id]["channels"]:
-            await comm.logwithinfos(channel, author=None, log_str="Deleting channel {name} | {id} from the json file...".format(**{
+            await comm.logwithinfos(channel, log_str="Deleting channel {name} | {id} from the json file...".format(**{
                 "id"  : channel.id,
                 "name": channel.name
             }))

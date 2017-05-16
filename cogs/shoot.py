@@ -261,6 +261,7 @@ class Shoot:
         if scores.getStat(message.channel, message.author, "enrayee", default=False):
             await comm.message_user(message, _("You unstuck your weapon.", language))
             scores.setStat(message.channel, message.author, "enrayee", False)
+            # TODO : simplifier
             if scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]) > 0:
                 return
 
