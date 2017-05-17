@@ -206,12 +206,22 @@ async def mainloop():
 
 
                 try:
-                    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
-                        commons.ducks_planned[channel] -= 1
-                        duck = {
+                    if commons.sleeping_ducks_start*3600 - commons.sleeping_ducks_stop *3600>=0:
+
+                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel] :
+                          commons.sleeping_ducks_stop *3600<= now <= commons.sleeping_ducks_start *3600
+                          commons.ducks_planned[channel] -= 1
+                          duck = {
                             "channel": channel,
-                            "time"   : now
-                        }
+                            "time"   : now}
+                        else:
+                            commons.sleeping_ducks_start *3600< now < commons.sleeping_ducks_stop *3600
+                            commons.ducks_planned[channel] -= 1
+                            duck = {
+                             "channel": channel,
+                             "time"   : now}
+
+
                         await ducks.spawn_duck(duck)
                 except KeyError:  # Race condition
                     # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
