@@ -208,14 +208,12 @@ async def mainloop():
                 try:
                     if commons.sleeping_ducks_start*3600 - commons.sleeping_ducks_stop *3600>=0:
 
-                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel] :
-                          commons.sleeping_ducks_stop *3600<= now <= commons.sleeping_ducks_start *3600
+                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel] and commons.sleeping_ducks_stop *3600<= now <= commons.sleeping_ducks_start *3600:
                           commons.ducks_planned[channel] -= 1
                           duck = {
                             "channel": channel,
                             "time"   : now}
-                        else:
-                            commons.sleeping_ducks_start *3600< now < commons.sleeping_ducks_stop *3600
+                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel]  and commons.sleeping_ducks_start *3600< now < commons.sleeping_ducks_stop *3600 :
                             commons.ducks_planned[channel] -= 1
                             duck = {
                              "channel": channel,
