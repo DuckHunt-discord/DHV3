@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-15 15:02+0000\n"
+"POT-Creation-Date: 2017-05-18 16:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -956,7 +956,7 @@ msgstr ""
 
 #: cogs/shoot.py:171
 msgid ""
-"**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] "
+"**BANG**\tYou missed the duck... And shot {player} ! [missed : -1 xp] "
 "[hunting accident : -2 xp] [weapon confiscated]"
 msgstr ""
 
@@ -974,7 +974,7 @@ msgstr ""
 #: cogs/shoot.py:207
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
-"first ! [exp -1]"
+"first ! [missed : -1 xp]"
 msgstr ""
 
 #: cogs/shoot.py:227
@@ -1000,19 +1000,19 @@ msgstr ""
 msgid "You unstuck your weapon."
 msgstr ""
 
-#: cogs/shoot.py:272
+#: cogs/shoot.py:273
 msgid "You reload your weapon"
 msgstr ""
 
-#: cogs/shoot.py:274
+#: cogs/shoot.py:275
 msgid "You dont have any ammo left !"
 msgstr ""
 
-#: cogs/shoot.py:277
+#: cogs/shoot.py:278
 msgid "You don't need to reload your weapon"
 msgstr ""
 
-#: cogs/shoot.py:280
+#: cogs/shoot.py:281
 msgid ""
 "{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
 "left : {chargeurs_actuels}/{chargeurs_max}"
@@ -1406,7 +1406,7 @@ msgstr ""
 msgid "a fish."
 msgstr ""
 
-#: cogs/utils/ducks.py:95
+#: cogs/utils/ducks.py:94
 msgid "There is a duck on #{channel}"
 msgstr ""
 
