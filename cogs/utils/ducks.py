@@ -40,7 +40,7 @@ async def planifie(channel_obj: discord.Channel = None):
         planification_ = {}
         if multiplicator == 0:
             multiplicator = 1
-        servers = prefs.JSONloadFromDisk("channels.json", default="{}")
+        servers = prefs.JSONloadFromDisk("channels.json")
         for server_ in list(servers.keys()):
             server = bot.get_server(str(server_))
             if not server:
@@ -56,7 +56,6 @@ async def planifie(channel_obj: discord.Channel = None):
                 except:
                     await comm.logwithinfos(server.default_channel, log_str="Error sending the unconfigured message to the default channel on the server.")
 
-                pass
             else:
                 for channel_ in servers[server.id]["channels"]:
                     channel = server.get_channel(str(channel_))

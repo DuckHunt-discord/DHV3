@@ -168,7 +168,7 @@ class Shoot:
                     victim = message.server.get_member(str(victim['id_']))
 
                 if victim is not author:
-                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... And shot {player}. ! [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language).format(**{
+                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... And shot {player} ! [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language).format(**{
                         "player": victim.mention if prefs.getPref(message.server, "killed_mentions") else victim.name
                     }))
                 else:
@@ -204,7 +204,7 @@ class Shoot:
                 commons.ducks_spawned.remove(current_duck)
                 commons.n_ducks_killed += 1
             except ValueError:
-                await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [exp -1]", language))
+                await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [missed : -1 xp]", language))
                 scores.addToStat(channel, author, "exp", -1)
                 scores.addToStat(channel, author, "shoots_missed", 1)
                 scores.addToStat(channel, author, "shoots_almost_killed", 1)
