@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-15 14:48+0000\n"
+"POT-Creation-Date: 2017-05-18 17:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,13 +243,6 @@ msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali
 
 msgid "Your weapon is jammed, reload to unstuck it."
 msgstr "Vaše oružje je zapelo, repetirajte ga."
-
-msgid ""
-"That was close, you almost killed the duck, but the other hunter got it "
-"first ! [exp -1]"
-msgstr ""
-"To je bilo blizu, skoro ste ubili patku, ali je drugi igrač bio brži ! [exp -"
-"1]"
 
 msgid "Your weapon had been confiscated"
 msgstr "Vaša oružje je oduzeto"
