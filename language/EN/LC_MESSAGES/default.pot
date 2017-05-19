@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-18 17:45+0000\n"
+"POT-Creation-Date: 2017-05-19 14:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -628,49 +628,49 @@ msgstr ""
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ""
 
-#: cogs/exp.py:724
+#: cogs/exp.py:726
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you"
 " get killed, you will earn half the level of the killer in exp"
 msgstr ""
 
-#: cogs/exp.py:729
+#: cogs/exp.py:731
 msgid ":money_with_wings: You are already insured."
 msgstr ""
 
-#: cogs/exp.py:742
+#: cogs/exp.py:744
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
 "channel, thanks to the decoy of {mention}. He brought it for 8 exp !"
 msgstr ""
 
-#: cogs/exp.py:762
+#: cogs/exp.py:764
 msgid ""
 ":money_with_wings: You place some bread on the channel to attract ducks. "
 "They will leave 20 seconds later for the rest of the day !"
 msgstr ""
 
-#: cogs/exp.py:774
+#: cogs/exp.py:776
 msgid ""
 ":money_with_wings: You will be warned when the next duck on "
 "#{channel_name} spawns"
 msgstr ""
 
-#: cogs/exp.py:793
+#: cogs/exp.py:795
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 "
 "exp. That's bad, but so funny !"
 msgstr ""
 
-#: cogs/exp.py:803
+#: cogs/exp.py:805
 msgid " < *BZAACK*"
 msgstr ""
 
-#: cogs/exp.py:805
+#: cogs/exp.py:807
 msgid " < "
 msgstr ""
 
-#: cogs/exp.py:809
+#: cogs/exp.py:811
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
