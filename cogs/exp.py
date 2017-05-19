@@ -712,6 +712,8 @@ class Exp:
             await self.bot.delete_message(ctx.message)
         except discord.Forbidden:
             await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+        except discord.NotFound:
+            pass
 
     @shop.command(pass_context=True, name="18")
     @checks.have_exp(10)
