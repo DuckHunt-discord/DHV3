@@ -42,7 +42,7 @@ def init():
         credentials = json.load(f)
 
     lang = "en_EN"  # Language specified here is for console messages, everything that is not sent to a server
-    owners = ["138751484517941259"]
+    owners = ["138751484517941259", '94822638991454208']
     support_server = [195260081036591104]
 
     class Domain:  # gettext config | http://stackoverflow.com/a/38004947/3738545
