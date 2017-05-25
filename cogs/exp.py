@@ -722,7 +722,7 @@ class Exp:
         !shop 18"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "life_insurance", default=0) < int(time.time()):
+        if scores.getStat(message.channel, message.author, "life_insurance") < int(time.time()):
             await comm.message_user(message, _(":money_with_wings: You buy a life insurence for a week for 10 exp. If you get killed, you will earn half the level of the killer in exp", language))
             scores.setStat(message.channel, message.author, "life_insurance", int(time.time()) + DAY * 7)
             scores.addToStat(message.channel, message.author, "exp", -10)
