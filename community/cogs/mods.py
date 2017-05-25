@@ -25,7 +25,7 @@ class Mods:
         self.bot = bot
         self.root_dir = self.bot.where + "/mods/"
 
-    async def add_action(self, user: discord.User, action: str, by: discord.user, reason: str = default_reason):
+    async def add_action(self, user: discord.User, action: str, by: discord.user, reason: str = default_reason, announce=True):
         """
         Save an action done by a mod to the filesystem.
         :param user: "Victim user"
@@ -66,6 +66,11 @@ class Mods:
 
         with open(self.root_dir + "/cases/" + str(current_case) + ".json", "w") as outfile:
             json.dump(action_logged, outfile)
+
+        if announce:
+
+            embed = await self.get_case_embed(current_case)
+            await self.bot.send_message(self.bot.get_channel("317432206920515597"), embed=embed)
 
         return current_case
 
