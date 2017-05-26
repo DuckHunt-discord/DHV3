@@ -6,10 +6,10 @@ import string
 import time
 
 import discord
-from cogs.utils import comm, commons, prefs
 from discord.ext import commands
 from prettytable import PrettyTable
 
+from cogs.utils import comm, commons, prefs
 from cogs.utils.commons import _
 from cogs.utils.prefs import JSONloadFromDisk
 from .utils import checks
@@ -209,7 +209,7 @@ class Admin:
             failed = 0
             for server in to_clean:
                 try:
-                    await self.bot.send_message(server, ":warning: I'll now leave the server, as you have not configured me... Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take to bring me back.")
+                    await self.bot.send_message(server, ":warning: I'll now leave the server, as you have not configured me... Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take to bring me back, or chech https://api-d.com for more help.")
                 except:
                     failed += 1
                     pass
