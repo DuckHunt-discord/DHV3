@@ -300,7 +300,6 @@ class Exp:
                     pass
                 return
 
-
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
