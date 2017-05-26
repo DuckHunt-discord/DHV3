@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 # !/usr/bin/env python3.5
+
+# TODO: A refaire en se basant sur https://github.com/Rapptz/RoboDanny/blob/32d5b346a66e28f8ff613005b4a819d7154690b2/cogs/utils/config.py
 import json
 
 import os
