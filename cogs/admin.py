@@ -176,7 +176,7 @@ class Admin:
         await comm.message_user(ctx.message, _("Serching for servers to leave", language))
         to_clean = []
         total_members_lost = 0
-        servers = JSONloadFromDisk("channels.json", default="{}")
+        servers = JSONloadFromDisk("channels.json")
 
         for server in list(self.bot.servers):
 

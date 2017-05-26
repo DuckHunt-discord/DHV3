@@ -2,6 +2,8 @@
 # !/usr/bin/env python3.5
 import json
 
+import os
+
 from cogs.utils import commons
 
 cache = True
@@ -58,8 +60,10 @@ def setPref(server, pref, value=None, force=False):
 
 
 def JSONsaveToDisk(data, filename):
-    with open(filename, 'w') as outfile:
+    with open(filename + ".temp", 'w') as outfile:
         json.dump(data, outfile, sort_keys=True, indent=4)
+        # atomically move the file
+        os.replace(filename + ".temp", filename)
     if hasattr(commons, "servers"):
         del commons.servers
 
