@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-19 14:16+0000\n"
+"POT-Creation-Date: 2017-05-26 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,7 +238,7 @@ msgstr ""
 msgid "No duck killed"
 msgstr ""
 
-#: cogs/exp.py:181 cogs/exp.py:323
+#: cogs/exp.py:181 cogs/exp.py:322
 msgid "Ducks killed"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Bullets in current magazine"
 msgstr ""
 
-#: cogs/exp.py:188 cogs/exp.py:323 cogs/utils/scores.py:112
+#: cogs/exp.py:188 cogs/exp.py:322 cogs/utils/scores.py:112
 msgid "Exp points"
 msgstr ""
 
@@ -402,101 +402,101 @@ msgstr ""
 msgid "Effect: wet"
 msgstr ""
 
-#: cogs/exp.py:254 cogs/exp.py:406 cogs/meta.py:203 cogs/utils/scores.py:118
+#: cogs/exp.py:254 cogs/exp.py:405 cogs/meta.py:203 cogs/utils/scores.py:118
 msgid ""
 ":warning: Error sending embed, check if the bot have the permission "
 "embed_links and try again !"
 msgstr ""
 
-#: cogs/exp.py:318
+#: cogs/exp.py:317
 msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table "
 "is 200."
 msgstr ""
 
-#: cogs/exp.py:323 cogs/exp.py:337
+#: cogs/exp.py:322 cogs/exp.py:336
 msgid "Rank"
 msgstr ""
 
-#: cogs/exp.py:323
+#: cogs/exp.py:322
 msgid "Nickname"
 msgstr ""
 
-#: cogs/exp.py:335
+#: cogs/exp.py:334
 msgid ""
 ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
 "```{table}```"
 msgstr ""
 
-#: cogs/exp.py:351
+#: cogs/exp.py:350
 msgid "Generating topscores for your channel, please wait!"
 msgstr ""
 
-#: cogs/exp.py:365
+#: cogs/exp.py:364
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ""
 
-#: cogs/exp.py:380
+#: cogs/exp.py:379
 msgid "None !"
 msgstr ""
 
-#: cogs/exp.py:399
+#: cogs/exp.py:398
 msgid "Player"
 msgstr ""
 
-#: cogs/exp.py:400
+#: cogs/exp.py:399
 msgid "Experience points"
 msgstr ""
 
-#: cogs/exp.py:401
+#: cogs/exp.py:400
 msgid "Number of ducks killed"
 msgstr ""
 
-#: cogs/exp.py:411
+#: cogs/exp.py:410
 msgid "There is nothing more..."
 msgstr ""
 
-#: cogs/exp.py:424 cogs/exp.py:432 cogs/exp.py:440
+#: cogs/exp.py:423 cogs/exp.py:431 cogs/exp.py:439
 msgid ""
 "I don't have the `manage_messages` permissions, I can't remove reactions."
 " Warn an admin for me, please ;)"
 msgstr ""
 
-#: cogs/exp.py:456
+#: cogs/exp.py:455
 msgid ":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
 msgstr ""
 
-#: cogs/exp.py:461
+#: cogs/exp.py:460
 msgid "The list of items is available here : http://api-d.com/shop-items.html"
 msgstr ""
 
-#: cogs/exp.py:473
+#: cogs/exp.py:474
 msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
 msgstr ""
 
-#: cogs/exp.py:478
+#: cogs/exp.py:477
 msgid ":champagne: Your charger is full !"
 msgstr ""
 
-#: cogs/exp.py:488
+#: cogs/exp.py:489
 msgid ":money_with_wings: You add a charger to your backpack for 13 exp points."
 msgstr ""
 
-#: cogs/exp.py:493
+#: cogs/exp.py:492
 msgid ":champagne: You have enough chargers!"
 msgstr ""
 
-#: cogs/exp.py:503
+#: cogs/exp.py:504
 msgid ""
 ":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
 msgstr ""
 
-#: cogs/exp.py:508
+#: cogs/exp.py:507
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ""
 
-#: cogs/exp.py:518
+#: cogs/exp.py:519
 msgid ""
 ":money_with_wings: You purchase explosive ammo for your weapon. For the "
 "next 24 hours, you will deal triple damage to ducks."
@@ -506,7 +506,7 @@ msgstr ""
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ""
 
-#: cogs/exp.py:533
+#: cogs/exp.py:535
 msgid ":money_with_wings: You take your weapon back for 40 exp points"
 msgstr ""
 
@@ -516,7 +516,7 @@ msgid ""
 "do you want to buy ? :p"
 msgstr ""
 
-#: cogs/exp.py:548
+#: cogs/exp.py:550
 msgid ""
 ":money_with_wings: You add grease in your weapon to reduce jamming risks "
 "by 50 percent for a day, for only 8 exp points."
@@ -526,151 +526,151 @@ msgstr ""
 msgid ":champagne: Your weapon is perfectly lubricated, no need for more grease"
 msgstr ""
 
-#: cogs/exp.py:561
+#: cogs/exp.py:563
 msgid ""
 ":money_with_wings: You add a sight to your weapon, for 5 exp points, your"
 " aiming was improved using this formulae : (100 - current accuracy) / 3. "
 msgstr ""
 
-#: cogs/exp.py:565
+#: cogs/exp.py:566
 msgid ":champagne: You already have a sight to your weapon. "
 msgstr ""
 
-#: cogs/exp.py:575
+#: cogs/exp.py:578
 msgid ""
 ":money_with_wings: You add an infrared detector to your weapon, that will"
 " prevent any waste of ammo for a day. Cost : 15 exp points."
 msgstr ""
 
-#: cogs/exp.py:580
+#: cogs/exp.py:582
 msgid ":champagne: You do have an infrared detector on your weapon, right ?"
 msgstr ""
 
-#: cogs/exp.py:590
+#: cogs/exp.py:594
 msgid ""
 ":money_with_wings: You add a silencer to your weapon, no duck will ever "
 "be frightened by one of your shots for a day. Cost : 5 exp points, what a"
 " good deal !"
 msgstr ""
 
-#: cogs/exp.py:595
+#: cogs/exp.py:597
 msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ""
 
-#: cogs/exp.py:606
+#: cogs/exp.py:611
 msgid ""
 ":money_with_wings: You buy a fresh 4-leaf clover, which will give you "
 "{exp} more exp point for the next day. You brought it for 13 exp!"
 msgstr ""
 
-#: cogs/exp.py:614
+#: cogs/exp.py:616
 msgid ""
 ":champagne: You're too lucky, but I don't have any clover left for you "
 "today :'(. Too much luck, maybe ??"
 msgstr ""
 
-#: cogs/exp.py:622
+#: cogs/exp.py:627
 msgid ""
 ":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are "
 "now immune to sunlight for a day"
 msgstr ""
 
-#: cogs/exp.py:629
+#: cogs/exp.py:632
 msgid ""
 ":money_with_wings: You brought brand new sunglasses, for nothing but the "
 "fact that you are mostly swag now. :cool:"
 msgstr ""
 
-#: cogs/exp.py:639
+#: cogs/exp.py:644
 msgid ""
 ":money_with_wings: You have some dry clothes on you now. You looks "
 "beautiful ! "
 msgstr ""
 
-#: cogs/exp.py:645
+#: cogs/exp.py:648
 msgid ""
 ":money_with_wings: You brought brand new clothes, for nothing but the "
 "fact that you are mostly swag now. :cool:"
 msgstr ""
 
-#: cogs/exp.py:655
+#: cogs/exp.py:658
 msgid ""
 ":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
 "weapon was sabtaged, it's fixed now !"
 msgstr ""
 
-#: cogs/exp.py:663
+#: cogs/exp.py:666
 msgid ":x: No way ! {mention} have some sunglasses ! He is immune to this ! "
 msgstr ""
 
-#: cogs/exp.py:668
+#: cogs/exp.py:671
 msgid ""
 ":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his "
 "next shot !"
 msgstr ""
 
-#: cogs/exp.py:678
+#: cogs/exp.py:681
 msgid ":champagne: You throw sand on {mention} weapon!"
 msgstr ""
 
-#: cogs/exp.py:687
+#: cogs/exp.py:692
 msgid ""
 ":money_with_wings: You drop a full water bucket on {target}, forcing him "
 "to wait 1 hour for his/her clothes to dry before he/she can return "
 "hunting"
 msgstr ""
 
-#: cogs/exp.py:701
+#: cogs/exp.py:706
 msgid ":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
 msgstr ""
 
-#: cogs/exp.py:707
+#: cogs/exp.py:711
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ""
 
-#: cogs/exp.py:726
+#: cogs/exp.py:732
 msgid ""
 ":money_with_wings: You buy a life insurence for a week for 10 exp. If you"
 " get killed, you will earn half the level of the killer in exp"
 msgstr ""
 
-#: cogs/exp.py:731
+#: cogs/exp.py:735
 msgid ":money_with_wings: You are already insured."
 msgstr ""
 
-#: cogs/exp.py:744
+#: cogs/exp.py:749
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
 "channel, thanks to the decoy of {mention}. He brought it for 8 exp !"
 msgstr ""
 
-#: cogs/exp.py:764
+#: cogs/exp.py:768
 msgid ""
 ":money_with_wings: You place some bread on the channel to attract ducks. "
 "They will leave 20 seconds later for the rest of the day !"
 msgstr ""
 
-#: cogs/exp.py:776
+#: cogs/exp.py:788
 msgid ""
 ":money_with_wings: You will be warned when the next duck on "
 "#{channel_name} spawns"
 msgstr ""
 
-#: cogs/exp.py:795
+#: cogs/exp.py:800
 msgid ""
 ":money_with_wings: You prepare a mechanical duck on the channel for 50 "
 "exp. That's bad, but so funny !"
 msgstr ""
 
-#: cogs/exp.py:805
+#: cogs/exp.py:810
 msgid " < *BZAACK*"
 msgstr ""
 
-#: cogs/exp.py:807
+#: cogs/exp.py:812
 msgid " < "
 msgstr ""
 
-#: cogs/exp.py:811
+#: cogs/exp.py:816
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
