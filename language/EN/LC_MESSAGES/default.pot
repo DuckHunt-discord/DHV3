@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-30 21:01+0000\n"
+"POT-Creation-Date: 2017-05-30 21:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -984,35 +984,67 @@ msgid ""
 "super-ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
 msgstr ""
 
-#: cogs/shoot.py:238
-msgid "While searching the bushes around the duck, you found {inutilitee}"
+#: cogs/shoot.py:242
+msgid "While searching the bushes around the duck, you found **{inutilitee}**"
 msgstr ""
 
-#: cogs/shoot.py:244
+#: cogs/shoot.py:248
+msgid ""
+"While searching the bushes around the duck, you found **a box of "
+"explosive ammo**"
+msgstr ""
+
+#: cogs/shoot.py:252
+msgid ""
+"While searching the bushes around the duck, you found **a almost empty "
+"box of explosive ammo**"
+msgstr ""
+
+#: cogs/shoot.py:258
+msgid "While searching the bushes around the duck, you found **a full charger**"
+msgstr ""
+
+#: cogs/shoot.py:261
+msgid ""
+"While searching the bushes around the duck, you found **a full charger**."
+" You left it there, cause your backpack is full."
+msgstr ""
+
+#: cogs/shoot.py:265
+msgid "While searching the bushes around the duck, you found **a bullet**"
+msgstr ""
+
+#: cogs/shoot.py:268
+msgid ""
+"While searching the bushes around the duck, you found **a bullet**. You "
+"left it there, cause your have enough of them in your charger."
+msgstr ""
+
+#: cogs/shoot.py:271
 msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
 msgstr ""
 
-#: cogs/shoot.py:259
+#: cogs/shoot.py:286
 msgid "Your weapon had been confiscated"
 msgstr ""
 
-#: cogs/shoot.py:262
+#: cogs/shoot.py:289
 msgid "You unstuck your weapon."
 msgstr ""
 
-#: cogs/shoot.py:273
+#: cogs/shoot.py:300
 msgid "You reload your weapon"
 msgstr ""
 
-#: cogs/shoot.py:275
+#: cogs/shoot.py:302
 msgid "You dont have any ammo left !"
 msgstr ""
 
-#: cogs/shoot.py:278
+#: cogs/shoot.py:305
 msgid "You don't need to reload your weapon"
 msgstr ""
 
-#: cogs/shoot.py:281
+#: cogs/shoot.py:308
 msgid ""
 "{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers "
 "left : {chargeurs_actuels}/{chargeurs_max}"
