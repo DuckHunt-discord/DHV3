@@ -10,9 +10,9 @@ import json
 import logging
 import sys
 import traceback
+from collections import Counter
 
 import os
-from collections import Counter
 from discord.ext import commands
 
 try:
@@ -43,6 +43,7 @@ steam_handler = logging.StreamHandler()
 steam_handler.setLevel(logging.DEBUG)
 steam_handler.setFormatter(formatter)
 logger.addHandler(steam_handler)
+
 
 help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
@@ -89,9 +90,12 @@ async def on_command_error(error, ctx):
     elif isinstance(error, commands.DisabledCommand):
         await bot.send_message(ctx.message.author, ':x: Sorry. This command is disabled and cannot be used.')
     elif isinstance(error, commands.CommandInvokeError):
-        print('In {0.command.qualified_name}:'.format(ctx), file=sys.stderr)
-        traceback.print_tb(error.original.__traceback__)
-        print('{0.__class__.__name__}: {0}'.format(error.original), file=sys.stderr)
+        sending = 'In {0.command.qualified_name}:\n'.format(ctx)
+        sending += traceback.format_tb(error.original.__traceback__)
+        sending += "\n"
+        sending += traceback.format_exc(error.original.__traceback__)
+        sending += "\n" + '{0.__class__.__name__}: {0}'.format(error.original)
+        logger.error(sending)
 
         msg = await bot.send_message(ctx.message.channel, ":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```\n".format(**{
             "command": ctx.command.qualified_name,

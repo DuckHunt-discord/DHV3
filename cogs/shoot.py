@@ -4,9 +4,9 @@ import random
 import time
 
 import discord
-from cogs.utils import checks, comm, commons, prefs, scores
 from discord.ext import commands
 
+from cogs.utils import checks, comm, commons, prefs, scores
 from cogs.utils.comm import logwithinfos
 from cogs.utils.commons import _
 
@@ -234,11 +234,38 @@ class Shoot:
             if scores.getStat(channel, author, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave")) > int(now - current_duck["time"]):
                 scores.setStat(channel, author, "best_time", round(now - current_duck["time"], 6))
             if prefs.getPref(message.server, "users_can_find_objects"):
-                if random.randint(0, 100) < 25:
-                    await comm.message_user(message, _("While searching the bushes around the duck, you found {inutilitee}", language).format(**{
+                rand = random.randint(0, 1000)
+                HOUR = 3600
+                DAY = 86400
+
+                if rand <= 50:
+                    await comm.message_user(message, _("While searching the bushes around the duck, you found **{inutilitee}**", language).format(**{
                         "inutilitee": _(random.choice(commons.inutilite), language)
                     }))
                     scores.addToStat(channel, author, "trashFound", 1)
+
+                elif rand <= 54:
+                    await comm.message_user(message, _("While searching the bushes around the duck, you found **a box of explosive ammo**", language))
+                    scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
+
+                elif rand <= 60:
+                    await comm.message_user(message, _("While searching the bushes around the duck, you found **a almost empty box of explosive ammo**", language))
+                    scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY / 4))
+
+                elif rand <= 63:
+                    if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
+                        scores.addToStat(message.channel, message.author, "chargeurs", 1)
+                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a full charger**", language))
+
+                    else:
+                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a full charger**. You left it there, cause your backpack is full.", language))
+                elif rand <= 70:
+                    if scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]) < scores.getPlayerLevel(message.channel, message.author)["balles"]:
+                        scores.addToStat(message.channel, message.author, "balles", 1)
+                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a bullet**", language))
+
+                    else:  # Shouldn't happen but we never know...
+                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a bullet**. You left it there, cause your have enough of them in your charger.", language))
 
         else:  # Duck harmed
             await self.sendBangMessage(message, _(":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]", language).format(**{
