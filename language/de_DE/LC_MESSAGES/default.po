@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-18 17:38+0000\n"
+"POT-Creation-Date: 2017-05-26 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +98,9 @@ msgstr "Anzahl der nicht benötigten Berechtigungen"
 msgid "Number of needed permissions"
 msgstr "Anzahl der benötigten Berechtigungen"
 
+msgid " > Processing servers ({done}/{total})"
+msgstr "Verarbeite Server ({done}/{total})"
+
 msgid "Serching for servers to leave"
 msgstr "Suche nach Servern, die verlassen werden sollen"
 
@@ -107,8 +110,19 @@ msgstr "Schreibe {random_str} zur Bestätigung."
 msgid ":x: Operation canceled, you took too long to answer."
 msgstr ":x: Vorgang abgebrochen, du hast zu lange gebraucht."
 
+msgid "Starting the broadcast"
+msgstr "Starte Rundnachricht"
+
+msgid "Broadcast finished"
+msgstr "Rundnachricht beendet"
+
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Nachricht ({message}) an {server} #{channel} gesendet."
+
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr ""
+"{date} (in {dans_jours} Tagen, {dans_heures} Stunden und {dans_minutes} "
+"Minuten)"
 
 msgid "%m/%d at %H:%M:%S"
 msgstr "um %H:%M:%S am %d.%m. "
@@ -151,6 +165,10 @@ msgstr "Generiere duckstats für dich, bitte warte kurz!"
 
 msgid "Page {current}/{max}"
 msgstr "Seite {current}/{max}"
+
+msgid "\n"
+"Confiscated weapon !"
+msgstr "Waffe beschlagnahmt!\n"
 
 msgid "General statistics"
 msgstr "Generelle Statistiken"
@@ -196,6 +214,45 @@ msgstr "Zuverlässigkeit der Waffe"
 
 msgid "Shoots statistics"
 msgstr "Schussstatistik"
+
+msgid "Shots fired"
+msgstr "Schüsse"
+
+msgid "Shots missed"
+msgstr "Verfehlte Schüsse"
+
+msgid "Shots without ducks"
+msgstr "Schüsse ohne Enten"
+
+msgid "Shots that frightened a duck"
+msgstr "Schüsse, die Enten vertrieben haben"
+
+msgid "Shots with a sabotaged weapon"
+msgstr "Schüsse mit sabotierter Waffe"
+
+msgid "Shots with a jammed weapon"
+msgstr "Schüsse mit verstopfter Waffe"
+
+msgid "Shots without bullets"
+msgstr "Schüsse ohne Kugeln"
+
+msgid "Shots without weapon"
+msgstr "Schüsse ohne Waffe"
+
+msgid "Reloads"
+msgstr "Nachgeladen"
+
+msgid "Reloads without chargers"
+msgstr "Nachgeladen ohne Magazin"
+
+msgid "Reloads not needed"
+msgstr "Nicht benötigtes Nachladen"
+
+msgid "Trash found in bushes"
+msgstr "In Büschen gefundener Müll"
+
+msgid "Exp earned with a clover"
+msgstr "Durch Kleeblätter erhaltene Exp"
 
 msgid "Object: grease"
 msgstr "Objekt: Schmierfett"
@@ -307,14 +364,35 @@ msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ":champagne: Du hast doch einen Schalldämpfer an deiner Waffe, oder?"
 
 msgid ""
+":money_with_wings: You brought brand new sunglasses, for nothing but the "
+"fact that you are mostly swag now. :cool:"
+msgstr ""
+":money_with_wings: Du hast eine neue Sonnenbrille gekauft, nur um jetzt mehr "
+"swag zu haben. :cool:"
+
+msgid ""
 ":money_with_wings: You have some dry clothes on you now. You looks beautiful "
 "! "
 msgstr ""
 ":money_with_wings: Du hast jetzt wieder trockene Kleidung an. Das sieht "
 "super aus! "
 
+msgid ""
+":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
+"weapon was sabtaged, it's fixed now !"
+msgstr ""
+":champagne: Du hast deine Waffe für 6 exp gereinigt. Falls sie durch Sand "
+"verunreinigt war oder sabotiert wurde, ist sie jetzt wieder einsatzbereit!"
+
 msgid ":champagne: You throw sand on {mention} weapon!"
 msgstr ":champagne: Du wirfst Sand auf die Waffe von {mention}!"
+
+msgid ""
+":money_with_wings: You drop a full water bucket on {target}, forcing him to "
+"wait 1 hour for his/her clothes to dry before he/she can return hunting"
+msgstr ""
+":money_with_wings: Du hast einen Eimer Wasser auf {target} geschüttet, "
+"weshalb er/sie jetzt eine Stunde warten muss, bis er/sie wieder jagen kann"
 
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: Die Waffe von {target} ist bereits sabotiert!"
@@ -423,7 +501,7 @@ msgid ":ok: Channel deleted"
 msgstr ":ok: Kanal gelöscht"
 
 msgid "There is {ducks} ducks left to spawn today !"
-msgstr "Es werden heute noch {ducks}  Enten auftauchen!"
+msgstr "Es werden heute noch {ducks} Enten auftauchen!"
 
 msgid ":robot: OK, {name} was set as an admin on the server !"
 msgstr ":robot: Okay, {name} ist jetzt Admin auf diesem Server Servers!"
