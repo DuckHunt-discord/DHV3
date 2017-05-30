@@ -5,7 +5,16 @@ DuckhuntV2 -- commons
 """
 import os
 
+try:
+    import graypy
+
+    gray = True
+except ImportError:
+    gray = False
+
 from collections import defaultdict
+
+
 # noinspection PyGlobalUndefined
 def init():
     if os.geteuid() == 0:
@@ -588,6 +597,12 @@ def init():
     steam_handler.setLevel(logging.DEBUG)
     steam_handler.setFormatter(formatter)
     logger.addHandler(steam_handler)
+    if gray:
+        gray_handler = graypy.GELFHandler('logs.api-d.com', 12201)
+        logger.addHandler(gray_handler)
+        logger.info("GreyLog Handler SetUp :)")
+    else:
+        logger.warning("Non GrayLog2 found.")
 
     # TRAD
     del _
