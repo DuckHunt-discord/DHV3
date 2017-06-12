@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-05-30 21:36+0000\n"
+"POT-Creation-Date: 2017-05-31 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,17 +98,28 @@ msgstr "Anzahl der nicht benötigten Berechtigungen"
 msgid "Number of needed permissions"
 msgstr "Anzahl der benötigten Berechtigungen"
 
+msgid " > En cours"
+msgstr "watschelnd"
+
 msgid " > Processing servers ({done}/{total})"
 msgstr "Verarbeite Server ({done}/{total})"
 
 msgid "Serching for servers to leave"
 msgstr "Suche nach Servern, die verlassen werden sollen"
 
+msgid ""
+"Cleaning {servers} unused servers (accounting for {members} members in "
+"total)"
+msgstr "Entferne {servers} ungenutze Server (insgesamt {members} Mitglieder)"
+
 msgid "To confirm, please type {random_str} now."
 msgstr "Schreibe {random_str} zur Bestätigung."
 
 msgid ":x: Operation canceled, you took too long to answer."
 msgstr ":x: Vorgang abgebrochen, du hast zu lange gebraucht."
+
+msgid ":ok: Finished, failed for {failed} servers."
+msgstr ":ok: Beendet mit Fehlern bei {failed} Servern."
 
 msgid "Starting the broadcast"
 msgstr "Starte Rundnachricht"
@@ -153,6 +164,18 @@ msgstr ""
 
 msgid ":x: You need to give a positive number for the exp to send"
 msgstr ":x: Du musst eine natürliche Zahl eingeben um Erfahrung zu versenden."
+
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr "Glückwunsch, du hast mehr Erfahrung vergeben als ich speichern kann."
+
+msgid ""
+"You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
+"transfer) !"
+msgstr ""
+"Du hast {amount} exp an {target} gesendet (und {taxes} exp Steuern für den "
+"Transfer gezahlt)"
 
 msgid "You don't have enough experience points"
 msgstr "Du hast nicht genug Erfahrungspunkte"
@@ -227,17 +250,32 @@ msgstr "Schüsse ohne Enten"
 msgid "Shots that frightened a duck"
 msgstr "Schüsse, die Enten vertrieben haben"
 
+msgid "Shots that harmed a duck"
+msgstr "Schüsse, die eine Ente verletzten"
+
+msgid "Shots stopped by the detector"
+msgstr "Schüsse, die vom Detektor aufgehalten wurden"
+
+msgid "Shots jamming a weapon"
+msgstr "Schüsse, die die Waffe verklemmt haben"
+
 msgid "Shots with a sabotaged weapon"
 msgstr "Schüsse mit sabotierter Waffe"
 
 msgid "Shots with a jammed weapon"
-msgstr "Schüsse mit verstopfter Waffe"
+msgstr "cSchüsse mit verstopfter Waffe"
 
 msgid "Shots without bullets"
 msgstr "Schüsse ohne Kugeln"
 
 msgid "Shots without weapon"
 msgstr "Schüsse ohne Waffe"
+
+msgid "Shots when wet"
+msgstr "Schüsse wenn du nass warst"
+
+msgid "Reloads and items statistics"
+msgstr "Nachlader- und Item-Statistiken"
 
 msgid "Reloads"
 msgstr "Nachgeladen"
@@ -253,6 +291,12 @@ msgstr "In Büschen gefundener Müll"
 
 msgid "Exp earned with a clover"
 msgstr "Durch Kleeblätter erhaltene Exp"
+
+msgid "Life insurence rewards"
+msgstr "Lebensversicherungsentlohnungen"
+
+msgid "Free givebacks used"
+msgstr "Gratis verwendete Rückgaben"
 
 msgid "Object: grease"
 msgstr "Objekt: Schmierfett"
@@ -293,6 +337,12 @@ msgstr "Rang"
 
 msgid "Nickname"
 msgstr "Spitzname"
+
+msgid ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
+"```{table}```"
+msgstr ""
+":cocktail: Beste Punktzahlen für #{channel_name}: :cocktail:\n"
+"```{table}```"
 
 msgid "Generating topscores for your channel, please wait!"
 msgstr "Generiere Bestenliste für diesen Kanal, bitte warten!"
@@ -338,8 +388,21 @@ msgstr ""
 msgid ":champagne: Your charger is full !"
 msgstr ":champagne: Dein Magazin ist voll!"
 
+msgid ""
+":money_with_wings: You add a charger to your backpack for 13 exp points."
+msgstr ""
+":money_with_wings: Du hast für 13 exp ein Magazin in deinen Rucksack gepackt."
+""
+
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Du hast ausreichend Magazine"
+
+msgid ""
+":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
+"hours, you will deal double damage to ducks."
+msgstr ""
+":money_with_wings: Du hast AP-Munition gekauft. Du wirst für die nächsten 24 "
+"Stunden doppelten Schaden verursachen."
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Du hast vorerst genug panzerbrechende Munition!"
@@ -362,6 +425,13 @@ msgstr ":champagne: Du hast einen Infrarotdetektor an deiner Waffe, stimmt's?"
 
 msgid ":champagne: You do have a silencer on your weapon, right ?"
 msgstr ":champagne: Du hast doch einen Schalldämpfer an deiner Waffe, oder?"
+
+msgid ""
+":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
+"immune to sunlight for a day"
+msgstr ""
+":money_with_wings: Du hast dir eine Sonnenbrille für 5 exp gekauft! Du bist "
+"jetzt resistent gegen Sonnenlicht für einen Tag"
 
 msgid ""
 ":money_with_wings: You brought brand new sunglasses, for nothing but the "
@@ -409,6 +479,9 @@ msgstr " < *BZAACK*"
 
 msgid " < "
 msgstr " < "
+
+msgid "Uptime: **{}**"
+msgstr "Online seit: **{}**"
 
 msgid "Usage statistics of duckhunt"
 msgstr "Nutzungsstatistik von Duckhunt"
@@ -509,11 +582,17 @@ msgstr ":robot: Okay, {name} ist jetzt Admin auf diesem Server Servers!"
 msgid ":robot: OK, {name} is not an admin !"
 msgstr ":robot: Okay, {name} ist kein Admin!"
 
+msgid ":robot: OK, you have been set as an admin !"
+msgstr ":robot: Okay, du bist jetzt Admin!"
+
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} Nachricht(en) gelöscht"
 
 msgid "0 message(s) deleted : permission denied"
 msgstr "0 Keine Nachricht gelöscht: Zugriff verweigert"
+
+msgid "Permissions : {permissions}"
+msgstr "Berechtigungen: {permissions}"
 
 msgid ":x: Incorrect value"
 msgstr ":x: Falscher Wert"
@@ -622,7 +701,7 @@ msgid "Hello world"
 msgstr "Hallo Welt"
 
 msgid "How are you today?"
-msgstr "WIe geht's dir heute?"
+msgstr "Wie geht's dir heute?"
 
 msgid "Please don't kill me..."
 msgstr "Bitte bring mich nicht um..."
