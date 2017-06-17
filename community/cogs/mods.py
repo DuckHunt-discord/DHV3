@@ -290,7 +290,7 @@ class Mods:
         """
         Get every moderator actions for yourself
         """
-        await self.send_user_log(ctx, ctx.message.user.id)
+        await self.send_user_log(ctx, ctx.message.author.id)
 
     @checks.have_required_level(2)
     @moderation.command(pass_context=True, aliases=["log", "whodis"])
