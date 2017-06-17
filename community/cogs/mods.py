@@ -10,12 +10,13 @@ import json
 import re
 import shlex
 import time
+from collections import Counter
 
 import discord
-from cogs import checks
-from collections import Counter
 from discord import InvalidArgument
 from discord.ext import commands
+
+from cogs import checks
 
 default_reason = "**No reason provided**"
 
@@ -154,8 +155,12 @@ class Mods:
                                                    list_unbans=str(actions["Unban"]) if len(actions["Unban"]) != 0 else "",
                                                    ))
 
+    @commands.group(pass_context=True, aliases=["mod", "stfu"])
+    async def moderation(self, ctx):
+        pass
+
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def ban(self, ctx, user: discord.User, purge: int = 0, *, reason: str = default_reason):
         """
         Bans a user. This command require multiple arguments
@@ -170,7 +175,7 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def kick(self, ctx, user: discord.Member, purge: int = 5000, *, reason: str = default_reason):
         """
         Bans a user. This command require multiple arguments
@@ -191,7 +196,7 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def unban(self, ctx, user_str: str, *, reason: str = default_reason):
         """
         Bans a user. This command require multiple arguments
@@ -211,7 +216,7 @@ class Mods:
             await self.bot.send_message(ctx.message.channel, "User not found :(")
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def warn(self, ctx, user: discord.User, *, reason: str = default_reason):
         """
         Warns a user. This command require multiple arguments
@@ -224,10 +229,10 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def mute(self, ctx, user: discord.Member, *, reason: str = default_reason):
         """
-        Warns a user. This command require multiple arguments
+        Mute a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
         :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
@@ -238,10 +243,10 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def unmute(self, ctx, user: discord.Member, *, reason: str = default_reason):
         """
-        Warns a user. This command require multiple arguments
+        Unmute a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
         :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
@@ -252,10 +257,10 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def deafen(self, ctx, user: discord.Member, *, reason: str = default_reason):
         """
-        Warns a user. This command require multiple arguments
+        Deafen a user. This command require multiple arguments
         :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
         :param reason: Reason given for the warn.
         :return case_numer: Return the case and the case number.
@@ -266,7 +271,7 @@ class Mods:
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
     @checks.have_required_level(3)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def undeafen(self, ctx, user: discord.Member, *, reason: str = default_reason):
         """
         Warns a user. This command require multiple arguments
@@ -279,9 +284,18 @@ class Mods:
         embed = await self.get_case_embed(case)
         await self.bot.send_message(ctx.message.channel, embed=embed)
 
+    @checks.have_required_level(1)
+    @moderation.command(pass_context=True, aliases=["logme", "whatdidido"])
+    async def me(self, ctx):
+        """
+        Get every moderator actions for a specific user
+
+        :param user: The user you would like to see actions.
+        """
+        await self.send_user_log(ctx, ctx.message.user.id)
 
     @checks.have_required_level(2)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True, aliases=["log", "whodis"])
     async def user_log(self, ctx, user: discord.User):
         """
         Get every moderator actions for a specific user
@@ -291,7 +305,7 @@ class Mods:
         await self.send_user_log(ctx, user.id)
 
     @checks.have_required_level(2)
-    @commands.command(pass_context=True)
+    @moderation.command(pass_context=True)
     async def user_logd(self, ctx, user):
         """
         Get every moderator actions for a disconnected user
@@ -300,8 +314,8 @@ class Mods:
         """
         await self.send_user_log(ctx, user)
 
-    @checks.have_required_level(2)
-    @commands.command(pass_context=True)
+    @checks.have_required_level(1)
+    @moderation.command(pass_context=True, aliases=["view", "hum"])
     async def view_case(self, ctx, case: int):
         """
         View a case using the assotiated case number
@@ -312,7 +326,7 @@ class Mods:
         except InvalidArgument:
             await self.bot.send_message(ctx.message.channel, "Invalid case number")
 
-    @commands.group(pass_context=True, no_pm=True, aliases=['purge', 'purgemessages'])
+    @moderation.group(pass_context=True, no_pm=True, aliases=['purge', 'purgemessages'])
     @checks.have_required_level(3)
     async def remove(self, ctx):  # borrowed from the RDanny code
         """Removes messages that meet a criteria.
