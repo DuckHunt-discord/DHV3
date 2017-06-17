@@ -288,9 +288,7 @@ class Mods:
     @moderation.command(pass_context=True, aliases=["logme", "whatdidido"])
     async def me(self, ctx):
         """
-        Get every moderator actions for a specific user
-
-        :param user: The user you would like to see actions.
+        Get every moderator actions for yourself
         """
         await self.send_user_log(ctx, ctx.message.user.id)
 

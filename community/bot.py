@@ -93,7 +93,6 @@ async def on_command_error(error, ctx):
         sending = 'In {0.command.qualified_name}:\n'.format(ctx)
         sending += "\n".join(traceback.format_tb(error.original.__traceback__))
         sending += "\n"
-        sending += "\n".join(traceback.format_exc(error.original.__traceback__))
         sending += "\n" + '{0.__class__.__name__}: {0}'.format(error.original)
         logger.error(sending)
 
