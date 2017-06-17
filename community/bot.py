@@ -91,9 +91,9 @@ async def on_command_error(error, ctx):
         await bot.send_message(ctx.message.author, ':x: Sorry. This command is disabled and cannot be used.')
     elif isinstance(error, commands.CommandInvokeError):
         sending = 'In {0.command.qualified_name}:\n'.format(ctx)
-        sending += traceback.format_tb(error.original.__traceback__).join("\n")
+        sending += "\n".join(traceback.format_tb(error.original.__traceback__))
         sending += "\n"
-        sending += traceback.format_exc(error.original.__traceback__).join("\n")
+        sending += "\n".join(traceback.format_exc(error.original.__traceback__))
         sending += "\n" + '{0.__class__.__name__}: {0}'.format(error.original)
         logger.error(sending)
 
