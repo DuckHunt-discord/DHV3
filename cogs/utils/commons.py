@@ -114,6 +114,18 @@ def init():
             "value": 11 * 60,
             "type" : int
         },
+        "sleeping_ducks_start"      : {
+            "min"  : 0,
+            "max"  : 24,
+            "value": 0,
+            "type" : int
+        },
+        "sleeping_ducks_stop"      : {
+            "min"  : 0,
+            "max"  : 24,
+            "value": 0,
+            "type" : int
+        },
         "bang_lag"                     : {
             "min"  : 0,
             "max"  : 10,
