@@ -210,6 +210,7 @@ async def mainloop():
                         from PIL import image
                         dodo=Image.open('canard_dort.jpeg')
                         dodo.show()
+                        print('duck is sleeping')
                         if commons.sleeping_ducks_stop *3600<= now <= commons.sleeping_ducks_start *3600:
                           commons.ducks_planned[channel] -= 1
                           duck = {
