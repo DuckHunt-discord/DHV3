@@ -207,10 +207,6 @@ async def mainloop():
 
                 try:
                     if commons.sleeping_ducks_start*3600 - commons.sleeping_ducks_stop *3600>=0 and random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
-                        from PIL import image
-                        dodo=Image.open('canard_dort.jpeg')
-                        dodo.show()
-                        print('duck is sleeping ')
                         if commons.sleeping_ducks_stop *3600<= now <= commons.sleeping_ducks_start *3600:
                           commons.ducks_planned[channel] -= 1
                           duck = {
