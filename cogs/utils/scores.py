@@ -8,9 +8,9 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 import time
 
 import discord
-from cogs.utils import checks, commons, prefs
 from mysql import connector
 
+from cogs.utils import checks, commons, prefs
 from cogs.utils.commons import _, credentials
 
 db = connector.connect(host=credentials['mysql_host'], port=credentials['mysql_port'], user=credentials['mysql_user'], password=credentials['mysql_pass'], database=credentials['mysql_db'], charset='utf8mb4', collation='utf8mb4_unicode_ci')
@@ -103,7 +103,7 @@ def addToStat(channel, player, stat, value, announce=True):
             return
 
         embed.set_thumbnail(url=player.avatar_url if player.avatar_url else commons.bot.user.avatar_url)
-        embed.url = 'https://api-d.com/duckhunt/'
+        embed.url = 'https://api-d.com/'
 
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")

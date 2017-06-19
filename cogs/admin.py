@@ -126,7 +126,7 @@ class Admin:
 
         for server in list(slist):
             i += 1
-            if time.time() - lu >= 1.5 or i == total:
+            if time.time() - lu >= 5 or i == total:
                 lu = time.time()
                 try:
                     await self.bot.edit_message(tmp, str(ctx.message.author.mention) + _(" > Processing servers ({done}/{total})", language).format(**{

@@ -6,9 +6,9 @@ import sys
 import discord
 import os
 import psutil
-from cogs.utils import comm, commons
 from discord.ext import commands
 
+from cogs.utils import comm, commons
 from cogs.utils.commons import _
 from cogs.utils.prefs import getPref
 from .utils import checks
@@ -121,7 +121,7 @@ class Meta:
         embed.title = "DUCKHUNT STATS"
         # embed.set_author(name=str(target), icon_url=target.avatar_url)
         embed.set_thumbnail(url=self.bot.user.avatar_url)
-        embed.url = 'https://api-d.com/duckhunt/'
+        embed.url = 'https://api-d.com/'
         compteurCanards = 0
         serveurs = 0
         channels = 0
