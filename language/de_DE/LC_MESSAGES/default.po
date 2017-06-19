@@ -629,7 +629,7 @@ msgstr ""
 "keine Ente... [verfehlt : -1 xp] [wilder Schuss: -1 xp]"
 
 msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "**PIEWW**\tDu hast die Ente verfehlt ! [verfehlt : -1 xp]"
+msgstr "**PIEWW** Du hast die Ente verfehlt ! [verfehlt : -1 xp]"
 
 msgid "Your weapon had been confiscated"
 msgstr "Deine Waffe wurde beschlagnahmt"
