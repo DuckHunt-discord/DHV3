@@ -125,6 +125,7 @@ class Exp:
         message = ctx.message
         channel = message.channel
         language = prefs.getPref(message.server, "language")
+        send_to = channel if not prefs.getPref(ctx.message.server, "pm_stats") else message.author
 
         if not target:
             target = ctx.message.author
@@ -142,7 +143,7 @@ class Exp:
         current_page = 1
         total_page = 4
 
-        duckstats_message = await self.bot.send_message(ctx.message.channel, _("Generating duckstats for you, please wait!", language))
+        duckstats_message = await self.bot.send_message(send_to, _("Generating duckstats for you, please wait!", language))
         await self.bot.add_reaction(duckstats_message, first_page_emo)
         await self.bot.add_reaction(duckstats_message, prev_emo)
         await self.bot.add_reaction(duckstats_message, next_emo)

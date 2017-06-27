@@ -108,6 +108,10 @@ def init():
             "value": False,
             "type" : bool_
         },
+        "pm_stats"                     : {
+            "value": False,
+            "type" : bool_
+        },
         "time_before_ducks_leave"      : {
             "min"  : 60,
             "max"  : 2 * 60 * 60,
