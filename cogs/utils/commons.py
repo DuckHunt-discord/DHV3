@@ -90,47 +90,51 @@ def init():
             "value": True,
             "type" : bool_
         },
-        "mention_in_topscores"         : {
+        "mention_in_topscores"    : {
             "value": False,
             "type" : bool_
         },
-        "users_can_find_objects"       : {
+        "users_can_find_objects"  : {
             "value": True,
             "type" : bool_
         },
-        "chance_to_kill_on_missed"     : {
+        "chance_to_kill_on_missed": {
             "min"  : 0,
             "max"  : 100,
             "value": 5,
             "type" : int
         },
-        "pm_most_messages"             : {
+        "pm_most_messages"        : {
             "value": False,
             "type" : bool_
         },
-        "pm_stats"                     : {
+        "pm_stats"                : {
             "value": False,
             "type" : bool_
         },
-        "time_before_ducks_leave"      : {
+        "pm_top"                  : {
+            "value": False,
+            "type" : bool_
+        },
+        "time_before_ducks_leave" : {
             "min"  : 60,
             "max"  : 2 * 60 * 60,
             "value": 11 * 60,
             "type" : int
         },
-        "bang_lag"                     : {
+        "bang_lag"                : {
             "min"  : 0,
             "max"  : 10,
             "value": .5,
             "type" : float
         },
-        "exp_won_per_duck_killed"      : {
+        "exp_won_per_duck_killed" : {
             "min"  : 1,
             "max"  : 500,
             "value": 10,
             "type" : int
         },
-        "language"                     : {
+        "language"                : {
             "value": lang,
             "type" : str
         },

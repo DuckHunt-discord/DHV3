@@ -307,6 +307,7 @@ class Exp:
     async def top(self, ctx, number_of_scores: int = 10):
         language = prefs.getPref(ctx.message.server, "language")
         permissions = ctx.message.channel.permissions_for(ctx.message.server.me)
+        send_to = ctx.message.channel if not prefs.getPref(ctx.message.server, "pm_top") else ctx.message.author
 
         if number_of_scores != 10 \
                 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled") \
@@ -315,7 +316,7 @@ class Exp:
                 or not permissions.embed_links \
                 or not permissions.read_message_history:
             if number_of_scores > 200 or number_of_scores < 1:
-                await comm.message_user(ctx.message, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
+                await self.bot.send_message(send_to, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
                 return
 
             x = PrettyTable()
@@ -332,7 +333,7 @@ class Exp:
                     joueur["exp"] = 0
                 x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["killed_ducks"]])
 
-            await comm.message_user(ctx.message, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
+            await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
                 "channel_name": ctx.message.channel.name,
                 "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
             }), )
@@ -348,7 +349,7 @@ class Exp:
 
             current_page = 1
 
-            message = await self.bot.send_message(ctx.message.channel, _("Generating topscores for your channel, please wait!", language))
+            message = await self.bot.send_message(send_to, _("Generating topscores for your channel, please wait!", language))
             await self.bot.add_reaction(message, first_page_emo)
             await self.bot.add_reaction(message, prev_emo)
             await self.bot.add_reaction(message, next_emo)
@@ -403,7 +404,7 @@ class Exp:
                         try:
                             await self.bot.edit_message(message, ":duck:", embed=embed)
                         except discord.errors.Forbidden:
-                            await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+                            await self.bot.send_message(send_to, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
 
                         changed = False
                     else:
@@ -421,7 +422,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                     elif emoji == prev_emo:
                         if current_page > 1:
                             changed = True
@@ -429,7 +430,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                     elif emoji == first_page_emo:
                         if current_page > 1:
                             changed = True
@@ -437,7 +438,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 else:
                     reaction = False
                     try:
