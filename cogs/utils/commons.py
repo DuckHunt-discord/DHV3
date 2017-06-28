@@ -204,6 +204,12 @@ def init():
             "value": 0,
             "type" : int
         },
+        "multiplier_miss_chance"    : {
+            "min"  : 0,
+            "max"  : 10,
+            "value": 1,
+            "type" : int
+        }, # lower = less chance to miss, higher more
         "prefix"                    : {
             "value": "!",
             "type" : str

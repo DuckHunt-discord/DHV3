@@ -150,7 +150,7 @@ class Shoot:
             precision += (100 - precision) / 3
             scores.setStat(channel, author, "sight", sight - 1)
 
-        if random.randint(1, accuracy) > precision:
+        if random.randint(1, accuracy) > precision * prefs.getPref(message.server, "multiplier_miss_chance") :
             if random.randint(1, 100) < prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
                 scores.addToStat(channel, author, "exp", -3)
                 scores.addToStat(channel, author, "shoots_missed", 1)
