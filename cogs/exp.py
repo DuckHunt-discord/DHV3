@@ -382,7 +382,7 @@ class Exp:
                             if not joueur["exp"]:
                                 joueur["exp"] = 0
 
-                            member = message.server.get_member(joueur["id_"])
+                            member = ctx.message.server.get_member(joueur["id_"])
 
                             if prefs.getPref(ctx.message.server, "mention_in_topscores"):
 
