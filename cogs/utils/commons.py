@@ -208,7 +208,7 @@ def init():
             "min"  : 0,
             "max"  : 10,
             "value": 1,
-            "type" : int
+            "type" : float
         }, # lower = less chance to miss, higher more
         "prefix"                    : {
             "value": "!",
