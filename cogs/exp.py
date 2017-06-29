@@ -335,7 +335,7 @@ class Exp:
 
             await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
                 "channel_name": ctx.message.channel.name,
-                "table"       : x.get_string(end=number_of_scores, sortby=_("Rank", language))
+                "table"       : await comm.paste(x.get_string(end=number_of_scores, sortby=_("Rank", language)), "py")
             }), )
         else:
             # \N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is >>|
