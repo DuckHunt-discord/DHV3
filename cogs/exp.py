@@ -333,9 +333,11 @@ class Exp:
                     joueur["exp"] = 0
                 x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["killed_ducks"]])
 
+            tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
+
             await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
                 "channel_name": ctx.message.channel.name,
-                "table"       : await comm.paste(x.get_string(end=number_of_scores, sortby=_("Rank", language)), "py")
+                "table"       : await comm.paste(tab, "py") if len(tab) >= 1900 else tab
             }), )
         else:
             # \N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} is >>|
