@@ -18,7 +18,7 @@ from discord.ext import commands
 
 from cogs import checks
 
-default_reason = "**No reason provided**"
+default_reason = "**No reason provided**, use c!mod reason <case> <reason>."
 
 
 class Mods:
@@ -155,9 +155,34 @@ class Mods:
                                                    list_unbans=str(actions["Unban"]) if len(actions["Unban"]) != 0 else "",
                                                    ))
 
+    async def on_member_ban(self, member):
+        case = await self.add_action(user=member, action="Ban", by=self.bot.user)
+
+    async def on_member_unban(self, server, user):
+        case = await self.add_action(user=user, action="Unban", by=self.bot.user)
+
     @commands.group(pass_context=True, aliases=["mod", "stfu"])
     async def moderation(self, ctx):
         pass
+
+    @checks.have_required_level(3)
+    @moderation.command(pass_context=True)
+    async def reason(self, ctx, case_number: int, *, reason):
+        try:
+            with open(self.root_dir + "/cases/" + str(case_number) + ".json") as infile:
+                case = json.load(infile)
+
+        except FileNotFoundError:
+            await self.bot.send_message(ctx.message.channel, "Error : Unknown case ID")
+            return None
+
+        case["reason"] = reason
+        case["moderator_screenname"] = ctx.message.author.name + "#" + ctx.message.author.discriminator
+        case["moderator_id"] = ctx.message.author.id
+        with open(self.root_dir + "/cases/" + str(case_number) + ".json", "w") as outfile:
+            json.dump(case, outfile)
+
+        await self.bot.send_message(ctx.message.channel, embed=await self.get_case_embed(case_number))
 
     @checks.have_required_level(3)
     @moderation.command(pass_context=True)
