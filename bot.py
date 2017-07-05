@@ -203,7 +203,7 @@ async def mainloop():
                             "channel": channel,
                             "time"   : now
                         }
-                        await ducks.spawn_duck(duck)
+                        asyncio.ensure_future(ducks.spawn_duck(duck))
                 except KeyError:  # Race condition
                     # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
                     #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
@@ -217,7 +217,7 @@ async def mainloop():
                         "shouldwaitto": str(int(canard["time"] + prefs.getPref(canard["channel"].server, "time_before_ducks_leave"))) + (" + " + str(commons.bread[canard["channel"]]) if commons.bread[canard["channel"]] != 0 else "")
                     }))
                     try:
-                        await bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language")))
+                        asyncio.ensure_future(bot.send_message(canard["channel"], _(random.choice(commons.canards_bye), language=prefs.getPref(canard["channel"].server, "language"))))
                     except:
                         pass
                     try:
@@ -228,7 +228,8 @@ async def mainloop():
             now = int(time.time())
 
             if last_iter + 1 <= now:
-                logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=last_iter + 1 - now))
+                if last_iter + 1 <= now - 5:
+                    logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=str(float(float(last_iter + 1) - now))))
             else:
                 await asyncio.sleep(last_iter + 1 - now)
             last_iter += 1
