@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-30 09:53+0000\n"
+"POT-Creation-Date: 2017-07-05 16:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
-#: bot.py:58
+#: bot.py:59
 msgid ":x: This command cannot be used in private messages."
 msgstr ""
 
-#: bot.py:60
+#: bot.py:61
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ""
 
-#: bot.py:69
+#: bot.py:70
 msgid "Send error report ? "
 msgstr ""
 
-#: bot.py:71
+#: bot.py:72
 msgid ""
 "Sadly, I need `add_reactions` and `create_instant_invite` permissions to "
 "be able to send an error report."
 msgstr ""
 
-#: bot.py:73
+#: bot.py:74
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```"
 "\n"
@@ -44,38 +44,38 @@ msgid ""
 "{error_report}"
 msgstr ""
 
-#: bot.py:91
+#: bot.py:92
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ""
 
-#: bot.py:95
+#: bot.py:96
 msgid ":anger_right: Sending error report..."
 msgstr ""
 
-#: bot.py:97
+#: bot.py:98
 msgid ":hammer: {date} :hammer:"
 msgstr ""
 
-#: bot.py:98
+#: bot.py:99
 msgid ""
 "{cause}\n"
 "\n"
 "{tb}"
 msgstr ""
 
-#: bot.py:101
+#: bot.py:102
 msgid ":ok: Error message sent, thanks :)"
 msgstr ""
 
-#: bot.py:103
+#: bot.py:104
 msgid "OK, I won't send an error report"
 msgstr ""
 
-#: bot.py:108
+#: bot.py:109
 msgid ":x: Missing a required argument. "
 msgstr ""
 
-#: bot.py:110
+#: bot.py:111
 msgid ":x: Bad argument provided. "
 msgstr ""
 
