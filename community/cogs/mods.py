@@ -89,6 +89,8 @@ class Mods:
             embed.colour = discord.Colour.green()
         elif case["action"] == "Warn":
             embed.colour = discord.Colour.orange()
+        elif case["action"] == "Note":
+            embed.colour = discord.Colour.light_grey()
         elif case["action"] == "Mute":
             embed.colour = discord.Colour.orange()
         elif case["action"] == "Unmute":
@@ -250,6 +252,19 @@ class Mods:
         :return case_numer: Return the case and the case number.
         """
         case = await self.add_action(user=user, action="Warn", by=ctx.message.author, reason=reason)
+        embed = await self.get_case_embed(case)
+        await self.bot.send_message(ctx.message.channel, embed=embed)
+
+    @checks.have_required_level(3)
+    @moderation.command(pass_context=True)
+    async def note(self, ctx, user: discord.User, *, reason: str = default_reason):
+        """
+        Warns a user. This command require multiple arguments
+        :param user: The user you would like to ban. Can be a userID, a mention or a username#discrim combo
+        :param reason: Reason given for the warn.
+        :return case_numer: Return the case and the case number.
+        """
+        case = await self.add_action(user=user, action="Note", by=ctx.message.author, reason=reason)
         embed = await self.get_case_embed(case)
         await self.bot.send_message(ctx.message.channel, embed=embed)
 

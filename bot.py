@@ -7,12 +7,13 @@ import random
 import sys
 import time
 import traceback
+from collections import Counter
 
 import discord
 import os
-from cogs.utils import commons
-from collections import Counter
 from discord.ext import commands
+
+from cogs.utils import commons
 
 if os.geteuid() == 0:
     print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk.")
@@ -179,6 +180,7 @@ async def mainloop():
     try:
         await bot.wait_until_ready()
         planday = 0
+        last_iter = int(time.time())
         while not bot.is_closed:
             now = int(time.time())
             thisDay = now - (now % 86400)
@@ -187,6 +189,7 @@ async def mainloop():
                 # database.giveBack(logger)
                 planday = int(int(now) / 86400)
                 await planifie()
+                last_iter = int(time.time())
 
             if int(now) % 60 == 0:
                 logger.debug("Current ducks : {canards}".format(**{
@@ -222,8 +225,14 @@ async def mainloop():
                         commons.n_ducks_flew += 1
                     except:
                         logger.warning("Oops, error when removing duck : " + str(canard))
+            now = int(time.time())
 
-            await asyncio.sleep(1)
+            if last_iter + 1 <= now:
+                logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=last_iter + 1 - now))
+            else:
+                await asyncio.sleep(last_iter + 1 - now)
+            last_iter += 1
+
     except:
         logger.exception("")
         raise
