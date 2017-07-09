@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-05 16:09+0000\n"
+"POT-Creation-Date: 2017-07-09 00:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,11 +71,11 @@ msgstr ""
 msgid "OK, I won't send an error report"
 msgstr ""
 
-#: bot.py:109
+#: bot.py:107
 msgid ":x: Missing a required argument. "
 msgstr ""
 
-#: bot.py:111
+#: bot.py:109
 msgid ":x: Bad argument provided. "
 msgstr ""
 
