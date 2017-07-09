@@ -3,6 +3,7 @@ import asyncio
 import datetime
 import locale
 import logging
+import os
 import random
 import sys
 import time
@@ -10,7 +11,6 @@ import traceback
 from collections import Counter
 
 import discord
-import os
 from discord.ext import commands
 
 from cogs.utils import commons
@@ -102,8 +102,6 @@ async def on_command_error(error, ctx):
                     await bot.edit_message(msg, _(":ok: Error message sent, thanks :)", language))
                     return
             await comm.message_user(ctx.message, _("OK, I won't send an error report", language))
-
-
 
     elif isinstance(error, commands.MissingRequiredArgument):
         await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
@@ -232,6 +230,14 @@ async def mainloop():
                     logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=str(float(float(last_iter + 1) - now))))
             else:
                 await asyncio.sleep(last_iter + 1 - now)
+
+            if last_iter % 60 == 0:
+                x = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+                y = str(float(float(last_iter + 1) - now))
+                with open(os.path.dirname(os.path.realpath(sys.argv[0])) + "/csv/" + "latency.csv", "a") as f:
+                    f.write("{x},{y}\n".format(x=x, y=y))
+                logger.debug("Updating latency analytics")
+
             last_iter += 1
 
     except:
@@ -250,7 +256,9 @@ if __name__ == '__main__':
     bot.client_id = credentials['client_id']
     bot.commands_used = Counter()
     bot.bots_key = credentials['bots_key']
+
     ## POST INIT IMPORTS ##
+
     from cogs.utils.ducks import planifie, allCanardsGo
     from cogs.utils.analytics import analytics_loop
     from cogs.utils import prefs, comm
@@ -269,6 +277,8 @@ if __name__ == '__main__':
     try:
 
         # bot.loop.create_task(api.apcom.kyk.start(port=5566))
+
+        bot.loop.set_debug(True)
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:
         logger.warning("Shutdown in progress")

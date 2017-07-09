@@ -330,6 +330,24 @@
     );
 </script>
 
+<!--<h2>Bot latency</h2>-->
+<div id="latency"
+     style="height:300px;"></div>
+<script type="text/javascript">
+    g4 = new Dygraph(
+        document.getElementById("latency"),
+        "csv/latency.csv", // path to CSV file
+        {
+            title: 'Bot latency',
+            ylabel: 'Latency (sec) - more is better',
+            legend: 'always',
+            //showRangeSelector: true,
+
+
+        }          // options
+    );
+</script>
+
 <!--<h2>Number of ducks spawned</h2>-->
 <div id="ducks"
      style="height:300px;"></div>
