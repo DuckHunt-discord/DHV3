@@ -45,7 +45,8 @@ help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
 
 def prefix(bot, message):
-    return ["DuckHunt", "duckhunt", "dh!", "dh"] + list(prefs.getPref(message.server, "prefix"))
+    p = prefs.getPref(message.server, "prefix")
+    return ["DuckHunt", "duckhunt", "dh!", "dh"] + [p]
 
 
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None, help_attrs=help_attrs)
@@ -223,11 +224,11 @@ async def mainloop():
                         commons.n_ducks_flew += 1
                     except:
                         logger.warning("Oops, error when removing duck : " + str(canard))
-            now = int(time.time())
+            now = time.time()
 
             if last_iter + 1 <= now:
                 if last_iter + 1 <= now - 5:
-                    logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=str(float(float(last_iter + 1) - now))))
+                    logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=str(float(float(last_iter + 1) - int(now)))))
             else:
                 await asyncio.sleep(last_iter + 1 - now)
 
