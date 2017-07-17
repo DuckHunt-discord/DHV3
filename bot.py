@@ -218,6 +218,8 @@ async def mainloop():
                     if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
                         if not thishour > sdstop:
                             sdseconds = sdstop - sdstart * HOUR
+                        else:
+                            sdseconds = 0
                         if sdstart <= thishour < sdstop:
                             currently_sleeping = True
                     else:  # 00:00 |====--------------======| 23:59
@@ -228,7 +230,7 @@ async def mainloop():
                     sdseconds = 0
 
                 if not currently_sleeping:
-                    sseconds_left = seconds_left - sdseconds  # Don't change seconds_left, taht
+                    sseconds_left = seconds_left - sdseconds  # Don't change seconds_left, it's used for others channels
 
 
                     try:
