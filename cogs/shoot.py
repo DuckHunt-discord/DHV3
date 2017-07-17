@@ -97,7 +97,7 @@ class Shoot:
             fiabilite /= 2
             scores.setStat(channel, author, "sand", False)
 
-        if not random.randint(1, 100) < fiabilite and not (scores.getStat(channel, author, "graisse", default=0) > int(time.time())):  # Weapon jammed just now
+        if not random.randint(1, 100) < fiabilite and not (scores.getStat(channel, author, "graisse") > int(time.time())):  # Weapon jammed just now
             await comm.message_user(message, _("Your weapon is jammed, reload to unstuck it.", language))
             scores.addToStat(channel, author, "shoots_jamming_weapon", 1)
             scores.setStat(channel, author, "enrayee", True)
