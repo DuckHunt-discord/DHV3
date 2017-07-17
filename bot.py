@@ -43,6 +43,9 @@ logger = commons.logger
 
 help_attrs = dict(hidden=True, in_help=True, name="DONOTUSE")
 
+MINUTE = 60
+HOUR = MINUTE * 60
+DAY = HOUR * 24
 
 def prefix(bot, message):
     p = prefs.getPref(message.server, "prefix")
@@ -195,18 +198,49 @@ async def mainloop():
                     "canards": len(commons.ducks_spawned)
                 }))
             for channel in list(commons.ducks_planned.keys()):
-                try:
-                    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
-                        commons.ducks_planned[channel] -= 1
-                        duck = {
-                            "channel": channel,
-                            "time"   : now
-                        }
-                        asyncio.ensure_future(ducks.spawn_duck(duck))
-                except KeyError:  # Race condition
-                    # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
-                    #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
-                    pass
+                # Ici, on est au momement ou la logique s'opere:
+                # Si les canards ne dorment jamais, faire comme avant, c'est à dire
+                # prendre un nombre aléatoire entre 0 et le nombre de secondes restantes avec randrange
+                # et le comparer au nombre de canards restants à faire apparaitre dans la journée
+                #
+                # Par contre, si on est dans un serveur ou les canards peuvent dormir (==)
+                # sleeping_ducks_start != sleeping_ducks_stop, alors par exemple :
+                # 00:00 |-----==========---------| 23:59 (= quand les canards dorment)
+                # dans ce cas, il faut juste modifier la valeur de seconds_left pour enlever le nombre d'heure
+                # (en seconde) afin d'augmenter la probabilité qu'un canard apparaisse pendant le reste de la journée
+                sdstart = prefs.getPref(channel.server, "sleeping_ducks_start")
+                sdstop = prefs.getPref(channel.server, "sleeping_ducks_stop")
+                currently_sleeping = False
+
+                if sdstart != sdstop:  # Dans ce cas, les canards dorment peut-etre!
+                    thishour = int(seconds_left / HOUR)
+                    # Bon, donc comptons le nombre d'heures / de secondes en tout ou les canards dorment
+                    if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
+                        sdseconds = sdstop - sdstart * HOUR
+                        if sdstart <= thishour < sdstop:
+                            currently_sleeping = True
+                    else:  # 00:00 |====--------------======| 23:59
+                        sdseconds = (24 - sdstart) * HOUR + sdstop * HOUR
+                        if thishour > sdstart or thishour < sdstop:
+                            currently_sleeping = True
+                else:
+                    sdseconds = 0
+
+                if not currently_sleeping:
+                    seconds_left -= sdseconds
+
+                    try:
+                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
+                            commons.ducks_planned[channel] -= 1
+                            duck = {
+                                "channel": channel,
+                                "time"   : now
+                            }
+                            asyncio.ensure_future(ducks.spawn_duck(duck))
+                    except KeyError:  # Race condition
+                        # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
+                        #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
+                        pass
 
             for canard in commons.ducks_spawned:
                 if int(canard["time"]) + int(prefs.getPref(canard["channel"].server, "time_before_ducks_leave")) + commons.bread[canard["channel"]] < int(now):  # Canard qui se barre

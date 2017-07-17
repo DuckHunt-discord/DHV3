@@ -138,7 +138,7 @@ def init():
             "value": lang,
             "type" : str
         },
-        "randomize_ducks"              : {
+        "randomize_ducks"           : {
             "value": True,
             "type" : bool_
         },
@@ -158,6 +158,18 @@ def init():
             "min"  : 2,
             "max"  : 51,
             "value": 7,
+            "type" : int
+        },
+        "sleeping_ducks_start"      : {
+            "min"  : 0,
+            "max"  : 23,
+            "value": 0,
+            "type" : int
+        },
+        "sleeping_ducks_stop"       : {
+            "min"  : 0,
+            "max"  : 23,
+            "value": 0,
             "type" : int
         },
         "super_ducks_exp_multiplier": {
