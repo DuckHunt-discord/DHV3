@@ -125,7 +125,7 @@ class Shoot:
             scores.addToStat(channel, author, "shoots_no_duck", 1)
             return
 
-        if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(channel, author, "silencieux", default=0) < int(time.time()):  # Duck frightened
+        if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(channel, author, "silencieux") < int(time.time()):  # Duck frightened
             try:
                 commons.ducks_spawned.remove(current_duck)
                 commons.n_ducks_flew += 1
