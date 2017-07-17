@@ -111,7 +111,7 @@ class Shoot:
                     current_duck = duck
                     break
 
-        if not current_duck and scores.getStat(channel, author, "detecteurInfra", default=0) > int(time.time()):  # No ducks but infrared detector
+        if not current_duck and scores.getStat(channel, author, "detecteurInfra") > int(time.time()):  # No ducks but infrared detector
             await comm.message_user(message, _("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing it's job!", language))
             scores.addToStat(channel, author, "shoots_infrared_detector", 1)
             return
