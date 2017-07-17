@@ -578,7 +578,7 @@ class Exp:
         !shop 8"""
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        if scores.getStat(message.channel, message.author, "detecteurInfra") < int(time.time()):
+        if scores.getStat(message.channel, message.author, "detecteurInfra") < int(time.time()) or scores.getStat(message.channel, message.author, "detecteur_infra_shots_left") <= 0:
             scores.setStat(message.channel, message.author, "detecteurInfra", time.time() + DAY)
             scores.setStat(message.channel, message.author, "detecteur_infra_shots_left", 6)
             scores.addToStat(message.channel, message.author, "exp", -15)
