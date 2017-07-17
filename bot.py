@@ -216,21 +216,23 @@ async def mainloop():
                     thishour = int(seconds_left / HOUR)
                     # Bon, donc comptons le nombre d'heures / de secondes en tout ou les canards dorment
                     if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
-                        sdseconds = sdstop - sdstart * HOUR
+                        if not thishour > sdstop:
+                            sdseconds = sdstop - sdstart * HOUR
                         if sdstart <= thishour < sdstop:
                             currently_sleeping = True
                     else:  # 00:00 |====--------------======| 23:59
-                        sdseconds = (24 - sdstart) * HOUR + sdstop * HOUR
+                        sdseconds = sdstop * HOUR  # Non, on ne compte pas les autres secondes, car elles seront passées
                         if thishour > sdstart or thishour < sdstop:
                             currently_sleeping = True
                 else:
                     sdseconds = 0
 
                 if not currently_sleeping:
-                    seconds_left -= sdseconds
+                    sseconds_left = seconds_left - sdseconds  # Don't change seconds_left, taht
+
 
                     try:
-                        if random.randrange(0, seconds_left) < commons.ducks_planned[channel]:
+                        if random.randrange(0, sseconds_left) < commons.ducks_planned[channel]:
                             commons.ducks_planned[channel] -= 1
                             duck = {
                                 "channel": channel,
