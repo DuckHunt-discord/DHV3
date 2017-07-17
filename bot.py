@@ -184,10 +184,10 @@ async def mainloop():
         planday = 0
         last_iter = int(time.time())
         while not bot.is_closed:
-            now = int(time.time())
+            now = int(last_iter + 1)
             thisDay = now - (now % 86400)
             seconds_left = int(86400 - (now - thisDay))
-            if int((int(now)) / 86400) != planday:
+            if int(now / 86400) != planday:
                 # database.giveBack(logger)
                 planday = int(int(now) / 86400)
                 await planifie()
