@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-16 19:36+0000\n"
+"POT-Creation-Date: 2017-07-17 13:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.4.0\n"
 
-#: bot.py:60
+#: bot.py:63
 msgid ":x: This command cannot be used in private messages."
 msgstr ""
 
-#: bot.py:62
+#: bot.py:65
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ""
 
-#: bot.py:71
+#: bot.py:74
 msgid "Send error report ? "
 msgstr ""
 
-#: bot.py:73
+#: bot.py:76
 msgid ""
 "Sadly, I need `add_reactions` and `create_instant_invite` permissions to "
 "be able to send an error report."
 msgstr ""
 
-#: bot.py:75
+#: bot.py:78
 msgid ""
 ":x: An error ({error}) happened in {command}, here is the traceback : ```"
 "\n"
@@ -44,38 +44,38 @@ msgid ""
 "{error_report}"
 msgstr ""
 
-#: bot.py:93
+#: bot.py:96
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ""
 
-#: bot.py:97
+#: bot.py:100
 msgid ":anger_right: Sending error report..."
 msgstr ""
 
-#: bot.py:99
+#: bot.py:102
 msgid ":hammer: {date} :hammer:"
 msgstr ""
 
-#: bot.py:100
+#: bot.py:103
 msgid ""
 "{cause}\n"
 "\n"
 "{tb}"
 msgstr ""
 
-#: bot.py:103
+#: bot.py:106
 msgid ":ok: Error message sent, thanks :)"
 msgstr ""
 
-#: bot.py:105
+#: bot.py:108
 msgid "OK, I won't send an error report"
 msgstr ""
 
-#: bot.py:108
+#: bot.py:111
 msgid ":x: Missing a required argument. "
 msgstr ""
 
-#: bot.py:110
+#: bot.py:113
 msgid ":x: Bad argument provided. "
 msgstr ""
 
@@ -1062,379 +1062,379 @@ msgstr ""
 msgid ":x: You can't use this command, you are not an admin on this server!"
 msgstr ""
 
-#: cogs/utils/commons.py:242
+#: cogs/utils/commons.py:254
 msgid "public danger"
 msgstr ""
 
-#: cogs/utils/commons.py:250
+#: cogs/utils/commons.py:262
 msgid "tourist"
 msgstr ""
 
-#: cogs/utils/commons.py:258
+#: cogs/utils/commons.py:270
 msgid "noob"
 msgstr ""
 
-#: cogs/utils/commons.py:266
+#: cogs/utils/commons.py:278
 msgid "trainee"
 msgstr ""
 
-#: cogs/utils/commons.py:274
+#: cogs/utils/commons.py:286
 msgid "duck misser"
 msgstr ""
 
-#: cogs/utils/commons.py:282
+#: cogs/utils/commons.py:294
 msgid "member of the Comitee Against Ducks"
 msgstr ""
 
-#: cogs/utils/commons.py:290
+#: cogs/utils/commons.py:302
 msgid "duck hater"
 msgstr ""
 
-#: cogs/utils/commons.py:298
+#: cogs/utils/commons.py:310
 msgid "duck pest"
 msgstr ""
 
-#: cogs/utils/commons.py:306
+#: cogs/utils/commons.py:318
 msgid "duck hassler"
 msgstr ""
 
-#: cogs/utils/commons.py:314
+#: cogs/utils/commons.py:326
 msgid "duck plucker"
 msgstr ""
 
-#: cogs/utils/commons.py:322
+#: cogs/utils/commons.py:334
 msgid "hunter"
 msgstr ""
 
-#: cogs/utils/commons.py:330
+#: cogs/utils/commons.py:342
 msgid "inside out duck turner"
 msgstr ""
 
-#: cogs/utils/commons.py:338
+#: cogs/utils/commons.py:350
 msgid "duck clobber"
 msgstr ""
 
-#: cogs/utils/commons.py:346
+#: cogs/utils/commons.py:358
 msgid "duck chewer"
 msgstr ""
 
-#: cogs/utils/commons.py:354
+#: cogs/utils/commons.py:366
 msgid "duck eater"
 msgstr ""
 
-#: cogs/utils/commons.py:362
+#: cogs/utils/commons.py:374
 msgid "duck flattener"
 msgstr ""
 
-#: cogs/utils/commons.py:370
+#: cogs/utils/commons.py:382
 msgid "duck disassembler"
 msgstr ""
 
-#: cogs/utils/commons.py:378
+#: cogs/utils/commons.py:390
 msgid "duck demolisher"
 msgstr ""
 
-#: cogs/utils/commons.py:386
+#: cogs/utils/commons.py:398
 msgid "duck killer"
 msgstr ""
 
-#: cogs/utils/commons.py:394
+#: cogs/utils/commons.py:406
 msgid "duck skinner"
 msgstr ""
 
-#: cogs/utils/commons.py:402
+#: cogs/utils/commons.py:414
 msgid "predator"
 msgstr ""
 
-#: cogs/utils/commons.py:410
+#: cogs/utils/commons.py:422
 msgid "duck chopper"
 msgstr ""
 
-#: cogs/utils/commons.py:418
+#: cogs/utils/commons.py:430
 msgid "duck decorticator"
 msgstr ""
 
-#: cogs/utils/commons.py:426
+#: cogs/utils/commons.py:438
 msgid "duck fragger"
 msgstr ""
 
-#: cogs/utils/commons.py:434
+#: cogs/utils/commons.py:446
 msgid "duck shatterer"
 msgstr ""
 
-#: cogs/utils/commons.py:442
+#: cogs/utils/commons.py:454
 msgid "duck smasher"
 msgstr ""
 
-#: cogs/utils/commons.py:450
+#: cogs/utils/commons.py:462
 msgid "duck breaker"
 msgstr ""
 
-#: cogs/utils/commons.py:458
+#: cogs/utils/commons.py:470
 msgid "duck wrecker"
 msgstr ""
 
-#: cogs/utils/commons.py:466
+#: cogs/utils/commons.py:478
 msgid "duck impaler"
 msgstr ""
 
-#: cogs/utils/commons.py:474
+#: cogs/utils/commons.py:486
 msgid "duck eviscerator"
 msgstr ""
 
-#: cogs/utils/commons.py:482
+#: cogs/utils/commons.py:494
 msgid "ducks terror"
 msgstr ""
 
-#: cogs/utils/commons.py:490
+#: cogs/utils/commons.py:502
 msgid "duck exploder"
 msgstr ""
 
-#: cogs/utils/commons.py:498
+#: cogs/utils/commons.py:510
 msgid "duck destructor"
 msgstr ""
 
-#: cogs/utils/commons.py:506
+#: cogs/utils/commons.py:518
 msgid "duck blaster"
 msgstr ""
 
-#: cogs/utils/commons.py:514
+#: cogs/utils/commons.py:526
 msgid "duck pulverizer"
 msgstr ""
 
-#: cogs/utils/commons.py:522
+#: cogs/utils/commons.py:534
 msgid "duck disintegrator"
 msgstr ""
 
-#: cogs/utils/commons.py:530
+#: cogs/utils/commons.py:542
 msgid "duck atomizer"
 msgstr ""
 
-#: cogs/utils/commons.py:538
+#: cogs/utils/commons.py:550
 msgid "duck annihilator"
 msgstr ""
 
-#: cogs/utils/commons.py:546
+#: cogs/utils/commons.py:558
 msgid "serial duck killer"
 msgstr ""
 
-#: cogs/utils/commons.py:554
+#: cogs/utils/commons.py:566
 msgid "duck genocider"
 msgstr ""
 
-#: cogs/utils/commons.py:562
+#: cogs/utils/commons.py:574
 msgid "unemployed due to extinction of the duck specie"
 msgstr ""
 
-#: cogs/utils/commons.py:570
+#: cogs/utils/commons.py:582
 msgid "duck toaster"
 msgstr ""
 
-#: cogs/utils/commons.py:578
+#: cogs/utils/commons.py:590
 msgid "old noob"
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "*cries*"
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "Hello world"
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "How are you today?"
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "Please don't kill me..."
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "Me too, I love you !"
 msgstr ""
 
-#: cogs/utils/commons.py:593
+#: cogs/utils/commons.py:605
 msgid "Don't shoot me ! I'm a fake duck !"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:595
+#: cogs/utils/commons.py:607
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a stuffed duck."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a rubber ducky."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a vibrating duck."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a pile of feathers."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a chewed chewing gum."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an old shoe."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a spring thingy."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a cow dung."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a dog dirt."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an expired hunting license."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a cartridge."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a cigarette butt."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a used condom."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a broken sight."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a broken infrared detector."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a bent silencer."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an empty box of AP ammo."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an empty box of explosive ammo."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a four-leaf clover with only 3 left."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a broken decoy."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a broken mirror."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a rusty mechanical duck."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a pair of sunglasses without glasses."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "Donald's beret."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a half-melted peppermint."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a box of Abraxo cleaner."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "a gun with banana peeled barrel."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an old hunting knife."
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr ""
 
-#: cogs/utils/commons.py:597
+#: cogs/utils/commons.py:609
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "bushes."
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr ""
 
-#: cogs/utils/commons.py:598
+#: cogs/utils/commons.py:610
 msgid "a fish."
 msgstr ""
 
