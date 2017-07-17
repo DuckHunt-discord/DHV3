@@ -578,6 +578,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, message.author, "detecteurInfra") < int(time.time()):
             scores.setStat(message.channel, message.author, "detecteurInfra", time.time() + DAY)
+            scores.setStat(message.channel, message.author, "detecteur_infra_shots_left", 6)
             scores.addToStat(message.channel, message.author, "exp", -15)
             await comm.message_user(message, _(":money_with_wings: You add an infrared detector to your weapon, that will prevent any waste of ammo for a day. Cost : 15 exp points.", language))
 
