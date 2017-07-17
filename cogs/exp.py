@@ -457,6 +457,8 @@ class Exp:
         await shoot.Shoot(self.bot).giveBackIfNeeded(ctx.message)
         if not ctx.invoked_subcommand:
             await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`", language))
+        else:
+            await comm.message_user(ctx.message, _("You *now* have a total of {exp} exp points.", language).format(exp=scores.getStat(ctx.message.channel, ctx.message.author, "exp")))
 
     @shop.command(pass_context=True)
     async def list(self, ctx):
