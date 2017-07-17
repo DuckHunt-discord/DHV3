@@ -55,9 +55,9 @@ class Shoot:
         language = prefs.getPref(message.server, "language")
         await self.giveBackIfNeeded(message)
 
-        if scores.getStat(channel, author, "mouille", default=0) > int(time.time()):  # Water
+        if scores.getStat(channel, author, "mouille") > int(time.time()):  # Water
             await comm.message_user(message, _("You are not dry, you cant go hunting ! Wait {temps_restant} minutes. ", language).format(**{
-                "temps_restant": int((scores.getStat(channel, author, "mouille", default=0) - int(time.time())) / 60)
+                "temps_restant": int((scores.getStat(channel, author, "mouille") - int(time.time())) / 60)
             }))
             scores.addToStat(channel, author, "shoots_tried_while_wet", 1)
             return
