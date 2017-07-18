@@ -1,3 +1,4 @@
+filter_secrets: false
 env:
   global:
   - GIT_EMAIL: jovart.arthur@gmail.com
