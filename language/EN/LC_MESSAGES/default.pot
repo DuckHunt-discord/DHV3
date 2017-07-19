@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:06+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -400,10 +400,10 @@ msgstr ""
 msgid "Effect: wet"
 msgstr ""
 
-#: cogs/exp.py:255
+#: cogs/exp.py:255 cogs/exp.py:409 cogs/meta.py:204 cogs/utils/scores.py:118
 msgid ""
-":warning: Error sending embed, check if the bot have the permission "
-"embed_links and try again!"
+":warning: There was an error while sending the embed, please check if the"
+" bot has the `embed_links` permission and try again!"
 msgstr ""
 
 #: cogs/exp.py:319
@@ -450,26 +450,14 @@ msgstr ""
 msgid "Number of ducks killed"
 msgstr ""
 
-#: cogs/exp.py:409 cogs/meta.py:204 cogs/utils/scores.py:118
-msgid ""
-":warning: There was an error while sending the embed, please check if the"
-" bot has the `embed_links` permission and try again!"
-msgstr ""
-
 #: cogs/exp.py:414
 msgid "There's nothing more..."
 msgstr ""
 
-#: cogs/exp.py:427 cogs/exp.py:435
+#: cogs/exp.py:427 cogs/exp.py:435 cogs/exp.py:443
 msgid ""
 "I don't have the `manage_messages` permission, I can't remove reactions. "
 "Please tell an admin. ;)"
-msgstr ""
-
-#: cogs/exp.py:443
-msgid ""
-"I don't have the `manage_messages` permissions, I can't remove reactions."
-" Please tell an admin. ;)"
 msgstr ""
 
 #: cogs/exp.py:459
@@ -800,14 +788,14 @@ msgid ""
 "Anyway I'm up and running!"
 msgstr ""
 
-#: cogs/meta.py:217
+#: cogs/meta.py:216
 msgid ""
 "\n"
 "\n"
 "`This message took {ms}ms to send.`"
 msgstr ""
 
-#: cogs/meta.py:225
+#: cogs/meta.py:224
 msgid "Check out our new website! http://api-d.com/command-list.html"
 msgstr ""
 
