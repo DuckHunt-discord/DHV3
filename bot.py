@@ -197,6 +197,7 @@ async def mainloop():
                 logger.debug("Current ducks: {canards}".format(**{
                     "canards": len(commons.ducks_spawned)
                 }))
+            thishour = int((now % DAY) / HOUR)
             for channel in list(commons.ducks_planned.keys()):
                 # Ici, on est au momement ou la logique s'opere:
                 # Si les canards ne dorment jamais, faire comme avant, c'est à dire
@@ -213,7 +214,7 @@ async def mainloop():
                 currently_sleeping = False
 
                 if sdstart != sdstop:  # Dans ce cas, les canards dorment peut-etre!
-                    thishour = int((now % DAY) / HOUR)
+
                     # logger.debug("This hour is {v} UTC".format(v=thishour))
                     # Bon, donc comptons le nombre d'heures / de secondes en tout ou les canards dorment
                     if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
@@ -224,7 +225,7 @@ async def mainloop():
                         if sdstart <= thishour < sdstop:
                             currently_sleeping = True
                     else:  # 00:00 |====--------------======| 23:59
-                        sdseconds = sdstop * HOUR  # Non, on ne compte pas les autres secondes, car elles seront passées
+                        sdseconds = (24 - sdstart) * HOUR  # Non, on ne compte pas les autres secondes, car elles seront passées
                         if thishour > sdstart or thishour < sdstop:
                             currently_sleeping = True
                 else:
@@ -233,7 +234,7 @@ async def mainloop():
                 if not currently_sleeping:
                     sseconds_left = seconds_left - sdseconds  # Don't change seconds_left, it's used for others channels
                     if sseconds_left <= 0:
-                        logger.warning("Huh, sseconds_left est à {sseconds_left}... C'est problématique".format(sseconds_left=sseconds_left))
+                        logger.warning("Huh, sseconds_left est à {sseconds_left}... C'est problématique.\nsdstart={sdstart}, sdstop={sdstop}, thishour={thishour}, sdseconds={sdseconds}, seconds_left={seconds_left}".format(sseconds_left=sseconds_left, sdstart=sdstart, sdstop=sdstop, thishour=thishour, sdseconds=sdseconds, seconds_left=seconds_left))
                         sseconds_left = 1
 
 

@@ -211,9 +211,8 @@ class Meta:
         ping_msg = await comm.message_user(ctx.message, _("BANG OR BANG, what's the best? :p\nAnyway I'm up and running!", language))
         new_time = time.time()  # Just fucking imprécis cela dit, a cause du await...
 
-
         send_delay = int(round((new_time * 1000) - (current_time * 1000)))
-        if send_delay > 0: # Si l'OS supporte la précision à la milliseconde
+        if send_delay > 0:  # Si l'OS supporte la précision à la milliseconde
             await self.bot.edit_message(ping_msg, ping_msg.content + _("\n\n`This message took {ms}ms to send.`", language).format(ms=send_delay))
 
     @commands.command(pass_context=True)
