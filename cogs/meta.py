@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-import time
 import datetime
+import os
 import re
 import sys
+import time
 
 import discord
-import os
 import psutil
 from discord.ext import commands
 
@@ -207,8 +207,10 @@ class Meta:
     async def ping(self, ctx):
         language = getPref(ctx.message.server, "language")
         current_time = time.time()
+        # TODO : ensure_soon ?
         ping_msg = await comm.message_user(ctx.message, _("BANG OR BANG, what's the best ? :p\nAnyway I'm up and running !", language))
-        new_time = time.time()
+        new_time = time.time()  # Just fucking imprécis cela dit, a cause du await...
+
 
         send_delay = int(round((new_time * 1000) - (current_time * 1000)))
         if send_delay > 0: # Si l'OS supporte la précision à la milliseconde
