@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-17 15:38+0000\n"
+"POT-Creation-Date: 2017-07-19 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -402,7 +402,7 @@ msgstr ""
 msgid "Effect: wet"
 msgstr ""
 
-#: cogs/exp.py:255 cogs/exp.py:409 cogs/meta.py:203 cogs/utils/scores.py:118
+#: cogs/exp.py:255 cogs/exp.py:409 cogs/meta.py:204 cogs/utils/scores.py:118
 msgid ""
 ":warning: Error sending embed, check if the bot have the permission "
 "embed_links and try again !"
@@ -678,111 +678,120 @@ msgstr ""
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
-#: cogs/meta.py:103
+#: cogs/meta.py:104
 msgid "Uptime: **{}**"
 msgstr ""
 
-#: cogs/meta.py:120
+#: cogs/meta.py:121
 msgid "Usage statistics of duckhunt"
 msgstr ""
 
-#: cogs/meta.py:175
+#: cogs/meta.py:176
 msgid "Number of activated channels"
 msgstr ""
 
-#: cogs/meta.py:176
+#: cogs/meta.py:177
 msgid "Number of servers"
 msgstr ""
 
-#: cogs/meta.py:177
+#: cogs/meta.py:178
 msgid "Number of french servers"
 msgstr ""
 
-#: cogs/meta.py:178
+#: cogs/meta.py:179
 msgid "Number of english servers"
 msgstr ""
 
-#: cogs/meta.py:179
+#: cogs/meta.py:180
 msgid "Number of servers with another language setup"
 msgstr ""
 
-#: cogs/meta.py:180
+#: cogs/meta.py:181
 msgid "Number of channels"
 msgstr ""
 
-#: cogs/meta.py:181
+#: cogs/meta.py:182
 msgid "Number of users"
 msgstr ""
 
-#: cogs/meta.py:182
+#: cogs/meta.py:183
 msgid "Number of ducks"
 msgstr ""
 
-#: cogs/meta.py:183
+#: cogs/meta.py:184
 msgid "Number of ducks per minute"
 msgstr ""
 
-#: cogs/meta.py:184
+#: cogs/meta.py:185
 msgid "Number of messages recived"
 msgstr ""
 
-#: cogs/meta.py:185
+#: cogs/meta.py:186
 msgid "Number of commands recived"
 msgstr ""
 
-#: cogs/meta.py:186
+#: cogs/meta.py:187
 msgid "Number of commands per minute"
 msgstr ""
 
-#: cogs/meta.py:187
+#: cogs/meta.py:188
 msgid "Number of messages per minute"
 msgstr ""
 
-#: cogs/meta.py:188
+#: cogs/meta.py:189
 msgid "Uptime in seconds"
 msgstr ""
 
-#: cogs/meta.py:189
+#: cogs/meta.py:190
 msgid "Uptime in hours"
 msgstr ""
 
-#: cogs/meta.py:190
+#: cogs/meta.py:191
 msgid "Uptime in days"
 msgstr ""
 
-#: cogs/meta.py:191
+#: cogs/meta.py:192
 msgid "Servers with send exp activated"
 msgstr ""
 
-#: cogs/meta.py:192
+#: cogs/meta.py:193
 msgid "Servers with more than 100 ducks per day"
 msgstr ""
 
-#: cogs/meta.py:193
+#: cogs/meta.py:194
 msgid "Servers with more than 50 ducks per day"
 msgstr ""
 
-#: cogs/meta.py:194
+#: cogs/meta.py:195
 msgid "Servers with more than 24 ducks per day"
 msgstr ""
 
-#: cogs/meta.py:195
+#: cogs/meta.py:196
 msgid "Servers with less than 24 ducks per day"
 msgstr ""
 
-#: cogs/meta.py:196
+#: cogs/meta.py:197
 msgid "Memory used (MB)"
 msgstr ""
 
-#: cogs/meta.py:197
+#: cogs/meta.py:198
 msgid "Python version : "
 msgstr ""
 
-#: cogs/meta.py:207
-msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
+#: cogs/meta.py:210
+msgid ""
+"BANG OR BANG, what's the best ? :p\n"
+"Anyway I'm up and running !"
 msgstr ""
 
 #: cogs/meta.py:215
+msgid ""
+"\n"
+"\n"
+"`This message took {ms}ms to send.`"
+msgstr ""
+
+#: cogs/meta.py:223
 msgid "Check out our new website ! http://api-d.com/command-list.html"
 msgstr ""
 
