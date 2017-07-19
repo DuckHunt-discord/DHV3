@@ -623,6 +623,7 @@ def init():
     steam_handler.setLevel(logging.DEBUG)
     steam_handler.setFormatter(formatter)
     logger.addHandler(steam_handler)
+    gray = False
     if gray:
         gray_handler = graypy.GELFHandler('logs.api-d.com', 12201)
         logger.addHandler(gray_handler)

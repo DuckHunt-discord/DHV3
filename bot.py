@@ -185,11 +185,11 @@ async def mainloop():
         last_iter = int(time.time())
         while not bot.is_closed:
             now = int(last_iter + 1)
-            thisDay = now - (now % 86400)
-            seconds_left = int(86400 - (now - thisDay))
-            if int(now / 86400) != planday:
+            thisDay = now - (now % DAY)
+            seconds_left = int(DAY - (now - thisDay))
+            if int((now - 1) / DAY) != planday:
                 # database.giveBack(logger)
-                planday = int(int(now) / 86400)
+                planday = int(int(now - 1) / DAY)
                 await planifie()
                 last_iter = int(time.time())
 
@@ -213,11 +213,12 @@ async def mainloop():
                 currently_sleeping = False
 
                 if sdstart != sdstop:  # Dans ce cas, les canards dorment peut-etre!
-                    thishour = int(seconds_left / HOUR)
+                    thishour = int((now % DAY) / HOUR)
+                    # logger.debug("This hour is {v} UTC".format(v=thishour))
                     # Bon, donc comptons le nombre d'heures / de secondes en tout ou les canards dorment
                     if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
-                        if not thishour > sdstop:
-                            sdseconds = sdstop - sdstart * HOUR
+                        if thishour <= sdstop:
+                            sdseconds = (sdstop - sdstart) * HOUR
                         else:
                             sdseconds = 0
                         if sdstart <= thishour < sdstop:
@@ -231,6 +232,9 @@ async def mainloop():
 
                 if not currently_sleeping:
                     sseconds_left = seconds_left - sdseconds  # Don't change seconds_left, it's used for others channels
+                    if sseconds_left <= 0:
+                        logger.warning("Huh, sseconds_left est à {sseconds_left}... C'est problématique".format(sseconds_left=sseconds_left))
+                        sseconds_left = 1
 
 
                     try:
