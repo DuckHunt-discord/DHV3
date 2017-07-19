@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 14:00+0000\n"
+"POT-Creation-Date: 2017-07-19 14:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -778,20 +778,20 @@ msgstr ""
 msgid "Python version : "
 msgstr ""
 
-#: cogs/meta.py:210
+#: cogs/meta.py:211
 msgid ""
 "BANG OR BANG, what's the best ? :p\n"
 "Anyway I'm up and running !"
 msgstr ""
 
-#: cogs/meta.py:215
+#: cogs/meta.py:217
 msgid ""
 "\n"
 "\n"
 "`This message took {ms}ms to send.`"
 msgstr ""
 
-#: cogs/meta.py:223
+#: cogs/meta.py:225
 msgid "Check out our new website ! http://api-d.com/command-list.html"
 msgstr ""
 
