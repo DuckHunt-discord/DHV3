@@ -115,7 +115,7 @@ def addToStat(channel, player, stat, value, announce=True):
             commons.bot.loop.create_task(commons.bot.send_message(channel, embed=embed))
         except:
             commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
-            commons.bot.loop.create_task(commons.bot.send_message(channel, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language)))
+            commons.bot.loop.create_task(commons.bot.send_message(channel, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language)))
 
 
 def setStat(channel, player, stat, value):

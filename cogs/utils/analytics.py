@@ -28,21 +28,21 @@ async def update_servers():
     x = await get_date()
     y = len(commons.bot.servers)
     await csv_write("servers.csv", x, y)
-    commons.logger.debug("Updating server analytics")
+    commons.logger.debug("Updated servers analytics.")
 
 
 async def update_channels():
     x = await get_date()
     y = len(commons.ducks_planned)
     await csv_write("channels.csv", x, y)
-    commons.logger.debug("Updating channels analytics")
+    commons.logger.debug("Updated channels analytics.")
 
 
 async def update_memory():
     x = await get_date()
     y = round(psutil.Process(os.getpid()).memory_info()[0] / 2. ** 30 * 1000, 5)
     await csv_write("memory.csv", x, y)
-    commons.logger.debug("Updating memory analytics")
+    commons.logger.debug("Updated memory analytics.")
 
 
 async def update_users():
@@ -53,14 +53,14 @@ async def update_users():
             if not member.bot:
                 y += 1
     await csv_write("users.csv", x, y)
-    commons.logger.debug("Updating users analytics")
+    commons.logger.debug("Updated users analytics.")
 
 
 async def update_ducks():
     x = await get_date()
     y = len(commons.ducks_spawned)
     await csv_write("ducks.csv", x, y)
-    commons.logger.debug("Updating ducks analytics")
+    commons.logger.debug("Updated ducks analytics.")
 
 async def analytics_loop():
     try:

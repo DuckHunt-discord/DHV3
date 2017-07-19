@@ -16,7 +16,7 @@ from discord.ext import commands
 from cogs.utils import commons
 
 if os.geteuid() == 0:
-    print("DON'T RUN DUCKHUNT AS ROOT ! It create an unnessecary security risk.")
+    print("DON'T RUN DUCKHUNT AS ROOT! It creates an unnecessary security risk.")
     sys.exit(1)
 
 try:
@@ -71,11 +71,11 @@ async def on_command_error(error, ctx):
         myperms = ctx.message.channel.permissions_for(ctx.message.server.me)
         can_send = myperms.add_reactions and myperms.create_instant_invite
         if can_send:
-            error_report = _("Send error report ? ", language)
+            error_report = _("Send an error report?", language)
         else:
-            error_report = _("Sadly, I need `add_reactions` and `create_instant_invite` permissions to be able to send an error report.", language)
+            error_report = _("Sadly, I need the `add_reactions` and `create_instant_invite` permissions to be able to send an error report.", language)
 
-        msg = await comm.message_user(ctx.message, _(":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```\n{error_report}", language).format(**{
+        msg = await comm.message_user(ctx.message, _(":x: An error (`{error}`) happened while executing `{command}`, here is the traceback: ```\n{tb}\n```\n{error_report}", language).format(**{
             "command"     : ctx.command.qualified_name,
             "error"       : error.original.__class__.__name__,
             "tb"          : "\n".join(traceback.format_tb(error.original.__traceback__, 4)),
@@ -103,16 +103,16 @@ async def on_command_error(error, ctx):
                     await bot.send_message(support_channel, await comm.paste(_("{cause}\n\n{tb}").format(cause=error.original.__class__.__name__,
                                                                                                          tb="\n".join(traceback.format_tb(error.original.__traceback__))), "py"))
                     await bot.send_message(support_channel, invite)
-                    await bot.edit_message(msg, _(":ok: Error message sent, thanks :)", language))
+                    await bot.edit_message(msg, _(":ok: Error report sent, thanks. :)", language))
                     return
-            await comm.message_user(ctx.message, _("OK, I won't send an error report", language))
+            await comm.message_user(ctx.message, _("OK, I won't send an error report.", language))
 
     elif isinstance(error, commands.MissingRequiredArgument):
-        await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, _(":x: Missing a required argument. ", language) + (("Help: \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):
-        await comm.message_user(ctx.message, _(":x: Bad argument provided. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await comm.message_user(ctx.message, _(":x: Bad argument provided. ", language) + (("Help: \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
         # elif isinstance(error, commands.CheckFailure):
-        # await comm.message_user(ctx.message, _(":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. ", language) + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        # await comm.message_user(ctx.message, _(":x: You are not an admin/owner, you don't have enough exp to use this command, or you are banned from the channel, so you can't use this command. ", language) + (("Help: \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 @bot.event
@@ -138,9 +138,9 @@ async def on_command(command, ctx):
         try:
             await bot.delete_message(ctx.message)
         except discord.Forbidden:
-            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting message: forbidden.")
         except discord.NotFound:
-            await comm.logwithinfos_ctx(ctx, "Error deleting command : not found (normal if a purgemessages was done)")
+            await comm.logwithinfos_ctx(ctx, "Error deleting message: not found (normal if the purgemessages command was used).")
 
 
             # message = ctx.message
@@ -194,7 +194,7 @@ async def mainloop():
                 last_iter = int(time.time())
 
             if int(now) % 60 == 0:
-                logger.debug("Current ducks : {canards}".format(**{
+                logger.debug("Current ducks: {canards}".format(**{
                     "canards": len(commons.ducks_spawned)
                 }))
             for channel in list(commons.ducks_planned.keys()):
@@ -265,12 +265,12 @@ async def mainloop():
                         commons.ducks_spawned.remove(canard)
                         commons.n_ducks_flew += 1
                     except:
-                        logger.warning("Oops, error when removing duck : " + str(canard))
+                        logger.warning("Oops, error when removing duck: " + str(canard))
             now = time.time()
 
             if last_iter + 1 <= now:
                 if last_iter + 1 <= now - 5:
-                    logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed ?".format(s=str(float(float(last_iter + 1) - int(now)))))
+                    logger.warning("Running behing schedule ({s} seconds)... Server overloaded or clock changed?".format(s=str(float(float(last_iter + 1) - int(now)))))
             else:
                 await asyncio.sleep(last_iter + 1 - now)
 
@@ -327,7 +327,6 @@ if __name__ == '__main__':
         logger.warning("Shutdown in progress")
     except:
         logger.exception("Unknown error, restarting")  # No pls no no no
-
     finally:
         # noinspection PyBroadException
         try:

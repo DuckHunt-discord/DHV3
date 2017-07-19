@@ -93,7 +93,7 @@ class Httpcat():
         embed = discord.Embed()
         embed.colour = discord.Colour.dark_gold()
         embed.title = domain
-        embed.description = "Here is the logo you asked for !"
+        embed.description = "Here is the logo you asked for!"
         # embed.url = str(uri.geturl())
         embed.url = "https://" + company_website
         embed.set_image(url="https://logo.clearbit.com/" + domain)

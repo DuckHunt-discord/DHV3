@@ -25,8 +25,8 @@ class Shoot:
         player = message.author
         lastGB = int(scores.getStat(channel, player, "lastGiveback", default=int(time.time())))
         if int(lastGB / 86400) != int(int(time.time()) / 86400):
-            await logwithinfos(channel, player, "GiveBack  > LastGB :" + str(lastGB) + " / 86400 = " + str(int(lastGB / 86400)))
-            await logwithinfos(channel, player, "GiveBack  > Now : " + str(int(time.time())) + " / 86400 = " + str(int(int(time.time()) / 86400)))
+            await logwithinfos(channel, player, "GiveBack  > LastGB:" + str(lastGB) + " / 86400 = " + str(int(lastGB / 86400)))
+            await logwithinfos(channel, player, "GiveBack  > Now: " + str(int(time.time())) + " / 86400 = " + str(int(int(time.time()) / 86400)))
             await logwithinfos(channel, player, "Giveback des armes et chargeurs")
             scores.giveBack(player=player, channel=channel)
             scores.addToStat(channel, player, "givebacks", 1)
@@ -56,19 +56,19 @@ class Shoot:
         await self.giveBackIfNeeded(message)
 
         if scores.getStat(channel, author, "mouille") > int(time.time()):  # Water
-            await comm.message_user(message, _("You are not dry, you cant go hunting ! Wait {temps_restant} minutes. ", language).format(**{
+            await comm.message_user(message, _("Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes.", language).format(**{
                 "temps_restant": int((scores.getStat(channel, author, "mouille") - int(time.time())) / 60)
             }))
             scores.addToStat(channel, author, "shoots_tried_while_wet", 1)
             return
 
         if scores.getStat(channel, author, "confisque", default=False):  # No weapon
-            await comm.message_user(message, _("You don't have a weapon", language))
+            await comm.message_user(message, _("You don't have a weapon.", language))
             scores.addToStat(channel, author, "shoots_without_weapon", 1)
             return
 
         if scores.getStat(channel, author, "enrayee", default=False):  # Jammed
-            await comm.message_user(message, _("Your weapon is jammed, it must be reloaded to unstuck it.", language))
+            await comm.message_user(message, _("Your weapon is jammed, it must be reloaded to unjam it.", language))
             scores.addToStat(channel, author, "shoots_with_jammed_weapon", 1)
             return
 
@@ -98,7 +98,7 @@ class Shoot:
             scores.setStat(channel, author, "sand", False)
 
         if not random.randint(1, 100) < fiabilite and not (scores.getStat(channel, author, "graisse") > int(time.time())):  # Weapon jammed just now
-            await comm.message_user(message, _("Your weapon is jammed, reload to unstuck it.", language))
+            await comm.message_user(message, _("Your weapon just jammed, reload it to unjam it.", language))
             scores.addToStat(channel, author, "shoots_jamming_weapon", 1)
             scores.setStat(channel, author, "enrayee", True)
             return
@@ -112,7 +112,7 @@ class Shoot:
                     break
 
         if not current_duck and scores.getStat(channel, author, "detecteurInfra") > int(time.time()) and scores.getStat(channel, author, "detecteur_infra_shots_left") > 0:  # No ducks but infrared detector
-            await comm.message_user(message, _("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing it's job!", language))
+            await comm.message_user(message, _("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing its job!", language))
             scores.addToStat(channel, author, "shoots_infrared_detector", 1)
             scores.addToStat(channel, author, "detecteur_infra_shots_left", -1)
             return
@@ -121,7 +121,7 @@ class Shoot:
         scores.addToStat(channel, author, "shoots_fired", 1)
 
         if not current_duck:  # No duck
-            await self.sendBangMessage(message, _("Luckily you missed, what were you aiming at exactly? There isn't any duck in here... [missed : -1 xp] [wild shot: -1 xp]", language))
+            await self.sendBangMessage(message, _("Luckily you missed, but what were you aiming at exactly? There isn't any duck in here... [missed: -1 xp] [wild shot: -1 xp]", language))
             scores.addToStat(channel, author, "exp", -2)
             scores.addToStat(channel, author, "shoots_no_duck", 1)
             return
@@ -131,10 +131,10 @@ class Shoot:
                 commons.ducks_spawned.remove(current_duck)
                 commons.n_ducks_flew += 1
                 scores.addToStat(channel, author, "exp", -1)
-                await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : -1 xp]", language))
+                await self.sendBangMessage(message, _("**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 xp]", language))
                 scores.addToStat(channel, author, "shoots_frightened", 1)
             except ValueError:
-                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
+                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck! [missed: -1 xp]", language))
                 scores.addToStat(channel, author, "shoots_missed", 1)
             return
 
@@ -169,17 +169,17 @@ class Shoot:
                     victim = message.server.get_member(str(victim['id_']))
 
                 if victim is not author:
-                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... And shot {player} ! [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language).format(**{
+                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting accident: -2 xp] [weapon confiscated]", language).format(**{
                         "player": victim.mention if prefs.getPref(message.server, "killed_mentions") else victim.name
                     }))
                 else:
-                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a little before shooting the next time, maybe ? [missed : -1 xp] [hunting accident : -2 xp] [weapon confiscated]", language))
+                    await self.sendBangMessage(message, _("**BANG**\tYou missed the duck... and shot yourself! Maybe you should turn your weapon a little before shooting the next time? [missed: -1 xp] [hunting accident: -2 xp] [weapon confiscated]", language))
                     scores.addToStat(channel, author, "self_killing_shoots", 1)
 
                 if scores.getStat(channel, victim, "life_insurance") > int(time.time()):
                     exp = int(scores.getPlayerLevel(channel, author)["niveau"] / 2)
                     scores.addToStat(channel, victim, "exp", exp)
-                    await self.bot.send_message(channel, str(victim.mention) + _(" > You won {exp} with your life insurance", language).format(**{
+                    await self.bot.send_message(channel, str(victim.mention) + _(" > You won {exp} with your life insurance !", language).format(**{
                         "exp": exp
                     }))
                     scores.addToStat(channel, victim, "life_insurence_rewards", 1)
@@ -187,7 +187,7 @@ class Shoot:
             else:  # Missed and none was shot
                 scores.addToStat(channel, author, "exp", -1)
                 scores.addToStat(channel, author, "shoots_missed", 1)
-                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck ! [missed : -1 xp]", language))
+                await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck! [missed: -1 xp]", language))
                 return
 
         if scores.getStat(channel, author, "explosive_ammo") > int(time.time()):
@@ -205,7 +205,7 @@ class Shoot:
                 commons.ducks_spawned.remove(current_duck)
                 commons.n_ducks_killed += 1
             except ValueError:
-                await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first ! [missed : -1 xp]", language))
+                await self.sendBangMessage(message, _("That was close, you almost killed the duck, but the other hunter got it first! [missed: -1 xp]", language))
                 scores.addToStat(channel, author, "exp", -1)
                 scores.addToStat(channel, author, "shoots_missed", 1)
                 scores.addToStat(channel, author, "shoots_almost_killed", 1)
@@ -241,41 +241,41 @@ class Shoot:
 
                 if rand <= 50:
                     scores.addToStat(channel, author, "trashFound", 1)
-                    await comm.message_user(message, _("While searching the bushes around the duck, you found **{inutilitee}**", language).format(**{
-                        "inutilitee": _(random.choice(commons.inutilite), language)
+                    await comm.message_user(message, _("While searching in the bushes around the duck, you found **{inutilite}**.", language).format(**{
+                        "inutilite": _(random.choice(commons.inutilite), language)
                     }))
 
                 elif rand <= 54:
                     scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
                     scores.addToStat(message.channel, message.author, "found_explosive_ammo", 1)
-                    await comm.message_user(message, _("While searching the bushes around the duck, you found **a box of explosive ammo**", language))
+                    await comm.message_user(message, _("While searching in the bushes around the duck, you found **a box of explosive ammo**.", language))
 
                 elif rand <= 60:
                     scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY / 4))
                     scores.addToStat(message.channel, message.author, "found_almost_empty_explosive_ammo", 1)
-                    await comm.message_user(message, _("While searching the bushes around the duck, you found **a almost empty box of explosive ammo**", language))
+                    await comm.message_user(message, _("While searching in the bushes around the duck, you found **an almost empty box of explosive ammo**.", language))
 
                 elif rand <= 63:
                     scores.addToStat(message.channel, message.author, "found_chargers", 1)
 
                     if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
                         scores.addToStat(message.channel, message.author, "chargeurs", 1)
-                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a full charger**", language))
+                        await comm.message_user(message, _("While searching in the bushes around the duck, you found **a full charger**.", language))
                     else:
                         scores.addToStat(message.channel, message.author, "found_chargers_not_taken", 1)
-                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a full charger**. You left it there, cause your backpack is full.", language))
+                        await comm.message_user(message, _("While searching in the bushes around the duck, you found **a full charger**. You left it there, because your backpack is full.", language))
                 elif rand <= 70:
                     scores.addToStat(message.channel, message.author, "found_bullets", 1)
                     if scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]) < scores.getPlayerLevel(message.channel, message.author)["balles"]:
                         scores.addToStat(message.channel, message.author, "balles", 1)
-                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a bullet**", language))
+                        await comm.message_user(message, _("While searching in the bushes around the duck, you found **a bullet**.", language))
 
                     else:  # Shouldn't happen but we never know...
-                        await comm.message_user(message, _("While searching the bushes around the duck, you found **a bullet**. You left it there, cause your have enough of them in your charger.", language))
+                        await comm.message_user(message, _("While searching in the bushes around the duck, you found **a bullet**. You left it there, because you have enough in your charger.", language))
                         scores.addToStat(message.channel, message.author, "found_bullets_not_taken", 1)
 
         else:  # Duck harmed
-            await self.sendBangMessage(message, _(":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]", language).format(**{
+            await self.sendBangMessage(message, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language).format(**{
                 "vie": vieenmoins
             }))
             current_duck["SCvie"] -= vieenmoins
@@ -290,10 +290,10 @@ class Shoot:
         language = prefs.getPref(message.server, "language")
 
         if scores.getStat(message.channel, message.author, "confisque", default=False):
-            await comm.message_user(message, _("Your weapon had been confiscated", language))
+            await comm.message_user(message, _("Your weapon is confiscated.", language))
             return
         if scores.getStat(message.channel, message.author, "enrayee", default=False):
-            await comm.message_user(message, _("You unstuck your weapon.", language))
+            await comm.message_user(message, _("You unjammed your weapon.", language))
             scores.setStat(message.channel, message.author, "enrayee", False)
             # TODO : simplifier
             if scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]) > 0:
@@ -304,15 +304,15 @@ class Shoot:
                 scores.setStat(message.channel, message.author, "balles", scores.getPlayerLevel(message.channel, message.author)["balles"])
                 scores.addToStat(message.channel, message.author, "chargeurs", -1)
                 scores.addToStat(message.channel, message.author, "reloads", 1)
-                greet = _("You reload your weapon", language)
+                greet = _("You reloaded your weapon.", language)
             else:
-                greet = _("You dont have any ammo left !", language)
+                greet = _("You don't have any ammo left!", language)
                 scores.addToStat(message.channel, message.author, "reloads_without_chargers", 1)
         else:
-            greet = _("You don't need to reload your weapon", language)
+            greet = _("You don't need to reload your weapon.", language)
             scores.addToStat(message.channel, message.author, "unneeded_reloads", 1)
 
-        await comm.message_user(message, _("{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : {chargeurs_actuels}/{chargeurs_max}", language).format(**{
+        await comm.message_user(message, _("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Chargers left: {chargeurs_actuels}/{chargeurs_max}", language).format(**{
             "greet"            : greet,
             "balles_actuelles" : scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]),
             "balles_max"       : scores.getPlayerLevel(message.channel, message.author)["balles"],

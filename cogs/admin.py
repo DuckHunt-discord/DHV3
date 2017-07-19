@@ -203,13 +203,13 @@ class Admin:
         guess = await self.bot.wait_for_message(timeout=10.0, author=ctx.message.author, check=is_random_str)
 
         if guess is None:
-            await comm.message_user(ctx.message, _(":x: Operation canceled, you took too long to answer.", language).format(random_str=random_str))
+            await comm.message_user(ctx.message, _(":x: Operation cancelled, you took too long to answer.", language).format(random_str=random_str))
 
         else:
             failed = 0
             for server in to_clean:
                 try:
-                    await self.bot.send_message(server, ":warning: I'll now leave the server, as you have not configured me... Join https://discord.gg/2BksEkV the duckhunt server for help about the setup and actions you have to take to bring me back, or check https://api-d.com for more help.")
+                    await self.bot.send_message(server, ":warning: I'm leaving the server, as you haven't configured me.\nJoin the DuckHunt server (https://discord.gg/2BksEkV) to get help with the setup and what you have to do to bring me back (and get me to stay), or check out https://api-d.com.")
                 except:
                     failed += 1
                     pass
@@ -227,16 +227,16 @@ class Admin:
     async def broadcast(self, ctx, *, bc: str):
         """!broadcast [message]"""
         language = prefs.getPref(ctx.message.server, "language")
-        await comm.message_user(ctx.message, _("Starting the broadcast", language))
-        await comm.logwithinfos_ctx(ctx, "Broadcast started")
+        await comm.message_user(ctx.message, _("Starting the broadcast...", language))
+        await comm.logwithinfos_ctx(ctx, "Broadcast started.")
         for channel in list(commons.ducks_planned.keys()):
             try:
                 await self.bot.send_message(channel, bc)
             except:
                 await comm.logwithinfos_ctx(ctx, "Error broadcasting to " + str(channel.name))
                 pass
-        await comm.logwithinfos_ctx(ctx, "Broadcast ended")
-        await comm.message_user(ctx.message, _("Broadcast finished", language))
+        await comm.logwithinfos_ctx(ctx, "Broadcast ended.")
+        await comm.message_user(ctx.message, _("Broadcast finished!", language))
 
     @commands.command(pass_context=True)
     @checks.is_owner()

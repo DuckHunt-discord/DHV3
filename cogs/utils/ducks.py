@@ -26,7 +26,7 @@ async def allCanardsGo():
             await logwithinfos(canard["channel"], None, "Force-leaving of duck " + str(canard))
         except:
             await logwithinfos(canard["channel"], None, "Force-leaving of duck FAILED " + str(canard))
-            logger.exception("Here is why : ")
+            logger.exception("Here is why: ")
 
 
 async def planifie(channel_obj: discord.Channel = None):
@@ -44,12 +44,12 @@ async def planifie(channel_obj: discord.Channel = None):
         for server_ in list(servers.keys()):
             server = bot.get_server(str(server_))
             if not server:
-                logger.debug("Non-existant server : " + str(server_))
+                logger.debug("Non-existant server: " + str(server_))
                 servers.pop(server_)
                 scores.delServerPlayers(sid=server_)
 
             elif not "channels" in servers[server.id]:
-                await comm.logwithinfos(server.default_channel, log_str="Server not configured : " + server.id)
+                await comm.logwithinfos(server.default_channel, log_str="Server not configured: " + server.id)
                 try:
                     await bot.send_message(server, "The bot is not configured properly, please check the config or contact Eyesofcreeper#4758 | https://discord.gg/2BksEkV")
                     await comm.logwithinfos(server.default_channel, log_str="Unconfigured message sent...")
@@ -62,13 +62,13 @@ async def planifie(channel_obj: discord.Channel = None):
                     if channel:
                         permissions = channel.permissions_for(server.me)
                         if permissions.read_messages and permissions.send_messages:
-                            # logger.debug("Adding channel : {id} ({ducks_per_day} c/j)".format(**{
+                            # logger.debug("Adding channel: {id} ({ducks_per_day} c/j)".format(**{
                             #    "id"           : channel.id,
                             #    "ducks_per_day": prefs.getPref(server, "ducks_per_day")
                             # }))
                             planification_[channel] = round(prefs.getPref(server, "ducks_per_day") * multiplicator)
                         else:
-                            await comm.logwithinfos(channel, log_str="Error adding channel to planification : no read/write permissions!")
+                            await comm.logwithinfos(channel, log_str="Error adding channel to planification: no read/write permissions!")
                     else:
                         pass
         commons.ducks_planned = planification_  # {"channel":[time objects]}
@@ -80,7 +80,7 @@ async def planifie(channel_obj: discord.Channel = None):
         if permissions.read_messages and permissions.send_messages:
             pass
         else:
-            await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification : no read/write permissions!")
+            await comm.logwithinfos(channel_obj, log_str="Error adding channel to planification: no read/write permissions!")
         commons.ducks_planned[channel_obj] = round(prefs.getPref(channel_obj.server, "ducks_per_day") * multiplicator)
 
 
@@ -124,7 +124,7 @@ async def spawn_duck(duck):
         duck["level"] = 1
         duck["SCvie"] = 1
 
-    await comm.logwithinfos(duck["channel"], None, "New duck : " + str(duck))
+    await comm.logwithinfos(duck["channel"], None, "New duck: " + str(duck))
     duck["time"] = time.time()
     if prefs.getPref(duck["channel"].server, "emoji_ducks"):
         corps = prefs.getPref(duck["channel"].server, "emoji_used") + " < "

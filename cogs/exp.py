@@ -27,7 +27,7 @@ class Get_Stats:
         self.target = target
 
     def __call__(self, stat, default=None):
-        commons.logger.debug("GS called for :" + str(stat) + " with default : " + str(default))
+        commons.logger.debug("GS called for :" + str(stat) + " with default: " + str(default))
         return scores.getStat(self.channel, self.target, stat, default=default)
 
 
@@ -63,7 +63,7 @@ class Exp:
     async def resetbesttime(self, ctx):
         message = ctx.message
         scores.setStat(message.channel, message.author, "best_time", prefs.getPref(message.server, "time_before_ducks_leave"))
-        await comm.message_user(message, _(":ok: Your best time was reset.", prefs.getPref(message.server, "language")))
+        await comm.message_user(message, _(":ok: Your best time has been reset.", prefs.getPref(message.server, "language")))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
@@ -88,7 +88,7 @@ class Exp:
                 return
 
             if amount <= 0:
-                await comm.message_user(message, _(":x: You need to give a positive number for the exp to send", language))
+                await comm.message_user(message, _(":x: The exp amount needs to be positive.", language))
                 await comm.logwithinfos_message(message, "[sendexp] montant invalide")
                 return
 
@@ -101,14 +101,14 @@ class Exp:
                 try:
                     scores.addToStat(message.channel, target, "exp", amount - taxes)
                 except OverflowError:
-                    await comm.message_user(ctx.message, _("Congratulations, you sent / gave more experience than the maximum number I'm able to store.", language))
+                    await comm.message_user(ctx.message, _("Congratulations, you sent more experience than the maximum number I'm able to store.", language))
                     return
-                await comm.message_user(message, _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this transfer) !", language).format(**{
+                await comm.message_user(message, _("You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!", language).format(**{
                     "amount": amount - taxes,
                     "target": target.mention,
                     "taxes" : taxes
                 }))
-                await comm.logwithinfos_message(message, "[sendexp] Exp points sent to {target} : {amount} exp recived, and {taxes} exp of transfer taxes percived ".format(**{
+                await comm.logwithinfos_message(message, "[sendexp] Exp points sent to {target}: {amount} exp recived, and {taxes} exp of transfer taxes percived ".format(**{
                     "amount": amount - taxes,
                     "target": target.mention,
                     "taxes" : taxes
@@ -143,7 +143,7 @@ class Exp:
         current_page = 1
         total_page = 4
 
-        duckstats_message = await self.bot.send_message(send_to, _("Generating duckstats for you, please wait!", language))
+        duckstats_message = await self.bot.send_message(send_to, _("Generating DuckHunt statistics for you, please wait...", language))
         await self.bot.add_reaction(duckstats_message, first_page_emo)
         await self.bot.add_reaction(duckstats_message, prev_emo)
         await self.bot.add_reaction(duckstats_message, next_emo)
@@ -154,7 +154,7 @@ class Exp:
                 embed = discord.Embed(description=_("Page {current}/{max}", language).format(current=current_page, max=total_page))
 
                 if gs("confisque"):
-                    embed.description += _("\nConfiscated weapon !", language)
+                    embed.description += _("\nConfiscated weapon!", language)
 
                 embed.set_author(name=str(target), icon_url=target.avatar_url)
                 embed.set_thumbnail(url=target.avatar_url if target.avatar_url else self.bot.user.avatar_url)
@@ -252,7 +252,7 @@ class Exp:
                     await self.bot.edit_message(duckstats_message, ":duck:", embed=embed)
                 except:
                     commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
-                    await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+                    await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again!", language))
                     return
 
                 changed = False
@@ -335,7 +335,7 @@ class Exp:
 
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
-            await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name} : :cocktail:\n```{table}```", language).format(**{
+            await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name}: :cocktail:\n```{table}```", language).format(**{
                 "channel_name": ctx.message.channel.name,
                 "table"       : await comm.paste(tab, "py") if len(tab) >= 1900 else tab
             }), )
@@ -351,7 +351,7 @@ class Exp:
 
             current_page = 1
 
-            message = await self.bot.send_message(send_to, _("Generating topscores for your channel, please wait!", language))
+            message = await self.bot.send_message(send_to, _("Generating top scores for your channel, please wait!", language))
             await self.bot.add_reaction(message, first_page_emo)
             await self.bot.add_reaction(message, prev_emo)
             await self.bot.add_reaction(message, next_emo)
@@ -406,12 +406,12 @@ class Exp:
                         try:
                             await self.bot.edit_message(message, ":duck:", embed=embed)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+                            await self.bot.send_message(send_to, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language))
 
                         changed = False
                     else:
                         current_page -= 1
-                        await self.bot.edit_message(message, _("There is nothing more...", language))
+                        await self.bot.edit_message(message, _("There's nothing more...", language))
 
                 res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=message, timeout=1200)
 
@@ -424,7 +424,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
                     elif emoji == prev_emo:
                         if current_page > 1:
                             changed = True
@@ -432,7 +432,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
                     elif emoji == first_page_emo:
                         if current_page > 1:
                             changed = True
@@ -440,7 +440,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Please tell an admin. ;)", language))
                 else:
                     reaction = False
                     try:
@@ -456,14 +456,14 @@ class Exp:
 
         await shoot.Shoot(self.bot).giveBackIfNeeded(ctx.message)
         if not ctx.invoked_subcommand:
-            await comm.message_user(ctx.message, _(":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`", language))
+            await comm.message_user(ctx.message, _(":x: Incorrect syntax. Use the command this way: `!shop [list/item number] [argument if applicable]`", language))
         else:
             await comm.message_user(ctx.message, _("You *now* have a total of {exp} exp points.", language).format(exp=scores.getStat(ctx.message.channel, ctx.message.author, "exp")))
 
     @shop.command(pass_context=True)
     async def list(self, ctx):
         language = prefs.getPref(ctx.message.server, "language")
-        await comm.message_user(ctx.message, _("The list of items is available here : http://api-d.com/shop-items.html", language))
+        await comm.message_user(ctx.message, _("The item list is available here: http://api-d.com/shop-items.html", language))
 
     @shop.command(pass_context=True, name="1")
     @checks.have_exp(7)
@@ -477,10 +477,10 @@ class Exp:
 
             scores.addToStat(message.channel, message.author, "balles", 1)
             scores.addToStat(message.channel, message.author, "exp", -7)
-            await comm.message_user(message, _(":money_with_wings: You add a bullet to your weapon for 7 exp points", language))
+            await comm.message_user(message, _(":money_with_wings: You added a bullet to your weapon for 7 exp points.", language))
 
         else:
-            await comm.message_user(message, _(":champagne: Your charger is full !", language))
+            await comm.message_user(message, _(":champagne: Your charger is full!", language))
 
     @shop.command(pass_context=True, name="2")
     @checks.have_exp(13)
@@ -492,7 +492,7 @@ class Exp:
         if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
             scores.addToStat(message.channel, message.author, "chargeurs", 1)
             scores.addToStat(message.channel, message.author, "exp", -13)
-            await comm.message_user(message, _(":money_with_wings: You add a charger to your backpack for 13 exp points.", language))
+            await comm.message_user(message, _(":money_with_wings: You added a charger to your backpack for 13 exp points.", language))
 
         else:
             await comm.message_user(message, _(":champagne: You have enough chargers!", language))
@@ -507,7 +507,7 @@ class Exp:
         if scores.getStat(message.channel, message.author, "ap_ammo") < time.time():
             scores.setStat(message.channel, message.author, "ap_ammo", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -15)
-            await comm.message_user(message, _(":money_with_wings: You purchase AP ammo for your weapon. For the next 24 hours, you will deal double damage to ducks.", language))
+            await comm.message_user(message, _(":money_with_wings: You purchased AP ammo for your weapon. For the next 24 hours, you will deal double damage to ducks.", language))
 
         else:
             await comm.message_user(message, _(":champagne: You have enough AP ammo for now!", language))
@@ -522,7 +522,7 @@ class Exp:
         if scores.getStat(message.channel, message.author, "explosive_ammo") < time.time():
             scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
             scores.addToStat(message.channel, message.author, "exp", -25)
-            await comm.message_user(message, _(":money_with_wings: You purchase explosive ammo for your weapon. For the next 24 hours, you will deal triple damage to ducks.", language))
+            await comm.message_user(message, _(":money_with_wings: You purchased explosive ammo for your weapon. For the next 24 hours, you will deal triple damage to ducks.", language))
 
 
         else:
@@ -538,10 +538,10 @@ class Exp:
         if scores.getStat(message.channel, message.author, "confisque", default=False):
             scores.setStat(message.channel, message.author, "confisque", False)
             scores.addToStat(message.channel, message.author, "exp", -40)
-            await comm.message_user(message, _(":money_with_wings: You take your weapon back for 40 exp points", language))
+            await comm.message_user(message, _(":money_with_wings: You got your weapon back for 40 exp points", language))
 
         else:
-            await comm.message_user(message, _(":champagne: You haven't killed anyone today, you have your weapon, what do you want to buy ? :p", language))
+            await comm.message_user(message, _(":champagne: You already have your weapon, what are you trying to buy? :p", language))
 
     @shop.command(pass_context=True, name="6")
     @checks.have_exp(8)
@@ -553,10 +553,10 @@ class Exp:
         if scores.getStat(message.channel, message.author, "graisse") < int(time.time()):
             scores.setStat(message.channel, message.author, "graisse", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -8)
-            await comm.message_user(message, _(":money_with_wings: You add grease in your weapon to reduce jamming risks by 50 percent for a day, for only 8 exp points.", language))
+            await comm.message_user(message, _(":money_with_wings: You added grease in your weapon to reduce jamming risks by 50 percent for a day, for only 8 exp points.", language))
 
         else:
-            await comm.message_user(message, _(":champagne: Your weapon is perfectly lubricated, no need for more grease", language))
+            await comm.message_user(message, _(":champagne: Your weapon is perfectly lubricated, you don't need any more grease.", language))
 
     @shop.command(pass_context=True, name="7")
     @checks.have_exp(5)
@@ -566,10 +566,10 @@ class Exp:
         if not scores.getStat(message.channel, message.author, "sight"):
             scores.setStat(message.channel, message.author, "sight", 6)
             scores.addToStat(message.channel, message.author, "exp", -5)
-            await comm.message_user(message, _(":money_with_wings: You add a sight to your weapon, for 5 exp points, your aiming was improved using this formulae : (100 - current accuracy) / 3. ", language))
+            await comm.message_user(message, _(":money_with_wings: You added a sight to your weapon for 5 exp points, your aiming was improved using this formula: (100 - current accuracy) / 3. ", language))
 
         else:
-            await comm.message_user(message, _(":champagne: You already have a sight to your weapon. ", language))
+            await comm.message_user(message, _(":champagne: You already have a sight on your weapon. ", language))
 
     @shop.command(pass_context=True, name="8")
     @checks.have_exp(15)
@@ -582,11 +582,11 @@ class Exp:
             scores.setStat(message.channel, message.author, "detecteurInfra", time.time() + DAY)
             scores.setStat(message.channel, message.author, "detecteur_infra_shots_left", 6)
             scores.addToStat(message.channel, message.author, "exp", -15)
-            await comm.message_user(message, _(":money_with_wings: You add an infrared detector to your weapon, that will prevent any waste of ammo for a day. Cost : 15 exp points.", language))
+            await comm.message_user(message, _(":money_with_wings: You added an infrared detector to your weapon, it will prevent any waste of ammo for a day. Cost: 15 exp points.", language))
 
 
         else:
-            await comm.message_user(message, _(":champagne: You do have an infrared detector on your weapon, right ?", language))
+            await comm.message_user(message, _(":champagne: You already have an infrared detector on your weapon.", language))
 
     @shop.command(pass_context=True, name="9")
     @checks.have_exp(5)
@@ -598,10 +598,10 @@ class Exp:
         if scores.getStat(message.channel, message.author, "silencieux") < int(time.time()):
             scores.setStat(message.channel, message.author, "silencieux", time.time() + DAY)
             scores.addToStat(message.channel, message.author, "exp", -5)
-            await comm.message_user(message, _(":money_with_wings: You add a silencer to your weapon, no duck will ever be frightened by one of your shots for a day. Cost : 5 exp points, what a good deal !", language))
+            await comm.message_user(message, _(":money_with_wings: You added a silencer to your weapon, no duck will ever be frightened by one of your shots for a day. Cost: 5 exp points, what a good deal!", language))
 
         else:
-            await comm.message_user(message, _(":champagne: You do have a silencer on your weapon, right ?", language))
+            await comm.message_user(message, _(":champagne: You already have a silencer on your weapon.", language))
 
     @shop.command(pass_context=True, name="10")
     @checks.have_exp(13)
@@ -615,12 +615,12 @@ class Exp:
             scores.setStat(message.channel, message.author, "trefle", int(time.time()) + DAY)
             scores.setStat(message.channel, message.author, "trefle_exp", exp)
             scores.addToStat(message.channel, message.author, "exp", -13)
-            await comm.message_user(message, _(":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} more exp point for the next day. You brought it for 13 exp!", language).format(**{
+            await comm.message_user(message, _(":money_with_wings: You bought a fresh 4-leaf clover, which will give you {exp} more exp points for each killed duck for the next day. You got it for 13 exp!", language).format(**{
                 "exp": exp
             }))
 
         else:
-            await comm.message_user(message, _(":champagne: You're too lucky, but I don't have any clover left for you today :'(. Too much luck, maybe ??", language))
+            await comm.message_user(message, _(":champagne: Sorry, but I don't have any clover left for you today :'(. Too much luck, maybe??", language))
 
     @shop.command(pass_context=True, name="11")
     @checks.have_exp(5)
@@ -631,12 +631,12 @@ class Exp:
             scores.setStat(message.channel, message.author, "sunglasses", int(time.time()) + DAY)
             scores.setStat(message.channel, message.author, "dazzled", False)
             scores.addToStat(message.channel, message.author, "exp", -5)
-            await comm.message_user(message, _(":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now immune to sunlight for a day", language))
+            await comm.message_user(message, _(":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now immune to sunlight for a day.", language))
 
 
         else:
             scores.addToStat(message.channel, message.author, "exp", -5)
-            await comm.message_user(message, _(":money_with_wings: You brought brand new sunglasses, for nothing but the fact that you are mostly swag now. :cool:", language))
+            await comm.message_user(message, _(":money_with_wings: You bought brand new sunglasses, the only point of it being that you're much swagger now. :cool:", language))
 
     @shop.command(pass_context=True, name="12")
     @checks.have_exp(7)
@@ -648,11 +648,11 @@ class Exp:
         if scores.getStat(message.channel, message.author, "mouille") > int(time.time()):
             scores.setStat(message.channel, message.author, "mouille", 0)
             scores.addToStat(message.channel, message.author, "exp", -7)
-            await comm.message_user(message, _(":money_with_wings: You have some dry clothes on you now. You looks beautiful ! ", language))
+            await comm.message_user(message, _(":money_with_wings: You have new dry clothes on you now. You look beautiful! ", language))
 
         else:
             scores.addToStat(message.channel, message.author, "exp", -7)
-            await comm.message_user(message, _(":money_with_wings: You brought brand new clothes, for nothing but the fact that you are mostly swag now. :cool:", language))
+            await comm.message_user(message, _(":money_with_wings: You bought brand new clothes, the only point of it being that you're much swagger now. :cool:", language))
 
     @shop.command(pass_context=True, name="13")
     @checks.have_exp(6)
@@ -662,7 +662,7 @@ class Exp:
         scores.setStat(message.channel, message.author, "sabotee", "-")
         scores.setStat(message.channel, message.author, "sand", False)
         scores.addToStat(message.channel, message.author, "exp", -6)
-        await comm.message_user(message, _(":champagne: You clean your weapon for 6 exp. If you had sand, or if your weapon was sabtaged, it's fixed now !", language))
+        await comm.message_user(message, _(":champagne: You cleaned your weapon for 6 exp. If you had sand in it, or if your weapon was sabotaged, it's fixed now!", language))
 
     @shop.command(pass_context=True, name="14")
     @checks.have_exp(5)
@@ -670,12 +670,12 @@ class Exp:
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if scores.getStat(message.channel, target, "sunglasses") > int(time.time()):
-            await comm.message_user(message, _(":x: No way ! {mention} have some sunglasses ! He is immune to this ! ", language).format(mention=target.mention))
+            await comm.message_user(message, _(":x: No way! {mention} has sunglasses! They're immunised against this! ", language).format(mention=target.mention))
 
         else:
             scores.addToStat(message.channel, message.author, "exp", -5)
             scores.setStat(message.channel, target, "dazzled", True)
-            await comm.message_user(message, _(":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next shot !", language).format(mention=target.mention))
+            await comm.message_user(message, _(":money_with_wings: You dazzled {mention}! Their next shot will lose 50% accuracy!", language).format(mention=target.mention))
 
     @shop.command(pass_context=True, name="15")
     @checks.have_exp(7)
@@ -685,7 +685,7 @@ class Exp:
         scores.setStat(message.channel, target, "sand", True)
         scores.setStat(message.channel, message.author, "graisse", 0)
         scores.addToStat(message.channel, message.author, "exp", -6)
-        await comm.message_user(message, _(":champagne: You throw sand on {mention} weapon!", language).format(mention=target.mention))
+        await comm.message_user(message, _(":champagne: You throwed sand in {mention}'s weapon!", language).format(mention=target.mention))
 
     @shop.command(pass_context=True, name="16")
     @checks.have_exp(10)
@@ -696,7 +696,7 @@ class Exp:
         language = prefs.getPref(message.server, "language")
         scores.setStat(message.channel, target, "mouille", int(time.time()) + HOUR)
         scores.addToStat(message.channel, message.author, "exp", -10)
-        await comm.message_user(message, _(":money_with_wings: You drop a full water bucket on {target}, forcing him to wait 1 hour for his/her clothes to dry before he/she can return hunting", language).format(**{
+        await comm.message_user(message, _(":money_with_wings: You dropped a bucket full of water on {target}, forcing them to wait 1 hour for their clothes to dry before they can return hunting.", language).format(**{
             "target": target.name
         }))
 
@@ -710,19 +710,19 @@ class Exp:
         if scores.getStat(message.channel, target, "sabotee", "-") == "-":
             scores.addToStat(message.channel, message.author, "exp", -14)
             scores.setStat(message.channel, target, "sabotee", message.author.name)
-            await comm.message_user(message, _(":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !", language).format(**{
+            await comm.message_user(message, _(":ok: {target}'s weapon is now sabotaged... but they don't know it (14 exp)!", language).format(**{
                 "target": target.name
             }), forcePv=True)
 
         else:
-            await comm.message_user(message, _(":ok: {target} weapon is already sabotaged!", language).format(**{
+            await comm.message_user(message, _(":ok: {target}'s weapon is already sabotaged!", language).format(**{
                 "target": target.name
             }), forcePv=True)
 
         try:
             await self.bot.delete_message(ctx.message)
         except discord.Forbidden:
-            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting message: forbidden.")
         except discord.NotFound:
             pass
 
@@ -736,10 +736,10 @@ class Exp:
         if scores.getStat(message.channel, message.author, "life_insurance") < int(time.time()):
             scores.setStat(message.channel, message.author, "life_insurance", int(time.time()) + DAY * 7)
             scores.addToStat(message.channel, message.author, "exp", -10)
-            await comm.message_user(message, _(":money_with_wings: You buy a life insurence for a week for 10 exp. If you get killed, you will earn half the level of the killer in exp", language))
+            await comm.message_user(message, _(":money_with_wings: You bought a life insurence for a week for 10 exp. If you get killed, you'll earn half the level of the killer in exp.", language))
 
         else:
-            await comm.message_user(message, _(":money_with_wings: You are already insured.", language))
+            await comm.message_user(message, _(":money_with_wings: You're already insured.", language))
 
     # @shop.command(pass_context=True, name="19")
     # async def item19(self, ctx):
@@ -753,10 +753,10 @@ class Exp:
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         scores.addToStat(message.channel, message.author, "exp", -8)
-        await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to the decoy of {mention}. He brought it for 8 exp !", language).format(**{
+        await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to {mention}'s decoy. They bought it for 8 exp!", language).format(**{
             "mention": message.author.mention
         }))
-        dans = random.randint(0, 60 * 10)
+        dans = random.randint(0, 600)
         await asyncio.sleep(dans)
         await ducks.spawn_duck({
             "time"   : int(time.time()),
@@ -772,7 +772,7 @@ class Exp:
             commons.ducks_planned[message.channel] += 1
         commons.bread[message.channel] += 20
         scores.addToStat(message.channel, message.author, "exp", -2)
-        await comm.message_user(message, _(":money_with_wings: You place some bread on the channel to attract ducks. They will leave 20 seconds later for the rest of the day !", language))
+        await comm.message_user(message, _(":money_with_wings: You put some bread on the channel to attract ducks. They'll stay 20 more seconds before leaving for the rest of the day!", language))
 
     @shop.command(pass_context=True, name="22")
     @checks.have_exp(5)
@@ -792,7 +792,7 @@ class Exp:
             servers[message.server.id]["detecteur"][message.channel.id] = [message.author.id]
         prefs.JSONsaveToDisk(servers, "channels.json")
         scores.addToStat(message.channel, message.author, "exp", -5)
-        await comm.message_user(message, _(":money_with_wings: You will be warned when the next duck on #{channel_name} spawns", language).format(**{
+        await comm.message_user(message, _(":money_with_wings: You will be notificated when the next duck on #{channel_name} spawns.", language).format(**{
             "channel_name": message.channel.name
         }), forcePv=True)
 
@@ -804,12 +804,12 @@ class Exp:
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         scores.addToStat(message.channel, message.author, "exp", -50)
-        await comm.message_user(message, _(":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. That's bad, but so funny !", language), forcePv=True)
+        await comm.message_user(message, _(":money_with_wings: You prepared a mechanical duck on the channel for 50 exp. It's wrong, but so funny!", language), forcePv=True)
 
         try:
             self.bot.delete_message(ctx.message)
         except discord.Forbidden:
-            await comm.logwithinfos_ctx(ctx, "Error deleting command : forbidden")
+            await comm.logwithinfos_ctx(ctx, "Error deleting message: forbidden.")
         await asyncio.sleep(90)
         try:
             if prefs.getPref(message.server, "emoji_ducks"):

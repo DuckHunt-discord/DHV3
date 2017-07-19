@@ -41,7 +41,7 @@ def have_required_level(required: int = 0, warn: bool = True):
         access = level >= required
         if not access and warn:
             ctx.bot.loop.create_task(ctx.bot.send_message(ctx.message.channel,
-                                                          "{mention} : :x: You can't use this command, you don't have access. Your current level is **{level}**, and this command require a level **{minlevel}** access. If you think that this is an error, please contact Eyesofcreeper !".format(level=level, minlevel=required, mention=ctx.message.author.mention)))
+                                                          "{mention} : :x: You don't have access to this command. Your current level is **{level}**, and this command requires a level **{minlevel}** access. If you think that this is an error, please contact Eyesofcreeper.".format(level=level, minlevel=required, mention=ctx.message.author.mention)))
 
         return access
 

@@ -96,15 +96,15 @@ async def on_command_error(error, ctx):
         sending += "\n" + '{0.__class__.__name__}: {0}'.format(error.original)
         logger.error(sending)
 
-        msg = await bot.send_message(ctx.message.channel, ":x: An error ({error}) happened in {command}, here is the traceback : ```\n{tb}\n```\n".format(**{
+        msg = await bot.send_message(ctx.message.channel, ":x: An error ({error}) happened in {command}, here is the traceback: ```\n{tb}\n```\n".format(**{
             "command": ctx.command.qualified_name,
             "error"  : error.original.__class__.__name__,
             "tb"     : "\n".join(traceback.format_tb(error.original.__traceback__, 4)),
         }))
     elif isinstance(error, commands.MissingRequiredArgument):
-        await bot.send_message(ctx.message.channel, ":x: Missing a required argument. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await bot.send_message(ctx.message.channel, ":x: Missing a required argument. " + (("Help: \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
     elif isinstance(error, commands.BadArgument):
-        await bot.send_message(ctx.message.channel, ":x: Bad argument provided. " + (("Help : \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
+        await bot.send_message(ctx.message.channel, ":x: Bad argument provided. " + (("Help: \n```\n" + ctx.command.help + "\n```") if ctx.command.help else ""))
 
 
 def load_credentials():
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     for extension in initial_extensions:
         try:
             bot.load_extension(extension)
-            logger.debug("Loaded : " + str(extension))
+            logger.debug("Loaded: " + str(extension))
         except Exception as e:
             print('Failed to load extension {}\n{}: {}'.format(extension, type(e).__name__, e))
 

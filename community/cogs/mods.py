@@ -175,7 +175,7 @@ class Mods:
                 case = json.load(infile)
 
         except FileNotFoundError:
-            await self.bot.send_message(ctx.message.channel, "Error : Unknown case ID")
+            await self.bot.send_message(ctx.message.channel, "Error: Unknown case ID")
             return None
 
         case["reason"] = reason

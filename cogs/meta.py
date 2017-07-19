@@ -143,7 +143,7 @@ class Meta:
             elif slang == "en_EN":
                 servsEn += 1
             else:
-                commons.logger.debug("Serveur étranger : {lang : " + str(slang) + ", server:" + str(server.name) + "|" + str(server.id) + "}")
+                commons.logger.debug("Foreign servers: {lang: " + str(slang) + ", server:" + str(server.name) + "|" + str(server.id) + "}")
                 servsEt += 1
             if getPref(server, "user_can_give_exp"):
                 servsDon += 1
@@ -195,20 +195,20 @@ class Meta:
         embed.add_field(name=_("Servers with more than 24 ducks per day", language), value=str(p24cj))
         embed.add_field(name=_("Servers with less than 24 ducks per day", language), value=str(m24cj))
         embed.add_field(name=_("Memory used (MB)", language), value=str(round(memoryUsed * 1000, 5)))
-        embed.set_footer(text=_('Python version : ', language) + str(sys.version), icon_url='http://cloudpassage.github.io/halo-toolbox/images/python_icon.png')
+        embed.set_footer(text=_('Python version: ', language) + str(sys.version), icon_url='http://cloudpassage.github.io/halo-toolbox/images/python_icon.png')
 
         try:
             await self.bot.say(embed=embed)
         except:
             commons.logger.exception("error sending embed, with embed " + str(embed.to_dict()))
-            await comm.message_user(ctx.message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again !", language))
+            await comm.message_user(ctx.message, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language))
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):
         language = getPref(ctx.message.server, "language")
         current_time = time.time()
-        # TODO : ensure_soon ?
-        ping_msg = await comm.message_user(ctx.message, _("BANG OR BANG, what's the best ? :p\nAnyway I'm up and running !", language))
+        # TODO: ensure_soon?
+        ping_msg = await comm.message_user(ctx.message, _("BANG OR BANG, what's the best? :p\nAnyway I'm up and running!", language))
         new_time = time.time()  # Just fucking imprécis cela dit, a cause du await...
 
 
@@ -222,7 +222,7 @@ class Meta:
 
     @commands.command(pass_context=True)
     async def help(self, ctx):
-        await comm.message_user(ctx.message, _("Check out our new website ! http://api-d.com/command-list.html", getPref(ctx.message.server, "language")))
+        await comm.message_user(ctx.message, _("Check out our new website! http://api-d.com/command-list.html", getPref(ctx.message.server, "language")))
 
 
 def setup(bot):
