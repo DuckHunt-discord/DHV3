@@ -252,7 +252,7 @@ class Exp:
                     await self.bot.edit_message(duckstats_message, ":duck:", embed=embed)
                 except:
                     commons.logger.exception("Error sending embed, with embed " + str(embed.to_dict()))
-                    await comm.message_user(message, _(":warning: Error sending embed, check if the bot have the permission embed_links and try again!", language))
+                    await comm.message_user(message, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language))
                     return
 
                 changed = False
@@ -440,7 +440,7 @@ class Exp:
                         try:
                             await self.bot.remove_reaction(message, emoji, user)
                         except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permissions, I can't remove reactions. Please tell an admin. ;)", language))
+                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
                 else:
                     reaction = False
                     try:
