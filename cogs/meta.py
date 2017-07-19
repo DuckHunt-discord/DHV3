@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import time
 import datetime
 import re
 import sys
@@ -204,7 +205,14 @@ class Meta:
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):
-        await comm.message_user(ctx.message, _("BANG OR BANG, what's the best ? :p Anyway I'm up and running", getPref(ctx.message.server, "language")))
+        language = getPref(ctx.message.server, "language")
+        current_time = time.time()
+        ping_msg = await comm.message_user(ctx.message, _("BANG OR BANG, what's the best ? :p\nAnyway I'm up and running !", language))
+        new_time = time.time()
+
+        send_delay = int(round((new_time * 1000) - (current_time * 1000)))
+        if send_delay > 0: # Si l'OS supporte la précision à la milliseconde
+            await self.bot.edit_message(ping_msg, ping_msg.content + _("\n\n`This message took {ms}ms to send.`", language).format(ms=send_delay))
 
     @commands.command(pass_context=True)
     async def wiki(self, ctx):
