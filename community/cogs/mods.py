@@ -5,6 +5,7 @@
 
 """
 import argparse
+import asyncio
 import datetime
 import json
 import re
@@ -162,6 +163,40 @@ class Mods:
 
     async def on_member_unban(self, server, user):
         case = await self.add_action(user=user, action="Unban", by=self.bot.user)
+
+    async def on_message(self, message):
+        channel = message.channel
+        author = message.author
+
+        if int(channel.id) not in [195260081036591104, 262720111591292928, 195260134908231691]:
+            return
+
+        if author.status is discord.Status.offline:
+            fmt = f'{author} (ID: {author.id}) has been automatically blocked for 5 minutes for being invisible'
+            # await channel.set_permissions(author, read_messages=False, reason='invisible block')
+            overwrite = discord.PermissionOverwrite()
+            overwrite.read_messages = False
+            await self.bot.edit_channel_permissions(message.channel, message.author, overwrite)
+            # await channel.send(fmt)
+            await self.bot.send_message(channel, fmt)
+
+            try:
+                msg = f'Heya. You have been automatically blocked from <#{channel.id}> for 5 minutes for being ' \
+                      'invisible.\nTry chatting again in 5 minutes when you change your status. If you\'re curious ' \
+                      'why invisible users are blocked, it is because they tend to break the client and cause them to ' \
+                      'be hard to mention. Since we want to help you usually, we expect mentions to work without ' \
+                      'headaches.\n\nSorry for the trouble.'
+                # await author.send(msg)
+                await self.bot.send_message(author, msg)
+
+            except discord.HTTPException:
+                pass
+
+            await asyncio.sleep(120)
+            # await channel.set_permissions(author, overwrite=None, reason='invisible unblock')
+            overwrite.read_messages = None
+            await self.bot.edit_channel_permissions(message.channel, message.author, overwrite)
+            return
 
     @commands.group(pass_context=True, aliases=["mod", "stfu"])
     async def moderation(self, ctx):
