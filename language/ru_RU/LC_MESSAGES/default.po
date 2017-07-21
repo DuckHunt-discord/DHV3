@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-12 13:48+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,27 +20,6 @@ msgstr ":x: Эта команда не может быть использова�
 
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: К сожалению, эта команда отключена и не может быть использована."
-
-msgid "Send error report ? "
-msgstr "Отправить отчет об ошибке?"
-
-msgid ""
-"Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
-"able to send an error report."
-msgstr ""
-"К сожалению, мне требуются разрешения `add_reactions` и "
-"`create_instant_invite` для того, чтобы отправить отчет об ошибке."
-
-msgid ""
-":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
-"{tb}\n"
-"```\n"
-"{error_report}"
-msgstr ""
-":x: В команде {command} произошла ошибка ({error}), детали: ```\n"
-"{tb}\n"
-"```\n"
-"{error_report}"
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Создание приглашения для отчета об ошибке..."
@@ -57,12 +36,6 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 "{tb}"
-
-msgid ":ok: Error message sent, thanks :)"
-msgstr ":ok: Сообщение об ошибке отправлено, спасибо :)"
-
-msgid "OK, I won't send an error report"
-msgstr "Хорошо, я не буду отправлять отчет об ошибке"
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Пропущен обязательный параметр."
@@ -94,9 +67,6 @@ msgstr "Число требуемых разрешений"
 msgid "To confirm, please type {random_str} now."
 msgstr "Для подтверждения, наберите {random_str}."
 
-msgid ":x: Operation canceled, you took too long to answer."
-msgstr ":x: Операция отменена, слишком долго не было подтверждения."
-
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d в %H:%M:%S"
 
@@ -109,32 +79,10 @@ msgstr "{dans} часов"
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
-msgid ":ok: Your best time was reset."
-msgstr ":ok: Ваше лучшее время обнулено."
-
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Для предотвращения злоупотреблений, вы не можете передать очки опыта, "
 "пока ваше оружие конфисковано"
-
-msgid ":x: You need to give a positive number for the exp to send"
-msgstr ""
-":x: Вам необходимо указать положительное число очков опыта, которые нужно "
-"передать"
-
-msgid ""
-"Congratulations, you sent / gave more experience than the maximum number I'm "
-"able to store."
-msgstr ""
-"Поздравляем, вы отправили / получили настолько много очков опыта, что я не "
-"могу сохранить это число."
-
-msgid ""
-"You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
-"transfer) !"
-msgstr ""
-"Вы отправили {amount} очков опыта пользователю {target} (и заплатили налог в "
-"{taxes} очков за эту операцию) !"
 
 msgid "You don't have enough experience points"
 msgstr "У вас нет достаточного колличества очков опыта"
@@ -173,15 +121,6 @@ msgstr "Ранг"
 msgid "Nickname"
 msgstr "Ник"
 
-msgid ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
-"```{table}```"
-msgstr ""
-":cocktail: Лучшие результаты для канала #{channel_name} : :cocktail:\n"
-"```{table}```"
-
-msgid "Generating topscores for your channel, please wait!"
-msgstr "Генерируем таблицу лидеров для вашего канала, подождите!"
-
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Лучшие результаты для канала #{channel_name} :cocktail:"
 
@@ -197,216 +136,14 @@ msgstr "Очков опыта"
 msgid "Number of ducks killed"
 msgstr "Число убитых уток"
 
-msgid "There is nothing more..."
-msgstr "Больше ничего нет..."
-
-msgid ""
-"I don't have the `manage_messages` permissions, I can't remove reactions. "
-"Warn an admin for me, please ;)"
-msgstr ""
-"У меня нет разрешения `manage_messages`, я не могу удалять реакции. Позовите "
-"админа, пожалуйста ;)"
-
-msgid ""
-":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
-msgstr ""
-":x: Неверный синтаксис : `!shop [list / номер предмета] [аргумент, если "
-"требуется]`"
-
-msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
-msgstr ":money_with_wings: Вы добавили патрон в ваше оружие за 7 очков опыта"
-
-msgid ":champagne: Your charger is full !"
-msgstr ":champagne: Ваш магазин полон !"
-
-msgid ""
-":money_with_wings: You add a charger to your backpack for 13 exp points."
-msgstr ":money_with_wings: Вы приобрели запасной магазин за 13 очков опыта."
-
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: У вас достаточно запасных магазинов!"
-
-msgid ""
-":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
-"hours, you will deal double damage to ducks."
-msgstr ""
-":money_with_wings: Вы приобрели бронебойные патроны для вашего оружия. В "
-"течении следующих 24 часов вы будете наносить двойной урон уткам."
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: У вас уже есть бронебойные патроны!"
 
-msgid ""
-":money_with_wings: You purchase explosive ammo for your weapon. For the next "
-"24 hours, you will deal triple damage to ducks."
-msgstr ""
-":money_with_wings: Вы приобрели разрывные патроны для вашего оружия. В "
-"течении следующих 24 часов вы будете наносить тройной урон уткам."
-
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
-
-msgid ":money_with_wings: You take your weapon back for 40 exp points"
-msgstr ":money_with_wings: Вы вернули свое оружие за 40 очков опыта"
-
-msgid ""
-":champagne: You haven't killed anyone today, you have your weapon, what do "
-"you want to buy ? :p"
-msgstr ""
-":champagne: Вы еще никого не убили сегодня, у вас есть оружие. Что вы "
-"желаете приобрести? :p"
-
-msgid ""
-":money_with_wings: You add grease in your weapon to reduce jamming risks by "
-"50 percent for a day, for only 8 exp points."
-msgstr ""
-":money_with_wings: Вы приобрели смазку для вашего оружия, что уменьшит риск "
-"его заклинивания на 50 процентов в течении дня. Всего за 8 очков опыта."
-
-msgid ""
-":champagne: Your weapon is perfectly lubricated, no need for more grease"
-msgstr ":champagne: Ваше оружие отлично смазано, больше не требуется"
-
-msgid ""
-":money_with_wings: You add a sight to your weapon, for 5 exp points, your "
-"aiming was improved using this formulae : (100 - current accuracy) / 3. "
-msgstr ""
-":money_with_wings: Вы приобрели прицел для своего оружия за 5 очков опыта. "
-"Ваша аккуратность улучшилась согласно такой формуле : (100 - текущая "
-"аккуратность) / 3."
-
-msgid ":champagne: You already have a sight to your weapon. "
-msgstr ":champagne: На вашем оружии уже есть прицел."
-
-msgid ""
-":money_with_wings: You add an infrared detector to your weapon, that will "
-"prevent any waste of ammo for a day. Cost : 15 exp points."
-msgstr ""
-":money_with_wings: Вы приобрели ифракрасный датчик для вашего оружия, что "
-"предотвратит пустую трату патронов в течении дня. Цена: 15 очков опыта."
-
-msgid ":champagne: You do have an infrared detector on your weapon, right ?"
-msgstr ":champagne: У вас уже есть инфракрасный детектор, не так ли?"
-
-msgid ""
-":money_with_wings: You add a silencer to your weapon, no duck will ever be "
-"frightened by one of your shots for a day. Cost : 5 exp points, what a good "
-"deal !"
-msgstr ""
-":money_with_wings: Вы приобрели глушитель для своего оружия. Ваши выстрелы "
-"не спугнут ни одну утку в течении дня. Стоимость : 5 очков опыта, отличная "
-"сделка!"
-
-msgid ":champagne: You do have a silencer on your weapon, right ?"
-msgstr ":champagne: У вас уже есть глушитель, не так ли?"
-
-msgid ""
-":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
-"more exp point for the next day. You brought it for 13 exp!"
-msgstr ""
-":money_with_wings: Вы купили свежий 4-х листный клевер, что дало вам "
-"прибавку в {exp} очков опыта на весь день. Вы приобрели его за 13 очков!"
-
-msgid ""
-":champagne: You're too lucky, but I don't have any clover left for you today "
-":'(. Too much luck, maybe ??"
-msgstr ""
-":champagne: Вы слишком удачливы, однако сегодня у меня не осталось больше "
-"клеверов :'(. Может быть, слишком много удачи??"
-
-msgid ""
-":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
-"immune to sunlight for a day"
-msgstr ""
-":money_with_wings: Вы приобрели солнцезащитные очки за 5 очков опыта. В "
-"течении дня солнце вам не помешает"
-
-msgid ""
-":money_with_wings: You brought brand new sunglasses, for nothing but the "
-"fact that you are mostly swag now. :cool:"
-msgstr ":money_with_wings: Вы приобрели новые солнцезащитные очки. "
-
-msgid ""
-":money_with_wings: You have some dry clothes on you now. You looks beautiful "
-"! "
-msgstr ""
-":money_with_wings: На вас теперь сухой комплект одежды. Выглядите "
-"замечательно!"
-
-msgid ""
-":money_with_wings: You brought brand new clothes, for nothing but the fact "
-"that you are mostly swag now. :cool:"
-msgstr ""
-":money_with_wings: Вы приобрели новый комплект одежды. Никаких плюсов, кроме "
-"того, что теперь SWAG - это про вас :cool:"
-
-msgid ""
-":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
-"weapon was sabtaged, it's fixed now !"
-msgstr ""
-":champagne: Вы почистили оружие за 6 очков опыта. Если против вас "
-"использовали песок или диверсию, теперь все в порядке!"
-
-msgid ":x: No way ! {mention} have some sunglasses ! He is immune to this ! "
-msgstr ":x: Не выйдет! У {mention} есть солнцезащитные очки!"
-
-msgid ""
-":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next "
-"shot !"
-msgstr ""
-":money_with_wings: Вы ослепили {mention}! Его следующий выстрел станет на "
-"50% менее точным!"
-
-msgid ":champagne: You throw sand on {mention} weapon!"
-msgstr ":champagne: Вы набросали песка на оружие {mention}!"
-
-msgid ""
-":money_with_wings: You drop a full water bucket on {target}, forcing him to "
-"wait 1 hour for his/her clothes to dry before he/she can return hunting"
-msgstr ""
-":money_with_wings: Вы опрокинули целое ведро воды на {target}, заставив его "
-"сушить свою одежду, что не позволит ему продолжить охоту в течении 1 часа"
-
-msgid ""
-":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
-msgstr ""
-":ok: оружие {target} саботировано... Однако он об этом еще не знает :D (14 "
-"exp)!"
-
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr ":ok: оружие {target} уже саботировано!"
-
-msgid ""
-":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
-"get killed, you will earn half the level of the killer in exp"
-msgstr ""
-":money_with_wings: Вы застраховали свою жизнь на неделю за 10 очков опыта. "
-"Если вас подстрелят, вы получите очки опыта в размере половины уровня "
-"нападающего"
-
-msgid ":money_with_wings: You are already insured."
-msgstr ":money_with_wings: Вы уже застрахованы."
-
-msgid ""
-":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
-"thanks to the decoy of {mention}. He brought it for 8 exp !"
-msgstr ""
-":money_with_wings: Благодаря приманке {mention}, купленной за 8 очков опыта, "
-"в ближайшие 10 минут на канале появится утка!"
-
-msgid ""
-":money_with_wings: You will be warned when the next duck on #{channel_name} "
-"spawns"
-msgstr ""
-":money_with_wings: Вас предупредят, когда на канале #{channel_name} появится "
-"утка"
-
-msgid ""
-":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
-"That's bad, but so funny !"
-msgstr ""
-":money_with_wings: За 50 опыта на канале появится фальшивая механическую "
-"утка. Это плохо, но весело!"
 
 msgid "Usage statistics of duckhunt"
 msgstr "Статистика использования бота"
@@ -477,88 +214,18 @@ msgstr "Сервера, где меньше 24 уток в день"
 msgid "Memory used (MB)"
 msgstr "Использовано памяти (MB)"
 
-msgid "Python version : "
-msgstr "Версия Python:"
-
-msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
 msgstr ""
-"BANG ИЛИ BANG, что же лучше? :p В любом случае, я нормально функционирую"
-
-msgid ":ok: Done, user banned :gun:"
-msgstr ":ok: Готово, пользователь забанен :gun:"
-
-msgid ":ok: Done, user unbanned :eyes:"
-msgstr ":ok: Готово, пользователь разбанен :eyes:"
-
-msgid ":robot: Channel added !"
-msgstr ":robot: Канал добавлен!"
+"Поздравляем, вы отправили / получили настолько много очков опыта, что я не "
+"могу сохранить это число."
 
 msgid ":x: This channel already exists in the game."
 msgstr ":x: Этот канал уже подключен к игре."
 
-msgid ":ok: Channel deleted"
-msgstr ":ok: Канал удален"
-
-msgid ":robot: OK, {name} was set as an admin on the server !"
-msgstr ":robot: OK, {name} теперь админ на этом сервере!"
-
-msgid ":robot: OK, {name} was removed from this server admins !"
-msgstr ":robot: OK, {name} больше не админ на этом сервере!"
-
-msgid ":robot: OK, {name} is not an admin !"
-msgstr ":robot: OK, {name} не админ!"
-
-msgid ":robot: OK, you have been set as an admin !"
-msgstr ":robot: OK, теперь вы админ!"
-
-msgid ":x: An admin exist on this server ! Try !add_admin"
-msgstr ":x: На этом сервере уже есть админ! Попробуйте !add_admin"
-
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} сообщений удалено"
-
-msgid "0 message(s) deleted : permission denied"
-msgstr "0 сообщений удалено: доступ запрещен"
-
-msgid "Permissions : {permissions}"
-msgstr "Разрешения: {permissions}"
-
-msgid ":ok: Scores / stats of the channel were succesfully deleted."
-msgstr ":ok: Рекорды и статистика для этого канала были успешно удалены."
-
-msgid ""
-":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting if "
-"applicable]`"
-msgstr ""
-":x: Неверный синтаксис : `!settings [view/set/reset/list/modified] [setting "
-"если применимо]`"
-
-msgid "The setting {pref} is set at {value} on this server."
-msgstr "Параметру {pref} установлено значение {value} на этом сервере."
-
-msgid ""
-":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
-msgstr ""
-":x: Неверное название параметра. Может быть, опечатка? Проверьте список с "
-"помощью `!settings list`"
-
-msgid ""
-"Bypassing the max_ducks_per_day check as you are the bot owner. It would be "
-"{max}"
-msgstr ""
-"Обход проверки максимального количества уток в день, т.к. вы - владелец бота."
-" Это было бы {max}"
-
-msgid ":x: Incorrect value"
-msgstr ":x: Неверное значение"
-
-msgid ":ok: The setting {pref} was set at `{value}` on this server."
-msgstr "Параметру {pref} было установлено значение `{value}` на этом сервере."
-
-msgid ""
-":ok: The setting {pref} reset to it's defalut value on this server : "
-"`{value}` "
-msgstr ":ok: Параметр {pref} был сброшен к значению по умолчанию: `{value}`"
 
 msgid "Parameter"
 msgstr "Параметр"
@@ -568,22 +235,6 @@ msgstr "Значение"
 
 msgid "Default value"
 msgstr "Значение по умолчанию"
-
-msgid "List of modified parameters : \n"
-"```{table}```"
-msgstr "Список измененных параметров:\n"
-"```{table}```"
-
-msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
-msgstr ""
-"Вы еще не высохли, не получится продолжить охоту! Подождите {temps_restant} "
-"минут."
-
-msgid "You don't have a weapon"
-msgstr "У вас нет оружия"
-
-msgid "Your weapon is jammed, it must be reloaded to unstuck it."
-msgstr "Ваше оружие заклинило, необходимо его перезарядить."
 
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
@@ -596,44 +247,6 @@ msgstr ""
 "** МАГАЗИН ПУСТ ** | Патронов в магазине: {balles_actuelles} / {balles_max} "
 "| Запасных магазинов: {chargeurs_actuels} / {chargeurs_max}"
 
-msgid "Your weapon is jammed, reload to unstuck it."
-msgstr "Ваше оружие заклинило, перезарядите его."
-
-msgid ""
-"There isn't any duck in here, but the bullet wasn't fired because the "
-"infrared detector you added to your weapon is doing it's job!"
-msgstr ""
-"В округе нет уток, однако выстрела не произошло. Инфракрасный датчик "
-"прекрасно справляется со своей работой!"
-
-msgid ""
-"Luckily you missed, what were you aiming at exactly? There isn't any duck in "
-"here... [missed : -1 xp] [wild shot: -1 xp]"
-msgstr ""
-"К счастью, вы промахнулись. Куда именно вы целились? В округе нет уток... "
-"[промах: -1 xp] [выстрел в пустоту: -1 xp]"
-
-msgid ""
-"**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : "
-"-1 xp]"
-msgstr ""
-"**FLAPP**  Утка улетела, испуганная шумом! ПОЗДРАВЛЯЕМ! [промах: -1 xp]"
-
-msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "**PIEWW**  Вы промахнулись! [промах: -1 xp]"
-
-msgid ""
-"**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
-"little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
-"accident : -2 xp] [weapon confiscated]"
-msgstr ""
-"**BANG**  Вы промахнулись... и попали в себя. Может быть, в следующий раз "
-"немного повернуть оружие? [промах: -1 xp] [несчастный случай на охоте: -2 "
-"xp] [оружие конфисковано]"
-
-msgid " > You won {exp} with your life insurance"
-msgstr "> Вы получили {exp} очков опыта благодаря своей страховке"
-
 msgid ""
 ":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
 "now at a grand total of {total} ducks (of which {supercanards} were super-"
@@ -642,45 +255,6 @@ msgstr ""
 ":skull_crossbones: **BOUM**  Вы убили утку за {time} секунд, на вашем счету "
 "теперь {total} уток (среди них супер-уток: {supercanards}) убито на канале "
 "#{channel}. \\_X< *COUAC* [{exp} exp]"
-
-msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
-msgstr ""
-":gun: Утка выжила, попробуйте еще раз *ОБНАРУЖЕНА СУПЕР УТКА* [жизни: -"
-"{vie}]"
-
-msgid "Your weapon had been confiscated"
-msgstr "Ваше оружие было конфисковано."
-
-msgid "You unstuck your weapon."
-msgstr "Вы справились с заклинившим оружием, теперь оно в порядке."
-
-msgid "You reload your weapon"
-msgstr "Вы перезарядили оружие."
-
-msgid "You dont have any ammo left !"
-msgstr "У вас не осталось патронов!"
-
-msgid "You don't need to reload your weapon"
-msgstr "Перезаряжать оружие не требуется."
-
-msgid ""
-"{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : "
-"{chargeurs_actuels}/{chargeurs_max}"
-msgstr ""
-"{greet} | Патронов в магазине:  {balles_actuelles}/ {balles_max} | Магазинов "
-"в запасе:  {chargeurs_actuels}/{chargeurs_max}"
-
-msgid ""
-":x: You can't use this command, you don't have at least {exp} exp points!"
-msgstr ""
-":x: Вы не можете использовать эту команду, у вас должно быть как минимум  "
-"{exp} очков опыта!"
-
-msgid ":x: You can't use this command, you are not the owner of the bot !"
-msgstr ":x: Вы не можете использовать эту команду, вы не владелец бота!"
-
-msgid ":x: You can't use this command, you are not an admin on this server!"
-msgstr ":x: Вы не можете использовать эту команду, вы не админ этого сервера!"
 
 msgid "public danger"
 msgstr "угроза обществу"
@@ -733,26 +307,8 @@ msgstr "Как дела сегодня?"
 msgid "Please don't kill me..."
 msgstr "Пожалуйста, не убивай меня..."
 
-msgid "Me too, I love you !"
-msgstr "Я тоже, я тебя люблю!"
-
-msgid "Don't shoot me ! I'm a fake duck !"
-msgstr "Не стреляй в меня! Я не настоящая утка!"
-
-msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Утка улетела прочь ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Утка улетела в другой мир ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "У утки нет времени для этого ·°'\\`'°-.,¸¸.·°'\\`"
-
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка улетела ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Утка рассеялась в пространстве-времени ·°'\\`'°-.,¸¸.·°'\\`"
 
 msgid "a stuffed duck."
 msgstr "фаршированную утку."

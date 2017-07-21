@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-12 13:48+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,6 @@ msgstr ":x: Det beställa kan inte vara använder i privat meddelanden."
 
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Ursäkta. Det beställa är inaktiverad och kan inte vara använder."
-
-msgid "Send error report ? "
-msgstr "Skicka en felrapport ?"
 
 msgid "Name"
 msgstr "Namn"
@@ -129,15 +126,6 @@ msgstr "Upptid i timmar"
 msgid "Uptime in days"
 msgstr "Upptid i dagar"
 
-msgid "Python version : "
-msgstr "Python version :"
-
-msgid "Permissions : {permissions}"
-msgstr "Behörigheter : {permissions}"
-
-msgid ":x: Incorrect value"
-msgstr ":x: Felaktig värde"
-
 msgid "Parameter"
 msgstr "Parameter"
 
@@ -146,9 +134,6 @@ msgstr "Värde"
 
 msgid "Default value"
 msgstr "Standardvärde"
-
-msgid "You don't have a weapon"
-msgstr "Du inte har en vapen"
 
 msgid "public danger"
 msgstr "Offentliga fara"
@@ -170,9 +155,6 @@ msgstr "Hej världen"
 
 msgid "How are you today?"
 msgstr "Hur mår du idag ?"
-
-msgid "Me too, I love you !"
-msgstr "Jag också, alskar dig !"
 
 msgid "an old shoe."
 msgstr "En gammal sko"

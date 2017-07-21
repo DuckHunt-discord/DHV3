@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-12 13:48+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,27 +20,6 @@ msgstr ":x: Ez a parancs nem használható privát üzenetekben."
 
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Bocs, ez a parancs le van tiltva és nem használható."
-
-msgid "Send error report ? "
-msgstr "Küldesz hibajelentést?"
-
-msgid ""
-"Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
-"able to send an error report."
-msgstr ""
-"Sajnálatosan, nekem 'add_reactions' és 'create_instant_invite' engedélyek "
-"szükségesek arra, hogy hibajelentést küldhessek."
-
-msgid ""
-":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
-"{tb}\n"
-"```\n"
-"{error_report}"
-msgstr ""
-":x: Egy hiba ({error}) keletkezett a  {command} ban, itt a jelentés: ``` \n"
-"{tb} \n"
-"```\n"
-"{error_report}"
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Meghívót készít a hibajelentés miatt..."
@@ -57,12 +36,6 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 " {tb}"
-
-msgid ":ok: Error message sent, thanks :)"
-msgstr ":ok: Hibajelentés elküldve, köszönöm :)"
-
-msgid "OK, I won't send an error report"
-msgstr "OK, nem küldök hibajelentést"
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Hiányzik a szükséges érv."
@@ -113,17 +86,8 @@ msgstr ""
 msgid "To confirm, please type {random_str} now."
 msgstr "Hogy elfogadd, kérlek írd  {random_str} most."
 
-msgid ":x: Operation canceled, you took too long to answer."
-msgstr ":x: Akció lefújva, túl sokáig tartott válaszolnod."
-
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Befejezve, megbukott a  {failed} szervereken"
-
-msgid "Starting the broadcast"
-msgstr "Rádióadás kezdése"
-
-msgid "Broadcast finished"
-msgstr "Rádióadás befejezve"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Üzenet ({message}) elküldve  {server} #  {channel} nek"
@@ -143,9 +107,6 @@ msgstr "{dans} óra"
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
-msgid ":ok: Your best time was reset."
-msgstr ":ok: A legjobb időd vissza lett állítva."
-
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -158,39 +119,14 @@ msgstr ""
 ":x: Hogy meggátoljuk a visszaéléseket, nem küldhetsz tapasztalatpontot, ha "
 "nincs fegyvered."
 
-msgid ":x: You need to give a positive number for the exp to send"
-msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
-
-msgid ""
-"Congratulations, you sent / gave more experience than the maximum number I'm "
-"able to store."
-msgstr ""
-"Gratula, te küldtél / kaptál több xp-t, mint a maximum összeg amit "
-"raktározni tudok."
-
-msgid ""
-"You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
-"transfer) !"
-msgstr ""
-"Elküldtél  {amount} xp-t  {target} nek (és fizettél {taxes} xp-t adónak "
-"ezért a szállítmányért) !"
-
 msgid "You don't have enough experience points"
 msgstr "Nincs elég tapasztalatpontod"
 
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Tapasztalatküldés nem engedélyezett ezen a szerveren"
 
-msgid "Generating duckstats for you, please wait!"
-msgstr "Statisztikákat készít neked, kérlek várj!"
-
 msgid "Page {current}/{max}"
 msgstr "Lap  {current}/ {max}"
-
-msgid "\n"
-"Confiscated weapon !"
-msgstr "\n"
-"Elkobzott fegyver!"
 
 msgid "General statistics"
 msgstr "Összes statisztika"
@@ -325,13 +261,6 @@ msgid "Effect: wet"
 msgstr "Effekt: nedves"
 
 msgid ""
-":warning: Error sending embed, check if the bot have the permission "
-"embed_links and try again !"
-msgstr ""
-":warning: Hibajelentés behelyezve, nézd meg hogy van-e engedélyem "
-"embed_links -hez és próbáld újra!"
-
-msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
 msgstr ":x: A maximum szám amit látható a ranglistán az 200."
@@ -341,15 +270,6 @@ msgstr "Rang"
 
 msgid "Nickname"
 msgstr "Becenév"
-
-msgid ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
-"```{table}```"
-msgstr ""
-":cocktail: Legjobb pontszáma #{channel_name} : :cocktail: \n"
-"```{table}```"
-
-msgid "Generating topscores for your channel, please wait!"
-msgstr "Pontszámokat generál a szerveren, kérlek várj!"
 
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Legjobb pontszáma #{channel_name} :cocktail:"
@@ -366,228 +286,14 @@ msgstr "Tapasztalatpontok"
 msgid "Number of ducks killed"
 msgstr "Megölt kacsák száma"
 
-msgid "There is nothing more..."
-msgstr "Nincs több..."
-
-msgid ""
-"I don't have the `manage_messages` permissions, I can't remove reactions. "
-"Warn an admin for me, please ;)"
-msgstr ""
-"Nincs meg az engedélyem `manage_messages`hez, nem tudom kitörölni a "
-"reakciókat. Riassz fel egy admint nekem, kérlek. :)"
-
-msgid ""
-":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
-msgstr ""
-":x: Helytelen parancs: `!shop [list/item number] [argument if applicable]`"
-
-msgid "The list of items is available here : http://api-d.com/shop-items.html"
-msgstr "A tárgyak listája itt elérhető: http://api-d.com/shop-items.html"
-
-msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
-msgstr ""
-":money_with_wings: Hozzáadtál egy lövedéket a fegyveredhez 7 "
-"tapasztalatpontért"
-
-msgid ":champagne: Your charger is full !"
-msgstr ":champagne: A tölteted teljes!"
-
-msgid ""
-":money_with_wings: You add a charger to your backpack for 13 exp points."
-msgstr ""
-":money_with_wings: Hozzáadtál egy töltetet a hátizsákodba 13 "
-"tapasztalatpontért."
-
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Van elég tölteted!"
-
-msgid ""
-":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
-"hours, you will deal double damage to ducks."
-msgstr ""
-":money_with_wings: AP muníciót szereztél be a fegyveredhez. A következő 24 "
-"órában dupla kárt okozol a kacsáknak."
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
 
-msgid ""
-":money_with_wings: You purchase explosive ammo for your weapon. For the next "
-"24 hours, you will deal triple damage to ducks."
-msgstr ""
-":money_with_wings: Robbanótöltetet szereztél be a fegyveredhez. A következő "
-"24 órában tripla kárt okozol a kacsáknak."
-
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
-
-msgid ":money_with_wings: You take your weapon back for 40 exp points"
-msgstr ":money_with_wings: Visszavetted a fegyveredet 40 tapasztalatpontért"
-
-msgid ""
-":champagne: You haven't killed anyone today, you have your weapon, what do "
-"you want to buy ? :p"
-msgstr ""
-":champagne: Senkit sem öltél meg na, és megvan a fegyvered, mit szeretnél "
-"venni? :p"
-
-msgid ""
-":money_with_wings: You add grease in your weapon to reduce jamming risks by "
-"50 percent for a day, for only 8 exp points."
-msgstr ""
-":money_with_wings: Zsírt adtál a fegyveredhez, hogy megelőzd a beragadás "
-"kockázatát 50%-al egy napra, csak 8 tapasztalatpontért."
-
-msgid ""
-":champagne: Your weapon is perfectly lubricated, no need for more grease"
-msgstr ":champagne: A fegyvered tökéletesen meg van kenve, nem kell több zsír"
-
-msgid ""
-":money_with_wings: You add a sight to your weapon, for 5 exp points, your "
-"aiming was improved using this formulae : (100 - current accuracy) / 3. "
-msgstr ""
-":money_with_wings: Látcsövet adtál hozzá a fegyveredhez, 5 "
-"tapasztalatpontért, a célzásod ilyen mértékben fejlődött: (100 - mostani "
-"célzás) / 3."
-
-msgid ":champagne: You already have a sight to your weapon. "
-msgstr ":champagne: Van már elég AP muníciód mostanra!"
-
-msgid ""
-":money_with_wings: You add an infrared detector to your weapon, that will "
-"prevent any waste of ammo for a day. Cost : 15 exp points."
-msgstr ""
-":money_with_wings: Infravörös detektort szereztél be a fegyveredhez, amely "
-"meg minden muníció elvesztegetését megakadályozza egy napra. Ár: 15 "
-"tapasztalatpont."
-
-msgid ":champagne: You do have an infrared detector on your weapon, right ?"
-msgstr ":champagne: Már van egy infravörös detektor a fegyvereden, nem?"
-
-msgid ""
-":money_with_wings: You add a silencer to your weapon, no duck will ever be "
-"frightened by one of your shots for a day. Cost : 5 exp points, what a good "
-"deal !"
-msgstr ""
-":money_with_wings: Hangtompítót adtál hozzá a fegyveredhez, egy kacsa sem "
-"fog elrepülni a lövéseid miatt. Ár: 5 tapasztalatpont, micsoda remek "
-"ajánlat!"
-
-msgid ":champagne: You do have a silencer on your weapon, right ?"
-msgstr ":champagne: Már van hangtompító a fegyvereden, nem?"
-
-msgid ""
-":money_with_wings: You buy a fresh 4-leaf clover, which will give you {exp} "
-"more exp point for the next day. You brought it for 13 exp!"
-msgstr ""
-":money_with_wings: Vettél egy friss 4-levelű lóherét, ami {exp} vel több "
-"tapasztalatpontot ad a következő napra. 13 xp-ért vetted!"
-
-msgid ""
-":champagne: You're too lucky, but I don't have any clover left for you today "
-":'(. Too much luck, maybe ??"
-msgstr ""
-":champagne: Nagyon szerencsés vagy, de nincs neked semmilyen lóherém mára. :"
-"'( Talán túl sok a szerencse?"
-
-msgid ""
-":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
-"immune to sunlight for a day"
-msgstr ""
-":money_with_wings: Vettél egy napszemüveget 5 tapasztalatpontért! Most már "
-"immunis vagy a napsugárzásra egy napra"
-
-msgid ""
-":money_with_wings: You brought brand new sunglasses, for nothing but the "
-"fact that you are mostly swag now. :cool:"
-msgstr ""
-":money_with_wings: Vettél új napszemüveget a semmiért, de most legalább te "
-"vagy a legswagebb a szobában. :cool:"
-
-msgid ""
-":money_with_wings: You have some dry clothes on you now. You looks beautiful "
-"! "
-msgstr ":money_with_wings: Már száraz ruha van rajtad. Csodálatosan nézel ki!"
-
-msgid ""
-":money_with_wings: You brought brand new clothes, for nothing but the fact "
-"that you are mostly swag now. :cool:"
-msgstr ""
-":money_with_wings:  Vettél új ruhákat a semmiért, de most legalább te vagy a "
-"legswagebb a szobában. :cool:"
-
-msgid ""
-":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
-"weapon was sabtaged, it's fixed now !"
-msgstr ""
-":champagne: Kitisztítottad a fegyvered 6 tapasztalatpontért. Ha homok volt "
-"benne, vagy szabotálták, már meg van javítva!"
-
-msgid ":x: No way ! {mention} have some sunglasses ! He is immune to this ! "
-msgstr ":x: Na ne! {mention} nek napszemüvege van! Immunis erre!"
-
-msgid ""
-":money_with_wings: You dazzles {mention}! He loose 50% accuracy on his next "
-"shot !"
-msgstr ""
-":money_with_wings: Elvakítottad {mention}! A következő lövésénél 50% "
-"pontosságot veszt!"
-
-msgid ":champagne: You throw sand on {mention} weapon!"
-msgstr ":champagne: Homokot dobtál {mention} fegyverébe!"
-
-msgid ""
-":money_with_wings: You drop a full water bucket on {target}, forcing him to "
-"wait 1 hour for his/her clothes to dry before he/she can return hunting"
-msgstr ""
-":money_with_wings: Egy teli vizes vödröt öntöttél {target} re, kényszerítve "
-"arra, hogy várjon 1 órát a ruháinak száradására, mielőtt vissza tudna menni "
-"vadászni."
-
-msgid ""
-":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
-msgstr ":ok:  {target} fegyverét elrontottad... de nem is tudja :D (14 xp) !"
-
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr ":ok: {target} fegyverét már elrontottad!"
-
-msgid ""
-":money_with_wings: You buy a life insurence for a week for 10 exp. If you "
-"get killed, you will earn half the level of the killer in exp"
-msgstr ""
-":money_with_wings: Vettél életbiztosítást egy hétre 10 xp-ért. Ha megölnek, "
-"a gyilkos szintjének a felét megkapod tapasztalatpontban"
-
-msgid ":money_with_wings: You are already insured."
-msgstr ":money_with_wings: Már biztosítva vagy. "
-
-msgid ""
-":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
-"thanks to the decoy of {mention}. He brought it for 8 exp !"
-msgstr ""
-":money_with_wings: Egy kacsa fog megjelenni a következő 10 percben a "
-"szobában, köszönhetően {mention} csalijának. 8 xp-ért vette!"
-
-msgid ""
-":money_with_wings: You place some bread on the channel to attract ducks. "
-"They will leave 20 seconds later for the rest of the day !"
-msgstr ""
-":money_with_wings: Kenyeret tettél le, hogy idecsalogasd a kacsákat, ezért "
-"20 másodperccel tovább maradnak a mai napon!"
-
-msgid ""
-":money_with_wings: You will be warned when the next duck on #{channel_name} "
-"spawns"
-msgstr ""
-":money_with_wings: Figyelmeztetve leszel, amikor jön a következő kacsa "
-"#{channel_name} ra"
-
-msgid ""
-":money_with_wings: You prepare a mechanical duck on the channel for 50 exp. "
-"That's bad, but so funny !"
-msgstr ""
-":money_with_wings: Készitettél egy robotkacsát a szobádba 50 tapasztalatért. "
-"Ez rossz, de annyira vicces!  "
 
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
@@ -670,105 +376,18 @@ msgstr "Szerverek kevesebb mint 24 kacsával naponta"
 msgid "Memory used (MB)"
 msgstr "Memória használva (megabájt)"
 
-msgid "Python version : "
-msgstr "Python verzió:"
-
-msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
-msgstr "BANG vagy BANG, melyik a jobb? :p Amúgy fenn vagyok és futok"
-
-msgid "Check out our new website ! http://api-d.com/command-list.html"
-msgstr "Nézd meg az új honlapunkat: http://api-d.com/command-list.html"
-
-msgid ":ok: Done, user banned :gun:"
-msgstr ":ok: Kész, felhasználó kitiltva :gun:"
-
-msgid ":ok: Done, user unbanned :eyes:"
-msgstr ":ok: Kész, felhasználó visszavéve :eyes:"
-
-msgid ":ok:, they now have {newexp} exp points !"
-msgstr ":ok:, nekünk már {newexp} tapasztalatpontunk van!"
-
-msgid ":robot: Channel added !"
-msgstr ":robot: Csatorna hozzáadva!"
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"Gratula, te küldtél / kaptál több xp-t, mint a maximum összeg amit "
+"raktározni tudok."
 
 msgid ":x: This channel already exists in the game."
 msgstr ":x: Ez a csatorna már létezik a játékban."
 
-msgid ":ok: Channel deleted"
-msgstr ":ok: Csatorna törölve"
-
-msgid "There is {ducks} ducks left to spawn today !"
-msgstr "Ma {ducks} kacsa jött erre a szerverre!"
-
-msgid ":robot: OK, {name} was set as an admin on the server !"
-msgstr ":robot: OK, {name} egy újabb admin a szerveren!"
-
-msgid ":robot: OK, {name} was removed from this server admins !"
-msgstr ":robot: OK, {name} törölve a szerver adminjai közül!"
-
-msgid ":robot: OK, {name} is not an admin !"
-msgstr ":robot: OK, {name} nem admin többé!"
-
-msgid ":robot: OK, you have been set as an admin !"
-msgstr ":robot: OK, admin lettél!"
-
-msgid ":x: An admin exist on this server ! Try !add_admin"
-msgstr ":x: Egy admin már létezik a szerveren! Próbáld !add_admin"
-
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} üzenet(ek) törölve"
-
-msgid "0 message(s) deleted : permission denied"
-msgstr "0 üzenet(ek) törölve: engedély elutasítva"
-
-msgid "Permissions : {permissions}"
-msgstr "Engedélyek:  {permissions}"
-
-msgid ":ok: Scores / stats of the channel were succesfully deleted."
-msgstr ":ok: Pontszámok / statisztikák a szerveren sikeresen törölve."
-
-msgid ""
-":x: Incorrect syntax : `!settings [view/set/reset/list/modified] [setting if "
-"applicable]`"
-msgstr ""
-"Helytelen parancs: `!settings [view/set/reset/list/modified] [setting if "
-"applicable]`"
-
-msgid "The setting {pref} is set at {value} on this server."
-msgstr "A szabályozás {pref}  {value} ra lett állítva ezen a szerveren"
-
-msgid ""
-":x: Invalid preference, maybe a typo ? Check the list with `!settings list`"
-msgstr ""
-":x: Helytelen kérés, talás egy nyelvtani hiba? Nézd meg a listát `!settings "
-"list` paranccsal."
-
-msgid ""
-"Bypassing the max_ducks_per_day check as you are the bot owner. It would be "
-"{max}"
-msgstr ""
-"Kitérni a max_ducks_per_day ellenőrzés alól, ha te vagy a bot gazdája Ez "
-"{max} lenne"
-
-msgid ":x: Incorrect value"
-msgstr ":x: Helytelen összeg"
-
-msgid ":ok: The setting {pref} was set at `{value}` on this server."
-msgstr ":ok: A szabályozást {pref}  {value} ra állították ezen a szerveren."
-
-msgid ""
-":ok: The setting {pref} reset to it's defalut value on this server : "
-"`{value}` "
-msgstr ""
-"A szabályozás {pref} visszaállítva az alapmértékre ezen a szerveren: "
-"`{value}`"
-
-msgid ""
-"List of preferences is available on the new website : https://api-d.com/bot-"
-"settings.html"
-msgstr ""
-"A bot beállításainak listája itt található: https://api-d.com/bot-settings."
-"html"
 
 msgid "Parameter"
 msgstr "Paraméter"
@@ -778,20 +397,6 @@ msgstr "Érték"
 
 msgid "Default value"
 msgstr "Alapérték"
-
-msgid "List of modified parameters : \n"
-"```{table}```"
-msgstr "Megváltoztatott paraméterek listája: \n"
-"```{table}```"
-
-msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
-msgstr "Nem vagy száraz, nem mehetsz vadászni! Várj {temps_restant} percet."
-
-msgid "You don't have a weapon"
-msgstr "Nincsen fegyvered "
-
-msgid "Your weapon is jammed, it must be reloaded to unstuck it."
-msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
 
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
@@ -803,59 +408,6 @@ msgstr ""
 "** TÖLTET ÜRES ** | Muníció a fegyverben:  {balles_actuelles} /  "
 "{balles_max} | Maradék töltet:   {chargeurs_actuels} /  {chargeurs_max}"
 
-msgid "Your weapon is jammed, reload to unstuck it."
-msgstr "A fegyvered besült, töltsd újra a használathoz. "
-
-msgid ""
-"There isn't any duck in here, but the bullet wasn't fired because the "
-"infrared detector you added to your weapon is doing it's job!"
-msgstr ""
-"Itt egyáltalán nincsenek kacsák, de a lövedéket nem lőtted ki, mert az "
-"infravörös detektor amit hozzáadtál a fegyverhez teszi a dolgát!"
-
-msgid ""
-"Luckily you missed, what were you aiming at exactly? There isn't any duck in "
-"here... [missed : -1 xp] [wild shot: -1 xp]"
-msgstr ""
-"Szerencsére elvétetted, mire céloztál egyáltalán? Itt nincsenek kacsák... "
-"[elvétve: -1 xp] [vaklövés: -1 xp]"
-
-msgid ""
-"**FLAPP**\tFrightened by so much noise, the duck fled ! CONGRATS ! [missed : "
-"-1 xp]"
-msgstr ""
-"**FLAPP** A túl sok zajtól megijedve, a kacsa elrepült! GRATULA! [elvétve: -"
-"1 xp]"
-
-msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "**PIEWW**⇥ Nem találtad el a kacsát! [elvétve: -1 xp]"
-
-msgid ""
-"**BANG**\tYou missed the duck... And shot {player} ! [missed : -1 xp] "
-"[hunting accident : -2 xp] [weapon confiscated]"
-msgstr ""
-"**BANG** Elvétetted a kacsát... de lelőtted {player} ! [elvétve: -1 xp] "
-"[vadászbaleset: -2 xp] [fegyver elkobozva]"
-
-msgid ""
-"**BANG**\tYou missed the duck... but shot yourself. Turn your weapon a "
-"little before shooting the next time, maybe ? [missed : -1 xp] [hunting "
-"accident : -2 xp] [weapon confiscated]"
-msgstr ""
-"**BANG** Nem találtad el a kacsát... de meglőtted magad. Legközelebb "
-"fordítsd el egy kicsit a fegyveredet, mielőtt lősz, rendben? [elvétve: -1 "
-"xp] [vadászbaleset: -2 xp] [fegyver elkobozva]"
-
-msgid " > You won {exp} with your life insurance"
-msgstr "Nyertél egy kis {exp} az életbiztosításoddal."
-
-msgid ""
-"That was close, you almost killed the duck, but the other hunter got it "
-"first ! [missed : -1 xp]"
-msgstr ""
-"Ez közel volt, majdnem megölted a kacsát, de a másik vadász lőtte le! "
-"[elvétve: -1 xp]"
-
 msgid ""
 ":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
 "now at a grand total of {total} ducks (of which {supercanards} were super-"
@@ -864,44 +416,6 @@ msgstr ""
 ":skull_crossbones: **BOUM** A kacsát  {time} másodperc alatt ölted meg, így "
 "már {total} kacsa lett az áldozatod (amelyekből  {supercanards} szuperkacsa) "
 "a #{channel} csatornán.  \\_X< *COUAC* [{exp} exp]"
-
-msgid ":gun: Duck survived, try again *SUPER DUCK DETECTED* [life : -{vie}]"
-msgstr ""
-":gun: A kacsa túlélte, próbáld újra *SZUPERKACSA ÉSZLELVE*  [élet: -{vie}]"
-
-msgid "Your weapon had been confiscated"
-msgstr "A fegyvered el lett kobozva"
-
-msgid "You unstuck your weapon."
-msgstr "Kilazítottad a fegyvered."
-
-msgid "You reload your weapon"
-msgstr "Újratöltötted a fegyvered"
-
-msgid "You dont have any ammo left !"
-msgstr "Nincs több lőszered! "
-
-msgid "You don't need to reload your weapon"
-msgstr "Nem kell újratöltened a fegyvered. "
-
-msgid ""
-"{greet} | Ammo in weapon : {balles_actuelles}/{balles_max} | Chargers left : "
-"{chargeurs_actuels}/{chargeurs_max}"
-msgstr ""
-"{greet} Lőszer a fegyverben:  {balles_actuelles} / {balles_max} | Töltetek:  "
-"{chargeurs_actuels} / {chargeurs_max}"
-
-msgid ""
-":x: You can't use this command, you don't have at least {exp} exp points!"
-msgstr ""
-":x: Nem használhatod ezt a parancsot, kell hogy legyen neked legalább  {exp} "
-"tapasztalatpontod!"
-
-msgid ":x: You can't use this command, you are not the owner of the bot !"
-msgstr ":x: Nem használhatod ezt a parancsot, nem te vagy a bot gazdája!"
-
-msgid ":x: You can't use this command, you are not an admin on this server!"
-msgstr "Nem használhatod ezt a parancsot, nem vagy Admin a szerveren! "
 
 msgid "public danger"
 msgstr "közveszélyes "
@@ -1044,29 +558,8 @@ msgstr "Hogy vagy ma? "
 msgid "Please don't kill me..."
 msgstr "Kérlek ne ölj meg... "
 
-msgid "Me too, I love you !"
-msgstr "Én is szeretlek!"
-
-msgid "Don't shoot me ! I'm a fake duck !"
-msgstr "Ne lőjj le! Hamis kacsa vagyok!"
-
-msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "A kacsa elhagyott minket ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "A kacsa átment egy másik világba ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "A kacsának nincs erre ideje ·°'\\`'°-.,¸¸.·°'\\` "
-
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elment. ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "A kacsa elveszett a tér-időben. ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "A kacsa hazament unalmában. ·°'\\`'°-.,¸¸.·°'\\`"
 
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa nem akarta, hogy lelőjék. ·°'\\`'°-.,¸¸.·°'\\`"

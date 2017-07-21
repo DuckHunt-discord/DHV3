@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-12 13:48+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,29 +23,6 @@ msgstr ""
 ":x: Entschuldigung, der Befehl ist deaktiviert und kann nicht verwendet "
 "werden."
 
-msgid "Send error report ? "
-msgstr "Fehlermeldung senden?"
-
-msgid ""
-"Sadly, I need `add_reactions` and `create_instant_invite` permissions to be "
-"able to send an error report."
-msgstr ""
-"Ich benötige die Rechte `add_reactions` (Reaktionen hinzufügen) und  "
-"`create_instant_invite` (Soforteinladung erstellen), um einen Fehlerbericht "
-"zu senden."
-
-msgid ""
-":x: An error ({error}) happened in {command}, here is the traceback : ```\n"
-"{tb}\n"
-"```\n"
-"{error_report}"
-msgstr ""
-":x: Ein Fehler ({error}) wurde durch den Befehl {command} ausgelöst. "
-"Fehlermeldung: ```\n"
-"{tb}\n"
-"```\n"
-"{error_report}"
-
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Generiere Einladung zum Melden des Fehlers..."
 
@@ -61,12 +38,6 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 "{tb}"
-
-msgid ":ok: Error message sent, thanks :)"
-msgstr ":ok: Fehler wurde gemeldet, danke :)"
-
-msgid "OK, I won't send an error report"
-msgstr "Okay, ich werde keinen Fehlerbericht senden."
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Missing a required argument. "
@@ -115,17 +86,8 @@ msgstr "Entferne {servers} ungenutze Server (insgesamt {members} Mitglieder)"
 msgid "To confirm, please type {random_str} now."
 msgstr "Schreibe {random_str} zur Bestätigung."
 
-msgid ":x: Operation canceled, you took too long to answer."
-msgstr ":x: Vorgang abgebrochen, du hast zu lange gebraucht."
-
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Beendet mit Fehlern bei {failed} Servern."
-
-msgid "Starting the broadcast"
-msgstr "Starte Rundnachricht"
-
-msgid "Broadcast finished"
-msgstr "Rundnachricht beendet"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Nachricht ({message}) an {server} #{channel} gesendet."
@@ -147,9 +109,6 @@ msgstr "{dans} Stunden"
 msgid "{dans} minutes"
 msgstr "{dans} Minuten"
 
-msgid ":ok: Your best time was reset."
-msgstr ":ok: Deine Bestzeit wurde zurückgesetzt."
-
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -162,36 +121,14 @@ msgstr ""
 ":x: Um Missbrauch zu verhindern, kannst du kein EXP senden, während du keine "
 "Waffe hast."
 
-msgid ":x: You need to give a positive number for the exp to send"
-msgstr ":x: Du musst eine natürliche Zahl eingeben um Erfahrung zu versenden."
-
-msgid ""
-"Congratulations, you sent / gave more experience than the maximum number I'm "
-"able to store."
-msgstr "Glückwunsch, du hast mehr Erfahrung vergeben als ich speichern kann."
-
-msgid ""
-"You sent {amount} exp to {target} (and paid {taxes} exp of taxes for this "
-"transfer) !"
-msgstr ""
-"Du hast {amount} exp an {target} gesendet (und {taxes} exp Steuern für den "
-"Transfer gezahlt)"
-
 msgid "You don't have enough experience points"
 msgstr "Du hast nicht genug Erfahrungspunkte"
 
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Das Übertragen von Exp ist auf diesem Server deaktiviert"
 
-msgid "Generating duckstats for you, please wait!"
-msgstr "Generiere duckstats für dich, bitte warte kurz!"
-
 msgid "Page {current}/{max}"
 msgstr "Seite {current}/{max}"
-
-msgid "\n"
-"Confiscated weapon !"
-msgstr "Waffe beschlagnahmt!\n"
 
 msgid "General statistics"
 msgstr "Generelle Statistiken"
@@ -320,13 +257,6 @@ msgid "Effect: wet"
 msgstr "Effekt: Nässe"
 
 msgid ""
-":warning: Error sending embed, check if the bot have the permission "
-"embed_links and try again !"
-msgstr ""
-":warning: Fehler beim Einbinden eines Links, bitte überprüfe, ob der Bot die "
-"Berechtigung embed_links/Links einbinden hat und versuche es erneut!"
-
-msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
 msgstr ""
@@ -337,15 +267,6 @@ msgstr "Rang"
 
 msgid "Nickname"
 msgstr "Spitzname"
-
-msgid ":cocktail: Best scores for #{channel_name} : :cocktail:\n"
-"```{table}```"
-msgstr ""
-":cocktail: Beste Punktzahlen für #{channel_name}: :cocktail:\n"
-"```{table}```"
-
-msgid "Generating topscores for your channel, please wait!"
-msgstr "Generiere Bestenliste für diesen Kanal, bitte warten!"
 
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Höchstpunktzahlen für #{channel_name} :cocktail:"
@@ -362,117 +283,14 @@ msgstr "Erfahrungspunkte"
 msgid "Number of ducks killed"
 msgstr "Anzahl der getöteten Enten"
 
-msgid "There is nothing more..."
-msgstr "Hier gibt's nichts mehr..."
-
-msgid ""
-"I don't have the `manage_messages` permissions, I can't remove reactions. "
-"Warn an admin for me, please ;)"
-msgstr ""
-"Ich habe die Berechtigung `manage_messages` (Nachrichten verwalten) nicht, "
-"so kann ich keine Reaktionen entfernen. Weise doch bitte einen Admin darauf "
-"hin."
-
-msgid ""
-":x: Incorrect syntax : `!shop [list/item number] [argument if applicable]`"
-msgstr ""
-":x: Falsche Syntax: `!shop [list/Itemnummer] [Argument falls erforderlich]`"
-
-msgid "The list of items is available here : http://api-d.com/shop-items.html"
-msgstr "Die Liste der Items gibt's hier: http://api-d.com/shop-items.html"
-
-msgid ":money_with_wings: You add a bullet to your weapon for 7 exp points"
-msgstr ""
-":money_with_wings: Du hast für 7 exp eine Kugel für deine Waffe gekauft."
-
-msgid ":champagne: Your charger is full !"
-msgstr ":champagne: Dein Magazin ist voll!"
-
-msgid ""
-":money_with_wings: You add a charger to your backpack for 13 exp points."
-msgstr ""
-":money_with_wings: Du hast für 13 exp ein Magazin in deinen Rucksack gepackt."
-""
-
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Du hast ausreichend Magazine"
-
-msgid ""
-":money_with_wings: You purchase AP ammo for your weapon. For the next 24 "
-"hours, you will deal double damage to ducks."
-msgstr ""
-":money_with_wings: Du hast AP-Munition gekauft. Du wirst für die nächsten 24 "
-"Stunden doppelten Schaden verursachen."
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Du hast vorerst genug panzerbrechende Munition!"
 
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Du hast jetzt vorerst genug Explosionsmunition!"
-
-msgid ":money_with_wings: You take your weapon back for 40 exp points"
-msgstr ":money_with_wings: Du hast deine Waffe für 40 exp zurückbekommen."
-
-msgid ""
-":champagne: You haven't killed anyone today, you have your weapon, what do "
-"you want to buy ? :p"
-msgstr ""
-":champagne: Du hast heute keinen umgebracht; du hast deine Waffe. Was "
-"möchtest du denn kaufen? :p"
-
-msgid ":champagne: You do have an infrared detector on your weapon, right ?"
-msgstr ":champagne: Du hast einen Infrarotdetektor an deiner Waffe, stimmt's?"
-
-msgid ":champagne: You do have a silencer on your weapon, right ?"
-msgstr ":champagne: Du hast doch einen Schalldämpfer an deiner Waffe, oder?"
-
-msgid ""
-":money_with_wings: You brought a pair of sunglasses for 5 exp ! You are now "
-"immune to sunlight for a day"
-msgstr ""
-":money_with_wings: Du hast dir eine Sonnenbrille für 5 exp gekauft! Du bist "
-"jetzt resistent gegen Sonnenlicht für einen Tag"
-
-msgid ""
-":money_with_wings: You brought brand new sunglasses, for nothing but the "
-"fact that you are mostly swag now. :cool:"
-msgstr ""
-":money_with_wings: Du hast eine neue Sonnenbrille gekauft, nur um jetzt mehr "
-"swag zu haben. :cool:"
-
-msgid ""
-":money_with_wings: You have some dry clothes on you now. You looks beautiful "
-"! "
-msgstr ""
-":money_with_wings: Du hast jetzt wieder trockene Kleidung an. Das sieht "
-"super aus! "
-
-msgid ""
-":champagne: You clean your weapon for 6 exp. If you had sand, or if your "
-"weapon was sabtaged, it's fixed now !"
-msgstr ""
-":champagne: Du hast deine Waffe für 6 exp gereinigt. Falls sie durch Sand "
-"verunreinigt war oder sabotiert wurde, ist sie jetzt wieder einsatzbereit!"
-
-msgid ":champagne: You throw sand on {mention} weapon!"
-msgstr ":champagne: Du wirfst Sand auf die Waffe von {mention}!"
-
-msgid ""
-":money_with_wings: You drop a full water bucket on {target}, forcing him to "
-"wait 1 hour for his/her clothes to dry before he/she can return hunting"
-msgstr ""
-":money_with_wings: Du hast einen Eimer Wasser auf {target} geschüttet, "
-"weshalb er/sie jetzt eine Stunde warten muss, bis er/sie wieder jagen kann"
-
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr ":ok: Die Waffe von {target} ist bereits sabotiert!"
-
-msgid ""
-":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
-"thanks to the decoy of {mention}. He brought it for 8 exp !"
-msgstr ""
-":money_with_wings: Eine Ente wird in den nächsten 10 Minuten in diesem Kanal "
-"auftauchen, da {mention} sie für 8 exp mit einem Köder angelockt hat!"
 
 msgid " < *BZAACK*"
 msgstr " < *BZAACK*"
@@ -552,50 +370,16 @@ msgstr "Server mit weniger als 24 Enten pro Tag"
 msgid "Memory used (MB)"
 msgstr "Verwendeter Arbeitsspeicher (MB)"
 
-msgid "Python version : "
-msgstr "Python-Version"
-
-msgid "Check out our new website ! http://api-d.com/command-list.html"
-msgstr "Schau dir unsere neue Webseite an: http://api-d.com/command-list.html"
-
-msgid ":ok: Done, user banned :gun:"
-msgstr ":ok: Fertig, Nutzer wurde gesperrt :gun:"
-
-msgid ":ok: Done, user unbanned :eyes:"
-msgstr ":ok: Fertig, Nutzer wurde entesperrt :eyes:"
-
-msgid ":robot: Channel added !"
-msgstr ":robot: Kanal hinzugefügt"
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr "Glückwunsch, du hast mehr Erfahrung vergeben als ich speichern kann."
 
 msgid ":x: This channel already exists in the game."
 msgstr ":x: Dieser Kanal ist bereits im Spiel."
 
-msgid ":ok: Channel deleted"
-msgstr ":ok: Kanal gelöscht"
-
-msgid "There is {ducks} ducks left to spawn today !"
-msgstr "Es werden heute noch {ducks} Enten auftauchen!"
-
-msgid ":robot: OK, {name} was set as an admin on the server !"
-msgstr ":robot: Okay, {name} ist jetzt Admin auf diesem Server Servers!"
-
-msgid ":robot: OK, {name} is not an admin !"
-msgstr ":robot: Okay, {name} ist kein Admin!"
-
-msgid ":robot: OK, you have been set as an admin !"
-msgstr ":robot: Okay, du bist jetzt Admin!"
-
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} Nachricht(en) gelöscht"
-
-msgid "0 message(s) deleted : permission denied"
-msgstr "0 Keine Nachricht gelöscht: Zugriff verweigert"
-
-msgid "Permissions : {permissions}"
-msgstr "Berechtigungen: {permissions}"
-
-msgid ":x: Incorrect value"
-msgstr ":x: Falscher Wert"
 
 msgid "Parameter"
 msgstr "Parameter"
@@ -606,48 +390,10 @@ msgstr "Wert"
 msgid "Default value"
 msgstr "Standardwert"
 
-msgid "You don't have a weapon"
-msgstr "Du hast keine Waffe"
-
-msgid "Your weapon is jammed, it must be reloaded to unstuck it."
-msgstr "Deine Waffe ist blockiert; du musst nachladen, um sie zu lockern."
-
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Deine Waffe ist sabotiert, {assaillant} ist für diesen schlechten Scherz "
 "verantwortlich."
-
-msgid "Your weapon is jammed, reload to unstuck it."
-msgstr ""
-"Deine Waffe hat sich verklemmt, lade nach, um wieder schießen zu können."
-
-msgid ""
-"Luckily you missed, what were you aiming at exactly? There isn't any duck in "
-"here... [missed : -1 xp] [wild shot: -1 xp]"
-msgstr ""
-"Glücklicherweise hast du verfehlt, worauf hast du gezielt? Hier ist gerade "
-"keine Ente... [verfehlt : -1 xp] [wilder Schuss: -1 xp]"
-
-msgid "**PIEWW**\tYou missed the duck ! [missed : -1 xp]"
-msgstr "**PIEWW** Du hast die Ente verfehlt ! [verfehlt : -1 xp]"
-
-msgid "Your weapon had been confiscated"
-msgstr "Deine Waffe wurde beschlagnahmt"
-
-msgid "You reload your weapon"
-msgstr "Du hast nachgeladen"
-
-msgid "You dont have any ammo left !"
-msgstr "Du hast keine Munition mehr übrig!"
-
-msgid "You don't need to reload your weapon"
-msgstr "Du musst jetzt nicht nachladen"
-
-msgid ""
-":x: You can't use this command, you don't have at least {exp} exp points!"
-msgstr ""
-":x: Du kannst diesen Befehl nicht verwenden, da du mindestens {exp} Punkte "
-"benötigst!"
 
 msgid "public danger"
 msgstr "Öffentliche Gefahr"
@@ -706,23 +452,8 @@ msgstr "Wie geht's dir heute?"
 msgid "Please don't kill me..."
 msgstr "Bitte bring mich nicht um..."
 
-msgid "Don't shoot me ! I'm a fake duck !"
-msgstr "Erschieß mich nicht! Ich bin keine echte Ente!"
-
-msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Ente ist davongelaufen. ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Enten sind in eine andere Welt verschwunden ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Ente hatte keine Zeit mehr für das hier  ·°'\\`'°-.,¸¸.·°'\\`"
-
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Die Ente ist weggewatschelt  ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Ente ist vor Langeweile wieder gegangen.  ·°'\\`'°-.,¸¸.·°'\\`"
 
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Die Ente wollte nicht erschossen werden.  ·°'\\`'°-.,¸¸.·°'\\`"

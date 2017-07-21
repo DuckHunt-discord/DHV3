@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-06-12 13:48+0000\n"
+"POT-Creation-Date: 2017-07-19 18:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,6 @@ msgstr "Ime"
 
 msgid "Invitation"
 msgstr "Pozivnica"
-
-msgid ":ok: Your best time was reset."
-msgstr "Vaše najbolje vrijeme je poništeno."
 
 msgid "No duck killed"
 msgstr "Nema ubijenih patki"
@@ -63,16 +60,6 @@ msgstr "Bodovi iskustva"
 msgid "Number of ducks killed"
 msgstr "Ubijene patke"
 
-msgid "There is nothing more..."
-msgstr "Nema više ničega..."
-
-msgid ":champagne: Your charger is full !"
-msgstr "Tvoj spremnik je pun!"
-
-msgid ""
-":money_with_wings: You add a charger to your backpack for 13 exp points."
-msgstr "Kupio si spremnik za 13 exp."
-
 msgid ":champagne: You have enough chargers!"
 msgstr "Imaš dovoljno spremnika!"
 
@@ -81,57 +68,6 @@ msgstr "Imaš dovoljno protuoklopne municije!"
 
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr "Imaš dovoljno eksplozivne municije!"
-
-msgid ":money_with_wings: You take your weapon back for 40 exp points"
-msgstr "Uzeo si oružje za 40 exp"
-
-msgid ""
-":champagne: You haven't killed anyone today, you have your weapon, what do "
-"you want to buy ? :p"
-msgstr "Nisi nikog ubio danas, imaš svoje oružje, što želiš kupiti ? :p"
-
-msgid ""
-":champagne: Your weapon is perfectly lubricated, no need for more grease"
-msgstr "Tvoje oružje je savršeno podmazano, ne moraš kupovati više ulja"
-
-msgid ":champagne: You already have a sight to your weapon. "
-msgstr "Već imaš nišan na svom oružju."
-
-msgid ":champagne: You do have an infrared detector on your weapon, right ?"
-msgstr "Već imaš infracrveni detektor, zar ne?"
-
-msgid ":champagne: You do have a silencer on your weapon, right ?"
-msgstr "Već imaš prigušivač, zar ne?"
-
-msgid ""
-":champagne: You're too lucky, but I don't have any clover left for you today "
-":'(. Too much luck, maybe ??"
-msgstr ""
-"Imaš mnogo sreće, ali danas više nemam djetelina za tebe :'(. Možda previše "
-"sreće ??"
-
-msgid ""
-":money_with_wings: You have some dry clothes on you now. You looks beautiful "
-"! "
-msgstr "Sada imaš suhu odjeću. Izgledaš predivno !"
-
-msgid ":champagne: You throw sand on {mention} weapon!"
-msgstr "Bacio si pjesak na oružje od {mention}!"
-
-msgid ""
-":ok: {target} weapon is sabotaged... But he don't know it :D (14 exp) !"
-msgstr "Oružje od {target} je sabotirano...  Ali on to nezna :D (14 exp) !"
-
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr "Oružje od {target} je već sabotirano!"
-
-msgid ":money_with_wings: You are already insured."
-msgstr "Već si osiguran."
-
-msgid ""
-":money_with_wings: You will be warned when the next duck on #{channel_name} "
-"spawns"
-msgstr "Bit ćeš upozoren kad se patka pojavi na #{channel_name}"
 
 msgid " < "
 msgstr "<"
@@ -187,38 +123,11 @@ msgstr "Vrijeme rada u danima"
 msgid "Memory used (MB)"
 msgstr "Korištena memorija (MB)"
 
-msgid "Python version : "
-msgstr "Python verzija :"
-
-msgid "BANG OR BANG, what's the best ? :p Anyway I'm up and running"
-msgstr "BANG ILI BANG, što je najbolje ? :p Svejedno ja sam tu i radim"
-
-msgid ":ok: Done, user banned :gun:"
-msgstr "U redu, igrač je baniran"
-
-msgid ":ok: Done, user unbanned :eyes:"
-msgstr "U redu, igrač više nije baniran"
-
-msgid ":robot: Channel added !"
-msgstr "Kanal dodan !"
-
 msgid ":x: This channel already exists in the game."
 msgstr "Ovaj kanal već postoji u igri."
 
-msgid ":ok: Channel deleted"
-msgstr "Kanal izbrisan"
-
-msgid ":robot: OK, you have been set as an admin !"
-msgstr "U redu, vi ste postavljeni za administratora !"
-
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} poruka(e) izbrisano"
-
-msgid "Permissions : {permissions}"
-msgstr "Dozvole :  {permissions}"
-
-msgid ":x: Incorrect value"
-msgstr "Netočna vrijednost"
 
 msgid "Parameter"
 msgstr "Parametar"
@@ -229,35 +138,8 @@ msgstr "Vrijednost"
 msgid "Default value"
 msgstr "Zadana vrijednost"
 
-msgid "You are not dry, you cant go hunting ! Wait {temps_restant} minutes. "
-msgstr "Nisi suh, ne možeš ići u lov ! Pričekaj {temps_restant} minuta(e)."
-
-msgid "You don't have a weapon"
-msgstr "Nemaš oružje"
-
-msgid "Your weapon is jammed, it must be reloaded to unstuck it."
-msgstr "Vaše oružje je zapelo, morate ga repetirati da biste ga koristili."
-
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
-
-msgid "Your weapon is jammed, reload to unstuck it."
-msgstr "Vaše oružje je zapelo, repetirajte ga."
-
-msgid "Your weapon had been confiscated"
-msgstr "Vaša oružje je oduzeto"
-
-msgid "You unstuck your weapon."
-msgstr "Repetirali ste svoje oružje"
-
-msgid "You reload your weapon"
-msgstr "Repetirali ste svoje oružje"
-
-msgid "You dont have any ammo left !"
-msgstr "Nemaš više municije !"
-
-msgid "You don't need to reload your weapon"
-msgstr "Ne morate repetirati vaše oružje"
 
 msgid "public danger"
 msgstr "Opća opasnost"
@@ -334,29 +216,8 @@ msgstr "Kako si danas?"
 msgid "Please don't kill me..."
 msgstr "Molim te, nemoj me ubit..."
 
-msgid "Me too, I love you !"
-msgstr "I ja tebe volim !"
-
-msgid "Don't shoot me ! I'm a fake duck !"
-msgstr "Ne pucaj ! Ja sam lažna patka !"
-
-msgid "The duck went away  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Patka je odletjela ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The ducks went to another world  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Patka je otišla na drugi svijet ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck did not have time for this  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Patka nije imala vremena za ovo ·°'\\`'°-.,¸¸.·°'\\`"
-
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Patka nas je napustila ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck dissipate in space-time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Patka je nestala u prostoru-vremenu ·°'\\`'°-.,¸¸.·°'\\`"
-
-msgid "The duck leave of boredoom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Patki je dosadilo ovdje ·°'\\`'°-.,¸¸.·°'\\`"
 
 msgid "a stuffed duck."
 msgstr "prepariranu patku."
