@@ -334,7 +334,7 @@
 <div id="latency"
      style="height:300px;"></div>
 <script type="text/javascript">
-    g4 = new Dygraph(
+    g5 = new Dygraph(
         document.getElementById("latency"),
         "csv/latency.csv", // path to CSV file
         {
@@ -352,7 +352,7 @@
 <div id="ducks"
      style="height:300px;"></div>
 <script type="text/javascript">
-    g5 = new Dygraph(
+    g6 = new Dygraph(
         document.getElementById("ducks"),
         "csv/ducks.csv", // path to CSV file
         {
@@ -368,7 +368,7 @@
 </script>
 
 <script>
-    var sync = Dygraph.synchronize([g1, g2, g3, g4, g5], {selection: true, zoom: true, range: false})
+    var sync = Dygraph.synchronize([g1, g2, g3, g4, g5, g6], {selection: true, zoom: true, range: false})
 </script>
 </body>
 </html>
