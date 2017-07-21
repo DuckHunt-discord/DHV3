@@ -226,7 +226,7 @@ async def mainloop():
                             currently_sleeping = True
                     else:  # 00:00 |====--------------======| 23:59
                         sdseconds = (24 - sdstart) * HOUR  # Non, on ne compte pas les autres secondes, car elles seront passées
-                        if thishour > sdstart or thishour < sdstop:
+                        if thishour >= sdstart or thishour < sdstop:
                             currently_sleeping = True
                 else:
                     sdseconds = 0
