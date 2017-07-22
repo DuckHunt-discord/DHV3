@@ -218,7 +218,7 @@ async def mainloop():
                     # logger.debug("This hour is {v} UTC".format(v=thishour))
                     # Bon, donc comptons le nombre d'heures / de secondes en tout ou les canards dorment
                     if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
-                        if thishour <= sdstop:
+                        if thishour < sdstop:
                             sdseconds = (sdstop - sdstart) * HOUR
                         else:
                             sdseconds = 0
