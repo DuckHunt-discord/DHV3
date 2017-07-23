@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:16+0000\n"
+"POT-Creation-Date: 2017-07-21 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,22 @@ msgstr ":x: Este comando no puede ser usado en mensajes privados"
 
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: Disculpe. Este comando esta deshabilitado y no puede ser usado."
+
+msgid "Send an error report?"
+msgstr "Enviar un informe del error ?"
+
+msgid ""
+":x: An error (`{error}`) happened while executing `{command}`, here is the "
+"traceback: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
+msgstr ""
+":x: Un error (`{error}`) ha ocurrido durante la ejecución`{command}`, aquí "
+"está el traceback: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Creando una invitacion para el reporte de error..."
@@ -37,8 +53,14 @@ msgstr "{cause}\n"
 "\n"
 "{tb}"
 
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Informe de error enviado, gracias. :)"
+
+msgid "OK, I won't send an error report."
+msgstr "OK, no enviaré un informe de error."
+
 msgid ":x: Missing a required argument. "
-msgstr ":x: Argumento requerido no se encuentra"
+msgstr ":x: Argumento requerido no se encuentra."
 
 msgid ":x: Bad argument provided. "
 msgstr ":x:Mal argumento proporcionado."
@@ -86,8 +108,17 @@ msgstr ""
 msgid "To confirm, please type {random_str} now."
 msgstr "Para confirmar, escriba {random_str} ahora."
 
+msgid ":x: Operation cancelled, you took too long to answer."
+msgstr ":x: Operación cancelada, te tomaste demasiado tiempo para responder."
+
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ": ok: Terminado, fallado para servidores {failed}."
+
+msgid "Starting the broadcast..."
+msgstr "Inicio de emision..."
+
+msgid "Broadcast finished!"
+msgstr "Emisión finalizada!"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Mensaje ({message}) enviado a {server} #{channel} "
@@ -107,6 +138,9 @@ msgstr "{dans} horas"
 msgid "{dans} minutes"
 msgstr "{dans} minutos"
 
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: Tu mejor tiempo ha sido reseteado."
+
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -119,11 +153,29 @@ msgstr ""
 ":x:  Para prevenir el abuso, tu no puedes enviar exp cuando no tienes un "
 "arma."
 
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Tienes que dar un numero positivo de exp para poder enviar."
+
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr ""
+"Felicitaciones, has enviado mas experiencia de la que puedo almacenar."
+
 msgid "You don't have enough experience points"
 msgstr "No tienes suficientes puntos de experiencia"
 
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: enviar exp está deshabilitado en este servidor"
+
+msgid "Generating DuckHunt statistics for you, please wait..."
+msgstr ""
+"La carga de sus DuckHunt estadísticas está en curso, por favor espere..."
+
+msgid "\n"
+"Confiscated weapon!"
+msgstr "\n"
+"Arma confiscada !"
 
 msgid "No best time."
 msgstr "No hay mejor momento."
@@ -192,6 +244,17 @@ msgstr "Rango"
 msgid "Nickname"
 msgstr "Sobrenombre"
 
+msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
+"```{table}```"
+msgstr ""
+":cocktail: Mejores puntuaciones para #\n"
+"{channel_name}:cocktail:```{table}```"
+
+msgid "Generating top scores for your channel, please wait!"
+msgstr ""
+"La carga de los mejores puntuaciones de este canal está en curso, por favor "
+"espere..."
+
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Mejores puntuaciones para #{channel_name} :cocktail:"
 
@@ -206,6 +269,12 @@ msgstr "Puntos de experiencia"
 
 msgid "Number of ducks killed"
 msgstr "Cantidad de patos asesinados"
+
+msgid "There's nothing more..."
+msgstr "No hay nada..."
+
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ":money_with_wings: Tu agregaste una bala a tu arma por 7 exp."
 
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Tienes suficientes cargadores!"

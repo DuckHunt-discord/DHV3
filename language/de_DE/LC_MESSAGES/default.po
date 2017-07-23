@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:16+0000\n"
+"POT-Creation-Date: 2017-07-21 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,12 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 "{tb}"
+
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Fehler wurde gemeldet, danke. :)"
+
+msgid "OK, I won't send an error report."
+msgstr "Okay, ich werde keinen Fehlerbericht senden."
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Missing a required argument. "
@@ -86,8 +92,17 @@ msgstr "Entferne {servers} ungenutze Server (insgesamt {members} Mitglieder)"
 msgid "To confirm, please type {random_str} now."
 msgstr "Schreibe {random_str} zur Bestätigung."
 
+msgid ":x: Operation cancelled, you took too long to answer."
+msgstr ":x: Vorgang abgebrochen, du hast zu lange gebraucht."
+
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Beendet mit Fehlern bei {failed} Servern."
+
+msgid "Starting the broadcast..."
+msgstr "Starte Rundnachricht ..."
+
+msgid "Broadcast finished!"
+msgstr "Rundnachricht beendet!"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Nachricht ({message}) an {server} #{channel} gesendet."
@@ -109,6 +124,9 @@ msgstr "{dans} Stunden"
 msgid "{dans} minutes"
 msgstr "{dans} Minuten"
 
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: Deine Bestzeit wurde zurückgesetzt."
+
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -120,6 +138,18 @@ msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Um Missbrauch zu verhindern, kannst du kein EXP senden, während du keine "
 "Waffe hast."
+
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Du musst eine natürliche Zahl eingeben um Erfahrung zu versenden."
+
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr "Glückwunsch, du hast mehr Erfahrung vergeben als ich speichern kann."
+
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Du hast {amount} exp an {target} gesendet (und {taxes} exp Steuern gezahlt)!"
 
 msgid "You don't have enough experience points"
 msgstr "Du hast nicht genug Erfahrungspunkte"

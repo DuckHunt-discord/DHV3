@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:16+0000\n"
+"POT-Creation-Date: 2017-07-21 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,16 @@ msgstr ":x: Эта команда не может быть использова�
 
 msgid ":x: Sorry. This command is disabled and cannot be used."
 msgstr ":x: К сожалению, эта команда отключена и не может быть использована."
+
+msgid "Send an error report?"
+msgstr "Отправить отчет об ошибке?"
+
+msgid ""
+"Sadly, I need the `add_reactions` and `create_instant_invite` permissions to "
+"be able to send an error report."
+msgstr ""
+"К сожалению, мне требуются разрешения `add_reactions` и "
+"`create_instant_invite` для того, чтобы отправить отчет об ошибке."
 
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Создание приглашения для отчета об ошибке..."
@@ -36,6 +46,12 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 "{tb}"
+
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Сообщение об ошибке отправлено, спасибо. :)"
+
+msgid "OK, I won't send an error report."
+msgstr "Хорошо, я не буду отправлять отчет об ошибке."
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Пропущен обязательный параметр."
@@ -67,6 +83,9 @@ msgstr "Число требуемых разрешений"
 msgid "To confirm, please type {random_str} now."
 msgstr "Для подтверждения, наберите {random_str}."
 
+msgid ":x: Operation cancelled, you took too long to answer."
+msgstr ":x: Операция отменена, слишком долго не было подтверждения."
+
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d в %H:%M:%S"
 
@@ -79,10 +98,25 @@ msgstr "{dans} часов"
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: Ваше лучшее время обнулено."
+
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Для предотвращения злоупотреблений, вы не можете передать очки опыта, "
 "пока ваше оружие конфисковано"
+
+msgid ":x: The exp amount needs to be positive."
+msgstr ""
+":x: Вам необходимо указать положительное число очков опыта, которые нужно "
+"передать."
+
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr ""
+"Поздравляем, вы отправили настолько много очков опыта, что я не могу "
+"сохранить это число."
 
 msgid "You don't have enough experience points"
 msgstr "У вас нет достаточного колличества очков опыта"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:16+0000\n"
+"POT-Creation-Date: 2017-07-21 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,12 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 " {tb}"
+
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Hibajelentés elküldve, köszönöm. :)"
+
+msgid "OK, I won't send an error report."
+msgstr "OK, nem küldök hibajelentést."
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Hiányzik a szükséges érv."
@@ -86,8 +92,17 @@ msgstr ""
 msgid "To confirm, please type {random_str} now."
 msgstr "Hogy elfogadd, kérlek írd  {random_str} most."
 
+msgid ":x: Operation cancelled, you took too long to answer."
+msgstr ":x: Akció lefújva, túl sokáig tartott válaszolnod."
+
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Befejezve, megbukott a  {failed} szervereken"
+
+msgid "Starting the broadcast..."
+msgstr "Rádióadás kezdése..."
+
+msgid "Broadcast finished!"
+msgstr "Rádióadás befejezve!"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Üzenet ({message}) elküldve  {server} #  {channel} nek"
@@ -107,6 +122,9 @@ msgstr "{dans} óra"
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: A legjobb időd vissza lett állítva."
+
 msgid ""
 ":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -118,6 +136,19 @@ msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Hogy meggátoljuk a visszaéléseket, nem küldhetsz tapasztalatpontot, ha "
 "nincs fegyvered."
+
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
+
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr ""
+"Gratula, te küldtél több xp-t, mint a maximum összeg amit raktározni tudok."
+
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Elküldtél {amount} xp-t {target} nek (és fizettél {taxes} xp-t adónak) !"
 
 msgid "You don't have enough experience points"
 msgstr "Nincs elég tapasztalatpontod"

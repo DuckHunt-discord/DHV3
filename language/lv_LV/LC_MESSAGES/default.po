@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-19 18:16+0000\n"
+"POT-Creation-Date: 2017-07-21 12:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,12 @@ msgid "{cause}\n"
 msgstr "{cause}\n"
 "\n"
 "{tb}"
+
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Kļūdas ziņa nosūtīta, paldies. :)"
+
+msgid "OK, I won't send an error report."
+msgstr "Labi, es nesūtīšu kļūdas ziņojumu."
 
 msgid ":x: Missing a required argument. "
 msgstr ":x: Trūkst nepieciešamais arguments."
@@ -83,6 +89,12 @@ msgstr ""
 msgid "To confirm, please type {random_str} now."
 msgstr "Lai apstiprinātu, lūdzu ierakstiet {random_str} kādu ziņu."
 
+msgid "Starting the broadcast..."
+msgstr "Translācija ir sākta..."
+
+msgid "Broadcast finished!"
+msgstr "Translācija ir pabeigta!"
+
 msgid "{dans} days "
 msgstr "{dans} dienas"
 
@@ -92,10 +104,23 @@ msgstr "{dans} stundas"
 msgid "{dans} minutes"
 msgstr "{dans} minūtes"
 
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: Tavs labākais laiks ir noņemts."
+
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Lai novērstu ļaunprātīgu izmantošanu, tu nevari sūtīt exp, ja tev nav "
 "ieroča."
+
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Tev jānorāda pozitīvs numurs, lai sūtītu exp."
+
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr ""
+"Apveicu, tu aizsūtīji vairāk pieredzes punktu nekā maksimālais daudzums, ko "
+"es varu uzglabāt."
 
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
