@@ -685,7 +685,7 @@ class Exp:
         scores.setStat(message.channel, target, "sand", True)
         scores.setStat(message.channel, message.author, "graisse", 0)
         scores.addToStat(message.channel, message.author, "exp", -6)
-        await comm.message_user(message, _(":champagne: You thrown sand in {mention}'s weapon!", language).format(mention=target.mention))
+        await comm.message_user(message, _(":champagne: You threw sand in {mention}'s weapon!", language).format(mention=target.mention))
 
     @shop.command(pass_context=True, name="16")
     @checks.have_exp(10)
