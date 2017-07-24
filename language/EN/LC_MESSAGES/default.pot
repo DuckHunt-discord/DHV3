@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-07-23 11:05+0000\n"
+"POT-Creation-Date: 2017-07-24 06:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -616,7 +616,7 @@ msgid ""
 msgstr ""
 
 #: cogs/exp.py:688
-msgid ":champagne: You throwed sand in {mention}'s weapon!"
+msgid ":champagne: You thrown sand in {mention}'s weapon!"
 msgstr ""
 
 #: cogs/exp.py:699
