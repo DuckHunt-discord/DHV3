@@ -18,6 +18,7 @@ from discord import InvalidArgument
 from discord.ext import commands
 
 from cogs import checks
+from cogs.checks import get_level
 
 default_reason = "**No reason provided**, use c!mod reason <case> <reason>."
 
@@ -169,6 +170,9 @@ class Mods:
         author = message.author
 
         if int(channel.id) not in [195260081036591104, 262720111591292928, 195260134908231691]:
+            return
+
+        if "invisible" in [x.name.lower() for x in author.roles] or get_level(author) >= 2:
             return
 
         if author.status is discord.Status.offline:
