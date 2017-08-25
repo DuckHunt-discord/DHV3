@@ -117,47 +117,58 @@ class Mods:
 
         return embed
 
-    async def send_user_log(self, ctx, user_id: str):
+    async def list_actions(self, user_id):
         user_id = str(user_id)
         try:
             with open(self.root_dir + "/users/" + str(user_id) + ".json", "r") as infile:
                 user_log = json.load(infile)
         except FileNotFoundError:
             user_log = []
+        actions = {
+            "Kick"    : [],
+            "Warn"    : [],
+            "Ban"     : [],
+            "Unban"   : [],
+            "Note"    : [],
+            "Mute"    : [],
+            "Unmute"  : [],
+            "Deafen"  : [],
+            "Undeafen": [],
+            "total"   : 0
+        }
 
-        if not user_log:
-            await self.bot.send_message(ctx.message.channel, "No log for this user.")
-        else:
-            actions = {
-                "Kick" : [],
-                "Warn" : [],
-                "Ban"  : [],
-                "Unban": []
-            }
+        if user_log:
             for case in user_log:
                 with open(self.root_dir + "/cases/" + str(case) + ".json") as infile:
                     case_dict = json.load(infile)
                 actions[case_dict["action"]].append(case)
-            await self.bot.send_message(ctx.message.channel,
-                                        """{mention} was targeted by mods {total} times. He recived :
+            return actions
+        actions["total"] = len(user_log)
+        return actions
 
-                                            - **{kick}** kick(s) {list_kicks},
-                                            - **{warns}** warning(s) {list_warns},
-                                            - **{bans}** ban(s) {list_bans},
-                                            - **{unbans}** unban(s) {list_unbans}
+    async def send_user_log(self, ctx, user_id: str):
+        actions = await self.list_actions(user_id)
 
-                                        Such a mod abooooose :o
-                                        """.format(mention="<@" + user_id + ">",
-                                                   total=len(user_log),
-                                                   kick=len(actions["Kick"]),
-                                                   list_kicks=str(actions["Kick"]) if len(actions["Kick"]) != 0 else "",
-                                                   warns=len(actions["Warn"]),
-                                                   list_warns=str(actions["Warn"]) if len(actions["Warn"]) != 0 else "",
-                                                   bans=len(actions["Ban"]),
-                                                   list_bans=str(actions["Ban"]) if len(actions["Ban"]) != 0 else "",
-                                                   unbans=len(actions["Unban"]),
-                                                   list_unbans=str(actions["Unban"]) if len(actions["Unban"]) != 0 else "",
-                                                   ))
+        await self.bot.send_message(ctx.message.channel,
+                                    """{mention} was targeted by mods {total} times. He recived :
+
+                                        - **{kick}** kick(s) {list_kicks},
+                                        - **{warns}** warning(s) {list_warns},
+                                        - **{bans}** ban(s) {list_bans},
+                                        - **{unbans}** unban(s) {list_unbans}
+
+                                    Such a mod abooooose :o
+                                    """.format(mention="<@" + user_id + ">",
+                                               total=actions["total"],
+                                               kick=len(actions["Kick"]),
+                                               list_kicks=str(actions["Kick"]) if len(actions["Kick"]) != 0 else "",
+                                               warns=len(actions["Warn"]),
+                                               list_warns=str(actions["Warn"]) if len(actions["Warn"]) != 0 else "",
+                                               bans=len(actions["Ban"]),
+                                               list_bans=str(actions["Ban"]) if len(actions["Ban"]) != 0 else "",
+                                               unbans=len(actions["Unban"]),
+                                               list_unbans=str(actions["Unban"]) if len(actions["Unban"]) != 0 else "",
+                                               ))
 
     async def on_member_ban(self, member):
         case = await self.add_action(user=member, action="Ban", by=self.bot.user)
@@ -255,11 +266,13 @@ class Mods:
         def is_user(u):
             return u.author == user
 
-        await self.bot.purge_from(ctx.channel, limit=purge, check=is_user)
+        await self.bot.purge_from(ctx.message.channel, limit=purge, check=is_user)
 
         case = await self.add_action(user=user, action="Kick", by=ctx.message.author, reason=reason)
         embed = await self.get_case_embed(case)
         await self.bot.send_message(ctx.message.channel, embed=embed)
+        if len((await self.list_actions(user.id))["Kick"]) >= 5:
+            await self.ban.callback(self, ctx, user, 0, reason="Auto ban pour 5+ kicks")
 
     @checks.have_required_level(3)
     @moderation.command(pass_context=True)
@@ -293,6 +306,8 @@ class Mods:
         case = await self.add_action(user=user, action="Warn", by=ctx.message.author, reason=reason)
         embed = await self.get_case_embed(case)
         await self.bot.send_message(ctx.message.channel, embed=embed)
+        if len((await self.list_actions(user.id))["Warn"]) >= 5:
+            await self.kick.callback(self, ctx, user, 0, reason="Auto kick pour 5+ warns")
 
     @checks.have_required_level(3)
     @moderation.command(pass_context=True)

@@ -111,7 +111,7 @@ class Admin:
 
         x = PrettyTable()
         args_ = passed_prefs.split(" ")
-        x._set_field_names([_("Name", language), _("Invitation", language), _("Server ID", language), _("Number of enabled channels", language), _("Number of connected users", language), _("Ducks per day", language), _("Number of unneeded permissions", language), _("Number of needed permissions", language)])
+        x._set_field_names([_("Name", language), _("Invitation", language), _("Server ID", language), _("Number of enabled channels", language), _("Number of connected users", language), _("Ducks per day", language)])
         x.reversesort = True
 
         tmp = await self.bot.send_message(ctx.message.channel, str(ctx.message.author.mention) + _(" > En cours", language))
@@ -137,16 +137,6 @@ class Admin:
                     pass
             invite = None
 
-            permissionsToHave = ["change_nicknames", "connect", "create_instant_invite", "embed_links", "manage_messages", "mention_everyone", "read_messages", "send_messages", "send_tts_messages"]
-
-            permEnMoins = 0
-            permEnPlus = 0
-            channel = server.default_channel
-            for permission, value in channel.permissions_for(server.me):
-                if not value and permission in permissionsToHave:
-                    permEnMoins += 1
-                elif value and not permission in permissionsToHave:
-                    permEnPlus += 1
 
             if "invitations" in args_:
                 for channel in server.channels:
@@ -164,7 +154,7 @@ class Admin:
             except KeyError:  # Pas de channels ou une autre merde dans le genre ?
                 channels = "0"
 
-            x.add_row([server.name, invite, str(server.id), channels + "/" + str(len(server.channels)), server.member_count, prefs.getPref(server, "ducks_per_day"), permEnPlus, permEnMoins])
+            x.add_row([server.name, invite, str(server.id), channels + "/" + str(len(server.channels)), server.member_count, prefs.getPref(server, "ducks_per_day")])
 
         await comm.message_user(ctx.message, "```\n" + x.get_string(sortby=_("Number of connected users", language)) + "\n```")
 
