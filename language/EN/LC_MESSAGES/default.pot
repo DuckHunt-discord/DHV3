@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-10 17:35+0000\n"
+"POT-Creation-Date: 2017-08-25 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.5.0\n"
 
 #: bot.py:63
 msgid ":x: This command cannot be used in private messages."
@@ -95,20 +95,12 @@ msgstr ""
 msgid "Number of enabled channels"
 msgstr ""
 
-#: cogs/admin.py:114 cogs/admin.py:169
+#: cogs/admin.py:114 cogs/admin.py:159
 msgid "Number of connected users"
 msgstr ""
 
 #: cogs/admin.py:114
 msgid "Ducks per day"
-msgstr ""
-
-#: cogs/admin.py:114
-msgid "Number of unneeded permissions"
-msgstr ""
-
-#: cogs/admin.py:114
-msgid "Number of needed permissions"
 msgstr ""
 
 #: cogs/admin.py:117
@@ -119,37 +111,37 @@ msgstr ""
 msgid " > Processing servers ({done}/{total})"
 msgstr ""
 
-#: cogs/admin.py:176
+#: cogs/admin.py:166
 msgid "Serching for servers to leave"
 msgstr ""
 
-#: cogs/admin.py:197
+#: cogs/admin.py:187
 msgid ""
 "Cleaning {servers} unused servers (accounting for {members} members in "
 "total)"
 msgstr ""
 
-#: cogs/admin.py:198
+#: cogs/admin.py:188
 msgid "To confirm, please type {random_str} now."
 msgstr ""
 
-#: cogs/admin.py:206
+#: cogs/admin.py:196
 msgid ":x: Operation cancelled, you took too long to answer."
 msgstr ""
 
-#: cogs/admin.py:221
+#: cogs/admin.py:211
 msgid ":ok: Finished, failed for {failed} servers."
 msgstr ""
 
-#: cogs/admin.py:230
+#: cogs/admin.py:220
 msgid "Starting the broadcast..."
 msgstr ""
 
-#: cogs/admin.py:239
+#: cogs/admin.py:229
 msgid "Broadcast finished!"
 msgstr ""
 
-#: cogs/admin.py:247
+#: cogs/admin.py:237
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr ""
 
