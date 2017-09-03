@@ -92,6 +92,17 @@ class Exp:
                 await comm.logwithinfos_message(message, "[sendexp] montant invalide")
                 return
 
+            await comm.message_user(ctx.message, _("To confirm, please type `confirm` now.", language))
+
+            def is_confirmation(m):
+                return m.content == 'confirm'
+
+            confirmation = await self.bot.wait_for_message(timeout=10.0, author=ctx.message.author, check=is_confirmation)
+
+            if confirmation is None:
+                await comm.message_user(ctx.message, _(":x: Operation cancelled, you took too long to answer.", language))
+                return
+
             if scores.getStat(message.channel, message.author, "exp") > amount:
                 scores.addToStat(message.channel, message.author, "exp", -amount)
                 if prefs.getPref(message.server, "tax_on_user_give") > 0:
