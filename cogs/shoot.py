@@ -246,12 +246,20 @@ class Shoot:
                     }))
 
                 elif rand <= 54:
-                    scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
+                    c = scores.getStat(message.channel, message.author, "explosive_ammo")
+                    if c > time.time():
+                        scores.setStat(message.channel, message.author, "explosive_ammo", int(c + DAY))
+                    else:
+                        scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
                     scores.addToStat(message.channel, message.author, "found_explosive_ammo", 1)
                     await comm.message_user(message, _("While searching in the bushes around the duck, you found **a box of explosive ammo**.", language))
 
                 elif rand <= 60:
-                    scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY / 4))
+                    c = scores.getStat(message.channel, message.author, "explosive_ammo")
+                    if c > time.time():
+                        scores.setStat(message.channel, message.author, "explosive_ammo", int(c + DAY / 4))
+                    else:
+                        scores.setStat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY / 4))
                     scores.addToStat(message.channel, message.author, "found_almost_empty_explosive_ammo", 1)
                     await comm.message_user(message, _("While searching in the bushes around the duck, you found **an almost empty box of explosive ammo**.", language))
 
