@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-08-07 16:19+0000\n"
+"POT-Creation-Date: 2017-09-06 21:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.5.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 msgid ":x: This command cannot be used in private messages."
@@ -23,11 +23,35 @@ msgstr ""
 ":x: Entschuldigung, der Befehl ist deaktiviert und kann nicht verwendet "
 "werden."
 
+msgid "Send an error report?"
+msgstr "Soll ein Fehler Bericht gesendet werden?"
+
+msgid ""
+"Sadly, I need the `add_reactions` and `create_instant_invite` permissions to "
+"be able to send an error report."
+msgstr ""
+"Ich benötige die Rechte `add_reactions` (Reaktionen hinzufügen) und  "
+"`create_instant_invite` (Soforteinladung erstellen), um einen Fehlerbericht "
+"zu senden."
+
+msgid ""
+":x: An error (`{error}`) happened while executing `{command}`, here is the "
+"traceback: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
+msgstr ""
+":x: Während des  Aufrufs `{command} ist ein Fehler (`{error}`)  aufgetreten  "
+"`, hier ist die Nachverfolgung:\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
+
 msgid ":anger_right: Creating an invite for the error report..."
 msgstr ":anger_right: Generiere Einladung zum Melden des Fehlers..."
 
 msgid ":anger_right: Sending error report..."
-msgstr ":anger_right: Fehler wird gemeldet..."
+msgstr ":anger_right: Fehler Bericht  wird gesendet..."
 
 msgid ":hammer: {date} :hammer:"
 msgstr ":hammer: {date} :hammer:"
@@ -40,13 +64,13 @@ msgstr "{cause}\n"
 "{tb}"
 
 msgid ":ok: Error report sent, thanks. :)"
-msgstr ":ok: Fehler wurde gemeldet, danke. :)"
+msgstr ":ok: Fehler Bericht wurde gesendet, danke. :)"
 
 msgid "OK, I won't send an error report."
-msgstr "Okay, ich werde keinen Fehlerbericht senden."
+msgstr "Okay, ich werde keinen Fehler Bericht senden."
 
 msgid ":x: Missing a required argument. "
-msgstr ":x: Missing a required argument. "
+msgstr ":x: Ein erforderliches Argument fehlt. "
 
 msgid ":x: Bad argument provided. "
 msgstr ":x: Ungültiges Argument."
@@ -61,19 +85,13 @@ msgid "Server ID"
 msgstr "Server ID"
 
 msgid "Number of enabled channels"
-msgstr "Anzahl der aktiven Kanälen"
+msgstr "Anzahl der aktiven Kanäle"
 
 msgid "Number of connected users"
 msgstr "Azahl der verbundenen Nutzer"
 
 msgid "Ducks per day"
 msgstr "Enten pro Tag"
-
-msgid "Number of unneeded permissions"
-msgstr "Anzahl der nicht benötigten Berechtigungen"
-
-msgid "Number of needed permissions"
-msgstr "Anzahl der benötigten Berechtigungen"
 
 msgid " > En cours"
 msgstr "watschelnd"
@@ -99,10 +117,10 @@ msgid ":ok: Finished, failed for {failed} servers."
 msgstr ":ok: Beendet mit Fehlern bei {failed} Servern."
 
 msgid "Starting the broadcast..."
-msgstr "Starte Rundnachricht ..."
+msgstr "Starte Übertragung..."
 
 msgid "Broadcast finished!"
-msgstr "Rundnachricht beendet!"
+msgstr "Übertragung beendet!"
 
 msgid "Message ({message}) sent to {server} #{channel} "
 msgstr "Nachricht ({message}) an {server} #{channel} gesendet."
@@ -140,7 +158,11 @@ msgstr ""
 "Waffe hast."
 
 msgid ":x: The exp amount needs to be positive."
-msgstr ":x: Du musst eine natürliche Zahl eingeben um Erfahrung zu versenden."
+msgstr ""
+":x: Du musst eine natürliche Zahl eingeben um Erfahrungspunkte zu versenden."
+
+msgid "To confirm, please type `confirm` now."
+msgstr "Gib `confirm` zum Bestätigen ein."
 
 msgid ""
 "Congratulations, you sent more experience than the maximum number I'm able "
@@ -157,8 +179,15 @@ msgstr "Du hast nicht genug Erfahrungspunkte"
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Das Übertragen von Exp ist auf diesem Server deaktiviert"
 
+msgid "Generating DuckHunt statistics for you, please wait..."
+msgstr "Generiere DuchHunt Statistiken, bitte warten..."
+
 msgid "Page {current}/{max}"
 msgstr "Seite {current}/{max}"
+
+msgid "\n"
+"Confiscated weapon!"
+msgstr "Deine Waffe wurde beschlagnahmt!\n"
 
 msgid "General statistics"
 msgstr "Generelle Statistiken"
@@ -230,7 +259,7 @@ msgid "Shots with a sabotaged weapon"
 msgstr "Schüsse mit sabotierter Waffe"
 
 msgid "Shots with a jammed weapon"
-msgstr "cSchüsse mit verstopfter Waffe"
+msgstr "Schüsse mit verstopfter Waffe"
 
 msgid "Shots without bullets"
 msgstr "Schüsse ohne Kugeln"
@@ -287,6 +316,13 @@ msgid "Effect: wet"
 msgstr "Effekt: Nässe"
 
 msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ""
+":warning: Fehler beim Einbinden eines Links, bitte überprüfe, ob der Bot die "
+"Berechtigung `embed_links` (Links einbinden) hat und versuche es erneut!"
+
+msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
 msgstr ""
@@ -297,6 +333,15 @@ msgstr "Rang"
 
 msgid "Nickname"
 msgstr "Spitzname"
+
+msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
+"```{table}```"
+msgstr ""
+":cocktail: Beste Punktzahlen für #{channel_name}: :cocktail:\n"
+"```{table}```"
+
+msgid "Generating top scores for your channel, please wait!"
+msgstr "Generiere Bestenliste für diesen Kanal, bitte warten!"
 
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Höchstpunktzahlen für #{channel_name} :cocktail:"
@@ -313,14 +358,80 @@ msgstr "Erfahrungspunkte"
 msgid "Number of ducks killed"
 msgstr "Anzahl der getöteten Enten"
 
+msgid "There's nothing more..."
+msgstr "Hier gibt's nichts mehr..."
+
+msgid ""
+"I don't have the `manage_messages` permission, I can't remove reactions. "
+"Please tell an admin. ;)"
+msgstr ""
+"Ich habe die Berechtigung `manage_messages` (Nachrichten verwalten) nicht, "
+"so kann ich keine Reaktionen entfernen. Weise doch bitte einen Admin darauf "
+"hin."
+
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+":x: Falsche Syntax: `!shop [list/Itemnummer] [Argument falls erforderlich]`"
+
+msgid "You *now* have a total of {exp} exp points."
+msgstr "Du hast *jetzt* insgesamt {exp} Punkte."
+
+msgid "The item list is available here: http://api-d.com/shop-items.html"
+msgstr "Die Liste der Items gibt's hier: http://api-d.com/shop-items.html"
+
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ""
+":money_with_wings: Du hast für 7 exp eine Kugel für deine Waffe gekauft."
+
+msgid ":champagne: Your charger is full!"
+msgstr ":champagne: Dein Magazin ist voll!"
+
+msgid ""
+":money_with_wings: You added a charger to your backpack for 13 exp points."
+msgstr ""
+":money_with_wings: Du hast für 13 exp ein Magazin in deinen Rucksack gepackt."
+""
+
 msgid ":champagne: You have enough chargers!"
 msgstr ":champagne: Du hast ausreichend Magazine"
+
+msgid ""
+":money_with_wings: You purchased AP ammo for your weapon. For the next 24 "
+"hours, you will deal double damage to ducks."
+msgstr ""
+":money_with_wings: Du hast AP-Munition gekauft. Du wirst für die nächsten 24 "
+"Stunden doppelten Schaden verursachen."
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Du hast vorerst genug panzerbrechende Munition!"
 
+msgid ""
+":money_with_wings: You purchased explosive ammo for your weapon. For the "
+"next 24 hours, you will deal triple damage to ducks."
+msgstr ""
+":money_with_wings: Du hast AP-Munition gekauft. Du wirst für die nächsten 24 "
+"Stunden dreifachen Schaden verursachen."
+
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Du hast jetzt vorerst genug Explosionsmunition!"
+
+msgid ":money_with_wings: You got your weapon back for 40 exp points"
+msgstr ":money_with_wings: Du hast deine Waffe für 40 exp zurückbekommen."
+
+msgid ""
+":champagne: You already have your weapon, what are you trying to buy? :p"
+msgstr ""
+":champagner: Du hast deine Waffe schon, was versuchst du zu kaufen? :P"
+
+msgid ""
+":money_with_wings: You added grease in your weapon to reduce jamming risks "
+"by 50 percent for a day, for only 8 exp points."
+msgstr ""
+":money_with_wings: Du hast deine Waffe für 8 XP geschmiert, um die "
+"Wahrscheinlichkeit, dass sie sich verklemmt, um 50% für einen Tag zu "
+"verringern."
 
 msgid " < *BZAACK*"
 msgstr " < *BZAACK*"
