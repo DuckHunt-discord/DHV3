@@ -6,8 +6,9 @@
 """
 
 import discord
-from cogs import checks
 from discord.ext import commands
+
+from cogs import checks
 
 
 def embed_perms(message):
@@ -63,6 +64,32 @@ class Userinfo:
 
             await self.bot.delete_message(ctx.message)
 
+    @checks.have_required_level(1)
+    @commands.command(pass_context=True)
+    async def notify(self, ctx):
+        """Add yourself to the notify role, so you'll get mentions about upcoming features and changes in the bot. There won't be that much mentions."""
+        role = discord.utils.get(ctx.message.server.roles, name="Notify")
+
+        if role in ctx.message.author.roles:
+            # If a role in the user's list of roles matches one of those we're checking
+            await self.bot.remove_roles(ctx.message.author, role)
+            await self.bot.send_message(ctx.message.channel, "I removed your notify role, " + ctx.message.author.mention + ".")
+
+        else:
+            await self.bot.add_roles(ctx.message.author, role)
+            await self.bot.send_message(ctx.message.channel, "I gave you the notify role, " + ctx.message.author.mention + ".")
+
+    @checks.have_required_level(4)
+    @commands.command(pass_context=True)
+    async def announce(self, ctx, *, announcement: str):
+        role = discord.utils.get(ctx.message.server.roles, name="Notify")
+        await self.bot.edit_role(ctx.message.server, role, mentionable=True)
+
+        # then send the message..
+        await self.bot.send_message(ctx.message.channel, f'{role.mention}: {announcement}'[:2000])
+
+        # then make the role unmentionable
+        await self.bot.edit_role(ctx.message.server, role, mentionable=False)
 
 def setup(bot):
     bot.add_cog(Userinfo(bot))
