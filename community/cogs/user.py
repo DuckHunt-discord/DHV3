@@ -4,6 +4,7 @@
 """
 
 """
+import asyncio
 
 import discord
 from discord.ext import commands
@@ -73,11 +74,16 @@ class Userinfo:
         if role in ctx.message.author.roles:
             # If a role in the user's list of roles matches one of those we're checking
             await self.bot.remove_roles(ctx.message.author, role)
-            await self.bot.send_message(ctx.message.channel, "I removed your notify role, " + ctx.message.author.mention + ".")
+            m = await self.bot.send_message(ctx.message.channel, "I removed your notify role, " + ctx.message.author.mention + ".")
 
         else:
             await self.bot.add_roles(ctx.message.author, role)
-            await self.bot.send_message(ctx.message.channel, "I gave you the notify role, " + ctx.message.author.mention + ".")
+            m = await self.bot.send_message(ctx.message.channel, "I gave you the notify role, " + ctx.message.author.mention + ".")
+
+        await asyncio.sleep(10)
+        await self.bot.delete_message(ctx.message)
+        await self.bot.delete_message(m)
+
 
     @checks.have_required_level(4)
     @commands.command(pass_context=True)
