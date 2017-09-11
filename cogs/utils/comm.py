@@ -11,7 +11,7 @@ from . import commons, prefs
 
 
 async def paste(data, ext):  # TODO: Async problems ?
-    HASTEBIN_SERVER = 'http://api-d.com:7777'
+    HASTEBIN_SERVER = 'https://hastebin.api-d.com'
     r = requests.post(HASTEBIN_SERVER + '/documents', data=data.encode("UTF-8"))
     j = r.json()
     if r.status_code is requests.codes.ok:
