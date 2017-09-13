@@ -183,6 +183,7 @@ async def mainloop():
         await bot.wait_until_ready()
         planday = 0
         last_iter = int(time.time())
+        last_hour = 0
         while not bot.is_closed:
             now = int(last_iter + 1)
             thisDay = now - (now % DAY)
@@ -192,6 +193,11 @@ async def mainloop():
                 planday = int(int(now - 1) / DAY)
                 await planifie()
                 last_iter = int(time.time())
+
+            if last_hour < int(int(now / 60) / 60):
+                last_hour = int(int(now / 60) / 60)
+
+
 
             if int(now) % 60 == 0:
                 logger.debug("Current ducks: {canards}".format(**{

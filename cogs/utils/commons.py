@@ -22,6 +22,10 @@ def init():
         sys.exit(1)
     global _
 
+    def _(string):
+        return string  # Fake definition pour la traduction
+
+
     import logging
     import gettext
     import json
@@ -31,6 +35,59 @@ def init():
     ducks_planned = {}  # format : {discord.channel: number_of_ducks_needed_for_today# }
     ducks_spawned = []  # format : [{"channel": discord.channel, "spawned_at": int(timestamp), "is_super": True, "life": int(life), "max_life" : int(max_life)]
     bread = defaultdict(int)
+
+    global event_list, current_event
+
+    # Events are global, and not per-channel, but they can be disable using the appropriate setting, again, per channel.
+    # They are set each hour by mainloop()
+    event_list = [
+        {
+            "name"       : _("No event"),
+            "description": _("Nothing is happening right now."),
+            "id"         : 0
+        },
+        {
+            "name"       : _("Ducks are migrating"),
+            "description": _("Prepare to see more ducks in the next hour."),
+            "id"         : 1
+        },
+        {
+            "name"       : _("Foggy weather"),
+            "description": _("It's harder to see ducks killed. You'll need 5 more seconds to know if you missed or not."),
+            "id"         : 2
+        },
+        {
+            "name"       : _("Steroids in the lake"),
+            "description": _("A medical waste company dumped steroids in the lake. Ducks have mutated, and you'll see a lot more super ducks. But, be careful, and don't drink that water."),
+            "id"         : 3
+        },
+        {
+            "name"       : _("Safety class canceled"),
+            "description": _("The safety class was canceled, beware not to shoot others hunters!"),
+            "id"         : 4
+        },
+        {
+            "name"       : _("Connexion problems"),
+            "description": _("Ducks cant use the computer due to connexion problems, and there will be less of them until it's repared"),
+            "id"         : 5
+        },
+        {
+            "name"       : _("A new florist in town"),
+            "description": _("A florist opened in town, and you can now find better 4-leaf-clovers. Go check them !"),
+            "id"         : 6
+        },
+        {
+            "name"       : _("Mega-ducks"),
+            "description": _("Someone inflated a super duck, and now they are EVEN BIGGER!!"),
+            "id"         : 7
+        },
+        {
+            "name"       : _("Windy weather"),
+            "description": _("Bullets are deflected by some strong wind"),
+            "id"         : 8
+        },
+    ]
+    current_event = next((item for item in event_list if item['id'] == 0), None)  # event_list[0]
 
     # Stats
 
@@ -70,9 +127,6 @@ def init():
         def get(self, msg: str, language: str = lang):
             # logger.debug("Language > " + str(language))
             return self._get_translation(language).gettext(msg)
-
-    def _(string):
-        return string  # Fake definition pour la traduction
 
     def bool_(b):
         return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh', 'oui', 'ok', 'on']
