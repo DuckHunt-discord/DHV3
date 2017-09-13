@@ -194,12 +194,15 @@ class Shoot:
         if scores.getStat(channel, author, "explosive_ammo") > int(now):
             current_duck["SCvie"] -= 3
             vieenmoins = 3
+            ono = _("BPAM", language)
         elif scores.getStat(channel, author, "ap_ammo") > int(now):
             current_duck["SCvie"] -= 2
             vieenmoins = 2
+            ono = _("BAAM", language)
         else:
             current_duck["SCvie"] -= 1
             vieenmoins = 1
+            ono = random.choice(_("BOUM", language), _("SPROTCH", language))
 
         if current_duck["SCvie"] <= 0:  # Duck killed
             try:
@@ -226,12 +229,13 @@ class Shoot:
             if current_duck["level"] > 1:
                 scores.addToStat(channel, author, "killed_super_ducks", 1)
 
-            await self.sendBangMessage(message, _(":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
+            await self.sendBangMessage(message, _(":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} were super-ducks) killed on #{channel}.     \_X<   *COUAC*   [{exp} exp]", language).format(**{
                 "time"        : round(now - current_duck["time"], 4),
                 "total"       : scores.getStat(channel, author, "killed_ducks"),
                 "channel"     : channel,
                 "exp"         : exp,
-                "supercanards": scores.getStat(channel, author, "killed_super_ducks")
+                "supercanards": scores.getStat(channel, author, "killed_super_ducks"),
+                "onomatopoeia": random.choice(_("BOUM", language), _("BAAM", language), _("SPROTCH", language), _("BPAM", language))
             }))
             if scores.getStat(channel, author, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave")) > float(now - current_duck["time"]):
                 scores.setStat(channel, author, "best_time", round(now - current_duck["time"], 6))
