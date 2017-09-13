@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-06 21:45+0000\n"
+"POT-Creation-Date: 2017-09-13 06:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -872,6 +872,18 @@ msgstr ""
 msgid " > You won {exp} with your life insurance !"
 msgstr " > You won {exp} with your life insurance !"
 
+msgid "BPAM"
+msgstr "BPAM"
+
+msgid "BAAM"
+msgstr "BAAM"
+
+msgid "BOUM"
+msgstr "BOUM"
+
+msgid "SPROTCH"
+msgstr "SPROTCH"
+
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -880,13 +892,14 @@ msgstr ""
 "first! [missed: -1 xp]"
 
 msgid ""
-":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
-"now at a grand total of {total} ducks (of which {supercanards} were super-"
-"ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
+"[{exp} exp]"
 msgstr ""
-":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
-"now at a grand total of {total} ducks (of which {supercanards} were super-"
-"ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
+":skull_crossbones: **{onomatopoeia}** You killed the duck in {time} seconds, "
+"you are now at a grand total of {total} ducks (of which {supercanards} were "
+"super-ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
 
 msgid ""
 "While searching in the bushes around the duck, you found **{inutilite}**."
@@ -965,6 +978,78 @@ msgstr ":x: You can't use this command, you're not the bot owner!"
 
 msgid ":x: You can't use this command, you're not an admin on this server!"
 msgstr ":x: You can't use this command, you're not an admin on this server!"
+
+msgid "No event"
+msgstr "No event"
+
+msgid "Nothing is happening right now."
+msgstr "Nothing is happening right now."
+
+msgid "Ducks are migrating"
+msgstr "Ducks are migrating"
+
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Prepare to see more ducks in the next hour."
+
+msgid "Foggy weather"
+msgstr "Foggy weather"
+
+msgid ""
+"It's harder to see ducks killed. You'll need 5 more seconds to know if you "
+"missed or not."
+msgstr ""
+"It's harder to see ducks killed. You'll need 5 more seconds to know if you "
+"missed or not."
+
+msgid "Steroids in the lake"
+msgstr "Steroids in the lake"
+
+msgid ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+msgstr ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+
+msgid "Safety class canceled"
+msgstr "Safety class canceled"
+
+msgid "The safety class was canceled, beware not to shoot others hunters!"
+msgstr "The safety class was canceled, beware not to shoot others hunters!"
+
+msgid "Connexion problems"
+msgstr "Connexion problems"
+
+msgid ""
+"Ducks cant use the computer due to connexion problems, and there will be "
+"less of them until it's repared"
+msgstr ""
+"Ducks cant use the computer due to connexion problems, and there will be "
+"less of them until it's repared"
+
+msgid "A new florist in town"
+msgstr "A new florist in town"
+
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them !"
+msgstr ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them !"
+
+msgid "Mega-ducks"
+msgstr "Mega-ducks"
+
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+
+msgid "Windy weather"
+msgstr "Windy weather"
+
+msgid "Bullets are deflected by some strong wind"
+msgstr "Bullets are deflected by some strong wind"
 
 msgid "public danger"
 msgstr "public danger"

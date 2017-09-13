@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-06 21:45+0000\n"
+"POT-Creation-Date: 2017-09-13 06:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -894,6 +894,18 @@ msgstr ""
 msgid " > You won {exp} with your life insurance !"
 msgstr " > Vous avez gagné {exp} avec votre assurance vie!"
 
+msgid "BPAM"
+msgstr "BPAM"
+
+msgid "BAAM"
+msgstr "BAAM"
+
+msgid "BOUM"
+msgstr "BOUM"
+
+msgid "SPROTCH"
+msgstr "SPROTCH"
+
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -902,13 +914,14 @@ msgstr ""
 "premier. [Manqué: -1 xp]"
 
 msgid ""
-":skull_crossbones: **BOUM**\tYou killed the duck in {time} seconds, you are "
-"now at a grand total of {total} ducks (of which {supercanards} were super-"
-"ducks) killed on #{channel}.     \\_X<   *COUAC*   [{exp} exp]"
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
+"[{exp} exp]"
 msgstr ""
-":skull_crossbones: **BOUM**\tVous l’avez eu en {time} secondes, ce qui vous "
-"fait un total de {total} canards (dont {supercanards} supercanards) sur "
-"#{channel}.     \\_X<   *COUAC*   [{exp} xp]"
+":skull_crossbones: **{onomatopoeia}** Vous l’avez eu en {time} secondes, ce "
+"qui vous fait un total de {total} canards (dont {supercanards} supercanards) "
+"sur #{channel}.     \\_X<   *COUAC*   [{exp} xp]"
 
 msgid ""
 "While searching in the bushes around the duck, you found **{inutilite}**."
@@ -996,6 +1009,82 @@ msgid ":x: You can't use this command, you're not an admin on this server!"
 msgstr ""
 ":x: Vous ne pouvez pas utiliser cette commande, vous n'êtes pas "
 "administrateur sur ce serveur !"
+
+msgid "No event"
+msgstr "Pas d'évènement"
+
+msgid "Nothing is happening right now."
+msgstr "Rien ne se passe en ce moment."
+
+msgid "Ducks are migrating"
+msgstr "Les canards migrent"
+
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Préparez-vous à voir plus de canards dans l'heure qui suit."
+
+msgid "Foggy weather"
+msgstr "Temps brumeux"
+
+msgid ""
+"It's harder to see ducks killed. You'll need 5 more seconds to know if you "
+"missed or not."
+msgstr ""
+"Il est plus difficile de voir des canards tués. Vous aurez besoin de 5 "
+"secondes supplémentaires pour savoir si vous avez manqué ou non."
+
+msgid "Steroids in the lake"
+msgstr "Stéroïdes dans le lac"
+
+msgid ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+msgstr ""
+"Une entreprise de déchets médicaux a déversé des stéroïdes dans le lac. Les "
+"canards ont mutés, et vous verrez beaucoup plus de super canards. Mais, "
+"soyez prudent et ne buvez pas cette eau."
+
+msgid "Safety class canceled"
+msgstr "Classe de sécurité annulée"
+
+msgid "The safety class was canceled, beware not to shoot others hunters!"
+msgstr ""
+"La classe de sécurité a été annulée, méfiez-vous pour ne pas tirer sur "
+"d'autres chasseurs!"
+
+msgid "Connexion problems"
+msgstr "Problèmes de connexion"
+
+msgid ""
+"Ducks cant use the computer due to connexion problems, and there will be "
+"less of them until it's repared"
+msgstr ""
+"Les canards ne peuvent utiliser l'ordinateur en raison de problèmes de "
+"connexion, et il y en aura moins jusqu'à ce qu'il soit réparé"
+
+msgid "A new florist in town"
+msgstr "Un nouveau fleuriste en ville"
+
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them !"
+msgstr ""
+"Un fleuriste à ouvert en ville, et vous pouvez maintenant trouver de "
+"meilleurs trèfles à 4 feuilles. Allez donc le voir!"
+
+msgid "Mega-ducks"
+msgstr "Mega-canards"
+
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr ""
+"Quelqu'un a gonflé un super canard, et maintenant ils sont ENCORE PLUS "
+"GRANDS!"
+
+msgid "Windy weather"
+msgstr "Temps venteux"
+
+msgid "Bullets are deflected by some strong wind"
+msgstr "Les balles sont déviées par un vent fort"
 
 msgid "public danger"
 msgstr "danger public"
