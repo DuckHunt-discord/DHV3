@@ -315,10 +315,32 @@ class Exp:
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
-    async def top(self, ctx, number_of_scores: int = 10):
+    async def top(self, ctx, number_of_scores: int = 10, sorting_field: str = 'exp'):
         language = prefs.getPref(ctx.message.server, "language")
         permissions = ctx.message.channel.permissions_for(ctx.message.server.me)
         send_to = ctx.message.channel if not prefs.getPref(ctx.message.server, "pm_top") else ctx.message.author
+
+        available_stats = {
+            'exp': {
+                'name': _('Exp points', language),
+                'key': 'exp'
+            },
+            'killed': {
+                'name': _('Ducks killed', language),
+                'key': 'killed_ducks'
+            },
+            'missed': {
+                'name': _('Shots missed', language),
+                'key': 'shoots_missed'
+            }
+        }
+
+        if sorting_field not in available_stats:
+            await self.bot.send_message(send_to, _(":x: This sorting key does not exist. Please check the website for more information : http://api-d.com", language))
+            return
+
+        sorting_field = available_stats[sorting_field]
+        additional_field = available_stats['exp' if sorting_field['key'] is not 'exp' else 'killed']
 
         if number_of_scores != 10 \
                 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled") \
@@ -331,18 +353,16 @@ class Exp:
                 return
 
             x = PrettyTable()
-
-            x._set_field_names([_("Rank", language), _("Nickname", language), _("Exp points", language), _("Ducks killed", language)])
+            x._set_field_names([_("Rank", language), _("Nickname", language), sorting_field['name'], additional_field['name']])
 
             i = 0
-            for joueur in scores.topScores(ctx.message.channel):
+            for joueur in scores.topScores(ctx.message.channel, stat=sorting_field['key']):
                 i += 1
 
                 if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
-                    joueur["killed_ducks"] = "AUCUN !"
-                if joueur["exp"] is None:
-                    joueur["exp"] = 0
-                x.add_row([i, joueur["name"].replace("`", ""), joueur["exp"], joueur["killed_ducks"]])
+                    joueur["killed_ducks"] = _('None !', language)
+
+                x.add_row([i, joueur["name"].replace("`", ""), joueur[sorting_field['key']] or 0, joueur[additional_field['key']] or 0])
 
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
@@ -372,28 +392,26 @@ class Exp:
 
                     i = current_page * 10 - 10
 
-                    scores_to_process = scores.topScores(ctx.message.channel)[i:i + 10]
+                    scores_to_process = scores.topScores(ctx.message.channel, stat=sorting_field['key'])[i:i + 10]
 
                     if scores_to_process:
                         embed = discord.Embed(description="Page #{i}".format(i=current_page))
                         embed.title = _(":cocktail: Best scores for #{channel_name} :cocktail:", language).format(**{
                             "channel_name": ctx.message.channel.name,
                         })
-                        embed.url = 'https://api-d.com/'
+
                         embed.colour = discord.Colour.green()
                         # embed.timestamp = datetime.datetime.now()
                         embed.url = 'https://api-d.com/'  # TODO: get the webinterface url and add it here inplace
 
                         players_list = ""
-                        exp_list = ""
-                        ducks_killed_list = ""
+                        first_stat_list = ""
+                        additional_stat_list = ""
 
                         for joueur in scores_to_process:
                             i += 1
                             if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                                 joueur["killed_ducks"] = _("None !", language)
-                            if not joueur["exp"]:
-                                joueur["exp"] = 0
 
                             member = ctx.message.server.get_member(joueur["id_"])
 
@@ -407,12 +425,12 @@ class Exp:
                                 mention = joueur["name"][:10]
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
-                            exp_list += str(joueur["exp"]) + "\n\n"
-                            ducks_killed_list += str(joueur["killed_ducks"]) + "\n\n"
+                            first_stat_list += str(joueur[sorting_field['key']] or 0) + "\n\n"
+                            additional_stat_list += str(joueur[additional_field['key']] or 0) + "\n\n"
 
                         embed.add_field(name=_("Player", language), value=players_list, inline=True)
-                        embed.add_field(name=_("Experience points", language), value=exp_list, inline=True)
-                        embed.add_field(name=_("Number of ducks killed", language), value=ducks_killed_list, inline=True)
+                        embed.add_field(name=sorting_field['name'], value=first_stat_list, inline=True)
+                        embed.add_field(name=additional_field['name'], value=additional_stat_list, inline=True)
 
                         try:
                             await self.bot.edit_message(message, ":duck:", embed=embed)

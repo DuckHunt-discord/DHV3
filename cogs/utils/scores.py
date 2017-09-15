@@ -146,7 +146,12 @@ def getStat(channel, player, stat, default=0):
 
 
 def topScores(channel, stat='exp'):
-    table = getChannelPlayers(channel, columns=['name', 'killed_ducks', 'shoots_fired', stat])
+    columns = ['name', 'exp', 'killed_ducks', 'shoots_fired']
+
+    if stat not in columns:
+        columns.append(stat)
+
+    table = getChannelPlayers(channel, columns=columns)
     players_list = []
 
     for player in table:
