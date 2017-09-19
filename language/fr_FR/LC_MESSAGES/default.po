@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-13 06:24+0000\n"
+"POT-Creation-Date: 2017-09-15 23:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.0\n"
+"Generated-By: Babel 2.5.1\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 msgid ":x: This command cannot be used in private messages."
@@ -331,6 +331,13 @@ msgstr ""
 "liens) et ré-essayez!"
 
 msgid ""
+":x: This sorting key does not exist. Please check the website for more "
+"information : http://api-d.com"
+msgstr ""
+"Cette clé n'existe pas. Merci de visiter notre site web pour plus "
+"d'informations : http://api-d.com "
+
+msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table is "
 "200."
 msgstr ""
@@ -342,6 +349,9 @@ msgstr "Rang"
 
 msgid "Nickname"
 msgstr "Pseudo"
+
+msgid "None !"
+msgstr "Aucun !"
 
 msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
 "```{table}```"
@@ -357,17 +367,8 @@ msgstr ""
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Meilleurs scores pour #{channel_name} :cocktail:"
 
-msgid "None !"
-msgstr "Aucun !"
-
 msgid "Player"
 msgstr "Joueur"
-
-msgid "Experience points"
-msgstr "Points d'expérience"
-
-msgid "Number of ducks killed"
-msgstr "Nombre de canards tués"
 
 msgid "There's nothing more..."
 msgstr "Il n'y a plus rien..."
@@ -1049,7 +1050,7 @@ msgstr "Classe de sécurité annulée"
 
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
-"La classe de sécurité a été annulée, méfiez-vous pour ne pas tirer sur "
+"La classe de sécurité a été annulée, faites attention à ne pas tirer sur "
 "d'autres chasseurs!"
 
 msgid "Connexion problems"

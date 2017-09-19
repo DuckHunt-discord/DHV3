@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-13 06:24+0000\n"
+"POT-Creation-Date: 2017-09-15 23:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.0\n"
+"Generated-By: Babel 2.5.1\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 msgid ":x: This command cannot be used in private messages."
@@ -71,12 +71,6 @@ msgstr "Ingen !"
 
 msgid "Player"
 msgstr "Spelare"
-
-msgid "Experience points"
-msgstr "Erfarenhetspoäng"
-
-msgid "Number of ducks killed"
-msgstr "Antal dödade anka"
 
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
