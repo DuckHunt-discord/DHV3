@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-19 06:07+0000\n"
+"POT-Creation-Date: 2017-09-19 20:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -994,19 +994,19 @@ msgstr ""
 msgid " > You won {exp} with your life insurance !"
 msgstr ""
 
-#: cogs/shoot.py:197 cogs/shoot.py:238
+#: cogs/shoot.py:197
 msgid "BPAM"
 msgstr ""
 
-#: cogs/shoot.py:201 cogs/shoot.py:238
+#: cogs/shoot.py:201
 msgid "BAAM"
 msgstr ""
 
-#: cogs/shoot.py:205 cogs/shoot.py:238
+#: cogs/shoot.py:205
 msgid "BOUM"
 msgstr ""
 
-#: cogs/shoot.py:205 cogs/shoot.py:238
+#: cogs/shoot.py:205
 msgid "SPROTCH"
 msgstr ""
 
