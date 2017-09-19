@@ -202,7 +202,7 @@ class Shoot:
         else:
             current_duck["SCvie"] -= 1
             vieenmoins = 1
-            ono = random.choice(_("BOUM", language), _("SPROTCH", language))
+            ono = random.choice([_("BOUM", language), _("SPROTCH", language)])
 
         if current_duck["SCvie"] <= 0:  # Duck killed
             try:
@@ -235,7 +235,7 @@ class Shoot:
                 "channel"     : channel,
                 "exp"         : exp,
                 "supercanards": scores.getStat(channel, author, "killed_super_ducks"),
-                "onomatopoeia": random.choice(_("BOUM", language), _("BAAM", language), _("SPROTCH", language), _("BPAM", language))
+                "onomatopoeia": ono
             }))
             if scores.getStat(channel, author, "best_time", default=prefs.getPref(message.server, "time_before_ducks_leave")) > float(now - current_duck["time"]):
                 scores.setStat(channel, author, "best_time", round(now - current_duck["time"], 6))
