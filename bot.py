@@ -197,8 +197,6 @@ async def mainloop():
             if last_hour < int(int(now / 60) / 60):
                 last_hour = int(int(now / 60) / 60)
 
-
-
             if int(now) % 60 == 0:
                 logger.debug("Current ducks: {canards}".format(**{
                     "canards": len(commons.ducks_spawned)

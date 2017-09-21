@@ -321,17 +321,17 @@ class Exp:
         send_to = ctx.message.channel if not prefs.getPref(ctx.message.server, "pm_top") else ctx.message.author
 
         available_stats = {
-            'exp': {
+            'exp'   : {
                 'name': _('Exp points', language),
-                'key': 'exp'
+                'key' : 'exp'
             },
             'killed': {
                 'name': _('Ducks killed', language),
-                'key': 'killed_ducks'
+                'key' : 'killed_ducks'
             },
             'missed': {
                 'name': _('Shots missed', language),
-                'key': 'shoots_missed'
+                'key' : 'shoots_missed'
             }
         }
 
@@ -779,9 +779,35 @@ class Exp:
     async def item20(self, ctx):
         """Buy a decoy (8 exp)
         !shop 20"""
+
         message = ctx.message
         language = prefs.getPref(message.server, "language")
+        channel = ctx.channel
+        currently_sleeping = False
+
+        if prefs.getPref(channel.server, "disable_decoys_when_ducks_are_sleeping"):
+            sdstart = prefs.getPref(channel.server, "sleeping_ducks_start")
+            sdstop = prefs.getPref(channel.server, "sleeping_ducks_stop")
+
+            now = time.time()
+            thishour = int((now % DAY) / HOUR)
+
+            if sdstart != sdstop:  # Dans ce cas, les canards dorment peut-etre!
+                if sdstart < sdstop:  # 00:00 |-----==========---------| 23:59
+                    if sdstart <= thishour < sdstop:
+                        currently_sleeping = True
+                else:  # 00:00 |====--------------======| 23:59
+                    if thishour >= sdstart or thishour < sdstop:
+                        currently_sleeping = True
+            else:
+                sdseconds = 0
+
         scores.addToStat(message.channel, message.author, "exp", -8)
+
+        if currently_sleeping:
+            await comm.message_user(message, _(":money_with_wings: Ducks are resting right now, so your decoy probably didn't work..."))
+            return
+
         await comm.message_user(message, _(":money_with_wings: A duck will appear in the next 10 minutes on the channel, thanks to {mention}'s decoy. They bought it for 8 exp!", language).format(**{
             "mention": message.author.mention
         }))

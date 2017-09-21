@@ -38,7 +38,7 @@ def init():
 
     global event_list, current_event
 
-    # Events are global, and not per-channel, but they can be disable using the appropriate setting, again, per channel.
+    # Events are global, and not per-guild, but they can be disabled using the appropriate setting, again, per guild.
     # They are set each hour by mainloop()
     event_list = [
         {
@@ -298,6 +298,10 @@ def init():
         },
         "tts_ducks"                 : {
             "value": False,
+            "type" : bool_
+        },
+        "disable_decoys_when_ducks_are_sleeping": {
+            "value": True,
             "type" : bool_
         }
     }
