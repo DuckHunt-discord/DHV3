@@ -782,7 +782,7 @@ class Exp:
 
         message = ctx.message
         language = prefs.getPref(message.server, "language")
-        channel = ctx.channel
+        channel = message.channel
         currently_sleeping = False
 
         if prefs.getPref(channel.server, "disable_decoys_when_ducks_are_sleeping"):
