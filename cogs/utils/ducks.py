@@ -6,11 +6,11 @@
 """
 import random
 import time
-
-import discord
-from cogs.utils import comm, commons, prefs, scores
 from collections import defaultdict
 
+import discord
+
+from cogs.utils import comm, commons, prefs, scores
 from cogs.utils.comm import logwithinfos
 from cogs.utils.prefs import getPref
 from .commons import _
@@ -85,7 +85,7 @@ async def planifie(channel_obj: discord.Channel = None):
 
 
 async def spawn_duck(duck):
-    servers = prefs.JSONloadFromDisk("channels.json", default="{}")
+    servers = prefs.JSONloadFromDisk("channels.json")
     try:
         if servers[duck["channel"].server.id]["detecteur"].get(duck["channel"].id, False):
             for playerid in servers[duck["channel"].server.id]["detecteur"][duck["channel"].id]:
