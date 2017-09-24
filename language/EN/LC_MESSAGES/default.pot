@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-21 15:23+0000\n"
+"POT-Creation-Date: 2017-09-24 22:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -979,50 +979,50 @@ msgid ""
 " -1 xp]"
 msgstr ""
 
-#: cogs/shoot.py:138 cogs/shoot.py:191
+#: cogs/shoot.py:138 cogs/shoot.py:189
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr ""
 
-#: cogs/shoot.py:173
+#: cogs/shoot.py:172
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] "
 "[hunting accident: -2 xp] [weapon confiscated]"
 msgstr ""
 
-#: cogs/shoot.py:177
+#: cogs/shoot.py:176
 msgid ""
 "**BANG**\tYou missed the duck... and shot yourself! Maybe you should turn"
 " your weapon a little before shooting the next time? [missed: -1 xp] "
 "[hunting accident: -2 xp] [weapon confiscated]"
 msgstr ""
 
-#: cogs/shoot.py:183
+#: cogs/shoot.py:182
 msgid " > You won {exp} with your life insurance !"
 msgstr ""
 
-#: cogs/shoot.py:197
+#: cogs/shoot.py:195
 msgid "BPAM"
 msgstr ""
 
-#: cogs/shoot.py:201
+#: cogs/shoot.py:199
 msgid "BAAM"
 msgstr ""
 
-#: cogs/shoot.py:205
+#: cogs/shoot.py:203
 msgid "BOUM"
 msgstr ""
 
-#: cogs/shoot.py:205
+#: cogs/shoot.py:203
 msgid "SPROTCH"
 msgstr ""
 
-#: cogs/shoot.py:212
+#: cogs/shoot.py:210
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
 
-#: cogs/shoot.py:232
+#: cogs/shoot.py:230
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1030,69 +1030,69 @@ msgid ""
 "*COUAC*   [{exp} exp]"
 msgstr ""
 
-#: cogs/shoot.py:249
+#: cogs/shoot.py:247
 msgid "While searching in the bushes around the duck, you found **{inutilite}**."
 msgstr ""
 
-#: cogs/shoot.py:260
+#: cogs/shoot.py:258
 msgid ""
 "While searching in the bushes around the duck, you found **a box of "
 "explosive ammo**."
 msgstr ""
 
-#: cogs/shoot.py:269
+#: cogs/shoot.py:267
 msgid ""
 "While searching in the bushes around the duck, you found **an almost "
 "empty box of explosive ammo**."
 msgstr ""
 
-#: cogs/shoot.py:276
+#: cogs/shoot.py:274
 msgid ""
 "While searching in the bushes around the duck, you found **a full "
 "charger**."
 msgstr ""
 
-#: cogs/shoot.py:279
+#: cogs/shoot.py:277
 msgid ""
 "While searching in the bushes around the duck, you found **a full "
 "charger**. You left it there, because your backpack is full."
 msgstr ""
 
-#: cogs/shoot.py:284
+#: cogs/shoot.py:282
 msgid "While searching in the bushes around the duck, you found **a bullet**."
 msgstr ""
 
-#: cogs/shoot.py:287
+#: cogs/shoot.py:285
 msgid ""
 "While searching in the bushes around the duck, you found **a bullet**. "
 "You left it there, because you have enough in your charger."
 msgstr ""
 
-#: cogs/shoot.py:291
+#: cogs/shoot.py:289
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/shoot.py:306
+#: cogs/shoot.py:304
 msgid "Your weapon is confiscated."
 msgstr ""
 
-#: cogs/shoot.py:309
+#: cogs/shoot.py:307
 msgid "You unjammed your weapon."
 msgstr ""
 
-#: cogs/shoot.py:320
+#: cogs/shoot.py:318
 msgid "You reloaded your weapon."
 msgstr ""
 
-#: cogs/shoot.py:322
+#: cogs/shoot.py:320
 msgid "You don't have any ammo left!"
 msgstr ""
 
-#: cogs/shoot.py:325
+#: cogs/shoot.py:323
 msgid "You don't need to reload your weapon."
 msgstr ""
 
-#: cogs/shoot.py:328
+#: cogs/shoot.py:326
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Chargers "
 "left: {chargeurs_actuels}/{chargeurs_max}"
