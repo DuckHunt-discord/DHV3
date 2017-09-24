@@ -98,7 +98,7 @@ class Shoot:
             fiabilite /= 2
             scores.setStat(channel, author, "sand", False)
 
-        if not random.randint(1, 100) < fiabilite and not (scores.getStat(channel, author, "graisse") > int(now)):  # Weapon jammed just now
+        if not random.randint(1, 100) <= fiabilite and not (scores.getStat(channel, author, "graisse") > int(now)):  # Weapon jammed just now
             await comm.message_user(message, _("Your weapon just jammed, reload it to unjam it.", language))
             scores.addToStat(channel, author, "shoots_jamming_weapon", 1)
             scores.setStat(channel, author, "enrayee", True)
@@ -127,7 +127,7 @@ class Shoot:
             scores.addToStat(channel, author, "shoots_no_duck", 1)
             return
 
-        if random.randint(1, 100) < prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(channel, author, "silencieux") < int(now):  # Duck frightened
+        if random.randint(1, 100) <= prefs.getPref(message.server, "duck_frighten_chance") and scores.getStat(channel, author, "silencieux") < int(now):  # Duck frightened
             try:
                 commons.ducks_spawned.remove(current_duck)
                 commons.n_ducks_flew += 1
@@ -141,7 +141,6 @@ class Shoot:
 
         if scores.getStat(channel, author, "dazzled", True):
             accuracy = 200  # 50% moins de chance de toucher
-
             scores.setStat(channel, author, "dazzled", False)
         else:
             accuracy = 100
@@ -152,8 +151,8 @@ class Shoot:
             precision += (100 - precision) / 3
             scores.setStat(channel, author, "sight", sight - 1)
 
-        if random.randint(1, accuracy) > precision * prefs.getPref(message.server, "multiplier_miss_chance") :
-            if random.randint(1, 100) < prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
+        if random.randint(1, accuracy) > precision * prefs.getPref(message.server, "multiplier_miss_chance"):
+            if random.randint(1, 100) <= prefs.getPref(message.server, "chance_to_kill_on_missed"):  # Missed and shot someone
                 scores.addToStat(channel, author, "exp", -3)
                 scores.addToStat(channel, author, "shoots_missed", 1)
                 scores.addToStat(channel, author, "killed_players", 1)
@@ -184,12 +183,11 @@ class Shoot:
                         "exp": exp
                     }))
                     scores.addToStat(channel, victim, "life_insurence_rewards", 1)
-                return
             else:  # Missed and none was shot
                 scores.addToStat(channel, author, "exp", -1)
                 scores.addToStat(channel, author, "shoots_missed", 1)
                 await self.sendBangMessage(message, _("**PIEWW**\tYou missed the duck! [missed: -1 xp]", language))
-                return
+            return
 
         if scores.getStat(channel, author, "explosive_ammo") > int(now):
             current_duck["SCvie"] -= 3

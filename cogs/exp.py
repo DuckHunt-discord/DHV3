@@ -362,7 +362,7 @@ class Exp:
                 if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                     joueur["killed_ducks"] = _('None !', language)
 
-                x.add_row([i, joueur["name"].replace("`", ""), joueur[sorting_field['key']] or 0, joueur[additional_field['key']] or 0])
+                x.add_row([i, joueur["name"].replace("`", ""), joueur.get(sorting_field['key'], 0),  joueur.get(additional_field['key'], 0)])
 
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
@@ -425,8 +425,8 @@ class Exp:
                                 mention = joueur["name"][:10]
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
-                            first_stat_list += str(joueur[sorting_field['key']] or 0) + "\n\n"
-                            additional_stat_list += str(joueur[additional_field['key']] or 0) + "\n\n"
+                            first_stat_list += str(joueur.get(sorting_field['key'], 0)) + "\n\n"
+                            additional_stat_list += str(joueur.get(additional_field['key'], 0)) + "\n\n"
 
                         embed.add_field(name=_("Player", language), value=players_list, inline=True)
                         embed.add_field(name=sorting_field['name'], value=first_stat_list, inline=True)
