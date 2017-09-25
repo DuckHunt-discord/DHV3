@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-15 23:30+0000\n"
+"POT-Creation-Date: 2017-09-25 01:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,13 +118,6 @@ msgstr "{dans} perc"
 
 msgid ":ok: Your best time has been reset."
 msgstr ":ok: A legjobb időd vissza lett állítva."
-
-msgid ""
-":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: A következő újraosztása a fegyvereknek és töltőknek  {sec} "
-"perc múlva történik ({hours} óra és  {minutes} perc)."
 
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
@@ -243,9 +236,6 @@ msgstr "Újratöltések és tárgyak statisztikája"
 msgid "Reloads"
 msgstr "Újratöltések"
 
-msgid "Reloads without chargers"
-msgstr "Újratöltések töltet nélkül"
-
 msgid "Reloads not needed"
 msgstr "Szükségtelen újratöltések"
 
@@ -296,17 +286,14 @@ msgstr "Rang"
 msgid "Nickname"
 msgstr "Becenév"
 
-msgid "None !"
-msgstr "Nincs!"
-
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Legjobb pontszáma #{channel_name} :cocktail:"
 
+msgid "None !"
+msgstr "Nincs!"
+
 msgid "Player"
 msgstr "Játékos"
-
-msgid ":champagne: You have enough chargers!"
-msgstr ":champagne: Van elég tölteted!"
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
@@ -419,13 +406,6 @@ msgstr "Alapérték"
 
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
-
-msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
-"{balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}"
-msgstr ""
-"** TÖLTET ÜRES ** | Muníció a fegyverben:  {balles_actuelles} /  "
-"{balles_max} | Maradék töltet:   {chargeurs_actuels} /  {chargeurs_max}"
 
 msgid "public danger"
 msgstr "közveszélyes "
@@ -702,6 +682,3 @@ msgstr "Szintet léptél!"
 
 msgid "Previous level"
 msgstr "Előző szint"
-
-msgid "Weapon fiability"
-msgstr "Fegyver hatékonysága"

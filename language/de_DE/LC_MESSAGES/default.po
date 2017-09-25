@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-15 23:30+0000\n"
+"POT-Creation-Date: 2017-09-25 01:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,13 +145,6 @@ msgstr "{dans} Minuten"
 msgid ":ok: Your best time has been reset."
 msgstr ":ok: Deine Bestzeit wurde zurückgesetzt."
 
-msgid ""
-":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Nächste Waffenrückgabe in {hours} Stunden und {minutes} "
-"Minuten ({sec} Sekunden)."
-
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Um Missbrauch zu verhindern, kannst du kein EXP senden, während du keine "
@@ -276,9 +269,6 @@ msgstr "Nachlader- und Item-Statistiken"
 msgid "Reloads"
 msgstr "Nachgeladen"
 
-msgid "Reloads without chargers"
-msgstr "Nachgeladen ohne ein volles Magazin"
-
 msgid "Reloads not needed"
 msgstr "Nicht benötigtes Nachladen"
 
@@ -337,9 +327,6 @@ msgstr "Rang"
 msgid "Nickname"
 msgstr "Spitzname"
 
-msgid "None !"
-msgstr "Keine!"
-
 msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
 "```{table}```"
 msgstr ""
@@ -352,11 +339,11 @@ msgstr "Generiere Bestenliste für diesen Kanal, bitte warten!"
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Höchstpunktzahlen für #{channel_name} :cocktail:"
 
+msgid "None !"
+msgstr "Keine!"
+
 msgid "Player"
 msgstr "Spieler"
-
-msgid "There's nothing more..."
-msgstr "Hier gibt's nichts mehr..."
 
 msgid ""
 "I don't have the `manage_messages` permission, I can't remove reactions. "
@@ -390,9 +377,6 @@ msgid ""
 msgstr ""
 ":money_with_wings: Du hast für 13 exp ein Magazin in deinen Rucksack gepackt."
 ""
-
-msgid ":champagne: You have enough chargers!"
-msgstr ":champagne: Du hast ausreichend Magazine"
 
 msgid ""
 ":money_with_wings: You purchased AP ammo for your weapon. For the next 24 "
@@ -814,6 +798,3 @@ msgstr "Du bist aufgestiegen!"
 
 msgid "Previous level"
 msgstr "Zuvoriges Level"
-
-msgid "Weapon fiability"
-msgstr "Zuverlässigkeit der Waffe"

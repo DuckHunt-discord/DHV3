@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-15 23:30+0000\n"
+"POT-Creation-Date: 2017-09-25 01:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -135,13 +135,6 @@ msgstr "{dans} minutos"
 msgid ":ok: Your best time has been reset."
 msgstr ":ok: Tu mejor tiempo ha sido reseteado."
 
-msgid ""
-":alarm_clock: Next giveback of weapons and chargers in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-": alarm_clock: Siguiente devolución de armas y cargadores en {sec} segundos "
-"({hours} horas y {minutes} minutos)."
-
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x:  Para prevenir el abuso, tu no puedes enviar exp cuando no tienes un "
@@ -238,9 +231,6 @@ msgstr "Rango"
 msgid "Nickname"
 msgstr "Sobrenombre"
 
-msgid "None !"
-msgstr "Ninguno !"
-
 msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
 "```{table}```"
 msgstr ""
@@ -255,17 +245,14 @@ msgstr ""
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Mejores puntuaciones para #{channel_name} :cocktail:"
 
+msgid "None !"
+msgstr "Ninguno !"
+
 msgid "Player"
 msgstr "Jugador"
 
-msgid "There's nothing more..."
-msgstr "No hay nada..."
-
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ":money_with_wings: Tu agregaste una bala a tu arma por 7 exp."
-
-msgid ":champagne: You have enough chargers!"
-msgstr ":champagne: Tienes suficientes cargadores!"
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Tienes suficiente municion AP por ahora!"
@@ -372,13 +359,6 @@ msgstr "Valor por defecto"
 
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Su arma esta saboteada, gracias {assaillant} por este mal chiste."
-
-msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
-"{balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}"
-msgstr ""
-"** CARGADOR VACIO ** | Municion en el arma: {balles_actuelles} / "
-"{balles_max} | Cargadores restantes: {chargeurs_actuels} / {chargeurs_max}"
 
 msgid "public danger"
 msgstr "peligro publico"
@@ -655,6 +635,3 @@ msgstr "Has subido un nivel!"
 
 msgid "Previous level"
 msgstr "Nivel previo"
-
-msgid "Weapon fiability"
-msgstr "Fiabilidad del Arma"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-15 23:30+0000\n"
+"POT-Creation-Date: 2017-09-25 01:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,17 +149,14 @@ msgstr "Ранг"
 msgid "Nickname"
 msgstr "Ник"
 
-msgid "None !"
-msgstr "Пусто !"
-
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Лучшие результаты для канала #{channel_name} :cocktail:"
 
+msgid "None !"
+msgstr "Пусто !"
+
 msgid "Player"
 msgstr "Игрок"
-
-msgid ":champagne: You have enough chargers!"
-msgstr ":champagne: У вас достаточно запасных магазинов!"
 
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: У вас уже есть бронебойные патроны!"
@@ -261,13 +258,6 @@ msgstr "Значение по умолчанию"
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше оружие было саботировано, спасибо {assaillant} за эту плохую шутку."
-
-msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
-"{balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}"
-msgstr ""
-"** МАГАЗИН ПУСТ ** | Патронов в магазине: {balles_actuelles} / {balles_max} "
-"| Запасных магазинов: {chargeurs_actuels} / {chargeurs_max}"
 
 msgid "public danger"
 msgstr "угроза обществу"
@@ -433,6 +423,3 @@ msgstr "Ваш уровень увеличен!"
 
 msgid "Previous level"
 msgstr "Предыдущий уровень"
-
-msgid "Weapon fiability"
-msgstr "Надежность оружия"
