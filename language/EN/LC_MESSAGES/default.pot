@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-25 08:43+0000\n"
+"POT-Creation-Date: 2017-09-25 10:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -210,245 +210,241 @@ msgstr ""
 msgid "Generating DuckHunt statistics for you, please wait..."
 msgstr ""
 
-#: cogs/exp.py:166
+#: cogs/exp.py:165
 msgid "Page {current}/{max}"
 msgstr ""
 
-#: cogs/exp.py:169
+#: cogs/exp.py:168
 msgid ""
 "\n"
 "Confiscated weapon!"
 msgstr ""
 
-#: cogs/exp.py:178
+#: cogs/exp.py:177
 msgid "General statistics"
 msgstr ""
 
-#: cogs/exp.py:187
+#: cogs/exp.py:183
 msgid "No best time."
 msgstr ""
 
-#: cogs/exp.py:192
+#: cogs/exp.py:188
 msgid "No duck killed"
 msgstr ""
 
-#: cogs/exp.py:194 cogs/exp.py:330
+#: cogs/exp.py:190 cogs/exp.py:323
 msgid "Ducks killed"
 msgstr ""
 
-#: cogs/exp.py:195
+#: cogs/exp.py:191
 msgid "Super ducks killed"
 msgstr ""
 
-#: cogs/exp.py:196
+#: cogs/exp.py:192
 msgid "Players killed"
 msgstr ""
 
-#: cogs/exp.py:197
+#: cogs/exp.py:193
 msgid "Self-killing shots"
 msgstr ""
 
-#: cogs/exp.py:199
+#: cogs/exp.py:195
 msgid "Best killing time"
 msgstr ""
 
-#: cogs/exp.py:200
+#: cogs/exp.py:196
 msgid "Bullets in current magazine"
 msgstr ""
 
-#: cogs/exp.py:201 cogs/exp.py:326 cogs/utils/scores.py:113
+#: cogs/exp.py:197 cogs/exp.py:319 cogs/utils/scores.py:113
 msgid "Exp points"
 msgstr ""
 
-#: cogs/exp.py:202
+#: cogs/exp.py:198
 msgid "Ratio (exp/ducks killed)"
 msgstr ""
 
-#: cogs/exp.py:203 cogs/utils/scores.py:109
+#: cogs/exp.py:199 cogs/utils/scores.py:109
 msgid "Current level"
 msgstr ""
 
-#: cogs/exp.py:203 cogs/utils/scores.py:109 cogs/utils/scores.py:110
+#: cogs/exp.py:199 cogs/utils/scores.py:109 cogs/utils/scores.py:110
 msgid "nom"
 msgstr ""
 
-#: cogs/exp.py:204 cogs/utils/scores.py:111
+#: cogs/exp.py:200 cogs/utils/scores.py:111
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/exp.py:205 cogs/utils/scores.py:112
+#: cogs/exp.py:201 cogs/utils/scores.py:112
 msgid "Weapon reliability"
 msgstr ""
 
-#: cogs/exp.py:208
+#: cogs/exp.py:203
 msgid "Shoots statistics"
 msgstr ""
 
-#: cogs/exp.py:210
+#: cogs/exp.py:205
 msgid "Shots fired"
 msgstr ""
 
-#: cogs/exp.py:211 cogs/exp.py:334
+#: cogs/exp.py:206 cogs/exp.py:327
 msgid "Shots missed"
 msgstr ""
 
-#: cogs/exp.py:212
+#: cogs/exp.py:207
 msgid "Shots without ducks"
 msgstr ""
 
-#: cogs/exp.py:213
+#: cogs/exp.py:208
 msgid "Shots that frightened a duck"
 msgstr ""
 
-#: cogs/exp.py:214
+#: cogs/exp.py:209
 msgid "Shots that harmed a duck"
 msgstr ""
 
-#: cogs/exp.py:215
+#: cogs/exp.py:210
 msgid "Shots stopped by the detector"
 msgstr ""
 
-#: cogs/exp.py:216
+#: cogs/exp.py:211
 msgid "Shots jamming a weapon"
 msgstr ""
 
-#: cogs/exp.py:217
+#: cogs/exp.py:212
 msgid "Shots with a sabotaged weapon"
 msgstr ""
 
-#: cogs/exp.py:218
+#: cogs/exp.py:213
 msgid "Shots with a jammed weapon"
 msgstr ""
 
-#: cogs/exp.py:219
+#: cogs/exp.py:214
 msgid "Shots without bullets"
 msgstr ""
 
-#: cogs/exp.py:220
+#: cogs/exp.py:215
 msgid "Shots without weapon"
 msgstr ""
 
-#: cogs/exp.py:221
+#: cogs/exp.py:216
 msgid "Shots when wet"
 msgstr ""
 
-#: cogs/exp.py:225
+#: cogs/exp.py:219
 msgid "Reloads and items statistics"
 msgstr ""
 
-#: cogs/exp.py:227
+#: cogs/exp.py:221
 msgid "Reloads"
 msgstr ""
 
-#: cogs/exp.py:228
+#: cogs/exp.py:222
 msgid "Reloads without magazines"
 msgstr ""
 
-#: cogs/exp.py:229
+#: cogs/exp.py:223
 msgid "Reloads not needed"
 msgstr ""
 
-#: cogs/exp.py:231
+#: cogs/exp.py:225
 msgid "Trash found in bushes"
 msgstr ""
 
-#: cogs/exp.py:233
+#: cogs/exp.py:227
 msgid "Exp earned with a clover"
 msgstr ""
 
-#: cogs/exp.py:234
+#: cogs/exp.py:228
 msgid "Life insurence rewards"
 msgstr ""
 
-#: cogs/exp.py:235
+#: cogs/exp.py:229
 msgid "Free givebacks used"
 msgstr ""
 
-#: cogs/exp.py:239
+#: cogs/exp.py:232
 msgid "Possesed items and effects"
 msgstr ""
 
-#: cogs/exp.py:242
+#: cogs/exp.py:235
 msgid "Object: grease"
 msgstr ""
 
-#: cogs/exp.py:245
+#: cogs/exp.py:238
 msgid "Object: infrared detector"
 msgstr ""
 
-#: cogs/exp.py:248
+#: cogs/exp.py:241
 msgid "Object: silencer"
 msgstr ""
 
-#: cogs/exp.py:251
+#: cogs/exp.py:244
 msgid "Object: clover {exp} exp"
 msgstr ""
 
-#: cogs/exp.py:256
+#: cogs/exp.py:249
 msgid "Object: explosive ammo"
 msgstr ""
 
-#: cogs/exp.py:258
+#: cogs/exp.py:251
 msgid "Object: AP ammo"
 msgstr ""
 
-#: cogs/exp.py:261
+#: cogs/exp.py:254
 msgid "Effect: wet"
 msgstr ""
 
-#: cogs/exp.py:267 cogs/exp.py:462 cogs/meta.py:204 cogs/utils/scores.py:119
+#: cogs/exp.py:260 cogs/exp.py:459 cogs/meta.py:204 cogs/utils/scores.py:119
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
 msgstr ""
 
-#: cogs/exp.py:338
+#: cogs/exp.py:331
 msgid "Best time"
 msgstr ""
 
-#: cogs/exp.py:350
+#: cogs/exp.py:343
 msgid ""
 ":x: This sorting key does not exist. Please check the website for more "
 "information : http://api-d.com"
 msgstr ""
 
-#: cogs/exp.py:363
+#: cogs/exp.py:358
 msgid ""
 ":x: The maximum number of scores that can be shown on a topscores table "
 "is 200."
 msgstr ""
 
-#: cogs/exp.py:367 cogs/exp.py:381
+#: cogs/exp.py:362 cogs/exp.py:380
 msgid "Rank"
 msgstr ""
 
-#: cogs/exp.py:367
+#: cogs/exp.py:362
 msgid "Nickname"
 msgstr ""
 
-#: cogs/exp.py:374 cogs/exp.py:377
+#: cogs/exp.py:369 cogs/exp.py:376 cogs/exp.py:430 cogs/exp.py:437
 msgid "None!"
 msgstr ""
 
-#: cogs/exp.py:383
+#: cogs/exp.py:382
 msgid ""
 ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
 "```{table}```"
 msgstr ""
 
-#: cogs/exp.py:406
+#: cogs/exp.py:403
 msgid "Generating top scores for your channel, please wait!"
 msgstr ""
 
-#: cogs/exp.py:420
+#: cogs/exp.py:414
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ""
 
-#: cogs/exp.py:436 cogs/exp.py:439
-msgid "None !"
-msgstr ""
-
-#: cogs/exp.py:455
+#: cogs/exp.py:452
 msgid "Player"
 msgstr ""
 
