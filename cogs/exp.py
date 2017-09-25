@@ -162,7 +162,6 @@ class Exp:
 
         while reaction:
             if changed:
-
                 embed = discord.Embed(description=_("Page {current}/{max}", language).format(current=current_page, max=total_page))
 
                 if gs("confisque"):
@@ -179,10 +178,7 @@ class Exp:
 
                     best_time = scores.getStat(channel, target, "best_time", default=None)
                     if best_time:
-                        if int(best_time) == float(best_time):
-                            best_time = int(best_time)
-                        else:
-                            best_time = float(best_time)
+                        best_time = int(best_time) if int(best_time) == float(best_time) else float(best_time)
                     else:
                         best_time = _('No best time.', language)
 
@@ -203,7 +199,6 @@ class Exp:
                     embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
                     embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
                     embed.add_field(name=_("Weapon reliability", language), value=str(level["fiabilitee"]))
-
                 elif current_page == 2:
                     embed.title = _("Shoots statistics", language)
 
@@ -221,7 +216,6 @@ class Exp:
                     embed.add_field(name=_("Shots when wet", language), value=str(gs("shoots_tried_while_wet")))
 
                 elif current_page == 3:
-
                     embed.title = _("Reloads and items statistics", language)
 
                     embed.add_field(name=_("Reloads", language), value=str(gs("reloads")))
@@ -235,7 +229,6 @@ class Exp:
                     embed.add_field(name=_("Free givebacks used", language), value=str(gs("givebacks")))
 
                 elif current_page == 4:
-
                     embed.title = _("Possesed items and effects", language)
 
                     if gs("graisse") > int(time.time()):
@@ -341,9 +334,9 @@ class Exp:
             }
         }
 
-        reverse = reverse == 'reverse' or commons.bool_(reverse)
+        reverse = reverse.lower() == 'reverse' or commons.bool_(reverse)
 
-        if sorting_field == 'reverse':
+        if sorting_field.lower() == 'reverse':
             sorting_field = 'exp'
             reverse = True
         elif sorting_field not in available_stats:
@@ -352,6 +345,8 @@ class Exp:
 
         sorting_field = available_stats[sorting_field]
         additional_field = available_stats['exp' if sorting_field['key'] is not 'exp' else 'killed']
+
+        get_topscores = lambda: scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse)
 
         if number_of_scores != 10 \
                 or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled") \
@@ -367,16 +362,20 @@ class Exp:
             x._set_field_names([_("Rank", language), _("Nickname", language), sorting_field['name'], additional_field['name']])
 
             i = 0
-            for joueur in scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse):
+            for joueur in get_topscores():
                 i += 1
 
                 if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                     joueur["killed_ducks"] = _('None!', language)
 
+                if sorting_field['key'] is 'best_time':
+                    best_time = round(joueur.get('best_time', None) or 0, 3)
+                    joueur['best_time'] = int(best_time) if int(best_time) == float(best_time) else float(best_time)
+
                 if (not "best_time" in joueur) or (not joueur["best_time"]):
                     joueur["best_time"] = _('None!', language)
 
-                x.add_row([i, joueur["name"].replace("`", ""), joueur.get(sorting_field['key'], 0) or 0,  joueur.get(additional_field['key'], 0) or 0])
+                x.add_row([i, joueur["name"].replace("`", ""), joueur.get(sorting_field['key'], None) or 0,  joueur.get(additional_field['key'], None) or 0])
 
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
@@ -395,8 +394,6 @@ class Exp:
             next_emo = "\N{BLACK RIGHT-POINTING TRIANGLE}"
             last_page_emo = "\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
 
-            get_topscores = lambda: scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse)
-
             reaction_list = []
             if len(get_topscores()) > 10:
                 reaction_list = [next_emo, last_page_emo]
@@ -407,9 +404,6 @@ class Exp:
 
             while reaction:
                 if changed:
-                    for emo in reaction_list:
-                        await self.bot.add_reaction(message, emo)
-
                     i = current_page * 10 - 10
 
                     topscores = get_topscores()
@@ -433,24 +427,27 @@ class Exp:
                             i += 1
 
                             if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
-                                joueur["killed_ducks"] = _("None !", language)
+                                joueur["killed_ducks"] = _("None!", language)
+
+                            if sorting_field['key'] is 'best_time':
+                                best_time = round(joueur.get('best_time', None) or 0, 3)
+                                joueur['best_time'] = int(best_time) if int(best_time) == float(best_time) else float(best_time)
 
                             if (not "best_time" in joueur) or (not joueur["best_time"]):
-                                joueur["best_time"] = _('None !', language)
+                                joueur["best_time"] = _('None!', language)
 
                             member = ctx.message.server.get_member(joueur["id_"])
 
+                            player_name = joueur['name'] if len(joueur['name']) <= 10 else joueur['name'][:9] + '…'
                             if prefs.getPref(ctx.message.server, "mention_in_topscores"):
-                                mention = member.mention if member else joueur["name"][:9] + '…'
-
                                 # mention = mention if len(mention) < 20 else joueur["name"]
-                                mention = mention if member and len(member.display_name) < 10 else joueur["name"][:9] + '…'
+                                mention = member.mention if member else player_name
                             else:
-                                mention = joueur["name"][:9] + '…'
+                                mention = player_name
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
-                            first_stat_list += str(joueur.get(sorting_field['key'], 0) or 0) + "\n\n"
-                            additional_stat_list += str(joueur.get(additional_field['key'], 0) or 0) + "\n\n"
+                            first_stat_list += str(joueur.get(sorting_field['key'], None) or 0) + "\n\n"
+                            additional_stat_list += str(joueur.get(additional_field['key'], None) or 0) + "\n\n"
 
                         embed.add_field(name=_("Player", language), value=players_list, inline=True)
                         embed.add_field(name=sorting_field['name'], value=first_stat_list, inline=True)
@@ -461,10 +458,13 @@ class Exp:
                         except discord.errors.Forbidden:
                             await self.bot.send_message(send_to, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language))
 
+                        for emo in reaction_list:
+                            await self.bot.add_reaction(message, emo)
+
                         changed = False
 
                 if reaction_list:
-                    res = await self.bot.wait_for_reaction(emoji=reaction_list, message=message, timeout=1200)
+                    res = await self.bot.wait_for_reaction(emoji=reaction_list, message=message, check=lambda reaction, user: not user.bot, timeout=1200)
 
                     if res:
                         reaction, user = res
