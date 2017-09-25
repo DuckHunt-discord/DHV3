@@ -102,7 +102,7 @@ def init():
 
     # Settings, config & translation
 
-    global lang, owners, support_server, defaultSettings, levels, credentials
+    global lang, owners, support_server, defaultSettings, levels, credentials, bool_
 
     with open('credentials.json') as f:
         credentials = json.load(f)
@@ -129,7 +129,7 @@ def init():
             return self._get_translation(language).gettext(msg)
 
     def bool_(b):
-        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh', 'oui', 'ok', 'on']
+        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on']
 
     defaultSettings = {
         "delete_commands"              : {

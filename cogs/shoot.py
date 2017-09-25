@@ -83,7 +83,7 @@ class Shoot:
             return
 
         if scores.getStat(channel, author, "balles", default=scores.getPlayerLevel(channel, author)["balles"]) <= 0:  # No more bullets in charger
-            await comm.message_user(message, _("** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / {balles_max} | Chargers remaining: {chargeurs_actuels} / {chargeurs_max}", language).format(**{
+            await comm.message_user(message, _("** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / {balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}", language).format(**{
                 "balles_actuelles" : scores.getStat(channel, author, "balles", default=scores.getPlayerLevel(channel, author)["balles"]),
                 "balles_max"       : scores.getPlayerLevel(channel, author)["balles"],
                 "chargeurs_actuels": scores.getStat(channel, author, "chargeurs", default=scores.getPlayerLevel(channel, author)["chargeurs"]),
@@ -323,7 +323,7 @@ class Shoot:
             greet = _("You don't need to reload your weapon.", language)
             scores.addToStat(message.channel, message.author, "unneeded_reloads", 1)
 
-        await comm.message_user(message, _("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Chargers left: {chargeurs_actuels}/{chargeurs_max}", language).format(**{
+        await comm.message_user(message, _("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: {chargeurs_actuels}/{chargeurs_max}", language).format(**{
             "greet"            : greet,
             "balles_actuelles" : scores.getStat(message.channel, message.author, "balles", default=scores.getPlayerLevel(message.channel, message.author)["balles"]),
             "balles_max"       : scores.getPlayerLevel(message.channel, message.author)["balles"],

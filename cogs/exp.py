@@ -6,6 +6,7 @@
 """
 import asyncio
 import datetime
+import math
 import random
 import time
 
@@ -74,7 +75,7 @@ class Exp:
         seconds_left = DAY - (now - thisDay)
         hours = int(seconds_left / HOUR)
         minutes = int((seconds_left - (HOUR * hours)) / 60)
-        await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and chargers in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
+        await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and magazines in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
 
     @commands.command(pass_context=True)
     @checks.is_not_banned()
@@ -224,7 +225,7 @@ class Exp:
                     embed.title = _("Reloads and items statistics", language)
 
                     embed.add_field(name=_("Reloads", language), value=str(gs("reloads")))
-                    embed.add_field(name=_("Reloads without chargers", language), value=str(gs("reloads_without_chargers")))
+                    embed.add_field(name=_("Reloads without magazines", language), value=str(gs("reloads_without_chargers")))
                     embed.add_field(name=_("Reloads not needed", language), value=str(gs("unneeded_reloads")))
 
                     embed.add_field(name=_("Trash found in bushes", language), value=str(gs("trashFound")))
@@ -315,13 +316,13 @@ class Exp:
     @commands.command(pass_context=True)
     @checks.is_not_banned()
     @checks.is_activated_here()
-    async def top(self, ctx, number_of_scores: int = 10, sorting_field: str = 'exp'):
+    async def top(self, ctx, number_of_scores: int = 10, sorting_field: str = 'exp', reverse: str = 'nope'):
         language = prefs.getPref(ctx.message.server, "language")
         permissions = ctx.message.channel.permissions_for(ctx.message.server.me)
         send_to = ctx.message.channel if not prefs.getPref(ctx.message.server, "pm_top") else ctx.message.author
 
         available_stats = {
-            'exp'   : {
+            'exp': {
                 'name': _('Exp points', language),
                 'key' : 'exp'
             },
@@ -332,10 +333,20 @@ class Exp:
             'missed': {
                 'name': _('Shots missed', language),
                 'key' : 'shoots_missed'
+            },
+            'time': {
+                'name': _('Best time', language),
+                'key': 'best_time',
+                'reverse': True
             }
         }
 
-        if sorting_field not in available_stats:
+        reverse = reverse == 'reverse' or commons.bool_(reverse)
+
+        if sorting_field == 'reverse':
+            sorting_field = 'exp'
+            reverse = True
+        elif sorting_field not in available_stats:
             await self.bot.send_message(send_to, _(":x: This sorting key does not exist. Please check the website for more information : http://api-d.com", language))
             return
 
@@ -356,13 +367,16 @@ class Exp:
             x._set_field_names([_("Rank", language), _("Nickname", language), sorting_field['name'], additional_field['name']])
 
             i = 0
-            for joueur in scores.topScores(ctx.message.channel, stat=sorting_field['key']):
+            for joueur in scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse):
                 i += 1
 
                 if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
-                    joueur["killed_ducks"] = _('None !', language)
+                    joueur["killed_ducks"] = _('None!', language)
 
-                x.add_row([i, joueur["name"].replace("`", ""), joueur.get(sorting_field['key'], 0),  joueur.get(additional_field['key'], 0)])
+                if (not "best_time" in joueur) or (not joueur["best_time"]):
+                    joueur["best_time"] = _('None!', language)
+
+                x.add_row([i, joueur["name"].replace("`", ""), joueur.get(sorting_field['key'], 0) or 0,  joueur.get(additional_field['key'], 0) or 0])
 
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
@@ -376,23 +390,30 @@ class Exp:
             reaction = True
             changed = True
 
-            next_emo = "\N{BLACK RIGHT-POINTING TRIANGLE}"
-            prev_emo = "\N{BLACK LEFT-POINTING TRIANGLE}"
             first_page_emo = "\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
+            prev_emo = "\N{BLACK LEFT-POINTING TRIANGLE}"
+            next_emo = "\N{BLACK RIGHT-POINTING TRIANGLE}"
+            last_page_emo = "\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}"
+
+            get_topscores = lambda: scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse)
+
+            reaction_list = []
+            if len(get_topscores()) > 10:
+                reaction_list = [next_emo, last_page_emo]
 
             current_page = 1
 
             message = await self.bot.send_message(send_to, _("Generating top scores for your channel, please wait!", language))
-            await self.bot.add_reaction(message, first_page_emo)
-            await self.bot.add_reaction(message, prev_emo)
-            await self.bot.add_reaction(message, next_emo)
 
             while reaction:
                 if changed:
+                    for emo in reaction_list:
+                        await self.bot.add_reaction(message, emo)
 
                     i = current_page * 10 - 10
 
-                    scores_to_process = scores.topScores(ctx.message.channel, stat=sorting_field['key'])[i:i + 10]
+                    topscores = get_topscores()
+                    scores_to_process = topscores[i:i + 10]
 
                     if scores_to_process:
                         embed = discord.Embed(description="Page #{i}".format(i=current_page))
@@ -410,23 +431,26 @@ class Exp:
 
                         for joueur in scores_to_process:
                             i += 1
+
                             if (not "killed_ducks" in joueur) or (not joueur["killed_ducks"]):
                                 joueur["killed_ducks"] = _("None !", language)
+
+                            if (not "best_time" in joueur) or (not joueur["best_time"]):
+                                joueur["best_time"] = _('None !', language)
 
                             member = ctx.message.server.get_member(joueur["id_"])
 
                             if prefs.getPref(ctx.message.server, "mention_in_topscores"):
-
-                                mention = member.mention if member else joueur["name"][:10]
+                                mention = member.mention if member else joueur["name"][:9] + '…'
 
                                 # mention = mention if len(mention) < 20 else joueur["name"]
-                                mention = mention if member and len(member.display_name) < 10 else joueur["name"][:10]
+                                mention = mention if member and len(member.display_name) < 10 else joueur["name"][:9] + '…'
                             else:
-                                mention = joueur["name"][:10]
+                                mention = joueur["name"][:9] + '…'
 
                             players_list += "#{i} {name}".format(name=mention, i=i) + "\n\n"
-                            first_stat_list += str(joueur.get(sorting_field['key'], 0)) + "\n\n"
-                            additional_stat_list += str(joueur.get(additional_field['key'], 0)) + "\n\n"
+                            first_stat_list += str(joueur.get(sorting_field['key'], 0) or 0) + "\n\n"
+                            additional_stat_list += str(joueur.get(additional_field['key'], 0) or 0) + "\n\n"
 
                         embed.add_field(name=_("Player", language), value=players_list, inline=True)
                         embed.add_field(name=sorting_field['name'], value=first_stat_list, inline=True)
@@ -438,44 +462,41 @@ class Exp:
                             await self.bot.send_message(send_to, _(":warning: There was an error while sending the embed, please check if the bot has the `embed_links` permission and try again!", language))
 
                         changed = False
-                    else:
-                        current_page -= 1
-                        await self.bot.edit_message(message, _("There's nothing more...", language))
 
-                res = await self.bot.wait_for_reaction(emoji=[next_emo, prev_emo, first_page_emo], message=message, timeout=1200)
+                if reaction_list:
+                    res = await self.bot.wait_for_reaction(emoji=reaction_list, message=message, timeout=1200)
 
-                if res:
-                    reaction, user = res
-                    emoji = reaction.emoji
-                    if emoji == next_emo:
+                    if res:
+                        reaction, user = res
+                        emoji = reaction.emoji
+                        reaction_list = []
                         changed = True
-                        current_page += 1
-                        try:
-                            await self.bot.remove_reaction(message, emoji, user)
-                        except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
-                    elif emoji == prev_emo:
-                        if current_page > 1:
-                            changed = True
-                            current_page -= 1
-                        try:
-                            await self.bot.remove_reaction(message, emoji, user)
-                        except discord.errors.Forbidden:
-                            await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
-                    elif emoji == first_page_emo:
-                        if current_page > 1:
-                            changed = True
+
+                        if emoji == first_page_emo:
                             current_page = 1
+                            reaction_list.extend([next_emo, last_page_emo])
+                        elif emoji == prev_emo:
+                            current_page -= 1
+                            if ((current_page * 10) - 10) > 0:
+                                reaction_list.extend([first_page_emo, prev_emo])
+                            reaction_list.extend([next_emo, last_page_emo])
+                        elif emoji == next_emo:
+                            current_page += 1
+                            reaction_list.extend([first_page_emo, prev_emo])
+                            if len(topscores) > current_page * 10:
+                                reaction_list.extend([next_emo, last_page_emo])
+                        elif emoji == last_page_emo:
+                            current_page = math.ceil(len(topscores) / 10)
+                            reaction_list.extend([first_page_emo, prev_emo])
+
                         try:
-                            await self.bot.remove_reaction(message, emoji, user)
+                            await self.bot.clear_reactions(message)
                         except discord.errors.Forbidden:
                             await self.bot.send_message(send_to, _("I don't have the `manage_messages` permission, I can't remove reactions. Please tell an admin. ;)", language))
+                    else:
+                        reaction = False
                 else:
                     reaction = False
-                    try:
-                        await self.bot.delete_message(message)
-                    except:
-                        pass
 
     @commands.group(pass_context=True)
     @checks.is_not_banned()
@@ -524,7 +545,7 @@ class Exp:
             await comm.message_user(message, _(":money_with_wings: You added a charger to your backpack for 13 exp points.", language))
 
         else:
-            await comm.message_user(message, _(":champagne: You have enough chargers!", language))
+            await comm.message_user(message, _(":champagne: You have enough magazines!", language))
 
     @shop.command(pass_context=True, name="3")
     @checks.have_exp(15)

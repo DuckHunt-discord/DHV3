@@ -6,6 +6,7 @@ Communication avec la base de données pour stocker les stats sur les canards"""
 
 # Constants #
 import time
+import math
 
 import discord
 from mysql import connector
@@ -108,7 +109,7 @@ def addToStat(channel, player, stat, value, announce=True):
         embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
         embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")
         embed.add_field(name=_("Shots accuracy", language), value=str(level["precision"]))
-        embed.add_field(name=_("Weapon fiability", language), value=str(level["fiabilitee"]))
+        embed.add_field(name=_("Weapon reliability", language), value=str(level["fiabilitee"]))
         embed.add_field(name=_("Exp points", language), value=str(getStat(channel, player, "exp")))
         embed.set_footer(text='DuckHunt V2', icon_url='http://api-d.com/snaps/2016-11-19_10-38-54-q1smxz4xyq.jpg')
         try:
@@ -145,7 +146,7 @@ def getStat(channel, player, stat, default=0):
         return default
 
 
-def topScores(channel, stat='exp'):
+def topScores(channel, stat='exp', reverse=False):
     columns = ['name', 'exp', 'killed_ducks', 'shoots_fired']
 
     if stat not in columns:
@@ -160,7 +161,10 @@ def topScores(channel, stat='exp'):
             # print(str(player["name"]) + " | " + str(player["exp"]) + "|" +  str(player["killed_ducks"]))
 
     try:
-        return sorted(players_list, key=lambda k: (k.get(stat, 0) or 0), reverse=True)  # Retourne l'ensemble des joueurs dans une liste par stat
+        # Retourne l'ensemble des joueurs dans une liste par stat
+        # FIXME : le truc de l'infini est un moyen dégueulasse de ne pas avoir "None" devant 0 pour best_time
+        #           éventuellement on pourrait ne pas mettre les gens avec None dans le top (à faire dans exp.py)
+        return sorted(players_list, key=lambda k: (k.get(stat, None) or (math.inf if stat == 'best_time' else 0)), reverse=not reverse)
     except:
         return []
 

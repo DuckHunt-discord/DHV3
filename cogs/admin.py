@@ -193,7 +193,7 @@ class Admin:
         guess = await self.bot.wait_for_message(timeout=10.0, author=ctx.message.author, check=is_random_str)
 
         if guess is None:
-            await comm.message_user(ctx.message, _(":x: Operation cancelled, you took too long to answer.", language).format(random_str=random_str))
+            await comm.message_user(ctx.message, _(":x: Operation cancelled, you took too long to answer.", language))
 
         else:
             failed = 0
