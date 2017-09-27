@@ -530,7 +530,7 @@ class Exp:
             await comm.message_user(message, _(":money_with_wings: You added a bullet to your weapon for 7 exp points.", language))
 
         else:
-            await comm.message_user(message, _(":champagne: Your charger is full!", language))
+            await comm.message_user(message, _(":champagne: Your magazine is full!", language))
 
     @shop.command(pass_context=True, name="2")
     @checks.have_exp(13)
@@ -542,7 +542,7 @@ class Exp:
         if scores.getStat(message.channel, message.author, "chargeurs", default=scores.getPlayerLevel(message.channel, message.author)["chargeurs"]) < scores.getPlayerLevel(message.channel, message.author)["chargeurs"]:
             scores.addToStat(message.channel, message.author, "chargeurs", 1)
             scores.addToStat(message.channel, message.author, "exp", -13)
-            await comm.message_user(message, _(":money_with_wings: You added a charger to your backpack for 13 exp points.", language))
+            await comm.message_user(message, _(":money_with_wings: You added a magazine to your backpack for 13 exp points.", language))
 
         else:
             await comm.message_user(message, _(":champagne: You have enough magazines!", language))
