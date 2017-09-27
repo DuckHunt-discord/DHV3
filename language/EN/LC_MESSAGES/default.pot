@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-25 10:51+0000\n"
+"POT-Creation-Date: 2017-09-27 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -473,11 +473,13 @@ msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
 
 #: cogs/exp.py:533
-msgid ":champagne: Your charger is full!"
+msgid ":champagne: Your magazine is full!"
 msgstr ""
 
 #: cogs/exp.py:545
-msgid ":money_with_wings: You added a charger to your backpack for 13 exp points."
+msgid ""
+":money_with_wings: You added a magazine to your backpack for 13 exp "
+"points."
 msgstr ""
 
 #: cogs/exp.py:548
