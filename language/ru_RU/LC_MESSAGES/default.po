@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-25 01:57+0000\n"
+"POT-Creation-Date: 2017-09-27 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,9 +151,6 @@ msgstr "Ник"
 
 msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
 msgstr ":cocktail: Лучшие результаты для канала #{channel_name} :cocktail:"
-
-msgid "None !"
-msgstr "Пусто !"
 
 msgid "Player"
 msgstr "Игрок"
