@@ -104,7 +104,7 @@ class Exp:
                 await comm.message_user(ctx.message, _(":x: Operation cancelled, you took too long to answer.", language))
                 return
 
-            if scores.getStat(message.channel, message.author, "exp") > amount:
+            if scores.getStat(message.channel, message.author, "exp") >= amount:
                 scores.addToStat(message.channel, message.author, "exp", -amount)
                 if prefs.getPref(message.server, "tax_on_user_give") > 0:
                     taxes = amount * (prefs.getPref(message.server, "tax_on_user_give") / 100)
