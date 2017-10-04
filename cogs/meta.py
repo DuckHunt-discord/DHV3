@@ -223,6 +223,15 @@ class Meta:
     async def help(self, ctx):
         await comm.message_user(ctx.message, _("Check out our new website! http://api-d.com/command-list.html", getPref(ctx.message.server, "language")))
 
+    @commands.command(pass_context=True)
+    async def time(self, ctx):
+        time_data = int(time.time()) % 86400
+        hour = str(int(time_data / 60 / 60)).rjust(2, "0")
+        minutes = str(int(time_data / 60 % 60)).rjust(2, "0")
+        seconds = str(int(time_data % 60)).rjust(2, "0")
+
+        await comm.message_user(ctx.message, _("It's {hour}:{minutes}:{seconds}.", getPref(ctx.message.server, "language")).format(hour=hour, minutes=minutes, seconds=seconds))
+
 
 def setup(bot):
     bot.add_cog(Meta(bot))

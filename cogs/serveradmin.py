@@ -4,10 +4,10 @@
 import time
 
 import discord
-from cogs.utils import comm, commons, ducks, prefs, scores
 from discord.ext import commands
 from prettytable import PrettyTable
 
+from cogs.utils import comm, commons, ducks, prefs, scores
 from cogs.utils.commons import _
 from .utils import checks
 
@@ -21,12 +21,12 @@ class ServerAdmin:
     @commands.command(pass_context=True)
     @checks.is_activated_here()
     @checks.is_admin()
-    async def coin(self, ctx):
+    async def coin(self, ctx, channel: discord.Channel = None):
         """Spawn a duck on the current channel
-        !coin"""
+        !coin [#channel]"""
         from cogs.utils.ducks import spawn_duck
         await spawn_duck({
-            "channel": ctx.message.channel,
+            "channel": channel if channel else ctx.message.channel,
             "time"   : int(time.time())
         })
 
