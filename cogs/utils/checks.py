@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import discord.utils
-from cogs.utils import comm, commons, prefs, scores
 from discord.ext import commands
 
+from cogs.utils import comm, commons, prefs, scores
 from cogs.utils.commons import _
 
 
@@ -101,16 +101,6 @@ def is_admin(warn=True):
 def is_activated_here():
     return commands.check(lambda ctx: is_activated_check(ctx.message.channel))
 
-
-# The permission system of the bot is based on a "just works" basis
-# You have permissions and the bot has permissions. If you meet the permissions
-# required to execute the command (and the bot does as well) then it goes through
-# and you can execute the command.
-# If these checks fail, then there are two fallbacks.
-# A role with the name of Bot Mod and a role with the name of Bot Admin.
-# Having these roles provides you access to certain commands without actually having
-# the permissions required for them.
-# Of course, the owner will always be able to execute commands.
 
 def check_permissions(ctx, perms):
     msg = ctx.message

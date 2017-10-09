@@ -294,11 +294,21 @@ class ServerAdmin:
                             await comm.message_user(ctx.message, _("Bypassing the max_ducks_per_day check as you are the bot owner. It would have been `{max}`.", language).format(**{
                                 "max": maxCJ
                             }))
+                        elif prefs.getPref(ctx.message.server, "vip"):
+                            await comm.message_user(ctx.message, _("Bypassing the max_ducks_per_day check as you are in a VIP server. Please don't abuse that. For information, the limit would have been set at `{max}` ducks per day.", language).format(**{
+                                "max": maxCJ
+                            }))
                         else:
                             value = maxCJ
+                elif pref == "vip":
+                    if ctx.message.author.id in commons.owners:
+                        await comm.message_user(ctx.message, _(":duck: Authorised to set the VIP status!", language))
+                    else:
+                        await comm.message_user(ctx.message, _(":x: Unauthorised to set the VIP status! You are not an owner.", language))
+                        return False
             except (TypeError, ValueError):
                 await comm.message_user(ctx.message, _(":x: Incorrect value.", language))
-                return
+                return False
 
             if prefs.setPref(ctx.message.server, pref=pref, value=value):
                 if pref == "ducks_per_day":
@@ -307,10 +317,13 @@ class ServerAdmin:
                     "value": prefs.getPref(ctx.message.server, pref),
                     "pref" : pref
                 }))
+                return True
             else:
                 await comm.message_user(ctx.message, _(":x: Incorrect value.", language))
+                return False
         else:
             await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo? Check the list with `!settings list`", language))
+            return False
 
     @settings.command(pass_context=True, name="reset")
     @checks.is_admin()

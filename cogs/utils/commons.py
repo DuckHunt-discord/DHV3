@@ -128,19 +128,21 @@ def init():
             # logger.debug("Language > " + str(language))
             return self._get_translation(language).gettext(msg)
 
+    global bool_
+
     def bool_(b):
         return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on']
 
     defaultSettings = {
-        "delete_commands"              : {
+        "delete_commands"                       : {
             "value": False,
             "type" : bool_
         },
-        "ducks_per_day"                : {
+        "ducks_per_day"                         : {
             "value": 24,
             "type" : int
         },
-        "interactive_topscores_enabled": {
+        "interactive_topscores_enabled"         : {
             "value": True,
             "type" : bool_
         },
@@ -280,23 +282,27 @@ def init():
             "value": "!",
             "type" : str
         },
-        "announce_level_up"         : {
+        "announce_level_up"                     : {
             "value": True,
             "type" : bool_
         },
-        "emoji_ducks"               : {
+        "emoji_ducks"                           : {
             "value": False,
             "type" : bool_
         },
-        "emoji_used"                : {
+        "emoji_used"                            : {
             "value": ":duck:",
             "type" : str
         },
-        "killed_mentions"           : {
+        "killed_mentions"                       : {
             "value": True,
             "type" : bool_
         },
-        "tts_ducks"                 : {
+        "tts_ducks"                             : {
+            "value": False,
+            "type" : bool_
+        },
+        "vip"                                   : {
             "value": False,
             "type" : bool_
         },
