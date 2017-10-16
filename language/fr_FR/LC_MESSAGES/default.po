@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-09-27 15:57+0000\n"
+"POT-Creation-Date: 2017-10-09 20:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -712,6 +712,9 @@ msgstr "\n"
 msgid "Check out our new website! http://api-d.com/command-list.html"
 msgstr "Visitez notre nouveau site web ! http://api-d.com/command-list.html"
 
+msgid "It's {hour}:{minutes}:{seconds}."
+msgstr "Il est {hour}:{minutes}:{seconds}."
+
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Utilisateur banni :gun:"
 
@@ -793,6 +796,13 @@ msgid ""
 msgstr ""
 "J'ignore le bloquage de max_ducks_per_day, car vous etes le gestionnaire du "
 "bot. Il aurait été réglé à `{max}`."
+
+msgid ":duck: Authorised to set the VIP status!"
+msgstr ":duck: Autorisé à mettre le statut de VIP !"
+
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ""
+":x: Non autorisé à mettre le statut de VIP ! Vous n'êtes pas un owner !"
 
 msgid ":x: Incorrect value."
 msgstr ":x: Valeur incorrecte"
