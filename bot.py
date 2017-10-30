@@ -304,6 +304,7 @@ if __name__ == '__main__':
     bot.client_id = credentials['client_id']
     bot.commands_used = Counter()
     bot.bots_key = credentials['bots_key']
+    bot.discord_bots_org_key = credentials['discord_bots_org_key']
 
     ## POST INIT IMPORTS ##
 
@@ -323,9 +324,7 @@ if __name__ == '__main__':
 
     # noinspection PyBroadException
     try:
-
         # bot.loop.create_task(api.apcom.kyk.start(port=5566))
-
         bot.loop.set_debug(True)
         bot.loop.run_until_complete(bot.start(token))
     except KeyboardInterrupt:

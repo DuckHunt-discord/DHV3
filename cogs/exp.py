@@ -468,7 +468,7 @@ class Exp:
                         changed = False
 
                 if reaction_list:
-                    res = await self.bot.wait_for_reaction(emoji=reaction_list, message=message, check=lambda reaction, user: not user.bot, timeout=1200)
+                    res = await self.bot.wait_for_reaction(emoji=reaction_list, message=message, check=lambda r, u: u != self.bot.user, timeout=1200)
 
                     if res:
                         reaction, user = res
