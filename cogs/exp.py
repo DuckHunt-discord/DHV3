@@ -137,7 +137,7 @@ class Exp:
         message = ctx.message
         channel = message.channel
         language = prefs.getPref(message.server, "language")
-        send_to = channel if not prefs.getPref(ctx.message.server, "pm_stats") else message.author
+        send_to = message.author if prefs.getPref(ctx.message.server, "pm_stats") else channel
 
         if not target:
             target = ctx.message.author
@@ -310,9 +310,12 @@ class Exp:
     @checks.is_not_banned()
     @checks.is_activated_here()
     async def top(self, ctx, number_of_scores: int = 10, sorting_field: str = 'exp', reverse: str = 'nope'):
-        language = prefs.getPref(ctx.message.server, "language")
-        permissions = ctx.message.channel.permissions_for(ctx.message.server.me)
-        send_to = ctx.message.channel if not prefs.getPref(ctx.message.server, "pm_top") else ctx.message.author
+        message = ctx.message
+        channel = message.channel
+        language = prefs.getPref(message.server, "language")
+        permissions = channel.permissions_for(message.server.me)
+        pm_top = prefs.getPref(message.server, "pm_top")
+        send_to = message.author if pm_top else channel
 
         available_stats = {
             'exp': {
@@ -346,14 +349,15 @@ class Exp:
         sorting_field = available_stats[sorting_field]
         additional_field = available_stats['exp' if sorting_field['key'] is not 'exp' else 'killed']
 
-        get_topscores = lambda: scores.topScores(ctx.message.channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse)
+        get_topscores = lambda: scores.topScores(channel, stat=sorting_field['key'], reverse=sorting_field.get('reverse', False) ^ reverse)
 
         if number_of_scores != 10 \
-                or not prefs.getPref(ctx.message.server, "interactive_topscores_enabled") \
-                or not permissions.read_messages \
-                or not permissions.manage_messages \
-                or not permissions.embed_links \
-                or not permissions.read_message_history:
+            or pm_top \
+            or not prefs.getPref(message.server, "interactive_topscores_enabled") \
+            or not permissions.read_messages \
+            or not permissions.manage_messages \
+            or not permissions.embed_links \
+            or not permissions.read_message_history:
             if number_of_scores > 200 or number_of_scores < 1:
                 await self.bot.send_message(send_to, _(":x: The maximum number of scores that can be shown on a topscores table is 200.", language))
                 return
@@ -380,7 +384,7 @@ class Exp:
             tab = x.get_string(end=number_of_scores, sortby=_("Rank", language))
 
             await self.bot.send_message(send_to, _(":cocktail: Best scores for #{channel_name}: :cocktail:\n```{table}```", language).format(**{
-                "channel_name": ctx.message.channel.name,
+                "channel_name": channel.name,
                 "table"       : await comm.paste(tab, "py") if len(tab) >= 1900 else tab
             }), )
         else:
@@ -412,7 +416,7 @@ class Exp:
                     if scores_to_process:
                         embed = discord.Embed(description="Page #{i}".format(i=current_page))
                         embed.title = _(":cocktail: Best scores for #{channel_name} :cocktail:", language).format(**{
-                            "channel_name": ctx.message.channel.name,
+                            "channel_name": channel.name,
                         })
 
                         embed.colour = discord.Colour.green()
@@ -436,10 +440,10 @@ class Exp:
                             if (not "best_time" in joueur) or (not joueur["best_time"]):
                                 joueur["best_time"] = _('None!', language)
 
-                            member = ctx.message.server.get_member(joueur["id_"])
+                            member = message.server.get_member(joueur["id_"])
 
                             player_name = joueur['name'] if len(joueur['name']) <= 10 else joueur['name'][:9] + '…'
-                            if prefs.getPref(ctx.message.server, "mention_in_topscores"):
+                            if prefs.getPref(message.server, "mention_in_topscores"):
                                 # mention = mention if len(mention) < 20 else joueur["name"]
                                 mention = member.mention if member else player_name
                             else:
