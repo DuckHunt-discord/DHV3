@@ -117,7 +117,7 @@ class ServerAdmin:
     @checks.is_admin()
     async def add_admin(self, ctx, target: discord.Member):
         """!add_admin [target]
-        Remove an admin to the server
+        Adds an admin to the server
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
@@ -138,7 +138,7 @@ class ServerAdmin:
     @checks.is_admin()
     async def del_admin(self, ctx, target: discord.Member):
         """!del_admin [target]
-        Remove an admin from the server
+        Removes an admin from the server
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
