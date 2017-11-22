@@ -163,6 +163,8 @@ async def on_message(message):
     if str(message.author.id) in commons.blocked_users:
         return
 
+
+
     # await comm.logwithinfos_message(message, message.content)
     await bot.process_commands(message)
 

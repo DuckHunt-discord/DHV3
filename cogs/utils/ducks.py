@@ -104,6 +104,8 @@ async def spawn_duck(duck):
     except KeyError:
         pass
 
+    should_reverse = False
+
     chance = random.randint(0, 100)
     if chance <= prefs.getPref(duck["channel"].server, "super_ducks_chance"):
         minl = prefs.getPref(duck["channel"].server, "super_ducks_minlife")
@@ -111,7 +113,9 @@ async def spawn_duck(duck):
         if minl != maxl:
             if maxl < minl:
                 maxl, minl = minl, maxl
-                await comm.logwithinfos(duck["channel"], None, "Minl and maxl swapped")
+                # Here lies madness
+                should_reverse = True
+                await comm.logwithinfos(duck["channel"], None, "Minl and maxl swapped.")
             life = random.randint(minl, maxl)
         else:
             life = minl
@@ -119,6 +123,7 @@ async def spawn_duck(duck):
         duck["isSC"] = True
         duck["SCvie"] = life
         duck["level"] = life
+
     else:
         duck["isSC"] = False
         duck["level"] = 1
@@ -135,6 +140,9 @@ async def spawn_duck(duck):
         canard_str = corps + _(random.choice(commons.canards_cri), language=prefs.getPref(duck["channel"].server, "language"))
     else:
         canard_str = corps + "QUAACK"
+
+    if should_reverse:
+        canard_str = canard_str[::-1]
     try:
         await bot.send_message(duck["channel"], canard_str, tts=prefs.getPref(duck["channel"].server, "tts_ducks"))
     except:
