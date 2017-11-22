@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-10-30 14:46+0000\n"
+"POT-Creation-Date: 2017-11-22 10:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -813,144 +813,144 @@ msgstr ""
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ""
 
-#: cogs/serveradmin.py:65
+#: cogs/serveradmin.py:66
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number "
 "I'm able to store."
 msgstr ""
 
-#: cogs/serveradmin.py:68
+#: cogs/serveradmin.py:70
 msgid ":ok:, they now have {newexp} exp points!"
 msgstr ""
 
-#: cogs/serveradmin.py:91
+#: cogs/serveradmin.py:93
 msgid ":robot: Channel added!"
 msgstr ""
 
-#: cogs/serveradmin.py:95
+#: cogs/serveradmin.py:97
 msgid ":x: This channel already exists in the game."
 msgstr ""
 
-#: cogs/serveradmin.py:105
+#: cogs/serveradmin.py:107
 msgid ":ok: Channel deleted."
 msgstr ""
 
-#: cogs/serveradmin.py:114
+#: cogs/serveradmin.py:116
 msgid "There are {ducks} ducks left to spawn today!"
 msgstr ""
 
-#: cogs/serveradmin.py:131
+#: cogs/serveradmin.py:133
 msgid ":robot: OK, {name} was set as an admin on the server!"
 msgstr ""
 
-#: cogs/serveradmin.py:153
+#: cogs/serveradmin.py:155
 msgid ":robot: OK, {name} is not an admin anymore!"
 msgstr ""
 
-#: cogs/serveradmin.py:161
+#: cogs/serveradmin.py:163
 msgid ":robot: {name} is not an admin!"
 msgstr ""
 
-#: cogs/serveradmin.py:181
+#: cogs/serveradmin.py:183
 msgid ":robot: OK, you've been set as an admin!"
 msgstr ""
 
-#: cogs/serveradmin.py:184
+#: cogs/serveradmin.py:186
 msgid ":x: This server has already been claimed! Try !add_admin instead."
 msgstr ""
 
-#: cogs/serveradmin.py:201
+#: cogs/serveradmin.py:203
 msgid "{deleted} message(s) deleted."
 msgstr ""
 
-#: cogs/serveradmin.py:205 cogs/serveradmin.py:223
+#: cogs/serveradmin.py:207 cogs/serveradmin.py:225
 msgid "No messages deleted: permission denied."
 msgstr ""
 
-#: cogs/serveradmin.py:219
+#: cogs/serveradmin.py:221
 msgid "{deleted} message(s) deleted"
 msgstr ""
 
-#: cogs/serveradmin.py:245
+#: cogs/serveradmin.py:247
 msgid "Permissions: {permissions}"
 msgstr ""
 
-#: cogs/serveradmin.py:256
+#: cogs/serveradmin.py:258
 msgid ":ok: Scores / stats of the channel were successfully deleted."
 msgstr ""
 
-#: cogs/serveradmin.py:266
+#: cogs/serveradmin.py:268
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings "
 "[view/set/reset/list/modified] [setting if applicable]`"
 msgstr ""
 
-#: cogs/serveradmin.py:274
+#: cogs/serveradmin.py:276
 msgid "The {pref} setting's value is set to `{value}` on this server."
 msgstr ""
 
-#: cogs/serveradmin.py:279
+#: cogs/serveradmin.py:281
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings "
 "list`."
 msgstr ""
 
-#: cogs/serveradmin.py:294
+#: cogs/serveradmin.py:296
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
 
-#: cogs/serveradmin.py:298
+#: cogs/serveradmin.py:300
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP server. Please "
 "don't abuse that. For information, the limit would have been set at "
 "`{max}` ducks per day."
 msgstr ""
 
-#: cogs/serveradmin.py:305
+#: cogs/serveradmin.py:307
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ""
 
-#: cogs/serveradmin.py:307
+#: cogs/serveradmin.py:309
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
-#: cogs/serveradmin.py:310 cogs/serveradmin.py:322
+#: cogs/serveradmin.py:312 cogs/serveradmin.py:324
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/serveradmin.py:316
+#: cogs/serveradmin.py:318
 msgid ":ok: The setting {pref} has been set to `{value}` on this server."
 msgstr ""
 
-#: cogs/serveradmin.py:325 cogs/serveradmin.py:342
+#: cogs/serveradmin.py:327 cogs/serveradmin.py:344
 msgid ":x: Invalid preference, maybe a typo? Check the list with `!settings list`"
 msgstr ""
 
-#: cogs/serveradmin.py:337
+#: cogs/serveradmin.py:339
 msgid ":ok: The setting {pref} has been reset to its defalut value: `{value}`."
 msgstr ""
 
-#: cogs/serveradmin.py:349
+#: cogs/serveradmin.py:351
 msgid ""
 "The list of preferences is available on our new website: "
 "https://api-d.com/bot-settings.html"
 msgstr ""
 
-#: cogs/serveradmin.py:358 cogs/serveradmin.py:364
+#: cogs/serveradmin.py:360 cogs/serveradmin.py:366
 msgid "Parameter"
 msgstr ""
 
-#: cogs/serveradmin.py:358
+#: cogs/serveradmin.py:360
 msgid "Value"
 msgstr ""
 
-#: cogs/serveradmin.py:358
+#: cogs/serveradmin.py:360
 msgid "Default value"
 msgstr ""
 
-#: cogs/serveradmin.py:363
+#: cogs/serveradmin.py:365
 msgid ""
 "List of modified parameters: \n"
 "```{table}```"
