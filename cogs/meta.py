@@ -230,7 +230,7 @@ class Meta:
         minutes = str(int(time_data / 60 % 60)).rjust(2, "0")
         seconds = str(int(time_data % 60)).rjust(2, "0")
 
-        await comm.message_user(ctx.message, _("It's {hour}:{minutes}:{seconds}.", getPref(ctx.message.server, "language")).format(hour=hour, minutes=minutes, seconds=seconds))
+        await comm.message_user(ctx.message, _("It's {hour}:{minutes}:{seconds} in the UTC timezone, where the bot is. \nUse this link to compare : https://time.is/compare/UTC.", getPref(ctx.message.server, "language")).format(hour=hour, minutes=minutes, seconds=seconds))
 
 
 def setup(bot):
