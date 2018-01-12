@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 09:29+0000\n"
+"POT-Creation-Date: 2018-01-12 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -803,8 +803,10 @@ msgstr ""
 
 #: cogs/meta.py:233
 msgid ""
-"It's {hour}:{minutes}:{seconds} in the UTC timezone, where the bot is. \n"
-"Use this link to compare : https://time.is/compare/UTC."
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as "
+"UTC±00:00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: "
+"https://time.is/compare/GMT"
 msgstr ""
 
 #: cogs/serveradmin.py:42
