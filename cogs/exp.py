@@ -225,7 +225,7 @@ class Exp:
                     embed.add_field(name=_("Trash found in bushes", language), value=str(gs("trashFound")))
 
                     embed.add_field(name=_("Exp earned with a clover", language), value=str(gs("exp_won_with_clover")))
-                    embed.add_field(name=_("Life insurence rewards", language), value=str(gs("life_insurence_rewards")))
+                    embed.add_field(name=_("Life insurance rewards", language), value=str(gs("life_insurence_rewards")))
                     embed.add_field(name=_("Free givebacks used", language), value=str(gs("givebacks")))
 
                 elif current_page == 4:
