@@ -52,7 +52,7 @@ class ServerAdmin:
         scores.setStat(ctx.message.channel, member, "banned", False)
         await comm.message_user(ctx.message, _(":ok: Done, user unbanned. :eyes:", language))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=["giveexp"])
     @checks.is_activated_here()
     @checks.is_admin()
     async def give_exp(self, ctx, target: discord.Member, exp: int):
@@ -146,7 +146,7 @@ class ServerAdmin:
         servers = prefs.JSONloadFromDisk("channels.json")
         if target.id in servers[ctx.message.server.id]["admins"]:
             servers[ctx.message.server.id]["admins"].remove(target.id)
-            await comm.logwithinfos_ctx(ctx, "Deleting admin {admin_name} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(**{
+            await comm.logwithinfos_ctx(ctx, "Deleting admin {admin_nxame} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(**{
                 "admin_name" : target.name,
                 "admin_id"   : target.id,
                 "server_name": ctx.message.server.name,

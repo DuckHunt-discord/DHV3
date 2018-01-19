@@ -77,10 +77,10 @@ class Exp:
         minutes = int((seconds_left - (HOUR * hours)) / 60)
         await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and magazines in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=["sendexp"])
     @checks.is_not_banned()
     @checks.is_activated_here()
-    async def sendexp(self, ctx, target: discord.Member, amount: int):
+    async def send_exp(self, ctx, target: discord.Member, amount: int):
         message = ctx.message
         language = prefs.getPref(message.server, "language")
         if prefs.getPref(message.server, "user_can_give_exp"):
