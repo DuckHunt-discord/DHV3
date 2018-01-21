@@ -77,7 +77,7 @@ class Exp:
         minutes = int((seconds_left - (HOUR * hours)) / 60)
         await comm.message_user(ctx.message, _(":alarm_clock: Next giveback of weapons and magazines in {sec} seconds ({hours} hours and {minutes} minutes).", prefs.getPref(ctx.message.server, "language")).format(sec=seconds_left, hours=hours, minutes=minutes))
 
-    @commands.command(pass_context=True, aliases=["sendexp"])
+    @commands.command(pass_context=True, aliases=['sendexp', 'send_xp', 'sendxp'])
     @checks.is_not_banned()
     @checks.is_activated_here()
     async def send_exp(self, ctx, target: discord.Member, amount: int):
@@ -130,7 +130,7 @@ class Exp:
         else:
             await comm.message_user(message, _(":x: Sending exp is disabled on this server", language))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['duckstat'])
     @checks.is_not_banned()
     @checks.is_activated_here()
     async def duckstats(self, ctx, target: discord.Member = None):

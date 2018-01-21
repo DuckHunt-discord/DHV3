@@ -30,7 +30,7 @@ class ServerAdmin:
             "time"   : int(time.time())
         })
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['gameban'])
     @checks.is_activated_here()
     @checks.is_admin()
     async def game_ban(self, ctx, member: discord.Member):
@@ -41,7 +41,7 @@ class ServerAdmin:
         scores.setStat(ctx.message.channel, member, "banned", True)
         await comm.message_user(ctx.message, _(":ok: Done, user banned. :gun:", language))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['gameunban'])
     @checks.is_activated_here()
     @checks.is_admin()
     async def game_unban(self, ctx, member: discord.Member):
@@ -52,7 +52,7 @@ class ServerAdmin:
         scores.setStat(ctx.message.channel, member, "banned", False)
         await comm.message_user(ctx.message, _(":ok: Done, user unbanned. :eyes:", language))
 
-    @commands.command(pass_context=True, aliases=["giveexp"])
+    @commands.command(pass_context=True, aliases=['giveexp', 'give_xp', 'givexp'])
     @checks.is_activated_here()
     @checks.is_admin()
     async def give_exp(self, ctx, target: discord.Member, exp: int):
@@ -71,7 +71,7 @@ class ServerAdmin:
             "newexp": scores.getStat(ctx.message.channel, target, "exp")
         }))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['addchannel'])
     @checks.is_admin()
     async def add_channel(self, ctx):
         """Add the current channel to the server
@@ -96,7 +96,7 @@ class ServerAdmin:
             await comm.logwithinfos_ctx(ctx, "Channel exists")
             await comm.message_user(ctx.message, _(":x: This channel already exists in the game.", language))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['delchannel'])
     @checks.is_activated_here()
     @checks.is_admin()
     async def del_channel(self, ctx):
@@ -115,7 +115,7 @@ class ServerAdmin:
         """
         await comm.message_user(ctx.message, _("There are {ducks} ducks left to spawn today!", prefs.getPref(ctx.message.server, "language")).format(ducks=commons.ducks_planned[ctx.message.channel]))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['addadmin'])
     @checks.is_admin()
     async def add_admin(self, ctx, target: discord.Member):
         """!add_admin [target]
@@ -136,7 +136,7 @@ class ServerAdmin:
 
         prefs.JSONsaveToDisk(servers, "channels.json")
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['deladmin'])
     @checks.is_admin()
     async def del_admin(self, ctx, target: discord.Member):
         """!del_admin [target]
@@ -164,7 +164,7 @@ class ServerAdmin:
                 "name": target.name
             }))
 
-    @commands.command(pass_context=True)
+    @commands.command(pass_context=True, aliases=['claim_server'])
     async def claimserver(self, ctx):
         """Sets yourself as an admin if there are no admin configured, IE: when you just added the bot to a server
         !claimserver"""
@@ -267,8 +267,8 @@ class ServerAdmin:
         if not ctx.invoked_subcommand:
             await comm.message_user(ctx.message, _(":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/list/modified] [setting if applicable]`", language))
 
-    @settings.command(pass_context=True, name="view")
-    async def view(self, ctx, pref: str):
+    @settings.command(pass_context=True, name='view')
+    async def settings_view(self, ctx, pref: str):
         """!settings view [pref]"""
         language = prefs.getPref(ctx.message.server, "language")
 
@@ -280,9 +280,9 @@ class ServerAdmin:
         else:
             await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo? Check the list with `!settings list`.", language))
 
-    @settings.command(pass_context=True, name="set")
+    @settings.command(pass_context=True, name='set')
     @checks.is_admin()
-    async def set(self, ctx, pref: str, value: str):
+    async def settings_set(self, ctx, pref: str, value: str):
         """!settings set [pref] [value]
         Admin powers required"""
         language = prefs.getPref(ctx.message.server, "language")
@@ -327,9 +327,9 @@ class ServerAdmin:
             await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo? Check the list with `!settings list`", language))
             return False
 
-    @settings.command(pass_context=True, name="reset")
+    @settings.command(pass_context=True, name='reset')
     @checks.is_admin()
-    async def reset(self, ctx, pref: str):
+    async def settings_reset(self, ctx, pref: str):
         """!settings reset [pref]
         Admin powers required"""
         language = prefs.getPref(ctx.message.server, "language")
@@ -343,15 +343,15 @@ class ServerAdmin:
         else:
             await comm.message_user(ctx.message, _(":x: Invalid preference, maybe a typo? Check the list with `!settings list`", language))
 
-    @settings.command(pass_context=True, name="list")
-    async def list(self, ctx):
+    @settings.command(pass_context=True, name='list')
+    async def settings_list(self, ctx):
         """!settings list"""
         language = prefs.getPref(ctx.message.server, "language")
 
         await comm.message_user(ctx.message, _("The list of preferences is available on our new website: https://api-d.com/bot-settings.html", language))
 
-    @settings.command(pass_context=True, name="modified")
-    async def listm(self, ctx):
+    @settings.command(pass_context=True, name='modified')
+    async def settings_modified(self, ctx):
         """!settings modified"""
         language = prefs.getPref(ctx.message.server, "language")
         defaultSettings = commons.defaultSettings

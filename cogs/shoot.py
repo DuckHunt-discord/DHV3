@@ -44,7 +44,7 @@ class Shoot:
         else:
             await comm.message_user(message, string)
 
-    @commands.command(pass_context=True, aliases=["pan", "shoot"])
+    @commands.command(pass_context=True, aliases=['pan', 'shoot'])
     @checks.is_activated_here()
     @checks.is_not_banned()
     async def bang(self, ctx):
