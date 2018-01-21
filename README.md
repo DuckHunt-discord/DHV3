@@ -1,34 +1,32 @@
+Choose your language : [FR](README_FR.md)
+
 # DuckHunt Version 2
-Un super bot pour discord. Idée du jeu par MenzAgitat, porté selon [son idée](http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html).
+## What is it?
+The core of the game is to shoot every duck you see. Like a shooter, just for discord! :°)
 
-Merci Menz' :D
+## I need help. Where can I get it?
+[You should check out our website](https://api-d.com). Every command, setting and item is documented there.
 
-## Qu'est-ce que c'est ?
-Le but du jeu est de tuer les canards dès que vous les voyez ! C'est un peu un fps, mais pour discord. :°)
+## I want to use the bot on my server. How can I add it?
+There are two possible ways to use the bot. You can either simply invite the official version, or host it yourself (advanced users only).
 
-## Ou est l'aide du bot ?
-Elle se trouve ici : http://api-d.com
+### Invite link (Official Version)
+1. [Click here to invite the bot](https://discordapp.com/oauth2/authorize?&client_id=187636051135823872&scope=bot&permissions=68320256)
+2. Claim your own server using `!claimserver`
+3. Go to a channel you want to hunt in
+4. Add the channel to the list of channels ducks appear in with `!add_channel`
+5. That's it! You should check out the settings list [here](https://api-d.com/bot-settings.html) for information on how to tweak the bot.
 
-## Comment avoir le bot sur son serveur ?
-Deux moyens :
-- L'inviter et taper !claimserver, puis ajouter chaque channel de jeu avec !add_channel. > https://discordapp.com/oauth2/authorize?&client_id=187636051135823872&scope=bot&permissions=68320256
-- L'héberger vous-même, ce qui vous permet d'avoir plus de contrôle sur les préférences du bot. Pour cela, il vous faut Python 3.5+.
+### Self-Hosting the bot
+[Installation Instructions](INSTALL.md)
 
-## J'ai besoin d'aide, que faire ?
-Ouvrez une [issue](https://github.com/DuckHunt-discord/DHV2/issues/new), ou passez sur [notre Discord](https://discord.gg/2BksEkV) !
+## I still need help. What do I do?
+If you find a bug or have a suggestion, you can open an issue [here](https://github.com/DuckHunt-discord/DHV2/issues/new).
 
-## Des badges ?
+If you need help or have any questions, feel free to join [our discord](https://discord.gg/2BksEkV).
+
+## Project Status
 [![Dependency Status](https://gemnasium.com/badges/github.com/DuckHunt-discord/DHV2.svg)](https://gemnasium.com/github.com/DuckHunt-discord/DHV2)
 [![Build Status](https://travis-ci.org/DuckHunt-discord/DHV2.svg?branch=master)](https://travis-ci.org/DuckHunt-discord/DHV2)
 
-## Licence
-
-		Cette création est mise à disposition selon le Contrat
-		Attribution-NonCommercial-ShareAlike 3.0 Unported disponible en ligne
-		http://creativecommons.org/licenses/by-nc-sa/3.0/ ou par courrier postal à
-		Creative Commons, 171 Second Street, Suite 300, San Francisco, California
-		94105, USA.
-		Vous pouvez également consulter la version française ici :
-		http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr
-
-##### Travail original par MenzAgitat : http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html
+##### Inspired by MenzAgitat's work: http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html (thanks Menz' :D)
