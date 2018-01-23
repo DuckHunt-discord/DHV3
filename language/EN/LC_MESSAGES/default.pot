@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-17 13:24+0000\n"
+"POT-Creation-Date: 2018-01-23 22:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -843,118 +843,122 @@ msgstr ""
 msgid "There are {ducks} ducks left to spawn today!"
 msgstr ""
 
-#: cogs/serveradmin.py:133
+#: cogs/serveradmin.py:135
 msgid ":robot: OK, {name} was set as an admin on the server!"
 msgstr ""
 
-#: cogs/serveradmin.py:155
+#: cogs/serveradmin.py:140
+msgid ":robot: Hum, {name} is already set as an admin on the server!"
+msgstr ""
+
+#: cogs/serveradmin.py:162
 msgid ":robot: OK, {name} is not an admin anymore!"
 msgstr ""
 
-#: cogs/serveradmin.py:163
+#: cogs/serveradmin.py:170
 msgid ":robot: {name} is not an admin!"
 msgstr ""
 
-#: cogs/serveradmin.py:183
+#: cogs/serveradmin.py:190
 msgid ":robot: OK, you've been set as an admin!"
 msgstr ""
 
-#: cogs/serveradmin.py:186
+#: cogs/serveradmin.py:193
 msgid ":x: This server has already been claimed! Try !add_admin instead."
 msgstr ""
 
-#: cogs/serveradmin.py:203
+#: cogs/serveradmin.py:210
 msgid "{deleted} message(s) deleted."
 msgstr ""
 
-#: cogs/serveradmin.py:207 cogs/serveradmin.py:225
+#: cogs/serveradmin.py:214 cogs/serveradmin.py:232
 msgid "No messages deleted: permission denied."
 msgstr ""
 
-#: cogs/serveradmin.py:221
+#: cogs/serveradmin.py:228
 msgid "{deleted} message(s) deleted"
 msgstr ""
 
-#: cogs/serveradmin.py:247
+#: cogs/serveradmin.py:254
 msgid "Permissions: {permissions}"
 msgstr ""
 
-#: cogs/serveradmin.py:258
+#: cogs/serveradmin.py:265
 msgid ":ok: Scores / stats of the channel were successfully deleted."
 msgstr ""
 
-#: cogs/serveradmin.py:268
+#: cogs/serveradmin.py:275
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings "
 "[view/set/reset/list/modified] [setting if applicable]`"
 msgstr ""
 
-#: cogs/serveradmin.py:276
+#: cogs/serveradmin.py:283
 msgid "The {pref} setting's value is set to `{value}` on this server."
 msgstr ""
 
-#: cogs/serveradmin.py:281
+#: cogs/serveradmin.py:288
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings "
 "list`."
 msgstr ""
 
-#: cogs/serveradmin.py:296
+#: cogs/serveradmin.py:303
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
 
-#: cogs/serveradmin.py:300
+#: cogs/serveradmin.py:307
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP server. Please "
 "don't abuse that. For information, the limit would have been set at "
 "`{max}` ducks per day."
 msgstr ""
 
-#: cogs/serveradmin.py:307
+#: cogs/serveradmin.py:314
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ""
 
-#: cogs/serveradmin.py:309
+#: cogs/serveradmin.py:316
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
-#: cogs/serveradmin.py:312 cogs/serveradmin.py:324
+#: cogs/serveradmin.py:319 cogs/serveradmin.py:331
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/serveradmin.py:318
+#: cogs/serveradmin.py:325
 msgid ":ok: The setting {pref} has been set to `{value}` on this server."
 msgstr ""
 
-#: cogs/serveradmin.py:327 cogs/serveradmin.py:344
+#: cogs/serveradmin.py:334 cogs/serveradmin.py:351
 msgid ":x: Invalid preference, maybe a typo? Check the list with `!settings list`"
 msgstr ""
 
-#: cogs/serveradmin.py:339
+#: cogs/serveradmin.py:346
 msgid ":ok: The setting {pref} has been reset to its defalut value: `{value}`."
 msgstr ""
 
-#: cogs/serveradmin.py:351
+#: cogs/serveradmin.py:358
 msgid ""
 "The list of preferences is available on our new website: "
 "https://api-d.com/bot-settings.html"
 msgstr ""
 
-#: cogs/serveradmin.py:360 cogs/serveradmin.py:366
+#: cogs/serveradmin.py:367 cogs/serveradmin.py:373
 msgid "Parameter"
 msgstr ""
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Value"
 msgstr ""
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Default value"
 msgstr ""
 
-#: cogs/serveradmin.py:365
+#: cogs/serveradmin.py:372
 msgid ""
 "List of modified parameters: \n"
 "```{table}```"
