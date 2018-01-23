@@ -123,16 +123,23 @@ class ServerAdmin:
         """
         language = prefs.getPref(ctx.message.server, "language")
         servers = prefs.JSONloadFromDisk("channels.json")
-        servers[ctx.message.server.id]["admins"] += [target.id]
-        await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
-            "admin_name" : target.name,
-            "admin_id"   : target.id,
-            "server_name": ctx.message.server.name,
-            "server_id"  : ctx.message.server.id
-        }))
-        await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server!", language).format(**{
-            "name": target.name
-        }))
+        if not target.id in servers[ctx.message.server.id]["admins"]:
+            servers[ctx.message.server.id]["admins"] += [target.id]
+            await comm.logwithinfos_ctx(ctx, "Adding admin {admin_name} | {admin_id} to configuration file for server {server_name} | {server_id}.".format(**{
+                "admin_name" : target.name,
+                "admin_id"   : target.id,
+                "server_name": ctx.message.server.name,
+                "server_id"  : ctx.message.server.id
+            }))
+
+            await comm.message_user(ctx.message, _(":robot: OK, {name} was set as an admin on the server!", language).format(**{
+                "name": target.name
+            }))
+
+        else:
+            await comm.message_user(ctx.message, _(":robot: Hum, {name} is already set as an admin on the server!", language).format(**{
+                "name": target.name
+            }))
 
         prefs.JSONsaveToDisk(servers, "channels.json")
 
