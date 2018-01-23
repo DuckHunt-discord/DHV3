@@ -153,7 +153,7 @@ class ServerAdmin:
         servers = prefs.JSONloadFromDisk("channels.json")
         if target.id in servers[ctx.message.server.id]["admins"]:
             servers[ctx.message.server.id]["admins"].remove(target.id)
-            await comm.logwithinfos_ctx(ctx, "Deleting admin {admin_nxame} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(**{
+            await comm.logwithinfos_ctx(ctx, "Deleting admin {admin_name} | {admin_id} from configuration file for server {server_name} | {server_id}.".format(**{
                 "admin_name" : target.name,
                 "admin_id"   : target.id,
                 "server_name": ctx.message.server.name,
