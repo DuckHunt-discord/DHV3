@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 09:26+0000\n"
+"POT-Creation-Date: 2018-01-23 22:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 #: bot.py:63
@@ -376,8 +376,8 @@ msgid "Exp earned with a clover"
 msgstr "Expérience gagné avec un trèfle"
 
 #: cogs/exp.py:228
-msgid "Life insurence rewards"
-msgstr "Récompenses d'assurance vie"
+msgid "Life insurance rewards"
+msgstr "Récompenses de l'assurance-vie"
 
 #: cogs/exp.py:229
 msgid "Free givebacks used"
@@ -891,13 +891,14 @@ msgstr "Visitez notre nouveau site web ! http://api-d.com/command-list.html"
 
 #: cogs/meta.py:233
 msgid ""
-"It's {hour}:{minutes}:{seconds} in the UTC timezone, where the bot is. \n"
-"Use this link to compare : https://time.is/compare/UTC."
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
 msgstr ""
-"Il est {hour}:{minutes}:{seconds} dans le fuseau horaire UTC, ou le bot se "
-"trouve.\n"
-"Vous pouvez utiliser ce lien pour comparer cette heure avec l'heure chez "
-"vous : https://time.is/compare/UTC."
+"Il est {hour}:{minutes}:{seconds} dans le fuseau horaire GMT (aussi appelé "
+"UTC±00:00), qui est celui que le bot utilise.\n"
+"Vous pouvez utiliser ce site web pour le comparer au vôtre : https://time.is/"
+"compare/GMT"
 
 #: cogs/serveradmin.py:42
 msgid ":ok: Done, user banned. :gun:"
@@ -935,48 +936,53 @@ msgstr ":ok: Canal supprimé"
 msgid "There are {ducks} ducks left to spawn today!"
 msgstr "Il reste {ducks} canards aujourd'hui!"
 
-#: cogs/serveradmin.py:133
+#: cogs/serveradmin.py:135
 msgid ":robot: OK, {name} was set as an admin on the server!"
 msgstr ":robot: OK, {name} a été défini comme un admin sur le serveur!"
 
-#: cogs/serveradmin.py:155
+#: cogs/serveradmin.py:140
+msgid ":robot: Hum, {name} is already set as an admin on the server!"
+msgstr ""
+":robot: Hum, {name} est déjà défini comme administrateur sur le serveur !"
+
+#: cogs/serveradmin.py:162
 msgid ":robot: OK, {name} is not an admin anymore!"
 msgstr ":robot: OK, {name} n'est pas/plus un admin!"
 
-#: cogs/serveradmin.py:163
+#: cogs/serveradmin.py:170
 msgid ":robot: {name} is not an admin!"
 msgstr ":robot: {name} n'est pas un admin!"
 
-#: cogs/serveradmin.py:183
+#: cogs/serveradmin.py:190
 msgid ":robot: OK, you've been set as an admin!"
 msgstr ":robot: OK, vous avez été défini comme un admin!"
 
-#: cogs/serveradmin.py:186
+#: cogs/serveradmin.py:193
 msgid ":x: This server has already been claimed! Try !add_admin instead."
 msgstr ""
 ":x: Ce serveur a déjà été réclamé! Essayez de taper !add_admin à la place."
 
-#: cogs/serveradmin.py:203
+#: cogs/serveradmin.py:210
 msgid "{deleted} message(s) deleted."
 msgstr "{deleted} message(s) supprimés"
 
-#: cogs/serveradmin.py:207 cogs/serveradmin.py:225
+#: cogs/serveradmin.py:214 cogs/serveradmin.py:232
 msgid "No messages deleted: permission denied."
 msgstr "Aucun message supprimé: permission refusée."
 
-#: cogs/serveradmin.py:221
+#: cogs/serveradmin.py:228
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} message(s) supprimés"
 
-#: cogs/serveradmin.py:247
+#: cogs/serveradmin.py:254
 msgid "Permissions: {permissions}"
 msgstr "Autorisations: {permissions}"
 
-#: cogs/serveradmin.py:258
+#: cogs/serveradmin.py:265
 msgid ":ok: Scores / stats of the channel were successfully deleted."
 msgstr ":ok: Les scores / stats de la channel ont bien étés supprimés."
 
-#: cogs/serveradmin.py:268
+#: cogs/serveradmin.py:275
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -984,18 +990,18 @@ msgstr ""
 ":x: Syntaxe de commande incorrecte : `!settings [view/set/reset/list/"
 "modified] [préférence si nécessaire]`"
 
-#: cogs/serveradmin.py:276
+#: cogs/serveradmin.py:283
 msgid "The {pref} setting's value is set to `{value}` on this server."
 msgstr ":ok: le paramètre {pref} est défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:281
+#: cogs/serveradmin.py:288
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings list`."
 msgstr ""
 ":x: Préférence non valide, peut-être une faute de frappe ? La liste est dans "
 "`!settings list`."
 
-#: cogs/serveradmin.py:296
+#: cogs/serveradmin.py:303
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -1003,7 +1009,7 @@ msgstr ""
 "J'ignore le bloquage de max_ducks_per_day, car vous etes le gestionnaire du "
 "bot. Il aurait été réglé à `{max}`."
 
-#: cogs/serveradmin.py:300
+#: cogs/serveradmin.py:307
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP server. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -1013,38 +1019,38 @@ msgstr ""
 "êtes sur un serveur VIP. Veuillez ne pas en abuser :). Pour information, la "
 "limite aurait été fixée à `{max}` canards par jour."
 
-#: cogs/serveradmin.py:307
+#: cogs/serveradmin.py:314
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ":duck: Autorisé à mettre le statut de VIP !"
 
-#: cogs/serveradmin.py:309
+#: cogs/serveradmin.py:316
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: Non autorisé à mettre le statut de VIP ! Vous n'êtes pas un owner !"
 
-#: cogs/serveradmin.py:312 cogs/serveradmin.py:324
+#: cogs/serveradmin.py:319 cogs/serveradmin.py:331
 msgid ":x: Incorrect value."
 msgstr ":x: Valeur incorrecte"
 
-#: cogs/serveradmin.py:318
+#: cogs/serveradmin.py:325
 msgid ":ok: The setting {pref} has been set to `{value}` on this server."
 msgstr ":ok: le paramètre {pref} a été défini à `{value}` sur ce serveur."
 
-#: cogs/serveradmin.py:327 cogs/serveradmin.py:344
+#: cogs/serveradmin.py:334 cogs/serveradmin.py:351
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings list`"
 msgstr ""
 ":x: Préférence non valide, peut-être une faute de frappe ? La liste est dans "
 "`!settings list`"
 
-#: cogs/serveradmin.py:339
+#: cogs/serveradmin.py:346
 msgid ""
 ":ok: The setting {pref} has been reset to its defalut value: `{value}`."
 msgstr ""
 ":ok: Le paramètre {pref} à été réinitialisé a sa valeur par défaut : "
 "`{value}`"
 
-#: cogs/serveradmin.py:351
+#: cogs/serveradmin.py:358
 msgid ""
 "The list of preferences is available on our new website: https://api-d.com/"
 "bot-settings.html"
@@ -1052,19 +1058,19 @@ msgstr ""
 "La liste des préférences est disponible sur le nouveau site web : https://"
 "api-d.com/bot-settings.html"
 
-#: cogs/serveradmin.py:360 cogs/serveradmin.py:366
+#: cogs/serveradmin.py:367 cogs/serveradmin.py:373
 msgid "Parameter"
 msgstr "Paramètre"
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Value"
 msgstr "Valeur actuelle"
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Default value"
 msgstr "Valeur par défaut"
 
-#: cogs/serveradmin.py:365
+#: cogs/serveradmin.py:372
 msgid "List of modified parameters: \n"
 "```{table}```"
 msgstr "Liste des paramètres modifiés:\n"

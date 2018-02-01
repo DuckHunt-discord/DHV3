@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 09:26+0000\n"
+"POT-Creation-Date: 2018-01-23 22:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 #: bot.py:63
@@ -369,10 +369,6 @@ msgstr "In Büschen gefundener Müll"
 #: cogs/exp.py:227
 msgid "Exp earned with a clover"
 msgstr "Durch Kleeblätter erhaltene Exp"
-
-#: cogs/exp.py:228
-msgid "Life insurence rewards"
-msgstr "Lebensversicherungsentlohnungen"
 
 #: cogs/exp.py:229
 msgid "Free givebacks used"
@@ -894,51 +890,51 @@ msgstr ":ok: Kanal gelöscht."
 msgid "There are {ducks} ducks left to spawn today!"
 msgstr "Es werden heute noch {ducks} Enten auftauchen!"
 
-#: cogs/serveradmin.py:133
+#: cogs/serveradmin.py:135
 msgid ":robot: OK, {name} was set as an admin on the server!"
 msgstr ":robot: OK, {name} ist jetzt ein Admin auf diesem Server!"
 
-#: cogs/serveradmin.py:155
+#: cogs/serveradmin.py:162
 msgid ":robot: OK, {name} is not an admin anymore!"
 msgstr ":robot: OK, {name} ist kein Administrator mehr."
 
-#: cogs/serveradmin.py:163
+#: cogs/serveradmin.py:170
 msgid ":robot: {name} is not an admin!"
 msgstr ":robot: {name} ist kein Administrator!"
 
-#: cogs/serveradmin.py:183
+#: cogs/serveradmin.py:190
 msgid ":robot: OK, you've been set as an admin!"
 msgstr ":robot: OK, du bist jetzt ein Administrator!"
 
-#: cogs/serveradmin.py:186
+#: cogs/serveradmin.py:193
 msgid ":x: This server has already been claimed! Try !add_admin instead."
 msgstr ""
 ":x: Dieser Server wurde bereits beansprucht. Versuch stattdessen !add_admin."
 
-#: cogs/serveradmin.py:203
+#: cogs/serveradmin.py:210
 msgid "{deleted} message(s) deleted."
 msgstr "{deleted} Nachricht(en) gelöscht."
 
-#: cogs/serveradmin.py:207 cogs/serveradmin.py:225
+#: cogs/serveradmin.py:214 cogs/serveradmin.py:232
 msgid "No messages deleted: permission denied."
 msgstr "Keine Nachrichten gelöscht: Fehlende Berechtigungen."
 
-#: cogs/serveradmin.py:221
+#: cogs/serveradmin.py:228
 msgid "{deleted} message(s) deleted"
 msgstr "{deleted} Nachricht(en) gelöscht"
 
-#: cogs/serveradmin.py:258
+#: cogs/serveradmin.py:265
 msgid ":ok: Scores / stats of the channel were successfully deleted."
 msgstr ":ok: Spielstände des Channels erfolgreich gelöscht."
 
-#: cogs/serveradmin.py:281
+#: cogs/serveradmin.py:288
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings list`."
 msgstr ""
 ":x: Ungültige Einstellung. Schreibfehler? Mit `!settings list` kannst du "
 "eine Liste aller Einstellungen einsehen."
 
-#: cogs/serveradmin.py:300
+#: cogs/serveradmin.py:307
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP server. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -947,38 +943,38 @@ msgstr ""
 "VIP Server: Umgehe das max_ducks_per_day limit. Bitte missbrauch das nicht. "
 "Das Limit wäre normalerweise `{max}`."
 
-#: cogs/serveradmin.py:307
+#: cogs/serveradmin.py:314
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ":duck: Autorisiert, den VIP Status zu vergeben."
 
-#: cogs/serveradmin.py:309
+#: cogs/serveradmin.py:316
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Du musst ein Eigentümer sein, um diesen Status zu vergeben."
 
-#: cogs/serveradmin.py:312 cogs/serveradmin.py:324
+#: cogs/serveradmin.py:319 cogs/serveradmin.py:331
 msgid ":x: Incorrect value."
 msgstr ":x: Falscher Wert"
 
-#: cogs/serveradmin.py:318
+#: cogs/serveradmin.py:325
 msgid ":ok: The setting {pref} has been set to `{value}` on this server."
 msgstr ""
 ":ok: Die Einstellung {pref} wurde auf diesem Server auf `{value}` gesetzt."
 
-#: cogs/serveradmin.py:327 cogs/serveradmin.py:344
+#: cogs/serveradmin.py:334 cogs/serveradmin.py:351
 msgid ""
 ":x: Invalid preference, maybe a typo? Check the list with `!settings list`"
 msgstr ""
 ":x: Ungültige Einstellung. Schreibfehler? Mit `!settings list` kannst du "
 "eine Liste aller Einstellungen einsehen."
 
-#: cogs/serveradmin.py:339
+#: cogs/serveradmin.py:346
 msgid ""
 ":ok: The setting {pref} has been reset to its defalut value: `{value}`."
 msgstr ""
 ":ok: Die Einstellung {pref} wurde auf ihren Standard-Wert zurückgesetzt: "
 "`{value}`"
 
-#: cogs/serveradmin.py:351
+#: cogs/serveradmin.py:358
 msgid ""
 "The list of preferences is available on our new website: https://api-d.com/"
 "bot-settings.html"
@@ -986,19 +982,19 @@ msgstr ""
 "Eine Liste aller Einstellungen ist auf unserer neuen Webseite einsehbar: "
 "https://api-d.com/bot-settings.html"
 
-#: cogs/serveradmin.py:360 cogs/serveradmin.py:366
+#: cogs/serveradmin.py:367 cogs/serveradmin.py:373
 msgid "Parameter"
 msgstr "Parameter"
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Value"
 msgstr "Wert"
 
-#: cogs/serveradmin.py:360
+#: cogs/serveradmin.py:367
 msgid "Default value"
 msgstr "Standardwert"
 
-#: cogs/serveradmin.py:365
+#: cogs/serveradmin.py:372
 msgid "List of modified parameters: \n"
 "```{table}```"
 msgstr "Liste der geänderten Einstellungen:\n"
