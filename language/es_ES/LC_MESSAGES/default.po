@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-23 22:22+0000\n"
+"POT-Creation-Date: 2018-02-01 16:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -447,7 +447,7 @@ msgstr "Rango"
 
 #: cogs/exp.py:366
 msgid "Nickname"
-msgstr "Sobrenombre"
+msgstr "Apodo"
 
 #: cogs/exp.py:373 cogs/exp.py:380 cogs/exp.py:434 cogs/exp.py:441
 msgid "None!"
@@ -490,7 +490,7 @@ msgstr ""
 
 #: cogs/exp.py:515
 msgid "You *now* have a total of {exp} exp points."
-msgstr "Usted *ahora* tiene un total de {exp} puntos de exp."
+msgstr " *ahora* Tienes un total de {exp} puntos de exp."
 
 #: cogs/exp.py:520
 msgid "The item list is available here: http://api-d.com/shop-items.html"
@@ -499,11 +499,11 @@ msgstr ""
 
 #: cogs/exp.py:534
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
-msgstr ":money_with_wings: Tu agregaste una bala a tu arma por 7 exp."
+msgstr ":money_with_wings: Agregaste una bala a tu arma por 7 de exp."
 
 #: cogs/exp.py:537
 msgid ":champagne: Your magazine is full!"
-msgstr ":champagne: Tu cargador esta lleno!"
+msgstr ":champagne: ¡Tu cargador esta lleno!"
 
 #: cogs/exp.py:549
 msgid ""
@@ -520,12 +520,12 @@ msgid ""
 ":money_with_wings: You purchased AP ammo for your weapon. For the next 24 "
 "hours, you will deal double damage to ducks."
 msgstr ""
-":money_with_wings: Has comprado munición AP para tu arma. Por las próximas "
-"24 horas, harás el doble de daño a los patos."
+":money_with_wings: Has comprado munición AP para tu arma. Durante las "
+"próximas 24 horas, harás el doble de daño a los patos."
 
 #: cogs/exp.py:567
 msgid ":champagne: You have enough AP ammo for now!"
-msgstr ":champagne: Tienes suficiente municion AP por ahora!"
+msgstr ":champagne: ¡Tienes suficiente munición AP por ahora!"
 
 #: cogs/exp.py:579
 msgid ""
@@ -553,15 +553,15 @@ msgid ""
 ":money_with_wings: You added grease in your weapon to reduce jamming risks "
 "by 50 percent for a day, for only 8 exp points."
 msgstr ""
-":money_with_wings: Agregaste grasa en tu arma para reducir los riesgos de "
-"atascos en un 50 por ciento por un día, solo por 8 puntos de exp."
+":money_with_wings: Engrasaste tu arma para reducir los riesgos de atascos en "
+"un 50 por ciento por un día, tan solo por 8 puntos de exp."
 
 #: cogs/exp.py:613
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
 msgstr ""
-":champagne: Tu arma esta perfectamente lubricada, no necesitas mas grasa."
+":champagne: Tu arma está perfectamente lubricada, no necesitas mas grasa."
 
 #: cogs/exp.py:623
 msgid ""
@@ -573,7 +573,7 @@ msgstr ""
 
 #: cogs/exp.py:626
 msgid ":champagne: You already have a sight on your weapon. "
-msgstr ":champagne: Ya tienes una vista en tu arma."
+msgstr ":champagne: Ya tienes una mira en tu arma."
 
 #: cogs/exp.py:639
 msgid ""
@@ -608,9 +608,9 @@ msgid ""
 "{exp} more exp points for each killed duck for the next day. You got it for "
 "13 exp!"
 msgstr ""
-":money_with_wings: compraste un nuevo trébol de 4 hojas, que te dará {exp} "
-"más puntos de expulsión para cada pato muerto para el día siguiente. ¡Lo "
-"tienes para 13 exp!"
+":money_with_wings: compraste un trébol de 4 hojas, que te dará {exp} más "
+"puntos de exp por cada pato muerto para el día siguiente. ¡Te costó 13 de "
+"exp!"
 
 #: cogs/exp.py:677
 msgid ""
@@ -743,12 +743,12 @@ msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 50 exp. "
 "It's wrong, but so funny!"
 msgstr ""
-":money_with_wings: Tu pones un pato mecánico en el canal por 50 exp. Eso es "
-"malo, pero tan divertido!"
+":money_with_wings: Pusiste un pato mecánico en el canal por 50 exp. Eso es "
+"malo, ¡pero tan divertido a la vez!"
 
 #: cogs/exp.py:897
 msgid " < *BZAACK*"
-msgstr " < *BZAACK* URUGUAY BY MH!!!!"
+msgstr " < *BZAACK* "
 
 #: cogs/exp.py:899
 msgid " < "
@@ -756,7 +756,7 @@ msgstr " < "
 
 #: cogs/exp.py:903
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
-msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
+msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
 
 #: cogs/meta.py:104
 msgid "Uptime: **{}**"
@@ -1110,20 +1110,21 @@ msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
 msgstr ""
-"Afortunadamente te perdiste, pero a qué estabas apuntando exactamente? No "
-"hay ningún pato aquí ... [perdido: -1 xp] [disparo salvaje: -1 xp]"
+"Por suerte fallaste, pero ¿a qué le estabas apuntando exactamente? No hay "
+"ningún pato aquí ... [por fallar: -1 xp] [por hacer un disparo salvaje: -1 "
+"xp]"
 
 #: cogs/shoot.py:135
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr ""
-"**FLAPP**\tAsustado por tanto ruido, el pato huyó! CONGRATS! [Perdida: -1 "
-"xp]"
+"**FLAPP** Asustado por tanto ruido, ¡el pato huyó! ¡FELICIDADES! [Por haber "
+"fallado el disparo: -1 xp]"
 
 #: cogs/shoot.py:138 cogs/shoot.py:189
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
-msgstr "**PIEWW** Le erraste al pato! [errado : -1 xp]"
+msgstr "**PIEWW** ¡Fallaste el disparo! [Disparo errado : -1 xp]"
 
 #: cogs/shoot.py:172
 msgid ""
@@ -1139,9 +1140,10 @@ msgid ""
 "your weapon a little before shooting the next time? [missed: -1 xp] [hunting "
 "accident: -2 xp] [weapon confiscated]"
 msgstr ""
-"**BANG** Te perdiste el pato ... pero te dispararaste a ti mismo. Apunta tu "
-"arma en otra dirección antes de disparar la próxima vez, tal vez? [Perdido: -"
-"1 xp] [accidente de caza: -2 xp] [arma confiscada]!"
+"**BANG** No lograste darle al pato ... ¡pero te disparaste a ti mismo! "
+"Deberías apuntar tu arma en otra dirección antes de disparar la próxima vez, "
+"¿no crees? [Dispar errado: -1 xp] [accidente cazando: -2 xp] [arma "
+"confiscada]"
 
 #: cogs/shoot.py:182
 msgid " > You won {exp} with your life insurance !"
@@ -1157,7 +1159,7 @@ msgstr "BAAM"
 
 #: cogs/shoot.py:203
 msgid "BOUM"
-msgstr "BOUM"
+msgstr "BOOM"
 
 #: cogs/shoot.py:203
 msgid "SPROTCH"
@@ -1169,7 +1171,7 @@ msgid ""
 "first! [missed: -1 xp]"
 msgstr ""
 "Eso estuvo cerca, casi matas al pato, ¡pero el otro cazador lo consiguió "
-"primero! [perdido: -1 xp]"
+"primero! [Disparo errado: -1 xp]"
 
 #: cogs/shoot.py:230
 msgid ""
@@ -1179,8 +1181,8 @@ msgid ""
 "[{exp} exp]"
 msgstr ""
 ":skull_crossbones: **{onomatopoeia}** Has matado al pato en {time} segundos, "
-"ahora tienes un total de {total} patos (de los cuales {supercanards} fueron "
-"super-patos) asesinados en #{channel}. \\ _X < * COUAC * [{exp} exp]"
+"llevas un total de {total} patos (entre ellos, {supercanards} super patos) "
+"asesinados en #{channel}. \\ _X < * CUAC * [{exp} exp]"
 
 #: cogs/shoot.py:247
 msgid ""
@@ -1236,8 +1238,8 @@ msgstr ""
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
-":gun: El Pato ha Sobrevivido, trata otra vez *SUPER PATO DETECTADO* [vida: -"
-"{vie}]"
+":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
+"[vida: -{vie}]"
 
 #: cogs/shoot.py:304
 msgid "Your weapon is confiscated."
@@ -1575,24 +1577,23 @@ msgstr "El Pato se fue ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "El pato fue a otro mundo. · ° '\\ `' ° -., ¸¸. · ° '\\`"
+msgstr "El pato se fue a otro mundo. · ° '\\ `' ° -., ¸¸. · ° '\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "El pato no tuvo tiempo para esto. · ° '\\ `' ° -., ¸¸. · ° '\\`"
+msgstr "El pato no tenía tiempo para esto. · ° '\\ `' ° -., ¸¸. · ° '\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "El pato salió. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "El pato se fue. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-"El pato se disipó en el espacio y el tiempo. · ° '\\ `' ° -., ¸¸. · ° '\\`"
+msgstr "El pato se disipó en el espacio-tiempo. · ° '\\ `' ° -., ¸¸. · ° '\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "El pato se fue por aburrimiento. · ° '\\ `' ° -., ¸¸. · ° '\\`"
+msgstr "El pato se aburrió y se fue. · ° '\\ `' ° -., ¸¸. · ° '\\`"
 
 #: cogs/utils/commons.py:671
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
