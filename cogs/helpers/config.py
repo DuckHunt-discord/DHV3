@@ -32,7 +32,8 @@ def config(bot):
     bot.configured = False
 
     # This is the bot token. Used by the bot to connect to discord.
-    bot.token = "XXXXXXX"
+    #bot.token = "MjQ3MTIwNDc2NzEzOTEwMjcz.CwkkZw.TyofiAs1O0t-DWR_aN_P7Hwxw5g"
+    bot.token = "MTg3NjM2MDg5MDczMTcyNDgx.CjC9OQ.lzfGNI0qO4jT3Xu6q2vrrAVib2o"
 
     # > Language settings < #
 
@@ -64,13 +65,13 @@ def config(bot):
 
     # > Database settings < #
     # User used to connect to the Mysql DB
-    bot.database_user = "duckhunt"
+    bot.database_user = "duckhunt3"
 
     # Password for the user used to connect to the Mysql DB
-    bot.database_password = "duckhunt"
+    bot.database_password = "duckhunt3"
 
     # Name of the table used in the Mysql DB
-    bot.database_name = "duckhunt"
+    bot.database_name = "DHV3"
 
     # Name of the table used in the Mysql DB
     bot.database_address = "localhost"
