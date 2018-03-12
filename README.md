@@ -1,6 +1,6 @@
 Choose your language : [FR](README_FR.md)
 
-# DuckHunt Version 2
+# DuckHunt Version 3
 ## What is it?
 The core of the game is to shoot every duck you see. Like a shooter, just for discord! :°)
 

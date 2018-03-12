@@ -1,6 +1,6 @@
 Choose your language : [EN](README.md)
 
-# DuckHunt Version 2
+# DuckHunt Version 3
 ## Qu'est-ce que c'est ?
 Le but du jeu est de tuer les canards dès que vous les voyez ! C'est un peu un fps, mais pour discord. :°)
 
