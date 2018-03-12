@@ -12,3 +12,5 @@ scores.db
 default.LC_MESSAGES/english.mo
 default.LC_MESSAGES/english.po
 /community/mods/current_case.txt
+/cogs/helpers/config.py
+DHV3.iml
