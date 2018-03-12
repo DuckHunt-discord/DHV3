@@ -64,8 +64,10 @@ def setPref(server, pref, value=None, force=False):
 def JSONsaveToDisk(data, filename):
     with open(filename + ".temp", 'w') as outfile:
         json.dump(data, outfile, sort_keys=True, indent=4)
-        # atomically move the file
-        os.replace(filename + ".temp", filename)
+
+    # atomically move the file
+    os.replace(filename + ".temp", filename)
+
     if hasattr(commons, "servers"):
         del commons.servers
 

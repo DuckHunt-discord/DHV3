@@ -296,12 +296,13 @@ async def mainloop():
 
 
 if __name__ == '__main__':
-    debug = any('debug' in arg.lower() for arg in sys.argv)
-    if debug:
-        bot.command_prefix = '$'
-        token = credentials.get('debug_token', credentials['token'])
-    else:
-        token = credentials['token']
+    #debug = any('debug' in arg.lower() for arg in sys.argv)
+    #if debug:
+    #    bot.command_prefix = '$'
+    #    token = credentials.get('debug_token', credentials['token'])
+    #else:
+
+    token = credentials['token']
 
     bot.client_id = credentials['client_id']
     bot.commands_used = Counter()

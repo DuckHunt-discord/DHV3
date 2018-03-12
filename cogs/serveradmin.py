@@ -373,6 +373,5 @@ class ServerAdmin:
             "table": x.get_string(sortby=_("Parameter", language))
         }))
 
-
 def setup(bot):
     bot.add_cog(ServerAdmin(bot))
