@@ -1,0 +1,4 @@
+mysqlclient
+sqlalchemy
+records
+discord.py

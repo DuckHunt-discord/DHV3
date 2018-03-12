@@ -1,0 +1,564 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-02-01 16:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:63
+msgid ":x: This command cannot be used in private messages."
+msgstr ":x: Denna kommando kan inte vara användt i privata meddelanden."
+
+#: bot.py:65
+msgid ":x: Sorry. This command is disabled and cannot be used."
+msgstr ":x: Tyvärr. Det kommando är inaktiverad och kan inte vara användt."
+
+#: bot.py:74
+msgid "Send an error report?"
+msgstr "Skicka ett felrapport?"
+
+#: bot.py:76
+msgid ""
+"Sadly, I need the `add_reactions` and `create_instant_invite` permissions to "
+"be able to send an error report."
+msgstr ""
+"Tyvärr, jag behöver ha `add_reactions` och `create_instant_invite` "
+"rättigheter för att kunna skicka ett felrapport."
+
+#: bot.py:78
+msgid ""
+":x: An error (`{error}`) happened while executing `{command}`, here is the "
+"traceback: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
+msgstr ""
+":x: Ett fel (`{error}`) hände medan start av `{command}`, här finns "
+"traceback: ```\n"
+"{tb}\n"
+"```\n"
+"{error_report}"
+
+#: bot.py:96
+msgid ":anger_right: Creating an invite for the error report..."
+msgstr ":anger_right: Skapar ett invitation för felrapport..."
+
+#: bot.py:100
+msgid ":anger_right: Sending error report..."
+msgstr ":anger_right: Skickar felrapport..."
+
+#: bot.py:106
+msgid ":ok: Error report sent, thanks. :)"
+msgstr ":ok: Ett felrapport har varit skickad, tack så mycket. :)"
+
+#: bot.py:108
+msgid "OK, I won't send an error report."
+msgstr "OK, jag kommer inte att skicka ett felrapport."
+
+#: bot.py:111
+msgid ":x: Missing a required argument. "
+msgstr ":x: Det saknas ett argument."
+
+#: bot.py:113
+msgid ":x: Bad argument provided. "
+msgstr ":x: Ett dåligt argument har varit utgiven."
+
+#: cogs/admin.py:114
+msgid "Name"
+msgstr "Namn"
+
+#: cogs/admin.py:114
+msgid "Invitation"
+msgstr "Inbjudan"
+
+#: cogs/admin.py:114
+msgid "Server ID"
+msgstr "Datorserver ID"
+
+#: cogs/admin.py:114
+msgid "Number of enabled channels"
+msgstr "Nummer av aktiverade kanaler"
+
+#: cogs/admin.py:114 cogs/admin.py:159
+msgid "Number of connected users"
+msgstr "Nummer av kopplade medlemmar"
+
+#: cogs/admin.py:114
+msgid "Ducks per day"
+msgstr "Ankor per dag"
+
+#: cogs/admin.py:132
+msgid " > Processing servers ({done}/{total})"
+msgstr "> Berarbetar servrar ({done}/{total})"
+
+#: cogs/admin.py:166
+msgid "Serching for servers to leave"
+msgstr "Söker for servrar att lämna"
+
+#: cogs/admin.py:188
+msgid "To confirm, please type {random_str} now."
+msgstr "För att bekräfta, var god och skriv {random_str} nu."
+
+#: cogs/admin.py:196 cogs/exp.py:104
+msgid ":x: Operation cancelled, you took too long to answer."
+msgstr ":x: Operationen avbruten, du tog för lång föra att svara."
+
+#: cogs/admin.py:211
+msgid ":ok: Finished, failed for {failed} servers."
+msgstr ":ok: Klart, misslyckat för {failed} servrar."
+
+#: cogs/admin.py:220
+msgid "Starting the broadcast..."
+msgstr "Börjar med utsändning..."
+
+#: cogs/admin.py:229
+msgid "Broadcast finished!"
+msgstr "Utsändning klar!"
+
+#: cogs/admin.py:237
+msgid "Message ({message}) sent to {server} #{channel} "
+msgstr "Meddelanden ({message}) skickad till {server} #{channel}"
+
+#: cogs/exp.py:46
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "%m/%d på %H:%M:%S"
+
+#: cogs/exp.py:47
+msgid "{dans} days "
+msgstr "{dans} dagar"
+
+#: cogs/exp.py:51
+msgid "{dans} hours"
+msgstr "{dans} timmar"
+
+#: cogs/exp.py:55
+msgid "{dans} minutes"
+msgstr "{dans} minuter"
+
+#: cogs/exp.py:67
+msgid ":ok: Your best time has been reset."
+msgstr ":ok: Ditt bästa tid har varit återställt."
+
+#: cogs/exp.py:78
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hours and {minutes} minutes)."
+msgstr ""
+":alarm_clock: Nästa utgivning av vapen och magasin blir i {sec} sekunder. "
+"({hours} timmar och {minutes} minuter)"
+
+#: cogs/exp.py:88
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ""
+":x: För att stoppa missbruk, du kan inte skicka erfarenhetspoäng när du inte "
+"har ett gevär."
+
+#: cogs/exp.py:92
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Summan för erfarenhetspoäng måste vara positiv."
+
+#: cogs/exp.py:96
+msgid "To confirm, please type `confirm` now."
+msgstr "För att bekräfta, var god och skriv `confirm` nu."
+
+#: cogs/exp.py:116
+msgid ""
+"Congratulations, you sent more experience than the maximum number I'm able "
+"to store."
+msgstr "Grattis, du har skickat mer erfarenhetspoäng än vad jag kan behålla."
+
+#: cogs/exp.py:118
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Du har skickat {amount} exp till {target} (och har betalt {taxes} i "
+"skatter)!"
+
+#: cogs/exp.py:129
+msgid "You don't have enough experience points"
+msgstr "Du har inte tillräckligt med erfarenhetspoäng."
+
+#: cogs/exp.py:131
+msgid ":x: Sending exp is disabled on this server"
+msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server."
+
+#: cogs/exp.py:158
+msgid "Generating DuckHunt statistics for you, please wait..."
+msgstr "Skapar DuckHubt statistik för dig, var god vänta..."
+
+#: cogs/exp.py:165
+msgid "Page {current}/{max}"
+msgstr "Sida {current}/{max}"
+
+#: cogs/exp.py:168
+msgid "\n"
+"Confiscated weapon!"
+msgstr "Vapen konfiskerat!\n"
+
+#: cogs/exp.py:177
+msgid "General statistics"
+msgstr "Allmäna statistik"
+
+#: cogs/exp.py:183
+msgid "No best time."
+msgstr "Ingen bästa tid."
+
+#: cogs/exp.py:188
+msgid "No duck killed"
+msgstr "Ingen anka dödade"
+
+#: cogs/exp.py:190 cogs/exp.py:326
+msgid "Ducks killed"
+msgstr "Ankor dödade"
+
+#: cogs/exp.py:191
+msgid "Super ducks killed"
+msgstr "Superkort dödad"
+
+#: cogs/exp.py:192
+msgid "Players killed"
+msgstr "Spelare dödad"
+
+#: cogs/exp.py:193
+msgid "Self-killing shots"
+msgstr "Självdödande skott"
+
+#: cogs/exp.py:195
+msgid "Best killing time"
+msgstr "Bästa tid att döda"
+
+#: cogs/exp.py:196
+msgid "Bullets in current magazine"
+msgstr "Skott i nuvarande magasin"
+
+#: cogs/exp.py:197 cogs/exp.py:322 cogs/utils/scores.py:113
+msgid "Exp points"
+msgstr "Erfarenhetspoäng"
+
+#: cogs/exp.py:198
+msgid "Ratio (exp/ducks killed)"
+msgstr "Ratio (erfarenhet/ankor dödade)"
+
+#: cogs/exp.py:199 cogs/utils/scores.py:109
+msgid "Current level"
+msgstr "Nuvarande nivå"
+
+#: cogs/exp.py:200 cogs/utils/scores.py:111
+msgid "Shots accuracy"
+msgstr "Träffsäkerhet av skott"
+
+#: cogs/exp.py:201 cogs/utils/scores.py:112
+msgid "Weapon reliability"
+msgstr "Trovärdighet av vapen"
+
+#: cogs/exp.py:205
+msgid "Shots fired"
+msgstr "Skott skjuten"
+
+#: cogs/exp.py:206 cogs/exp.py:330
+msgid "Shots missed"
+msgstr "Skott som missade"
+
+#: cogs/exp.py:207
+msgid "Shots without ducks"
+msgstr "Skott utan ankor"
+
+#: cogs/exp.py:208
+msgid "Shots that frightened a duck"
+msgstr "Skott som skrämde ankor"
+
+#: cogs/exp.py:209
+msgid "Shots that harmed a duck"
+msgstr "Skott som skadade en anka"
+
+#: cogs/exp.py:210
+msgid "Shots stopped by the detector"
+msgstr "Skott som har stoppats av detektorn"
+
+#: cogs/exp.py:211
+msgid "Shots jamming a weapon"
+msgstr "Skott som har stört vapnet"
+
+#: cogs/exp.py:212
+msgid "Shots with a sabotaged weapon"
+msgstr "Skott med ett saboterat vapen"
+
+#: cogs/exp.py:213
+msgid "Shots with a jammed weapon"
+msgstr "Skott med ett fastnat vapen"
+
+#: cogs/exp.py:214
+msgid "Shots without bullets"
+msgstr "Skott utan kulor"
+
+#: cogs/exp.py:215
+msgid "Shots without weapon"
+msgstr "Skott utan vapen"
+
+#: cogs/exp.py:216
+msgid "Shots when wet"
+msgstr "Skott medan blöt"
+
+#: cogs/exp.py:219
+msgid "Reloads and items statistics"
+msgstr "Omladdningar och statistik för objekt "
+
+#: cogs/exp.py:221
+msgid "Reloads"
+msgstr "Omladdning"
+
+#: cogs/exp.py:222
+msgid "Reloads without magazines"
+msgstr "Omladdningar utan magasin"
+
+#: cogs/exp.py:223
+msgid "Reloads not needed"
+msgstr "Omladdningar som inte behövs"
+
+#: cogs/exp.py:225
+msgid "Trash found in bushes"
+msgstr "Skräp hittad i buskar"
+
+#: cogs/exp.py:227
+msgid "Exp earned with a clover"
+msgstr "Erfarenhetspoäng fått från ett klöver"
+
+#: cogs/exp.py:228
+msgid "Life insurance rewards"
+msgstr "Livförsäkringbelöningar"
+
+#: cogs/exp.py:229
+msgid "Free givebacks used"
+msgstr "Gratis återgivningar används"
+
+#: cogs/exp.py:238
+msgid "Object: infrared detector"
+msgstr "Objekt: infraröd detektor"
+
+#: cogs/exp.py:241
+msgid "Object: silencer"
+msgstr "Objekt: ljuddämpare"
+
+#: cogs/exp.py:244
+msgid "Object: clover {exp} exp"
+msgstr "Objekt: Klöver {exp} exp"
+
+#: cogs/exp.py:249
+msgid "Object: explosive ammo"
+msgstr "Objekt: explosiv ammo"
+
+#: cogs/exp.py:251
+msgid "Object: AP ammo"
+msgstr "Objekt: pansargenomträngande ammunition"
+
+#: cogs/exp.py:254
+msgid "Effect: wet"
+msgstr "Effekt: blöt"
+
+#: cogs/exp.py:260 cogs/exp.py:463 cogs/meta.py:204 cogs/utils/scores.py:119
+msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ""
+":warning: Ett fel uppstod när du skickade inbäddningen, kolla om boten har "
+"`embed_links` tillåtelsen och försök igen!"
+
+#: cogs/exp.py:334
+msgid "Best time"
+msgstr "Bästa tid"
+
+#: cogs/exp.py:366 cogs/exp.py:384
+msgid "Rank"
+msgstr "Rang"
+
+#: cogs/exp.py:366
+msgid "Nickname"
+msgstr "Smeknamn"
+
+#: cogs/exp.py:373 cogs/exp.py:380 cogs/exp.py:434 cogs/exp.py:441
+msgid "None!"
+msgstr "Inget!"
+
+#: cogs/exp.py:386
+msgid ":cocktail: Best scores for #{channel_name}: :cocktail:\n"
+"```{table}```"
+msgstr ""
+":cocktail: Bästa resultat för #{channel_name}: :cocktail:\n"
+"```{table}```"
+
+#: cogs/exp.py:407
+msgid "Generating top scores for your channel, please wait!"
+msgstr "Skapar toppresultat för din kanal, vänligen vänta!"
+
+#: cogs/exp.py:418
+msgid ":cocktail: Best scores for #{channel_name} :cocktail:"
+msgstr ":coctail: Bästa resultat för #{channel_name}: :cocktail:"
+
+#: cogs/exp.py:456
+msgid "Player"
+msgstr "Spelare"
+
+#: cogs/exp.py:515
+msgid "You *now* have a total of {exp} exp points."
+msgstr "Du *nu* har totalt {exp} erfarenhetspoäng."
+
+#: cogs/exp.py:534
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ""
+":money_with_wings_ Du lade till ett skott i ditt vapen för 7 "
+"erfarenhetspoäng"
+
+#: cogs/exp.py:537
+msgid ":champagne: Your magazine is full!"
+msgstr ":champagne: Ditt magasin är full!"
+
+#: cogs/exp.py:549
+msgid ""
+":money_with_wings: You added a magazine to your backpack for 13 exp points."
+msgstr ""
+":money_with_wings: Du har lagt ett magasin i din ryggsäck för 13 "
+"erfarenhetspoäng,"
+
+#: cogs/exp.py:552
+msgid ":champagne: You have enough magazines!"
+msgstr ":champagne: Du har tillräckligt med magasin!"
+
+#: cogs/exp.py:564
+msgid ""
+":money_with_wings: You purchased AP ammo for your weapon. For the next 24 "
+"hours, you will deal double damage to ducks."
+msgstr ""
+":money_with_wings: Du köpte pansargenomträngande ammunition för ditt vapen. "
+"För 24 timmar så kommer du göra dubbel skada."
+
+#: cogs/exp.py:897
+msgid " < *BZAACK*"
+msgstr "< *BZAACK*"
+
+#: cogs/exp.py:899
+msgid " < "
+msgstr "<"
+
+#: cogs/meta.py:177
+msgid "Number of servers"
+msgstr "Antal servrar"
+
+#: cogs/meta.py:178
+msgid "Number of french servers"
+msgstr "Antal servrar Franska"
+
+#: cogs/meta.py:179
+msgid "Number of english servers"
+msgstr "Antal servrar Engelska"
+
+#: cogs/meta.py:181
+msgid "Number of channels"
+msgstr "Antal kanalisera"
+
+#: cogs/meta.py:182
+msgid "Number of users"
+msgstr "Antal användare"
+
+#: cogs/meta.py:183
+msgid "Number of ducks"
+msgstr "Antal ankor"
+
+#: cogs/meta.py:184
+msgid "Number of ducks per minute"
+msgstr "Antal ankor per minuter"
+
+#: cogs/meta.py:185
+msgid "Number of messages recived"
+msgstr "Antal meddelanden mottagna"
+
+#: cogs/meta.py:186
+msgid "Number of commands recived"
+msgstr "Antal beställa mottagna"
+
+#: cogs/meta.py:187
+msgid "Number of commands per minute"
+msgstr "Antal beställa per minuter"
+
+#: cogs/meta.py:188
+msgid "Number of messages per minute"
+msgstr "Antal meddelanden per minuter"
+
+#: cogs/meta.py:189
+msgid "Uptime in seconds"
+msgstr "Upptid i sekunder"
+
+#: cogs/meta.py:190
+msgid "Uptime in hours"
+msgstr "Upptid i timmar"
+
+#: cogs/meta.py:191
+msgid "Uptime in days"
+msgstr "Upptid i dagar"
+
+#: cogs/serveradmin.py:367 cogs/serveradmin.py:373
+msgid "Parameter"
+msgstr "Parameter"
+
+#: cogs/serveradmin.py:367
+msgid "Value"
+msgstr "Värde"
+
+#: cogs/serveradmin.py:367
+msgid "Default value"
+msgstr "Standardvärde"
+
+#: cogs/utils/commons.py:318
+msgid "public danger"
+msgstr "Offentliga fara"
+
+#: cogs/utils/commons.py:326
+msgid "tourist"
+msgstr "turist"
+
+#: cogs/utils/commons.py:334
+msgid "noob"
+msgstr "noob"
+
+#: cogs/utils/commons.py:350
+msgid "duck misser"
+msgstr "Anka missare"
+
+#: cogs/utils/commons.py:366
+msgid "duck hater"
+msgstr "Anka hatare"
+
+#: cogs/utils/commons.py:669
+msgid "Hello world"
+msgstr "Hej världen"
+
+#: cogs/utils/commons.py:669
+msgid "How are you today?"
+msgstr "Hur mår du idag ?"
+
+#: cogs/utils/commons.py:673
+msgid "an old shoe."
+msgstr "En gammal sko"
+
+#: cogs/utils/commons.py:673
+msgid "a dog dirt."
+msgstr "en hund smuts"
+
+#: cogs/utils/commons.py:673
+msgid "Donald's beret."
+msgstr "Donald's basker"
+
+#: cogs/utils/commons.py:674
+msgid "a fish."
+msgstr "en fisk"
