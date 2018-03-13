@@ -32,8 +32,7 @@ def config(bot):
     bot.configured = False
 
     # This is the bot token. Used by the bot to connect to discord.
-    #bot.token = "MjQ3MTIwNDc2NzEzOTEwMjcz.CwkkZw.TyofiAs1O0t-DWR_aN_P7Hwxw5g"
-    bot.token = "MTg3NjM2MDg5MDczMTcyNDgx.CjC9OQ.lzfGNI0qO4jT3Xu6q2vrrAVib2o"
+    bot.token = ""
 
     # > Language settings < #
 
@@ -94,7 +93,67 @@ def config(bot):
     # This is a list of users that are blacklisted from the bot. The bot will ignore dem messages
     bot.blacklisted_users = []
 
-    # > Level Settings < #
+    # > Events Settings < #
+    bot.event_list = [
+        {
+            "name"       : _("Everything is calm"),
+            "description": _("Nothing is happening right now."),
+            "id"         : 0
+        },
+        {
+            "name"       : _("Ducks are migrating"),
+            "description": _("Prepare to see more ducks in the next hour."),
+            "id"         : 1,
+            "chance_for_second_duck" : 10
+        },
+        {
+            "name"       : _("Foggy weather"),
+            "description": _("It's harder to see ducks killed. You'll need a few more seconds to know if you missed or not."),
+            "seconds_of_lag_added": 3,
+            "id"         : 2
+        },
+        {
+            "name"       : _("Steroids in the lake"),
+            "description": _("A medical waste company dumped steroids in the lake. Ducks have mutated, and you'll see a lot more super ducks. But, be careful, and don't drink that water."),
+            "id"         : 3,
+            "chance_added_for_super_duck": 20
+        },
+        {
+            "name"       : _("Safety class canceled"),
+            "description": _("The safety class was canceled, beware not to shoot others hunters!"),
+            "id"         : 4,
+            "kill_chance_added": 5
+        },
+        {
+            "name"       : _("Connexion problems"),
+            "description": _("Ducks cant use the computer due to connexion problems, and there will be less of them until it's repared"),
+            "id"         : 5,
+            "ducks_cancel_chance": 10
+        },
+        {
+            "name"       : _("A new florist in town"),
+            "description": _("A florist opened in town, and you can now find better 4-leaf-clovers. Go check them !"),
+            "id"         : 6,
+            "ammount_to_add_to_max_exp": 10
+        },
+        {
+            "name"       : _("Mega-ducks"),
+            "description": _("Someone inflated a super duck, and now they are EVEN BIGGER!!"),
+            "id"         : 7,
+            "life_to_add": 3
+        },
+        {
+            "name"       : _("Windy weather"),
+            "description": _("Bullets are deflected by some strong wind"),
+            "id"         : 8,
+            "miss_chance_to_add": 8
+        },
+    ]
+
+    bot.current_event = next((item for item in bot.event_list if item['id'] == 0), None)  # event_list[0]
+
+
+# > Level Settings < #
 
     bot.players_levels = [
     {

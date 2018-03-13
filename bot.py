@@ -259,7 +259,8 @@ except KeyboardInterrupt:
 finally:
     # Stop cleanly : make ducks leave
     #try:
-
+    game = discord.Game(name=f"Restarting...")
+    bot.loop.run_until_complete(bot.change_presence(status=discord.Status.dnd, activity=game))
     bot.loop.run_until_complete(spawning.make_all_ducks_leave(bot))
 
     #except:

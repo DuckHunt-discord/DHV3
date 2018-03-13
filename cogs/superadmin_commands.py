@@ -1,5 +1,5 @@
 import inspect
-
+from cogs import spawning
 from discord.ext import commands
 from cogs.helpers import checks
 
@@ -64,6 +64,15 @@ class SuperAdmin:
 
         await self.bot.send_message(ctx=ctx,
                                     message=python.format(result))
+
+
+    @commands.command()
+    @checks.is_super_admin()
+    async def regen_event(self, ctx):
+        """!regen_event"""
+        await spawning.event_gen(ctx.bot)
+        await self.bot.send_message(ctx=ctx, message=":ok_hand: Next event regenerated")
+
 
 
     @commands.command(pass_context=True)

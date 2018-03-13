@@ -14,6 +14,10 @@ class User:
 
     async def sendBangMessage(self, ctx, string: str):
         lag = await self.bot.db.get_pref(ctx.guild, "bang_lag")
+        if ctx.bot.current_event['id'] == 2:
+            lag += ctx.bot.current_event['seconds_of_lag_added']
+
+
         if lag > 0:
             tmp = await ctx.channel.send(str(ctx.message.author.mention) + " > BANG")
             await asyncio.sleep(lag)
@@ -247,6 +251,8 @@ class User:
 
         # 10d/ Chance (will need to be smaller than accuracy to shoot properly)
         chance = random.randint(0, 100)
+        if ctx.bot.current_event['id'] == 8:
+            chance += ctx.bot.current_event['miss_chance_to_add']
 
         # 10e/ Miss_chance multiplier
         miss_multiplier = await get_pref(guild, "multiplier_miss_chance")
@@ -256,7 +262,6 @@ class User:
             chance = accuracy +1  # Force missing
             await add_to_stat(channel, author, "murders", 1)
 
-
         # 11/ Duck missed
         if chance > accuracy:
 
@@ -265,6 +270,9 @@ class User:
 
             if target:
                 chance_kill = kill_on_miss_chance - 1  # Force killing
+
+            if ctx.bot.current_event['id'] == 4:
+                chance_kill -= ctx.bot.current_event['kill_chance_added']
 
             if chance_kill < kill_on_miss_chance:
                 # 11a/ Bad luck. We killed someone too.
@@ -379,6 +387,14 @@ class User:
         # > Bushes < #
 
         # TODO : Stockage des items trouvés et les afficher
+
+
+    @commands.command(aliases=["currentevent", "event", "events"])
+    @checks.is_channel_enabled()
+    async def current_event(self, ctx):
+        event = ctx.bot.current_event
+        string = f"""**Current event** :\n{event['name']} — {event['description']}"""
+        await self.bot.send_message(ctx=ctx, message=string)
 
 
 def setup(bot):

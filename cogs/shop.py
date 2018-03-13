@@ -227,7 +227,10 @@ class Experience:
             min_c = await self.bot.db.get_pref(ctx.guild, "clover_min_exp")
             max_c = await self.bot.db.get_pref(ctx.guild, "clover_max_exp")
 
-            exp = random.randint(min(min_c, max_c), max(min_c, max_c) )
+            if ctx.bot.current_event['id'] == 6:
+                max_c += ctx.bot.current_event['ammount_to_add_to_max_exp']
+
+            exp = random.randint(min(min_c, max_c), max(min_c, max_c))
 
             await self.bot.db.set_stat(message.channel, message.author, "trefle", int(time.time() + DAY))
             await self.bot.db.set_stat(message.channel, message.author, "trefle_exp", exp)

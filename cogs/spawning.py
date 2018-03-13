@@ -99,7 +99,7 @@ async def planifie(bot, channel=None, new_day=True):
                 await planifie(bot, channel=to_plan_channel, new_day=new_day)
 
 
-async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=1):
+async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=1, ignore_event=False):
     if bot.can_spawn:
         s = time.time()
         _ = bot._
@@ -108,21 +108,35 @@ async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=
         super_ducks_chance = await bot.db.get_pref(channel.guild, "super_ducks_chance")
         exp_value = await bot.db.get_pref(channel.guild, "exp_won_per_duck_killed")
 
+        if not ignore_event and bot.current_event['id'] == 5:
+            if random.randint(0, 100) <= bot.current_event['ducks_cancel_chance']:
+                bot.logger.debug(f"A duck was canceled due to `connexion problems` (event)")
+                return
+
+        if not ignore_event and bot.current_event['id'] == 1:
+            if random.randint(0, 100) <= bot.current_event['chance_for_second_duck']:
+                await spawn_duck(bot, channel, ignore_event=True)
+
         chance = random.randint(0, 100)
+        if not ignore_event and bot.current_event['id'] == 3:
+            chance += bot.current_event['chance_added_for_super_duck']
+
         if super_duck or chance < super_ducks_chance:
             super_duck = True
             min_life = await bot.db.get_pref(channel.guild, "super_ducks_minlife")
             max_life = await bot.db.get_pref(channel.guild, "super_ducks_maxlife")
             life = life_multiplicator * random.randint(min(min_life, max_life), max(min_life, max_life)) if life == 1 else life
+            if not ignore_event and bot.current_event['id'] == 7:
+                life += bot.current_event['life_to_add']
             exp_value = exp_value * await bot.db.get_pref(channel.guild, "super_ducks_exp_multiplier") * life
 
-        #bot.logger.debug(f"First checks took {time.time() - s} seconds to return.")
+        # bot.logger.debug(f"First checks took {time.time() - s} seconds to return.")
 
         duck = Duck(bot, channel, super_duck, life, int(exp_value), ttl)
 
-        #bot.logger.debug(f"Duck creation took {time.time() - s} seconds in total.")
+        # bot.logger.debug(f"Duck creation took {time.time() - s} seconds in total.")
         bot.ducks_spawned.append(duck)
-        #bot.logger.debug(f"Duck appending took {time.time() - s} seconds in total.")
+        # bot.logger.debug(f"Duck appending took {time.time() - s} seconds in total.")
 
         if await bot.db.get_pref(channel.guild, "emoji_ducks"):
             corps = await bot.db.get_pref(channel.guild, "emoji_used") + " < "
@@ -144,10 +158,30 @@ async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=
         return
 
 
+async def event_gen(bot):
+    bot.logger.info("One hour passed, we have to remove the previous event, and find a new one (maybe)")
+    bot.current_event = next((item for item in bot.event_list if item['id'] == 0), None)  # Reset the event
+
+    if random.randint(0, 100) <= 10:
+        bot.logger.debug("[EVENT] A new event will be selected")
+        event_id = random.randrange(1, len(bot.event_list))
+        bot.logger.info(f"[EVENT] Selected event : {event_id}")
+        bot.current_event = next((item for item in bot.event_list if item['id'] == event_id), None)  # Reset the event
+        bot.logger.info(f"[EVENT] Selected event : {bot.current_event['name']}")
+    else:
+        bot.logger.info("[EVENT] No new event, see you next time!")
+
+    bot.logger.debug("[EVENT] Updating playing status")
+    game = discord.Game(name=f"{bot.current_event['name']}")
+    await bot.change_presence(status=discord.Status.online, activity=game)
+    bot.logger.debug("[EVENT] Done :)")
+
+
 async def background_loop(bot):
     bot.logger.debug("Hello from the BG loop, waiting to be ready")
     await bot.wait_until_ready()
     bot.logger.debug("Hello from the BG loop, now ready")
+    await event_gen(bot)
     planday = 0
     last_iter = int(time.time())
     last_hour = 0
@@ -173,6 +207,10 @@ async def background_loop(bot):
 
             if int(now) % 60 == 0:
                 bot.logger.info("Current ducks: {canards}".format(**{"canards": len(bot.ducks_spawned)}))
+
+            if int(now) % 3600 == 0:
+                await event_gen(bot)
+
             thishour = int((now % DAY) / HOUR)
             for channel in list(bot.ducks_planning.keys()):
 
@@ -225,7 +263,6 @@ async def background_loop(bot):
                         # for channel in list(commons.ducks_planned.keys()): <= channel not deleted, so in this list
                         #    if random.randrange(0, seconds_left) < commons.ducks_planned[channel]: <= Channel had been deleted, so keyerror
                         pass
-
 
             for duck in bot.ducks_spawned:
                 if duck.staying_until < now:  # Canard qui se barre
