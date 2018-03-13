@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-12 20:12+0000\n"
+"POT-Creation-Date: 2018-03-12 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1028,379 +1028,379 @@ msgstr ""
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "*cries*"
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Hello world"
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "How are you today?"
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Please don't kill me..."
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Me too, I love you!"
 msgstr ""
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a stuffed duck."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a rubber ducky."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a vibrating duck."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a pile of feathers."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a chewed chewing gum."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old shoe."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a spring thingy."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a cow dung."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a dog dirt."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an expired hunting license."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a cartridge."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a cigarette butt."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a used condom."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a broken sight."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a broken infrared detector."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a bent silencer."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an empty box of AP ammo."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an empty box of explosive ammo."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a four-leaf clover with only 3 left."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a broken decoy."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a broken mirror."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a rusty mechanical duck."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a pair of sunglasses without glasses."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "Donald's beret."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a half-melted peppermint."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a box of Abraxo cleaner."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a gun with banana peeled barrel."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old hunting knife."
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr ""
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "bushes."
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr ""
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "a fish."
 msgstr ""
 
-#: cogs/helpers/config.py:102
+#: cogs/helpers/config.py:103
 msgid "public danger"
 msgstr ""
 
-#: cogs/helpers/config.py:110
+#: cogs/helpers/config.py:111
 msgid "tourist"
 msgstr ""
 
-#: cogs/helpers/config.py:118
+#: cogs/helpers/config.py:119
 msgid "noob"
 msgstr ""
 
-#: cogs/helpers/config.py:126
+#: cogs/helpers/config.py:127
 msgid "trainee"
 msgstr ""
 
-#: cogs/helpers/config.py:134
+#: cogs/helpers/config.py:135
 msgid "duck misser"
 msgstr ""
 
-#: cogs/helpers/config.py:142
+#: cogs/helpers/config.py:143
 msgid "member of the Comitee Against Ducks"
 msgstr ""
 
-#: cogs/helpers/config.py:150
+#: cogs/helpers/config.py:151
 msgid "duck hater"
 msgstr ""
 
-#: cogs/helpers/config.py:158
+#: cogs/helpers/config.py:159
 msgid "duck pest"
 msgstr ""
 
-#: cogs/helpers/config.py:166
+#: cogs/helpers/config.py:167
 msgid "duck hassler"
 msgstr ""
 
-#: cogs/helpers/config.py:174
+#: cogs/helpers/config.py:175
 msgid "duck plucker"
 msgstr ""
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:183
 msgid "hunter"
 msgstr ""
 
-#: cogs/helpers/config.py:190
+#: cogs/helpers/config.py:191
 msgid "inside out duck turner"
 msgstr ""
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:199
 msgid "duck clobber"
 msgstr ""
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:207
 msgid "duck chewer"
 msgstr ""
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:215
 msgid "duck eater"
 msgstr ""
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:223
 msgid "duck flattener"
 msgstr ""
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:231
 msgid "duck disassembler"
 msgstr ""
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:239
 msgid "duck demolisher"
 msgstr ""
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:247
 msgid "duck killer"
 msgstr ""
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:255
 msgid "duck skinner"
 msgstr ""
 
-#: cogs/helpers/config.py:262
+#: cogs/helpers/config.py:263
 msgid "predator"
 msgstr ""
 
-#: cogs/helpers/config.py:270
+#: cogs/helpers/config.py:271
 msgid "duck chopper"
 msgstr ""
 
-#: cogs/helpers/config.py:278
+#: cogs/helpers/config.py:279
 msgid "duck decorticator"
 msgstr ""
 
-#: cogs/helpers/config.py:286
+#: cogs/helpers/config.py:287
 msgid "duck fragger"
 msgstr ""
 
-#: cogs/helpers/config.py:294
+#: cogs/helpers/config.py:295
 msgid "duck shatterer"
 msgstr ""
 
-#: cogs/helpers/config.py:302
+#: cogs/helpers/config.py:303
 msgid "duck smasher"
 msgstr ""
 
-#: cogs/helpers/config.py:310
+#: cogs/helpers/config.py:311
 msgid "duck breaker"
 msgstr ""
 
-#: cogs/helpers/config.py:318
+#: cogs/helpers/config.py:319
 msgid "duck wrecker"
 msgstr ""
 
-#: cogs/helpers/config.py:326
+#: cogs/helpers/config.py:327
 msgid "duck impaler"
 msgstr ""
 
-#: cogs/helpers/config.py:334
+#: cogs/helpers/config.py:335
 msgid "duck eviscerator"
 msgstr ""
 
-#: cogs/helpers/config.py:342
+#: cogs/helpers/config.py:343
 msgid "ducks terror"
 msgstr ""
 
-#: cogs/helpers/config.py:350
+#: cogs/helpers/config.py:351
 msgid "duck exploder"
 msgstr ""
 
-#: cogs/helpers/config.py:358
+#: cogs/helpers/config.py:359
 msgid "duck destructor"
 msgstr ""
 
-#: cogs/helpers/config.py:366
+#: cogs/helpers/config.py:367
 msgid "duck blaster"
 msgstr ""
 
-#: cogs/helpers/config.py:374
+#: cogs/helpers/config.py:375
 msgid "duck pulverizer"
 msgstr ""
 
-#: cogs/helpers/config.py:382
+#: cogs/helpers/config.py:383
 msgid "duck disintegrator"
 msgstr ""
 
-#: cogs/helpers/config.py:390
+#: cogs/helpers/config.py:391
 msgid "duck atomizer"
 msgstr ""
 
-#: cogs/helpers/config.py:398
+#: cogs/helpers/config.py:399
 msgid "duck annihilator"
 msgstr ""
 
-#: cogs/helpers/config.py:406
+#: cogs/helpers/config.py:407
 msgid "serial duck killer"
 msgstr ""
 
-#: cogs/helpers/config.py:414
+#: cogs/helpers/config.py:415
 msgid "duck genocider"
 msgstr ""
 
-#: cogs/helpers/config.py:422
+#: cogs/helpers/config.py:423
 msgid "unemployed due to extinction of the duck specie"
 msgstr ""
 
-#: cogs/helpers/config.py:430
+#: cogs/helpers/config.py:431
 msgid "duck toaster"
 msgstr ""
 
-#: cogs/helpers/config.py:438
+#: cogs/helpers/config.py:439
 msgid "old noob"
 msgstr ""
 
