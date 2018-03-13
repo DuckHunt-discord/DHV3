@@ -254,6 +254,8 @@ class User:
 
         if target:
             chance = accuracy +1  # Force missing
+            await add_to_stat(channel, author, "murders", 1)
+
 
         # 11/ Duck missed
         if chance > accuracy:

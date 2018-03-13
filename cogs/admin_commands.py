@@ -12,9 +12,35 @@ class Admin:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+
+    @commands.command(pass_context=True, aliases=['gameban'])
     @checks.is_server_admin()
     @checks.is_channel_enabled()
+    async def game_ban(self, ctx, member: discord.Member):
+        """Ban someone from the bot on the current channel
+        !game_ban [member]"""
+        _ = self.bot._
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+        await self.bot.db.set_stat(ctx.channel, member, "banned", True)
+        await self.bot.send_message(ctx=ctx, message=_(":ok: Done, user banned. :gun:", language))
+
+    @commands.command(pass_context=True, aliases=['gameunban'])
+    @checks.is_server_admin()
+    @checks.is_channel_enabled()
+    async def game_unban(self, ctx, member: discord.Member):
+        """Unban someone from the bot on the current channel
+        !game_unban [member]"""
+        _ = self.bot._
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+        await self.bot.db.set_stat(ctx.channel, member, "banned", False)
+        await self.bot.send_message(ctx=ctx, message=_(":ok: Done, user unbanned. :eyes:", language))
+
+    @commands.command(aliases=["planning", "duck_planning", "duckplanning"])
+    @checks.is_server_admin()
+    @checks.is_channel_enabled()
+    @commands.cooldown(1, 120, BucketType.channel)
     async def ducks(self, ctx):
         topr = ""
         for duck in self.bot.ducks_spawned:
@@ -87,19 +113,6 @@ class Admin:
             return
         await spawning.spawn_duck(self.bot, ctx.channel, super_duck=args.super_duck, life=max(1, args.life))
 
-
-    @commands.command(aliases=["planning", "duck_planning"])
-    @checks.is_server_admin()
-    @checks.is_channel_enabled()
-    @commands.cooldown(1, 120, BucketType.channel)
-    async def duckplanning(self, ctx):
-        """!duckplanning
-        DEPRECATED! Get the number of ducks left to spawn on the channel
-        """
-        _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
-        await self.bot.send_message(ctx=ctx, message=_("There are {ducks} ducks left to spawn today!", language).format(ducks=self.bot.ducks_planning[
-            ctx.message.channel]))
 
     @commands.command(aliases=["reset_user"])
     @checks.is_server_admin()

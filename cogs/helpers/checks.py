@@ -60,14 +60,20 @@ def is_channel_enabled():
 def had_giveback():
     async def predicate(ctx):
         #await ctx.bot.wait_until_ready()
+
         channel = ctx.message.channel
         player = ctx.message.author
+        if await ctx.bot.db.get_stat(channel, player, "banned"):
+            ctx.logger.debug("Banned player trying to play :(")
+            return False
+
         lastGB = int(await ctx.bot.db.get_stat(channel, player, "lastGiveback"))
         if int(lastGB / 86400) != int(int(time.time()) / 86400):
             daygb = int(lastGB / 86400)
             daynow = int(int(time.time()) / 86400)
             ctx.logger.debug(f"Giveback needed : Last GiveBack was on day {daygb}, and we are now on day {daynow}.")
             await ctx.bot.db.giveback(channel=channel, user=player)
+
         return True
 
     return commands.check(predicate)

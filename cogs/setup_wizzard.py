@@ -93,15 +93,16 @@ class SetupWizzard:
 
         # Not bad
 
-        if not permissions.connect:
-            await self.bot.send_message(ctx=ctx, message=_(":small_blue_diamond: The permission `connect` is missing.\n"
-                                                           "This is not yet used, but could be in the future. An announcement will be made then.\n"
-                                                           "You can safely proceed without it.", language))
+        # Can't check connect & speak in channel perms
+        #if not permissions.connect:
+        #    await self.bot.send_message(ctx=ctx, message=_(":small_blue_diamond: The permission `connect` is missing.\n"
+        #                                                   "This is not yet used, but could be in the future. An announcement will be made then.\n"
+        #                                                   "You can safely proceed without it.", language))
 
-        if not permissions.speak:
-            await self.bot.send_message(ctx=ctx, message=_(":small_blue_diamond: The permission `speak` is missing.\n"
-                                                           "This is not yet used, but could be in the future. An announcement will be made then.\n"
-                                                           "You can safely proceed without it.", language))
+        #if not permissions.speak:
+        #    await self.bot.send_message(ctx=ctx, message=_(":small_blue_diamond: The permission `speak` is missing.\n"
+        #                                                   "This is not yet used, but could be in the future. An announcement will be made then.\n"
+        #                                                   "You can safely proceed without it.", language))
 
         if not permissions.change_nickname:
             await self.bot.send_message(ctx=ctx, message=_(":small_blue_diamond: The permission `change_nickname` is missing.\n"

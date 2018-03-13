@@ -11,9 +11,9 @@ class Experience:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
-    @checks.is_channel_enabled()
+    @commands.command(aliases=['giveexp', 'give_xp', 'givexp'])
     @checks.is_server_admin()
+    @checks.is_channel_enabled()
     async def give_exp(self, ctx, target:discord.Member, amount:int):
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.guild, "language")
@@ -28,7 +28,7 @@ class Experience:
         await self.bot.send_message(ctx=ctx, message=_(":ok:, they now have {newexp} exp points!", language).format(**{"newexp": await self.bot.db.get_stat(ctx.message.channel, target, "exp")}))
 
 
-    @commands.command()
+    @commands.command(aliases=['sendexp', 'send_xp', 'sendxp'])
     @checks.is_channel_enabled()
     @checks.had_giveback()
     async def send_exp(self, ctx, target: discord.Member, amount: int):
