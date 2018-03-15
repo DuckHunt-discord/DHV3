@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-02-01 16:23+0000\n"
+"POT-Creation-Date: 2018-03-12 20:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,426 +17,322 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: cogs/admin.py:114
-msgid "Name"
-msgstr "Ime"
-
-#: cogs/admin.py:114
-msgid "Invitation"
-msgstr "Pozivnica"
-
-#: cogs/exp.py:188
-msgid "No duck killed"
-msgstr "Nema ubijenih patki"
-
-#: cogs/exp.py:190 cogs/exp.py:326
-msgid "Ducks killed"
-msgstr "Ubijene patke"
-
-#: cogs/exp.py:195
-msgid "Best killing time"
-msgstr "Najbrže vrijeme"
-
-#: cogs/exp.py:197 cogs/exp.py:322 cogs/utils/scores.py:113
+#: cogs/helpers/database.py:188 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr "Bodovi iskustva (exp)"
 
-#: cogs/exp.py:198
-msgid "Ratio (exp/ducks killed)"
-msgstr "Omjer (exp/ubijene patke)"
+#: cogs/scores.py:70 cogs/scores.py:293
+msgid "Ducks killed"
+msgstr "Ubijene patke"
 
-#: cogs/exp.py:199 cogs/utils/scores.py:109
-msgid "Current level"
-msgstr "Trenutačna razina"
-
-#: cogs/exp.py:200 cogs/utils/scores.py:111
-msgid "Shots accuracy"
-msgstr "Preciznost"
-
-#: cogs/exp.py:366 cogs/exp.py:384
-msgid "Rank"
-msgstr "Rang"
-
-#: cogs/exp.py:366
-msgid "Nickname"
-msgstr "Nadimak"
-
-#: cogs/exp.py:456
+#: cogs/scores.py:170
 msgid "Player"
 msgstr "Igrač"
 
-#: cogs/exp.py:567
+#: cogs/scores.py:291
+msgid "No duck killed"
+msgstr "Nema ubijenih patki"
+
+#: cogs/scores.py:298
+msgid "Best killing time"
+msgstr "Najbrže vrijeme"
+
+#: cogs/scores.py:301
+msgid "Ratio (exp/ducks killed)"
+msgstr "Omjer (exp/ubijene patke)"
+
+#: cogs/helpers/database.py:184 cogs/scores.py:302
+msgid "Current level"
+msgstr "Trenutačna razina"
+
+#: cogs/helpers/database.py:186 cogs/scores.py:303
+msgid "Shots accuracy"
+msgstr "Preciznost"
+
+#: cogs/shop.py:103
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr "Imaš dovoljno protuoklopne municije!"
 
-#: cogs/exp.py:583
+#: cogs/shop.py:121
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr "Imaš dovoljno eksplozivne municije!"
 
-#: cogs/exp.py:899
+#: cogs/shop.py:369
+msgid ":ok: {target} weapon is already sabotaged!"
+msgstr "Oružje od {target} je već sabotirano!"
+
+#: cogs/shop.py:493
 msgid " < "
 msgstr "<"
 
-#: cogs/meta.py:176
-msgid "Number of activated channels"
-msgstr "Broj aktiviranih kanala"
-
-#: cogs/meta.py:177
-msgid "Number of servers"
-msgstr "Broj servera"
-
-#: cogs/meta.py:178
-msgid "Number of french servers"
-msgstr "Broj francuskih servera"
-
-#: cogs/meta.py:179
-msgid "Number of english servers"
-msgstr "Broj engleskih servera"
-
-#: cogs/meta.py:180
-msgid "Number of servers with another language setup"
-msgstr "Broj servera sa drugim jezicima"
-
-#: cogs/meta.py:181
-msgid "Number of channels"
-msgstr "Broj kanala"
-
-#: cogs/meta.py:182
-msgid "Number of users"
-msgstr "Broj igrača"
-
-#: cogs/meta.py:183
-msgid "Number of ducks"
-msgstr "Broj patki"
-
-#: cogs/meta.py:184
-msgid "Number of ducks per minute"
-msgstr "Broj patki po minuti"
-
-#: cogs/meta.py:185
-msgid "Number of messages recived"
-msgstr "Broj primljenih poruka"
-
-#: cogs/meta.py:186
-msgid "Number of commands recived"
-msgstr "Broj primljenih komandi"
-
-#: cogs/meta.py:187
-msgid "Number of commands per minute"
-msgstr "Broj komandi po minuti"
-
-#: cogs/meta.py:188
-msgid "Number of messages per minute"
-msgstr "Broj poruka po minuti"
-
-#: cogs/meta.py:189
-msgid "Uptime in seconds"
-msgstr "Vrijeme rada u sekundama"
-
-#: cogs/meta.py:190
-msgid "Uptime in hours"
-msgstr "Vrijeme rada u satima"
-
-#: cogs/meta.py:191
-msgid "Uptime in days"
-msgstr "Vrijeme rada u danima"
-
-#: cogs/meta.py:197
-msgid "Memory used (MB)"
-msgstr "Korištena memorija (MB)"
-
-#: cogs/serveradmin.py:97
-msgid ":x: This channel already exists in the game."
-msgstr "Ovaj kanal već postoji u igri."
-
-#: cogs/serveradmin.py:228
-msgid "{deleted} message(s) deleted"
-msgstr "{deleted} poruka(e) izbrisano"
-
-#: cogs/serveradmin.py:367 cogs/serveradmin.py:373
-msgid "Parameter"
-msgstr "Parametar"
-
-#: cogs/serveradmin.py:367
-msgid "Value"
-msgstr "Vrijednost"
-
-#: cogs/serveradmin.py:367
-msgid "Default value"
-msgstr "Zadana vrijednost"
-
-#: cogs/shoot.py:77
+#: cogs/user_commands.py:139
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
 
-#: cogs/utils/commons.py:318
-msgid "public danger"
-msgstr "Opća opasnost"
-
-#: cogs/utils/commons.py:326
-msgid "tourist"
-msgstr "Turist"
-
-#: cogs/utils/commons.py:334
-msgid "noob"
-msgstr "Noob"
-
-#: cogs/utils/commons.py:342
-msgid "trainee"
-msgstr "Početnik"
-
-#: cogs/utils/commons.py:350
-msgid "duck misser"
-msgstr "Promašivač patki"
-
-#: cogs/utils/commons.py:358
-msgid "member of the Comitee Against Ducks"
-msgstr "Član Društva Protiv Pataka"
-
-#: cogs/utils/commons.py:366
-msgid "duck hater"
-msgstr "Mrzitelj pataka"
-
-#: cogs/utils/commons.py:390
-msgid "duck plucker"
-msgstr "Rasčerupatelj pataka"
-
-#: cogs/utils/commons.py:398
-msgid "hunter"
-msgstr "Lovac"
-
-#: cogs/utils/commons.py:422
-msgid "duck chewer"
-msgstr "Patke = žvake"
-
-#: cogs/utils/commons.py:430
-msgid "duck eater"
-msgstr "Gladan za patkama"
-
-#: cogs/utils/commons.py:454
-msgid "duck demolisher"
-msgstr "Uništavatelj pataka"
-
-#: cogs/utils/commons.py:462
-msgid "duck killer"
-msgstr "Ubojica pataka"
-
-#: cogs/utils/commons.py:478
-msgid "predator"
-msgstr "Predator"
-
-#: cogs/utils/commons.py:526
-msgid "duck breaker"
-msgstr "Razbijač pataka"
-
-#: cogs/utils/commons.py:558
-msgid "ducks terror"
-msgstr "Pačji teror"
-
-#: cogs/utils/commons.py:566
-msgid "duck exploder"
-msgstr "Pačji pirotehničar"
-
-#: cogs/utils/commons.py:622
-msgid "serial duck killer"
-msgstr "Serijski ubojica pataka"
-
-#: cogs/utils/commons.py:630
-msgid "duck genocider"
-msgstr "Genocid pataka"
-
-#: cogs/utils/commons.py:638
-msgid "unemployed due to extinction of the duck specie"
-msgstr "Nezaposlen zbog nestanka pačje vrste"
-
-#: cogs/utils/commons.py:654
-msgid "old noob"
-msgstr "Stari noob"
-
-#: cogs/utils/commons.py:669
+#: cogs/helpers/config.py:52
 msgid "*cries*"
 msgstr "*plače*"
 
-#: cogs/utils/commons.py:669
+#: cogs/helpers/config.py:52
 msgid "Hello world"
 msgstr "Zdravo svijete"
 
-#: cogs/utils/commons.py:669
+#: cogs/helpers/config.py:52
 msgid "How are you today?"
 msgstr "Kako si danas?"
 
-#: cogs/utils/commons.py:669
+#: cogs/helpers/config.py:52
 msgid "Please don't kill me..."
 msgstr "Molim te, nemoj me ubit..."
 
-#: cogs/utils/commons.py:671
+#: cogs/helpers/config.py:56
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Patka nas je napustila ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a stuffed duck."
 msgstr "prepariranu patku."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a rubber ducky."
 msgstr "gumenu patkicu."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a vibrating duck."
 msgstr "vibrirajuću patku."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a pile of feathers."
 msgstr "hrpu perja."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a chewed chewing gum."
 msgstr "sažvakanu žvakaću."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "letak od DPP-a (Društva Protiv Pataka)."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an old shoe."
 msgstr "staru cipelu."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a spring thingy."
 msgstr "oprugu."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a cow dung."
 msgstr "kravlji izmet."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a dog dirt."
 msgstr "pseći izmet."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an expired hunting license."
 msgstr "isteklu dozvolu za lov."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a cartridge."
 msgstr "kasetu."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a cigarette butt."
 msgstr "opušak."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a used condom."
 msgstr "korišteni kondom."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a broken sight."
 msgstr "slomljeni nišan."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a broken infrared detector."
 msgstr "slomljeni infracrveni detektor."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a bent silencer."
 msgstr "savijeni prigušivač."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an empty box of AP ammo."
 msgstr "praznu kutiju protuoklopne municije."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an empty box of explosive ammo."
 msgstr "praznu kutiju eksplozivne municije."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a four-leaf clover with only 3 left."
 msgstr "djetelinu od 4 lista sa 3 lista."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a broken decoy."
 msgstr "razbijeni mamac."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a broken mirror."
 msgstr "razbijeno ogledalo."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a rusty mechanical duck."
 msgstr "hrđavu mehaničku patku."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a pair of sunglasses without glasses."
 msgstr "sunčane naočale bez stakala."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "Donald's beret."
 msgstr "Donaldovu beretku."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a half-melted peppermint."
 msgstr "poluprobavljeni pepermint bombon."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a box of Abraxo cleaner."
 msgstr "kutiju Abraxo čistača."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "a gun with banana peeled barrel."
 msgstr "oružje s rascvjetanom cijevi."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an old hunting knife."
 msgstr "stari lovački nož."
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "stari video: http://tinyurl.com/zbejktu"
 
-#: cogs/utils/commons.py:673
+#: cogs/helpers/config.py:60
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "staru lovačku fotografiju: http://tinyurl.com/hmn4r88"
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "staru razglednicu: http://tinyurl.com/hbnkpzr"
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "fotografiju zlatne patke: http://tinyurl.com/hle8fjf"
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr "lovački bedž: http://tinyurl.com/hqy7fhq"
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "bushes."
 msgstr "grmove."
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/utils/commons.py:674
+#: cogs/helpers/config.py:61
 msgid "a fish."
 msgstr "ribu."
 
-#: cogs/utils/ducks.py:94
-msgid "There is a duck on #{channel}"
-msgstr "Patka se nalazi na # {channel}"
+#: cogs/helpers/config.py:102
+msgid "public danger"
+msgstr "Opća opasnost"
 
-#: cogs/utils/scores.py:91
+#: cogs/helpers/config.py:110
+msgid "tourist"
+msgstr "Turist"
+
+#: cogs/helpers/config.py:118
+msgid "noob"
+msgstr "Noob"
+
+#: cogs/helpers/config.py:126
+msgid "trainee"
+msgstr "Početnik"
+
+#: cogs/helpers/config.py:134
+msgid "duck misser"
+msgstr "Promašivač patki"
+
+#: cogs/helpers/config.py:142
+msgid "member of the Comitee Against Ducks"
+msgstr "Član Društva Protiv Pataka"
+
+#: cogs/helpers/config.py:150
+msgid "duck hater"
+msgstr "Mrzitelj pataka"
+
+#: cogs/helpers/config.py:174
+msgid "duck plucker"
+msgstr "Rasčerupatelj pataka"
+
+#: cogs/helpers/config.py:182
+msgid "hunter"
+msgstr "Lovac"
+
+#: cogs/helpers/config.py:206
+msgid "duck chewer"
+msgstr "Patke = žvake"
+
+#: cogs/helpers/config.py:214
+msgid "duck eater"
+msgstr "Gladan za patkama"
+
+#: cogs/helpers/config.py:238
+msgid "duck demolisher"
+msgstr "Uništavatelj pataka"
+
+#: cogs/helpers/config.py:246
+msgid "duck killer"
+msgstr "Ubojica pataka"
+
+#: cogs/helpers/config.py:262
+msgid "predator"
+msgstr "Predator"
+
+#: cogs/helpers/config.py:310
+msgid "duck breaker"
+msgstr "Razbijač pataka"
+
+#: cogs/helpers/config.py:342
+msgid "ducks terror"
+msgstr "Pačji teror"
+
+#: cogs/helpers/config.py:350
+msgid "duck exploder"
+msgstr "Pačji pirotehničar"
+
+#: cogs/helpers/config.py:406
+msgid "serial duck killer"
+msgstr "Serijski ubojica pataka"
+
+#: cogs/helpers/config.py:414
+msgid "duck genocider"
+msgstr "Genocid pataka"
+
+#: cogs/helpers/config.py:422
+msgid "unemployed due to extinction of the duck specie"
+msgstr "Nezaposlen zbog nestanka pačje vrste"
+
+#: cogs/helpers/config.py:438
+msgid "old noob"
+msgstr "Stari noob"
+
+#: cogs/helpers/database.py:170
 msgid "Level of {player} on #{channel}"
 msgstr "Razina  {player} na {channel}"
 
-#: cogs/utils/scores.py:98
+#: cogs/helpers/database.py:173
 msgid "You leveled down!"
 msgstr "Tvoja razina je narasla!"
 
-#: cogs/utils/scores.py:101
+#: cogs/helpers/database.py:176
 msgid "You leveled up!"
 msgstr "Tvoja razina se smanjila!"
 
-#: cogs/utils/scores.py:110
+#: cogs/helpers/database.py:185
 msgid "Previous level"
 msgstr "Prethodna razina"

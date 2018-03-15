@@ -16,3 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:87
+msgid ":x: A required argument is missing."
+msgstr ":x: Een benodigd argument mist."
+
+#: bot.py:90
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Je hebt niet genoeg exp hiervoor"
