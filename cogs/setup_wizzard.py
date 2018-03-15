@@ -13,9 +13,11 @@ class SetupWizzard:
         language = await self.bot.db.get_pref(guild, "language")
 
         for channel in guild.channels:
-            if channel.permissions_for(guild.me).send_messages:
-                channel_used = channel
-                break
+            if isinstance(channel, discord.TextChannel):
+                if channel.permissions_for(guild.me).send_messages:
+                    channel_used = channel
+                    break
+
         else:
             return  # Nowhere to speak
 

@@ -99,6 +99,13 @@ class Database:
         return next((level for level in reversed(levels) if level["expMin"] <= exp), levels[0])
 
     async def giveback(self, channel, user):
+
+        if channel in self._stats_cache.keys():
+            if user in self._stats_cache[channel]:
+                self._stats_cache[channel].pop(user)
+        else:
+            self._stats_cache[channel] = {}
+
         # self.bot.logger.debug(f"giveback for {channel.id} of {user.id}")
         channel_id = await self.get_channel_dbid(channel)
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
@@ -110,6 +117,7 @@ class Database:
                             "ON DUPLICATE KEY UPDATE chargeurs = :chargeurs, confisque = 0,lastGiveback = :now",
 
                             id_=user.id, channel_id=channel_id, chargeurs=level["chargeurs"], balles=level["balles"], now=int(time.time()))
+
 
     async def get_stat(self, channel, user, stat: str):
         # self.bot.logger.debug(f"get_stat for {channel.id} of {user.id} stat {stat}")
@@ -290,7 +298,7 @@ class Database:
             return await self.get_pref(guild, pref)  # Return the pref now
 
     def bool_(self, b):
-        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on']
+        return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on', 'vrai', 'ye', 'actif']
 
     async def set_pref(self, guild, pref, value):
         try:

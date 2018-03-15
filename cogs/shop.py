@@ -46,6 +46,13 @@ class Experience:
             await self.bot.send_message(ctx=ctx,
                                         message=_("Right now you have a total of {exp} exp points.", language).format(exp=await self.bot.db.get_stat(ctx.message.channel, ctx.message.author, "exp")))
 
+    @shop.command()
+    async def list(self, ctx):
+        _ = self.bot._;
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+        await self.bot.send_message(ctx=ctx, message=_("This is a temporary list until the new one is finished: <https://api-d.com/shop-items.html>. Thanks ", language))
+
     @shop.command(name="1", aliases=["bullet", "bullets"])
     @checks.have_exp(7)
     async def item1(self, ctx):
@@ -240,7 +247,7 @@ class Experience:
                                                            "which will give you {exp} more exp points for each killed duck for the next day.", language).format(**{"exp": exp}))
 
         else:
-            await self.bot.send_message(ctx=ctx, message=_(":champagne: You already have 5-leaf clover on your weapon", language))
+            await self.bot.send_message(ctx=ctx, message=_(":champagne: You already have 4-leaf clover on your weapon", language))
 
     @shop.command(name="11", aliases=["sunglasses"])
     @checks.have_exp(5)

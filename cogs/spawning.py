@@ -158,11 +158,11 @@ async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=
         return
 
 
-async def event_gen(bot):
+async def event_gen(bot, force=False):
     bot.logger.info("One hour passed, we have to remove the previous event, and find a new one (maybe)")
     bot.current_event = next((item for item in bot.event_list if item['id'] == 0), None)  # Reset the event
 
-    if random.randint(0, 100) <= 10:
+    if force or random.randint(0, 100) <= 10:
         bot.logger.debug("[EVENT] A new event will be selected")
         event_id = random.randrange(1, len(bot.event_list))
         bot.logger.info(f"[EVENT] Selected event : {event_id}")

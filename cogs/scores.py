@@ -376,7 +376,7 @@ class Scores:
                 res = await self.bot.wait_for('reaction_add', check=check, timeout=1200)
             except:
                 res = None
-                ctx.logger.exception("Can't wait for")
+                #ctx.logger.exception("Can't wait for")
                 pass
 
             if res:
@@ -391,7 +391,7 @@ class Scores:
                     try:
                         await duckstats_message.remove_reaction(emoji, user)
                     except discord.errors.Forbidden:
-                        ctx.logger.exception("Forbidden from duckstats 1") #!duckstats 345315631236907008
+                        #ctx.logger.exception("Forbidden from duckstats 1") #!duckstats 345315631236907008
                         pass  # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 elif emoji == prev_emo:
                     changed = True
@@ -402,7 +402,7 @@ class Scores:
                     try:
                         await duckstats_message.remove_reaction(emoji, user)
                     except discord.errors.Forbidden:
-                        ctx.logger.exception("Forbidden from duckstats 2")
+                        #ctx.logger.exception("Forbidden from duckstats 2")
                         pass  # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
                 elif emoji == first_page_emo:
                     if current_page > 1:
@@ -411,7 +411,7 @@ class Scores:
                     try:
                         await duckstats_message.remove_reaction(emoji, user)
                     except discord.errors.Forbidden:
-                        ctx.logger.exception("Forbidden from duckstats 3")
+                        #ctx.logger.exception("Forbidden from duckstats 3")
                         pass  # await self.bot.send_message(message.channel, _("I don't have the `manage_messages` permissions, I can't remove reactions. Warn an admin for me, please ;)", language))
             else:
                 reaction = False
