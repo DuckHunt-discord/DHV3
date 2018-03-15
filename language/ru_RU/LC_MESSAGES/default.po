@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-12 20:12+0000\n"
+"POT-Creation-Date: 2018-03-15 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,11 +98,11 @@ msgstr ":champagne: У вас уже есть бронебойные патро�
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
 
-#: cogs/shop.py:369
+#: cogs/shop.py:372
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: оружие {target} уже саботировано!"
 
-#: cogs/user_commands.py:139
+#: cogs/user_commands.py:143
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше оружие было саботировано, спасибо {assaillant} за эту плохую шутку."
@@ -255,55 +255,55 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "рыбу."
 
-#: cogs/helpers/config.py:102
+#: cogs/helpers/config.py:162
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/helpers/config.py:110
+#: cogs/helpers/config.py:170
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/helpers/config.py:118
+#: cogs/helpers/config.py:178
 msgid "noob"
 msgstr "нуб"
 
-#: cogs/helpers/config.py:126
+#: cogs/helpers/config.py:186
 msgid "trainee"
 msgstr "стажер"
 
-#: cogs/helpers/config.py:142
+#: cogs/helpers/config.py:202
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:242
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/helpers/config.py:190
+#: cogs/helpers/config.py:250
 msgid "inside out duck turner"
 msgstr "выворачиватель уток наизнанку"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:274
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:306
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:262
+#: cogs/helpers/config.py:322
 msgid "predator"
 msgstr "хищник"
 
-#: cogs/helpers/config.py:398
+#: cogs/helpers/config.py:458
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/helpers/config.py:406
+#: cogs/helpers/config.py:466
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/helpers/config.py:438
+#: cogs/helpers/config.py:498
 msgid "old noob"
 msgstr "старый нуб"
 

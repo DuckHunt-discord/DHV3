@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-12 20:12+0000\n"
+"POT-Creation-Date: 2018-03-15 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -253,23 +253,23 @@ msgstr ":champagne: Van már elég AP muníciód mostanra!"
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 
-#: cogs/shop.py:369
+#: cogs/shop.py:372
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: {target} fegyverét már elrontottad!"
 
-#: cogs/shop.py:490
+#: cogs/shop.py:493
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/shop.py:493
+#: cogs/shop.py:496
 msgid " < "
 msgstr "<"
 
-#: cogs/shop.py:497
+#: cogs/shop.py:500
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 
-#: cogs/user_commands.py:139
+#: cogs/user_commands.py:143
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
 
@@ -449,175 +449,175 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY "
 msgid "a fish."
 msgstr "egy hal."
 
-#: cogs/helpers/config.py:102
+#: cogs/helpers/config.py:162
 msgid "public danger"
 msgstr "közveszélyes "
 
-#: cogs/helpers/config.py:110
+#: cogs/helpers/config.py:170
 msgid "tourist"
 msgstr "turista "
 
-#: cogs/helpers/config.py:118
+#: cogs/helpers/config.py:178
 msgid "noob"
 msgstr "pancser "
 
-#: cogs/helpers/config.py:126
+#: cogs/helpers/config.py:186
 msgid "trainee"
 msgstr "újonc "
 
-#: cogs/helpers/config.py:134
+#: cogs/helpers/config.py:194
 msgid "duck misser"
 msgstr "kacsatévesztő"
 
-#: cogs/helpers/config.py:142
+#: cogs/helpers/config.py:202
 msgid "member of the Comitee Against Ducks"
 msgstr "tagja a Kacsaellenes Egyesületnek"
 
-#: cogs/helpers/config.py:150
+#: cogs/helpers/config.py:210
 msgid "duck hater"
 msgstr "kacsautáló"
 
-#: cogs/helpers/config.py:158
+#: cogs/helpers/config.py:218
 msgid "duck pest"
 msgstr "a kacsák átka"
 
-#: cogs/helpers/config.py:166
+#: cogs/helpers/config.py:226
 msgid "duck hassler"
 msgstr "kacsavágó"
 
-#: cogs/helpers/config.py:174
+#: cogs/helpers/config.py:234
 msgid "duck plucker"
 msgstr "kacsatépő"
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:242
 msgid "hunter"
 msgstr "vadász"
 
-#: cogs/helpers/config.py:190
+#: cogs/helpers/config.py:250
 msgid "inside out duck turner"
 msgstr "kacsák belsejéből kifordítója"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:258
 msgid "duck clobber"
 msgstr "kacsáknak kesztyűbe dudálástanító"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:266
 msgid "duck chewer"
 msgstr "kacsa... bagózó?"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:274
 msgid "duck eater"
 msgstr "kacsaevő"
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:282
 msgid "duck flattener"
 msgstr "kacsakalapácsoló"
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:290
 msgid "duck disassembler"
 msgstr "kacsaszétszedő"
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:298
 msgid "duck demolisher"
 msgstr "kacsapusztító"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:306
 msgid "duck killer"
 msgstr "kacsaölő"
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:314
 msgid "duck skinner"
 msgstr "kacsanyúzó"
 
-#: cogs/helpers/config.py:262
+#: cogs/helpers/config.py:322
 msgid "predator"
 msgstr "predátor"
 
-#: cogs/helpers/config.py:270
+#: cogs/helpers/config.py:330
 msgid "duck chopper"
 msgstr "kacsacafatoló"
 
-#: cogs/helpers/config.py:278
+#: cogs/helpers/config.py:338
 msgid "duck decorticator"
 msgstr "kacsahámozó"
 
-#: cogs/helpers/config.py:286
+#: cogs/helpers/config.py:346
 msgid "duck fragger"
 msgstr "kacsadaraboló"
 
-#: cogs/helpers/config.py:294
+#: cogs/helpers/config.py:354
 msgid "duck shatterer"
 msgstr "kacsazúzó"
 
-#: cogs/helpers/config.py:302
+#: cogs/helpers/config.py:362
 msgid "duck smasher"
 msgstr "kacsaütő"
 
-#: cogs/helpers/config.py:310
+#: cogs/helpers/config.py:370
 msgid "duck breaker"
 msgstr "kacsatörő"
 
-#: cogs/helpers/config.py:318
+#: cogs/helpers/config.py:378
 msgid "duck wrecker"
 msgstr "kacsaroncsoló"
 
-#: cogs/helpers/config.py:326
+#: cogs/helpers/config.py:386
 msgid "duck impaler"
 msgstr "kacsák karóba húzója"
 
-#: cogs/helpers/config.py:334
+#: cogs/helpers/config.py:394
 msgid "duck eviscerator"
 msgstr "kacsabelező"
 
-#: cogs/helpers/config.py:342
+#: cogs/helpers/config.py:402
 msgid "ducks terror"
 msgstr "kacsák réme"
 
-#: cogs/helpers/config.py:350
+#: cogs/helpers/config.py:410
 msgid "duck exploder"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:358
+#: cogs/helpers/config.py:418
 msgid "duck destructor"
 msgstr "kacsasemmisítő"
 
-#: cogs/helpers/config.py:366
+#: cogs/helpers/config.py:426
 msgid "duck blaster"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:374
+#: cogs/helpers/config.py:434
 msgid "duck pulverizer"
 msgstr "kacsaporlasztó"
 
-#: cogs/helpers/config.py:382
+#: cogs/helpers/config.py:442
 msgid "duck disintegrator"
 msgstr "kacsaaprító"
 
-#: cogs/helpers/config.py:390
+#: cogs/helpers/config.py:450
 msgid "duck atomizer"
 msgstr "kacsaatomizáló"
 
-#: cogs/helpers/config.py:398
+#: cogs/helpers/config.py:458
 msgid "duck annihilator"
 msgstr "a kacsákat földdel egyenlővé tevő"
 
-#: cogs/helpers/config.py:406
+#: cogs/helpers/config.py:466
 msgid "serial duck killer"
 msgstr "sorozatos kacsagyilkos"
 
-#: cogs/helpers/config.py:414
+#: cogs/helpers/config.py:474
 msgid "duck genocider"
 msgstr "kacsairtó"
 
-#: cogs/helpers/config.py:422
+#: cogs/helpers/config.py:482
 msgid "unemployed due to extinction of the duck specie"
 msgstr "munkanélküli a teljes kacsapopuláció kiirtása miatt"
 
-#: cogs/helpers/config.py:430
+#: cogs/helpers/config.py:490
 msgid "duck toaster"
 msgstr "kacsapirító"
 
-#: cogs/helpers/config.py:438
+#: cogs/helpers/config.py:498
 msgid "old noob"
 msgstr "nyomi veterán"
 

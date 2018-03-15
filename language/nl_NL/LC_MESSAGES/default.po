@@ -1,0 +1,202 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-15 13:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:87
+msgid ":x: A required argument is missing."
+msgstr ":x: Een benodigd argument mist."
+
+#: bot.py:90
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Je hebt niet genoeg exp hiervoor"
+
+#: bot.py:93
+msgid ":x: You are not a server admin"
+msgstr ":x: Je bent geen server admin"
+
+#: bot.py:96
+msgid ":x: You are not a super admin."
+msgstr ":x: Je bent geen super admin."
+
+#: bot.py:97
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Dit commando is gereserveerd voor de eigenaars van de bot. Als je vindt dat "
+"dit een fout is, neem dan contact op met de Duckhunt Support Server (zie "
+"`dh!help`)."
+
+#: bot.py:110
+msgid ":bulb: HINT: "
+msgstr ":bulb: HINT: "
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Klaar, gebruiker verbannen. :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Klaar, ban van de gebruiker opgeheven. :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
+"Have fun!"
+msgstr ""
+"<:DuckHug:361969688957157378>Klaar, kanaal {channel} toegevoegd aan het "
+"spel! Veel plezier!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. "
+"Bye!"
+msgstr ""
+"<:DuckHug:361969688957157378>Klaar, kanaal {channel} uit het spel verwijderd."
+" Doei!"
+
+#: cogs/admin_commands.py:89
+msgid "<:DuckHug:361969688957157378> {admin} added as an admin to the guild!"
+msgstr ""
+"<:DuckHug:361969688957157378>{admin} toegevoegd als admin aan het gilde!"
+
+#: cogs/admin_commands.py:97
+msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
+msgstr "<:DuckHug:361969688957157378>{admin} verwijderd van de gilde admins."
+
+#: cogs/admin_commands.py:127 cogs/admin_commands.py:156
+msgid "Done. User removed from the database, if it was in."
+msgstr ""
+"Klaar. Gebruiker verwijderd uit de database, als deze zich hierin bevond."
+
+#: cogs/admin_commands.py:142
+msgid "Done. All the channel data was removed."
+msgstr "Klaar. Alle kanaaldata is verwijderd."
+
+#: cogs/admin_commands.py:169
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+":x: Incorrecte syntax. Gebruik het commando op deze manier: `!settings [view/"
+"set/reset/list/modified] [instelling, wanneer toepasbaar]`"
+
+#: cogs/admin_commands.py:179 cogs/admin_commands.py:193
+msgid ""
+"<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
+msgstr ""
+"<:blobhyperthink:357040754566103040>** FOUT: ** Ik ken deze instelling niet"
+
+#: cogs/admin_commands.py:182
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: De instelling {pref} is ingesteld op `{value}` in dit gilde."
+
+#: cogs/admin_commands.py:203
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"De max_ducks_per_day-controle aan het omzeilen, omdat je de boteigenaar bent."
+" Het zou `{max}` geweest zijn."
+
+#: cogs/admin_commands.py:205
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"De max_ducks_per_day-controle aan het omzeilen, omdat je je in een VIP-gilde "
+"bevindt. Misbruik dat alstublieft niet. Ter informatie: de limiet zou zijn "
+"ingesteld op `{max} 'eenden per dag."
+
+#: cogs/admin_commands.py:213
+msgid ":duck: Authorised to set the VIP status!"
+msgstr ":duck: Geauthoriseerd om de VIP status in te stellen!"
+
+#: cogs/admin_commands.py:215
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ""
+":x: Ongeauthoriseerd om de VIP status in te stellen! Je bent geen eigenaar."
+
+#: cogs/admin_commands.py:218 cogs/admin_commands.py:229
+msgid ":x: Incorrect value."
+msgstr ":x: Onjuiste waarde."
+
+#: cogs/admin_commands.py:225
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ":ok: De instelling {pref} is ingesteld op `{value}` in dit gilde."
+
+#: cogs/admin_commands.py:251
+msgid ""
+"The list of preferences is available on our new website: https://api-d.com/"
+"bot-settings.html"
+msgstr ""
+"De lijst met voorkeuren is beschikbaar op onze nieuwe website: https://api-d."
+"com/bot-settings.html"
+
+#: cogs/experience_related_commands.py:25
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"Gefeliciteerd, je hebt meer ervaring verzonden / gegeven dan het maximale "
+"aantal dat ik kan opslaan."
+
+#: cogs/experience_related_commands.py:28
+msgid ":ok:, they now have {newexp} exp points!"
+msgstr ":ok:, ze hebben nu {newexp} exp punten!"
+
+#: cogs/experience_related_commands.py:41
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ""
+":x: Om misbruik te voorkomen, kun je geen exp sturen als je geen wapen hebt."
+
+#: cogs/experience_related_commands.py:45
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: De exp-hoeveelheid moet positief zijn."
+
+#: cogs/experience_related_commands.py:64
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Je hebt {amount} exp verzonden naar {target} (en {belastingen} exp aan "
+"belastingen betaald)!"
+
+#: cogs/experience_related_commands.py:67
+msgid "You don't have enough experience points"
+msgstr "Je hebt niet genoeg ervaringspunten"
+
+#: cogs/experience_related_commands.py:69
+msgid ":x: Sending exp is disabled on this server"
+msgstr ":x: Het verzenden van exp is uitgeschakeld op deze server"
+
+#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (in {dans_jours} {dans_heures} en {dans_minutes})"
+
+#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "%m/%d bij %H:%M:%S"
+
+#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans} dagen"
+
+#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans} uur"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-12 20:12+0000\n"
+"POT-Creation-Date: 2018-03-15 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,10 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
-
-#: cogs/admin_commands.py:101
-msgid "There are {ducks} ducks left to spawn today!"
-msgstr "Det finns {ducks} ankor kvar som ska visa upp!"
 
 #: cogs/experience_related_commands.py:25
 msgid ""
@@ -289,39 +285,39 @@ msgstr ":champagne: Ditt magasin är full!"
 msgid ":champagne: You have enough magazines!"
 msgstr ":champagne: Du har tillräckligt med magasin!"
 
-#: cogs/shop.py:490
+#: cogs/shop.py:493
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/shop.py:493
+#: cogs/shop.py:496
 msgid " < "
 msgstr "<"
 
-#: cogs/user_commands.py:55 cogs/user_commands.py:126
+#: cogs/user_commands.py:59 cogs/user_commands.py:130
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
-#: cogs/user_commands.py:119
+#: cogs/user_commands.py:123
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Dina kläder är helt dyngsura, det går inte att jaga ännu! Du får vänta "
 "{temps_restant} minuter innnan du kan gå och jaga igen."
 
-#: cogs/user_commands.py:132
+#: cogs/user_commands.py:136
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 
-#: cogs/user_commands.py:139
+#: cogs/user_commands.py:143
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ditt vapen har varit saboterad, tacka {assaillant} för denna dåliga skämt."
 
-#: cogs/user_commands.py:174
+#: cogs/user_commands.py:178
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ditt vapen har fastnat, ladda om för att fixa det."
 
-#: cogs/user_commands.py:193
+#: cogs/user_commands.py:197
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -329,7 +325,7 @@ msgstr ""
 "Det finns ingen anka här, men skottet har inte avfyrats eftersom infraröd "
 "sensorn du köpte för ditt vapen gör sitt jobb!"
 
-#: cogs/user_commands.py:203
+#: cogs/user_commands.py:207
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -337,33 +333,33 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/user_commands.py:224 cogs/user_commands.py:302
+#: cogs/user_commands.py:228 cogs/user_commands.py:312
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
-#: cogs/user_commands.py:228
+#: cogs/user_commands.py:232
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
 
-#: cogs/user_commands.py:309
+#: cogs/user_commands.py:319
 msgid "BPAM"
 msgstr "PANG"
 
-#: cogs/user_commands.py:313
+#: cogs/user_commands.py:323
 msgid "BAAM"
 msgstr "BANG"
 
-#: cogs/user_commands.py:317
+#: cogs/user_commands.py:327
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/user_commands.py:317
+#: cogs/user_commands.py:327
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/user_commands.py:326
+#: cogs/user_commands.py:336
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -394,22 +390,22 @@ msgstr "Donald's basker"
 msgid "a fish."
 msgstr "en fisk"
 
-#: cogs/helpers/config.py:102
+#: cogs/helpers/config.py:162
 msgid "public danger"
 msgstr "Offentliga fara"
 
-#: cogs/helpers/config.py:110
+#: cogs/helpers/config.py:170
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:118
+#: cogs/helpers/config.py:178
 msgid "noob"
 msgstr "nybörjare"
 
-#: cogs/helpers/config.py:134
+#: cogs/helpers/config.py:194
 msgid "duck misser"
 msgstr "Anka missare"
 
-#: cogs/helpers/config.py:150
+#: cogs/helpers/config.py:210
 msgid "duck hater"
 msgstr "Anka hatare"
