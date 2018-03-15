@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-15 19:03+0000\n"
+"POT-Creation-Date: 2018-03-15 19:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,7 +222,7 @@ msgstr ""
 msgid "You are using shard number {shard}"
 msgstr ""
 
-#: cogs/helpers/database.py:188 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:196 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgstr ""
 msgid "Player"
 msgstr ""
 
-#: cogs/helpers/database.py:194 cogs/scores.py:177 cogs/scores.py:364
+#: cogs/helpers/database.py:202 cogs/scores.py:177 cogs/scores.py:364
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
@@ -314,19 +314,19 @@ msgstr ""
 msgid "Ratio (exp/ducks killed)"
 msgstr ""
 
-#: cogs/helpers/database.py:184 cogs/scores.py:302
+#: cogs/helpers/database.py:192 cogs/scores.py:302
 msgid "Current level"
 msgstr ""
 
-#: cogs/helpers/database.py:184 cogs/helpers/database.py:185 cogs/scores.py:302
+#: cogs/helpers/database.py:192 cogs/helpers/database.py:193 cogs/scores.py:302
 msgid "nom"
 msgstr ""
 
-#: cogs/helpers/database.py:186 cogs/scores.py:303
+#: cogs/helpers/database.py:194 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/helpers/database.py:187 cogs/scores.py:304
+#: cogs/helpers/database.py:195 cogs/scores.py:304
 msgid "Weapon reliability"
 msgstr ""
 
@@ -442,7 +442,7 @@ msgstr ""
 msgid "Effect: wet"
 msgstr ""
 
-#: cogs/setup_wizzard.py:22
+#: cogs/setup_wizzard.py:24
 msgid ""
 "Hello!\n"
 " Thanks for adding me in there! I'm almost ready to start the game!\n"
@@ -450,14 +450,14 @@ msgid ""
 "invoke me there by using `dh!setup`<:DuckHug:361969688957157378>"
 msgstr ""
 
-#: cogs/setup_wizzard.py:33
+#: cogs/setup_wizzard.py:35
 msgid ""
 "Hello again!\n"
 " I'm just gonna run a quick permissions check and will be back in a few "
 "seconds! Please wait"
 msgstr ""
 
-#: cogs/setup_wizzard.py:49
+#: cogs/setup_wizzard.py:51
 msgid ""
 ":small_red_triangle: The permission `read_message_history` is missing.\n"
 "This is essential for the normal function of the bot, as I need to be "
@@ -465,7 +465,7 @@ msgid ""
 "You can proceed without it, but shouldn't."
 msgstr ""
 
-#: cogs/setup_wizzard.py:54
+#: cogs/setup_wizzard.py:56
 msgid ""
 ":small_red_triangle: The permission `add_reactions` is missing.\n"
 "It's a required permission for interactive embeds, and they are almost "
@@ -474,7 +474,7 @@ msgid ""
 "errors"
 msgstr ""
 
-#: cogs/setup_wizzard.py:59
+#: cogs/setup_wizzard.py:61
 msgid ""
 ":small_red_triangle: The permission `attach_files` is missing.\n"
 "It's a required permission for embeds, and they are almost everywhere.\n"
@@ -482,7 +482,7 @@ msgid ""
 "errors"
 msgstr ""
 
-#: cogs/setup_wizzard.py:64
+#: cogs/setup_wizzard.py:66
 msgid ""
 ":small_red_triangle: The permission `embed_links` is missing.\n"
 "This is used to send embeds\n"
@@ -490,7 +490,7 @@ msgid ""
 "errors"
 msgstr ""
 
-#: cogs/setup_wizzard.py:70
+#: cogs/setup_wizzard.py:72
 msgid ""
 ":small_orange_diamond: You gave me the `administrator` permission.\n"
 "Although this will not cause problems, it's unsafe to give bots such "
@@ -498,7 +498,7 @@ msgid ""
 "You can proceed with it."
 msgstr ""
 
-#: cogs/setup_wizzard.py:75
+#: cogs/setup_wizzard.py:77
 msgid ""
 ":small_orange_diamond: The permission `create_instant_invite` is missing."
 "\n"
@@ -507,7 +507,7 @@ msgid ""
 "You can proceed without it."
 msgstr ""
 
-#: cogs/setup_wizzard.py:80
+#: cogs/setup_wizzard.py:82
 msgid ""
 ":small_orange_diamond: The permission `manage_messages` is missing.\n"
 "This is used to remove some messages on sneaky commands (weapon sabotage,"
@@ -516,14 +516,14 @@ msgid ""
 "errors"
 msgstr ""
 
-#: cogs/setup_wizzard.py:85
+#: cogs/setup_wizzard.py:87
 msgid ""
 ":small_orange_diamond: You gave me the `mention_everyone` permission.\n"
 "This not used, but should't be given in case of a bug\n"
 "You could proceed with it safely."
 msgstr ""
 
-#: cogs/setup_wizzard.py:90
+#: cogs/setup_wizzard.py:92
 msgid ""
 ":small_orange_diamond: The permission `external_emojis` is missing.\n"
 "This is used since DHV3 to add non-standard emojis to messages. You "
@@ -531,7 +531,7 @@ msgid ""
 "You could proceed without it, and bug reports will be appreciated."
 msgstr ""
 
-#: cogs/setup_wizzard.py:108
+#: cogs/setup_wizzard.py:110
 msgid ""
 ":small_blue_diamond: The permission `change_nickname` is missing.\n"
 "This is not yet used, but could be in the future. An announcement will be"
@@ -539,14 +539,14 @@ msgid ""
 "You can safely proceed without it."
 msgstr ""
 
-#: cogs/setup_wizzard.py:113
+#: cogs/setup_wizzard.py:115
 msgid ""
 ":small_blue_diamond: The permission `send_tts_messages` is missing.\n"
 "This is used in case you want to enable tts ducks..\n"
 "You can safely proceed without it, but the `tts_ducks` setting won't work"
 msgstr ""
 
-#: cogs/setup_wizzard.py:119
+#: cogs/setup_wizzard.py:121
 msgid ""
 "I'm done! <:felix:333872061103734794>\n"
 "Any warning has been sent above. I suggest fixing them, then running the "
@@ -559,7 +559,7 @@ msgid ""
 " at https://discord.gg/2BksEkV"
 msgstr ""
 
-#: cogs/setup_wizzard.py:133
+#: cogs/setup_wizzard.py:135
 msgid ""
 "Hey! Let's configure the server!\n"
 "I'll give you the most used parameters, and let you change them if you "
@@ -613,283 +613,289 @@ msgstr ""
 msgid "Right now you have a total of {exp} exp points."
 msgstr ""
 
-#: cogs/shop.py:63
+#: cogs/shop.py:54
+msgid ""
+"This is a temporary list until the new one is finished: "
+"<https://api-d.com/shop-items.html>. Thanks "
+msgstr ""
+
+#: cogs/shop.py:70
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
 
-#: cogs/shop.py:66
+#: cogs/shop.py:73
 msgid ":champagne: Your magazine is full!"
 msgstr ""
 
-#: cogs/shop.py:82
+#: cogs/shop.py:89
 msgid ":money_with_wings: You added a magazine to your weapon for 13 exp points."
 msgstr ""
 
-#: cogs/shop.py:85
+#: cogs/shop.py:92
 msgid ":champagne: You have enough magazines!"
 msgstr ""
 
-#: cogs/shop.py:99
+#: cogs/shop.py:106
 msgid ":money_with_wings: You purchased AP ammo for your weapon."
 msgstr ""
 
-#: cogs/shop.py:100
+#: cogs/shop.py:107
 msgid ""
 "For the next 24 hours, you will deal double damage to ducks. This does "
 "**not** stack with explosive ammo"
 msgstr ""
 
-#: cogs/shop.py:103
+#: cogs/shop.py:110
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ""
 
-#: cogs/shop.py:117
+#: cogs/shop.py:124
 msgid ":money_with_wings: You purchased explosive ammo for your weapon."
 msgstr ""
 
-#: cogs/shop.py:118
+#: cogs/shop.py:125
 msgid ""
 "For the next 24 hours, you will deal triple damage to ducks. This does "
 "**not** stack with AP ammo and trumps it if you have any."
 msgstr ""
 
-#: cogs/shop.py:121
+#: cogs/shop.py:128
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ""
 
-#: cogs/shop.py:135
+#: cogs/shop.py:142
 msgid ":money_with_wings: You got your weapon back."
 msgstr ""
 
-#: cogs/shop.py:136
+#: cogs/shop.py:143
 msgid ""
 "You can get your weapon back for free if you wait until the daily weapon "
 "& magazine giveback. Type `dh!freetime` to find out when the next "
 "giveback is"
 msgstr ""
 
-#: cogs/shop.py:140
+#: cogs/shop.py:147
 msgid ":champagne: You already have your weapon, what are you trying to buy? :p"
 msgstr ""
 
-#: cogs/shop.py:154
+#: cogs/shop.py:161
 msgid ":money_with_wings: You added grease in your weapon."
 msgstr ""
 
-#: cogs/shop.py:155
+#: cogs/shop.py:162
 msgid ""
 "This reduce jamming risks by 50 percent for a day, for only 8 exp points."
 " It's really useful for new players. Use `dh!duckstats` to check your "
 "level and accuracy"
 msgstr ""
 
-#: cogs/shop.py:159
+#: cogs/shop.py:166
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
 msgstr ""
 
-#: cogs/shop.py:173
+#: cogs/shop.py:180
 msgid ":money_with_wings: You added a sight to your weapon."
 msgstr ""
 
-#: cogs/shop.py:174
+#: cogs/shop.py:181
 msgid "Your aiming was improved using this formula: (100 - current accuracy) / 3."
 msgstr ""
 
-#: cogs/shop.py:177
+#: cogs/shop.py:184
 msgid ":champagne: You already have a sight on your weapon."
 msgstr ""
 
-#: cogs/shop.py:194
+#: cogs/shop.py:201
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will"
 " prevent any waste of ammo for a day. Cost: 15 exp points."
 msgstr ""
 
-#: cogs/shop.py:196
+#: cogs/shop.py:203
 msgid ":champagne: You already have an infrared detector on your weapon."
 msgstr ""
 
-#: cogs/shop.py:210
+#: cogs/shop.py:217
 msgid ":money_with_wings: You added a silencer to your weapon."
 msgstr ""
 
-#: cogs/shop.py:211
+#: cogs/shop.py:218
 msgid ""
 "The silencer works best if every hunter uses one, or if you're alone. "
 "With it, no ducks will fly away before you can kill them. What a good "
 "deal, they only cost 5 exp!"
 msgstr ""
 
-#: cogs/shop.py:215
+#: cogs/shop.py:222
 msgid ":champagne: You already have a silencer on your weapon"
 msgstr ""
 
-#: cogs/shop.py:239
+#: cogs/shop.py:246
 msgid ""
 ":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
 "{exp} more exp points for each killed duck for the next day."
 msgstr ""
 
-#: cogs/shop.py:243
-msgid ":champagne: You already have 5-leaf clover on your weapon"
+#: cogs/shop.py:250
+msgid ":champagne: You already have 4-leaf clover on your weapon"
 msgstr ""
 
-#: cogs/shop.py:259
+#: cogs/shop.py:266
 msgid ""
 ":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
 "immune to sunlight for a day."
 msgstr ""
 
-#: cogs/shop.py:263
+#: cogs/shop.py:270
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
 "being that you're much swagger now. :cool:"
 msgstr ""
 
-#: cogs/shop.py:264
+#: cogs/shop.py:271
 msgid ""
 "Don't buy sunglasses if you still have them! This don't extend the time "
 "you'll have them, but still cost you some exp"
 msgstr ""
 
-#: cogs/shop.py:278
+#: cogs/shop.py:285
 msgid ""
 ":money_with_wings: You have new dry clothes on you now. You look "
 "beautiful!"
 msgstr ""
 
-#: cogs/shop.py:282
+#: cogs/shop.py:289
 msgid ""
 ":money_with_wings: You bought brand new clothes, the only point of it "
 "being that you're much swagger now. :cool:"
 msgstr ""
 
-#: cogs/shop.py:283
+#: cogs/shop.py:290
 msgid ""
 "Don't buy dry clothes if you aren't wet! They won't do anything, but will"
 " still cost you exp"
 msgstr ""
 
-#: cogs/shop.py:297
+#: cogs/shop.py:304
 msgid ""
 ":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in "
 "it, or if your weapon was sabotaged, it's fixed now!"
 msgstr ""
 
-#: cogs/shop.py:298
+#: cogs/shop.py:305
 msgid ""
 "Next time someone sabotages you, just shot, it won't do much damage but "
 "to your reputation"
 msgstr ""
 
-#: cogs/shop.py:311
+#: cogs/shop.py:318
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
 
-#: cogs/shop.py:312
+#: cogs/shop.py:319
 msgid ""
 "That bad move still took 5 exp from your account, due to you having to "
 "buy a mirror"
 msgstr ""
 
-#: cogs/shop.py:317
+#: cogs/shop.py:324
 msgid ""
 ":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
 "accuracy!"
 msgstr ""
 
-#: cogs/shop.py:318 cogs/shop.py:333
+#: cogs/shop.py:325 cogs/shop.py:340
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
 "would you"
 msgstr ""
 
-#: cogs/shop.py:332
+#: cogs/shop.py:339
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ""
 
-#: cogs/shop.py:346
+#: cogs/shop.py:353
 msgid ""
 ":money_with_wings: You dropped a bucket full of water on {target}, "
 "forcing them to wait 1 hour for their clothes to dry before they can "
 "return hunting."
 msgstr ""
 
-#: cogs/shop.py:359
+#: cogs/shop.py:366
 msgid "You wouln't sabotage yourself, would you ?"
 msgstr ""
 
-#: cogs/shop.py:365
+#: cogs/shop.py:372
 msgid ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
 msgstr ""
 
-#: cogs/shop.py:368
+#: cogs/shop.py:375
 msgid ""
 "Don't use a mention for this. You can give me user ids or the full "
 "username in \"quotes\""
 msgstr ""
 
-#: cogs/shop.py:372
+#: cogs/shop.py:379
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ""
 
-#: cogs/shop.py:377 cogs/shop.py:485
+#: cogs/shop.py:384 cogs/shop.py:492
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I "
 "will be able to delete that kind of shop commands ;)"
 msgstr ""
 
-#: cogs/shop.py:394
+#: cogs/shop.py:401
 msgid ":money_with_wings: You bought a life insurence for a week for 10 exp."
 msgstr ""
 
-#: cogs/shop.py:395
+#: cogs/shop.py:402
 msgid "If you get killed, you'll earn half the level of the killer in exp."
 msgstr ""
 
-#: cogs/shop.py:398
+#: cogs/shop.py:405
 msgid ":champagne: You're already insured."
 msgstr ""
 
-#: cogs/shop.py:435
+#: cogs/shop.py:442
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
 msgstr ""
 
-#: cogs/shop.py:439
+#: cogs/shop.py:446
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
 "channel, thanks to {mention}'s decoy. They bought it for 8 exp!"
 msgstr ""
 
-#: cogs/shop.py:462
+#: cogs/shop.py:469
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 more seconds before leaving for the rest of the day!"
 msgstr ""
 
-#: cogs/shop.py:463
+#: cogs/shop.py:470
 msgid ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 
-#: cogs/shop.py:480
+#: cogs/shop.py:487
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 "
 "exp. It's wrong, but so funny!"
 msgstr ""
 
-#: cogs/shop.py:493
+#: cogs/shop.py:500
 msgid " < *BZAACK*"
 msgstr ""
 
-#: cogs/shop.py:496
+#: cogs/shop.py:503
 msgid " < "
 msgstr ""
 
-#: cogs/shop.py:500
+#: cogs/shop.py:507
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
@@ -1473,19 +1479,19 @@ msgstr ""
 msgid "old noob"
 msgstr ""
 
-#: cogs/helpers/database.py:170
+#: cogs/helpers/database.py:178
 msgid "Level of {player} on #{channel}"
 msgstr ""
 
-#: cogs/helpers/database.py:173
+#: cogs/helpers/database.py:181
 msgid "You leveled down!"
 msgstr ""
 
-#: cogs/helpers/database.py:176
+#: cogs/helpers/database.py:184
 msgid "You leveled up!"
 msgstr ""
 
-#: cogs/helpers/database.py:185
+#: cogs/helpers/database.py:193
 msgid "Previous level"
 msgstr ""
 
