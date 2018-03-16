@@ -248,7 +248,7 @@ class Admin:
         await self.bot.send_message(ctx=ctx, message="\n```\n" + tabulate.tabulate(table, headers, tablefmt="fancy_grid") + "\n```")
 
 
-        await self.bot.send_message(ctx=ctx, message=_("The list of preferences is available on our new website: https://api-d.com/bot-settings.html", language))
+        await self.bot.send_message(ctx=ctx, message=_("The list of preferences is available on our new website: https://duckhunt.me/bot-settings/", language))
 
     @settings.command(name='modified')
     @commands.cooldown(1, 20, BucketType.guild)

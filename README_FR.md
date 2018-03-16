@@ -5,7 +5,7 @@ Choose your language : [EN](README.md)
 Le but du jeu est de tuer les canards dès que vous les voyez ! C'est un peu un fps, mais pour discord. :°)
 
 ## Ou est l'aide du bot ?
-Elle se trouve ici : http://api-d.com
+Elle se trouve ici : https://duckhunt.me
 
 ## Comment avoir le bot sur son serveur ?
 Deux moyens :

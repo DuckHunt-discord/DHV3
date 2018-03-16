@@ -190,7 +190,7 @@ class Database:
                 return
 
             embed.set_thumbnail(url=user.avatar_url if user.avatar_url else self.bot.user.avatar_url)
-            embed.url = 'https://api-d.com/'
+            embed.url = 'https://duckhunt.me/'
 
             embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
             embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")

@@ -5,7 +5,7 @@ Choose your language : [FR](README_FR.md)
 The core of the game is to shoot every duck you see. Like a shooter, just for discord! :°)
 
 ## I need help. Where can I get it?
-[You should check out our website](https://api-d.com). Every command, setting and item is documented there.
+[You should check out our website](https://duckhunt.me). Every command, setting and item is documented there.
 
 ## I want to use the bot on my server. How can I add it?
 There are two possible ways to use the bot. You can either simply invite the official version, or host it yourself (advanced users only).
@@ -15,7 +15,7 @@ There are two possible ways to use the bot. You can either simply invite the off
 2. Claim your own server using `!claimserver`
 3. Go to a channel you want to hunt in
 4. Add the channel to the list of channels ducks appear in with `!add_channel`
-5. That's it! You should check out the settings list [here](https://api-d.com/bot-settings.html) for information on how to tweak the bot.
+5. That's it! You should check out the settings list [here](https://duckhunt.me/bot-settings/) for information on how to tweak the bot.
 
 ### Self-Hosting the bot
 [Installation Instructions](INSTALL.md)

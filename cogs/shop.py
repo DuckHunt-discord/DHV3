@@ -51,7 +51,7 @@ class Experience:
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
-        await self.bot.send_message(ctx=ctx, message=_("This is a temporary list until the new one is finished: <https://api-d.com/shop-items.html>. Thanks ", language))
+        await self.bot.send_message(ctx=ctx, message=_("Here is the list of all the shops items : https://duckhunt.me/shop-items/ . Thanks ", language))
 
     @shop.command(name="1", aliases=["bullet", "bullets"])
     @checks.have_exp(7)

@@ -3,7 +3,7 @@ import datetime
 import time
 from discord.ext import commands
 
-
+from cogs.helpers import checks
 
 class Meta:
     """Commands for utilities related to Discord or the Bot itself."""
@@ -26,16 +26,19 @@ class Meta:
         return fmt.format(d=days, h=hours, m=minutes, s=seconds)
 
     @commands.command()
+    @checks.is_channel_enabled()
     async def uptime(self, ctx):
         """Tells you how long the bot has been up for."""
         _ = self.bot._; language = await self.bot.db.get_pref(ctx.guild, "language")
         await self.bot.send_message(ctx=ctx, message='Uptime: **{}**'.format(self.get_bot_uptime()))
         await self.bot.hint(ctx=ctx, message=_("The bot frequently reboots for updates. Don't worry, it has a 99.8% of uptime.", language))
 
+    @checks.is_channel_enabled()
     @commands.command(rest_is_raw=True, hidden=True, aliases=["say"])
     async def echo(self, ctx, *, content):
         await self.bot.send_message(ctx=ctx, message=content)
 
+    @checks.is_channel_enabled()
     @commands.command(hidden=True)
     async def commandstats(self, ctx):
         msg = 'Since startup, {} commands have been used.\n{}'
@@ -44,12 +47,12 @@ class Meta:
 
     @commands.command()
     async def wiki(self, ctx):
-        await self.bot.send_message(ctx=ctx, message="https://api-d.com/")
+        await self.bot.send_message(ctx=ctx, message="https://duckhunt.me/")
 
     @commands.command()
     async def help(self, ctx):
         _ = self.bot._; language = await self.bot.db.get_pref(ctx.guild, "language")
-        await self.bot.send_message(ctx=ctx, message=_("Here is the command list : http://api-d.com/command-list.html", language))
+        await self.bot.send_message(ctx=ctx, message=_("Here is the command list : http://duckhunt.me/command-list/", language))
 
     @commands.command(aliases=["date"])
     async def time(self, ctx):
@@ -63,6 +66,7 @@ class Meta:
         await self.bot.hint(ctx=ctx, message=_("You can use the `dh!freetime` command to see when you'll get back your weapons for free", language))
 
     @commands.command()
+    @checks.is_channel_enabled()
     async def freetime(self, ctx):
         HOUR = 3600
         DAY = 86400
