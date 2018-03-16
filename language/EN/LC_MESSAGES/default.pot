@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-15 19:10+0000\n"
+"POT-Creation-Date: 2018-03-16 15:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,7 +222,7 @@ msgstr ""
 msgid "You are using shard number {shard}"
 msgstr ""
 
-#: cogs/helpers/database.py:196 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgstr ""
 msgid "Player"
 msgstr ""
 
-#: cogs/helpers/database.py:202 cogs/scores.py:177 cogs/scores.py:364
+#: cogs/helpers/database.py:205 cogs/scores.py:177 cogs/scores.py:364
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
@@ -314,19 +314,19 @@ msgstr ""
 msgid "Ratio (exp/ducks killed)"
 msgstr ""
 
-#: cogs/helpers/database.py:192 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/scores.py:302
 msgid "Current level"
 msgstr ""
 
-#: cogs/helpers/database.py:192 cogs/helpers/database.py:193 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/helpers/database.py:196 cogs/scores.py:302
 msgid "nom"
 msgstr ""
 
-#: cogs/helpers/database.py:194 cogs/scores.py:303
+#: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/helpers/database.py:195 cogs/scores.py:304
+#: cogs/helpers/database.py:198 cogs/scores.py:304
 msgid "Weapon reliability"
 msgstr ""
 
@@ -848,7 +848,7 @@ msgid ""
 msgstr ""
 
 #: cogs/shop.py:401
-msgid ":money_with_wings: You bought a life insurence for a week for 10 exp."
+msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
 msgstr ""
 
 #: cogs/shop.py:402
@@ -1479,19 +1479,19 @@ msgstr ""
 msgid "old noob"
 msgstr ""
 
-#: cogs/helpers/database.py:178
+#: cogs/helpers/database.py:181
 msgid "Level of {player} on #{channel}"
 msgstr ""
 
-#: cogs/helpers/database.py:181
+#: cogs/helpers/database.py:184
 msgid "You leveled down!"
 msgstr ""
 
-#: cogs/helpers/database.py:184
+#: cogs/helpers/database.py:187
 msgid "You leveled up!"
 msgstr ""
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:196
 msgid "Previous level"
 msgstr ""
 
