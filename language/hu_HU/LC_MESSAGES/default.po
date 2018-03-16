@@ -69,7 +69,7 @@ msgstr "{dans} óra"
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
-#: cogs/helpers/database.py:188 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
 
@@ -125,19 +125,19 @@ msgstr "Lövedékek a mostani töltetben"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Arány (xp/megölt kacsák)"
 
-#: cogs/helpers/database.py:184 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/scores.py:302
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
-#: cogs/helpers/database.py:184 cogs/helpers/database.py:185 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/helpers/database.py:196 cogs/scores.py:302
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/database.py:186 cogs/scores.py:303
+#: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/database.py:187 cogs/scores.py:304
+#: cogs/helpers/database.py:198 cogs/scores.py:304
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
@@ -245,27 +245,27 @@ msgstr "Tárgy: AP töltet"
 msgid "Effect: wet"
 msgstr "Effekt: nedves"
 
-#: cogs/shop.py:103
+#: cogs/shop.py:110
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
 
-#: cogs/shop.py:121
+#: cogs/shop.py:128
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 
-#: cogs/shop.py:372
+#: cogs/shop.py:379
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: {target} fegyverét már elrontottad!"
 
-#: cogs/shop.py:493
+#: cogs/shop.py:500
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/shop.py:496
+#: cogs/shop.py:503
 msgid " < "
 msgstr "<"
 
-#: cogs/shop.py:500
+#: cogs/shop.py:507
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 
@@ -621,18 +621,18 @@ msgstr "kacsapirító"
 msgid "old noob"
 msgstr "nyomi veterán"
 
-#: cogs/helpers/database.py:170
+#: cogs/helpers/database.py:181
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje # {channel} en"
 
-#: cogs/helpers/database.py:173
+#: cogs/helpers/database.py:184
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/database.py:176
+#: cogs/helpers/database.py:187
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/database.py:185
+#: cogs/helpers/database.py:196
 msgid "Previous level"
 msgstr "Előző szint"

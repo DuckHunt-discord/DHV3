@@ -62,7 +62,7 @@ msgstr "{dans} часов"
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
-#: cogs/helpers/database.py:188 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr "Очков опыта"
 
@@ -82,23 +82,23 @@ msgstr "Лучшее время"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Соотношение (опыт/уток убито)"
 
-#: cogs/helpers/database.py:184 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/scores.py:302
 msgid "Current level"
 msgstr "Текущий уровень"
 
-#: cogs/helpers/database.py:186 cogs/scores.py:303
+#: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr "Точность"
 
-#: cogs/shop.py:103
+#: cogs/shop.py:110
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: У вас уже есть бронебойные патроны!"
 
-#: cogs/shop.py:121
+#: cogs/shop.py:128
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
 
-#: cogs/shop.py:372
+#: cogs/shop.py:379
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: оружие {target} уже саботировано!"
 
@@ -307,18 +307,18 @@ msgstr "серийный убийца уток"
 msgid "old noob"
 msgstr "старый нуб"
 
-#: cogs/helpers/database.py:170
+#: cogs/helpers/database.py:181
 msgid "Level of {player} on #{channel}"
 msgstr "Уровень игрока {player} на канале #{channel}"
 
-#: cogs/helpers/database.py:173
+#: cogs/helpers/database.py:184
 msgid "You leveled down!"
 msgstr "Ваш уровень уменьшен!"
 
-#: cogs/helpers/database.py:176
+#: cogs/helpers/database.py:187
 msgid "You leveled up!"
 msgstr "Ваш уровень увеличен!"
 
-#: cogs/helpers/database.py:185
+#: cogs/helpers/database.py:196
 msgid "Previous level"
 msgstr "Предыдущий уровень"

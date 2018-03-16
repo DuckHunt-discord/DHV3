@@ -17,6 +17,14 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
+#: bot.py:90
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: No tienes suficientes puntos de experiencia para esto"
+
+#: bot.py:93
+msgid ":x: You are not a server admin"
+msgstr ":x: No eres un Administrador "
+
 #: cogs/admin_commands.py:26
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Hecho, usuario baneado :gun:"
@@ -53,14 +61,6 @@ msgstr ""
 #: cogs/admin_commands.py:218 cogs/admin_commands.py:229
 msgid ":x: Incorrect value."
 msgstr ":x: Valor incorrecto"
-
-#: cogs/admin_commands.py:251
-msgid ""
-"The list of preferences is available on our new website: https://api-d.com/"
-"bot-settings.html"
-msgstr ""
-"La lista de preferencias está disponible en nuestro nuevo sitio web: https://"
-"api-d.com/bot-settings.html"
 
 #: cogs/experience_related_commands.py:25
 msgid ""
@@ -118,7 +118,7 @@ msgstr "{dans} horas"
 msgid "{dans} minutes"
 msgstr "{dans} minutos"
 
-#: cogs/meta.py:62
+#: cogs/meta.py:65
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -129,7 +129,7 @@ msgstr ""
 "Puede usar este sitio web para compararlo con el de suyo: https://time.is/"
 "compare/GMT"
 
-#: cogs/meta.py:75
+#: cogs/meta.py:79
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -137,7 +137,7 @@ msgstr ""
 ":alarm_clock: Siguiente devolución de armas y cargadores en {sec} segundos "
 "({hours} horas y {minutes} minutos)."
 
-#: cogs/helpers/database.py:188 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr "Puntos de experiencia"
 
@@ -165,7 +165,7 @@ msgstr "Ninguno!"
 msgid "Player"
 msgstr "Jugador"
 
-#: cogs/helpers/database.py:194 cogs/scores.py:177 cogs/scores.py:364
+#: cogs/helpers/database.py:205 cogs/scores.py:177 cogs/scores.py:364
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -223,19 +223,19 @@ msgstr "Cartuchos actualmente en esta cargador"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Proporción (exp/patos muertos)"
 
-#: cogs/helpers/database.py:184 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/scores.py:302
 msgid "Current level"
 msgstr "Nivel Actual"
 
-#: cogs/helpers/database.py:184 cogs/helpers/database.py:185 cogs/scores.py:302
+#: cogs/helpers/database.py:195 cogs/helpers/database.py:196 cogs/scores.py:302
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/database.py:186 cogs/scores.py:303
+#: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr "Precisión de Tiro"
 
-#: cogs/helpers/database.py:187 cogs/scores.py:304
+#: cogs/helpers/database.py:198 cogs/scores.py:304
 msgid "Weapon reliability"
 msgstr "Fiabilidad del Arma"
 
@@ -359,39 +359,39 @@ msgstr ""
 ":x: Sintaxis incorrecta. Usa el comando de esta manera: `!shop [lista/numero "
 "de item] [argumento si aplica]`"
 
-#: cogs/shop.py:63
+#: cogs/shop.py:70
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ":money_with_wings: Agregaste una bala a tu arma por 7 de exp."
 
-#: cogs/shop.py:66
+#: cogs/shop.py:73
 msgid ":champagne: Your magazine is full!"
 msgstr ":champagne: ¡Tu cargador esta lleno!"
 
-#: cogs/shop.py:85
+#: cogs/shop.py:92
 msgid ":champagne: You have enough magazines!"
 msgstr ":champagne: ¡Tienes suficientes cargadores!"
 
-#: cogs/shop.py:103
+#: cogs/shop.py:110
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: ¡Tienes suficiente munición AP por ahora!"
 
-#: cogs/shop.py:121
+#: cogs/shop.py:128
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: ¡Ya tienes suficiente munición explosiva por ahora!"
 
-#: cogs/shop.py:140
+#: cogs/shop.py:147
 msgid ""
 ":champagne: You already have your weapon, what are you trying to buy? :p"
 msgstr ":champagne: Ya tienes tu arma, ¿qué estás tratando de comprar? :p"
 
-#: cogs/shop.py:159
+#: cogs/shop.py:166
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
 msgstr ""
 ":champagne: Tu arma está perfectamente lubricada, no necesitas mas grasa."
 
-#: cogs/shop.py:194
+#: cogs/shop.py:201
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will "
 "prevent any waste of ammo for a day. Cost: 15 exp points."
@@ -400,11 +400,11 @@ msgstr ""
 "prevendrá cualquier desperdicio de munición por un día. Costo: 15 puntos de "
 "exp."
 
-#: cogs/shop.py:196
+#: cogs/shop.py:203
 msgid ":champagne: You already have an infrared detector on your weapon."
 msgstr ":champagne: Ya tienes un detector infrarrojo en tu arma"
 
-#: cogs/shop.py:259
+#: cogs/shop.py:266
 msgid ""
 ":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
 "immune to sunlight for a day."
@@ -412,7 +412,7 @@ msgstr ""
 ":money_with_wings: ¡Compraste un par de gafas de sol por 5 exp! Ahora eres "
 "inmune a la luz solar por un día."
 
-#: cogs/shop.py:263
+#: cogs/shop.py:270
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
 "being that you're much swagger now. :cool:"
@@ -420,7 +420,7 @@ msgstr ""
 ":money_with_wings: compraste unas gafas de sol nuevas, el único punto de eso "
 "es que ahora tienes más swag. :cool:"
 
-#: cogs/shop.py:282
+#: cogs/shop.py:289
 msgid ""
 ":money_with_wings: You bought brand new clothes, the only point of it being "
 "that you're much swagger now. :cool:"
@@ -428,7 +428,7 @@ msgstr ""
 ":money_with_wings: compraste ropa nueva, el único punto de eso es que ahora "
 "tienes más swag. :cool:"
 
-#: cogs/shop.py:317
+#: cogs/shop.py:324
 msgid ""
 ":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
 "accuracy!"
@@ -436,11 +436,11 @@ msgstr ""
 ":money_with_wings: Deslumbrado {mention}! ¡Su próximo tiro perderá un 50% de "
 "precisión!"
 
-#: cogs/shop.py:332
+#: cogs/shop.py:339
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Arrojaste arena en el arma de {mention} ;)"
 
-#: cogs/shop.py:346
+#: cogs/shop.py:353
 msgid ""
 ":money_with_wings: You dropped a bucket full of water on {target}, forcing "
 "them to wait 1 hour for their clothes to dry before they can return hunting."
@@ -449,11 +449,11 @@ msgstr ""
 "esperar 1 hora para que sus ropas se sequen antes de que puedan ir a cazar "
 "de nuevo."
 
-#: cogs/shop.py:372
+#: cogs/shop.py:379
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: {target} el arma sigue saboteada!"
 
-#: cogs/shop.py:435
+#: cogs/shop.py:442
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
@@ -461,7 +461,7 @@ msgstr ""
 ":money_with_wings: Los patos están descansando ahora, por lo que tu señuelo "
 "probablemente no funcionó ..."
 
-#: cogs/shop.py:439
+#: cogs/shop.py:446
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
@@ -469,7 +469,7 @@ msgstr ""
 ":money_with_wings: Aparecerá un pato en los próximos 10 minutos en el canal, "
 "gracias al señuelo de {mention}. ¡Lo compró por 8 de exp!"
 
-#: cogs/shop.py:462
+#: cogs/shop.py:469
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 more seconds before leaving for the rest of the day!"
@@ -477,15 +477,15 @@ msgstr ""
 ":money_with_wings: pones pan en el canal para atraer a los patos. "
 "¡Permanecerán por 20 segundos más, antes de partir por el resto del día!"
 
-#: cogs/shop.py:493
+#: cogs/shop.py:500
 msgid " < *BZAACK*"
 msgstr " < *BZAACK* "
 
-#: cogs/shop.py:496
+#: cogs/shop.py:503
 msgid " < "
 msgstr " < "
 
-#: cogs/shop.py:500
+#: cogs/shop.py:507
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
 
@@ -1059,18 +1059,18 @@ msgstr "Tostador de patos"
 msgid "old noob"
 msgstr "Viejo novato"
 
-#: cogs/helpers/database.py:170
+#: cogs/helpers/database.py:181
 msgid "Level of {player} on #{channel}"
 msgstr "Nivel de {player} en #{channel}"
 
-#: cogs/helpers/database.py:173
+#: cogs/helpers/database.py:184
 msgid "You leveled down!"
 msgstr "¡Has bajado un nivel!"
 
-#: cogs/helpers/database.py:176
+#: cogs/helpers/database.py:187
 msgid "You leveled up!"
 msgstr "¡Has subido un nivel!"
 
-#: cogs/helpers/database.py:185
+#: cogs/helpers/database.py:196
 msgid "Previous level"
 msgstr "Nivel previo"
