@@ -385,7 +385,7 @@ class Experience:
         except discord.NotFound:
             pass
 
-    @shop.command(name="18", aliases=["life_insurance"])
+    @shop.command(name="18", aliases=["life_insurance", "insurance"])
     @checks.have_exp(10)
     async def item18(self, ctx):
         """Buy a life insurance (10 exp)
@@ -398,7 +398,7 @@ class Experience:
         if await self.bot.db.get_stat(message.channel, message.author, "life_insurance") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "life_insurance", int(time.time() + DAY * 7))
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -10)
-            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You bought a life insurence for a week for 10 exp.", language))
+            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You bought a life insurance for a week for 10 exp.", language))
             await self.bot.hint(ctx=ctx, message=_("If you get killed, you'll earn half the level of the killer in exp.", language))
 
         else:

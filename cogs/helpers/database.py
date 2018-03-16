@@ -63,11 +63,15 @@ class Database:
         self.database.query("INSERT INTO channels (server, channel, enabled) VALUES (:server_id, :channel_id, 1) "
                             "ON DUPLICATE KEY UPDATE enabled=1", server_id=channel.guild.id, channel_id=channel.id)
         self._channel_enabled_cache[channel] = True
+        if channel in self._stats_cache.keys():
+            self._stats_cache[channel] = {}
 
     async def disable_channel(self, channel):
         self.database.query("INSERT INTO channels (server, channel, enabled) VALUES (:server_id, :channel_id, 0) "
                             "ON DUPLICATE KEY UPDATE enabled=0", server_id=channel.guild.id, channel_id=channel.id)
         self._channel_enabled_cache[channel] = False
+        if channel in self._stats_cache.keys():
+            self._stats_cache[channel] = {}
 
     async def list_enabled_channels(self):
         row = self.database.query("SELECT channel, server FROM channels WHERE enabled=1")
@@ -100,12 +104,6 @@ class Database:
 
     async def giveback(self, channel, user):
 
-        if channel in self._stats_cache.keys():
-            if user in self._stats_cache[channel]:
-                self._stats_cache[channel].pop(user)
-        else:
-            self._stats_cache[channel] = {}
-
         # self.bot.logger.debug(f"giveback for {channel.id} of {user.id}")
         channel_id = await self.get_channel_dbid(channel)
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
@@ -118,6 +116,11 @@ class Database:
 
                             id_=user.id, channel_id=channel_id, chargeurs=level["chargeurs"], balles=level["balles"], now=int(time.time()))
 
+        if channel in self._stats_cache.keys():
+            if user in self._stats_cache[channel]:
+                self._stats_cache[channel].pop(user)
+        else:
+            self._stats_cache[channel] = {}
 
     async def get_stat(self, channel, user, stat: str):
         # self.bot.logger.debug(f"get_stat for {channel.id} of {user.id} stat {stat}")
@@ -210,6 +213,9 @@ class Database:
 
         self.bot.logger.debug(f"Delete_stats in {channel.id} of {user_id}")
 
+        if channel in self._stats_cache.keys():
+            self._stats_cache[channel] = {}
+
         channel_id = await self.get_channel_dbid(channel)
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
@@ -220,6 +226,9 @@ class Database:
         channel_id = await self.get_channel_dbid(channel)
 
         self.database.query(f"DELETE FROM players WHERE channel_id=:channel_id", channel_id=channel_id)
+
+        if channel in self._stats_cache.keys():
+            self._stats_cache[channel] = {}
 
     async def add_to_stat(self, channel, user, stat: str, to_add: int):
         await self.set_stat(channel, user, stat, await self.get_stat(channel, user, stat) + to_add)
