@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-16 15:18+0000\n"
+"POT-Creation-Date: 2018-03-16 15:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,7 +126,7 @@ msgstr ""
 #: cogs/admin_commands.py:251
 msgid ""
 "The list of preferences is available on our new website: "
-"https://api-d.com/bot-settings.html"
+"https://duckhunt.me/bot-settings/"
 msgstr ""
 
 #: cogs/experience_related_commands.py:25
@@ -180,18 +180,18 @@ msgstr ""
 msgid "{dans} minutes"
 msgstr ""
 
-#: cogs/meta.py:33
+#: cogs/meta.py:34
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr ""
 
-#: cogs/meta.py:52
-msgid "Here is the command list : http://api-d.com/command-list.html"
+#: cogs/meta.py:55
+msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr ""
 
-#: cogs/meta.py:62
+#: cogs/meta.py:65
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as "
 "UTC±00:00), which is the one used by the bot. \n"
@@ -199,26 +199,26 @@ msgid ""
 "https://time.is/compare/GMT"
 msgstr ""
 
-#: cogs/meta.py:63
+#: cogs/meta.py:66
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get back your "
 "weapons for free"
 msgstr ""
 
-#: cogs/meta.py:75
+#: cogs/meta.py:79
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
 msgstr ""
 
-#: cogs/meta.py:77
+#: cogs/meta.py:81
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free"
 " (if confiscated), but it doesn't affect the bullets in your current "
 "magazine. If you can, reload beforehand!"
 msgstr ""
 
-#: cogs/meta.py:90
+#: cogs/meta.py:94
 msgid "You are using shard number {shard}"
 msgstr ""
 
@@ -615,8 +615,8 @@ msgstr ""
 
 #: cogs/shop.py:54
 msgid ""
-"This is a temporary list until the new one is finished: "
-"<https://api-d.com/shop-items.html>. Thanks "
+"Here is the list of all the shops items : https://duckhunt.me/shop-items/"
+" . Thanks "
 msgstr ""
 
 #: cogs/shop.py:70
