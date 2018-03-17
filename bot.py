@@ -233,6 +233,7 @@ logger.debug("Loading cogs : ")
 #################   ##
 
 cogs = ['cogs.admin_commands',
+        'cogs.analytics',
         'cogs.experience_related_commands',
         'cogs.helpers.database',
         'cogs.meta',
@@ -252,7 +253,7 @@ for extension in cogs:
 
 logger.debug("Everything seems fine, we are now connecting to discord and entering the mainloop.")
 try:
-    #bot.loop.set_debug(True)
+    # bot.loop.set_debug(True)
     bot.loop.run_until_complete(bot.start(bot.token))
 except KeyboardInterrupt:
     pass

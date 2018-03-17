@@ -12,7 +12,6 @@ class Admin:
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.command(pass_context=True, aliases=['gameban'])
     @checks.is_server_admin()
     @checks.is_channel_enabled()
@@ -113,12 +112,11 @@ class Admin:
             return
         await spawning.spawn_duck(self.bot, ctx.channel, super_duck=args.super_duck, life=max(1, args.life))
 
-
     @commands.command(aliases=["reset_user"])
     @checks.is_server_admin()
     @checks.is_channel_enabled()
     @commands.cooldown(1, 20, BucketType.guild)
-    async def del_user(self, ctx, user:discord.Member):
+    async def del_user(self, ctx, user: discord.Member):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
@@ -127,10 +125,8 @@ class Admin:
         await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if it was in.", language))
         await self.bot.hint(ctx=ctx, message="You can delete a user that left if you have his ID. Use `dh!del_user_id`")
 
-    @commands.command(aliases=["remove_all_scores_and_stats_on_this_channel",
-                               "remove_scores_and_stats_on_this_channel",
-                               "delete_all_scores_and_stats_on_this_channel",
-                               "delete_scores_and_stats_on_this_channel"])
+    @commands.command(
+        aliases=["remove_all_scores_and_stats_on_this_channel", "remove_scores_and_stats_on_this_channel", "delete_all_scores_and_stats_on_this_channel", "delete_scores_and_stats_on_this_channel"])
     @checks.is_server_admin()
     @commands.cooldown(1, 20, BucketType.guild)
     async def removeallscoresandstatsonthischannel(self, ctx):
@@ -142,19 +138,17 @@ class Admin:
         await self.bot.send_message(ctx=ctx, message=_("Done. All the channel data was removed.", language))
         await self.bot.hint(ctx=ctx, message="This does not stop the game. Use `dh!remove_channel` to stop it.")
 
-
     @commands.command(aliases=["reset_user_id"])
     @checks.is_channel_enabled()
     @checks.is_server_admin()
     @commands.cooldown(1, 20, BucketType.guild)
-    async def del_user_id(self, ctx, user_to_delete_id:int):
+    async def del_user_id(self, ctx, user_to_delete_id: int):
 
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         await ctx.bot.db.delete_stats(ctx.channel, user_id=user_to_delete_id)
         await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if it was in.", language))
-
 
     # > SETTINGS < #
 
@@ -201,7 +195,7 @@ class Admin:
                     if ctx.message.author.id in self.bot.admins:
                         await self.bot.send_message(ctx=ctx,
                                                     message=_("Bypassing the max_ducks_per_day check as you are the bot owner. It would have been `{max}`.", language).format(**{"max": maxCJ}))
-                    elif self.bot.db.get_pref(ctx.guild, "vip"):
+                    elif await self.bot.db.get_pref(ctx.guild, "vip"):
                         await self.bot.send_message(ctx=ctx, message=_(
                             "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please don't abuse that. For information, the limit would have been set at `{max}` ducks per day.",
                             language).format(**{"max": maxCJ}))
@@ -247,7 +241,6 @@ class Admin:
 
         await self.bot.send_message(ctx=ctx, message="\n```\n" + tabulate.tabulate(table, headers, tablefmt="fancy_grid") + "\n```")
 
-
         await self.bot.send_message(ctx=ctx, message=_("The list of preferences is available on our new website: https://duckhunt.me/bot-settings/", language))
 
     @settings.command(name='modified')
@@ -263,7 +256,7 @@ class Admin:
         for setting in settings:
             default = setting.Default
             current = await self.bot.db.get_pref(ctx.guild, setting.Field)
-            #ctx.logger.debug(f"{default} != {current}")
+            # ctx.logger.debug(f"{default} != {current}")
             try:
                 default = float(default)
                 current = float(current)
@@ -274,6 +267,7 @@ class Admin:
                 table.append([setting.Field, setting.Default, current])
 
         await self.bot.send_message(ctx=ctx, message="\n```\n" + tabulate.tabulate(table, headers, tablefmt="fancy_grid") + "\n```")
+
 
 def setup(bot):
     bot.add_cog(Admin(bot))
