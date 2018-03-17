@@ -34,6 +34,7 @@ def config(bot):
     # This is the bot token. Used by the bot to connect to discord.
     bot.token = ""
 
+
     # > Language settings < #
 
     # This is the primary language used by the bot
@@ -91,7 +92,11 @@ def config(bot):
     bot.admins = [138751484517941259]
 
     # This is a list of users that are blacklisted from the bot. The bot will ignore dem messages
-    bot.blacklisted_users = []
+    bot.blacklisted_users = [377585801258598410,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+                             293533150204657675,  # Admin on the previous guy server
+                             386516042882482177,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+                             330841376474267651,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+                             ]
 
     # > Events Settings < #
     bot.event_list = [
