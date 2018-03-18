@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-15 13:52+0000\n"
+"POT-Creation-Date: 2018-03-17 01:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -271,25 +271,25 @@ msgstr "Objekt: pansargenomträngande ammunition"
 msgid "Effect: wet"
 msgstr "Effekt: blöt"
 
-#: cogs/shop.py:70
+#: cogs/shop.py:73
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
 ":money_with_wings_ Du lade till ett skott i ditt vapen för 7 "
 "erfarenhetspoäng"
 
-#: cogs/shop.py:73
+#: cogs/shop.py:76
 msgid ":champagne: Your magazine is full!"
 msgstr ":champagne: Ditt magasin är full!"
 
-#: cogs/shop.py:92
+#: cogs/shop.py:95
 msgid ":champagne: You have enough magazines!"
 msgstr ":champagne: Du har tillräckligt med magasin!"
 
-#: cogs/shop.py:500
+#: cogs/shop.py:503
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/shop.py:503
+#: cogs/shop.py:506
 msgid " < "
 msgstr "<"
 
@@ -366,46 +366,46 @@ msgid ""
 msgstr ""
 "Det var nära, du dödade nästan ankan, men andra jägaren fick ankan först!"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Hello world"
 msgstr "Hej världen"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "How are you today?"
 msgstr "Hur mår du idag ?"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old shoe."
 msgstr "En gammal sko"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a dog dirt."
 msgstr "en hund smuts"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "Donald's beret."
 msgstr "Donald's basker"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "a fish."
 msgstr "en fisk"
 
-#: cogs/helpers/config.py:162
+#: cogs/helpers/config.py:167
 msgid "public danger"
 msgstr "Offentliga fara"
 
-#: cogs/helpers/config.py:170
+#: cogs/helpers/config.py:175
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:178
+#: cogs/helpers/config.py:183
 msgid "noob"
 msgstr "nybörjare"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:199
 msgid "duck misser"
 msgstr "Anka missare"
 
-#: cogs/helpers/config.py:210
+#: cogs/helpers/config.py:215
 msgid "duck hater"
 msgstr "Anka hatare"

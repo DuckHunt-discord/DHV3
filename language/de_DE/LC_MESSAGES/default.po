@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-15 13:52+0000\n"
+"POT-Creation-Date: 2018-03-17 01:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: cogs/admin_commands.py:26
+#: cogs/admin_commands.py:25
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Fertig, Benutzer wurde gebannt. :gun:"
 
-#: cogs/admin_commands.py:38
+#: cogs/admin_commands.py:37
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Fertig, Benutzer wurde entbannt. :eyes:"
 
-#: cogs/admin_commands.py:213
+#: cogs/admin_commands.py:207
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ":duck: Autorisiert, den VIP Status zu vergeben."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:209
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Du musst ein Eigentümer sein, um diesen Status zu vergeben."
 
-#: cogs/admin_commands.py:218 cogs/admin_commands.py:229
+#: cogs/admin_commands.py:212 cogs/admin_commands.py:223
 msgid ":x: Incorrect value."
 msgstr ":x: Falscher Wert"
 
@@ -307,48 +307,48 @@ msgstr "Objekt: Panzerbrechende Munition"
 msgid "Effect: wet"
 msgstr "Effekt: Nässe"
 
-#: cogs/shop.py:37
+#: cogs/shop.py:40
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
 "[argument if applicable]`"
 msgstr ""
 ":x: Falsche Syntax: `!shop [list/Itemnummer] [Argument falls erforderlich]`"
 
-#: cogs/shop.py:70
+#: cogs/shop.py:73
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
 ":money_with_wings: Du hast für 7 exp eine Kugel für deine Waffe gekauft."
 
-#: cogs/shop.py:73
+#: cogs/shop.py:76
 msgid ":champagne: Your magazine is full!"
 msgstr ":champagne: Dein Magazin ist voll!"
 
-#: cogs/shop.py:92
+#: cogs/shop.py:95
 msgid ":champagne: You have enough magazines!"
 msgstr ":champagne: Du hast genug Magazine!"
 
-#: cogs/shop.py:110
+#: cogs/shop.py:113
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Du hast vorerst genug panzerbrechende Munition!"
 
-#: cogs/shop.py:128
+#: cogs/shop.py:131
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Du hast jetzt vorerst genug Explosionsmunition!"
 
-#: cogs/shop.py:147
+#: cogs/shop.py:150
 msgid ""
 ":champagne: You already have your weapon, what are you trying to buy? :p"
 msgstr ""
 ":champagner: Du hast deine Waffe schon, was versuchst du zu kaufen? :P"
 
-#: cogs/shop.py:166
+#: cogs/shop.py:169
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
 msgstr ""
 ":champagne: Deine Waffe ist perfekt geölt, du brauchst nicht noch mehr Fett."
 
-#: cogs/shop.py:201
+#: cogs/shop.py:204
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will "
 "prevent any waste of ammo for a day. Cost: 15 exp points."
@@ -357,11 +357,11 @@ msgstr ""
 "hinzugefügt, er wird dich davor bewahren für den nächsten Tag Munition zu "
 "verschwenden. Kosten: 15 Erfahrungspunkte."
 
-#: cogs/shop.py:203
+#: cogs/shop.py:206
 msgid ":champagne: You already have an infrared detector on your weapon."
 msgstr ":champagne: Du hast schon einen Infrarot-Detektor auf deiner Waffe."
 
-#: cogs/shop.py:266
+#: cogs/shop.py:269
 msgid ""
 ":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
 "immune to sunlight for a day."
@@ -369,7 +369,7 @@ msgstr ""
 ":money_with_wings: Du hast für 5 Erfahrungspunkte eine Sonnenbrille gekauft! "
 "Du bist somit immune für Sonnenlicht für einen Tag!"
 
-#: cogs/shop.py:270
+#: cogs/shop.py:273
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
 "being that you're much swagger now. :cool:"
@@ -377,7 +377,7 @@ msgstr ""
 ":money_with_wings: Du hast eine brandneue Sonnenbrille gekauft, der einzige "
 "Sinn dahinter ist, dass du jetzt noch cooler bist. :cool:"
 
-#: cogs/shop.py:289
+#: cogs/shop.py:292
 msgid ""
 ":money_with_wings: You bought brand new clothes, the only point of it being "
 "that you're much swagger now. :cool:"
@@ -385,7 +385,7 @@ msgstr ""
 ":money_with_wings: Du hast brandneue Kleidung gekauft, der einzige Sinn "
 "dahinter ist, dass du jetzt noch cooler bist. :cool:"
 
-#: cogs/shop.py:324
+#: cogs/shop.py:327
 msgid ""
 ":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
 "accuracy!"
@@ -393,11 +393,11 @@ msgstr ""
 ":money_with_wings: Du hast {mention} geblendet! Sein/Ihr nächster Schuss hat "
 "50% weniger genauigkeit!"
 
-#: cogs/shop.py:339
+#: cogs/shop.py:342
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Du hast Sand auf {mention}s Waffe geworfen! "
 
-#: cogs/shop.py:353
+#: cogs/shop.py:356
 msgid ""
 ":money_with_wings: You dropped a bucket full of water on {target}, forcing "
 "them to wait 1 hour for their clothes to dry before they can return hunting."
@@ -406,11 +406,11 @@ msgstr ""
 "zwingt eine Stunde zu warten weil ihre/seine Kleidung trocknen muss, bevor "
 "er wieder jagen gehen kann."
 
-#: cogs/shop.py:379
+#: cogs/shop.py:382
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: Die Waffe von {target} ist bereits sabotiert!"
 
-#: cogs/shop.py:442
+#: cogs/shop.py:445
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
@@ -418,7 +418,7 @@ msgstr ""
 ":money_with_wings: Die Enten schlafen im Moment, deine Atrappe wird also "
 "wahrscheinlich nicht funktionieren."
 
-#: cogs/shop.py:446
+#: cogs/shop.py:449
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
@@ -426,7 +426,7 @@ msgstr ""
 ":money_with_wings: Eine Ente wird in den nächsten 10 Minuten in diesem Kanal "
 "auftauchen, da {mention} sie für 8 exp mit einem Köder angelockt hat!"
 
-#: cogs/shop.py:469
+#: cogs/shop.py:472
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 more seconds before leaving for the rest of the day!"
@@ -434,11 +434,11 @@ msgstr ""
 ":money_with_wings: Du hast etwas Brot in den Kanal gelegt um Enten "
 "anzuziehen. Sie werden heute 20 Sekunden länger bleiben!"
 
-#: cogs/shop.py:500
+#: cogs/shop.py:503
 msgid " < *BZAACK*"
 msgstr " < *BZAACK*"
 
-#: cogs/shop.py:503
+#: cogs/shop.py:506
 msgid " < "
 msgstr " < "
 
@@ -529,127 +529,127 @@ msgstr ""
 "Das war knapp, du hättest fast die Ente getötet, aber der andere Jäger sie "
 "zuerst erledigt! [verfehlt: -1 xp]"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "*cries*"
 msgstr "*heult*"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Hello world"
 msgstr "Hallo Welt"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "How are you today?"
 msgstr "Wie geht's dir heute?"
 
-#: cogs/helpers/config.py:52
+#: cogs/helpers/config.py:53
 msgid "Please don't kill me..."
 msgstr "Bitte bring mich nicht um..."
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Die Ente ist weggewatschelt  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:56
+#: cogs/helpers/config.py:57
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Die Ente wollte nicht erschossen werden.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a rubber ducky."
 msgstr "ein Gummientchen"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a chewed chewing gum."
 msgstr "ein gekauter Kaugummi."
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old shoe."
 msgstr "einen alten Schuh."
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a used condom."
 msgstr "ein benutztes Kondom"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "a broken mirror."
 msgstr "ein zerbrochener Spiegel"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old hunting knife."
 msgstr "ein altes Jagdmesser."
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:61
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "eine alte Aufnahme: http://tinyurl.com/zbejktu"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "bushes."
 msgstr "Büsche"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:62
 msgid "a fish."
 msgstr "Ein Fisch"
 
-#: cogs/helpers/config.py:162
+#: cogs/helpers/config.py:167
 msgid "public danger"
 msgstr "Öffentliche Gefahr"
 
-#: cogs/helpers/config.py:170
+#: cogs/helpers/config.py:175
 msgid "tourist"
 msgstr "Tourist"
 
-#: cogs/helpers/config.py:178
+#: cogs/helpers/config.py:183
 msgid "noob"
 msgstr "Grünschnabel"
 
-#: cogs/helpers/config.py:186
+#: cogs/helpers/config.py:191
 msgid "trainee"
 msgstr "Praktikant"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:207
 msgid "member of the Comitee Against Ducks"
 msgstr "Mitglied des Komitees gegen Enten"
 
-#: cogs/helpers/config.py:210
+#: cogs/helpers/config.py:215
 msgid "duck hater"
 msgstr "Entenhasser"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "duck pest"
 msgstr "Entenpest"
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:239
 msgid "duck plucker"
 msgstr "Entenzerrupfer"
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:247
 msgid "hunter"
 msgstr "Jäger"
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:255
 msgid "inside out duck turner"
 msgstr "Enten-auf-links-Dreher"
 
-#: cogs/helpers/config.py:258
+#: cogs/helpers/config.py:263
 msgid "duck clobber"
 msgstr "Entenklopper"
 
-#: cogs/helpers/config.py:274
+#: cogs/helpers/config.py:279
 msgid "duck eater"
 msgstr "Entenfresser"
 
-#: cogs/helpers/config.py:306
+#: cogs/helpers/config.py:311
 msgid "duck killer"
 msgstr "Entenmörder"
 
-#: cogs/helpers/config.py:314
+#: cogs/helpers/config.py:319
 msgid "duck skinner"
 msgstr "Entenhäuter"
 
-#: cogs/helpers/config.py:498
+#: cogs/helpers/config.py:503
 msgid "old noob"
 msgstr "alter Anfänger"
 
