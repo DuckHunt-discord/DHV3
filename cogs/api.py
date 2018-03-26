@@ -104,6 +104,22 @@ class Api:
         return web.json_response(res)
 
 
+    @routes.get('/latency')
+    async def latency(self):
+        """
+        A simple API request to get the memory usage of the bot, in seconds.
+        This number is the time left unused in the mainloop. It should be as close as possible to 1 second
+
+        :return: [current milis in unix (epoch) time, time left, discord_ping]
+        """
+        bot.logger.debug("[API] Request for latency!")
+
+        res = [int(time.time() * 1000), bot.loop_latency, max(0,bot.latency)]
+
+        return web.json_response(res)
+
+
+
 
     async def run(self):
         self.app.add_routes(routes)

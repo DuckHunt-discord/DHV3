@@ -288,7 +288,8 @@ async def background_loop(bot):
                         pass
 
             now = time.time()
-            bot.logger.debug("On schedule : " + str(last_iter + 1 - now))
+            #bot.logger.debug("On schedule : " + str(last_iter + 1 - now))
+            bot.loop_latency = last_iter + 1 - now
 
             if last_iter + 1 <= now:
                 if last_iter + 1 <= now - 5:

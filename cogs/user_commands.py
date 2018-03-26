@@ -379,7 +379,16 @@ class User:
 
             # Don't return right now, we need to do bushes
         else:
-            await self.sendBangMessage(ctx, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language).format(**{"vie": vieenmoins}))
+            if await get_pref(guild, "show_super_ducks_life"):
+                await self.sendBangMessage(ctx, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} ({current_life} / {max_life})]", language)
+                                           .format(
+                    **{
+                        "vie":vieenmoins,
+                        "current_life": duck.life,
+                        "max_life": duck.starting_life
+                    }))
+            else:
+                await self.sendBangMessage(ctx, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language).format(**{"vie": vieenmoins}))
             await add_to_stat(channel, author, "shoots_harmed_duck", 1)
 
             return

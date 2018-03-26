@@ -518,6 +518,8 @@ def config(bot):
     bot.ducks_spawned = []
     bot.ducks_planning = {}
 
+    bot.loop_latency = 1
+
 
     import datetime
     # Set the bot start time
