@@ -267,6 +267,10 @@ class Database:
             value = int(value)
         elif type_.startswith("tinyint(1)"):
             value = self.bool_(value)
+        elif type_.startswith("tinyint"):
+            value = int(value)
+        elif type_.startswith("smallint"):
+            value = int(value)
         elif type_.startswith("float"):
             value = float(value)
         elif type_.startswith("varchar") or type_.startswith("char"):

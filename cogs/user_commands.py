@@ -87,7 +87,7 @@ class User:
         await self.bot.send_message(ctx=ctx, message=_("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: {chargeurs_actuels}/{chargeurs_max}", language).format(
             **{"greet": greet, "balles_actuelles": balles, "balles_max": balles_max, "chargeurs_actuels": chargeurs, "chargeurs_max": chargeurs_max}))
 
-    @commands.command(aliases=["pan", "shoot", "bong"])
+    @commands.command(aliases=["pan", "pew", "pang", "shoot", "bong", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
     async def bang(self, ctx, target:discord.Member = None):

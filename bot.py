@@ -241,8 +241,9 @@ cogs = ['cogs.admin_commands',
         'cogs.setup_wizzard',
         'cogs.shop',
         'cogs.superadmin_commands',
-        'cogs.tests',
-        'cogs.user_commands']
+        'cogs.user_commands',
+        'cogs.api'  # This must be the last to run, comment if you don't need it
+        ]
 
 for extension in cogs:
     try:

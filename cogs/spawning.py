@@ -43,7 +43,7 @@ class Duck:
     def __str__(self):
         now = int(time.time())
         kind = "Super duck" if self.is_super_duck else "Duck"
-        return f"{kind} spawned {now - self.spawned_at} seconds ago. " \
+        return f"{kind} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name} " \
                f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
 
 
@@ -54,15 +54,18 @@ async def make_all_ducks_leave(bot):
         _ = bot._
         language = await bot.db.get_pref(canard.channel.guild, "language")
         bot.logger.debug(f"Force-leaving of {canard}")
-        try:
-            await bot.send_message(where=canard.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language=language), return_message=True)
-        except:
-            pass
+        if canard in bot.ducks_spawned:
+            try:
+                await bot.send_message(where=canard.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language=language), return_message=True)
+            except:
+                pass
 
-        try:
-            bot.ducks_spawned.remove(canard)
-        except:
-            pass
+            try:
+                bot.ducks_spawned.remove(canard)
+            except:
+                pass
+        else:
+            bot.logger.debug(f"{canard} alredy left :)")
 
 
 async def get_number_of_ducks(total_ducks):

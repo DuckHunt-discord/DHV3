@@ -31,7 +31,7 @@ class Experience:
     @commands.group()
     @checks.is_channel_enabled()
     @checks.had_giveback()
-    @commands.cooldown(5, 30, BucketType.user)
+    @commands.cooldown(10, 20, BucketType.user)
     async def shop(self, ctx):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")

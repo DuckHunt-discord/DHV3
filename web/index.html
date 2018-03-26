@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DuckHunt analytics and data</title>
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/highcharts/highcharts.js"></script>
+    <script src="js/highcharts/themes/grid-light.js"></script>
+
+</head>
+<body>
+<div id="ducks_spawned" style="width:100%; height:33vh; min-height: 300px;"></div>
+<div style="width:100%; height:33vh; min-height: 300px; display: flex; justify-content: space-between;">
+    <div id="guild_count" style="width:30%; height: 100%;"></div>
+    <div id="enabled_channels_count" style="width:30%; height: 100%;"></div>
+    <div id="user_count" style="width:30%; height: 100%;"></div>
+</div>
+<div id="memory_usage" style="width:100%; height:33vh;"></div>
+
+<script>
+    var ducks_spawned; // global
+    var guild_count; // global
+    var enabled_channels_count; // global
+    var user_count; // global
+    var memory_usage; // global
+
+    /**
+     * Request data from the server, add it to the graph and set a timeout
+     * to request again
+     */
+    // for real time updates
+    function ducks_spawned_update() {
+        $.ajax({
+            url: 'live-ducks.php?endpoint=ducks_spawned',
+            success: function (point) {
+                var series = ducks_spawned.series[0],
+                    shift = series.data.length > 100; // shift if the series is
+                // longer than 20
+
+                // add the point
+                // console.log(point, [point[0], point[1]]);
+
+
+                ducks_spawned.series[0].addPoint([point[0], point[1]], false, shift);
+                ducks_spawned.series[1].addPoint([point[0], point[2]], true, shift);
+
+
+                // call it again after one second
+                setTimeout(ducks_spawned_update, 5000);
+            },
+            cache: false
+        });
+    }
+    function guild_count_update() {
+        $.ajax({
+            url: 'live-ducks.php?endpoint=guild_count',
+            success: function (point) {
+                var series = guild_count.series[0];//,
+                //shift = series.data.length > 100;
+
+
+                guild_count.series[0].addPoint([point[0], point[1]], true, false);
+
+                setTimeout(guild_count_update, 60000 * 5);
+            },
+            cache: false
+        });
+
+    }
+    function enabled_channels_count_update() {
+        $.ajax({
+            url: 'live-ducks.php?endpoint=enabled_channels_count',
+            success: function (point) {
+                var series = enabled_channels_count.series[0];//,
+                //shift = series.data.length > 100;
+
+
+                enabled_channels_count.series[0].addPoint([point[0], point[1]], true, false);
+
+                setTimeout(enabled_channels_count_update, 60000 * 3);
+            },
+            cache: false
+        });
+
+    }
+    function user_count_update() {
+        $.ajax({
+            url: 'live-ducks.php?endpoint=user_count',
+            success: function (point) {
+                var series = user_count.series[0];//,
+                //shift = series.data.length > 100;
+
+
+                user_count.series[0].addPoint([point[0], point[1]], true, false);
+
+                setTimeout(user_count_update, 60000);
+            },
+            cache: false
+        });
+
+    }
+    function memory_usage_update() {
+        $.ajax({
+            url: 'live-ducks.php?endpoint=memory_usage',
+            success: function (point) {
+                var series = memory_usage.series[0];//,
+                //shift = series.data.length > 100;
+
+
+                memory_usage.series[0].addPoint([point[0], point[1]], true, false);
+
+                setTimeout(memory_usage_update, 1000);
+            },
+            cache: false
+        });
+
+    }
+
+
+
+    // Generate graphs
+    $(document).ready(function () {
+        Highcharts.setOptions({
+            time: {
+                useUTC: false,
+                zoomType: 'xy'
+            },
+            credits: {
+                enabled: false
+            },
+            yAxis: {
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    margin: 20
+                }
+            },
+            xAxis: {
+                tickPixelInterval: 150,
+                maxZoom: 20 * 1000
+            }
+        });
+
+        // Ducks Spawned
+        ducks_spawned = new Highcharts.Chart({
+
+            chart: {
+                renderTo: 'ducks_spawned',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: ducks_spawned_update
+                }
+
+            },
+
+
+            title: {
+                text: 'Number of ducks present on channels'
+            },
+
+            xAxis: {
+                type: 'datetime'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Number of ducks'
+                }
+            },
+
+            series: [{
+                name: 'Normal ducks',
+                data: []
+            }, {
+                name: 'Super ducks',
+                data: []
+            }]
+        });
+
+        // Guild Count
+        guild_count = new Highcharts.Chart({
+            chart: {
+                renderTo: 'guild_count',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: guild_count_update
+                }
+
+            },
+
+
+            title: {
+                text: 'Number of guilds the bot can see'
+            },
+
+            xAxis: {
+                type: 'datetime'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Number of guilds'
+                }
+            },
+
+            series: [{
+                name: 'Guilds',
+                data: []
+            }]
+        });
+
+        // Load historical values
+        $.get('guild_count.csv', function (data) {
+            // Split the lines
+            var lines = data.split('\n');
+
+            // Iterate over the lines and add categories or series
+            $.each(lines.slice(0, -1), function (lineNo, line) {
+                var items = line.split(',');
+
+                // header line containes categories
+                if (lineNo == 0) {
+                }
+
+
+                // the rest of the lines contain data with their name in the first
+                // position
+                else {
+                    guild_count.series[0].addPoint([Number(items[0]), Number(items[1])], false, false);
+
+                }
+
+            });
+            guild_count.redraw();
+            // Create the chart
+        });
+
+        // Enabled Channels Count
+        enabled_channels_count = new Highcharts.Chart({
+
+            chart: {
+                renderTo: 'enabled_channels_count',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: enabled_channels_count_update
+                }
+            },
+            title: {
+                text: 'Number of channels that are enabled on the bot'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Number of channels'
+                }
+            },
+            series: [{
+                name: 'Channels',
+                data: []
+            }]
+        });
+        // Load historical values
+        $.get('enabled_channels_count.csv', function (data) {
+            // Split the lines
+            var lines = data.split('\n');
+
+            // Iterate over the lines and add categories or series
+            $.each(lines.slice(0, -1), function (lineNo, line) {
+                var items = line.split(',');
+
+                // header line containes categories
+                if (lineNo == 0) {
+                }
+
+
+                // the rest of the lines contain data with their name in the first
+                // position
+                else {
+                    enabled_channels_count.series[0].addPoint([Number(items[0]), Number(items[1])], false, false);
+
+                }
+
+            });
+            enabled_channels_count.redraw();
+            // Create the chart
+        });
+
+
+        // User Count
+        user_count = new Highcharts.Chart({
+
+            chart: {
+                renderTo: 'user_count',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: user_count_update
+                }
+            },
+            title: {
+                text: 'Number of users the bot can see'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Number of users'
+                }
+            },
+            series: [{
+                name: 'Users',
+                data: []
+            }]
+        });
+        // Load historical values
+        $.get('user_count.csv', function (data) {
+            // Split the lines
+            var lines = data.split('\n');
+
+            // Iterate over the lines and add categories or series
+            $.each(lines.slice(0, -1), function (lineNo, line) {
+                var items = line.split(',');
+
+                // header line containes categories
+                if (lineNo == 0) {
+                }
+
+
+                // the rest of the lines contain data with their name in the first
+                // position
+                else {
+                    user_count.series[0].addPoint([Number(items[0]), Number(items[1])], false, false);
+
+                }
+
+            });
+            user_count.redraw();
+            // Create the chart
+        });
+
+
+        // Enabled Channels Count
+        memory_usage = new Highcharts.Chart({
+
+            chart: {
+                renderTo: 'memory_usage',
+                defaultSeriesType: 'spline',
+                events: {
+                    load: memory_usage_update
+                }
+            },
+
+            title: {
+                text: 'Memory used by the bot'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'MB of memory used'
+                }
+            },
+            series: [{
+                name: 'Memory',
+                data: []
+            }]
+        });
+        // Load historical values
+        $.get('memory_usage.csv', function (data) {
+            // Split the lines
+            var lines = data.split('\n');
+
+            // Iterate over the lines and add categories or series
+            $.each(lines.slice(0, -1), function (lineNo, line) {
+                var items = line.split(',');
+
+                // header line containes categories
+                if (lineNo == 0) {
+                }
+
+
+                // the rest of the lines contain data with their name in the first
+                // position
+                else {
+                    memory_usage.series[0].addPoint([Number(items[0]), Number(items[1])], false, false);
+
+                }
+
+            });
+            memory_usage.redraw();
+            // Create the chart
+        });
+
+
+
+    });
+
+</script>
+
+</body>
+</html>

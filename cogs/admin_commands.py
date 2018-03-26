@@ -154,7 +154,7 @@ class Admin:
 
     @commands.group()
     @checks.is_channel_enabled()
-    @checks.is_server_admin()
+
     async def settings(self, ctx):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
@@ -165,7 +165,7 @@ class Admin:
     @settings.command(name='view')
     @commands.cooldown(5, 20, BucketType.guild)
     async def settings_get(self, ctx, pref: str):
-        """!settings set"""
+        """!settings get"""
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
@@ -178,6 +178,7 @@ class Admin:
 
     @settings.command(name='set')
     @commands.cooldown(5, 20, BucketType.guild)
+    @checks.is_server_admin()
     async def settings_set(self, ctx, pref: str, value: str):
         """!settings set"""
         _ = self.bot._;
