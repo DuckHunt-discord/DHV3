@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-26 06:25+0000\n"
+"POT-Creation-Date: 2018-03-26 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1018,7 +1018,13 @@ msgid ""
 "*COUAC*   {exp}"
 msgstr ""
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:383
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+
+#: cogs/user_commands.py:391
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
