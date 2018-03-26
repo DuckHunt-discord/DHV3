@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-24 23:44+0000\n"
+"POT-Creation-Date: 2018-03-26 06:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,7 @@ msgid ""
 "[view/set/reset/list/modified] [setting if applicable]`"
 msgstr ""
 
-#: cogs/admin_commands.py:173 cogs/admin_commands.py:187
+#: cogs/admin_commands.py:173 cogs/admin_commands.py:188
 msgid "<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
 msgstr ""
 
@@ -94,36 +94,36 @@ msgstr ""
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:197
+#: cogs/admin_commands.py:198
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
 
-#: cogs/admin_commands.py:199
+#: cogs/admin_commands.py:200
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at "
 "`{max}` ducks per day."
 msgstr ""
 
-#: cogs/admin_commands.py:207
+#: cogs/admin_commands.py:208
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ""
 
-#: cogs/admin_commands.py:209
+#: cogs/admin_commands.py:210
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
-#: cogs/admin_commands.py:212 cogs/admin_commands.py:223
+#: cogs/admin_commands.py:213 cogs/admin_commands.py:224
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/admin_commands.py:219
+#: cogs/admin_commands.py:220
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:244
+#: cogs/admin_commands.py:245
 msgid ""
 "The list of preferences is available on our new website: "
 "https://duckhunt.me/bot-settings/"
