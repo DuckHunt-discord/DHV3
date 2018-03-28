@@ -276,7 +276,7 @@ async def background_loop(bot):
                     logger.debug(f"A duck is leaving : {duck}")
 
                     try:
-                        await duck.channel.send(_(random.choice(bot.canards_bye), language))
+                        await bot.send_message(where=duck.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language))
                     except Exception as e:
                         logger.debug(f"I couldn't get a duck to leave : {duck} failed with {e}")
 

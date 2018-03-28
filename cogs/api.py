@@ -87,7 +87,6 @@ class Api:
         return web.json_response(res)
 
 
-
     @routes.get('/memory_usage')
     async def memory_usage(self):
         """

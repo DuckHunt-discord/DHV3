@@ -95,7 +95,7 @@ def config(bot):
     bot.blacklisted_users = [377585801258598410,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
                              293533150204657675,  # Admin on the previous guy server
                              386516042882482177,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
-                             330841376474267651,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+                             # Was sorry so unbanned |  330841376474267651,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
                              ]
 
     # > Events Settings < #
