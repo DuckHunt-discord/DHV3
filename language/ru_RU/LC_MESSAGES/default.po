@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-18 14:52+0000\n"
+"POT-Creation-Date: 2018-03-26 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:87
+msgid ":x: A required argument is missing."
+msgstr ": x: Отсутствует требуемый аргумент."
 
 #: cogs/experience_related_commands.py:25
 msgid ""
@@ -62,6 +66,15 @@ msgstr "{dans} часов"
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
+#: cogs/meta.py:34
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"Етот бот часта перезагружается для обновления. Не бойтис, оно роботоет 99. "
+"8% времени."
+
 #: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
 msgstr "Очков опыта"
@@ -89,6 +102,14 @@ msgstr "Текущий уровень"
 #: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
 msgstr "Точность"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr " "
 
 #: cogs/shop.py:113
 msgid ":champagne: You have enough AP ammo for now!"

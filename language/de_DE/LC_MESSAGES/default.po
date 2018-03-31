@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-18 14:52+0000\n"
+"POT-Creation-Date: 2018-03-26 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,15 +25,15 @@ msgstr ":ok: Fertig, Benutzer wurde gebannt. :gun:"
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Fertig, Benutzer wurde entbannt. :eyes:"
 
-#: cogs/admin_commands.py:207
+#: cogs/admin_commands.py:208
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ":duck: Autorisiert, den VIP Status zu vergeben."
 
-#: cogs/admin_commands.py:209
+#: cogs/admin_commands.py:210
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Du musst ein Eigentümer sein, um diesen Status zu vergeben."
 
-#: cogs/admin_commands.py:212 cogs/admin_commands.py:223
+#: cogs/admin_commands.py:213 cogs/admin_commands.py:224
 msgid ":x: Incorrect value."
 msgstr ":x: Falscher Wert"
 

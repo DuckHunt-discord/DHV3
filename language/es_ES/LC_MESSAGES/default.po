@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-03-18 14:52+0000\n"
+"POT-Creation-Date: 2018-03-26 18:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,7 +103,7 @@ msgstr ""
 "reset/list/modified] (ver/configurar/reiniciar/lista/modificado) [setting if "
 "applicable] (ajuste si es aplicable)`"
 
-#: cogs/admin_commands.py:173 cogs/admin_commands.py:187
+#: cogs/admin_commands.py:173 cogs/admin_commands.py:188
 msgid ""
 "<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
 msgstr ""
@@ -113,7 +113,7 @@ msgstr ""
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} está configurado en `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:197
+#: cogs/admin_commands.py:198
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -121,25 +121,34 @@ msgstr ""
 "Pasas por alto la cantidad máxima de patos por día dado que eres el "
 "propietario del bot. Habrían sido `{max}`. "
 
-#: cogs/admin_commands.py:207
+#: cogs/admin_commands.py:200
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Estás superando el límite máximo de patos por día estando en un servidor VIP."
+" Por favor no abuses de eso. Para que sepas, "
+
+#: cogs/admin_commands.py:208
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ":pato: ¡Autorizado para establecer el estado VIP!"
 
-#: cogs/admin_commands.py:209
+#: cogs/admin_commands.py:210
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: No estás autorizado para establecer el estado VIP! Usted no es uno de "
 "los dueños del bot."
 
-#: cogs/admin_commands.py:212 cogs/admin_commands.py:223
+#: cogs/admin_commands.py:213 cogs/admin_commands.py:224
 msgid ":x: Incorrect value."
 msgstr ":x: Valor incorrecto"
 
-#: cogs/admin_commands.py:219
+#: cogs/admin_commands.py:220
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} se ha configurado a `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:244
+#: cogs/admin_commands.py:245
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -381,7 +390,7 @@ msgstr "Cantidad de disparos"
 
 #: cogs/scores.py:310
 msgid "Shots without ducks"
-msgstr "Tiros sin patos"
+msgstr "Tiros sin patos cerca "
 
 #: cogs/scores.py:311
 msgid "Shots that frightened a duck"
@@ -1010,6 +1019,14 @@ msgstr ""
 ":money_with_wings: Has Deslumbrado a {mention}! ¡Su próximo tiro tendrá un "
 "50% menos de precisión!"
 
+#: cogs/shop.py:328 cogs/shop.py:343
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr ""
+"Mencionar a alguien para esto no es necesario. O lo harías atrás de sus "
+"espaldas avisándoles de que estás ahí?"
+
 #: cogs/shop.py:342
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Arrojaste arena en el arma de {mention} ;)"
@@ -1267,7 +1284,15 @@ msgstr ""
 "{supercanards} fueron super-patos) asesinados en #{channel}.  \\ _X < * CUAC "
 "* {exp}"
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:383
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+":gun: El pato sobrevivió, Inténtalo otra vez! *SUPER PATO DETECTADO* [Puntos "
+"de Vida: -{vie} ({current_life} / {max_life})]"
+
+#: cogs/user_commands.py:391
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
