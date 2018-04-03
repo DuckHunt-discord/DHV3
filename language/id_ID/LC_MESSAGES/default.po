@@ -1,0 +1,71 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-03-31 11:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:87
+msgid ":x: A required argument is missing."
+msgstr ": x: Sebuah argumen yang diperlukan tidak ada."
+
+#: bot.py:90
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Anda tidak punya cukup exp untuk ini"
+
+#: bot.py:93
+msgid ":x: You are not a server admin"
+msgstr ":x: Anda bukan admin server"
+
+#: bot.py:96
+msgid ":x: You are not a super admin."
+msgstr ":x: Anda bukan admin super."
+
+#: bot.py:97
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Perintah ini dicadangkan bagi pemilik bot. Jika Anda pikir ini sebuah "
+"kesalahan, harap hubungi pemilik saya di Server Dukungan DuckHunt (lihat "
+"'dh!help`)."
+
+#: bot.py:110
+msgid ":bulb: HINT: "
+msgstr ":bulb: PETUNJUK:"
+
+#: cogs/admin_commands.py:25
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Beres, pengguna sudah di-ban.:gun:"
+
+#: cogs/admin_commands.py:37
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Beres, pengguna bebas dari ban. :eyes;"
+
+#: cogs/admin_commands.py:63
+msgid ""
+"<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
+"Have fun!"
+msgstr ""
+"Beres <:DuckHug:361969688957157378>Beres, kanal {kanal} ditambahkan to the "
+"game! Bersenang-senanglah!"
+
+#: cogs/admin_commands.py:79
+msgid ""
+"<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. "
+"Bye!"
+msgstr ""
+"<:DuckHug:361969688957157378> Beres, kanal {kanal} dihapus dari permainan. "
+"Daah!"
