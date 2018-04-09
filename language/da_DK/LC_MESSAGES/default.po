@@ -19,102 +19,100 @@ msgstr ""
 
 #: bot.py:87
 msgid ":x: A required argument is missing."
-msgstr ": x: Sebuah argumen yang diperlukan tidak ada."
+msgstr ":x: Et krævende argument mangler."
 
 #: bot.py:90
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: Kamu tidak punya cukup exp untuk ini"
+msgstr ":x: Du har ikke nok exp til dette"
 
 #: bot.py:93
 msgid ":x: You are not a server admin"
-msgstr ":x: Kamu bukan admin server"
+msgstr ":x: Du er ikke en serveradministrator"
 
 #: bot.py:96
 msgid ":x: You are not a super admin."
-msgstr ":x: Kamu bukan admin super."
+msgstr ":x: Du er ikke en superadministrator."
 
 #: bot.py:97
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"Perintah ini dicadangkan bagi pemilik bot. Jika kamu pikir ini sebuah "
-"kesalahan, harap hubungi pemilik saya di Server Dukungan DuckHunt (lihat "
-"'dh!help`)."
+"Denne kommando er forbeholdt botejerene. Hvis du mener, at dette er en fejl, "
+"bedes du kontakte min ejer på DuckHunt Support Server (se `dh!help`)."
 
 #: bot.py:110
 msgid ":bulb: HINT: "
-msgstr ":bulb: PETUNJUK:"
+msgstr ":bulb: HINT:"
 
 #: cogs/admin_commands.py:25
 msgid ":ok: Done, user banned. :gun:"
-msgstr ":ok: Beres, pengguna sudah di-ban.:gun:"
+msgstr ":ok: Udført, bruger bandlyst :gun:"
 
 #: cogs/admin_commands.py:37
 msgid ":ok: Done, user unbanned. :eyes:"
-msgstr ":ok: Beres, pengguna bebas dari ban. :eyes;"
+msgstr ":ok: Udført, bruger ikke bandlyst længere :eyes:"
 
 #: cogs/admin_commands.py:63
 msgid ""
 "<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
 "Have fun!"
 msgstr ""
-"<:DuckHug:361969688957157378> Beres, kanal {kanal} ditambahkan ke permainan! "
-"Bersenang-senanglah!"
+"<:DuckHug:361969688957157378> Udført, kanal {channel} tilføjet til spillet! "
+"Hav det sjovt!"
 
 #: cogs/admin_commands.py:79
 msgid ""
 "<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. "
 "Bye!"
 msgstr ""
-"<:DuckHug:361969688957157378> Beres, kanal {kanal} dihapus dari permainan. "
-"Daah!"
+"<:DuckHug:361969688957157378> Udført, kanal {channel} fjernet fra spillet. "
+"Farvel!"
 
 #: cogs/admin_commands.py:88
 msgid "<:DuckHug:361969688957157378> {admin} added as an admin to the guild!"
 msgstr ""
-"<:DuckHug:361969688957157378> {admin} sudah ditambahkan sebagai admin "
-"serikat!"
+"<:DuckHug:361969688957157378>{admin} tilføjet som administrator til guilden!"
 
 #: cogs/admin_commands.py:96
 msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
 msgstr ""
-"<:DuckHug:361969688957157378> {admin} sudah dihapuskan dari admin serikat."
+"<:DuckHug:361969688957157378>{admin} fjernet fra guild administratorerne."
 
 #: cogs/admin_commands.py:125 cogs/admin_commands.py:151
 msgid "Done. User removed from the database, if it was in."
-msgstr "Beres. Pengguna disingkirkan dari database, jika ada di dalam sana."
+msgstr "Udført. Bruger fjernet fra databasen, hvis den var i."
 
 #: cogs/admin_commands.py:138
 msgid "Done. All the channel data was removed."
-msgstr "Beres. Semua data kanal sudah dihapus."
+msgstr "Udført. Alt kanaldata blev fjernet."
 
 #: cogs/admin_commands.py:163
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
 msgstr ""
-":x: Syntax tidak benar. Gunakan perintahnya seperti ini: `!settings[view/set/"
-"reset/list/modified] [bila pengaturan dapat diterapkan]"
+":x: Forkert syntaks. Brug kommandoen på denne måde: `!settings [view/set/"
+"reset/list/modified] [indstilling hvis relevant]`"
 
 #: cogs/admin_commands.py:173 cogs/admin_commands.py:188
 msgid ""
 "<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
 msgstr ""
-"<:blobhyperthink:357040754566103040> **ERROR:** Saya tidak tahu pengaturan "
-"ini."
+"<:blobhyperthink:357040754566103040>**FEJL:** Jeg kender ikke denne "
+"indstilling"
 
 #: cogs/admin_commands.py:176
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
-msgstr ":ok: Pengaturan {pref} ditetapkan menjadi `{value}` di serikat ini."
+msgstr ":ok: Indstillingen {pref} er sat til `{value}` på dette guild."
 
 #: cogs/admin_commands.py:198
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
-"Melewatkan pemeriksaan max_ducks_per_day sebab kamu pemilik bot. Semestinya "
-"`{max}`"
+"Omgår max_ducks_per_day tjekken fordi du er botejer. Det ville have været "
+"`{max}`."
 
 #: cogs/admin_commands.py:200
 msgid ""
@@ -122,91 +120,86 @@ msgid ""
 "don't abuse that. For information, the limit would have been set at `{max}` "
 "ducks per day."
 msgstr ""
-"Melewatkan pemeriksaan max_ducks_per_day sebab kamu ada di serikat VIP. "
-"Harap tidak menyalahgunakannya. Sebagai informasi, batas semestinya "
-"ditetapkan`{max}`bebek per hari."
+"Omgår max_ducks_per_day tjekken fordi du er i et VIP-guild. Må ikke misbruge "
+"det. Grænsen ville have været sat til `{max}` ænder pr. Dag."
 
 #: cogs/admin_commands.py:208
 msgid ":duck: Authorised to set the VIP status!"
-msgstr ":duck: Diizinkan menetapkan status VIP!"
+msgstr ":Duck: Autoriseret til at indstille VIP status!"
 
 #: cogs/admin_commands.py:210
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
-msgstr ":x: Tidak diizinkan menetapkan status VIP! Kamu bukan pemilik."
+msgstr ": x: Uautoriseret til at indstille VIP status! Du er ikke ejer."
 
 #: cogs/admin_commands.py:213 cogs/admin_commands.py:224
 msgid ":x: Incorrect value."
-msgstr ":x: Nilai tidak benar."
+msgstr ":x: Forkert værdi."
 
 #: cogs/admin_commands.py:220
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
-msgstr ""
-":ok: Pengaturan {pref} sudah di tetapkan menjadi `{value}` di serikat ini."
+msgstr ":ok: Indstillingen {pref} er sat til `{value}` på dette guild."
 
 #: cogs/admin_commands.py:245
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
 msgstr ""
-"Daftar pilihan tersedia di situs web baru kami: https://duckhunt.me/bot-"
-"settings/"
+"Listen over præferencer er tilgængelig på vores nye hjemmeside: https://"
+"duckhunt.me/bot-settings/"
 
 #: cogs/experience_related_commands.py:25
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
-"Selamat ya, kamu sudah mengirim / menerima wawasan lebih banyak daripada "
-"jumlah maksimum yang dapat saya simpan."
+"Tillykke, du sendte / gav mere erfaring end det maksimale antal jeg kan "
+"gemme."
 
 #: cogs/experience_related_commands.py:28
 msgid ":ok:, they now have {newexp} exp points!"
-msgstr ":ok: mereka sekarang memiliki {newexp} poin exp!"
+msgstr ":ok:, de har nu {newexp} exp point!"
 
 #: cogs/experience_related_commands.py:41
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
-":x: Guna mencegah penyalahgunaan, kamu tidak bisa mengirim exp bila tidak "
-"mempunyai senjata."
+":x: For at undgå misbrug kan du ikke sende exp, når du ikke har et våben."
 
 #: cogs/experience_related_commands.py:45
 msgid ":x: The exp amount needs to be positive."
-msgstr ":x: Jumlah exp haruslah positif."
+msgstr ":x: Exp-beløbet skal være positivt."
 
 #: cogs/experience_related_commands.py:64
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
-msgstr ""
-"Kamu sudah mengirim {amount} exp kepada {target} (dan membayar {taxes} pajak "
-"exp)!"
+msgstr "Du sendte {amount} exp til {target} (og betalte {tax} skat)!"
 
 #: cogs/experience_related_commands.py:67
 msgid "You don't have enough experience points"
-msgstr "Poin wawasan kamu tidak mencukupi"
+msgstr "Du har ikke nok erfaringspoint"
 
 #: cogs/experience_related_commands.py:69
 msgid ":x: Sending exp is disabled on this server"
-msgstr ":x: Mengirimkan exp dinonaktifkan di server ini"
+msgstr ":x: At sende exp er deaktiveret på denne server"
 
 #: cogs/experience_related_commands.py:77 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
-msgstr "{date} (dan {dans_jour}{dans_heures} dan {dans_minutes})"
+msgstr "{date} (i {dans_jours} {dans_heures} og {dans_minutes})"
 
 #: cogs/experience_related_commands.py:78 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
-msgstr "%m/%d pada %J:%M:%D"
+msgstr "%d/%m %H:%M:%S"
 
 #: cogs/experience_related_commands.py:78 cogs/scores.py:35
 msgid "{dans} days "
-msgstr "{dans} hari"
+msgstr "{dans} dage"
 
 #: cogs/experience_related_commands.py:79 cogs/scores.py:36
 msgid "{dans} hours"
-msgstr "{dans} jam"
+msgstr "{dans} timer"
 
 #: cogs/experience_related_commands.py:79 cogs/scores.py:37
 msgid "{dans} minutes"
-msgstr "{dans} menit"
+msgstr "{dans} minutter"
 
 #: cogs/meta.py:34
 #, python-format
@@ -214,12 +207,12 @@ msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr ""
-"Bot melakukan pengaktifan-ulang berkala untuk pembaruan. Jangan khawatir, "
-"masa aktifnya 99.8%"
+"Botten genstarter ofte for opdateringer. Bare rolig, den har en 99,8% "
+"oppetid."
 
 #: cogs/meta.py:55
 msgid "Here is the command list : http://duckhunt.me/command-list/"
-msgstr "Ini daftar perintahnya : http://duckhunt.me/command-list/"
+msgstr "Her er kommandolisten: http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:65
 msgid ""
@@ -227,26 +220,26 @@ msgid ""
 "00), which is the one used by the bot. \n"
 "You can use this website to compare it to yours: https://time.is/compare/GMT"
 msgstr ""
-"Saat ini `{hour}:{minutes}:{seconds}`di zona waktu GMT (diketahui juga "
-"sebagai UTC±00:00), yang sekarang digunakan bot. Kamu bisa bandingkan situs "
-"web ini dengan milikmu:\n"
-"https://times.is/compare/GMT"
+"Det er `{hour}: {minutes}: {seconds}` i GMT tidszone (også kendt som UTC ± "
+"00:00), som er den, der bruges af botten.\n"
+"Du kan bruge denne hjemmeside til at sammenligne den med din: https://time."
+"is/compare/GMT"
 
 #: cogs/meta.py:66
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get back your "
 "weapons for free"
 msgstr ""
-"Kamu bisa menggunakan perintah `dh!freetime` supaya tahu kapan mendapatkan "
-"kembali senjatamu."
+"Du kan bruge kommandoen `dh! Freetime` for at se, hvornår du får gratis dine "
+"våben tilbage"
 
 #: cogs/meta.py:79
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
 msgstr ""
-":alarm_clock: Pengembalian senjata dan magasen berikutnya dalam {sec} detik "
-"({hours} jam dan {minutes} menit"
+":alarm_clock: Næste tilbagesendelse af våben og magasiner om {sec} sekunder "
+"({hours} timer og {minutes} minutter)."
 
 #: cogs/meta.py:81
 msgid ""
@@ -254,110 +247,111 @@ msgid ""
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr ""
-"Pengembalian mengisi magasen dan memberikan kembali senjatamu secara gratis "
-"(bila disita), tapi itu tidak mempengaruhi peluru di magasenmu sekarang. "
-"Kalau bisa, isi ulang sebelum beraksi!"
+"En tilbagesendelse topper dine magasiner og giver dig dit våben tilbage "
+"gratis (hvis konfiskeret), men det påvirker ikke kuglerne i dit nuværende "
+"magasin. Hvis du kan, skal du lade igen på forhånd!"
 
 #: cogs/meta.py:94
 msgid "You are using shard number {shard}"
-msgstr "Kamu menggunakan nomor shard {shard}"
+msgstr "Du bruger shard nummer {shard}"
 
 #: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
 msgid "Exp points"
-msgstr "Poin exp"
+msgstr "Exp point"
 
 #: cogs/scores.py:70 cogs/scores.py:293
 msgid "Ducks killed"
-msgstr "Bebek terbunuh"
+msgstr "Ænder dræbt"
 
 #: cogs/scores.py:74 cogs/scores.py:309
 msgid "Shots missed"
-msgstr "Tembakan gagal"
+msgstr "Skud ramt ved siden af"
 
 #: cogs/scores.py:78
 msgid "Best time"
-msgstr "Waktu terbaik"
+msgstr "Bedste tid"
 
 #: cogs/scores.py:92
 msgid "Can't post embeds!"
-msgstr "Tidak bisa memposkan lekatan!"
+msgstr "Kan ikke sende indlejringer!"
 
 #: cogs/scores.py:117
 msgid "Generating top scores for your channel, please wait!"
-msgstr "Mengumpulkan skor teratas kanal milikmu, tunggu ya!"
+msgstr "Genererer topscoreringer til din kanal, vent venligst!"
 
 #: cogs/scores.py:129
 msgid ":cocktail: Best scores for {channel_name} :cocktail:"
-msgstr ":cocktail: Skor terbaik untuk {channel_name} :cocktail:"
+msgstr ":cocktail: Bedste scorer for {channel_name}: cocktail:"
 
 #: cogs/scores.py:147 cogs/scores.py:154
 msgid "None!"
-msgstr "Kosong!"
+msgstr "Intet!"
 
 #: cogs/scores.py:170
 msgid "Player"
-msgstr "Pemain"
+msgstr "Spiller"
 
 #: cogs/helpers/database.py:205 cogs/scores.py:177 cogs/scores.py:364
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
 msgstr ""
-":warning: Ada kesalahan saat mengirim lekatan, harap periksa apakah bot "
-"memiliki izin `embed_links` dan cobalah lagi!"
+":warning: Der opstod en fejl under afsendelse af indlejringen. Kontroller, "
+"om botten har 'embed_links` tilladelse og prøv igen!"
 
 #: cogs/scores.py:261
 msgid "Generating DuckHunt statistics for you, please wait..."
-msgstr "Mengumpulkan statistik DuckHunt untukmu, silahkan tunggu..."
+msgstr "Genererer DuckHunt statistik for dig, vent venligst..."
 
 #: cogs/scores.py:268
 msgid "Page {current}/{max}"
-msgstr "Laman {current}/{max}"
+msgstr "Side {current}/{max}"
 
 #: cogs/scores.py:271
 msgid "\n"
 "Confiscated weapon!"
-msgstr "Senjata tersita!"
+msgstr "\n"
+"Konfiskeret våben!"
 
 #: cogs/scores.py:280
 msgid "General statistics"
-msgstr "Statistik Umum"
+msgstr "Generelle statistikker"
 
 #: cogs/scores.py:286
 msgid "No best time."
-msgstr "Tidak ada waktu terbaik."
+msgstr "Ingen bedste tid."
 
 #: cogs/scores.py:291
 msgid "No duck killed"
-msgstr "Tidak ada bebek mati"
+msgstr "Ingen and dræbt"
 
 #: cogs/scores.py:294
 msgid "Super ducks killed"
-msgstr "Bebek super yang mati"
+msgstr "Superænder dræbt"
 
 #: cogs/scores.py:295
 msgid "Players killed"
-msgstr "Pemain tertembak mati"
+msgstr "Spillere dræbt"
 
 #: cogs/scores.py:296
 msgid "Self-killing shots"
-msgstr "Tembakan bunuh diri"
+msgstr "Selvdræbende skud"
 
 #: cogs/scores.py:298
 msgid "Best killing time"
-msgstr "Waktu tembak mati terbaik"
+msgstr "Bedste drabstid"
 
 #: cogs/scores.py:299
 msgid "Bullets in current magazine"
-msgstr "Peluru magasen saat ini"
+msgstr "Kugler i nuværende magasin"
 
 #: cogs/scores.py:301
 msgid "Ratio (exp/ducks killed)"
-msgstr "Rasio (exp/bebek tertembak mati)"
+msgstr "Forhold (exp/ænder dræbt)"
 
 #: cogs/helpers/database.py:195 cogs/scores.py:302
 msgid "Current level"
-msgstr "Level saat ini"
+msgstr "Nuværende niveau"
 
 #: cogs/helpers/database.py:195 cogs/helpers/database.py:196 cogs/scores.py:302
 msgid "nom"
@@ -365,119 +359,123 @@ msgstr "nom"
 
 #: cogs/helpers/database.py:197 cogs/scores.py:303
 msgid "Shots accuracy"
-msgstr "Ketepatan tembak"
+msgstr "Skudnøjagtighed"
 
 #: cogs/helpers/database.py:198 cogs/scores.py:304
 msgid "Weapon reliability"
-msgstr "Keandalan senjata"
+msgstr "Våben pålidelighed"
 
 #: cogs/scores.py:306
 msgid "Shoots statistics"
-msgstr "Statistik tembakan"
+msgstr "Skud statistik"
 
 #: cogs/scores.py:308
 msgid "Shots fired"
-msgstr "Jumlah tembakan"
+msgstr "Skud affyret"
 
 #: cogs/scores.py:310
 msgid "Shots without ducks"
-msgstr "Tembakan tanpa bebek"
+msgstr "Skud uden ænder"
 
 #: cogs/scores.py:311
 msgid "Shots that frightened a duck"
-msgstr "Tembakan yang menakuti bebek"
+msgstr "Skud der skræmte en and"
 
 #: cogs/scores.py:312
 msgid "Shots that harmed a duck"
-msgstr "Tembakan yang melukai bebek"
+msgstr "Skud der har skadet en and"
 
 #: cogs/scores.py:313
 msgid "Shots stopped by the detector"
-msgstr "Tembakan yang dihentikan pendeteksi"
+msgstr "Skud stoppet af detektoren"
 
 #: cogs/scores.py:314
 msgid "Shots jamming a weapon"
-msgstr "Tembakan menyebabkan senjata macet"
+msgstr "Skud fastgjorde et våben"
 
 #: cogs/scores.py:315
 msgid "Shots with a sabotaged weapon"
-msgstr "Tembakan senjata yang disabotase"
+msgstr "Skud med et saboteret våben"
 
 #: cogs/scores.py:316
 msgid "Shots with a jammed weapon"
-msgstr "Tembakan saat senjata macet"
+msgstr "Skud med et fastgjort våben"
 
 #: cogs/scores.py:317
 msgid "Shots without bullets"
-msgstr "Tembakan tanpa peluru"
+msgstr "Skud uden kugler"
 
 #: cogs/scores.py:318
 msgid "Shots without weapon"
-msgstr "Tembakan tanpa senjata"
+msgstr "Skud uden våben"
 
 #: cogs/scores.py:319
 msgid "Shots when wet"
-msgstr "Tembakan saat basah"
+msgstr "Skud når det er vådt"
 
 #: cogs/scores.py:322
 msgid "Reloads and items statistics"
-msgstr "Pengisian dan statistik barang"
+msgstr "Lade igen og genstande statistik"
 
 #: cogs/scores.py:324
 msgid "Reloads"
-msgstr "Pengisian"
+msgstr "Genladninger"
 
 #: cogs/scores.py:325
 msgid "Reloads without magazines"
-msgstr "Pengisian tanpa magasen"
+msgstr "Genladninger uden magasiner"
 
 #: cogs/scores.py:326
 msgid "Reloads not needed"
-msgstr "Pengisian yang tidak perlu"
+msgstr "Genladninger ikke nødvendigt"
 
 #: cogs/scores.py:328
 msgid "Trash found in bushes"
-msgstr "Sampah diketemukan di semak-semak"
+msgstr "Affald fundet i buske"
+
+#: cogs/scores.py:330
+msgid "Exp earned with a clover"
+msgstr "Exp tjent med en kløver"
 
 #: cogs/scores.py:331
 msgid "Life insurance rewards"
-msgstr "Imbalan asuransi nyawa"
+msgstr "Livsforsikringsbelønninger"
 
 #: cogs/scores.py:332
 msgid "Free givebacks used"
-msgstr "Pengembalian gratis terpakai"
+msgstr "Gratis tilbagesendelser brugt"
 
 #: cogs/scores.py:335
 msgid "Possesed items and effects"
-msgstr "Barang dan efek yang dimiliki"
+msgstr "Ejet genstande og effekter"
 
 #: cogs/scores.py:338
 msgid "Object: grease"
-msgstr "Barang: Pelumas"
+msgstr "Objekt: smørelse"
 
 #: cogs/scores.py:341
 msgid "Object: infrared detector"
-msgstr "Barang: pendeteksi inframerah"
+msgstr "Objekt: infrarød detektor"
 
 #: cogs/scores.py:344
 msgid "Object: silencer"
-msgstr "Barang: peredam"
+msgstr "Objekt: lyddæmper"
 
 #: cogs/scores.py:347
 msgid "Object: clover {exp} exp"
-msgstr "Barang: daun semanggi {exp} exp"
+msgstr "Objekt: kløver {exp} exp"
 
 #: cogs/scores.py:350
 msgid "Object: explosive ammo"
-msgstr "Barang: amunisi ledak"
+msgstr "Objekt: Eksplosiv ammunition"
 
 #: cogs/scores.py:352
 msgid "Object: AP ammo"
-msgstr "Barang: Amunisi AP"
+msgstr "Objekt: PB ammunition"
 
 #: cogs/scores.py:355
 msgid "Effect: wet"
-msgstr "Efek: basah"
+msgstr "Effekt: våd"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -486,11 +484,12 @@ msgid ""
 " Could we please into the channel where you want the game to be ? Please "
 "invoke me there by using `dh!setup`<:DuckHug:361969688957157378>"
 msgstr ""
-"Halo!\n"
-" Terimakasih sudah menambahkan saya! Saya sedang bersiap memulai "
-"permainannya!\n"
-" Bisakah kita masuk ke kanal tempat permainannya akan diletakkan ? Tolong "
-"sertakan saya menggunakan `dh!setup` <:DuckHug:361969688957157378>"
+"Hej!\n"
+" Tak fordi du tilføjede mig derinde! Jeg er næsten klar til at starte "
+"spillet!\n"
+" Kan vi venligst ind i den kanal, hvor du vil have spillet til at være? "
+"Venligst benyt mig her ved at bruge `dh! Setup` <:DuckHug:"
+"361969688957157378>"
 
 #: cogs/setup_wizzard.py:35
 msgid ""
@@ -498,9 +497,9 @@ msgid ""
 " I'm just gonna run a quick permissions check and will be back in a few "
 "seconds! Please wait"
 msgstr ""
-"Halo lagi!\n"
-" Saya hanya akan melakukan pemeriksaan izin singkat dan akan kembali dalam "
-"beberapa detik! Tunggu ya"
+"Hej igen!\n"
+" Jeg skal bare køre et hurtigt tilladelses-tjek og vil være tilbage om et "
+"par sekunder! Vent venligst"
 
 #: cogs/setup_wizzard.py:51
 msgid ""
@@ -509,6 +508,20 @@ msgid ""
 "to read messages.\n"
 "You can proceed without it, but shouldn't."
 msgstr ""
-":small_red_triangle: Izin `read_message_history` tidak ada.\n"
-"Ini penting bagi fungsi normal bot,  bahwa saya harus bisa membaca pesan.\n"
-"Kamu bisa melanjutkan tanpa itu, tapi jangan."
+":small_red_triangle: Tilladelsen `read_message_history` mangler.\n"
+"Dette er vigtigt for bottens normale funktion, da jeg skal kunne læse "
+"beskeder.\n"
+"Du kan fortsætte uden det, men bør ikke."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Tilladelsen `add_reactions` mangler.\n"
+"Det er en nødvendig tilladelse til interaktive Indlejringer, og de er næsten "
+"overalt.\n"
+"Du kan fortsætte uden det, men det anbefales ikke og kan føre til fejl"
