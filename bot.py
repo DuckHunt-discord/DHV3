@@ -15,10 +15,13 @@ import traceback
 import sys
 
 import time
+from typing import Union
 
 import cogs.helpers.aux_inits as inits
 import textwrap
 from cogs.helpers import checks
+from cogs.helpers.context import CustomContext
+
 base_logger = inits.init_logger()
 
 extra = {"channelid": 0, "userid": 0}
@@ -58,14 +61,14 @@ from cogs.helpers import context
 class DuckHunt(commands.AutoShardedBot):
     async def on_message(self, message):
         if message.author.bot:
-            return # ignore messages from other bots
+            return  # ignore messages from other bots
 
         if message.author.id in self.blacklisted_users:
             return
 
         ctx = await self.get_context(message, cls=context.CustomContext)
         if ctx.prefix is not None:
-            #ctx.command = self.all_commands.get(ctx.invoked_with.lower())  # This dosen't works for subcommands
+            # ctx.command = self.all_commands.get(ctx.invoked_with.lower())  # This dosen't works for subcommands
             await self.invoke(ctx)
 
     async def on_command(self, ctx):
@@ -76,15 +79,17 @@ class DuckHunt(commands.AutoShardedBot):
 
     async def on_ready(self):
         logger.info("We are all set, on_ready was fired! Yeah!")
-        logger.info(f"I see {len(bot.guilds)} guilds")
+        logger.info(f"I see {len(self.guilds)} guilds")
+        await self.log(level=30, title="Bot is ready", message=f"The bot has restarted. We can now see {len(self.guilds)} guilds on {self.shard_count} shards, and ducks can now spawn", where=None)
 
     async def on_command_error(self, context, exception):
-        _ = self._; language = await self.db.get_pref(context.guild, "language")
+        _ = self._;
+        language = await self.db.get_pref(context.guild, "language")
         if isinstance(exception, discord.ext.commands.errors.CommandNotFound):
             return
 
         elif isinstance(exception, discord.ext.commands.errors.MissingRequiredArgument):
-            await self.send_message(ctx=context, message=_(":x: A required argument is missing."))# Here is the command documentation : \n```\n", language) + context.command.__doc__ + "\n```")
+            await self.send_message(ctx=context, message=_(":x: A required argument is missing."))  # Here is the command documentation : \n```\n", language) + context.command.__doc__ + "\n```")
             return
         elif isinstance(exception, checks.NotEnoughExp):
             await self.send_message(ctx=context, message=_(":x: You don't have enough exp for this", language))
@@ -95,23 +100,73 @@ class DuckHunt(commands.AutoShardedBot):
         elif isinstance(exception, checks.NotSuperAdmin):
             await self.send_message(ctx=context, message=_(":x: You are not a super admin.", language))
             await self.hint(ctx=context, message=_("This command is reserved for the bot owners. "
-                                                   "If you think this is an error, please contact my owner at the DuckHunt Support Server (see `dh!help`).",
-                                                   language))
+                                                   "If you think this is an error, please contact my owner at the DuckHunt Support Server (see `dh!help`).", language))
             return
         elif isinstance(exception, discord.ext.commands.errors.CheckFailure):
             return
         elif isinstance(exception, discord.ext.commands.errors.CommandOnCooldown):
-            await self.send_message(context, message="You are on cooldown")
-            return
+            if context.message.author in self.admins:
+                await context.reinvoke()
+                return
+            else:
+                await self.send_message(context, message="You are on cooldown :(")
+                return
         logger.error('Ignoring exception in command {}:'.format(context.command))
         logger.error("".join(traceback.format_exception(type(exception), exception, exception.__traceback__)))
+
+    async def on_guild_join(self, guild):
+        await self.log(level=6, title="Joined Guild", message=f"Yay! A new server! Current guild total : {len(self.guilds)}", where=guild)
+
+    async def on_guild_remove(self, guild):
+        await self.log(level=6, title="Left Guild", message=f"Goodbye! Current guild total : {len(self.guilds)}", where=guild)
 
     async def hint(self, ctx, message):
         hint_start = ctx.bot._(":bulb: HINT: ")
         await self.send_message(ctx, message=hint_start + message)
 
-    async def send_message(self, ctx:context.CustomContext=None, from_:discord.Member=None, where:discord.TextChannel=None,
-                           message:str="", embed:discord.Embed=None, can_pm:bool=True, force_pm:bool=False, mention=True, try_:int=1, return_message:bool=False):
+    async def log(self, title:str, message:str, where:Union[CustomContext, discord.TextChannel, discord.Guild, None], level:int):
+        if isinstance(where, CustomContext):
+            footer = f"On {where.channel.id} (#{where.channel.name}), by {where.author.id} ({where.author.name}#{where.author.discriminator})"
+        elif isinstance(where, discord.TextChannel):
+            footer = f"On {where.id} (#{where.name})"
+        elif isinstance(where, discord.Guild):
+            footer = f"On {where.id} (#{where.name})"
+        elif where is None:
+            footer = ""
+        else:
+            footer = ""
+            logger.warning("Unknown where on logging to a channel : " + str(where))
+
+        embed = discord.Embed(description=message)
+        embed.title = title
+        embed.set_footer(text=footer)
+        if 0 <= level <= 5:
+            embed.colour = discord.Colour.green()
+        elif 6 <= level <= 10:
+            embed.colour = discord.Colour.greyple()
+        elif 11 <= level <= 20:
+            embed.colour = discord.Colour.orange()
+        elif 21 <= level <= 30:
+            embed.colour = discord.Colour.red()
+        else:
+            embed.colour = discord.Colour.dark_red()
+
+        await self.send_message(where=self.get_channel(self.log_channel_id), embed=embed, mention=False, can_pm=False)
+
+
+
+
+
+
+
+    async def send_message(self, ctx: context.CustomContext = None, from_: discord.Member = None, where: discord.TextChannel = None, message: str = "", embed: discord.Embed = None,
+                           can_pm: bool = True, force_pm: bool = False, mention=True, try_: int = 1, return_message: bool = False):
+
+        if not return_message:
+            async def send_m():
+                return await self.send_message(ctx=ctx, from_=from_, where=where, message=message, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=mention, try_=try_, return_message=True)
+
+            return asyncio.ensure_future(send_m())
 
         s = time.time()
 
@@ -146,9 +201,9 @@ class DuckHunt(commands.AutoShardedBot):
 
         # bot.logger.debug(f"Long message took : {time.time() - s}.")
 
-        if where: # Where is a TextChannel
+        if where:  # Where is a TextChannel
             if force_pm or (can_pm and await self.db.get_pref(where.guild, "pm_most_messages")):
-                if from_: # If I have someone to PM
+                if from_:  # If I have someone to PM
                     where = await from_.create_dm()
                     me = self.user
                     permissions = True
@@ -156,15 +211,15 @@ class DuckHunt(commands.AutoShardedBot):
                     logger.warning(f"I want to PM this message, but I can't since I don't have a from_ User\n"
                                    f"ctx={ctx}, from_={from_}, where={where},\n"
                                    f"message : {message}")
-                    permissions = True # TODO: Check perms
+                    permissions = True  # TODO: Check perms
 
             else:
-                permissions = True # TODO: Check perms
+                permissions = True  # TODO: Check perms
                 if mention and from_:
                     message = f"{from_.mention} > {message}"
 
 
-        else: # Where will be a DMChannel
+        else:  # Where will be a DMChannel
             if from_:
                 where = await from_.create_dm()
                 permissions = True
@@ -182,31 +237,25 @@ class DuckHunt(commands.AutoShardedBot):
         # from_ is a Member or None
         # ctx can be a Context or None
 
-        if not return_message:
-            async def send_m():
-                try:
-                    await where.send(message, embed=embed)
-                except discord.errors.Forbidden:
-                    logger.warning(f"Could not send {message} to channel : no I/O permissions")
-                    return False
+        try:
+            m = await where.send(message, embed=embed)
+            return m
+        except discord.errors.Forbidden:
+            logger.warning(f"Could not send {message} to channel : no I/O permissions")
+            return False
+        except discord.errors.NotFound:
+            logger.warning(f"Could not send {message} to channel : channel not found.")
+            return False
+        except Exception as e:
+            if try_ >= 3:
+                logger.warning(f"Could not send {message} to channel after 3 tries")
+                logger.exception("Exception for not sending is :")
+                await bot.log(level=15, title="Error when sending message (x3)", message=f"See bot console for exception ({e})", where=ctx)
 
-            m = asyncio.ensure_future(send_m())
-
-        else:
-            try:
-                m = await where.send(message, embed=embed)
-                return m
-            except discord.errors.Forbidden:
-                logger.warning(f"Could not send {message} to channel : no I/O permissions")
                 return False
-            except Exception as e:
-                if try_ >= 3:
-                    logger.warning(f"Could not send {message} to channel after 3 tries")
-                    logger.exception("Exception for not sending is :")
-                    return False
-                else:
-                    return await self.send_message(ctx=ctx, from_=from_, where=where, message=original_message, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=mention, try_=try_+1,
-                                       return_message=return_message)
+            else:
+                return await self.send_message(ctx=ctx, from_=from_, where=where, message=original_message, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=mention, try_=try_ + 1,
+                                               return_message=return_message)
 
 
 bot = DuckHunt(command_prefix=get_prefix, case_insensitive=True)
@@ -214,12 +263,14 @@ bot = DuckHunt(command_prefix=get_prefix, case_insensitive=True)
 logger.debug("Configuring the bot")
 
 from cogs.helpers.config import config
+
 config(bot)
 bot.base_logger = base_logger
 bot.logger = logger
 
 logger.debug("Loading the BG loop :")
 from cogs import spawning
+
 bot.loop.create_task(spawning.background_loop(bot))
 
 logger.debug("> Loading complete")
@@ -231,6 +282,10 @@ logger.debug("Loading cogs : ")
 #   ADD COGS HERE |  #
 #                 V  #
 #################   ##
+#################   ##
+################   ###
+###############   ####
+##############   #####
 
 cogs = ['cogs.admin_commands',
         'cogs.analytics',
@@ -242,6 +297,7 @@ cogs = ['cogs.admin_commands',
         'cogs.shop',
         'cogs.superadmin_commands',
         'cogs.user_commands',
+        'cogs.evals',
         'cogs.api'  # This must be the last to run, comment if you don't need it
         ]
 
@@ -260,16 +316,15 @@ except KeyboardInterrupt:
     pass
 finally:
     # Stop cleanly : make ducks leave
-    #try:
+    # try:
     game = discord.Game(name=f"Restarting...")
     bot.loop.run_until_complete(bot.change_presence(status=discord.Status.dnd, activity=game))
     bot.loop.run_until_complete(spawning.make_all_ducks_leave(bot))
 
-    #except:
+    # except:
     #    pass
 
     bot.loop.run_until_complete(bot.logout())
 
     asyncio.sleep(3)
     bot.loop.close()
-

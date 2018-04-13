@@ -32,28 +32,6 @@ class SuperAdmin:
 
         await self.bot.send_message(ctx=ctx, message="Check console")
 
-    @commands.command()
-    @checks.is_super_admin()
-    async def debug(self, ctx, *, code: str):
-        """Evaluates code."""
-        code = code.strip('` ')
-        python = '```py\n{}\n```'
-        result = None
-
-        env = {'bot': self.bot, 'ctx': ctx, 'message': ctx.message, 'guild': ctx.message.guild, 'channel': ctx.message.channel, 'author': ctx.message.author}
-
-        env.update(globals())
-
-        try:
-            result = eval(code, env)
-            if inspect.isawaitable(result):
-                result = await result
-        except Exception as e:
-            await ctx.send(python.format(type(e).__name__ + ': ' + str(e)))
-            return
-
-        await self.bot.send_message(ctx=ctx, message=python.format(result))
-
     @commands.command(aliases=["gen_event", "event_gen"])
     @checks.is_super_admin()
     async def regen_event(self, ctx, force: bool = True):
@@ -63,8 +41,9 @@ class SuperAdmin:
 
     @commands.command(aliases=["quit", "stop"])
     @checks.is_super_admin()
-    async def exit(self, ctx, ):
-        """!regen_event"""
+    async def exit(self, ctx):
+        """Quit the bot, duh"""
+        await self.bot.log(level=40, title="Bot is restarting", message=f"Exited with command", where=ctx)
         raise KeyboardInterrupt("Exited with command")
 
     @commands.command(pass_context=True)

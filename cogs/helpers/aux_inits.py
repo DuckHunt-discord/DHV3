@@ -11,9 +11,14 @@ def init_logger():
     # Logging to a file
     from logging.handlers import RotatingFileHandler
 
-    file_handler = RotatingFileHandler('duckhunt.log', 'a', 1000000, 10)
+    file_handler = RotatingFileHandler('duckhunt_all.log', 'a', 10000000, 10)
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.DEBUG)
+    base_logger.addHandler(file_handler)
+
+    file_handler = RotatingFileHandler('duckhunt_errors.log', 'a', 1000000, 10)
+    file_handler.setFormatter(formatter)
+    file_handler.setLevel(logging.WARNING)
     base_logger.addHandler(file_handler)
 
     # And to console

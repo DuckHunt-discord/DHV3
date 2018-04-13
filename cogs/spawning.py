@@ -91,15 +91,23 @@ async def planifie(bot, channel=None, new_day=True):
         logger.debug(f"(Re-)planning for channel @{total_ducks} ducks left")
 
         bot.ducks_planning[channel] = total_ducks
+        return total_ducks
 
     else:
+        total_global_ducks = 0
+        channel_count = 0
         for channel in await bot.db.list_enabled_channels():
             to_plan_channel = None
             to_plan_guild = bot.get_guild(channel["server"])
             if to_plan_guild:
                 to_plan_channel = to_plan_guild.get_channel(channel["channel"])
             if to_plan_channel:
-                await planifie(bot, channel=to_plan_channel, new_day=new_day)
+                total_global_ducks += await planifie(bot, channel=to_plan_channel, new_day=new_day)
+                channel_count += 1
+
+        await bot.log(level=30, title="New planification task done", message=f"{total_global_ducks} ducks are planned for today in {channel_count} channels.",
+                      where=None)
+
 
 
 async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=1, ignore_event=False):
@@ -122,7 +130,7 @@ async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=
 
         chance = random.randint(0, 100)
         if not ignore_event and bot.current_event['id'] == 3:
-            chance += bot.current_event['chance_added_for_super_duck']
+            chance -= bot.current_event['chance_added_for_super_duck']
 
         if super_duck or chance < super_ducks_chance:
             super_duck = True
@@ -171,11 +179,16 @@ async def event_gen(bot, force=False):
         bot.logger.info(f"[EVENT] Selected event : {event_id}")
         bot.current_event = next((item for item in bot.event_list if item['id'] == event_id), None)  # Reset the event
         bot.logger.info(f"[EVENT] Selected event : {bot.current_event['name']}")
+
     else:
+        #await bot.log(level=9, title="No new event rolled out", message=f"No event active until the next hour", where=None)
+
         bot.logger.info("[EVENT] No new event, see you next time!")
 
     bot.logger.debug("[EVENT] Updating playing status")
     game = discord.Game(name=f"{bot.current_event['name']}")
+    await bot.log(level=10, title="New event rolled out", message=f"{bot.current_event['name']} is now the active event until the next hour", where=None)
+
     await bot.change_presence(status=discord.Status.online, activity=game)
     bot.logger.debug("[EVENT] Done :)")
 
@@ -188,6 +201,7 @@ async def background_loop(bot):
     planday = 0
     last_iter = int(time.time())
     last_hour = 0
+
     try:
         while not bot.is_closed() and bot.can_spawn:
             # bot.logger.debug("Looping")

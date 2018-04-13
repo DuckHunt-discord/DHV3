@@ -98,6 +98,10 @@ def config(bot):
                              # Was sorry so unbanned |  330841376474267651,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
                              ]
 
+    # Bot Log Channel
+    bot.log_channel_id = 432934518479912960
+
+
     # > Events Settings < #
     bot.event_list = [
         {
@@ -131,7 +135,7 @@ def config(bot):
         },
         {
             "name"       : _("Connexion problems"),
-            "description": _("Ducks cant use the computer due to connexion problems, and there will be less of them until it's repared"),
+            "description": _("Ducks cant use the computer due to connexion problems, and there will be less of them until it's repaired"),
             "id"         : 5,
             "ducks_cancel_chance": 10
         },

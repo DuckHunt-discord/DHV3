@@ -90,6 +90,7 @@ class Scores:
                 or not permissions.read_message_history:
 
             await self.bot.send_message(ctx=ctx, message=_("Can't post embeds!", language))
+            await self.bot.hint(ctx, _("Use `dh!setup` to see missing permissions and ask an admin to give me the missing ones!", language))
 
 
             return

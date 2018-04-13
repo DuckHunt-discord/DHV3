@@ -168,7 +168,7 @@
         });
 
         // Ducks Spawned
-        ducks_spawned = new Highcharts.Chart({
+        /*ducks_spawned = new Highcharts.Chart({
 
             chart: {
                 renderTo: 'ducks_spawned',
@@ -211,6 +211,39 @@
                 yAxis: 1
             }]
         });
+*/
+        ducks_spawned = Highcharts.chart({
+            chart: {
+                renderTo: 'ducks_spawned',
+                events: {
+                    load: ducks_spawned_update
+                },
+                type: 'area'
+            },
+
+            title: {
+                text: 'Number of ducks present on channels'
+            },
+
+            xAxis: {
+                type: 'datetime'
+            },
+
+            yAxis: [{
+                title: {
+                    text: 'ducks'
+                }
+            }],
+
+            series: [{
+                name: 'Normal ducks',
+                data: []
+            }, {
+                name: 'Super ducks',
+                data: []
+            }]
+        });
+
 
         // Guild Count
         guild_count = new Highcharts.Chart({

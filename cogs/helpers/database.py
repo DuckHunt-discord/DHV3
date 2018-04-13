@@ -63,6 +63,7 @@ class Database:
         self.database.query("INSERT INTO channels (server, channel, enabled) VALUES (:server_id, :channel_id, 1) "
                             "ON DUPLICATE KEY UPDATE enabled=1", server_id=channel.guild.id, channel_id=channel.id)
         self._channel_enabled_cache[channel] = True
+        await self.bot.log(level=5, title="Channel enabled", message=f"The channel is now active", where=channel)
         if channel in self._stats_cache.keys():
             self._stats_cache[channel] = {}
 
@@ -70,12 +71,17 @@ class Database:
         self.database.query("INSERT INTO channels (server, channel, enabled) VALUES (:server_id, :channel_id, 0) "
                             "ON DUPLICATE KEY UPDATE enabled=0", server_id=channel.guild.id, channel_id=channel.id)
         self._channel_enabled_cache[channel] = False
+        await self.bot.log(level=5, title="Channel disabled", message=f"The channel is now disabled", where=channel)
         if channel in self._stats_cache.keys():
             self._stats_cache[channel] = {}
 
     async def list_enabled_channels(self):
         row = self.database.query("SELECT channel, server FROM channels WHERE enabled=1")
         return row.all()
+
+    async def get_all_admins_ids(self):
+        row = self.database.query("SELECT DISTINCT `user_id` from admins")
+        return [int(r.user_id) for r in row.all()]
 
     # > Stats < #
 
@@ -219,11 +225,13 @@ class Database:
         channel_id = await self.get_channel_dbid(channel)
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
+        await self.bot.log(level=5, title="User stats deleted", message=f"The channel statistics of {user_id} have been deleted", where=channel)
         self.database.query(f"DELETE FROM players WHERE channel_id=:channel_id AND id_=:user_id", channel_id=channel_id, user_id=user_id)
 
     async def delete_channel_stats(self, channel):
         self.bot.logger.debug(f"Delete_channel_stats in {channel.id}")
         channel_id = await self.get_channel_dbid(channel)
+        await self.bot.log(level=6, title="Channel stats deleted", message=f"The channel statistics have been reinitialised", where=channel)
 
         self.database.query(f"DELETE FROM players WHERE channel_id=:channel_id", channel_id=channel_id)
 
@@ -330,6 +338,8 @@ class Database:
         try:
             self.database.query(f"INSERT INTO prefs (server_id, {pref}) VALUES (:server_id, :value)"
                                 f"ON DUPLICATE KEY UPDATE {pref}=:value", value=value, server_id=guild.id)
+            await self.bot.log(level=2, title="Setting changed", message=f"{pref} now set to {value}", where=guild)
+
             return True
         except Exception as e:
             self.bot.logger.exception(f"Something bag happened when setting a pref : {e}")
@@ -349,6 +359,7 @@ class Database:
 
         try:
             self.database.query("INSERT INTO admins (server_id, user_id) VALUES (:guild_id, :user_id)", guild_id=guild.id, user_id=user.id)
+            await self.bot.log(level=6, title="Admin added to a guild", message=f"{user.name}#{user.discriminator} is now an admin of this guild", where=guild)
             return True
         except sqlalchemy.exc.IntegrityError:  # user is admin already
             return False

@@ -2,6 +2,7 @@
 import datetime
 import time
 from discord.ext import commands
+import discord
 
 from cogs.helpers import checks
 
@@ -91,7 +92,7 @@ class Meta:
     @commands.command()
     async def shard(self, ctx):
         _ = self.bot._; language = await self.bot.db.get_pref(ctx.guild, "language")
-        await self.bot.send_message(ctx=ctx, message=_("You are using shard number {shard}", language).format(shard=ctx.guild.shard_id))
+        await self.bot.send_message(ctx=ctx, message=_("You are using shard number {shard} out of {total} total shards", language).format(shard=ctx.guild.shard_id, total=len(self.bot.shards)))
 
 
 def setup(bot):
