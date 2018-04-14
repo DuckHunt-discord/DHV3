@@ -28,5 +28,10 @@ If you need help or have any questions, feel free to join [our discord](https://
 ## Project Status
 [![Dependency Status](https://gemnasium.com/badges/github.com/DuckHunt-discord/DHV2.svg)](https://gemnasium.com/github.com/DuckHunt-discord/DHV2)
 [![Build Status](https://travis-ci.org/DuckHunt-discord/DHV2.svg?branch=master)](https://travis-ci.org/DuckHunt-discord/DHV2)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDuckHunt-discord%2FDHV3.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FDuckHunt-discord%2FDHV3?ref=badge_shield)
 
 ##### Inspired by MenzAgitat's work: http://scripts.eggdrop.fr/details-Duck+Hunt-s228.html (thanks Menz' :D)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDuckHunt-discord%2FDHV3.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDuckHunt-discord%2FDHV3?ref=badge_large)
