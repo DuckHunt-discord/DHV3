@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-03 12:07+0000\n"
+"POT-Creation-Date: 2018-04-13 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:87
+#: bot.py:92
 msgid ":x: A required argument is missing."
 msgstr ":x: Il manque un argument requis."
 
-#: bot.py:90
+#: bot.py:95
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Vous n'avez pas assez d'exp pour ça."
 
-#: bot.py:93
+#: bot.py:98
 msgid ":x: You are not a server admin"
 msgstr ":x: Vous n'êtes pas administrateur du serveur."
 
-#: bot.py:96
+#: bot.py:101
 msgid ":x: You are not a super admin."
 msgstr ":x: Vous n'êtes pas un super administrateur."
 
-#: bot.py:97
+#: bot.py:102
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,7 +42,7 @@ msgstr ""
 "s'agit d'une erreur, veuillez contacter mon administrateur sur le serveur de "
 "support DuckHunt (le lien est dans `dh!help`)"
 
-#: bot.py:110
+#: bot.py:124
 msgid ":bulb: HINT: "
 msgstr ":bulb: ASTUCE :"
 
@@ -208,7 +208,7 @@ msgstr "{dans} heures"
 msgid "{dans} minutes"
 msgstr "minutes de {dans}"
 
-#: cogs/meta.py:34
+#: cogs/meta.py:35
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
@@ -217,11 +217,11 @@ msgstr ""
 "Le bot redémarre fréquemment pour effectuer des mises à jour. Ne vous "
 "inquiétez pas, il est en ligne 99.8% du temps."
 
-#: cogs/meta.py:55
+#: cogs/meta.py:56
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr "Voici la liste des commandes : https://duckhunt.me/command-list/"
 
-#: cogs/meta.py:65
+#: cogs/meta.py:66
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -232,7 +232,7 @@ msgstr ""
 "Vous pouvez utiliser ce site web pour le comparer au vôtre : https://time.is/"
 "compare/GMT"
 
-#: cogs/meta.py:66
+#: cogs/meta.py:67
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get back your "
 "weapons for free"
@@ -240,7 +240,7 @@ msgstr ""
 "Vous pouvez utiliser la commande `dh!freetime` pour voir quand vous "
 "récupérerez votre arme et vos chargeurs gratuitement"
 
-#: cogs/meta.py:79
+#: cogs/meta.py:80
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -248,7 +248,7 @@ msgstr ""
 ":alarm_clock: Prochain rendu des armes et des chargeurs dans {sec} secondes "
 "(soit {hours} heures et {minutes} minutes)"
 
-#: cogs/meta.py:81
+#: cogs/meta.py:82
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -258,19 +258,15 @@ msgstr ""
 "mais ne rajoute pas de balles dans le chargeur actuel. Si vous le pouvez, "
 "rechargez avant!"
 
-#: cogs/meta.py:94
-msgid "You are using shard number {shard}"
-msgstr "Vous êtes sur la partition n°{shard}"
-
-#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
 msgid "Exp points"
 msgstr "Points d'exp"
 
-#: cogs/scores.py:70 cogs/scores.py:293
+#: cogs/scores.py:70 cogs/scores.py:294
 msgid "Ducks killed"
 msgstr "Canards tués"
 
-#: cogs/scores.py:74 cogs/scores.py:309
+#: cogs/scores.py:74 cogs/scores.py:310
 msgid "Shots missed"
 msgstr "Tirs manqués"
 
@@ -282,25 +278,25 @@ msgstr "Meilleur temps"
 msgid "Can't post embeds!"
 msgstr "Je ne peux pas envoyer d'*embeds* (liens intégrés)"
 
-#: cogs/scores.py:117
+#: cogs/scores.py:118
 msgid "Generating top scores for your channel, please wait!"
 msgstr ""
 "Chargement des meilleurs scores pour ce canal, veuillez patienter s'il vous "
 "plaît !"
 
-#: cogs/scores.py:129
+#: cogs/scores.py:130
 msgid ":cocktail: Best scores for {channel_name} :cocktail:"
 msgstr ":cocktail: Meilleurs scores pour #{channel_name} :cocktail:"
 
-#: cogs/scores.py:147 cogs/scores.py:154
+#: cogs/scores.py:148 cogs/scores.py:155
 msgid "None!"
 msgstr "Aucun !"
 
-#: cogs/scores.py:170
+#: cogs/scores.py:171
 msgid "Player"
 msgstr "Joueur"
 
-#: cogs/helpers/database.py:205 cogs/scores.py:177 cogs/scores.py:364
+#: cogs/helpers/database.py:211 cogs/scores.py:178 cogs/scores.py:365
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -309,183 +305,183 @@ msgstr ""
 "vérifier que le bot dispose de la permission `embed_links` (intégrer des "
 "liens) et ré-essayez!"
 
-#: cogs/scores.py:261
+#: cogs/scores.py:262
 msgid "Generating DuckHunt statistics for you, please wait..."
 msgstr ""
 "Chargement de vos statistiques sur DuckHunt, veuillez patienter s'il vous "
 "plaît..."
 
-#: cogs/scores.py:268
+#: cogs/scores.py:269
 msgid "Page {current}/{max}"
 msgstr "Page {current} / {max}"
 
-#: cogs/scores.py:271
+#: cogs/scores.py:272
 msgid "\n"
 "Confiscated weapon!"
 msgstr "\n"
 "Arme confisquée !"
 
-#: cogs/scores.py:280
+#: cogs/scores.py:281
 msgid "General statistics"
 msgstr "Statistiques générales"
 
-#: cogs/scores.py:286
+#: cogs/scores.py:287
 msgid "No best time."
 msgstr "Pas de meilleur temps."
 
-#: cogs/scores.py:291
+#: cogs/scores.py:292
 msgid "No duck killed"
 msgstr "Aucun canard tué"
 
-#: cogs/scores.py:294
+#: cogs/scores.py:295
 msgid "Super ducks killed"
 msgstr "Super canards tués"
 
-#: cogs/scores.py:295
+#: cogs/scores.py:296
 msgid "Players killed"
 msgstr "Joueurs tués"
 
-#: cogs/scores.py:296
+#: cogs/scores.py:297
 msgid "Self-killing shots"
 msgstr "Tirs sur soi-même"
 
-#: cogs/scores.py:298
+#: cogs/scores.py:299
 msgid "Best killing time"
 msgstr "Meilleur temps de tir"
 
-#: cogs/scores.py:299
+#: cogs/scores.py:300
 msgid "Bullets in current magazine"
 msgstr "Balles dans le chargeur actuel"
 
-#: cogs/scores.py:301
+#: cogs/scores.py:302
 msgid "Ratio (exp/ducks killed)"
 msgstr "Ratio (exp / canards tués)"
 
-#: cogs/helpers/database.py:195 cogs/scores.py:302
+#: cogs/helpers/database.py:201 cogs/scores.py:303
 msgid "Current level"
 msgstr "Niveau actuel"
 
-#: cogs/helpers/database.py:195 cogs/helpers/database.py:196 cogs/scores.py:302
+#: cogs/helpers/database.py:201 cogs/helpers/database.py:202 cogs/scores.py:303
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/database.py:197 cogs/scores.py:303
+#: cogs/helpers/database.py:203 cogs/scores.py:304
 msgid "Shots accuracy"
 msgstr "Précision des tirs"
 
-#: cogs/helpers/database.py:198 cogs/scores.py:304
+#: cogs/helpers/database.py:204 cogs/scores.py:305
 msgid "Weapon reliability"
 msgstr "Fiabilité de l'arme"
 
-#: cogs/scores.py:306
+#: cogs/scores.py:307
 msgid "Shoots statistics"
 msgstr "Statistiques des tirs"
 
-#: cogs/scores.py:308
+#: cogs/scores.py:309
 msgid "Shots fired"
 msgstr "Coups de feu"
 
-#: cogs/scores.py:310
+#: cogs/scores.py:311
 msgid "Shots without ducks"
 msgstr "Tirs sans canards"
 
-#: cogs/scores.py:311
+#: cogs/scores.py:312
 msgid "Shots that frightened a duck"
 msgstr "Tirs qui ont effrayé un canard"
 
-#: cogs/scores.py:312
+#: cogs/scores.py:313
 msgid "Shots that harmed a duck"
 msgstr "Coups de feu ayant touché un canard"
 
-#: cogs/scores.py:313
+#: cogs/scores.py:314
 msgid "Shots stopped by the detector"
 msgstr "Tirs arrêtés par le détecteur"
 
-#: cogs/scores.py:314
+#: cogs/scores.py:315
 msgid "Shots jamming a weapon"
 msgstr "Tirs enrayant l'arme"
 
-#: cogs/scores.py:315
+#: cogs/scores.py:316
 msgid "Shots with a sabotaged weapon"
 msgstr "Tirs avec une arme sabotée"
 
-#: cogs/scores.py:316
+#: cogs/scores.py:317
 msgid "Shots with a jammed weapon"
 msgstr "Tirs avec une arme enrayée"
 
-#: cogs/scores.py:317
+#: cogs/scores.py:318
 msgid "Shots without bullets"
 msgstr "Tirs sans balles"
 
-#: cogs/scores.py:318
+#: cogs/scores.py:319
 msgid "Shots without weapon"
 msgstr "Tirs sans armes"
 
-#: cogs/scores.py:319
+#: cogs/scores.py:320
 msgid "Shots when wet"
 msgstr "Tirs lorsque mouillé"
 
-#: cogs/scores.py:322
+#: cogs/scores.py:323
 msgid "Reloads and items statistics"
 msgstr "Rechargements et statistiques d'objets"
 
-#: cogs/scores.py:324
+#: cogs/scores.py:325
 msgid "Reloads"
 msgstr "Rechargements"
 
-#: cogs/scores.py:325
+#: cogs/scores.py:326
 msgid "Reloads without magazines"
 msgstr "Rechargements sans chargeurs"
 
-#: cogs/scores.py:326
+#: cogs/scores.py:327
 msgid "Reloads not needed"
 msgstr "Rechargements non nécessaires"
 
-#: cogs/scores.py:328
+#: cogs/scores.py:329
 msgid "Trash found in bushes"
 msgstr "Babioles trouvées dans les buissons"
 
-#: cogs/scores.py:330
+#: cogs/scores.py:331
 msgid "Exp earned with a clover"
 msgstr "Expérience gagné avec un trèfle"
 
-#: cogs/scores.py:331
+#: cogs/scores.py:332
 msgid "Life insurance rewards"
 msgstr "Récompenses de l'assurance-vie"
 
-#: cogs/scores.py:332
+#: cogs/scores.py:333
 msgid "Free givebacks used"
 msgstr "Récupérations gratuites utilisées"
 
-#: cogs/scores.py:335
+#: cogs/scores.py:336
 msgid "Possesed items and effects"
 msgstr "Objets possédés et effets"
 
-#: cogs/scores.py:338
+#: cogs/scores.py:339
 msgid "Object: grease"
 msgstr "Objet : graisse"
 
-#: cogs/scores.py:341
+#: cogs/scores.py:342
 msgid "Object: infrared detector"
 msgstr "Objet : détecteur infrarouge"
 
-#: cogs/scores.py:344
+#: cogs/scores.py:345
 msgid "Object: silencer"
 msgstr "Objet : silencieux"
 
-#: cogs/scores.py:347
+#: cogs/scores.py:348
 msgid "Object: clover {exp} exp"
 msgstr "Objet : trèfle {exp} exp"
 
-#: cogs/scores.py:350
+#: cogs/scores.py:351
 msgid "Object: explosive ammo"
 msgstr "Objet : munitions explosives"
 
-#: cogs/scores.py:352
+#: cogs/scores.py:353
 msgid "Object: AP ammo"
 msgstr "Objet : munitions AP"
 
-#: cogs/scores.py:355
+#: cogs/scores.py:356
 msgid "Effect: wet"
 msgstr "Effet : mouillé"
 
@@ -1510,27 +1506,27 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "un poisson."
 
-#: cogs/helpers/config.py:104
+#: cogs/helpers/config.py:108
 msgid "Everything is calm"
 msgstr "Tout est calme"
 
-#: cogs/helpers/config.py:105
+#: cogs/helpers/config.py:109
 msgid "Nothing is happening right now."
 msgstr "Rien ne se passe en ce moment."
 
-#: cogs/helpers/config.py:109
+#: cogs/helpers/config.py:113
 msgid "Ducks are migrating"
 msgstr "Les canards migrent"
 
-#: cogs/helpers/config.py:110
+#: cogs/helpers/config.py:114
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Préparez-vous à voir plus de canards dans l'heure qui suit."
 
-#: cogs/helpers/config.py:115
+#: cogs/helpers/config.py:119
 msgid "Foggy weather"
 msgstr "Temps brumeux"
 
-#: cogs/helpers/config.py:116
+#: cogs/helpers/config.py:120
 msgid ""
 "It's harder to see ducks killed. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1538,11 +1534,11 @@ msgstr ""
 "Il est plus dur de voir si vous tuez les canards. Vous aurez besoin "
 "d'attendre un peu plus de temps pour savoir si vous avez raté ou non."
 
-#: cogs/helpers/config.py:121
+#: cogs/helpers/config.py:125
 msgid "Steroids in the lake"
 msgstr "Stéroïdes dans le lac"
 
-#: cogs/helpers/config.py:122
+#: cogs/helpers/config.py:126
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1552,33 +1548,25 @@ msgstr ""
 "canards ont mutés, et vous verrez beaucoup plus de super canards. Mais, "
 "soyez prudent et ne buvez pas cette eau."
 
-#: cogs/helpers/config.py:127
+#: cogs/helpers/config.py:131
 msgid "Safety class canceled"
 msgstr "Cours de sécurité annulé"
 
-#: cogs/helpers/config.py:128
+#: cogs/helpers/config.py:132
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
 "Le cours de sécurité a été annulé, faites attention à ne pas tirer sur "
 "d'autres chasseurs !"
 
-#: cogs/helpers/config.py:133
+#: cogs/helpers/config.py:137
 msgid "Connexion problems"
 msgstr "Problèmes de connexion"
 
-#: cogs/helpers/config.py:134
-msgid ""
-"Ducks cant use the computer due to connexion problems, and there will be "
-"less of them until it's repared"
-msgstr ""
-"Les canards ne peuvent utiliser l'ordinateur en raison de problèmes de "
-"connexion, et il y en aura moins jusqu'à ce qu'il soit réparé"
-
-#: cogs/helpers/config.py:139
+#: cogs/helpers/config.py:143
 msgid "A new florist in town"
 msgstr "Un nouveau fleuriste en ville"
 
-#: cogs/helpers/config.py:140
+#: cogs/helpers/config.py:144
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them !"
@@ -1586,208 +1574,208 @@ msgstr ""
 "Un fleuriste à ouvert en ville, et vous pouvez maintenant trouver de "
 "meilleurs trèfles à 4 feuilles. Allez donc le voir!"
 
-#: cogs/helpers/config.py:145
+#: cogs/helpers/config.py:149
 msgid "Mega-ducks"
 msgstr "Mega-canards"
 
-#: cogs/helpers/config.py:146
+#: cogs/helpers/config.py:150
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr ""
 "Quelqu'un a gonflé un super canard, et maintenant ils sont ENCORE PLUS "
 "GRANDS!"
 
-#: cogs/helpers/config.py:151
+#: cogs/helpers/config.py:155
 msgid "Windy weather"
 msgstr "Temps venteux"
 
-#: cogs/helpers/config.py:152
+#: cogs/helpers/config.py:156
 msgid "Bullets are deflected by some strong wind"
 msgstr "Les balles sont déviées par un vent fort"
 
-#: cogs/helpers/config.py:167
+#: cogs/helpers/config.py:171
 msgid "public danger"
 msgstr "danger public"
 
-#: cogs/helpers/config.py:175
+#: cogs/helpers/config.py:179
 msgid "tourist"
 msgstr "touriste"
 
-#: cogs/helpers/config.py:183
+#: cogs/helpers/config.py:187
 msgid "noob"
 msgstr "noob"
 
-#: cogs/helpers/config.py:191
+#: cogs/helpers/config.py:195
 msgid "trainee"
 msgstr "stagiaire"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:203
 msgid "duck misser"
 msgstr "rateur de canards"
 
-#: cogs/helpers/config.py:207
+#: cogs/helpers/config.py:211
 msgid "member of the Comitee Against Ducks"
 msgstr "membre du Comité contre les canards"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:219
 msgid "duck hater"
 msgstr "détesteur de canards"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:227
 msgid "duck pest"
 msgstr "emmerdeur de canards"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:235
 msgid "duck hassler"
 msgstr "déplumeur de canards"
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:243
 msgid "duck plucker"
 msgstr "plumeur de canards"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:251
 msgid "hunter"
 msgstr "chasseur"
 
-#: cogs/helpers/config.py:255
+#: cogs/helpers/config.py:259
 msgid "inside out duck turner"
 msgstr "retourneur de canards"
 
-#: cogs/helpers/config.py:263
+#: cogs/helpers/config.py:267
 msgid "duck clobber"
 msgstr "assommeur de canards"
 
-#: cogs/helpers/config.py:271
+#: cogs/helpers/config.py:275
 msgid "duck chewer"
 msgstr "mâchouilleur de canards"
 
-#: cogs/helpers/config.py:279
+#: cogs/helpers/config.py:283
 msgid "duck eater"
 msgstr "bouffeur de canards"
 
-#: cogs/helpers/config.py:287
+#: cogs/helpers/config.py:291
 msgid "duck flattener"
 msgstr "aplatisseur de canards"
 
-#: cogs/helpers/config.py:295
+#: cogs/helpers/config.py:299
 msgid "duck disassembler"
 msgstr "démonteur de canards"
 
-#: cogs/helpers/config.py:303
+#: cogs/helpers/config.py:307
 msgid "duck demolisher"
 msgstr "démolisseur de canards"
 
-#: cogs/helpers/config.py:311
+#: cogs/helpers/config.py:315
 msgid "duck killer"
 msgstr "tueur de canards"
 
-#: cogs/helpers/config.py:319
+#: cogs/helpers/config.py:323
 msgid "duck skinner"
 msgstr "écorcheur de canards"
 
-#: cogs/helpers/config.py:327
+#: cogs/helpers/config.py:331
 msgid "predator"
 msgstr "prédateur"
 
-#: cogs/helpers/config.py:335
+#: cogs/helpers/config.py:339
 msgid "duck chopper"
 msgstr "découpeur de canards"
 
-#: cogs/helpers/config.py:343
+#: cogs/helpers/config.py:347
 msgid "duck decorticator"
 msgstr "décortiqueur de canards"
 
-#: cogs/helpers/config.py:351
+#: cogs/helpers/config.py:355
 msgid "duck fragger"
 msgstr "fraggeur de canards"
 
-#: cogs/helpers/config.py:359
+#: cogs/helpers/config.py:363
 msgid "duck shatterer"
 msgstr "éclateur de canards"
 
-#: cogs/helpers/config.py:367
+#: cogs/helpers/config.py:371
 msgid "duck smasher"
 msgstr "défonceur de canards"
 
-#: cogs/helpers/config.py:375
+#: cogs/helpers/config.py:379
 msgid "duck breaker"
 msgstr "bousilleur de canards"
 
-#: cogs/helpers/config.py:383
+#: cogs/helpers/config.py:387
 msgid "duck wrecker"
 msgstr "poutreur de canards"
 
-#: cogs/helpers/config.py:391
+#: cogs/helpers/config.py:395
 msgid "duck impaler"
 msgstr "empaleur de canards"
 
-#: cogs/helpers/config.py:399
+#: cogs/helpers/config.py:403
 msgid "duck eviscerator"
 msgstr "éventreur de canards"
 
-#: cogs/helpers/config.py:407
+#: cogs/helpers/config.py:411
 msgid "ducks terror"
 msgstr "terreur des canards"
 
-#: cogs/helpers/config.py:415
+#: cogs/helpers/config.py:419
 msgid "duck exploder"
 msgstr "exploseur de canards"
 
-#: cogs/helpers/config.py:423
+#: cogs/helpers/config.py:427
 msgid "duck destructor"
 msgstr "pulvérisateur de canards"
 
-#: cogs/helpers/config.py:431
+#: cogs/helpers/config.py:435
 msgid "duck blaster"
 msgstr "destructeur de canards"
 
-#: cogs/helpers/config.py:439
+#: cogs/helpers/config.py:443
 msgid "duck pulverizer"
 msgstr "pulvérisateur de canards"
 
-#: cogs/helpers/config.py:447
+#: cogs/helpers/config.py:451
 msgid "duck disintegrator"
 msgstr "désintégrateur de canards"
 
-#: cogs/helpers/config.py:455
+#: cogs/helpers/config.py:459
 msgid "duck atomizer"
 msgstr "atomiseur de canards"
 
-#: cogs/helpers/config.py:463
+#: cogs/helpers/config.py:467
 msgid "duck annihilator"
 msgstr "annihilateur de canards"
 
-#: cogs/helpers/config.py:471
+#: cogs/helpers/config.py:475
 msgid "serial duck killer"
 msgstr "serial duck killer"
 
-#: cogs/helpers/config.py:479
+#: cogs/helpers/config.py:483
 msgid "duck genocider"
 msgstr "génocideur de canards"
 
-#: cogs/helpers/config.py:487
+#: cogs/helpers/config.py:491
 msgid "unemployed due to extinction of the duck specie"
 msgstr "chômeur pour cause d'extinction de l'espèce"
 
-#: cogs/helpers/config.py:495
+#: cogs/helpers/config.py:499
 msgid "duck toaster"
 msgstr "toasteur de canards"
 
-#: cogs/helpers/config.py:503
+#: cogs/helpers/config.py:507
 msgid "old noob"
 msgstr "vieux noob"
 
-#: cogs/helpers/database.py:181
+#: cogs/helpers/database.py:187
 msgid "Level of {player} on #{channel}"
 msgstr "Niveau de {player} sur #{channel}"
 
-#: cogs/helpers/database.py:184
+#: cogs/helpers/database.py:190
 msgid "You leveled down!"
 msgstr "Vous perdez en niveau!"
 
-#: cogs/helpers/database.py:187
+#: cogs/helpers/database.py:193
 msgid "You leveled up!"
 msgstr "Vous gagnez en niveau!"
 
-#: cogs/helpers/database.py:196
+#: cogs/helpers/database.py:202
 msgid "Previous level"
 msgstr "Niveau antérieur"

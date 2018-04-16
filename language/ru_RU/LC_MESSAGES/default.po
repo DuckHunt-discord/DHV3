@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-03 12:07+0000\n"
+"POT-Creation-Date: 2018-04-13 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:87
+#: bot.py:92
 msgid ":x: A required argument is missing."
 msgstr ": x: Отсутствует требуемый аргумент."
 
@@ -66,7 +66,7 @@ msgstr "{dans} часов"
 msgid "{dans} minutes"
 msgstr "{dans} минут"
 
-#: cogs/meta.py:34
+#: cogs/meta.py:35
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
@@ -75,31 +75,31 @@ msgstr ""
 "Етот бот часта перезагружается для обновления. Не бойтис, оно роботоет 99. "
 "8% времени."
 
-#: cogs/helpers/database.py:199 cogs/scores.py:66 cogs/scores.py:300
+#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
 msgid "Exp points"
 msgstr "Очков опыта"
 
-#: cogs/scores.py:70 cogs/scores.py:293
+#: cogs/scores.py:70 cogs/scores.py:294
 msgid "Ducks killed"
 msgstr "Уток убито"
 
-#: cogs/scores.py:170
+#: cogs/scores.py:171
 msgid "Player"
 msgstr "Игрок"
 
-#: cogs/scores.py:298
+#: cogs/scores.py:299
 msgid "Best killing time"
 msgstr "Лучшее время"
 
-#: cogs/scores.py:301
+#: cogs/scores.py:302
 msgid "Ratio (exp/ducks killed)"
 msgstr "Соотношение (опыт/уток убито)"
 
-#: cogs/helpers/database.py:195 cogs/scores.py:302
+#: cogs/helpers/database.py:201 cogs/scores.py:303
 msgid "Current level"
 msgstr "Текущий уровень"
 
-#: cogs/helpers/database.py:197 cogs/scores.py:303
+#: cogs/helpers/database.py:203 cogs/scores.py:304
 msgid "Shots accuracy"
 msgstr "Точность"
 
@@ -276,70 +276,70 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "рыбу."
 
-#: cogs/helpers/config.py:167
+#: cogs/helpers/config.py:171
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/helpers/config.py:175
+#: cogs/helpers/config.py:179
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/helpers/config.py:183
+#: cogs/helpers/config.py:187
 msgid "noob"
 msgstr "нуб"
 
-#: cogs/helpers/config.py:191
+#: cogs/helpers/config.py:195
 msgid "trainee"
 msgstr "стажер"
 
-#: cogs/helpers/config.py:207
+#: cogs/helpers/config.py:211
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:251
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/helpers/config.py:255
+#: cogs/helpers/config.py:259
 msgid "inside out duck turner"
 msgstr "выворачиватель уток наизнанку"
 
-#: cogs/helpers/config.py:279
+#: cogs/helpers/config.py:283
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/helpers/config.py:311
+#: cogs/helpers/config.py:315
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:327
+#: cogs/helpers/config.py:331
 msgid "predator"
 msgstr "хищник"
 
-#: cogs/helpers/config.py:463
+#: cogs/helpers/config.py:467
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/helpers/config.py:471
+#: cogs/helpers/config.py:475
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/helpers/config.py:503
+#: cogs/helpers/config.py:507
 msgid "old noob"
 msgstr "старый нуб"
 
-#: cogs/helpers/database.py:181
+#: cogs/helpers/database.py:187
 msgid "Level of {player} on #{channel}"
 msgstr "Уровень игрока {player} на канале #{channel}"
 
-#: cogs/helpers/database.py:184
+#: cogs/helpers/database.py:190
 msgid "You leveled down!"
 msgstr "Ваш уровень уменьшен!"
 
-#: cogs/helpers/database.py:187
+#: cogs/helpers/database.py:193
 msgid "You leveled up!"
 msgstr "Ваш уровень увеличен!"
 
-#: cogs/helpers/database.py:196
+#: cogs/helpers/database.py:202
 msgid "Previous level"
 msgstr "Предыдущий уровень"
