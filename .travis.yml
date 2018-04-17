@@ -22,6 +22,7 @@ script:
 - git remote add gh-token "${GH_REF}";
 - git fetch gh-token
 - git config --global push.default simple
+- git add --all ./language/
 - DIFF=$(git diff --numstat)
 - echo "$DIFF"
 - echo "PLEASE TRAVIS! PLEASE!"
