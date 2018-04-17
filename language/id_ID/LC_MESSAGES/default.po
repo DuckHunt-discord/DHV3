@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-13 22:16+0000\n"
+"POT-Creation-Date: 2018-04-16 11:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -258,6 +258,10 @@ msgstr ""
 "(bila disita), tapi itu tidak mempengaruhi peluru di magasenmu sekarang. "
 "Kalau bisa, isi ulang sebelum beraksi!"
 
+#: cogs/meta.py:95
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Kamu menngunakan sejumlah shard {shard} dari {total} shard total."
+
 #: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
 msgid "Exp points"
 msgstr "Poin exp"
@@ -277,6 +281,14 @@ msgstr "Waktu terbaik"
 #: cogs/scores.py:92
 msgid "Can't post embeds!"
 msgstr "Tidak bisa memposkan lekatan!"
+
+#: cogs/scores.py:93
+msgid ""
+"Use `dh!setup` to see missing permissions and ask an admin to give me the "
+"missing ones!"
+msgstr ""
+"Gunakan `dh!setup` untuk mengetahui izin yang tidak ada dan minta seorang "
+"admin untuk memberikan izin tersebut!"
 
 #: cogs/scores.py:118
 msgid "Generating top scores for your channel, please wait!"
@@ -645,7 +657,16 @@ msgid ""
 "used, ducks will spawn automatically.\n"
 "Thanks for flying DucksAir. If you have any question, we are here to help at "
 "https://discord.gg/2BksEkV"
-msgstr "Selesai! <:felix:333872061103734794>"
+msgstr ""
+"Beres! <:felix:333872061103734794>\n"
+"Peringatan apapun yang terkirim di atas. Saran saya perbaikilah, lalu "
+"jalankan kembali perintahnya!\n"
+"Jika tidak ada, selamat! Kamu lulus tes dengan cemerlang!\n"
+"Jika kamu siap melanjutkan pengaturan, gunakan perintah `dh!setup_settings`. "
+"Jika hanya ingin main, gunakan `dh!add_channel`. Begitu digunakan, bebek "
+"akan muncul secara otomatis.\n"
+"Terima kasih sudah main DucksAir. Jika ada pertanyaan, kami di sini untuk "
+"membantu https://discord.gg/2BksEkV"
 
 #: cogs/shop.py:40
 msgid ""
@@ -745,3 +766,65 @@ msgstr ""
 "Ini mengurangi resiko macet sebanyak 50 persen selama sehari, hanya senilai "
 "8 poin exp. Sangat berguna bagi pemain anyar. Gunakan `dh!duckstats` untuk "
 "melihat level dan ketepatan."
+
+#: cogs/shop.py:169
+msgid ""
+":champagne: Your weapon is perfectly lubricated, you don't need any more "
+"grease."
+msgstr ""
+":champagne: Senjatamu dilumasi dengan sempurna, kamu tidak lagi memerlukan "
+"pelumas."
+
+#: cogs/shop.py:183
+msgid ":money_with_wings: You added a sight to your weapon."
+msgstr ":money_with_wings: Kamu menambahkan penglihatan pada senjatamu."
+
+#: cogs/shop.py:184
+msgid ""
+"Your aiming was improved using this formula: (100 - current accuracy) / 3."
+msgstr ""
+"Bidikanmu ditingkatkan menggunakan formula: (100 - ketepatan saat ini) / 3."
+
+#: cogs/shop.py:187
+msgid ":champagne: You already have a sight on your weapon."
+msgstr ":champagne: Kamu sudah pasangkan penglihatan atas senjatamu"
+
+#: cogs/shop.py:204
+msgid ""
+":money_with_wings: You added an infrared detector to your weapon, it will "
+"prevent any waste of ammo for a day. Cost: 15 exp points."
+msgstr ""
+":money_with_wings: Kamu menambahkan pendeteksi infra-merah di senjatamu, "
+"yang akan mencegah tersia-sianya amunisi selama satu hari. Biaya: 15 poin "
+"exp."
+
+#: cogs/shop.py:206
+msgid ":champagne: You already have an infrared detector on your weapon."
+msgstr ":champagne: Kamu sudah memiliki pendeteksi infra-merah di senjatamu."
+
+#: cogs/shop.py:220
+msgid ":money_with_wings: You added a silencer to your weapon."
+msgstr ":money_with_wings: Kamu sudah menambahkan peredam di senjatamu."
+
+#: cogs/shop.py:221
+msgid ""
+"The silencer works best if every hunter uses one, or if you're alone. With "
+"it, no ducks will fly away before you can kill them. What a good deal, they "
+"only cost 5 exp!"
+msgstr ""
+"Peredam memberi hasil terbaik jika setiap pemburu memakainya, atau jika kamu "
+"sendiri. Dengannya, takkan ada bebek yang terbang menjauh sebelum berhasil "
+"kamu tembak mati. Lumayan kan, ongkosnya hanya 5 exp!"
+
+#: cogs/shop.py:225
+msgid ":champagne: You already have a silencer on your weapon"
+msgstr ":champagne: Kamu sudah pasangkan peredam di senjatamu"
+
+#: cogs/shop.py:249
+msgid ""
+":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
+"{exp} more exp points for each killed duck for the next day."
+msgstr ""
+":money_with_wings: Kamu sudah membeli selembar semanggi segar, yang akan "
+"memberi tambahan {exp} poin exp untuk tiap bebek yang berhasil ditembak mati "
+"di hari berikut."

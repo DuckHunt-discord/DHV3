@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-13 22:16+0000\n"
+"POT-Creation-Date: 2018-04-16 11:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -255,6 +255,10 @@ msgstr ""
 "het in beslag was genomen), maar het heeft geen invloed op de kogels in je "
 "huidige magazijn. Als het kan, herlaad dan van tevoren!"
 
+#: cogs/meta.py:95
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Je gebruikt shard nummer {shard} uit het totaal van {total} shards"
+
 #: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
 msgid "Exp points"
 msgstr "Exp punten"
@@ -274,6 +278,14 @@ msgstr "Beste tijd"
 #: cogs/scores.py:92
 msgid "Can't post embeds!"
 msgstr "Kan geen insluitingen posten!"
+
+#: cogs/scores.py:93
+msgid ""
+"Use `dh!setup` to see missing permissions and ask an admin to give me the "
+"missing ones!"
+msgstr ""
+"Gebruik `dh!setup` om de missende permissies te zien en vraag een admin om "
+"mij de missende te geven!"
 
 #: cogs/scores.py:118
 msgid "Generating top scores for your channel, please wait!"
@@ -1530,6 +1542,14 @@ msgstr ""
 #: cogs/helpers/config.py:137
 msgid "Connexion problems"
 msgstr "Verbindingsproblemen"
+
+#: cogs/helpers/config.py:138
+msgid ""
+"Ducks cant use the computer due to connexion problems, and there will be "
+"less of them until it's repaired"
+msgstr ""
+"Eenden kunnen de computer niet gebruiken vanwege problemen met de "
+"verbinding, en er zullen er minder zijn totdat het is hersteld"
 
 #: cogs/helpers/config.py:143
 msgid "A new florist in town"
