@@ -23,6 +23,7 @@ script:
 - git fetch gh-token
 - git config --global push.default simple
 - git add --all ./language/
+- git reset HEAD -- language/EN/LC_MESSAGES/default.pot
 - DIFF=$(git diff --numstat)
 - echo "$DIFF"
 - echo "PLEASE TRAVIS! PLEASE!"
