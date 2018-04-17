@@ -22,10 +22,9 @@ script:
 - git remote add gh-token "${GH_REF}";
 - git fetch gh-token
 - git config --global push.default simple
-- git add --all ./language/
-- git reset HEAD -- language/EN/LC_MESSAGES/default.pot
 - DIFF=$(git diff --numstat)
 - echo "$DIFF"
+- git add --all ./language/
 - echo "PLEASE TRAVIS! PLEASE!"
 - if [ "$DIFF" != "1	1	language/EN/LC_MESSAGES/default.pot" ]; then git add language/EN/LC_MESSAGES/default.pot; git commit -a -m " travis-ci auto-update of translations"; fi;
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi;
