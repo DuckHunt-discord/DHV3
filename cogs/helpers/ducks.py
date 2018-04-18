@@ -33,7 +33,6 @@ class BaseDuck:
         self.discord_spawn_str = "-,_,.-'\`'°-,_,.-'\`'° \\_O< COIN"
         self.discord_leave_str = "·°'\`'°-.,¸¸.·°'\`"
 
-        self.logger.warning(f"BAD Duck created -> {self}")
     @property
     def logger(self):
         if not self._logger:
@@ -41,11 +40,6 @@ class BaseDuck:
             self._logger = logging.LoggerAdapter(self.bot.base_logger, extra)
 
         return self._logger
-
-    @property
-    def is_super_duck(self):
-        self.bot.logger.warning("Deprecation warning : is_super_duck used")
-        return self.type == 1
 
     @property
     def killed(self):
@@ -226,7 +220,7 @@ class MechanicalDuck(BaseDuck):
         self.user = None
         self.can_miss = False
         self.can_use_clover = False
-        self.logger.debug(f"Duck created -> {self}")
+        self.logger.debug(f"Mechanical Duck created -> {self}")
 
     @property
     def user_name(self):
