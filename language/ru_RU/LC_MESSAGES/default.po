@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-17 15:46+0000\n"
+"POT-Creation-Date: 2018-04-18 15:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,220 +111,220 @@ msgid ""
 "You can proceed without it, but shouldn't."
 msgstr " "
 
-#: cogs/shop.py:113
+#: cogs/shop.py:115
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: У вас уже есть бронебойные патроны!"
 
-#: cogs/shop.py:131
+#: cogs/shop.py:133
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
 
-#: cogs/shop.py:382
+#: cogs/shop.py:384
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: оружие {target} уже саботировано!"
 
-#: cogs/user_commands.py:143
+#: cogs/user_commands.py:144
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше оружие было саботировано, спасибо {assaillant} за эту плохую шутку."
 
-#: cogs/helpers/config.py:53
+#: cogs/helpers/config.py:60
 msgid "*cries*"
 msgstr "*плачет*"
 
-#: cogs/helpers/config.py:53
+#: cogs/helpers/config.py:60
 msgid "Hello world"
 msgstr "Привет мир"
 
-#: cogs/helpers/config.py:53
+#: cogs/helpers/config.py:60
 msgid "How are you today?"
 msgstr "Как дела сегодня?"
 
-#: cogs/helpers/config.py:53
+#: cogs/helpers/config.py:60
 msgid "Please don't kill me..."
 msgstr "Пожалуйста, не убивай меня..."
 
-#: cogs/helpers/config.py:57
+#: cogs/helpers/config.py:64
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утка улетела ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a stuffed duck."
 msgstr "фаршированную утку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a rubber ducky."
 msgstr "резиновую уточку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a vibrating duck."
 msgstr "дрожащую утку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a pile of feathers."
 msgstr "кучу перьев."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a chewed chewing gum."
 msgstr "жеванную жевательную резинку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "листовку из CACAD (Коалиция Против Комитета Против Уток)"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an old shoe."
 msgstr "старый башмак."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a cow dung."
 msgstr "коровий навоз."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an expired hunting license."
 msgstr "просроченную охотничью лицензию."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a cartridge."
 msgstr "патрон."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a cigarette butt."
 msgstr "окурок."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a used condom."
 msgstr "использованный презерватив."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a broken sight."
 msgstr "сломанный прицел."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a broken infrared detector."
 msgstr "сломанный инфракрасный датчик."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a bent silencer."
 msgstr "погнутый глушитель."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an empty box of AP ammo."
 msgstr "пустую коробку от бронебойных патронов."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an empty box of explosive ammo."
 msgstr "пустую коробку от разрывных патронов."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a four-leaf clover with only 3 left."
 msgstr "четырехлистный клевер с тремя оставшимися листьями."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a broken decoy."
 msgstr "сломанную приманку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a broken mirror."
 msgstr "сломанное зеркало."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a rusty mechanical duck."
 msgstr "ржавую механическую утку."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a pair of sunglasses without glasses."
 msgstr "пару солнцезащитных очков без линз."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "Donald's beret."
 msgstr "берет Дональда."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "a gun with banana peeled barrel."
 msgstr "ружье с разорванным стволом."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an old hunting knife."
 msgstr "старый охотничий нож."
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "старую видеозапись: http://tinyurl.com/zbejktu"
 
-#: cogs/helpers/config.py:61
+#: cogs/helpers/config.py:68
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "старое охотничье фото: http://tinyurl.com/hmn4r88"
 
-#: cogs/helpers/config.py:62
+#: cogs/helpers/config.py:69
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "старую почтовую марку: http://tinyurl.com/hbnkpzr"
 
-#: cogs/helpers/config.py:62
+#: cogs/helpers/config.py:69
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "фото золотой утки: http://tinyurl.com/hle8fjf"
 
-#: cogs/helpers/config.py:62
+#: cogs/helpers/config.py:69
 msgid "bushes."
 msgstr "кусты."
 
-#: cogs/helpers/config.py:62
+#: cogs/helpers/config.py:69
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:62
+#: cogs/helpers/config.py:69
 msgid "a fish."
 msgstr "рыбу."
 
-#: cogs/helpers/config.py:171
+#: cogs/helpers/config.py:209
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/helpers/config.py:179
+#: cogs/helpers/config.py:217
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/helpers/config.py:187
+#: cogs/helpers/config.py:225
 msgid "noob"
 msgstr "нуб"
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:233
 msgid "trainee"
 msgstr "стажер"
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:249
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:289
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/helpers/config.py:259
+#: cogs/helpers/config.py:297
 msgid "inside out duck turner"
 msgstr "выворачиватель уток наизнанку"
 
-#: cogs/helpers/config.py:283
+#: cogs/helpers/config.py:321
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/helpers/config.py:315
+#: cogs/helpers/config.py:353
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:331
+#: cogs/helpers/config.py:369
 msgid "predator"
 msgstr "хищник"
 
-#: cogs/helpers/config.py:467
+#: cogs/helpers/config.py:505
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/helpers/config.py:475
+#: cogs/helpers/config.py:513
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/helpers/config.py:507
+#: cogs/helpers/config.py:545
 msgid "old noob"
 msgstr "старый нуб"
 
