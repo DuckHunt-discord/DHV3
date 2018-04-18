@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-18 21:36+0000\n"
+"POT-Creation-Date: 2018-04-18 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1477,7 +1477,7 @@ msgstr ""
 msgid "Previous level"
 msgstr ""
 
-#: cogs/helpers/ducks.py:72
+#: cogs/helpers/ducks.py:66
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1485,33 +1485,33 @@ msgid ""
 "*COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:80
+#: cogs/helpers/ducks.py:74
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:82
+#: cogs/helpers/ducks.py:76
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:253
+#: cogs/helpers/ducks.py:247
 msgid " < *BZAACK*"
 msgstr ""
 
-#: cogs/helpers/ducks.py:255
+#: cogs/helpers/ducks.py:249
 msgid " < "
 msgstr ""
 
-#: cogs/helpers/ducks.py:258
+#: cogs/helpers/ducks.py:252
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
-#: cogs/helpers/ducks.py:260
+#: cogs/helpers/ducks.py:254
 msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
 msgstr ""
 
-#: cogs/helpers/ducks.py:278
+#: cogs/helpers/ducks.py:272
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
