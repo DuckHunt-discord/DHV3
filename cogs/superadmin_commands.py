@@ -46,6 +46,17 @@ class SuperAdmin:
         await self.bot.log(level=40, title="Bot is restarting", message=f"Exited with command", where=ctx)
         raise KeyboardInterrupt("Exited with command")
 
+    @commands.command()
+    @checks.is_super_admin()
+    async def reload_translations(self, ctx):
+        """Reload the bot translations"""
+        await self.bot.log(level=1, title="Reloading bot trnaslations", message=f"Translations are beign reloaded", where=ctx)
+        if self.bot.translations.reload():
+            await self.bot.send_message(ctx=ctx, message=":ok_hand: Translations reloaded")
+        else:
+            await self.bot.send_message(ctx=ctx, message=":x: Error reloading translations :(")
+
+
     @commands.command(pass_context=True)
     @checks.is_super_admin()
     async def broadcast(self, ctx, *, bc: str):

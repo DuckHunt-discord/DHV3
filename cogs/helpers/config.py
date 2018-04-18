@@ -586,7 +586,12 @@ def config(bot):
         def get(self, msg: str, language: str = bot.default_language):
             return self._get_translation(language).gettext(msg)
 
-    bot._ = Domain("default").get
+        def reload(self):
+            self._translations = {}
+            return True
+
+    bot.translations = Domain("default")
+    bot._ = bot.translations.get
 
 
 
