@@ -8,6 +8,8 @@ from discord.ext import commands
 from discord.ext.commands import BucketType
 
 from cogs.helpers import checks
+from cogs.helpers import ducks
+
 from cogs import spawning
 
 HOUR = 3600
@@ -486,37 +488,27 @@ class Experience:
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
-        await self.bot.db.add_to_stat(message.channel, message.author, "exp", -40)
-        await self.bot.send_message(ctx=ctx, force_pm=True, message=_(":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. It's wrong, but so funny!", language))
-
         try:
-            ctx.message.delete()
+            await ctx.message.delete()
         except discord.Forbidden:
             await self.bot.hint(ctx=ctx, message=_("If you ask a server admin to give me the `manage_message` permission, I will be able to delete that kind of shop commands ;)", language))
         except discord.NotFound:
             pass
 
-        await asyncio.sleep(90)
-        try:
-            if await self.bot.db.get_pref(ctx.guild, "emoji_ducks"):
-                if await self.bot.db.get_pref(ctx.guild, "randomize_mechanical_ducks") == 0:
-                    await self.bot.send_message(ctx=ctx, can_pm=False, mention=False, message=await self.bot.db.get_pref(ctx.guild, "emoji_used") + _(" < *BZAACK*", language))
-                else:
-                    await self.bot.send_message(ctx=ctx, can_pm=False, mention=False,
-                                                message=_(await self.bot.db.get_pref(ctx.guild, "emoji_used") + " < " + _(random.choice(self.bot.canards_cri), language)))
-            else:
+        await self.bot.db.add_to_stat(message.channel, message.author, "exp", -40)
+        await self.bot.send_message(ctx=ctx, force_pm=True, message=_(":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. It's wrong, but so funny!", language))
 
-                if await self.bot.db.get_pref(ctx.guild, "randomize_mechanical_ducks") == 0:
-                    await self.bot.send_message(ctx=ctx, can_pm=False, mention=False, message=_("-_-'\`'°-_-.-'\`'° %__%   *BZAACK*", language))
-                elif await self.bot.db.get_pref(ctx.guild, "randomize_mechanical_ducks") == 1:
-                    await self.bot.send_message(ctx=ctx, can_pm=False, mention=False, message="-_-'\`'°-_-.-'\`'° %__%    " + _(random.choice(self.bot.canards_cri), language=language))
-                else:
-                    await self.bot.send_message(ctx=ctx, can_pm=False, mention=False,
-                                                message=random.choice(self.bot.canards_trace) + "  " + random.choice(self.bot.canards_portrait) + "  " + _(random.choice(self.bot.canards_cri),
-                                                                                                                                                           language=language))  # ASSHOLE ^^
 
-        except:
-            pass
+
+        async def spawn_mech_duck():
+            await asyncio.sleep(90)
+            duck = await ducks.MechanicalDuck.create(self.bot, ctx.channel, user=ctx.message.author)
+            await spawning.spawn_duck(self.bot, ctx.channel, instance=duck, ignore_event=True)
+
+        asyncio.ensure_future(spawn_mech_duck())
+
+
+
 
 
 def setup(bot):

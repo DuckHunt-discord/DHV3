@@ -7,6 +7,7 @@ from cogs import spawning
 import argparse
 import tabulate
 
+from cogs.helpers import ducks
 
 class Admin:
     def __init__(self, bot):
@@ -110,7 +111,17 @@ class Admin:
         except SystemExit:
             await self.bot.hint(ctx=ctx, message="You have to use `--super-duck` & `--life X` here.")
             return
-        await spawning.spawn_duck(self.bot, ctx.channel, super_duck=args.super_duck, life=max(1, args.life))
+
+        type = ducks.SuperDuck if args.super_duck else ducks.Duck
+
+        duck = await type.create(self.bot, ctx.channel)
+        if args.life:
+            duck.life = args.life
+            duck.starting_life = args.life
+
+
+
+        await spawning.spawn_duck(self.bot, ctx.channel, instance=duck)
 
     @commands.command(aliases=["reset_user"])
     @checks.is_server_admin()

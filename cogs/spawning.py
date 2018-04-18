@@ -7,45 +7,11 @@ import time
 
 import discord
 
+from cogs.helpers import ducks
+
 MINUTE = 60
 HOUR = MINUTE * 60
 DAY = HOUR * 24
-
-
-class Duck:
-    def __init__(self, bot, channel, super_duck, life, exp, ttl):
-        self.channel = channel
-        self.is_super_duck = super_duck
-        self.starting_life = life
-        self.life = self.starting_life
-        self.spawned_at = int(time.time())
-
-        self.staying_until = self.spawned_at + ttl
-        self.exp_value = exp
-
-    @property
-    def killed(self):
-        if self.life <= 0:
-            return True
-        else:
-            return False
-
-    @property
-    def time(self):
-        return self.spawned_at
-
-    def __repr__(self):
-        now = int(time.time())
-        kind = "Super duck" if self.is_super_duck else "Duck"
-        return f"{kind} spawned {now - self.spawned_at} seconds ago on {self.channel.id}. " \
-               f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
-
-    def __str__(self):
-        now = int(time.time())
-        kind = "Super duck" if self.is_super_duck else "Duck"
-        return f"{kind} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name} " \
-               f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
-
 
 async def make_all_ducks_leave(bot):
     bot.logger.info("Bot shutting down")
@@ -105,68 +71,44 @@ async def planifie(bot, channel=None, new_day=True):
                 total_global_ducks += await planifie(bot, channel=to_plan_channel, new_day=new_day)
                 channel_count += 1
 
-        await bot.log(level=30, title="New planification task done", message=f"{total_global_ducks} ducks are planned for today in {channel_count} channels.",
-                      where=None)
+        await bot.log(level=30, title="New planification task done", message=f"{total_global_ducks} ducks are planned for today in {channel_count} channels.", where=None)
 
 
-
-async def spawn_duck(bot, channel, super_duck=False, life=1, life_multiplicator=1, ignore_event=False):
+async def spawn_duck(bot, channel, instance=None, ignore_event=False):
     if bot.can_spawn:
-        s = time.time()
-        _ = bot._
-        language = await bot.db.get_pref(channel.guild, "language")
-        ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
-        super_ducks_chance = await bot.db.get_pref(channel.guild, "super_ducks_chance")
-        exp_value = await bot.db.get_pref(channel.guild, "exp_won_per_duck_killed")
-
         if not ignore_event and bot.current_event['id'] == 5:
             if random.randint(0, 100) <= bot.current_event['ducks_cancel_chance']:
                 bot.logger.debug(f"A duck was canceled due to `connexion problems` (event)")
-                return
+                return False
 
         if not ignore_event and bot.current_event['id'] == 1:
             if random.randint(0, 100) <= bot.current_event['chance_for_second_duck']:
                 await spawn_duck(bot, channel, ignore_event=True)
 
-        chance = random.randint(0, 100)
-        if not ignore_event and bot.current_event['id'] == 3:
-            chance -= bot.current_event['chance_added_for_super_duck']
+        if not instance:
 
-        if super_duck or chance < super_ducks_chance:
-            super_duck = True
-            min_life = await bot.db.get_pref(channel.guild, "super_ducks_minlife")
-            max_life = await bot.db.get_pref(channel.guild, "super_ducks_maxlife")
-            life = life_multiplicator * random.randint(min(min_life, max_life), max(min_life, max_life)) if life == 1 else life
-            if not ignore_event and bot.current_event['id'] == 7:
-                life += bot.current_event['life_to_add']
-            exp_value = exp_value * await bot.db.get_pref(channel.guild, "super_ducks_exp_multiplier") * life
+            population = [
+                ducks.Duck,
+                ducks.SuperDuck
+            ]
 
-        # bot.logger.debug(f"First checks took {time.time() - s} seconds to return.")
+            weights = [
+                await bot.db.get_pref(channel.guild, "ducks_chance"),
+                await bot.db.get_pref(channel.guild, "super_ducks_chance")  # Modified below by event n°3
+            ]
 
-        duck = Duck(bot, channel, super_duck, life, int(exp_value), ttl)
+            if not ignore_event and bot.current_event['id'] == 3:
+                weights[1] -= bot.current_event['chance_added_for_super_duck']
 
-        # bot.logger.debug(f"Duck creation took {time.time() - s} seconds in total.")
-        bot.ducks_spawned.append(duck)
-        # bot.logger.debug(f"Duck appending took {time.time() - s} seconds in total.")
+            type = random.choices(population, weights=weights, k=1)[0]
 
-        if await bot.db.get_pref(channel.guild, "emoji_ducks"):
-            corps = await bot.db.get_pref(channel.guild, "emoji_used") + " < "
-        else:
-            corps = random.choice(bot.canards_trace) + "  " + random.choice(bot.canards_portrait) + "  "
+            instance = await type.create(bot, channel, ignore_event)
 
-        if await bot.db.get_pref(channel.guild, "randomize_ducks"):
-            canard_str = corps + _(random.choice(bot.canards_cri), language=language)
-        else:
-            canard_str = corps + "QUAACK"
+        bot.ducks_spawned.append(instance)
 
-        # bot.logger.debug(f"Pre-duck spawning took {time.time() - s} seconds in total for {duck}.")
-
-        await bot.send_message(where=channel, mention=False, can_pm=False, message=canard_str)
-
-        # bot.logger.debug(f"It took {time.time() - s} seconds to spawn this duck.")
-        bot.logger.debug(f"New duck : {duck}")
+        await bot.send_message(where=channel, mention=False, can_pm=False, message=instance.discord_spawn_str)
     else:
-        return
+        return False
 
 
 async def event_gen(bot, force=False):
@@ -181,7 +123,7 @@ async def event_gen(bot, force=False):
         bot.logger.info(f"[EVENT] Selected event : {bot.current_event['name']}")
 
     else:
-        #await bot.log(level=9, title="No new event rolled out", message=f"No event active until the next hour", where=None)
+        # await bot.log(level=9, title="No new event rolled out", message=f"No event active until the next hour", where=None)
 
         bot.logger.info("[EVENT] No new event, see you next time!")
 
@@ -284,25 +226,23 @@ async def background_loop(bot):
             for duck in bot.ducks_spawned:
                 if duck.staying_until < now:  # Canard qui se barre
                     _ = bot._
-                    language = await bot.db.get_pref(duck.channel.guild, "language")
-                    extra = {"channelid": duck.channel.id, "userid": 0}
-                    logger = logging.LoggerAdapter(bot.base_logger, extra)
-                    logger.debug(f"A duck is leaving : {duck}")
+                    duck.logger.debug(f"A duck is leaving : {duck}")
 
                     try:
-                        await bot.send_message(where=duck.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language))
+                        if duck.discord_leave_str:
+                            await bot.send_message(where=duck.channel, can_pm=False, mention=False, message=duck.discord_leave_str)
                     except Exception as e:
-                        logger.debug(f"I couldn't get a duck to leave : {duck} failed with {e}")
+                        duck.logger.debug(f"I couldn't get a duck to leave : {duck} failed with {e}")
 
                     try:
                         bot.ducks_spawned.remove(duck)
                     except ValueError:
-                        logger.debug(f"Race condiction on removing {duck}")
+                        duck.logger.debug(f"Race condiction on removing {duck}")
 
                         pass
 
             now = time.time()
-            #bot.logger.debug("On schedule : " + str(last_iter + 1 - now))
+            # bot.logger.debug("On schedule : " + str(last_iter + 1 - now))
             bot.loop_latency = last_iter + 1 - now
 
             if last_iter + 1 <= now:

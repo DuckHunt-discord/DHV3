@@ -4,13 +4,6 @@ node_modules/*
 .DS_Store
 .idea/
 DHV2.iml
-LICENSE.txt
 __pycache__/
 
-dh.log
-scores.db
-default.LC_MESSAGES/english.mo
-default.LC_MESSAGES/english.po
-/community/mods/current_case.txt
-/cogs/helpers/config.py
 DHV3.iml

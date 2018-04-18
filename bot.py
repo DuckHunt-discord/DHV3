@@ -205,7 +205,6 @@ class DuckHunt(commands.AutoShardedBot):
             if force_pm or (can_pm and await self.db.get_pref(where.guild, "pm_most_messages")):
                 if from_:  # If I have someone to PM
                     where = await from_.create_dm()
-                    me = self.user
                     permissions = True
                 else:
                     logger.warning(f"I want to PM this message, but I can't since I don't have a from_ User\n"

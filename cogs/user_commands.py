@@ -5,7 +5,8 @@ import discord
 import time
 from discord.ext import commands
 from cogs.helpers import checks
-from cogs import spawning
+from cogs.helpers import ducks
+
 
 
 class User:
@@ -214,7 +215,7 @@ class User:
 
         # 9/ Will the duck stay ?
         chance = random.randint(0, 100)
-        duck_will_leave = chance < await get_pref(guild, "duck_frighten_chance")
+        duck_will_leave = chance < await duck.get_frighten_chance()
         duck_will_leave = duck_will_leave and not await get_stat(channel, author, "silencieux") > int(now)
 
         if duck_will_leave:
@@ -263,7 +264,8 @@ class User:
             await add_to_stat(channel, author, "murders", 1)
 
         # 11/ Duck missed
-        if chance > accuracy:
+
+        if chance > accuracy and duck.can_miss:
 
             kill_on_miss_chance = await get_pref(guild, "chance_to_kill_on_missed")
             chance_kill = random.randint(0, 100)
@@ -343,7 +345,7 @@ class User:
 
             # 13b/ Clover
             trefle = 0
-            if await get_stat(channel, author, "trefle") > now:
+            if await get_stat(channel, author, "trefle") > now and duck.can_use_clover:
                 trefle = await get_stat(channel, author, "trefle_exp")
                 await add_to_stat(channel, author, "exp_won_with_clover", trefle)
                 exp += trefle
@@ -355,7 +357,7 @@ class User:
             await add_to_stat(channel, author, "exp", exp)
             await add_to_stat(channel, author, "killed_ducks", 1)
 
-            if duck.is_super_duck:
+            if isinstance(duck, ducks.SuperDuck):
                 await add_to_stat(channel, author, "killed_super_ducks", 1)
 
             # 13e/ Best time
@@ -370,25 +372,21 @@ class User:
             else:
                 exp_str = f"[{exp - trefle} exp + **{trefle} clover**]"
 
-            await self.sendBangMessage(ctx, _(":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} "
-                                              "were super-ducks) killed on #{channel}.     \_X<   *COUAC*   {exp}", language).format(
-                **{"time": round(time_taken, 4), "total": await get_stat(channel, author, "killed_ducks"), "channel": channel,
-                    "exp": exp_str,
-                    "supercanards": await get_stat(channel, author, "killed_super_ducks"),
-                    "onomatopoeia": ono}))
+            await self.sendBangMessage(ctx, (await duck.get_killed_string()).format(
+                **{"time": round(time_taken, 4),
+                   "total": await get_stat(channel, author, "killed_ducks"), "channel": channel,
+                   "exp": exp_str,
+                   "supercanards": await get_stat(channel, author, "killed_super_ducks"),
+                   "onomatopoeia": ono}))
 
             # Don't return right now, we need to do bushes
         else:
-            if await get_pref(guild, "show_super_ducks_life"):
-                await self.sendBangMessage(ctx, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} ({current_life} / {max_life})]", language)
-                                           .format(
-                    **{
-                        "vie":vieenmoins,
-                        "current_life": duck.life,
-                        "max_life": duck.starting_life
-                    }))
-            else:
-                await self.sendBangMessage(ctx, _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language).format(**{"vie": vieenmoins}))
+            await self.sendBangMessage(ctx, (await duck.get_harmed_message()).format(
+                **{
+                    "vie":vieenmoins,
+                    "current_life": duck.life,
+                    "max_life": duck.starting_life
+                }))
             await add_to_stat(channel, author, "shoots_harmed_duck", 1)
 
             return

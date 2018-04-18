@@ -1,10 +1,12 @@
 import gettext
 import logging
+import json
 
 import discord
 from discord.ext import commands
 
 from cogs.helpers import context
+
 
 
 def config(bot):
@@ -22,6 +24,10 @@ def config(bot):
     comments. Thanks for using DuckHunt :)
     """
 
+    # Load credentials so they can be used later
+    with open("credentials.json", "r") as f:
+        credentials = json.load(f)
+
     # That function is here to mark items as "to be translated"
     def _(string):
         return string
@@ -32,7 +38,8 @@ def config(bot):
     bot.configured = False
 
     # This is the bot token. Used by the bot to connect to discord.
-    bot.token = ""
+    # As this is a sensitive setting, you need to change it in credentials.json
+    bot.token = credentials["token"]
 
 
     # > Language settings < #
@@ -81,10 +88,12 @@ def config(bot):
 
     # > Statistics settings < #
     # Key to send statistics to https://bots.discord.pw/
-    bot.bots_discord_pw_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIxMzg3NTE0ODQ1MTc5NDEyNTkiLCJyYW5kIjo2NzIsImlhdCI6MTQ3ODk4NTg2MH0.dhcxZMCU1EdoAk0JoGCPl8cAYVQxAGWhdsiJSIEsNgw"
+    # As this is a sensitive setting, you need to change it in credentials.json
+    bot.bots_discord_pw_key = credentials["bots_discord_pw_key"]
 
     # Key to send statistics to https://discordbots.org/
-    bot.discordbots_org_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4NzYzNjA4OTA3MzE3MjQ4MSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTA5Mzk1ODE0fQ.FyOAXViKClUs8fhLPqWGlVvcgEGIcLlLh9GBRX_Vkc0"
+    # As this is a sensitive setting, you need to change it in credentials.json
+    bot.discordbots_org_key = credentials["discordbots_org_key"]
 
     # > User settings < #
     # This is a list of users IDs that are set as super admins on the bot. The bot will accept any command, from them,
@@ -92,11 +101,40 @@ def config(bot):
     bot.admins = [138751484517941259]
 
     # This is a list of users that are blacklisted from the bot. The bot will ignore dem messages
-    bot.blacklisted_users = [377585801258598410,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
-                             293533150204657675,  # Admin on the previous guy server
-                             386516042882482177,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
-                             # Was sorry so unbanned |  330841376474267651,  # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
-                             ]
+    bot.blacklisted_users = [
+        # 2018-03-01
+        # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+        377585801258598410,
+
+        # 2018-03-01
+        # Admin on the previous guy server
+        293533150204657675,
+
+        # 2018-03-01
+        # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours.
+        # Unrelated to the two previous guys
+        386516042882482177,
+
+        # 2018-03-01
+        # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
+        # Unrelated too
+        # > Was sorry so unbanned
+        # 330841376474267651,
+
+        # 2018-04-15
+        # Abused the unlimited number of channels to get an higer number of ducks on his 5 members guild.
+        # With 26 channels created, we have a winner.
+        # https://api-d.com/snaps/2018-04-15_23-14-13-3ggwqd57mj.png
+        331466244131782661,
+
+        # 2018-04-15
+        # Abused the unlimited number of channels to get an higer number of ducks on his 1 member guild.
+        # [20]Tunbridge Wells PoGo Raid (342562516850704385) : Owned by 339294911935414272 with 5 members
+        # 20 channels total, owner of the server
+        339294911935414272,
+
+        # All for now
+        ]
 
     # Bot Log Channel
     bot.log_channel_id = 432934518479912960

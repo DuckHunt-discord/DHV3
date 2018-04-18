@@ -3,7 +3,7 @@ import time
 import psutil
 from aiohttp import web
 import os
-
+from cogs.helpers import ducks
 
 routes = web.RouteTableDef()
 
@@ -32,7 +32,7 @@ class Api:
         await bot.wait_until_ready()
 
         total_ducks_spawned = len(bot.ducks_spawned)
-        super_ducks_spawned = sum(d.is_super_duck for d in bot.ducks_spawned)
+        super_ducks_spawned = sum(isinstance(d, ducks.SuperDuck) for d in bot.ducks_spawned)
 
         res = [int(time.time() * 1000), total_ducks_spawned - super_ducks_spawned, super_ducks_spawned]
 
