@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-18 15:43+0000\n"
+"POT-Creation-Date: 2018-04-18 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1579,7 +1579,7 @@ msgstr "Levelmu naik!"
 msgid "Previous level"
 msgstr "Level terdahulu"
 
-#: cogs/helpers/ducks.py:72
+#: cogs/helpers/ducks.py:66
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1590,7 +1590,7 @@ msgstr ""
 "{time} detik, sekarang jumlah totalmu {total} bebek (yang {supercanards} "
 "merupakan bebek super) ditembak mati di #{channel}.    \\_X<   *KOUAK* {exp}"
 
-#: cogs/helpers/ducks.py:80
+#: cogs/helpers/ducks.py:74
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1598,21 +1598,21 @@ msgstr ""
 ":gun: Bebeknya masih hidup, coba lagi! *BEBEK SUPER TERDETEKSI*[nyawa: -"
 "{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:82
+#: cogs/helpers/ducks.py:76
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: Bebeknya masih hidup, coba lagi! *BEBEK SUPER TERDETEKSI* [nyawa: -"
 "{nyawa: -{vie}]"
 
-#: cogs/helpers/ducks.py:253
+#: cogs/helpers/ducks.py:247
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/helpers/ducks.py:255
+#: cogs/helpers/ducks.py:249
 msgid " < "
 msgstr "<"
 
-#: cogs/helpers/ducks.py:258
+#: cogs/helpers/ducks.py:252
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"

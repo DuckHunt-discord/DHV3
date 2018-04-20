@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-18 15:43+0000\n"
+"POT-Creation-Date: 2018-04-18 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1764,7 +1764,7 @@ msgstr "Vous gagnez en niveau!"
 msgid "Previous level"
 msgstr "Niveau antérieur"
 
-#: cogs/helpers/ducks.py:72
+#: cogs/helpers/ducks.py:66
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1775,7 +1775,7 @@ msgstr ""
 "qui vous fait un total de {total} canards (dont {supercanards} supercanards) "
 "sur #{channel}.     \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:80
+#: cogs/helpers/ducks.py:74
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1783,28 +1783,28 @@ msgstr ""
 ":gun: Le canard a survécu! *SUPER CANARD DÉTECTÉ* [vie: -{vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:82
+#: cogs/helpers/ducks.py:76
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ":gun: Le canard a survécu! *SUPER CANARD DÉTECTÉ* [vie: -{vie}]"
 
-#: cogs/helpers/ducks.py:253
+#: cogs/helpers/ducks.py:247
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/helpers/ducks.py:255
+#: cogs/helpers/ducks.py:249
 msgid " < "
 msgstr "<"
 
-#: cogs/helpers/ducks.py:258
+#: cogs/helpers/ducks.py:252
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 
-#: cogs/helpers/ducks.py:260
+#: cogs/helpers/ducks.py:254
 msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%"
 
-#: cogs/helpers/ducks.py:278
+#: cogs/helpers/ducks.py:272
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"

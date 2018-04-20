@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-18 15:43+0000\n"
+"POT-Creation-Date: 2018-04-18 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -211,8 +211,8 @@ msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr ""
-"De bot wordt vaak opnieuw opgestart voor updates. Maak je geen zorgen, het "
-"heeft een uptime van 99,8%."
+"De bot wordt vaak opnieuw opgestart voor updates. Maak je geen zorgen, de "
+"bot heeft een uptime van 99,8%."
 
 #: cogs/meta.py:56
 msgid "Here is the command list : http://duckhunt.me/command-list/"
@@ -1733,7 +1733,7 @@ msgstr "Je bent een niveau omhoog gegaan!"
 msgid "Previous level"
 msgstr "Vorig niveau"
 
-#: cogs/helpers/ducks.py:72
+#: cogs/helpers/ducks.py:66
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1744,7 +1744,7 @@ msgstr ""
 "gedood, je zit nu op een totaal van {total} eenden (waarvan {supercanards} "
 "super-eenden waren) gedood op #{channel}.    \\_X<  *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:80
+#: cogs/helpers/ducks.py:74
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1752,21 +1752,33 @@ msgstr ""
 ":gun: De eend heeft het overleefd, probeer het opnieuw! *SUPER EEND "
 "GEDETECTEERD* [life: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:82
+#: cogs/helpers/ducks.py:76
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: De eend heeft het overleefd, probeer het opnieuw! *SUPER EEND "
 "GEDETECTEERD* [levens: -{vie}]"
 
-#: cogs/helpers/ducks.py:253
+#: cogs/helpers/ducks.py:247
 msgid " < *BZAACK*"
 msgstr " < *BZAACK*"
 
-#: cogs/helpers/ducks.py:255
+#: cogs/helpers/ducks.py:249
 msgid " < "
 msgstr "<"
 
-#: cogs/helpers/ducks.py:258
+#: cogs/helpers/ducks.py:252
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
+
+#: cogs/helpers/ducks.py:254
+msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
+msgstr "-_-'\\`'°-_-.-'\\`'° %__%"
+
+#: cogs/helpers/ducks.py:272
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviouly won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Je bent misleid door {user_mention} om een mechanische eend te doden. Het "
+"zal natuurlijk niet werken, en je verloor 1 exp voor dit gemiste schot"

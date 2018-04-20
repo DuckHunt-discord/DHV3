@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-18 15:43+0000\n"
+"POT-Creation-Date: 2018-04-18 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1755,7 +1755,7 @@ msgstr "¡Has subido un nivel!"
 msgid "Previous level"
 msgstr "Nivel previo"
 
-#: cogs/helpers/ducks.py:72
+#: cogs/helpers/ducks.py:66
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1767,7 +1767,7 @@ msgstr ""
 "{supercanards} fueron super-patos) asesinados en #{channel}.  \\ _X < * CUAC "
 "* {exp}"
 
-#: cogs/helpers/ducks.py:80
+#: cogs/helpers/ducks.py:74
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1775,21 +1775,21 @@ msgstr ""
 ":gun: El pato sobrevivió, Inténtalo otra vez! *SUPER PATO DETECTADO* [Puntos "
 "de Vida: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:82
+#: cogs/helpers/ducks.py:76
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
 
-#: cogs/helpers/ducks.py:253
+#: cogs/helpers/ducks.py:247
 msgid " < *BZAACK*"
 msgstr " < *BZAACK* "
 
-#: cogs/helpers/ducks.py:255
+#: cogs/helpers/ducks.py:249
 msgid " < "
 msgstr " < "
 
-#: cogs/helpers/ducks.py:258
+#: cogs/helpers/ducks.py:252
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
