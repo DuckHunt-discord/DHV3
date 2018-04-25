@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-24 15:18+0000\n"
+"POT-Creation-Date: 2018-04-25 10:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 
-#: bot.py:92
+#: bot.py:109
 msgid ":x: A required argument is missing."
 msgstr ""
 
-#: bot.py:95
+#: bot.py:112
 msgid ":x: You don't have enough exp for this"
 msgstr ""
 
-#: bot.py:98
+#: bot.py:115
 msgid ":x: You are not a server admin"
 msgstr ""
 
-#: bot.py:101
+#: bot.py:118
 msgid ":x: You are not a super admin."
 msgstr ""
 
-#: bot.py:102
+#: bot.py:119
 msgid ""
 "This command is reserved for the bot owners. If you think this is an "
 "error, please contact my owner at the DuckHunt Support Server (see "
 "`dh!help`)."
 msgstr ""
 
-#: bot.py:124
+#: bot.py:141
 msgid ":bulb: HINT: "
 msgstr ""
 
@@ -72,58 +72,58 @@ msgstr ""
 msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
 msgstr ""
 
-#: cogs/admin_commands.py:136 cogs/admin_commands.py:162
+#: cogs/admin_commands.py:146 cogs/admin_commands.py:172
 msgid "Done. User removed from the database, if it was in."
 msgstr ""
 
-#: cogs/admin_commands.py:149
+#: cogs/admin_commands.py:159
 msgid "Done. All the channel data was removed."
 msgstr ""
 
-#: cogs/admin_commands.py:174
+#: cogs/admin_commands.py:184
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings "
 "[view/set/reset/list/modified] [setting if applicable]`"
 msgstr ""
 
-#: cogs/admin_commands.py:184 cogs/admin_commands.py:199
+#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
 msgid "<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
 msgstr ""
 
-#: cogs/admin_commands.py:187
+#: cogs/admin_commands.py:197
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:209
+#: cogs/admin_commands.py:219
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
 
-#: cogs/admin_commands.py:211
+#: cogs/admin_commands.py:221
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at "
 "`{max}` ducks per day."
 msgstr ""
 
-#: cogs/admin_commands.py:219
+#: cogs/admin_commands.py:229
 msgid ":duck: Authorised to set the VIP status!"
 msgstr ""
 
-#: cogs/admin_commands.py:221
+#: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
-#: cogs/admin_commands.py:224 cogs/admin_commands.py:235
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/admin_commands.py:231
+#: cogs/admin_commands.py:241
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:256
+#: cogs/admin_commands.py:266
 msgid ""
 "The list of preferences is available on our new website: "
 "https://duckhunt.me/bot-settings/"
@@ -222,7 +222,7 @@ msgstr ""
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr ""
 
-#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
+#: cogs/helpers/database.py:210 cogs/scores.py:66 cogs/scores.py:301
 msgid "Exp points"
 msgstr ""
 
@@ -264,7 +264,7 @@ msgstr ""
 msgid "Player"
 msgstr ""
 
-#: cogs/helpers/database.py:211 cogs/scores.py:178 cogs/scores.py:365
+#: cogs/helpers/database.py:216 cogs/scores.py:178 cogs/scores.py:365
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
@@ -320,19 +320,19 @@ msgstr ""
 msgid "Ratio (exp/ducks killed)"
 msgstr ""
 
-#: cogs/helpers/database.py:201 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/scores.py:303
 msgid "Current level"
 msgstr ""
 
-#: cogs/helpers/database.py:201 cogs/helpers/database.py:202 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:303
 msgid "nom"
 msgstr ""
 
-#: cogs/helpers/database.py:203 cogs/scores.py:304
+#: cogs/helpers/database.py:208 cogs/scores.py:304
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/helpers/database.py:204 cogs/scores.py:305
+#: cogs/helpers/database.py:209 cogs/scores.py:305
 msgid "Weapon reliability"
 msgstr ""
 
@@ -893,115 +893,87 @@ msgid ""
 "exp. It's wrong, but so funny!"
 msgstr ""
 
-#: cogs/user_commands.py:60 cogs/user_commands.py:131
+#: cogs/user_commands.py:61 cogs/user_commands.py:132
 msgid "You don't have a weapon."
 msgstr ""
 
-#: cogs/user_commands.py:66
+#: cogs/user_commands.py:67
 msgid "You unjammed your weapon."
 msgstr ""
 
-#: cogs/user_commands.py:80
+#: cogs/user_commands.py:81
 msgid "You reloaded your weapon."
 msgstr ""
 
-#: cogs/user_commands.py:82
+#: cogs/user_commands.py:83
 msgid "You don't have any ammo left!"
 msgstr ""
 
-#: cogs/user_commands.py:85
+#: cogs/user_commands.py:86
 msgid "You don't need to reload your weapon."
 msgstr ""
 
-#: cogs/user_commands.py:88
+#: cogs/user_commands.py:89
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines "
 "left: {chargeurs_actuels}/{chargeurs_max}"
 msgstr ""
 
-#: cogs/user_commands.py:124
+#: cogs/user_commands.py:125
 msgid "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 
-#: cogs/user_commands.py:137
+#: cogs/user_commands.py:138
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr ""
 
-#: cogs/user_commands.py:144
+#: cogs/user_commands.py:145
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 
-#: cogs/user_commands.py:154
+#: cogs/user_commands.py:155
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
 msgstr ""
 
-#: cogs/user_commands.py:179
+#: cogs/user_commands.py:180
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr ""
 
-#: cogs/user_commands.py:198
+#: cogs/user_commands.py:199
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
 msgstr ""
 
-#: cogs/user_commands.py:208
+#: cogs/user_commands.py:209
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
 msgstr ""
 
-#: cogs/user_commands.py:229 cogs/user_commands.py:314
-msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
-msgstr ""
-
-#: cogs/user_commands.py:233
-msgid ""
-"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed:"
-" -1 xp]"
-msgstr ""
-
-#: cogs/user_commands.py:300
+#: cogs/user_commands.py:292
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
 "[hunting accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
 
-#: cogs/user_commands.py:305
+#: cogs/user_commands.py:297
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] "
 "[hunting accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
 
-#: cogs/user_commands.py:308
+#: cogs/user_commands.py:300
 msgid ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
 msgstr ""
 
-#: cogs/user_commands.py:321
-msgid "BPAM"
-msgstr ""
-
-#: cogs/user_commands.py:325
-msgid "BAAM"
-msgstr ""
-
-#: cogs/user_commands.py:329
-msgid "BOUM"
-msgstr ""
-
-#: cogs/user_commands.py:329
-msgid "SPROTCH"
-msgstr ""
-
-#: cogs/user_commands.py:338
-msgid ""
-"That was close, you almost killed the duck, but the other hunter got it "
-"first! [missed: -1 xp]"
+#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr ""
 
 #: cogs/helpers/config.py:60
@@ -1461,23 +1433,51 @@ msgstr ""
 msgid "old noob"
 msgstr ""
 
-#: cogs/helpers/database.py:187
+#: cogs/helpers/database.py:192
 msgid "Level of {player} on #{channel}"
 msgstr ""
 
-#: cogs/helpers/database.py:190
+#: cogs/helpers/database.py:195
 msgid "You leveled down!"
 msgstr ""
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:198
 msgid "You leveled up!"
 msgstr ""
 
-#: cogs/helpers/database.py:202
+#: cogs/helpers/database.py:207
 msgid "Previous level"
 msgstr ""
 
-#: cogs/helpers/ducks.py:66
+#: cogs/helpers/ducks.py:94
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed:"
+" -1 xp]"
+msgstr ""
+
+#: cogs/helpers/ducks.py:105
+msgid "BPAM"
+msgstr ""
+
+#: cogs/helpers/ducks.py:109
+msgid "BAAM"
+msgstr ""
+
+#: cogs/helpers/ducks.py:113
+msgid "BOUM"
+msgstr ""
+
+#: cogs/helpers/ducks.py:113
+msgid "SPROTCH"
+msgstr ""
+
+#: cogs/helpers/ducks.py:179
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr ""
+
+#: cogs/helpers/ducks.py:223
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1485,35 +1485,52 @@ msgid ""
 "*COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:74
+#: cogs/helpers/ducks.py:231
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:76
+#: cogs/helpers/ducks.py:233
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:247
+#: cogs/helpers/ducks.py:385
 msgid " < *BZAACK*"
 msgstr ""
 
-#: cogs/helpers/ducks.py:249
+#: cogs/helpers/ducks.py:387
 msgid " < "
 msgstr ""
 
-#: cogs/helpers/ducks.py:252
+#: cogs/helpers/ducks.py:390
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr ""
 
-#: cogs/helpers/ducks.py:254
+#: cogs/helpers/ducks.py:392
 msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
 msgstr ""
 
-#: cogs/helpers/ducks.py:272
+#: cogs/helpers/ducks.py:410
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+
+#: cogs/helpers/ducks.py:474
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time}"
+" seconds, and you shouldn't have done this! You'll lose some exp, because"
+" you shouldn't kill babies\\_X<   *COUAC*   {exp}"
+msgstr ""
+
+#: cogs/helpers/ducks.py:492
+msgid "I AM... Your mother"
+msgstr ""
+
+#: cogs/helpers/ducks.py:500
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, "
+"but you won't kill my children! \\_X<   *COUAC*   {exp}"
 msgstr ""
 
