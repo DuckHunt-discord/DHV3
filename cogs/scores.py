@@ -42,22 +42,30 @@ class Scores:
     @checks.is_channel_enabled()
     @commands.cooldown(3, 60, BucketType.channel)
     async def top(self, ctx, *, args: str = ""):
+        message = ctx.message
+        channel = message.channel
+        _ = self.bot._
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+
         args = args.split()
         parser = argparse.ArgumentParser(description='Parse the top command.')
         # parser.add_argument('--show', dest='count', type=int, default=10)
 
         parser.add_argument('--sort-by', dest='sort_by', type=str, default="exp", choices=["exp", "killed", "missed", "time"])
 
+        await self.bot.send_message(ctx=ctx, message=_("The scores are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}", language).format(
+            channel_id=ctx.channel.id))
+        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : https://discord.gg/G4skWae. Thanks! ")
+
+
         try:
             args = parser.parse_args(args)
         except SystemExit:
-            await self.bot.hint(ctx=ctx, message="You have to use `--sort-by [exp/killed/missed/time]` here.")
+            await self.bot.hint(ctx=ctx, message=_("You have to use `--sort-by [exp/killed/missed/time]` here.", language))
             return
 
-        message = ctx.message
-        channel = message.channel
-        _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+
 
         permissions = channel.permissions_for(message.guild.me)
 
@@ -244,6 +252,11 @@ class Scores:
 
         if not target:
             target = ctx.message.author
+
+        await self.bot.send_message(ctx=ctx, message=_("The Duckstats are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}", language).format(
+            channel_id=ctx.channel.id, player_id=target.id))
+        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : https://discord.gg/G4skWae. Thanks! ")
+
 
         gs = Get_Stats(self.bot, channel, target)
 

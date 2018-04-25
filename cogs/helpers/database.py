@@ -96,7 +96,7 @@ class Database:
 
         if second_sort_by in reverse_list:
             second_sort_by = f"{second_sort_by} DESC"
-        row = self.database.query(f"SELECT * FROM players WHERE channel_id=:channel_id AND (exp <> 0 OR killed_ducks > 0) ORDER BY {sorted_by}, {second_sort_by}", channel_id=channel_id)
+        row = self.database.query(f"d {sorted_by}, {second_sort_by}", channel_id=channel_id)
 
         return row.all()
 

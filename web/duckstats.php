@@ -8,8 +8,8 @@
 
 require_once 'vendor/autoload.php';
 $servername = "localhost";
-$username = "duckhunt3";
-$password = "duckhunt3";
+$username = "duckhunt_web";
+$password = "duckhunt_web";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=DHV3", $username, $password);
@@ -59,7 +59,7 @@ if (isset($_GET['cid'])) // On a la channel et le player
     } else {
         //die('Wait a minute, didn\'t do this yet');
         // Player not passed, displaying chan statistics
-        $players_array_query = $conn->prepare("SELECT * FROM players WHERE channel_id=:channel_id ORDER BY exp DESC");
+        $players_array_query = $conn->prepare("SELECT * FROM players WHERE channel_id=:channel_id AND (exp <> 0 OR killed_ducks > 0) ORDER BY exp DESC");
         $players_array_query->bindParam(':channel_id', $db_channel_id);
         $players_array_query->execute();
         $players_array = $players_array_query->fetchall();
