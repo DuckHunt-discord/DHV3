@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 14:57+0000\n"
+"POT-Creation-Date: 2018-04-25 15:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -232,7 +232,7 @@ msgstr ""
 msgid "You have to use `--sort-by [exp/killed/missed/time]` here."
 msgstr ""
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr ""
 
@@ -274,7 +274,7 @@ msgstr ""
 msgid "Player"
 msgstr ""
 
-#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
+#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
@@ -336,19 +336,19 @@ msgstr ""
 msgid "Ratio (exp/ducks killed)"
 msgstr ""
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr ""
 
-#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
 msgid "nom"
 msgstr ""
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr ""
 
@@ -1449,19 +1449,19 @@ msgstr ""
 msgid "old noob"
 msgstr ""
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr ""
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr ""
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr ""
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr ""
 
