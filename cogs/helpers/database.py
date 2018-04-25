@@ -96,7 +96,7 @@ class Database:
 
         if second_sort_by in reverse_list:
             second_sort_by = f"{second_sort_by} DESC"
-        row = self.database.query(f"d {sorted_by}, {second_sort_by}", channel_id=channel_id)
+        row = self.database.query(f"SELECT * FROM players WHERE channel_id=:channel_id AND (exp <> 0 OR killed_ducks > 0) ORDER BY {sorted_by}, {second_sort_by}", channel_id=channel_id)
 
         return row.all()
 
@@ -119,9 +119,10 @@ class Database:
 
         level = await self.get_level(channel=channel, player=user)
 
-        self.database.query("INSERT INTO players (id_, channel_id, chargeurs, balles, confisque, lastGiveback) "
-                            "VALUES (:id_, :channel_id, :chargeurs, :balles, 0, :now) "
-                            "ON DUPLICATE KEY UPDATE chargeurs = :chargeurs, confisque = 0,lastGiveback = :now",
+        self.database.query("INSERT INTO players (id_, channel_id, chargeurs, balles, confisque, lastGiveback, givebacks) "
+                            "VALUES (:id_, :channel_id, :chargeurs, :balles, 0, :now, 1) "
+                            "ON DUPLICATE KEY UPDATE chargeurs = :chargeurs, "
+                            "confisque = 0,lastGiveback = :now, givebacks=givebacks+1",
 
                             id_=user.id, channel_id=channel_id, chargeurs=level["chargeurs"], balles=level["balles"], now=int(time.time()))
 

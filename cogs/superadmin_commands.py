@@ -65,7 +65,7 @@ class SuperAdmin:
         ctx.logger.warning(f"Starting broadcast with message : \n{bc}")
         for channel in list(self.bot.ducks_planning.keys()):
             try:
-                await self.bot.send_message(where=channel, message=bc, can_pm=False, mention=False)
+                await self.bot.send_message(where=channel, message=bc.format(channel_id=channel.id), can_pm=False, mention=False)
             except Exception as e:
                 ctx.logger.info(f"Error broadcasting to {channel.name} : {e}")
                 pass

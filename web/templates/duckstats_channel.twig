@@ -83,7 +83,7 @@
             <td><img align="center" class="profile_picture" src="{{ player.avatar_url|replace({'?size=1024': '?size=64'}) }}" /> &nbsp  <a href="duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}">{{ player.name|escape }}</a></td>
             <td>{{ player.exp }}</td>
             <td>{{ player.killed_ducks }}</td>
-            <td>{{ (player.exp/player.killed_ducks)| number_format(2, '.', ',') }}</td>
+            <td>{{ (player.exp and player.killed_ducks ? player.exp / player.killed_ducks : 0)| number_format(2, '.', ',') }}</td>
             <td>{{ player.killed_super_ducks }}</td>
             <td>{{ player.shoots_fired }}</td>
             <td>{{ player.best_time| number_format(3, '.', ',') }}</td>

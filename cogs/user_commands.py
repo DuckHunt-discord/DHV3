@@ -319,7 +319,7 @@ class User:
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.message.guild, "language")
         event = ctx.bot.current_event
-        string = f"""**Current event** :\n{_(event['name'], language)} — {_(event['description'], language)}"""
+        string = f"""{_('**Current event**', language)} :\n{_(event['name'], language)} — {_(event['description'], language)}"""
         await self.bot.send_message(ctx=ctx, message=string)
 
 

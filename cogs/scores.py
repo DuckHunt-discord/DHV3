@@ -56,7 +56,7 @@ class Scores:
 
         await self.bot.send_message(ctx=ctx, message=_("The scores are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}", language).format(
             channel_id=ctx.channel.id))
-        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : https://discord.gg/G4skWae. Thanks! ")
+        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
 
 
         try:
@@ -255,7 +255,7 @@ class Scores:
 
         await self.bot.send_message(ctx=ctx, message=_("The Duckstats are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}", language).format(
             channel_id=ctx.channel.id, player_id=target.id))
-        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : https://discord.gg/G4skWae. Thanks! ")
+        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
 
 
         gs = Get_Stats(self.bot, channel, target)
