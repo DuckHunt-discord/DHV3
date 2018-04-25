@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 15:11+0000\n"
+"POT-Creation-Date: 2018-04-25 15:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -990,6 +990,10 @@ msgstr ""
 
 #: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
+msgstr ""
+
+#: cogs/user_commands.py:322
+msgid "**Current event**"
 msgstr ""
 
 #: cogs/helpers/config.py:60
