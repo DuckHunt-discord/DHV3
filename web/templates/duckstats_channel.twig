@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top scores on #{{ channel_name|escape }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tablesorter@2.30.1/dist/js/jquery.tablesorter.combined.min.js"></script>
+
+    <meta property="og:title"
+          content="#{{ channel_name|escape }} top scores" />
+    <meta property="og:type"
+          content="website" />
+    <meta property="og:description"
+          content="Where the best players of #{{ channel_name|escape }} meet." />
+    <meta property="og:site_name"
+          content="DuckHunt" />
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tablesorter@2.30.1/dist/css/theme.default.min.css">
+
+
+
+</head>
+<body>
+
+
+<h1>DuckHunt TopScores for {{ channel_name | escape }}</h1>
+
+<table id="top_table"
+       class="tablesorter">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Exp</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for player in players %}
+        <tr>
+            <td><a href="duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}">{{ player.name|escape }}</a></td>
+            <td>{{ player.exp }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $("#top_table").tablesorter();
+    });
+</script>
+</body>
+</html>

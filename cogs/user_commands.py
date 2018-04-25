@@ -7,6 +7,7 @@ from discord.ext import commands
 from cogs.helpers import checks
 from cogs.helpers import ducks
 
+from cogs.helpers.ducks import DuckWrapper
 
 
 class User:
@@ -209,6 +210,9 @@ class User:
                 # TODO : kill people here too ?
                 return
 
+        # Now that we have the duck, We'll use a warpper to ease up the syntax for the rest of this function
+        duck_wrapper = DuckWrapper(duck, author)
+
         # 8/ Bullet fired
         await add_to_stat(channel, author, "balles", -1)
         await add_to_stat(channel, author, "shoots_fired", 1)
@@ -219,18 +223,7 @@ class User:
         duck_will_leave = duck_will_leave and not await get_stat(channel, author, "silencieux") > int(now)
 
         if duck_will_leave:
-            await add_to_stat(channel, author, "exp", -1)
-            try:
-                self.bot.ducks_spawned.remove(current_duck)
-            except ValueError:
-                # Duck was removed elsewhere (race condition)
-                # Just be like, yup, you missed
-                await add_to_stat(channel, author, "shoots_missed", 1)
-                await self.sendBangMessage(ctx, _("**PIEWW**\tYou missed the duck! [missed: -1 xp]", language))
-                return
-
-            await add_to_stat(channel, author, "shoots_frightened", 1)
-            await self.sendBangMessage(ctx, _("**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 xp]", language))
+            await self.sendBangMessage(ctx, await duck_wrapper.frightened())
             return
 
         # 10/ Will the duck be shot ?
@@ -260,12 +253,11 @@ class User:
         chance *= miss_multiplier
 
         if target:
-            chance = accuracy +1  # Force missing
             await add_to_stat(channel, author, "murders", 1)
 
         # 11/ Duck missed
 
-        if chance > accuracy and duck.can_miss:
+        if (chance > accuracy and duck.can_miss) or target:
 
             kill_on_miss_chance = await get_pref(guild, "chance_to_kill_on_missed")
             chance_kill = random.randint(0, 100)
@@ -314,82 +306,7 @@ class User:
                 await self.sendBangMessage(ctx, _("**PIEWW**\tYou missed the duck! [missed: -1 xp]", language))
                 return
 
-        # 12/ Super ammo
-        if await get_stat(channel, author, "explosive_ammo") > int(now):
-            current_duck.life -= 3
-            vieenmoins = 3
-            ono = _("BPAM", language)
-        elif await get_stat(channel, author, "ap_ammo") > int(now):
-            current_duck.life -= 2
-            vieenmoins = 2
-            ono = _("BAAM", language)
-        else:
-            current_duck.life -= 1
-            vieenmoins = 1
-            ono = random.choice([_("BOUM", language), _("SPROTCH", language)])
-
-        # 13/ Duck killed ?
-        if current_duck.killed:
-            try:
-                self.bot.ducks_spawned.remove(current_duck)
-            except ValueError:
-                # Duck was removed elsewhere (race condition)
-                # Just be like, yup, you missed
-                await self.sendBangMessage(ctx, _("That was close, you almost killed the duck, but the other hunter got it first! [missed: -1 xp]", language))
-                await add_to_stat(channel, author, "exp", -1)
-                await add_to_stat(channel, author, "shoots_missed", 1)
-                await add_to_stat(channel, author, "shoots_almost_killed", 1)
-                return
-            # 13a/ Experience
-            exp = current_duck.exp_value
-
-            # 13b/ Clover
-            trefle = 0
-            if await get_stat(channel, author, "trefle") > now and duck.can_use_clover:
-                trefle = await get_stat(channel, author, "trefle_exp")
-                await add_to_stat(channel, author, "exp_won_with_clover", trefle)
-                exp += trefle
-
-            # 13c/ Rounding experience
-            exp = int(exp)
-
-            # 13d/ Give experience
-            await add_to_stat(channel, author, "exp", exp)
-            await add_to_stat(channel, author, "killed_ducks", 1)
-
-            if isinstance(duck, ducks.SuperDuck):
-                await add_to_stat(channel, author, "killed_super_ducks", 1)
-
-            # 13e/ Best time
-            time_taken = round(now - current_duck.time, 6)
-            if await get_stat(channel, author, "best_time") > time_taken:
-                await set_stat(channel, author, "best_time", time_taken)
-
-            # 13f/ Communicate
-
-            if trefle == 0:
-                exp_str = f"[{exp} exp]"
-            else:
-                exp_str = f"[{exp - trefle} exp + **{trefle} clover**]"
-
-            await self.sendBangMessage(ctx, (await duck.get_killed_string()).format(
-                **{"time": round(time_taken, 4),
-                   "total": await get_stat(channel, author, "killed_ducks"), "channel": channel,
-                   "exp": exp_str,
-                   "supercanards": await get_stat(channel, author, "killed_super_ducks"),
-                   "onomatopoeia": ono}))
-
-            # Don't return right now, we need to do bushes
-        else:
-            await self.sendBangMessage(ctx, (await duck.get_harmed_message()).format(
-                **{
-                    "vie":vieenmoins,
-                    "current_life": duck.life,
-                    "max_life": duck.starting_life
-                }))
-            await add_to_stat(channel, author, "shoots_harmed_duck", 1)
-
-            return
+        await self.sendBangMessage(ctx, await duck_wrapper.shoot())
 
         # > Bushes < #
 

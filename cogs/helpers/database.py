@@ -36,12 +36,15 @@ class Database:
             return self._channel_dbid_cache[channel]
         else:
 
-            row = self.database.query("SELECT id FROM channels WHERE server=:server_id AND channel=:channel_id "
+            row = self.database.query("SELECT id, channel_name FROM channels WHERE server=:server_id AND channel=:channel_id "
                                       "LIMIT 1;", server_id=channel.guild.id, channel_id=channel.id)
 
             if row.first():
                 id_ = row.first().id
                 self._channel_dbid_cache[channel] = id_
+
+                if channel.name != row.first().channel_name:
+                    self.database.query("UPDATE channels SET channel_name = :channel_name WHERE id=:id", id=id_, channel_name=channel.name)
                 return id_
             else:
                 return None
@@ -168,8 +171,10 @@ class Database:
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
         # Now that we have the ID, we can get into duckhunt/players and update the player we need
-        self.database.query(f"INSERT INTO players (channel_id, id_, name, {stat}) VALUES (:channel_id, :user_id, :name_, :stat_value) "
-                            f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_", channel_id=channel_id, user_id=user.id, stat_value=value, name_=user.name + "#" + user.discriminator)
+        self.database.query(f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) "
+                            f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url", channel_id=channel_id, user_id=user.id, stat_value=value,
+                            avatar_url=user.avatar_url_as(static_format='jpg', size=1024), name_=user.name + "#" +
+                                                                                                                                                                      user.discriminator)
 
         if channel in self._stats_cache.keys():
             if user in self._stats_cache[channel]:

@@ -66,6 +66,9 @@ class DuckHunt(commands.AutoShardedBot):
         if message.author.id in self.blacklisted_users:
             return
 
+        if message.guild is None:  # Private message
+            return
+
         ctx = await self.get_context(message, cls=context.CustomContext)
         if ctx.prefix is not None:
             # ctx.command = self.all_commands.get(ctx.invoked_with.lower())  # This dosen't works for subcommands
@@ -81,6 +84,20 @@ class DuckHunt(commands.AutoShardedBot):
         logger.info("We are all set, on_ready was fired! Yeah!")
         logger.info(f"I see {len(self.guilds)} guilds")
         await self.log(level=30, title="Bot is ready", message=f"The bot has restarted. We can now see {len(self.guilds)} guilds on {self.shard_count} shards, and ducks can now spawn", where=None)
+
+    async def on_guild_channel_delete(self, channel):
+        logger.info(f"Channel removed (from discord) : {channel} :(!")
+
+        self.ducks_planning.pop(channel, None)
+        self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel != channel]
+
+    async def on_guild_remove(self, guild):
+        logger.info(f"Guild removed (from discord) : {guild} :(!")
+
+        for channel in guild.channels:
+            self.ducks_planning.pop(channel, None)
+
+        self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel not in guild.channels]
 
     async def on_command_error(self, context, exception):
         _ = self._;

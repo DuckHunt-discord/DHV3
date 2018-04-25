@@ -75,7 +75,7 @@ class Admin:
 
         for duck in self.bot.ducks_spawned[:]:
             if duck.channel == ctx.channel:
-                self.bot.ducks_spawned.remove(duck)
+                duck.delete()
 
         await self.bot.send_message(ctx=ctx, message=_("<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. Bye!", language).format(**{"channel": ctx.channel.mention}))
         await self.bot.hint(ctx=ctx, message="This does not remove the scores. Use `dh!removeallscoresandstatsonthischannel` to remove them.")
@@ -104,15 +104,25 @@ class Admin:
         args = args.split()
         parser = argparse.ArgumentParser(description='Parse the spawn ducks command.')
         parser.add_argument('--super-duck', dest='super_duck', action='store_true', help='Is the duck a super duck ?')
+        parser.add_argument('--baby-duck', dest='baby_duck', action='store_true', help='Is the duck a baby duck ?')
+        parser.add_argument('--moad', dest='moad', action='store_true', help='Is the duck a moad ?')
+
         parser.add_argument('--life', dest='life', type=int, default=1)
 
         try:
             args = parser.parse_args(args)
         except SystemExit:
-            await self.bot.hint(ctx=ctx, message="You have to use `--super-duck` & `--life X` here.")
+            await self.bot.hint(ctx=ctx, message="You have to use `--super-duck`, `--baby-duck` & `--life X` here.")
             return
 
-        type = ducks.SuperDuck if args.super_duck else ducks.Duck
+        if args.baby_duck:
+            type = ducks.BabyDuck
+        elif args.super_duck:
+            type = ducks.SuperDuck
+        elif args.moad:
+            type = ducks.MotherOfAllDucks
+        else:
+            type = ducks.Duck
 
         duck = await type.create(self.bot, ctx.channel)
         if args.life:

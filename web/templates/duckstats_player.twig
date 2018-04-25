@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duckhunt statistics of {{ name|escape }} on #{{ channel_name|escape }}</title>
+
+    <meta property="og:title"
+          content="{{ name|escape }} statistics" />
+    <meta property="og:type"
+          content="profile" />
+    <meta property="og:image"
+          content="{{ avatar_url }}" />
+    <meta property="og:description"
+          content="{{ name|escape }} profile on #{{ channel_name|escape }}. {{ exp }} exp points!" />
+    <meta property="og:site_name"
+          content="DuckHunt" />
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+          crossorigin="anonymous">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <style>
+        .statistic {
+            border-bottom-width: 1px;
+            border-bottom-style: dotted;
+            border-bottom-color: #666;
+        }
+
+        .graph {
+            display: block;
+            background: #E6E7ED;
+            border-radius: 3px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .profile_picture {
+            display: block;
+            background: #E6E7ED;
+            border-radius: 50%;
+            margin: auto;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        html {
+            background: rgba(0, 0, 0, 0.04);
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<img class="profile_picture"
+     src="{{ avatar_url }}"
+     alt="Profile Picture">
+
+<h1>{{ name }} is hunting ducks on <a href="duckstats.php?cid={{ channel_id }}"> #{{ channel_name|escape }}</a>
+    {% if banned > 0 %} <i class="fa fa-frown"
+                           title="They are bannned!"></i>{% endif %}
+    {% if confique|date('Y-m-d') > "now"|date('Y-m-d') > 0 %} <i class="fa fa-procedures"
+                                                                 title="Weapon confiscated"></i>{% endif %}</h1>
+
+<h2>General statistics</h2>
+
+<p>
+    With <span class="statistic">{{ givebacks }}</span> days played, and <span class="statistic">{{ exp }}</span>
+    experience points, you can be sure that <span class="statistic">{{ name|escape }}</span> is a good <em>Duck</em>
+    Hunter
+</p>
+<p>
+    In fact, they have some good reflexes too, with a best time before a duck was killed that seems to be
+    <span class="statistic">{{ best_time | number_format(2, '.', ',') }}</span> seconds
+</p>
+
+
+<h2>Ducks killed</h2>
+
+<div id="ducks_killed"
+     class="graph"></div>
+<script>
+
+    Highcharts.chart('ducks_killed', {
+        chart: {
+            type: 'column'
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: 'Types of ducks killed by {{ name|escape('js') }}'
+        },
+        subtitle: {
+            text: 'Generated {{ "now"|date }}'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of ducks killed (millions)'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '{point.y} killed'
+        },
+        series: [{
+            name: 'Ducks',
+            data: [
+                ['Normal Ducks', {{ killed_ducks - killed_super_ducks - killed_baby_ducks - killed_mother_of_all_ducks - killed_mechanical_ducks}}],
+                ['Super Ducks', {{ killed_super_ducks }}],
+                ['Baby Ducks', {{ killed_baby_ducks }}],
+                ['MOAD', {{ killed_mother_of_all_ducks }}],
+                ['Mechanical Ducks', {{ killed_mechanical_ducks }}],
+                ['Players (oops)', {{ killed_players }}]
+            ],
+
+            dataLabels: {
+                enabled: true,
+                //rotation: -90,
+                color: '#FFFFFF',
+                align: 'center',
+                format: '{point.y}', // one decimal
+                y: -10 // 10 pixels down from the top
+            }
+        }]
+    });
+
+
+</script>
+
+
+<h2>Objects in backpack</h2>
+
+<p>
+    In <span class="statistic">{{ name|escape }}</span>'s backpack, I can see
+    <span class="statistic">{{ chargeurs }}</span> chargers and <span class="statistic">{{ balles }}</span> bullets
+    loaded in their weapon (and the last weapon giveback they used was on
+    <span class="statistic">{{ last_giveback|date("m/d/Y") }}</span>)
+
+</p>
+<ul>
+    {#How to compare dates :)#}
+    {% if ap_ammo|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            They have some <strong>Armor Piercing ammo</strong> until
+            <span class="statistic">{{ ap_ammo|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if detecteurInfra|date('Y-m-d') > "now"|date('Y-m-d') and detecteur_infra_shots_left >= 0 %}
+        <li>
+            They have an <strong>infrared detector</strong> on their weapon until
+            <span class="statistic">{{ detecteurInfra|date("m/d/Y \\a\\t g:ia") }}</span>, that can prevent
+            <span class="statistic">{{ detecteur_infra_shots_left }}</span> shots
+        </li>
+    {% endif %}
+    {% if explosive_ammo|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            They have some <strong>explosive ammo</strong> until
+            <span class="statistic">{{ explosive_ammo|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if graisse|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            They have some <strong>grease</strong> in their weapon that will dry and wear out on
+            <span class="statistic">{{ graisse|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if life_insurance|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            They have a valid <strong>life insurance</strong> policy that will least until
+            <span class="statistic">{{ life_insurance|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if silencieux|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            They have a <strong>silencer</strong> mounted on their weapon that will break on
+            <span class="statistic">{{ silencieux|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if sunglasses|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            Swag incoming, they have some <strong>sunglasses</strong> right in the face the rented until
+            <span class="statistic">{{ sunglasses|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+    {% if trefle|date('Y-m-d') > "now"|date('Y-m-d') %}
+        <li>
+            The luck is with them, because they have a <strong>4-leaf clover</strong> that gives them
+            <span class="statistic">{{ trefle_exp }}</span> more experience points by duck killed until
+            <span class="statistic">{{ trefle|date("m/d/Y \\a\\t g:ia") }}</span>
+        </li>
+    {% endif %}
+</ul>
+
+<h2>Shots statistics</h2>
+<p>
+    <span class="statistic">{{ name|escape }}</span> fired a whooping total of
+    <span class="statistic">{{ shoots_fired }}</span> shoots. Hopefully, a lot of them killed a duck!
+</p>
+
+<div id="shots_fired"
+     class="graph"></div>
+<script>
+    function compare_data_arrays(a, b) {
+        // Reverse the order
+        return b.y -a.y ;
+    }
+    Highcharts.chart('shots_fired', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Repartiton of shots fired by {{ name|escape('js') }}'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}% ({point.y})</b>'
+        },
+        subtitle: {
+            text: 'Generated {{ "now"|date }}'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f}% ({point.y})',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Shots',
+            colorByPoint: true,
+            data: [{
+                name: 'Shots killing a duck',
+                y: {{ killed_ducks }},
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Shots harming a duck',
+                y: {{ shoots_harmed_duck }},
+                sliced: true
+            }, {
+                name: 'Shots missed',
+                y: {{ shoots_missed }}
+            }, {
+                name: 'Shots where {{ name|escape('js') }} injured himself',
+                y: {{ self_killing_shoots }}
+            }, {
+                name: 'Shots tried with no weapon',
+                y: {{ shoots_without_weapon }}
+            }, {
+                name: 'Shots tried without bullets',
+                y: {{ shoots_without_bullets }}
+            }, {
+                name: 'Shots tried with a jammed weapon',
+                y: {{ shoots_with_jammed_weapon }}
+            }, {
+                name: 'Shots tried while wet',
+                y: {{ shoots_tried_while_wet }}
+            }, {
+                name: 'Shots with a sabotaged weapon',
+                y: {{ shoots_sabotaged }}
+            }, {
+                name: 'Shots where no ducks were on the channel',
+                y: {{ shoots_no_duck }}
+            }, {
+                name: 'Shots jamming the weapon',
+                y: {{ shoots_jamming_weapon }}
+            }, {
+                name: 'Shots stopped by an infrared detector',
+                y: {{ shoots_infrared_detector }}
+            }, {
+                name: 'Shots frightening a duck',
+                y: {{ shoots_frightened }}
+            }, {
+                name: 'Shots almost killing a duck',
+                y: {{ shoots_almost_killed }}
+            }].sort(compare_data_arrays)
+        }]
+    });
+</script>
+
+<h2>Misc statistics</h2>
+
+<p>
+    <span class="statistic">{{ name|escape }}</span> won a total of
+    <span class="statistic">{{ exp_won_with_clover }}</span> experience points by using a clover (that's
+    <span class="statistic">{{ (exp_won_with_clover/killed_ducks)|number_format(2, '.', ',') }}</span>
+                                                     experience points by duck killed). They also earned
+    <span class="statistic">{{ life_insurence_rewards }}</span> exp using a life insurence.
+</p>
+
+<p>
+    They found <span class="statistic">{{ trashFound }}</span> trash items in the bushes,
+    <span class="statistic">{{ found_explosive_ammo }}</span> explosive ammo boxes,
+    <span class="statistic">{{ found_almost_empty_explosive_ammo }}</span> almost empty boxes of explosive ammo,
+    <span class="statistic">{{ found_chargers }}</span> chargers (and
+    <span class="statistic">{{ found_chargers_not_taken }}</span> they cound't take because their backpack was full), and
+    <span class="statistic">{{ found_bullets }}</span> bullets (plus
+    <span class="statistic">{{ found_bullets_not_taken }}</span> they couldn't take because, well, weapon fully loaded)
+</p>
+
+<p>
+    <span class="statistic">{{ name|escape }}</span> murdered <span class="statistic">{{ murders }}</span> fellow hunters.
+</p>
+
+<p>
+    <span class="statistic">{{ name|escape }}</span> is reload hungry and tried to reload <span class="statistic">{{ unneeded_reloads }}</span> times a full weapon!
+</p>
+
+</body>
+</html>

@@ -89,12 +89,16 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
 
             population = [
                 ducks.Duck,
-                ducks.SuperDuck
+                ducks.SuperDuck,
+                ducks.BabyDuck,
+                ducks.MotherOfAllDucks,
             ]
 
             weights = [
                 await bot.db.get_pref(channel.guild, "ducks_chance"),
-                await bot.db.get_pref(channel.guild, "super_ducks_chance")  # Modified below by event n°3
+                await bot.db.get_pref(channel.guild, "super_ducks_chance"),  # Modified below by event n°3
+                await bot.db.get_pref(channel.guild, "baby_ducks_chance"),
+                await bot.db.get_pref(channel.guild, "mother_of_all_ducks_chance"),
             ]
 
             if not ignore_event and bot.current_event['id'] == 3:
