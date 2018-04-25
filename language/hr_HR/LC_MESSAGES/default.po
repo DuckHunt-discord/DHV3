@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-20 17:43+0000\n"
+"POT-Creation-Date: 2018-04-25 11:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
+#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Bodovi iskustva (exp)"
 
-#: cogs/scores.py:70 cogs/scores.py:294
+#: cogs/scores.py:78 cogs/scores.py:307
 msgid "Ducks killed"
 msgstr "Ubijene patke"
 
-#: cogs/scores.py:171
+#: cogs/scores.py:179
 msgid "Player"
 msgstr "Igrač"
 
-#: cogs/scores.py:292
+#: cogs/scores.py:305
 msgid "No duck killed"
 msgstr "Nema ubijenih patki"
 
-#: cogs/scores.py:299
+#: cogs/scores.py:312
 msgid "Best killing time"
 msgstr "Najbrže vrijeme"
 
-#: cogs/scores.py:302
+#: cogs/scores.py:315
 msgid "Ratio (exp/ducks killed)"
 msgstr "Omjer (exp/ubijene patke)"
 
-#: cogs/helpers/database.py:201 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/scores.py:316
 msgid "Current level"
 msgstr "Trenutačna razina"
 
-#: cogs/helpers/database.py:203 cogs/scores.py:304
+#: cogs/helpers/database.py:208 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Preciznost"
 
@@ -61,7 +61,7 @@ msgstr "Imaš dovoljno eksplozivne municije!"
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr "Oružje od {target} je već sabotirano!"
 
-#: cogs/user_commands.py:144
+#: cogs/user_commands.py:145
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
 
@@ -317,22 +317,22 @@ msgstr "Nezaposlen zbog nestanka pačje vrste"
 msgid "old noob"
 msgstr "Stari noob"
 
-#: cogs/helpers/database.py:187
+#: cogs/helpers/database.py:192
 msgid "Level of {player} on #{channel}"
 msgstr "Razina  {player} na {channel}"
 
-#: cogs/helpers/database.py:190
+#: cogs/helpers/database.py:195
 msgid "You leveled down!"
 msgstr "Tvoja razina je narasla!"
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:198
 msgid "You leveled up!"
 msgstr "Tvoja razina se smanjila!"
 
-#: cogs/helpers/database.py:202
+#: cogs/helpers/database.py:207
 msgid "Previous level"
 msgstr "Prethodna razina"
 
-#: cogs/helpers/ducks.py:249
+#: cogs/helpers/ducks.py:387
 msgid " < "
 msgstr "<"

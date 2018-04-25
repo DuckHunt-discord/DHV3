@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-20 17:43+0000\n"
+"POT-Creation-Date: 2018-04-25 11:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:92
+#: bot.py:109
 msgid ":x: A required argument is missing."
 msgstr ":x: Ett obligatorisk argument saknas."
 
-#: bot.py:95
+#: bot.py:112
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Du har inte tillräckligt med erfarenhetspoäng för detta."
 
-#: bot.py:98
+#: bot.py:115
 msgid ":x: You are not a server admin"
 msgstr ":x: Du är inte ett serveradministratör."
 
-#: bot.py:101
+#: bot.py:118
 msgid ":x: You are not a super admin."
 msgstr ":x: Du är inte en superadministratör."
 
-#: bot.py:102
+#: bot.py:119
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,7 +41,7 @@ msgstr ""
 "Detta kommando är reserverat för ägarna av botten. Om du tycker detta är ett "
 "misstag, kontakta ägaren på DuckHunts Support Server (se `dh!help`)"
 
-#: bot.py:124
+#: bot.py:141
 msgid ":bulb: HINT: "
 msgstr ":bulb: TIPS:"
 
@@ -53,7 +53,7 @@ msgstr ":ok: Ok, användaren förbjuden. :gun:"
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Ok, användaren är inte förbjuden nu. :eyes:"
 
-#: cogs/admin_commands.py:224 cogs/admin_commands.py:235
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
 msgid ":x: Incorrect value."
 msgstr ":x: Felaktig värde."
 
@@ -123,35 +123,35 @@ msgstr ""
 ":alarm_clock: Nästa utgivning av vapen och magasin blir i {sec} sekunder. "
 "({hours} timmar och {minutes} minuter)"
 
-#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
+#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Erfarenhetspoäng"
 
-#: cogs/scores.py:70 cogs/scores.py:294
+#: cogs/scores.py:78 cogs/scores.py:307
 msgid "Ducks killed"
 msgstr "Ankor dödade"
 
-#: cogs/scores.py:74 cogs/scores.py:310
+#: cogs/scores.py:82 cogs/scores.py:323
 msgid "Shots missed"
 msgstr "Skott som missade"
 
-#: cogs/scores.py:78
+#: cogs/scores.py:86
 msgid "Best time"
 msgstr "Bästa tid"
 
-#: cogs/scores.py:118
+#: cogs/scores.py:126
 msgid "Generating top scores for your channel, please wait!"
 msgstr "Skapar toppresultat för din kanal, vänligen vänta!"
 
-#: cogs/scores.py:148 cogs/scores.py:155
+#: cogs/scores.py:156 cogs/scores.py:163
 msgid "None!"
 msgstr "Inget!"
 
-#: cogs/scores.py:171
+#: cogs/scores.py:179
 msgid "Player"
 msgstr "Spelare"
 
-#: cogs/helpers/database.py:211 cogs/scores.py:178 cogs/scores.py:365
+#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -159,164 +159,164 @@ msgstr ""
 ":warning: Ett fel uppstod när du skickade inbäddningen, kolla om boten har "
 "`embed_links` tillåtelsen och försök igen!"
 
-#: cogs/scores.py:262
+#: cogs/scores.py:275
 msgid "Generating DuckHunt statistics for you, please wait..."
 msgstr "Skapar DuckHubt statistik för dig, var god vänta..."
 
-#: cogs/scores.py:269
+#: cogs/scores.py:282
 msgid "Page {current}/{max}"
 msgstr "Sida {current}/{max}"
 
-#: cogs/scores.py:272
+#: cogs/scores.py:285
 msgid "\n"
 "Confiscated weapon!"
 msgstr "Vapen konfiskerat!\n"
 
-#: cogs/scores.py:281
+#: cogs/scores.py:294
 msgid "General statistics"
 msgstr "Allmäna statistik"
 
-#: cogs/scores.py:287
+#: cogs/scores.py:300
 msgid "No best time."
 msgstr "Ingen bästa tid."
 
-#: cogs/scores.py:292
+#: cogs/scores.py:305
 msgid "No duck killed"
 msgstr "Ingen anka dödade"
 
-#: cogs/scores.py:295
+#: cogs/scores.py:308
 msgid "Super ducks killed"
 msgstr "Superkort dödad"
 
-#: cogs/scores.py:296
+#: cogs/scores.py:309
 msgid "Players killed"
 msgstr "Spelare dödad"
 
-#: cogs/scores.py:297
+#: cogs/scores.py:310
 msgid "Self-killing shots"
 msgstr "Självdödande skott"
 
-#: cogs/scores.py:299
+#: cogs/scores.py:312
 msgid "Best killing time"
 msgstr "Bästa tid att döda"
 
-#: cogs/scores.py:300
+#: cogs/scores.py:313
 msgid "Bullets in current magazine"
 msgstr "Skott i nuvarande magasin"
 
-#: cogs/scores.py:302
+#: cogs/scores.py:315
 msgid "Ratio (exp/ducks killed)"
 msgstr "Ratio (erfarenhet/ankor dödade)"
 
-#: cogs/helpers/database.py:201 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/scores.py:316
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
-#: cogs/helpers/database.py:203 cogs/scores.py:304
+#: cogs/helpers/database.py:208 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Träffsäkerhet av skott"
 
-#: cogs/helpers/database.py:204 cogs/scores.py:305
+#: cogs/helpers/database.py:209 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Trovärdighet av vapen"
 
-#: cogs/scores.py:309
+#: cogs/scores.py:322
 msgid "Shots fired"
 msgstr "Skott skjuten"
 
-#: cogs/scores.py:311
+#: cogs/scores.py:324
 msgid "Shots without ducks"
 msgstr "Skott utan ankor"
 
-#: cogs/scores.py:312
+#: cogs/scores.py:325
 msgid "Shots that frightened a duck"
 msgstr "Skott som skrämde ankor"
 
-#: cogs/scores.py:313
+#: cogs/scores.py:326
 msgid "Shots that harmed a duck"
 msgstr "Skott som skadade en anka"
 
-#: cogs/scores.py:314
+#: cogs/scores.py:327
 msgid "Shots stopped by the detector"
 msgstr "Skott som har stoppats av detektorn"
 
-#: cogs/scores.py:315
+#: cogs/scores.py:328
 msgid "Shots jamming a weapon"
 msgstr "Skott som har stört vapnet"
 
-#: cogs/scores.py:316
+#: cogs/scores.py:329
 msgid "Shots with a sabotaged weapon"
 msgstr "Skott med ett saboterat vapen"
 
-#: cogs/scores.py:317
+#: cogs/scores.py:330
 msgid "Shots with a jammed weapon"
 msgstr "Skott med ett fastnat vapen"
 
-#: cogs/scores.py:318
+#: cogs/scores.py:331
 msgid "Shots without bullets"
 msgstr "Skott utan kulor"
 
-#: cogs/scores.py:319
+#: cogs/scores.py:332
 msgid "Shots without weapon"
 msgstr "Skott utan vapen"
 
-#: cogs/scores.py:320
+#: cogs/scores.py:333
 msgid "Shots when wet"
 msgstr "Skott medan blöt"
 
-#: cogs/scores.py:323
+#: cogs/scores.py:336
 msgid "Reloads and items statistics"
 msgstr "Omladdningar och statistik för objekt "
 
-#: cogs/scores.py:325
+#: cogs/scores.py:338
 msgid "Reloads"
 msgstr "Omladdning"
 
-#: cogs/scores.py:326
+#: cogs/scores.py:339
 msgid "Reloads without magazines"
 msgstr "Omladdningar utan magasin"
 
-#: cogs/scores.py:327
+#: cogs/scores.py:340
 msgid "Reloads not needed"
 msgstr "Omladdningar som inte behövs"
 
-#: cogs/scores.py:329
+#: cogs/scores.py:342
 msgid "Trash found in bushes"
 msgstr "Skräp hittad i buskar"
 
-#: cogs/scores.py:331
+#: cogs/scores.py:344
 msgid "Exp earned with a clover"
 msgstr "Erfarenhetspoäng fått från ett klöver"
 
-#: cogs/scores.py:332
+#: cogs/scores.py:345
 msgid "Life insurance rewards"
 msgstr "Livförsäkringbelöningar"
 
-#: cogs/scores.py:333
+#: cogs/scores.py:346
 msgid "Free givebacks used"
 msgstr "Gratis återgivningar används"
 
-#: cogs/scores.py:342
+#: cogs/scores.py:355
 msgid "Object: infrared detector"
 msgstr "Objekt: infraröd detektor"
 
-#: cogs/scores.py:345
+#: cogs/scores.py:358
 msgid "Object: silencer"
 msgstr "Objekt: ljuddämpare"
 
-#: cogs/scores.py:348
+#: cogs/scores.py:361
 msgid "Object: clover {exp} exp"
 msgstr "Objekt: Klöver {exp} exp"
 
-#: cogs/scores.py:351
+#: cogs/scores.py:364
 msgid "Object: explosive ammo"
 msgstr "Objekt: explosiv ammo"
 
-#: cogs/scores.py:353
+#: cogs/scores.py:366
 msgid "Object: AP ammo"
 msgstr "Objekt: pansargenomträngande ammunition"
 
-#: cogs/scores.py:356
+#: cogs/scores.py:369
 msgid "Effect: wet"
 msgstr "Effekt: blöt"
 
@@ -362,31 +362,31 @@ msgstr ""
 ":money_with_wings: Du har på nya och torra kläder på dig nu. Du ser snygg "
 "ut!"
 
-#: cogs/user_commands.py:60 cogs/user_commands.py:131
+#: cogs/user_commands.py:61 cogs/user_commands.py:132
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
-#: cogs/user_commands.py:124
+#: cogs/user_commands.py:125
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Dina kläder är helt dyngsura, det går inte att jaga ännu! Du får vänta "
 "{temps_restant} minuter innnan du kan gå och jaga igen."
 
-#: cogs/user_commands.py:137
+#: cogs/user_commands.py:138
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 
-#: cogs/user_commands.py:144
+#: cogs/user_commands.py:145
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ditt vapen har varit saboterad, tacka {assaillant} för denna dåliga skämt."
 
-#: cogs/user_commands.py:179
+#: cogs/user_commands.py:180
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ditt vapen har fastnat, ladda om för att fixa det."
 
-#: cogs/user_commands.py:198
+#: cogs/user_commands.py:199
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -394,7 +394,7 @@ msgstr ""
 "Det finns ingen anka här, men skottet har inte avfyrats eftersom infraröd "
 "sensorn du köpte för ditt vapen gör sitt jobb!"
 
-#: cogs/user_commands.py:208
+#: cogs/user_commands.py:209
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -402,38 +402,9 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/user_commands.py:229 cogs/user_commands.py:314
+#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
-
-#: cogs/user_commands.py:233
-msgid ""
-"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
-"xp]"
-msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
-
-#: cogs/user_commands.py:321
-msgid "BPAM"
-msgstr "PANG"
-
-#: cogs/user_commands.py:325
-msgid "BAAM"
-msgstr "BANG"
-
-#: cogs/user_commands.py:329
-msgid "BOUM"
-msgstr "BOOM"
-
-#: cogs/user_commands.py:329
-msgid "SPROTCH"
-msgstr "SPROTCH"
-
-#: cogs/user_commands.py:338
-msgid ""
-"That was close, you almost killed the duck, but the other hunter got it "
-"first! [missed: -1 xp]"
-msgstr ""
-"Det var nära, du dödade nästan ankan, men andra jägaren fick ankan först!"
 
 #: cogs/helpers/config.py:60
 msgid "Hello world"
@@ -585,10 +556,39 @@ msgstr "Seriemördare av ankor"
 msgid "duck genocider"
 msgstr "Anka massmördare"
 
-#: cogs/helpers/ducks.py:247
+#: cogs/helpers/ducks.py:94
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
+"xp]"
+msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
+
+#: cogs/helpers/ducks.py:105
+msgid "BPAM"
+msgstr "PANG"
+
+#: cogs/helpers/ducks.py:109
+msgid "BAAM"
+msgstr "BANG"
+
+#: cogs/helpers/ducks.py:113
+msgid "BOUM"
+msgstr "BOOM"
+
+#: cogs/helpers/ducks.py:113
+msgid "SPROTCH"
+msgstr "SPROTCH"
+
+#: cogs/helpers/ducks.py:179
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr ""
+"Det var nära, du dödade nästan ankan, men andra jägaren fick ankan först!"
+
+#: cogs/helpers/ducks.py:385
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/helpers/ducks.py:249
+#: cogs/helpers/ducks.py:387
 msgid " < "
 msgstr "<"

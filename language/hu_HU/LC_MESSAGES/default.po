@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-20 17:43+0000\n"
+"POT-Creation-Date: 2018-04-25 11:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,179 +69,179 @@ msgstr "{dans} óra"
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
-#: cogs/helpers/database.py:205 cogs/scores.py:66 cogs/scores.py:301
+#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
 
-#: cogs/scores.py:70 cogs/scores.py:294
+#: cogs/scores.py:78 cogs/scores.py:307
 msgid "Ducks killed"
 msgstr "Kacsát ölt"
 
-#: cogs/scores.py:74 cogs/scores.py:310
+#: cogs/scores.py:82 cogs/scores.py:323
 msgid "Shots missed"
 msgstr "Elvétett lövések"
 
-#: cogs/scores.py:171
+#: cogs/scores.py:179
 msgid "Player"
 msgstr "Játékos"
 
-#: cogs/scores.py:269
+#: cogs/scores.py:282
 msgid "Page {current}/{max}"
 msgstr "Lap  {current}/ {max}"
 
-#: cogs/scores.py:281
+#: cogs/scores.py:294
 msgid "General statistics"
 msgstr "Összes statisztika"
 
-#: cogs/scores.py:287
+#: cogs/scores.py:300
 msgid "No best time."
 msgstr "Nincs legjobb idő."
 
-#: cogs/scores.py:292
+#: cogs/scores.py:305
 msgid "No duck killed"
 msgstr "Nem ölt kacsát"
 
-#: cogs/scores.py:295
+#: cogs/scores.py:308
 msgid "Super ducks killed"
 msgstr "Megölt szuperkacsák"
 
-#: cogs/scores.py:296
+#: cogs/scores.py:309
 msgid "Players killed"
 msgstr "Megölt játékosok"
 
-#: cogs/scores.py:297
+#: cogs/scores.py:310
 msgid "Self-killing shots"
 msgstr "Öngyilkos lövések"
 
-#: cogs/scores.py:299
+#: cogs/scores.py:312
 msgid "Best killing time"
 msgstr "Leggyorsabb ölés"
 
-#: cogs/scores.py:300
+#: cogs/scores.py:313
 msgid "Bullets in current magazine"
 msgstr "Lövedékek a mostani töltetben"
 
-#: cogs/scores.py:302
+#: cogs/scores.py:315
 msgid "Ratio (exp/ducks killed)"
 msgstr "Arány (xp/megölt kacsák)"
 
-#: cogs/helpers/database.py:201 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/scores.py:316
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
-#: cogs/helpers/database.py:201 cogs/helpers/database.py:202 cogs/scores.py:303
+#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/database.py:203 cogs/scores.py:304
+#: cogs/helpers/database.py:208 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/database.py:204 cogs/scores.py:305
+#: cogs/helpers/database.py:209 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
-#: cogs/scores.py:307
+#: cogs/scores.py:320
 msgid "Shoots statistics"
 msgstr "Lövésstatisztika"
 
-#: cogs/scores.py:309
+#: cogs/scores.py:322
 msgid "Shots fired"
 msgstr "Kilőtt töltények"
 
-#: cogs/scores.py:311
+#: cogs/scores.py:324
 msgid "Shots without ducks"
 msgstr "Kacsa nélküli lövések"
 
-#: cogs/scores.py:312
+#: cogs/scores.py:325
 msgid "Shots that frightened a duck"
 msgstr "Lövések, amelyek elijesztettek egy kacsát"
 
-#: cogs/scores.py:313
+#: cogs/scores.py:326
 msgid "Shots that harmed a duck"
 msgstr "Lövések, amelyek megsebeztek egy kacsát"
 
-#: cogs/scores.py:314
+#: cogs/scores.py:327
 msgid "Shots stopped by the detector"
 msgstr "Detektor által megállított lövések"
 
-#: cogs/scores.py:315
+#: cogs/scores.py:328
 msgid "Shots jamming a weapon"
 msgstr "Lövések, amelyek miatt beragadt a fegyver"
 
-#: cogs/scores.py:316
+#: cogs/scores.py:329
 msgid "Shots with a sabotaged weapon"
 msgstr "Szabotált fegyverből kijövő lövések"
 
-#: cogs/scores.py:317
+#: cogs/scores.py:330
 msgid "Shots with a jammed weapon"
 msgstr "Lövések egy beragadt fegyverből"
 
-#: cogs/scores.py:318
+#: cogs/scores.py:331
 msgid "Shots without bullets"
 msgstr "Töltény nélküli lövések"
 
-#: cogs/scores.py:319
+#: cogs/scores.py:332
 msgid "Shots without weapon"
 msgstr "Fegyver nélküli lövések"
 
-#: cogs/scores.py:320
+#: cogs/scores.py:333
 msgid "Shots when wet"
 msgstr "Vizes fegyverből kijövő lövések"
 
-#: cogs/scores.py:323
+#: cogs/scores.py:336
 msgid "Reloads and items statistics"
 msgstr "Újratöltések és tárgyak statisztikája"
 
-#: cogs/scores.py:325
+#: cogs/scores.py:338
 msgid "Reloads"
 msgstr "Újratöltések"
 
-#: cogs/scores.py:327
+#: cogs/scores.py:340
 msgid "Reloads not needed"
 msgstr "Szükségtelen újratöltések"
 
-#: cogs/scores.py:329
+#: cogs/scores.py:342
 msgid "Trash found in bushes"
 msgstr "Bokorban talált szemetek"
 
-#: cogs/scores.py:331
+#: cogs/scores.py:344
 msgid "Exp earned with a clover"
 msgstr "Lóherével szerzett tapasztalat"
 
-#: cogs/scores.py:333
+#: cogs/scores.py:346
 msgid "Free givebacks used"
 msgstr "Ingyenes visszatérítések használata"
 
-#: cogs/scores.py:336
+#: cogs/scores.py:349
 msgid "Possesed items and effects"
 msgstr "Birtokolt tárgyak és hatások"
 
-#: cogs/scores.py:339
+#: cogs/scores.py:352
 msgid "Object: grease"
 msgstr "Tárgy: zsír"
 
-#: cogs/scores.py:342
+#: cogs/scores.py:355
 msgid "Object: infrared detector"
 msgstr "Tárgy: infravörös detektor"
 
-#: cogs/scores.py:345
+#: cogs/scores.py:358
 msgid "Object: silencer"
 msgstr "Tárgy: hangtompító"
 
-#: cogs/scores.py:348
+#: cogs/scores.py:361
 msgid "Object: clover {exp} exp"
 msgstr "Tárgy: lóhere {exp} xp"
 
-#: cogs/scores.py:351
+#: cogs/scores.py:364
 msgid "Object: explosive ammo"
 msgstr "Tárgy: robbanótöltet"
 
-#: cogs/scores.py:353
+#: cogs/scores.py:366
 msgid "Object: AP ammo"
 msgstr "Tárgy: AP töltet"
 
-#: cogs/scores.py:356
+#: cogs/scores.py:369
 msgid "Effect: wet"
 msgstr "Effekt: nedves"
 
@@ -257,7 +257,7 @@ msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: {target} fegyverét már elrontottad!"
 
-#: cogs/user_commands.py:144
+#: cogs/user_commands.py:145
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
 
@@ -609,30 +609,30 @@ msgstr "kacsapirító"
 msgid "old noob"
 msgstr "nyomi veterán"
 
-#: cogs/helpers/database.py:187
+#: cogs/helpers/database.py:192
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje # {channel} en"
 
-#: cogs/helpers/database.py:190
+#: cogs/helpers/database.py:195
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:198
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/database.py:202
+#: cogs/helpers/database.py:207
 msgid "Previous level"
 msgstr "Előző szint"
 
-#: cogs/helpers/ducks.py:247
+#: cogs/helpers/ducks.py:385
 msgid " < *BZAACK*"
 msgstr "< *BZAACK*"
 
-#: cogs/helpers/ducks.py:249
+#: cogs/helpers/ducks.py:387
 msgid " < "
 msgstr "<"
 
-#: cogs/helpers/ducks.py:252
+#: cogs/helpers/ducks.py:390
 msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
 msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
