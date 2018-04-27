@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 15:16+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 
-#: bot.py:109
+#: bot.py:114
 msgid ":x: A required argument is missing."
 msgstr ""
 
-#: bot.py:112
+#: bot.py:117
 msgid ":x: You don't have enough exp for this"
 msgstr ""
 
-#: bot.py:115
+#: bot.py:120
 msgid ":x: You are not a server admin"
 msgstr ""
 
-#: bot.py:118
+#: bot.py:123
 msgid ":x: You are not a super admin."
 msgstr ""
 
-#: bot.py:119
+#: bot.py:124
 msgid ""
 "This command is reserved for the bot owners. If you think this is an "
 "error, please contact my owner at the DuckHunt Support Server (see "
 "`dh!help`)."
 msgstr ""
 
-#: bot.py:141
+#: bot.py:146
 msgid ":bulb: HINT: "
 msgstr ""
 
@@ -54,22 +54,26 @@ msgstr ""
 
 #: cogs/admin_commands.py:64
 msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
-"Have fun!"
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added "
+"to the game! Have fun!"
 msgstr ""
 
 #: cogs/admin_commands.py:80
 msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} removed from the "
-"game. Bye!"
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} "
+"removed from the game. Bye!"
 msgstr ""
 
 #: cogs/admin_commands.py:89
-msgid "<:DuckHug:361969688957157378> {admin} added as an admin to the guild!"
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
 msgstr ""
 
 #: cogs/admin_commands.py:97
-msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
 msgstr ""
 
 #: cogs/admin_commands.py:146 cogs/admin_commands.py:172
@@ -87,7 +91,9 @@ msgid ""
 msgstr ""
 
 #: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-msgid "<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
+msgid ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
+"setting"
 msgstr ""
 
 #: cogs/admin_commands.py:197
@@ -108,7 +114,7 @@ msgid ""
 msgstr ""
 
 #: cogs/admin_commands.py:229
-msgid ":duck: Authorised to set the VIP status!"
+msgid "<:official_Duck_01:439546719177539584> Authorised to set the VIP status!"
 msgstr ""
 
 #: cogs/admin_commands.py:231
@@ -147,36 +153,42 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ""
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:49
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"dosen't make sense."
+msgstr ""
+
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr ""
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ""
 
-#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr ""
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr ""
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr ""
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr ""
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr ""
 
@@ -469,7 +481,8 @@ msgid ""
 "Hello!\n"
 " Thanks for adding me in there! I'm almost ready to start the game!\n"
 " Could we please into the channel where you want the game to be ? Please "
-"invoke me there by using `dh!setup`<:DuckHug:361969688957157378>"
+"invoke me there by using "
+"`dh!setup`<:event_GuildAdded_01:439550913112309781>"
 msgstr ""
 
 #: cogs/setup_wizzard.py:35
@@ -570,7 +583,7 @@ msgstr ""
 
 #: cogs/setup_wizzard.py:121
 msgid ""
-"I'm done! <:felix:333872061103734794>\n"
+"I'm done! <:cmd_Setup_01:439551472804429836>\n"
 "Any warning has been sent above. I suggest fixing them, then running the "
 "command again!\n"
 "If there is none, congrats! You passed the tests brightfully!\n"
@@ -622,7 +635,7 @@ msgid ""
 "`dh!add_channel`.\n"
 "    More settings can be found using `dh!settings list`\n"
 "    \n"
-"Thanks for playing with me! :duck:\n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
 msgstr ""
 
 #: cogs/shop.py:42
@@ -988,7 +1001,7 @@ msgid ""
 "get it back for free (check when with `!freetime`)"
 msgstr ""
 
-#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr ""
 
@@ -1469,29 +1482,29 @@ msgstr ""
 msgid "Previous level"
 msgstr ""
 
-#: cogs/helpers/ducks.py:94
+#: cogs/helpers/ducks.py:95
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed:"
 " -1 xp]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:105
+#: cogs/helpers/ducks.py:106
 msgid "BPAM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "BAAM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "BOUM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "SPROTCH"
 msgstr ""
 
-#: cogs/helpers/ducks.py:179
+#: cogs/helpers/ducks.py:180
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1515,40 +1528,24 @@ msgstr ""
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:385
-msgid " < *BZAACK*"
-msgstr ""
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr ""
-
-#: cogs/helpers/ducks.py:390
-msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
-msgstr ""
-
-#: cogs/helpers/ducks.py:392
-msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
-msgstr ""
-
-#: cogs/helpers/ducks.py:410
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
 msgstr ""
 
-#: cogs/helpers/ducks.py:474
+#: cogs/helpers/ducks.py:438
+msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+
+#: cogs/helpers/ducks.py:457
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time}"
 " seconds, and you shouldn't have done this! You'll lose some exp, because"
 " you shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:492
-msgid "I AM... Your mother"
-msgstr ""
-
-#: cogs/helpers/ducks.py:500
+#: cogs/helpers/ducks.py:481
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, "
 "but you won't kill my children! \\_X<   *COUAC*   {exp}"
