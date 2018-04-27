@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Bodovi iskustva (exp)"
 
@@ -41,11 +41,11 @@ msgstr "Najbrže vrijeme"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Omjer (exp/ubijene patke)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Trenutačna razina"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Preciznost"
 
@@ -317,22 +317,18 @@ msgstr "Nezaposlen zbog nestanka pačje vrste"
 msgid "old noob"
 msgstr "Stari noob"
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Razina  {player} na {channel}"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Tvoja razina je narasla!"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Tvoja razina se smanjila!"
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Prethodna razina"
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr "<"

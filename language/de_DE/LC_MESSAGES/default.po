@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,10 +24,6 @@ msgstr ":ok: Fertig, Benutzer wurde gebannt. :gun:"
 #: cogs/admin_commands.py:38
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Fertig, Benutzer wurde entbannt. :eyes:"
-
-#: cogs/admin_commands.py:229
-msgid ":duck: Authorised to set the VIP status!"
-msgstr ":duck: Autorisiert, den VIP Status zu vergeben."
 
 #: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
@@ -58,39 +54,39 @@ msgid ":x: The exp amount needs to be positive."
 msgstr ""
 ":x: Du musst eine natürliche Zahl eingeben um Erfahrungspunkte zu versenden."
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Du hast {amount} exp an {target} gesendet (und {taxes} exp Steuern gezahlt)!"
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr "Du hast nicht genug Erfahrungspunkte"
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Das Übertragen von Exp ist auf diesem Server deaktiviert"
 
-#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr ""
 "{date} (in {dans_jours} Tagen, {dans_heures} Stunden und {dans_minutes} "
 "Minuten)"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "um %H:%M:%S am %d.%m. "
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} Tage"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} Stunden"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} Minuten"
 
@@ -102,7 +98,7 @@ msgstr ""
 ":alarm_clock: Nächste Rückgabe von Waffen und Magazinen in {sec} Sekunden. "
 "({hours} Stunden und {minutes} Minuten)."
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Erfahrungspunkte"
 
@@ -130,7 +126,7 @@ msgstr "Keine!"
 msgid "Player"
 msgstr "Spieler"
 
-#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
+#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -187,15 +183,15 @@ msgstr "Kugeln im jetzigen Magazin"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Schussrate (Exp/getötete Enten)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Aktuelles Level"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Treffergenauigkeit"
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Zuverlässigkeit der Waffe"
 
@@ -501,7 +497,7 @@ msgstr ""
 "Zum Glück hast du verfehlt, aber auf was hast du genau gezielt?! Hier ist "
 "weit und breit keine [verfehlt: -1 xp] [Schuss ins Leere: -1 xp]"
 
-#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PENG** Du hast die Ente verfehlt! [verfehlt: -1 xp]"
 
@@ -629,23 +625,23 @@ msgstr "Entenhäuter"
 msgid "old noob"
 msgstr "alter Anfänger"
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Level von {player} in #{channel}"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Du bist abgestiegen!"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Du bist aufgestiegen!"
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Zuvoriges Level"
 
-#: cogs/helpers/ducks.py:94
+#: cogs/helpers/ducks.py:95
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -653,18 +649,10 @@ msgstr ""
 "**FLAPP** Verschreckt durch so viel Lärm ist die Ente geflohen! HERZLICHEN "
 "GLÜCKWUNSCH! [verfehlt: -1 xp]"
 
-#: cogs/helpers/ducks.py:179
+#: cogs/helpers/ducks.py:180
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
 "Das war knapp, du hättest fast die Ente getötet, aber der andere Jäger sie "
 "zuerst erledigt! [verfehlt: -1 xp]"
-
-#: cogs/helpers/ducks.py:385
-msgid " < *BZAACK*"
-msgstr " < *BZAACK*"
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr " < "

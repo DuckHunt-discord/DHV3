@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:109
+#: bot.py:114
 msgid ":x: A required argument is missing."
 msgstr ""
 ":x: Falta especificar un argumento u opción necesarias para ejecutar el "
 "comando."
 
-#: bot.py:112
+#: bot.py:117
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: No tienes suficientes Puntos de Experiencia para esto."
 
-#: bot.py:115
+#: bot.py:120
 msgid ":x: You are not a server admin"
 msgstr ":x: Tu no eres un Administrador del servidor."
 
-#: bot.py:118
+#: bot.py:123
 msgid ":x: You are not a super admin."
 msgstr ":x: Tu no eres un Super Admin."
 
-#: bot.py:119
+#: bot.py:124
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -44,7 +44,7 @@ msgstr ""
 "error, por favor contacta a mi dueño en el Servidor de Soporte de DuckHunt "
 "(escribe `dh!help`)."
 
-#: bot.py:141
+#: bot.py:146
 msgid ":bulb: HINT: "
 msgstr ":bulb: Pista:"
 
@@ -55,34 +55,6 @@ msgstr ":ok: Hecho, usuario baneado :gun:"
 #: cogs/admin_commands.py:38
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Hecho, usuario desbaneado :eyes:"
-
-#: cogs/admin_commands.py:64
-msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
-"Have fun!"
-msgstr ""
-"<:DuckHug:361969688957157378> Hecho, ¡El canal {channel} ha sido añadido al "
-"juego! ¡Que te diviertas!"
-
-#: cogs/admin_commands.py:80
-msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. "
-"Bye!"
-msgstr ""
-"<:DuckHug:361969688957157378> Hecho, el canal {channel} ha sido eliminado "
-"del juego. ¡Adiós!"
-
-#: cogs/admin_commands.py:89
-msgid "<:DuckHug:361969688957157378> {admin} added as an admin to the guild!"
-msgstr ""
-"<:DuckHug:361969688957157378>¡{admin} ha sido añadido como un Administrador "
-"del Servidor!"
-
-#: cogs/admin_commands.py:97
-msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
-msgstr ""
-"<:DuckHug:361969688957157378>{admin} ha sido removido de los Administradores "
-"del Servidor."
 
 #: cogs/admin_commands.py:146 cogs/admin_commands.py:172
 msgid "Done. User removed from the database, if it was in."
@@ -102,12 +74,6 @@ msgstr ""
 ":x: Sintaxis incorrecta. Usa el comando de esta manera: `!settings [view/set/"
 "reset/list/modified] (ver/configurar/reiniciar/lista/modificado) [setting if "
 "applicable] (ajuste si es aplicable)`"
-
-#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-msgid ""
-"<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
-msgstr ""
-"<:blobhyperthink:357040754566103040>**ERROR:** No conozco este ajuste."
 
 #: cogs/admin_commands.py:197
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
@@ -130,10 +96,6 @@ msgstr ""
 "Estás superando el límite máximo de patos por día estando en un servidor VIP."
 " Por favor no abuses de eso. Para que sepas, es recomendable que el limite "
 "de patos lo dejes en `{max}` patos por día."
-
-#: cogs/admin_commands.py:229
-msgid ":duck: Authorised to set the VIP status!"
-msgstr ":pato: ¡Autorizado para establecer el estado VIP!"
 
 #: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
@@ -178,38 +140,38 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: la cantidad exp debe ser positiva."
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Has enviado {amount} de exp a {target} (y pagado {taxes} de exp en "
 "impuestos)!"
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr "No tienes suficientes puntos de experiencia"
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: enviar exp está deshabilitado en este servidor"
 
-#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (en {dans_jours}{dans_heures} y {dans_minutes})"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d en %H:%M:%S"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} días"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} horas"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minutos"
 
@@ -270,7 +232,7 @@ msgstr ""
 "Estás usando el fragmento (Discord shard) {shard} de {total} fragmentos "
 "totales"
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Puntos de experiencia"
 
@@ -317,7 +279,7 @@ msgstr "Ninguno!"
 msgid "Player"
 msgstr "Jugador"
 
-#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
+#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -375,19 +337,19 @@ msgstr "Munición actual en el Cargador"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Proporción (exp/patos muertos)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Nivel Actual"
 
-#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Precisión de Tiro"
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Fiabilidad del Arma"
 
@@ -502,19 +464,6 @@ msgstr "Objeto: Munición AP"
 #: cogs/scores.py:369
 msgid "Effect: wet"
 msgstr "Efecto: mojado"
-
-#: cogs/setup_wizzard.py:24
-msgid ""
-"Hello!\n"
-" Thanks for adding me in there! I'm almost ready to start the game!\n"
-" Could we please into the channel where you want the game to be ? Please "
-"invoke me there by using `dh!setup`<:DuckHug:361969688957157378>"
-msgstr ""
-"Hola!\n"
-"¡Gracias por agregarme aquí! ¡Estoy casi listo para que el juego comience!\n"
-"¿Podríamos entrar en el canal donde quieres que el juego se inicie? Por "
-"favor, actívame en ese canal escribiendo allí `dh!setup`<:DuckHug:"
-"361969688957157378>"
 
 #: cogs/setup_wizzard.py:35
 msgid ""
@@ -669,113 +618,6 @@ msgstr ""
 "mensajes en TTS.\n"
 "Puedes no darme este permiso de forma segura, pero el ajuste `tts_ducks` no "
 "funcionará si lo activas."
-
-#: cogs/setup_wizzard.py:121
-msgid ""
-"I'm done! <:felix:333872061103734794>\n"
-"Any warning has been sent above. I suggest fixing them, then running the "
-"command again!\n"
-"If there is none, congrats! You passed the tests brightfully!\n"
-"If you are ready to continue with the setup, use the command "
-"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
-"used, ducks will spawn automatically.\n"
-"Thanks for flying DucksAir. If you have any question, we are here to help at "
-"https://discord.gg/2BksEkV"
-msgstr ""
-"¡Terminé! <:felix:333872061103734794>\n"
-"Cualquier mensaje de advertencia ha sido enviado aquí arriba. Sugiero "
-"arreglarlos y después ejecutar el comando otra vez!\n"
-"Si no hay ninguna advertencia, ¡Felicidades! ¡Has pasado las pruebas de "
-"forma brillante!\n"
-"Si estás listo para continuar con la configuración, usa el comando "
-"`dh!setup_settings`. Si solo quieres jugar, usa `dh!add_channel`. Una vez "
-"usado, los patos aparecerán automáticamente.\n"
-"Gracias por volar con DucksAir. Si tienes alguna duda, estamos aquí para "
-"ayudarte en https://discord.gg/2BksEkV"
-
-#: cogs/setup_wizzard.py:135
-msgid ""
-"Hey! Let's configure the server!\n"
-"I'll give you the most used parameters, and let you change them if you want. "
-"Any command written here is optional, and you can start playing now just by "
-"using `dh!add_channel`.\n"
-"\n"
-"**Before starting, please make sure this is the channel you want to use, and "
-"activate it with `dh!add_channel`.**\n"
-"\n"
-"**1/ Language used**:\n"
-"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
-"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
-"    \\* Another language we don't fully support yet? Help us translate "
-"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
-"    \n"
-"**2/ Ducks Per Day**:\n"
-"    This is the number of ducks that will spawn per day. They spawn a random "
-"intervals, but you can configure the number of ducks that will spawn.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"ducks_per_day XX`, where `XX` is a number.\n"
-"    \\* To prevent abuse, there is a limit that will be automatically "
-"enforced. If you need to lift it, contact my owner at the support server.\n"
-"    \n"
-"**3/ Exp Won Per Duck Killed**:\n"
-"    This is the experience won per duck killed. If your server is really "
-"popular, it might be worth it to push it up a little to make new hunters "
-"progress faster.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
-"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
-"good start\n"
-"    \n"
-"**4/ Other settings**:\n"
-"    This is starting to be lengthy, so I won't go into further details here. "
-"You are probably all set and can start the game by typing `dh!add_channel`.\n"
-"    More settings can be found using `dh!settings list`\n"
-"    \n"
-"Thanks for playing with me! :duck:\n"
-msgstr ""
-"Hey! Configuremos el servidor!\n"
-"Te mostraré los comandos más utilizados, y te dejaré cambiarlos como quieras."
-" Cualquier comando escrito aquí es opcional, y puedes empezar a jugar ahora "
-"usando `dh!add_channel`en el canal donde quieres que empiece el juego.\n"
-"\n"
-"**Antes de empezar, por favor asegúrate de que saber qué canal que quieres "
-"usar para el juego, y activa ese canal escribiendo `dh!add_channel`en ese "
-"canal.**\n"
-"\n"
-"**1/Idioma:**\n"
-"  \\* Si hablas Francés, usa `dh!settings set language fr_FR`\n"
-"  \\* Si hablas Español, usa `dh!settings set language es_ES`\n"
-"  \\* ¿Hablas un idioma que aún no hemos traducido? ¡Ayúdanos a traducir "
-"DuckHunt! Encuéntranos en el siguiente enlace: https://discord.gg/2BksEkV.\n"
-"\n"
-"**2/ Patos por Día**:\n"
-"Este es el número de Patos que aparecerán por día. Aparecerán en períodos de "
-"tiempo aleatorios, pero puedes configurar el numero de patos que aparecerán.\n"
-"  \\* Usa el siguiente comando para cambiar esto, usa `dh!settings set "
-"ducks_per_day XX`, donde `XX` es el número deseado.\n"
-"  \\* Para prevenir abusos, hay un límite con respecto a los patos que "
-"puedes hacer aparecer, que si sobrepasas, el bot forzará el límite al valor "
-"máximo permitido. Si por alguna razón necesitas mas patos más allá del "
-"límite máximo preestablecido, contacta a mi dueño en el servidor oficial de "
-"DuckHunt.\n"
-"\n"
-"**3/ Exp ganada por pato asesinado**:\n"
-"Esta es la experiencia que se gana por cada pato asesinado. Si tu servidor "
-"es realmente popular, valdría la pena subir un poco la experiencia ganada "
-"para hacer que los nuevos cazadores progresen rápido. \n"
-"\\* Usa los siguientes comandos para cambiarlo, usa `dh!settings set "
-"exp_won_per_duck_killed XX`, donde `XX` es el número deseado.\n"
-"\\* :bulb: Aunque puedas, no vayas tan lejos, debe ser desafiante ganar "
-"puntos de experiencia. 15 puntos de Exp por pato serían una buena cantidad "
-"para empezar.\n"
-"\n"
-"**4/ Otros Ajustes**:\n"
-"  Esto se está haciendo un poco largo, así que no entraré en más detalles "
-"aquí. Probablemente ya tienes todo configurado y puedes empezar a jugar "
-"escribiendo en el canal donde se hará el juego esto: `dh!add_channel`.\n"
-"  Puedes encontrar más ajustes escribiendo `dh!settings list`\n"
-"\n"
-"Gracias por jugar conmigo! :duck:\n"
 
 #: cogs/shop.py:42
 msgid ""
@@ -1235,7 +1077,7 @@ msgstr ""
 "te la devuelvan gratis (Ve cuanto queda para la devolución gratis con "
 "`!freetime`)"
 
-#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** ¡Fallaste el disparo! [Por fallar: -1 xp]"
 
@@ -1707,23 +1549,23 @@ msgstr "Tostador de patos"
 msgid "old noob"
 msgstr "Viejo novato"
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Nivel de {player} en #{channel}"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "¡Has bajado un nivel!"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "¡Has subido un nivel!"
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Nivel previo"
 
-#: cogs/helpers/ducks.py:94
+#: cogs/helpers/ducks.py:95
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1731,23 +1573,23 @@ msgstr ""
 "**FLAPP** Asustado por tanto ruido, ¡el pato huyó! ¡FELICIDADES! [Por haber "
 "fallado el disparo: -1 xp]"
 
-#: cogs/helpers/ducks.py:105
+#: cogs/helpers/ducks.py:106
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:179
+#: cogs/helpers/ducks.py:180
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1782,23 +1624,7 @@ msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
 
-#: cogs/helpers/ducks.py:385
-msgid " < *BZAACK*"
-msgstr " < *BZAACK* "
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr " < "
-
-#: cogs/helpers/ducks.py:390
-msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
-msgstr "-_-'`'°-_-.-'`'° %__% *BZAACK*"
-
-#: cogs/helpers/ducks.py:392
-msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
-msgstr "-_-'\\`'°-_-.-'\\`'° %__%"
-
-#: cogs/helpers/ducks.py:410
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"

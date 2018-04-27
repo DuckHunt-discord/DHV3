@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,41 +35,41 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Elküldtél {amount} xp-t {target} nek (és fizettél {taxes} xp-t adónak) !"
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr "Nincs elég tapasztalatpontod"
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Tapasztalatküldés nem engedélyezett ezen a szerveren"
 
-#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} ({dans_jours}{dans_heures} ban és {dans_minutes} ben)"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d %H:%M:%S nál"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} nap"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} óra"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
 
@@ -125,19 +125,19 @@ msgstr "Lövedékek a mostani töltetben"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Arány (xp/megölt kacsák)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
-#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
@@ -609,30 +609,18 @@ msgstr "kacsapirító"
 msgid "old noob"
 msgstr "nyomi veterán"
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje # {channel} en"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Előző szint"
-
-#: cogs/helpers/ducks.py:385
-msgid " < *BZAACK*"
-msgstr "< *BZAACK*"
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr "<"
-
-#: cogs/helpers/ducks.py:390
-msgid "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"
-msgstr "-_-'\\`'°-_-.-'\\`'° %__%   *BZAACK*"

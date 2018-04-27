@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:109
+#: bot.py:114
 msgid ":x: A required argument is missing."
 msgstr ":x: Et krævende argument mangler."
 
-#: bot.py:112
+#: bot.py:117
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Du har ikke nok exp til dette"
 
-#: bot.py:115
+#: bot.py:120
 msgid ":x: You are not a server admin"
 msgstr ":x: Du er ikke en serveradministrator"
 
-#: bot.py:118
+#: bot.py:123
 msgid ":x: You are not a super admin."
 msgstr ":x: Du er ikke en superadministrator."
 
-#: bot.py:119
+#: bot.py:124
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,7 +41,7 @@ msgstr ""
 "Denne kommando er forbeholdt botejerene. Hvis du mener, at dette er en fejl, "
 "bedes du kontakte min ejer på DuckHunt Support Server (se `dh!help`)."
 
-#: bot.py:141
+#: bot.py:146
 msgid ":bulb: HINT: "
 msgstr ":bulb: HINT:"
 
@@ -52,32 +52,6 @@ msgstr ":ok: Udført, bruger bandlyst :gun:"
 #: cogs/admin_commands.py:38
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Udført, bruger ikke bandlyst længere :eyes:"
-
-#: cogs/admin_commands.py:64
-msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} added to the game! "
-"Have fun!"
-msgstr ""
-"<:DuckHug:361969688957157378> Udført, kanal {channel} tilføjet til spillet! "
-"Hav det sjovt!"
-
-#: cogs/admin_commands.py:80
-msgid ""
-"<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. "
-"Bye!"
-msgstr ""
-"<:DuckHug:361969688957157378> Udført, kanal {channel} fjernet fra spillet. "
-"Farvel!"
-
-#: cogs/admin_commands.py:89
-msgid "<:DuckHug:361969688957157378> {admin} added as an admin to the guild!"
-msgstr ""
-"<:DuckHug:361969688957157378>{admin} tilføjet som administrator til guilden!"
-
-#: cogs/admin_commands.py:97
-msgid "<:DuckHug:361969688957157378> {admin} removed from the guild admins."
-msgstr ""
-"<:DuckHug:361969688957157378>{admin} fjernet fra guild administratorerne."
 
 #: cogs/admin_commands.py:146 cogs/admin_commands.py:172
 msgid "Done. User removed from the database, if it was in."
@@ -94,13 +68,6 @@ msgid ""
 msgstr ""
 ":x: Forkert syntaks. Brug kommandoen på denne måde: `!settings [view/set/"
 "reset/list/modified] [indstilling hvis relevant]`"
-
-#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-msgid ""
-"<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting"
-msgstr ""
-"<:blobhyperthink:357040754566103040>**FEJL:** Jeg kender ikke denne "
-"indstilling"
 
 #: cogs/admin_commands.py:197
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
@@ -122,10 +89,6 @@ msgid ""
 msgstr ""
 "Omgår max_ducks_per_day tjekken fordi du er i et VIP-guild. Må ikke misbruge "
 "det. Grænsen ville have været sat til `{max}` ænder pr. Dag."
-
-#: cogs/admin_commands.py:229
-msgid ":duck: Authorised to set the VIP status!"
-msgstr ":Duck: Autoriseret til at indstille VIP status!"
 
 #: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
@@ -168,36 +131,36 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Exp-beløbet skal være positivt."
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr "Du sendte {amount} exp til {target} (og betalte {tax} skat)!"
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr "Du har ikke nok erfaringspoint"
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: At sende exp er deaktiveret på denne server"
 
-#: cogs/experience_related_commands.py:77 cogs/scores.py:33
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (i {dans_jours} {dans_heures} og {dans_minutes})"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%d/%m %H:%M:%S"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dage"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} timer"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minutter"
 
@@ -267,7 +230,7 @@ msgstr ""
 msgid "You have to use `--sort-by [exp/killed/missed/time]` here."
 msgstr "Du skal bruge `--sort-by [exp/killed/missed/time]` her."
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Exp point"
 
@@ -311,7 +274,7 @@ msgstr "Intet!"
 msgid "Player"
 msgstr "Spiller"
 
-#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
+#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -377,19 +340,19 @@ msgstr "Kugler i nuværende magasin"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Forhold (exp/ænder dræbt)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Nuværende niveau"
 
-#: cogs/helpers/database.py:206 cogs/helpers/database.py:207 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Skudnøjagtighed"
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Våben pålidelighed"
 
@@ -504,20 +467,6 @@ msgstr "Objekt: PB ammunition"
 #: cogs/scores.py:369
 msgid "Effect: wet"
 msgstr "Effekt: våd"
-
-#: cogs/setup_wizzard.py:24
-msgid ""
-"Hello!\n"
-" Thanks for adding me in there! I'm almost ready to start the game!\n"
-" Could we please into the channel where you want the game to be ? Please "
-"invoke me there by using `dh!setup`<:DuckHug:361969688957157378>"
-msgstr ""
-"Hej!\n"
-" Tak fordi du tilføjede mig derinde! Jeg er næsten klar til at starte "
-"spillet!\n"
-" Kan vi venligst ind i den kanal, hvor du vil have spillet til at være? "
-"Venligst benyt mig her ved at bruge `dh! Setup` <:DuckHug:"
-"361969688957157378>"
 
 #: cogs/setup_wizzard.py:35
 msgid ""
@@ -656,108 +605,6 @@ msgstr ""
 ":small_blue_diamond: Tilladelsen `send_tts_messages` mangler.\n"
 "Dette bruges, hvis du vil aktivere tts ænder..\n"
 "Du kan sikkert gå videre uden det, men indstillingen `tts_ducks` virker ikke"
-
-#: cogs/setup_wizzard.py:121
-msgid ""
-"I'm done! <:felix:333872061103734794>\n"
-"Any warning has been sent above. I suggest fixing them, then running the "
-"command again!\n"
-"If there is none, congrats! You passed the tests brightfully!\n"
-"If you are ready to continue with the setup, use the command "
-"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
-"used, ducks will spawn automatically.\n"
-"Thanks for flying DucksAir. If you have any question, we are here to help at "
-"https://discord.gg/2BksEkV"
-msgstr ""
-"Jeg er færdig! <:felix:333872061103734794>\n"
-"Enhver advarsel er sendt ovenover. Jeg foreslår at fikse dem, og så køre "
-"kommandoen igen!\n"
-"Hvis der ikke er nogen, tillykke! Du bestod skarpt testene!\n"
-"Hvis du er klar til at fortsætte med opsætningen, skal du bruge kommandoen "
-"`dh! setup_settings`. Hvis du bare vil spille, skal du bruge "
-"`dh!add_channel`. Når den er brugt, vil ænder dukke op automatisk.\n"
-"Tak for at flyve DucksAir. Hvis du har spørgsmål, er vi her for at hjælpe på "
-"https://discord.gg/2BksEkV"
-
-#: cogs/setup_wizzard.py:135
-msgid ""
-"Hey! Let's configure the server!\n"
-"I'll give you the most used parameters, and let you change them if you want. "
-"Any command written here is optional, and you can start playing now just by "
-"using `dh!add_channel`.\n"
-"\n"
-"**Before starting, please make sure this is the channel you want to use, and "
-"activate it with `dh!add_channel`.**\n"
-"\n"
-"**1/ Language used**:\n"
-"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
-"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
-"    \\* Another language we don't fully support yet? Help us translate "
-"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
-"    \n"
-"**2/ Ducks Per Day**:\n"
-"    This is the number of ducks that will spawn per day. They spawn a random "
-"intervals, but you can configure the number of ducks that will spawn.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"ducks_per_day XX`, where `XX` is a number.\n"
-"    \\* To prevent abuse, there is a limit that will be automatically "
-"enforced. If you need to lift it, contact my owner at the support server.\n"
-"    \n"
-"**3/ Exp Won Per Duck Killed**:\n"
-"    This is the experience won per duck killed. If your server is really "
-"popular, it might be worth it to push it up a little to make new hunters "
-"progress faster.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
-"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
-"good start\n"
-"    \n"
-"**4/ Other settings**:\n"
-"    This is starting to be lengthy, so I won't go into further details here. "
-"You are probably all set and can start the game by typing `dh!add_channel`.\n"
-"    More settings can be found using `dh!settings list`\n"
-"    \n"
-"Thanks for playing with me! :duck:\n"
-msgstr ""
-"Hej! Lad os konfigurere serveren!\n"
-"Jeg giver dig de mest anvendte parametre, og lad dig ændre dem, hvis du vil. "
-"Enhver kommando, der er skrevet her, er valgfri, og du kan begynde at spille "
-"nu bare ved at bruge `dh!add_channel`.\n"
-"\n"
-"** Før du starter, skal du sørge for at det er den kanal, du vil bruge, og "
-"aktiver den med `dh!add_channel`. **\n"
-"\n"
-"** 1/ Anvendt Sprog **:\n"
-"    \\* Hvis du taler fransk, skal du bruge `dh!settings set language fr_FR`\n"
-"    \\* Hvis du taler spansk, skal du bruge `dh!settings set language es_ES`\n"
-"    \\* Et andet sprog understøtter vi ikke fuldt ud endnu? Hjælp os med at "
-"oversætte DuckHunt! Find os på https://discord.gg/2BksEkV.\n"
-"    \n"
-"** 2/ Ænder pr. Dag **:\n"
-"    Dette er antallet af ænder, der vil dukke op om dagen. De dukker op ved "
-"et tilfældigt interval, men du kan konfigurere antallet af ænder, der ville "
-"dukke op.\n"
-"    \\* Brug følgende kommando for at ændre den, brug `dh!settings set "
-"ducks_per_day XX`, hvor`XX` er et tal.\n"
-"    \\* For at forhindre misbrug er der en grænse, der automatisk håndhæves. "
-"Hvis du skal løfte det, skal du kontakte min ejer på supportserveren.\n"
-"    \n"
-"** 3/ Exp Vundet pr. And Dræbt **:\n"
-"    Dette er erfaringen, der blev vundet per and dræbt. Hvis din server er "
-"rigtig populær, kan det være værd at skubbe det lidt op for at gøre nye "
-"jægere hurtigere.\n"
-"    \\* Brug følgende kommando for at ændre den, brug `dh!settings set "
-"exp_won_per_duck_killed XX`, hvor` XX` er et tal.\n"
-"    \\*:bulb: Gå dog ikke for højt, der skal være en udfordring. 15 er en "
-"god start\n"
-"    \n"
-"** 4/ Andre indstillinger **:\n"
-"    Dette begynder at være lang, så jeg vil ikke gå ind i yderligere "
-"detaljer her. Du er sikkert helt klar og kan starte spillet ved at skrive "
-"`dh!add_channel`.\n"
-"    Flere indstillinger kan findes ved hjælp af `dh!settings list`\n"
-"    \n"
-"Tak for at lege med mig! :duck:\n"
 
 #: cogs/shop.py:42
 msgid ""
@@ -1206,9 +1053,13 @@ msgstr ""
 "Du kan genskaffe dit våben i butikken (`dh!shop 5`) eller vente, indtil du "
 "får det tilbage gratis (se hvornår med`!freetime`)"
 
-#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Du missede anden! [misset: -1 xp]"
+
+#: cogs/user_commands.py:322
+msgid "**Current event**"
+msgstr "**Nuværende begivenhed**"
 
 #: cogs/helpers/config.py:60
 msgid "*cries*"
@@ -1675,46 +1526,46 @@ msgstr "andebrødrister"
 msgid "old noob"
 msgstr "gammel nybegynder"
 
-#: cogs/helpers/database.py:192
+#: cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Niveau på {player} på #{channel}"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Du gik et niveau ned! "
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Du gik et niveau op!"
 
-#: cogs/helpers/database.py:207
+#: cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Forrige niveau"
 
-#: cogs/helpers/ducks.py:94
+#: cogs/helpers/ducks.py:95
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr ""
 "**FLAPP** Skræmt af så meget støj, anden flygtede! TILLYKKE! [misset: -1 xp]"
 
-#: cogs/helpers/ducks.py:105
+#: cogs/helpers/ducks.py:106
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:179
+#: cogs/helpers/ducks.py:180
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1746,15 +1597,7 @@ msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ":gun: Anden overlevede, prøv igen! *SUPER-AND OPDAGET* [liv: -{vie}]"
 
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr "<"
-
-#: cogs/helpers/ducks.py:392
-msgid "-_-'\\`'°-_-.-'\\`'° %__%    "
-msgstr "-_-'\\`'°-_-.-'\\`'° %__%"
-
-#: cogs/helpers/ducks.py:410
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1762,7 +1605,7 @@ msgstr ""
 "Du er blevet narret af {user_mention} for at dræbe en mekanisk and. Det "
 "ville tydeligvis ikke fungere, og du tabte 1 exp for dette misset skud"
 
-#: cogs/helpers/ducks.py:474
+#: cogs/helpers/ducks.py:457
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1772,11 +1615,7 @@ msgstr ""
 "sekunder, og du burde ikke have gjort dette! Du mister noget exp, fordi du "
 "ikke bør dræbe babyer\\ _X < *COUAC* {exp}"
 
-#: cogs/helpers/ducks.py:492
-msgid "I AM... Your mother"
-msgstr "JEG ER... Din mor"
-
-#: cogs/helpers/ducks.py:500
+#: cogs/helpers/ducks.py:481
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

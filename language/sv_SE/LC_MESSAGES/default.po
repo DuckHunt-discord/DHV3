@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-25 11:57+0000\n"
+"POT-Creation-Date: 2018-04-27 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:109
+#: bot.py:114
 msgid ":x: A required argument is missing."
 msgstr ":x: Ett obligatorisk argument saknas."
 
-#: bot.py:112
+#: bot.py:117
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Du har inte tillräckligt med erfarenhetspoäng för detta."
 
-#: bot.py:115
+#: bot.py:120
 msgid ":x: You are not a server admin"
 msgstr ":x: Du är inte ett serveradministratör."
 
-#: bot.py:118
+#: bot.py:123
 msgid ":x: You are not a super admin."
 msgstr ":x: Du är inte en superadministratör."
 
-#: bot.py:119
+#: bot.py:124
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,7 +41,7 @@ msgstr ""
 "Detta kommando är reserverat för ägarna av botten. Om du tycker detta är ett "
 "misstag, kontakta ägaren på DuckHunts Support Server (se `dh!help`)"
 
-#: bot.py:141
+#: bot.py:146
 msgid ":bulb: HINT: "
 msgstr ":bulb: TIPS:"
 
@@ -75,34 +75,34 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Summan för erfarenhetspoäng måste vara positiv."
 
-#: cogs/experience_related_commands.py:64
+#: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Du har skickat {amount} exp till {target} (och har betalt {taxes} i "
 "skatter)!"
 
-#: cogs/experience_related_commands.py:67
+#: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
 msgstr "Du har inte tillräckligt med erfarenhetspoäng."
 
-#: cogs/experience_related_commands.py:69
+#: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server."
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:34
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d på %H:%M:%S"
 
-#: cogs/experience_related_commands.py:78 cogs/scores.py:35
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dagar"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:36
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} timmar"
 
-#: cogs/experience_related_commands.py:79 cogs/scores.py:37
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minuter"
 
@@ -123,7 +123,7 @@ msgstr ""
 ":alarm_clock: Nästa utgivning av vapen och magasin blir i {sec} sekunder. "
 "({hours} timmar och {minutes} minuter)"
 
-#: cogs/helpers/database.py:210 cogs/scores.py:74 cogs/scores.py:314
+#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
 msgid "Exp points"
 msgstr "Erfarenhetspoäng"
 
@@ -151,7 +151,7 @@ msgstr "Inget!"
 msgid "Player"
 msgstr "Spelare"
 
-#: cogs/helpers/database.py:216 cogs/scores.py:186 cogs/scores.py:378
+#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -208,15 +208,15 @@ msgstr "Skott i nuvarande magasin"
 msgid "Ratio (exp/ducks killed)"
 msgstr "Ratio (erfarenhet/ankor dödade)"
 
-#: cogs/helpers/database.py:206 cogs/scores.py:316
+#: cogs/helpers/database.py:207 cogs/scores.py:316
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
-#: cogs/helpers/database.py:208 cogs/scores.py:317
+#: cogs/helpers/database.py:209 cogs/scores.py:317
 msgid "Shots accuracy"
 msgstr "Träffsäkerhet av skott"
 
-#: cogs/helpers/database.py:209 cogs/scores.py:318
+#: cogs/helpers/database.py:210 cogs/scores.py:318
 msgid "Weapon reliability"
 msgstr "Trovärdighet av vapen"
 
@@ -402,7 +402,7 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/helpers/ducks.py:91 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
@@ -556,39 +556,31 @@ msgstr "Seriemördare av ankor"
 msgid "duck genocider"
 msgstr "Anka massmördare"
 
-#: cogs/helpers/ducks.py:94
+#: cogs/helpers/ducks.py:95
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
 
-#: cogs/helpers/ducks.py:105
+#: cogs/helpers/ducks.py:106
 msgid "BPAM"
 msgstr "PANG"
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "BAAM"
 msgstr "BANG"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/helpers/ducks.py:113
+#: cogs/helpers/ducks.py:114
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:179
+#: cogs/helpers/ducks.py:180
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
 "Det var nära, du dödade nästan ankan, men andra jägaren fick ankan först!"
-
-#: cogs/helpers/ducks.py:385
-msgid " < *BZAACK*"
-msgstr "< *BZAACK*"
-
-#: cogs/helpers/ducks.py:387
-msgid " < "
-msgstr "<"
