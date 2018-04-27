@@ -25,7 +25,7 @@ class SetupWizzard:
                                                                   "Thanks for adding me in there! I'm almost ready to start the game!\n "
                                                                   "Could we please into the channel where you want the game to be ? "
                                                                   "Please invoke me there by using `dh!setup`"
-                                                                  "<:DuckHug:361969688957157378>", language))
+                                                                  "<:event_GuildAdded_01:439550913112309781>", language))
 
     @commands.command(aliases=["claimserver", "claim_server"])
     @checks.is_server_admin()
@@ -118,7 +118,7 @@ class SetupWizzard:
 
 
 
-        await self.bot.send_message(ctx=ctx, message=_("I'm done! <:felix:333872061103734794>\n"
+        await self.bot.send_message(ctx=ctx, message=_("I'm done! <:cmd_Setup_01:439551472804429836>\n"
                                                        "Any warning has been sent above. I suggest fixing them, then running the command again!\n"
                                                        "If there is none, congrats! You passed the tests brightfully!\n"
                                                        "If you are ready to continue with the setup, use the command `dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once used, "
@@ -157,7 +157,7 @@ I'll give you the most used parameters, and let you change them if you want. Any
     This is starting to be lengthy, so I won't go into further details here. You are probably all set and can start the game by typing `dh!add_channel`.
     More settings can be found using `dh!settings list`
     
-Thanks for playing with me! :duck:
+Thanks for playing with me! <:official_Duck_01:439546719177539584>
 """, language))
 
 

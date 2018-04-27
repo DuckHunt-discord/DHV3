@@ -97,7 +97,12 @@ class DuckHunt(commands.AutoShardedBot):
         for channel in guild.channels:
             self.ducks_planning.pop(channel, None)
 
+        logger.info(f"Before removing ducks, we had {len(bot.ducks_spawned)} ducks")
+
         self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel not in guild.channels]
+
+        logger.info(f"After removing ducks, we have {len(bot.ducks_spawned)} ducks")
+
 
     async def on_command_error(self, context, exception):
         _ = self._;
@@ -202,10 +207,11 @@ class DuckHunt(commands.AutoShardedBot):
                         to_send += "```"
                         line = "```" + line
 
-                    await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=False)
+                    await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=True) #
+                    # Return message at true to ensure order
                     to_send = line
 
-            m = await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=return_message)
+            m = await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=True)
             return m
 
         if ctx:

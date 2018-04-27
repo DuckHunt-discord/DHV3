@@ -155,56 +155,56 @@
 <p>
     In <span class="statistic">{{ name|escape }}</span>'s backpack, I can see
     <span class="statistic">{{ chargeurs }}</span> chargers and <span class="statistic">{{ balles }}</span> bullets
-    loaded in their weapon (and the last weapon giveback they used was on
+    loaded in their weapon (and the last weapon giveback they used was on {% if last_giveback|date('Y-m-d') == "now"|date('Y-m-d') %}today, the {% endif %}
     <span class="statistic">{{ last_giveback|date("m/d/Y") }}</span>)
 
 </p>
 <ul>
     {#How to compare dates :)#}
-    {% if ap_ammo|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if ap_ammo > "now"|date('U') %}
         <li>
             They have some <strong>Armor Piercing ammo</strong> until
             <span class="statistic">{{ ap_ammo|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if detecteurInfra|date('Y-m-d') > "now"|date('Y-m-d') and detecteur_infra_shots_left >= 0 %}
+    {% if detecteurInfra > "now"|date('U')  and detecteur_infra_shots_left >= 0 %}
         <li>
             They have an <strong>infrared detector</strong> on their weapon until
             <span class="statistic">{{ detecteurInfra|date("m/d/Y \\a\\t g:ia") }}</span>, that can prevent
             <span class="statistic">{{ detecteur_infra_shots_left }}</span> shots
         </li>
     {% endif %}
-    {% if explosive_ammo|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if explosive_ammo > "now"|date('U')  %}
         <li>
             They have some <strong>explosive ammo</strong> until
             <span class="statistic">{{ explosive_ammo|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if graisse|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if graisse > "now"|date('U') %}
         <li>
             They have some <strong>grease</strong> in their weapon that will dry and wear out on
             <span class="statistic">{{ graisse|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if life_insurance|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if life_insurance > "now"|date('U') %}
         <li>
             They have a valid <strong>life insurance</strong> policy that will least until
             <span class="statistic">{{ life_insurance|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if silencieux|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if silencieux > "now"|date('U') %}
         <li>
             They have a <strong>silencer</strong> mounted on their weapon that will break on
             <span class="statistic">{{ silencieux|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if sunglasses|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if sunglasses > "now"|date('U') %}
         <li>
             Swag incoming, they have some <strong>sunglasses</strong> right in the face the rented until
             <span class="statistic">{{ sunglasses|date("m/d/Y \\a\\t g:ia") }}</span>
         </li>
     {% endif %}
-    {% if trefle|date('Y-m-d') > "now"|date('Y-m-d') %}
+    {% if trefle > "now"|date('U') %}
         <li>
             The luck is with them, because they have a <strong>4-leaf clover</strong> that gives them
             <span class="statistic">{{ trefle_exp }}</span> more experience points by duck killed until

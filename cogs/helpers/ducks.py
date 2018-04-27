@@ -51,6 +51,7 @@ class BaseDuck:
 
         self.logger.debug(f"{self.__class__.__name__} created -> {self}")
 
+
     @property
     def logger(self):
         if not self._logger:
@@ -212,7 +213,6 @@ class BaseDuck:
                     "max_life": self.starting_life
                 })
 
-
     async def get_frighten_chance(self):
         return await self.bot.db.get_pref(self.channel.guild, "duck_frighten_chance")
 
@@ -259,17 +259,11 @@ class Duck(BaseDuck):
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
-        if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks"):
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") + " < "
-        else:
-            corps = random.choice(self.bot.canards_trace) + "  " + random.choice(self.bot.canards_portrait) + "  "
+        trace = random.choice(self.bot.canards_trace)
+        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+        cri = _(random.choice(self.bot.canards_cri), language=language)
 
-        if await self.bot.db.get_pref(self.channel.guild, "randomize_ducks"):
-            canard_str = corps + _(random.choice(self.bot.canards_cri), language=language)
-        else:
-            canard_str = corps + "QUAACK"
-
-        self.discord_spawn_str = canard_str
+        self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
 
     @classmethod
@@ -300,20 +294,17 @@ class SuperDuck(BaseDuck):
         self.starting_life = life
 
     async def _gen_discord_str(self):
+
+        # Same as for the Normal Duck because they shouldn't be distinguished
+
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
-        if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks"):
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") + " < "
-        else:
-            corps = random.choice(self.bot.canards_trace) + "  " + random.choice(self.bot.canards_portrait) + "  "
+        trace = random.choice(self.bot.canards_trace)
+        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks") else random.choice(self.bot.canards_portrait)
+        cri = _(random.choice(self.bot.canards_cri), language=language)
 
-        if await self.bot.db.get_pref(self.channel.guild, "randomize_ducks"):
-            canard_str = corps + _(random.choice(self.bot.canards_cri), language=language)
-        else:
-            canard_str = corps + "QUAACK"
-
-        self.discord_spawn_str = canard_str
+        self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
 
     async def post_kill(self, author, exp):
@@ -351,12 +342,12 @@ class MechanicalDuck(BaseDuck):
     Special duck "already killed" just to troll other hunters
     """
 
-    def __init__(self, bot, channel, ttl=30):
+    def __init__(self, bot, channel, ttl=30, user=None):
+        self.user = user
         super().__init__(bot, channel)
         self.life = 1
         self.exp_value = -1
         self.staying_until = self.spawned_at + ttl
-        self.user = None
         self.can_miss = False
         self.can_use_clover = False
 
@@ -376,30 +367,25 @@ class MechanicalDuck(BaseDuck):
 
 
     async def _gen_discord_str(self):
+
+        # Same as for the Normal Duck because they shouldn't be distinguished
+
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
         guild = self.channel.guild
 
-        if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks"):
-            if await self.bot.db.get_pref(guild, "randomize_mechanical_ducks") == 0:
-                canard_str = await self.bot.db.get_pref(guild, "emoji_used") + _(" < *BZAACK*", language)
-            else:
-                canard_str = _(await self.bot.db.get_pref(guild, "emoji_used") + " < " + _(random.choice(self.bot.canards_cri), language))
-        else:
-            if await self.bot.db.get_pref(guild, "randomize_mechanical_ducks") == 0:
-                canard_str = _("-_-'\`'°-_-.-'\`'° %__%   *BZAACK*", language)
-            elif await self.bot.db.get_pref(guild, "randomize_mechanical_ducks") == 1:
-                canard_str = _("-_-'\`'°-_-.-'\`'° %__%    " + _(random.choice(self.bot.canards_cri), language))
-            else:
-                canard_str = random.choice(self.bot.canards_trace + "  " + random.choice(self.bot.canards_portrait) + "  " + _(random.choice(self.bot.canards_cri), language))  # ASSHOLE ^^
+        trace = random.choice(self.bot.canards_trace) if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 1 else "-_-'\`'°-_-.-'\`'°"
+        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 2 else await self.bot.db.get_pref(
+            self.channel.guild, "emoji_used") # TODO : Insert here a proper Mechanical Duck Emoji!
+        cri = _(random.choice(self.bot.canards_cri), language=language) if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 3 else "*BZAACK*"
 
-        self.discord_spawn_str = canard_str
+        self.discord_spawn_str = f"{trace} {corps} < {cri}"
+
         self.discord_leave_str = None
 
     @classmethod
     async def create(cls, bot, channel, ignore_event=False, user=None):
-        duck = cls(bot, channel)
-        duck.user = user
+        duck = cls(bot, channel, user=user)
         await duck._gen_discord_str()
         return duck
 
@@ -444,15 +430,12 @@ class BabyDuck(BaseDuck):
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
-        if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks"):
-            corps = ":baby_chick:" + " < "
-        else:
-            corps = random.choice(self.bot.canards_trace) + "  " + random.choice(self.bot.canards_portrait) + "  "
+        trace = random.choice(self.bot.canards_trace)
+        corps = random.choice(["<:BabyDuck_01:439546718263050241>", "<:BabyDuck_02:439551472762355724>", " <:official_BabyDuck_01:439546718527160322>"])
+        cri   = "**COIN**"
 
-        canard_str = corps + "**COIN**"
-
-        self.discord_spawn_str = canard_str
-        self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
+        self.discord_spawn_str = f"{trace} {corps} < {cri}"
+        self.discord_leave_str = _("The baby duck left looking for some sleep ·°'\`'°-.,¸¸.·°'\`", language)
 
     @classmethod
     async def create(cls, bot, channel, ignore_event=False):
@@ -484,15 +467,13 @@ class MotherOfAllDucks(SuperDuck):
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
-        if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks"):
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") + " < "
-        else:
-            corps = random.choice(self.bot.canards_trace) + "  " + random.choice(self.bot.canards_portrait) + "  "
+        trace = random.choice(self.bot.canards_trace)
+        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+        cri   = "**I AM...** Your mother"
 
-        canard_str = corps + _("I AM... Your mother", language)
-
-        self.discord_spawn_str = canard_str
+        self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
+
 
     async def get_killed_string(self):
         _ = self.bot._

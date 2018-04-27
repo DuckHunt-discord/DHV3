@@ -15,13 +15,34 @@
     <meta property="og:site_name"
           content="DuckHunt" />
 
+
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
           crossorigin="anonymous">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tablesorter@2.30.1/dist/css/theme.default.min.css">
 
     <style>
+        .statistic {
+            border-bottom-width: 1px;
+            border-bottom-style: dotted;
+            border-bottom-color: #666;
+        }
+
+        .graph {
+            display: block;
+            background: #E6E7ED;
+            border-radius: 3px;
+            margin: auto;
+            padding: 10px;
+        }
 
         .profile_picture {
             background: #E6E7ED;
@@ -63,6 +84,237 @@
 
 
 <h1>DuckHunt TopScores for #{{ channel_name | escape }}</h1>
+
+<h2>Summary</h2>
+
+<p>
+    DuckHunt is tracking hunter statistics for <span class="statistic">{{ players|length }}</span> players in <span class="statistic">#{{ channel_name | escape }}</span>
+</p>
+
+<h3>Best hunters ranked by exp</h3>
+
+<div id="exp_graph"
+     class="graph"></div>
+
+<script>
+
+    Highcharts.chart('exp_graph', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Top 100 Players sorted by total experience (log scale)'
+        },
+        subtitle: {
+            text: 'Generated {{ "now"|date }}'
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                enabled:false,
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            type: 'logarithmic',
+            min: 1,
+            title: {
+                text: 'Experience points'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: '{point.name} have {point.y} exp'
+        },
+        series: [{
+            name: 'Hunters',
+            data: [
+                {% for player in players|slice(0, 100)%}
+                    {% if player.exp > 1 %}
+                        ['{{ player.name|escape('js') }}',{{ player.exp }}],
+                    {% endif %}
+                {% endfor %}
+            ],
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+</script>
+
+<h3>Kind of ducks killed on #{{ channel_name | escape }}</h3>
+
+<div id="ducks_graph"
+     class="graph"></div>
+
+<script>
+
+    // Create the chart
+    Highcharts.chart('ducks_graph', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Types of ducks killed in #{{ channel_name | escape }}'
+        },
+        subtitle: {
+            text: 'Click the columns to view hunters. Generated {{ "now"|date }}'
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Total number of ducks killed'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y} total'
+                }
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> {point.name} killed<br/>'
+        },
+
+        "series": [
+            {
+                "name": "Ducks killed",
+                "colorByPoint": true,
+                "data": [
+                    {
+                        "name": "Normal Ducks",
+                        "y": {{ total_normal_ducks }},
+                        "drilldown": "ducks"
+                    },
+                    {
+                        "name": "Super Ducks",
+                        "y": {{ total_super_ducks }},
+                        "drilldown": "super_ducks"
+                    },
+                    {
+                        "name": "Baby Ducks",
+                        "y": {{ total_baby_ducks }},
+                        "drilldown": "baby_ducks"
+                    },
+                    {
+                        "name": "MOAD",
+                        "y": {{ total_moad_ducks }},
+                        "drilldown": "mother_of_all_ducks"
+                    },
+                    {
+                        "name": "Mechanical Ducks",
+                        "y": {{ total_mechanical_ducks }},
+                        "drilldown": "mechanical_ducks"
+                    },
+                    {
+                        "name": "Players (oops)",
+                        "y": {{ total_players_killed }},
+                        "drilldown": "players_killed"
+                    }
+                ]
+            }
+        ],
+        "drilldown": {
+            "series": [
+                {
+                    "name": "Normal Ducks",
+                    "id": "ducks",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_ducks', 'desc'))| slice(0, 20) %}
+
+                        {% if player.killed_ducks > 0 %}
+                        ["{{ player.name|escape('js') }}",
+                            {{ player.killed_ducks }}],
+                        {% endif %}
+                        {% endfor %}
+                    ]
+                },
+                {
+                    "name": "Super Ducks",
+                    "id": "super_ducks",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_super_ducks', 'desc'))| slice(0, 20) %}
+                        {% if player.killed_super_ducks > 0 %}
+                        ["{{ player.name|escape('js') }}",
+                            {{ player.killed_super_ducks }}],
+                        {% endif %}
+                        {% endfor %}
+                    ]
+                },
+                {
+                    "name": "Baby Ducks",
+                    "id": "baby_ducks",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_baby_ducks', 'desc'))| slice(0, 20)  %}
+
+                        {% if player.killed_baby_ducks > 0 %}
+                        ["{{ player.name|escape('js') }}",
+                            {{ player.killed_baby_ducks }}],
+                        {% endif %}
+
+                        {% endfor %}
+                    ]
+                },
+                {
+                    "name": "Mother Of All Ducks",
+                    "id": "mother_of_all_ducks",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_mother_of_all_ducks', 'desc'))| slice(0, 20)  %}
+                        {% if player.killed_mother_of_all_ducks > 0 %}
+                        ["{{ player.name|escape('js') }}",
+                            {{ player.killed_mother_of_all_ducks }}],
+                        {% endif %}
+                        {% endfor %}
+                    ]
+                },
+                {
+                    "name": "Mechanical Ducks",
+                    "id": "mechanical_ducks",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_mechanical_ducks', 'desc'))| slice(0, 20)  %}
+                        {% if player.killed_mechanical_ducks > 0 %}
+                        ["{{ player.name|escape('js') }}",
+                            {{ player.killed_mechanical_ducks }}],
+                        {% endif %}
+                        {% endfor %}
+                    ]
+                },
+                {
+                    "name": "Players (Oops!)",
+                    "id": "players_killed",
+                    "data": [
+                        {% for player in (players | sortbyfield('killed_players', 'desc'))| slice(0, 20)  %}
+                        {% if player.killed_players > 0 %}
+                        [ "{{ player.name|escape('js') }}",
+                            {{ player.killed_players }}],
+                        {% endif %}
+                        {% endfor %}
+                    ]
+                }
+            ]
+        }
+    });
+</script>
+
+
+<h2>Raw scores</h2>
 
 <table id="top_table"
        class="tablesorter">

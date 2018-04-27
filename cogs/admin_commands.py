@@ -61,7 +61,7 @@ class Admin:
         language = await self.bot.db.get_pref(ctx.guild, "language")
         await ctx.bot.db.enable_channel(ctx.channel)
         await spawning.planifie(self.bot, ctx.channel, new_day=False)
-        await self.bot.send_message(ctx=ctx, message=_("<:DuckHug:361969688957157378> Done, channel {channel} added to the game! Have fun!", language).format(**{"channel": ctx.channel.mention}))
+        await self.bot.send_message(ctx=ctx, message=_("<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to the game! Have fun!", language).format(**{"channel": ctx.channel.mention}))
 
     @commands.command(aliases=["del_channel", "delchannel"])
     @checks.is_server_admin()
@@ -77,7 +77,7 @@ class Admin:
             if duck.channel == ctx.channel:
                 duck.delete()
 
-        await self.bot.send_message(ctx=ctx, message=_("<:DuckHug:361969688957157378> Done, channel {channel} removed from the game. Bye!", language).format(**{"channel": ctx.channel.mention}))
+        await self.bot.send_message(ctx=ctx, message=_("<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed from the game. Bye!", language).format(**{"channel": ctx.channel.mention}))
         await self.bot.hint(ctx=ctx, message="This does not remove the scores. Use `dh!removeallscoresandstatsonthischannel` to remove them.")
 
     @commands.command(aliases=["addadmin"])
@@ -86,7 +86,7 @@ class Admin:
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.guild, "language")
         await ctx.bot.db.add_admin(ctx.guild, new_admin)
-        await self.bot.send_message(ctx=ctx, message=_("<:DuckHug:361969688957157378> {admin} added as an admin to the guild!", language).format(**{"admin": new_admin.mention}))
+        await self.bot.send_message(ctx=ctx, message=_("<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the guild!", language).format(**{"admin": new_admin.mention}))
 
     @commands.command(aliases=["deladmin"])
     @checks.is_server_admin()
@@ -94,7 +94,7 @@ class Admin:
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")
         await ctx.bot.db.del_admin(ctx.guild, old_admin)
-        await self.bot.send_message(ctx=ctx, message=_("<:DuckHug:361969688957157378> {admin} removed from the guild admins.", language).format(**{"admin": old_admin.mention}))
+        await self.bot.send_message(ctx=ctx, message=_("<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild admins.", language).format(**{"admin": old_admin.mention}))
 
     @commands.command(aliases=["spawnduck", "coin"])
     @checks.is_server_admin()
@@ -191,7 +191,7 @@ class Admin:
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         if not pref in self.bot.db.settings_list:
-            await self.bot.send_message(ctx=ctx, message=_("<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting", language))
+            await self.bot.send_message(ctx=ctx, message=_("<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this setting", language))
             return
 
         await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} is set to `{value}` on this guild.", language).format(
@@ -206,7 +206,7 @@ class Admin:
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         if not pref in self.bot.db.settings_list:
-            await self.bot.send_message(ctx=ctx, message=_("<:blobhyperthink:357040754566103040> **ERROR:** I don't know this setting", language))
+            await self.bot.send_message(ctx=ctx, message=_("<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this setting", language))
             return
 
         # Special cases
@@ -226,7 +226,7 @@ class Admin:
 
             elif pref == "vip":
                 if ctx.message.author.id in self.bot.admins:
-                    await self.bot.send_message(ctx=ctx, message=_(":duck: Authorised to set the VIP status!", language))
+                    await self.bot.send_message(ctx=ctx, message=_("<:official_Duck_01:439546719177539584> Authorised to set the VIP status!", language))
                 else:
                     await self.bot.send_message(ctx=ctx, message=_(":x: Unauthorised to set the VIP status! You are not an owner.", language))
                     return False

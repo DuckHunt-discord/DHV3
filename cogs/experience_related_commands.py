@@ -45,6 +45,10 @@ class Experience:
                 await self.bot.send_message(ctx=ctx, message=_(":x: The exp amount needs to be positive.", language))
                 return
 
+            if target == ctx.message.author:
+                await self.bot.send_message(ctx=ctx, message=_(":x: Wait... What? Are you trying to send experience to YOURSELF? That dosen't make sense.", language))
+                return
+
             if await self.bot.db.get_stat(message.channel, message.author, "exp") >= amount:
                 await self.bot.db.add_to_stat(message.channel, message.author, "exp", -amount)
                 tax = await self.bot.db.get_pref(message.guild, "tax_on_user_give")
