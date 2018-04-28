@@ -102,7 +102,18 @@ if (isset($_GET['cid'])) {
         $player_stats_query->bindParam(':channel_id', $db_channel_id);
         $player_stats_query->bindParam(':player_id', $player_id);
         $player_stats_query->execute();
+
+        if($player_stats_query->rowCount() == 0)
+        {
+            http_response_code(404);
+            die("Player or channel not found!");
+        }
+
         $player_stats = $player_stats_query->fetch();
+
+
+
+
 
         //print_r($player_stats);
 
@@ -131,7 +142,16 @@ if (isset($_GET['cid'])) {
         $players_array_query = $conn->prepare("SELECT * FROM players WHERE channel_id=:channel_id AND (exp <> 0 OR killed_ducks > 0) ORDER BY exp DESC");
         $players_array_query->bindParam(':channel_id', $db_channel_id);
         $players_array_query->execute();
+
+        if($players_array_query->rowCount() == 0)
+        {
+            http_response_code(404);
+            die("Channel not found!");
+        }
+
         $players_array = $players_array_query->fetchall();
+
+
 
         $total_normal_ducks     = 0;
         $total_super_ducks      = 0;
