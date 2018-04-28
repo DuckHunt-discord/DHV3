@@ -215,8 +215,8 @@
 
 <h2>Shots statistics</h2>
 <p>
-    <span class="statistic">{{ name|escape }}</span> fired a whooping total of
-    <span class="statistic">{{ shoots_fired }}</span> shoots. Hopefully, a lot of them killed a duck!
+    <span class="statistic">{{ name|escape }}</span> fired a whopping total of
+    <span class="statistic">{{ shoots_fired }}</span> shots. Hopefully, a lot of them killed a duck!
 </p>
 
 <div id="shots_fired"
@@ -333,7 +333,7 @@
 </p>
 
 <p>
-    <span class="statistic">{{ name|escape }}</span> is reload hungry and tried to reload <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
+    <span class="statistic">{{ name|escape }}</span> is {% if unneeded_reloads < 5 %}not really{% endif %}{% if unneeded_reloads > 50 %}really{% endif %} reload hungry and tried to reload <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
 </p>
 
 </body>
