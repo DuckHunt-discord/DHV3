@@ -56,6 +56,26 @@
             background: rgba(0, 0, 0, 0.04);
             max-width: 100%;
         }
+
+        #special-icons {
+            text-align:center;
+            background: #E6E7ED;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        #special-icons img {
+            height: 30px;
+            width: 30px;
+            display:inline-block;
+            margin:5px 10px;
+            padding:5px;
+
+        }
+
+
+
+
     </style>
 </head>
 <body>
@@ -65,10 +85,57 @@
      alt="Profile Picture">
 
 <h1>{{ name }} is hunting ducks on <a href="duckstats.php?cid={{ channel_id }}"> #{{ channel_name|escape }}</a>
-    {% if banned > 0 %} <i class="fa fa-frown"
-                           title="They are bannned!"></i>{% endif %}
+
+
+
+
+
     {% if confique|date('Y-m-d') > "now"|date('Y-m-d') > 0 %} <i class="fa fa-procedures"
                                                                  title="Weapon confiscated"></i>{% endif %}</h1>
+{%  if true in badges %}
+<div id="special-icons">
+    {% if badges['banned'] %}
+        <img src="special-icons/banned.svg" title="This player is banned on this server :(">
+    {% endif %}
+
+    {% if badges['no_weapon'] %}
+    <img src="special-icons/no_weapon.svg" title="This player had his weapon confiscated here :(">
+    {% endif %}
+
+    {% if badges['admin'] %}
+    <img src="special-icons/admin.svg" title="This user is a bot admin">
+    {% endif %}
+
+    {% if badges['moderator'] %}
+    <img src="special-icons/moderator.svg" title="This user is a bot moderator">
+    {% endif %}
+
+    {% if badges['translator'] %}
+    <img src="special-icons/translator.svg" title="This user helped translating the bot">
+    {% endif %}
+
+    {% if badges['bug_hunter'] %}
+    <img src="special-icons/bug_hunter.svg" title="This user is a bug hunter">
+    {% endif %}
+
+    {% if badges['proficient'] %}
+    <img src="special-icons/proficient.svg" title="This user is proficient with the bot and can help you on the support server">
+    {% endif %}
+
+    {% if badges['retired_staff'] %}
+    <img src="special-icons/retired_staff.svg" title="This user retired from the bot staff">
+    {% endif %}
+
+    {% if badges['partner'] %}
+    <img src="special-icons/partner.svg" title="This user is a bot partner">
+    {% endif %}
+
+    {% if badges['donator'] %}
+    <img src="special-icons/donator.svg" title="This user donated to the bot">
+    {% endif %}
+
+</div>
+{% endif %}
 
 <h2>General statistics</h2>
 
@@ -335,6 +402,8 @@
 <p>
     <span class="statistic">{{ name|escape }}</span> is {% if unneeded_reloads < 5 %}not really{% endif %}{% if unneeded_reloads > 50 %}really{% endif %} reload hungry and tried to reload <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
 </p>
+
+<div>Some Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 </body>
 </html>
