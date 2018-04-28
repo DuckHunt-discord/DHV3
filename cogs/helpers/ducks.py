@@ -301,7 +301,7 @@ class SuperDuck(BaseDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
         trace = random.choice(self.bot.canards_trace)
-        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") if await self.bot.db.get_pref(self.channel.guild, "emoji_ducks") else random.choice(self.bot.canards_portrait)
+        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"

@@ -226,7 +226,7 @@ class Admin:
 
             elif pref == "vip":
                 if ctx.message.author.id in self.bot.admins:
-                    await self.bot.send_message(ctx=ctx, message=_("<:official_Duck_01:439546719177539584> Authorised to set the VIP status!", language))
+                    await self.bot.send_message(ctx=ctx, message=_("<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP status!", language))
                 else:
                     await self.bot.send_message(ctx=ctx, message=_(":x: Unauthorised to set the VIP status! You are not an owner.", language))
                     return False
@@ -244,6 +244,33 @@ class Admin:
         else:
             await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect value.", language))
             return False
+
+    @settings.command(name='reset')
+    @commands.cooldown(5, 20, BucketType.guild)
+    @checks.is_server_admin()
+    async def settings_reset(self, ctx, pref: str):
+        """!settings reset"""
+        _ = self.bot._;
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+        if not pref in self.bot.db.settings_list:
+            await self.bot.send_message(ctx=ctx, message=_("<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this setting", language))
+            return
+
+        value = self.bot.db.settings_dict[pref]["Default"]
+
+        if await self.bot.db.set_pref(ctx.message.guild, pref=pref, value=value):
+            if pref == "ducks_per_day":
+                await spawning.planifie(self.bot, channel=ctx.message.channel, new_day=False)
+
+            await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} has been set to `{value}` on this guild.", language).format(
+                **{"value": await self.bot.db.get_pref(ctx.message.guild, pref), "pref": pref}))
+            return True
+        else:
+            await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect value.", language))
+            return False
+
+
 
     @settings.command(name='all', aliases=["list"])
     @commands.cooldown(1, 20, BucketType.guild)
@@ -264,6 +291,8 @@ class Admin:
         await self.bot.send_message(ctx=ctx, message="\n```\n" + tabulate.tabulate(table, headers, tablefmt="fancy_grid") + "\n```")
 
         await self.bot.send_message(ctx=ctx, message=_("The list of preferences is available on our new website: https://duckhunt.me/bot-settings/", language))
+
+
 
     @settings.command(name='modified')
     @commands.cooldown(1, 20, BucketType.guild)
