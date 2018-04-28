@@ -23,7 +23,7 @@ class SetupWizzard:
 
         await self.bot.send_message(where=channel_used, message=_("Hello!\n "
                                                                   "Thanks for adding me in there! I'm almost ready to start the game!\n "
-                                                                  "Could we please into the channel where you want the game to be ? "
+                                                                  "Could we please go into the channel where you want the game to be ? "
                                                                   "Please invoke me there by using `dh!setup`"
                                                                   "<:event_GuildAdded_01:439550913112309781>", language))
 
