@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-27 23:43+0000\n"
+"POT-Creation-Date: 2018-04-28 00:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,7 @@ msgid ""
 msgstr ""
 
 #: cogs/admin_commands.py:194 cogs/admin_commands.py:209
+#: cogs/admin_commands.py:257
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -114,7 +115,9 @@ msgid ""
 msgstr ""
 
 #: cogs/admin_commands.py:229
-msgid "<:official_Duck_01:439546719177539584> Authorised to set the VIP status!"
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP"
+" status!"
 msgstr ""
 
 #: cogs/admin_commands.py:231
@@ -122,14 +125,15 @@ msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
 #: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/admin_commands.py:241
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:266
+#: cogs/admin_commands.py:293
 msgid ""
 "The list of preferences is available on our new website: "
 "https://duckhunt.me/bot-settings/"
