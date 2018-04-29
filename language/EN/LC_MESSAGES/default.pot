@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 08:52+0000\n"
+"POT-Creation-Date: 2018-04-29 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,246 +238,16 @@ msgstr ""
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr ""
 
-#: cogs/scores.py:57
+#: cogs/scores.py:52
 msgid ""
 "The scores are now available online at "
 "http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
 msgstr ""
 
-#: cogs/scores.py:65
-msgid "You have to use `--sort-by [exp/killed/missed/time]` here."
-msgstr ""
-
-#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
-msgid "Exp points"
-msgstr ""
-
-#: cogs/scores.py:78 cogs/scores.py:307
-msgid "Ducks killed"
-msgstr ""
-
-#: cogs/scores.py:82 cogs/scores.py:323
-msgid "Shots missed"
-msgstr ""
-
-#: cogs/scores.py:86
-msgid "Best time"
-msgstr ""
-
-#: cogs/scores.py:100
-msgid "Can't post embeds!"
-msgstr ""
-
-#: cogs/scores.py:101
-msgid ""
-"Use `dh!setup` to see missing permissions and ask an admin to give me the"
-" missing ones!"
-msgstr ""
-
-#: cogs/scores.py:126
-msgid "Generating top scores for your channel, please wait!"
-msgstr ""
-
-#: cogs/scores.py:138
-msgid ":cocktail: Best scores for {channel_name} :cocktail:"
-msgstr ""
-
-#: cogs/scores.py:156 cogs/scores.py:163
-msgid "None!"
-msgstr ""
-
-#: cogs/scores.py:179
-msgid "Player"
-msgstr ""
-
-#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
-msgid ""
-":warning: There was an error while sending the embed, please check if the"
-" bot has the `embed_links` permission and try again!"
-msgstr ""
-
-#: cogs/scores.py:256
+#: cogs/scores.py:259
 msgid ""
 "The Duckstats are now available online at "
 "http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-
-#: cogs/scores.py:275
-msgid "Generating DuckHunt statistics for you, please wait..."
-msgstr ""
-
-#: cogs/scores.py:282
-msgid "Page {current}/{max}"
-msgstr ""
-
-#: cogs/scores.py:285
-msgid ""
-"\n"
-"Confiscated weapon!"
-msgstr ""
-
-#: cogs/scores.py:294
-msgid "General statistics"
-msgstr ""
-
-#: cogs/scores.py:300
-msgid "No best time."
-msgstr ""
-
-#: cogs/scores.py:305
-msgid "No duck killed"
-msgstr ""
-
-#: cogs/scores.py:308
-msgid "Super ducks killed"
-msgstr ""
-
-#: cogs/scores.py:309
-msgid "Players killed"
-msgstr ""
-
-#: cogs/scores.py:310
-msgid "Self-killing shots"
-msgstr ""
-
-#: cogs/scores.py:312
-msgid "Best killing time"
-msgstr ""
-
-#: cogs/scores.py:313
-msgid "Bullets in current magazine"
-msgstr ""
-
-#: cogs/scores.py:315
-msgid "Ratio (exp/ducks killed)"
-msgstr ""
-
-#: cogs/helpers/database.py:207 cogs/scores.py:316
-msgid "Current level"
-msgstr ""
-
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
-msgid "nom"
-msgstr ""
-
-#: cogs/helpers/database.py:209 cogs/scores.py:317
-msgid "Shots accuracy"
-msgstr ""
-
-#: cogs/helpers/database.py:210 cogs/scores.py:318
-msgid "Weapon reliability"
-msgstr ""
-
-#: cogs/scores.py:320
-msgid "Shoots statistics"
-msgstr ""
-
-#: cogs/scores.py:322
-msgid "Shots fired"
-msgstr ""
-
-#: cogs/scores.py:324
-msgid "Shots without ducks"
-msgstr ""
-
-#: cogs/scores.py:325
-msgid "Shots that frightened a duck"
-msgstr ""
-
-#: cogs/scores.py:326
-msgid "Shots that harmed a duck"
-msgstr ""
-
-#: cogs/scores.py:327
-msgid "Shots stopped by the detector"
-msgstr ""
-
-#: cogs/scores.py:328
-msgid "Shots jamming a weapon"
-msgstr ""
-
-#: cogs/scores.py:329
-msgid "Shots with a sabotaged weapon"
-msgstr ""
-
-#: cogs/scores.py:330
-msgid "Shots with a jammed weapon"
-msgstr ""
-
-#: cogs/scores.py:331
-msgid "Shots without bullets"
-msgstr ""
-
-#: cogs/scores.py:332
-msgid "Shots without weapon"
-msgstr ""
-
-#: cogs/scores.py:333
-msgid "Shots when wet"
-msgstr ""
-
-#: cogs/scores.py:336
-msgid "Reloads and items statistics"
-msgstr ""
-
-#: cogs/scores.py:338
-msgid "Reloads"
-msgstr ""
-
-#: cogs/scores.py:339
-msgid "Reloads without magazines"
-msgstr ""
-
-#: cogs/scores.py:340
-msgid "Reloads not needed"
-msgstr ""
-
-#: cogs/scores.py:342
-msgid "Trash found in bushes"
-msgstr ""
-
-#: cogs/scores.py:344
-msgid "Exp earned with a clover"
-msgstr ""
-
-#: cogs/scores.py:345
-msgid "Life insurance rewards"
-msgstr ""
-
-#: cogs/scores.py:346
-msgid "Free givebacks used"
-msgstr ""
-
-#: cogs/scores.py:349
-msgid "Possesed items and effects"
-msgstr ""
-
-#: cogs/scores.py:352
-msgid "Object: grease"
-msgstr ""
-
-#: cogs/scores.py:355
-msgid "Object: infrared detector"
-msgstr ""
-
-#: cogs/scores.py:358
-msgid "Object: silencer"
-msgstr ""
-
-#: cogs/scores.py:361
-msgid "Object: clover {exp} exp"
-msgstr ""
-
-#: cogs/scores.py:364
-msgid "Object: explosive ammo"
-msgstr ""
-
-#: cogs/scores.py:366
-msgid "Object: AP ammo"
-msgstr ""
-
-#: cogs/scores.py:369
-msgid "Effect: wet"
 msgstr ""
 
 #: cogs/setup_wizzard.py:24
@@ -1482,8 +1252,34 @@ msgstr ""
 msgid "You leveled up!"
 msgstr ""
 
+#: cogs/helpers/database.py:207
+msgid "Current level"
+msgstr ""
+
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
+msgid "nom"
+msgstr ""
+
 #: cogs/helpers/database.py:208
 msgid "Previous level"
+msgstr ""
+
+#: cogs/helpers/database.py:209
+msgid "Shots accuracy"
+msgstr ""
+
+#: cogs/helpers/database.py:210
+msgid "Weapon reliability"
+msgstr ""
+
+#: cogs/helpers/database.py:211
+msgid "Exp points"
+msgstr ""
+
+#: cogs/helpers/database.py:217
+msgid ""
+":warning: There was an error while sending the embed, please check if the"
+" bot has the `embed_links` permission and try again!"
 msgstr ""
 
 #: cogs/helpers/ducks.py:95
