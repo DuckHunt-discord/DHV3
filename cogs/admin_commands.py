@@ -230,6 +230,9 @@ class Admin:
                 else:
                     await self.bot.send_message(ctx=ctx, message=_(":x: Unauthorised to set the VIP status! You are not an owner.", language))
                     return False
+            elif pref == "time_before_ducks_leave":
+                if int(value) > 3600:
+                    value = 3600
         except (ValueError, TypeError):
             await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect value.", language))
             return False

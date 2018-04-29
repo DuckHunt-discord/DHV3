@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: arthur
- * Date: 24/04/2018
- * Time: 01:18
- */
+
 
 require_once 'vendor/autoload.php';
 $servername = "localhost";
@@ -135,7 +130,7 @@ if (isset($_GET['cid'])) {
             "clueless"       => $player_stats['exp'] < -15,
             "scientist"      => $player_stats['exp'] > 2090,
             "max_level"      => $player_stats['exp'] > 11111,
-            "cheater"        => $player_stats['exp'] > 20000000,
+            "cheater"        => $player_stats['exp'] > 1000000,
             "baby_lover"     => $player_stats['killed_baby_ducks'] < 5,
             "murderer"       => $player_stats['murders'] > 0,
             "first_blood"    => $player_stats['killed_ducks'] > 1,

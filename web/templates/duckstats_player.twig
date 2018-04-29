@@ -15,6 +15,16 @@
     <meta property="og:site_name"
           content="DuckHunt" />
 
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="js/tipped/tipped.js"></script>
+
+    <link rel="stylesheet"
+          href="js/tipped/tipped.css" />
+
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -136,7 +146,6 @@
 {% endif %}
 
 
-
 <h2>General statistics</h2>
 
 <p>
@@ -150,86 +159,102 @@
 </p>
 
 
-
-
 {% if true in achievements %}
-<h2>Achievements</h2>
-<div class="special-icons">
+    <h2>Achievements</h2>
+    <div class="special-icons">
 
-    {% if achievements['time_played_1'] %}
-        <img src="achievements-icons/time_played_1.svg" title="This hunter played for more than a week">
-    {% endif %}
+        {% if achievements['time_played_1'] %}
+            <img src="achievements-icons/time_played_1.svg"
+                 title="This hunter played for more than a week">
+        {% endif %}
 
-    {% if achievements['time_played_2'] %}
-        <img src="achievements-icons/time_played_2.svg" title="This player played for more than a month">
-    {% endif %}
+        {% if achievements['time_played_2'] %}
+            <img src="achievements-icons/time_played_2.svg"
+                 title="This player played for more than a month">
+        {% endif %}
 
-    {% if achievements['clueless'] %}
-        <img src="achievements-icons/clueless.svg" title="This player probably don't understand that they should earn experience">
-    {% endif %}
+        {% if achievements['clueless'] %}
+            <img src="achievements-icons/clueless.svg"
+                 title="This player probably don't understand that they should earn experience">
+        {% endif %}
 
-    {% if achievements['scientist'] %}
-        <img src="achievements-icons/scientist.svg" title="This player is halfway to the top">
-    {% endif %}
+        {% if achievements['scientist'] %}
+            <img src="achievements-icons/scientist.svg"
+                 title="This player is halfway to the top">
+        {% endif %}
 
-    {% if achievements['max_level'] %}
-        <img src="achievements-icons/max_level.svg" title="This player reached the maximum level in the game">
-    {% endif %}
+        {% if achievements['max_level'] %}
+            <img src="achievements-icons/max_level.svg"
+                 title="This player reached the maximum level in the game">
+        {% endif %}
 
-    {% if achievements['cheater'] %}
-        <img src="achievements-icons/cheater.svg" title="This player probably cheated to reach that amount of exp">
-    {% endif %}
+        {% if achievements['cheater'] %}
+            <img src="achievements-icons/cheater.svg"
+                 title="This player probably cheated to reach that amount of exp">
+        {% endif %}
 
-    {% if achievements['baby_lover'] %}
-        <img src="achievements-icons/baby_lover.svg" title="This player killed less than 5 baby ducks">
-    {% endif %}
-
-
-    {% if achievements['murderer'] %}
-        <img src="achievements-icons/murderer.svg" title="This player murdered someone">
-    {% endif %}
-
-
-    {% if achievements['first_blood'] %}
-        <img src="achievements-icons/first_blood.svg" title="This player killed his first duck">
-    {% endif %}
-
-    {% if achievements['ducks_killed_1'] %}
-        <img src="achievements-icons/ducks_killed_1.svg" title="More than 10 ducks killed">
-    {% endif %}
-
-    {% if achievements['ducks_killed_2'] %}
-        <img src="achievements-icons/ducks_killed_2.svg" title="More than 100 ducks killed">
-    {% endif %}
-
-    {% if achievements['ducks_killed_3'] %}
-        <img src="achievements-icons/ducks_killed_3.svg" title="More than 500 ducks killed">
-    {% endif %}
-
-    {% if achievements['ducks_killed_4'] %}
-        <img src="achievements-icons/ducks_killed_4.svg" title="More than 1000 ducks killed">
-    {% endif %}
-
-    {% if achievements['ducks_killed_5'] %}
-        <img src="achievements-icons/ducks_killed_5.svg" title="More than 2000 ducks killed">
-    {% endif %}
-
-    {% if achievements['ducks_killed_6'] %}
-        <img src="achievements-icons/ducks_killed_6.svg" title="More than 4000 ducks killed">
-    {% endif %}
+        {% if achievements['baby_lover'] %}
+            <img src="achievements-icons/baby_lover.svg"
+                 title="This player killed less than 5 baby ducks">
+        {% endif %}
 
 
-    {% if achievements['lucky_user'] %}
-        <img src="achievements-icons/lucky_user.svg" title="More than 500 exp won with a clover">
-    {% endif %}
+        {% if achievements['murderer'] %}
+            <img src="achievements-icons/murderer.svg"
+                 title="This player murdered someone">
+        {% endif %}
 
 
+        {% if achievements['first_blood'] %}
+            <img src="achievements-icons/first_blood.svg"
+                 title="This player killed his first duck">
+        {% endif %}
+
+        {% if achievements['ducks_killed_1'] %}
+            <img src="achievements-icons/ducks_killed_1.svg"
+                 title="More than 10 ducks killed">
+        {% endif %}
+
+        {% if achievements['ducks_killed_2'] %}
+            <img src="achievements-icons/ducks_killed_2.svg"
+                 title="More than 100 ducks killed">
+        {% endif %}
+
+        {% if achievements['ducks_killed_3'] %}
+            <img src="achievements-icons/ducks_killed_3.svg"
+                 title="More than 500 ducks killed">
+        {% endif %}
+
+        {% if achievements['ducks_killed_4'] %}
+            <img src="achievements-icons/ducks_killed_4.svg"
+                 title="More than 1000 ducks killed">
+        {% endif %}
+
+        {% if achievements['ducks_killed_5'] %}
+            <img src="achievements-icons/ducks_killed_5.svg"
+                 title="More than 2000 ducks killed">
+        {% endif %}
+
+        {% if achievements['ducks_killed_6'] %}
+            <img src="achievements-icons/ducks_killed_6.svg"
+                 title="More than 4000 ducks killed">
+        {% endif %}
 
 
-</div>
+        {% if achievements['lucky_user'] %}
+            <img src="achievements-icons/lucky_user.svg"
+                 title="More than 500 exp won with a clover">
+        {% endif %}
+
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            Tipped.create('.simple-tooltip');
+        });
+    </script>
 {% endif %}
-
-
 
 
 <h2>Ducks killed</h2>
@@ -490,5 +515,15 @@
     is {% if unneeded_reloads < 5 %}not really{% endif %}{% if unneeded_reloads > 50 %}really{% endif %} reload hungry and tried to reload
     <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
 </p>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        Tipped.create('.special-icons img');
+    });
+</script>
+
 </body>
 </html>
