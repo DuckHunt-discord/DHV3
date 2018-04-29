@@ -15,11 +15,6 @@
     <meta property="og:site_name"
           content="DuckHunt" />
 
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
-          crossorigin="anonymous">
-
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
@@ -57,23 +52,21 @@
             max-width: 100%;
         }
 
-        #special-icons {
-            text-align:center;
+        .special-icons {
+            text-align: center;
             background: #E6E7ED;
             border-radius: 3px;
             padding: 7px;
         }
 
-        #special-icons img {
+        .special-icons img {
             height: 40px;
             width: 40px;
-            display:inline-block;
-            margin:5px 10px;
-            padding:5px;
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 5px;
 
         }
-
-
 
 
     </style>
@@ -84,58 +77,65 @@
      src="{{ avatar_url }}"
      alt="Profile Picture">
 
-<h1>{{ name }} is hunting ducks on <a href="duckstats.php?cid={{ channel_id }}"> #{{ channel_name|escape }}</a>
+<h1>{{ name }} is hunting ducks on <a href="duckstats.php?cid={{ channel_id }}"> #{{ channel_name|escape }}</a></h1>
 
 
+{% if true in badges %}
+    <div class="special-icons">
+        {% if badges['banned'] %}
+            <img src="special-icons/banned.svg"
+                 title="This player is banned on this server :(">
+        {% endif %}
 
+        {% if badges['no_weapon'] %}
+            <img src="special-icons/no_weapon.svg"
+                 title="This player had his weapon confiscated here :(">
+        {% endif %}
 
+        {% if badges['admin'] %}
+            <img src="special-icons/admin.svg"
+                 title="This user is a bot admin">
+        {% endif %}
 
-    {% if confique|date('Y-m-d') > "now"|date('Y-m-d') > 0 %} <i class="fa fa-procedures"
-                                                                 title="Weapon confiscated"></i>{% endif %}</h1>
-{%  if true in badges %}
-<div id="special-icons">
-    {% if badges['banned'] %}
-        <img src="special-icons/banned.svg" title="This player is banned on this server :(">
-    {% endif %}
+        {% if badges['moderator'] %}
+            <img src="special-icons/moderator.svg"
+                 title="This user is a bot moderator">
+        {% endif %}
 
-    {% if badges['no_weapon'] %}
-    <img src="special-icons/no_weapon.svg" title="This player had his weapon confiscated here :(">
-    {% endif %}
+        {% if badges['translator'] %}
+            <img src="special-icons/translator.svg"
+                 title="This user helped translating the bot">
+        {% endif %}
 
-    {% if badges['admin'] %}
-    <img src="special-icons/admin.svg" title="This user is a bot admin">
-    {% endif %}
+        {% if badges['bug_hunter'] %}
+            <img src="special-icons/bug_hunter.svg"
+                 title="This user is a bug hunter">
+        {% endif %}
 
-    {% if badges['moderator'] %}
-    <img src="special-icons/moderator.svg" title="This user is a bot moderator">
-    {% endif %}
+        {% if badges['proficient'] %}
+            <img src="special-icons/proficient.svg"
+                 title="This user is proficient with the bot and can help you on the support server">
+        {% endif %}
 
-    {% if badges['translator'] %}
-    <img src="special-icons/translator.svg" title="This user helped translating the bot">
-    {% endif %}
+        {% if badges['retired_staff'] %}
+            <img src="special-icons/retired_staff.svg"
+                 title="This user retired from the bot staff">
+        {% endif %}
 
-    {% if badges['bug_hunter'] %}
-    <img src="special-icons/bug_hunter.svg" title="This user is a bug hunter">
-    {% endif %}
+        {% if badges['partner'] %}
+            <img src="special-icons/partner.svg"
+                 title="This user is a bot partner">
+        {% endif %}
 
-    {% if badges['proficient'] %}
-    <img src="special-icons/proficient.svg" title="This user is proficient with the bot and can help you on the support server">
-    {% endif %}
+        {% if badges['donator'] %}
+            <img src="special-icons/donator.svg"
+                 title="This user donated to the bot">
+        {% endif %}
 
-    {% if badges['retired_staff'] %}
-    <img src="special-icons/retired_staff.svg" title="This user retired from the bot staff">
-    {% endif %}
-
-    {% if badges['partner'] %}
-    <img src="special-icons/partner.svg" title="This user is a bot partner">
-    {% endif %}
-
-    {% if badges['donator'] %}
-    <img src="special-icons/donator.svg" title="This user donated to the bot">
-    {% endif %}
-
-</div>
+    </div>
 {% endif %}
+
+
 
 <h2>General statistics</h2>
 
@@ -150,10 +150,94 @@
 </p>
 
 
+
+
+{% if true in achievements %}
+<h2>Achievements</h2>
+<div class="special-icons">
+
+    {% if achievements['time_played_1'] %}
+        <img src="achievements-icons/time_played_1.svg" title="This hunter played for more than a week">
+    {% endif %}
+
+    {% if achievements['time_played_2'] %}
+        <img src="achievements-icons/time_played_2.svg" title="This player played for more than a month">
+    {% endif %}
+
+    {% if achievements['clueless'] %}
+        <img src="achievements-icons/clueless.svg" title="This player probably don't understand that they should earn experience">
+    {% endif %}
+
+    {% if achievements['scientist'] %}
+        <img src="achievements-icons/scientist.svg" title="This player is halfway to the top">
+    {% endif %}
+
+    {% if achievements['max_level'] %}
+        <img src="achievements-icons/max_level.svg" title="This player reached the maximum level in the game">
+    {% endif %}
+
+    {% if achievements['cheater'] %}
+        <img src="achievements-icons/cheater.svg" title="This player probably cheated to reach that amount of exp">
+    {% endif %}
+
+    {% if achievements['baby_lover'] %}
+        <img src="achievements-icons/baby_lover.svg" title="This player killed less than 5 baby ducks">
+    {% endif %}
+
+
+    {% if achievements['murderer'] %}
+        <img src="achievements-icons/murderer.svg" title="This player murdered someone">
+    {% endif %}
+
+
+    {% if achievements['first_blood'] %}
+        <img src="achievements-icons/first_blood.svg" title="This player killed his first duck">
+    {% endif %}
+
+    {% if achievements['ducks_killed_1'] %}
+        <img src="achievements-icons/ducks_killed_1.svg" title="More than 10 ducks killed">
+    {% endif %}
+
+    {% if achievements['ducks_killed_2'] %}
+        <img src="achievements-icons/ducks_killed_2.svg" title="More than 100 ducks killed">
+    {% endif %}
+
+    {% if achievements['ducks_killed_3'] %}
+        <img src="achievements-icons/ducks_killed_3.svg" title="More than 500 ducks killed">
+    {% endif %}
+
+    {% if achievements['ducks_killed_4'] %}
+        <img src="achievements-icons/ducks_killed_4.svg" title="More than 1000 ducks killed">
+    {% endif %}
+
+    {% if achievements['ducks_killed_5'] %}
+        <img src="achievements-icons/ducks_killed_5.svg" title="More than 2000 ducks killed">
+    {% endif %}
+
+    {% if achievements['ducks_killed_6'] %}
+        <img src="achievements-icons/ducks_killed_6.svg" title="More than 4000 ducks killed">
+    {% endif %}
+
+
+    {% if achievements['lucky_user'] %}
+        <img src="achievements-icons/lucky_user.svg" title="More than 500 exp won with a clover">
+    {% endif %}
+
+
+
+
+</div>
+{% endif %}
+
+
+
+
 <h2>Ducks killed</h2>
 
 <div id="ducks_killed"
      class="graph"></div>
+
+
 <script>
 
     Highcharts.chart('ducks_killed', {
@@ -182,7 +266,7 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Number of ducks killed (millions)'
+                text: 'Number of ducks killed'
             }
         },
         legend: {
@@ -194,7 +278,7 @@
         series: [{
             name: 'Ducks',
             data: [
-                ['Normal Ducks', {{ killed_ducks - killed_super_ducks - killed_baby_ducks - killed_mother_of_all_ducks - killed_mechanical_ducks}}],
+                ['Normal Ducks', {{ killed_ducks - killed_super_ducks - killed_baby_ducks - killed_mother_of_all_ducks - killed_mechanical_ducks }}],
                 ['Super Ducks', {{ killed_super_ducks }}],
                 ['Baby Ducks', {{ killed_baby_ducks }}],
                 ['MOAD', {{ killed_mother_of_all_ducks }}],
@@ -222,8 +306,9 @@
 <p>
     In <span class="statistic">{{ name|escape }}</span>'s backpack, I can see
     <span class="statistic">{{ chargeurs }}</span> chargers and <span class="statistic">{{ balles }}</span> bullets
-    loaded in their weapon (and the last weapon giveback they used was on {% if last_giveback|date('Y-m-d') == "now"|date('Y-m-d') %}today, the {% endif %}
-    <span class="statistic">{{ last_giveback|date("m/d/Y") }}</span>)
+    loaded in their weapon (and the last weapon giveback they used was
+    on {% if lastGiveback|date('Y-m-d') == "now"|date('Y-m-d') %}today, {% endif %}the
+    <span class="statistic">{{ lastGiveback|date("m/d/Y") }}</span>)
 
 </p>
 <ul>
@@ -241,7 +326,7 @@
             <span class="statistic">{{ detecteur_infra_shots_left }}</span> shots
         </li>
     {% endif %}
-    {% if explosive_ammo > "now"|date('U')  %}
+    {% if explosive_ammo > "now"|date('U') %}
         <li>
             They have some <strong>explosive ammo</strong> until
             <span class="statistic">{{ explosive_ammo|date("m/d/Y \\a\\t g:ia") }}</span>
@@ -291,8 +376,9 @@
 <script>
     function compare_data_arrays(a, b) {
         // Reverse the order
-        return b.y -a.y ;
+        return b.y - a.y;
     }
+
     Highcharts.chart('shots_fired', {
         chart: {
             plotBackgroundColor: null,
@@ -400,7 +486,9 @@
 </p>
 
 <p>
-    <span class="statistic">{{ name|escape }}</span> is {% if unneeded_reloads < 5 %}not really{% endif %}{% if unneeded_reloads > 50 %}really{% endif %} reload hungry and tried to reload <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
+    <span class="statistic">{{ name|escape }}</span>
+    is {% if unneeded_reloads < 5 %}not really{% endif %}{% if unneeded_reloads > 50 %}really{% endif %} reload hungry and tried to reload
+    <span class="statistic">{{ unneeded_reloads }}</span> times with a full clip!
 </p>
 </body>
 </html>

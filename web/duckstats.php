@@ -11,10 +11,10 @@ $servername = "localhost";
 $username   = "duckhunt_web";
 $password   = "duckhunt_web";
 
-$admins        = array(
+$admins     = array(
     138751484517941259 // EyesOfCreeper#0001
 );
-$moderators    = array(
+$moderators = array(
     380118196742651906, // @rulebritannia 🇬🇧#6894
     151016183401938944, // @Crumble_#8877
     183273311503908864, // @Olpouin#6797
@@ -103,16 +103,12 @@ if (isset($_GET['cid'])) {
         $player_stats_query->bindParam(':player_id', $player_id);
         $player_stats_query->execute();
 
-        if($player_stats_query->rowCount() == 0)
-        {
+        if ($player_stats_query->rowCount() == 0) {
             http_response_code(404);
             die("Player or channel not found!");
         }
 
         $player_stats = $player_stats_query->fetch();
-
-
-
 
 
         //print_r($player_stats);
@@ -133,6 +129,26 @@ if (isset($_GET['cid'])) {
             "donator"       => in_array($player_stats['id_'], $donators),
         );
 
+        $player_stats['achievements'] = array(
+            "time_played_1"  => $player_stats['givebacks'] > 7,
+            "time_played_2"  => $player_stats['givebacks'] > 30,
+            "clueless"       => $player_stats['exp'] < -15,
+            "scientist"      => $player_stats['exp'] > 2090,
+            "max_level"      => $player_stats['exp'] > 11111,
+            "cheater"        => $player_stats['exp'] > 20000000,
+            "baby_lover"     => $player_stats['killed_baby_ducks'] < 5,
+            "murderer"       => $player_stats['murders'] > 0,
+            "first_blood"    => $player_stats['killed_ducks'] > 1,
+            "ducks_killed_1" => $player_stats['killed_ducks'] > 10,
+            "ducks_killed_2" => $player_stats['killed_ducks'] > 100,
+            "ducks_killed_3" => $player_stats['killed_ducks'] > 500,
+            "ducks_killed_4" => $player_stats['killed_ducks'] > 1000,
+            "ducks_killed_5" => $player_stats['killed_ducks'] > 2000,
+            "ducks_killed_6" => $player_stats['killed_ducks'] > 4000,
+            "lucky_user"     => $player_stats['exp_won_with_clover'] > 500,
+
+        );
+
 
         echo $twig->render('duckstats_player.twig', $player_stats);
 
@@ -143,14 +159,12 @@ if (isset($_GET['cid'])) {
         $players_array_query->bindParam(':channel_id', $db_channel_id);
         $players_array_query->execute();
 
-        if($players_array_query->rowCount() == 0)
-        {
+        if ($players_array_query->rowCount() == 0) {
             http_response_code(404);
             die("Channel not found!");
         }
 
         $players_array = $players_array_query->fetchall();
-
 
 
         $total_normal_ducks     = 0;

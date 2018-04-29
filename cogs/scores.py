@@ -48,16 +48,19 @@ class Scores:
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
 
+
+        await self.bot.send_message(ctx=ctx, message=_("The scores are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}", language).format(
+            channel_id=channel.id))
+        # await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
+
+        # Old version of the command
+        """
+
         args = args.split()
         parser = argparse.ArgumentParser(description='Parse the top command.')
         # parser.add_argument('--show', dest='count', type=int, default=10)
 
         parser.add_argument('--sort-by', dest='sort_by', type=str, default="exp", choices=["exp", "killed", "missed", "time"])
-
-        await self.bot.send_message(ctx=ctx, message=_("The scores are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}", language).format(
-            channel_id=ctx.channel.id))
-        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
-
 
         try:
             args = parser.parse_args(args)
@@ -236,7 +239,7 @@ class Scores:
                         reaction = False
                 else:
                     reaction = False
-
+"""
 
 
     @commands.command(aliases=["stats", "duck_stats"])
@@ -255,8 +258,10 @@ class Scores:
 
         await self.bot.send_message(ctx=ctx, message=_("The Duckstats are now available online at http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}", language).format(
             channel_id=ctx.channel.id, player_id=target.id))
-        await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
+        #await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
 
+        # Old version of the command
+        """
 
         gs = Get_Stats(self.bot, channel, target)
 
@@ -435,7 +440,7 @@ class Scores:
                     ctx.logger.exception("Can't delete message")
                     pass
                 return
-
+"""
 
 def setup(bot):
     bot.add_cog(Scores(bot))
