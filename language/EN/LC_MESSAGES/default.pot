@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-29 11:30+0000\n"
+"POT-Creation-Date: 2018-05-02 10:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 
 #: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-#: cogs/admin_commands.py:257
+#: cogs/admin_commands.py:260
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -124,16 +124,16 @@ msgstr ""
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 
-#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
-#: cogs/admin_commands.py:270
+#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
+#: cogs/admin_commands.py:273
 msgid ":x: Incorrect value."
 msgstr ""
 
-#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
+#: cogs/admin_commands.py:244 cogs/admin_commands.py:269
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 
-#: cogs/admin_commands.py:293
+#: cogs/admin_commands.py:296
 msgid ""
 "The list of preferences is available on our new website: "
 "https://duckhunt.me/bot-settings/"
@@ -203,11 +203,11 @@ msgid ""
 "uptime."
 msgstr ""
 
-#: cogs/meta.py:56
+#: cogs/meta.py:57
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr ""
 
-#: cogs/meta.py:66
+#: cogs/meta.py:67
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as "
 "UTC±00:00), which is the one used by the bot. \n"
@@ -215,26 +215,26 @@ msgid ""
 "https://time.is/compare/GMT"
 msgstr ""
 
-#: cogs/meta.py:67
+#: cogs/meta.py:68
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get back your "
 "weapons for free"
 msgstr ""
 
-#: cogs/meta.py:80
+#: cogs/meta.py:81
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
 msgstr ""
 
-#: cogs/meta.py:82
+#: cogs/meta.py:83
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free"
 " (if confiscated), but it doesn't affect the bullets in your current "
 "magazine. If you can, reload beforehand!"
 msgstr ""
 
-#: cogs/meta.py:95
+#: cogs/meta.py:96
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr ""
 
@@ -1328,24 +1328,24 @@ msgstr ""
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:396
+#: cogs/helpers/ducks.py:399
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
 msgstr ""
 
-#: cogs/helpers/ducks.py:438
+#: cogs/helpers/ducks.py:441
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/ducks.py:457
+#: cogs/helpers/ducks.py:460
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time}"
 " seconds, and you shouldn't have done this! You'll lose some exp, because"
 " you shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:481
+#: cogs/helpers/ducks.py:484
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, "
 "but you won't kill my children! \\_X<   *COUAC*   {exp}"
