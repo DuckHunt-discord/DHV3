@@ -102,7 +102,14 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
             ]
 
             if not ignore_event and bot.current_event['id'] == 3:
-                weights[1] -= bot.current_event['chance_added_for_super_duck']
+                weights[1] += int(weights[1] * bot.current_event['chance_added_for_super_duck']/100)
+
+            if sum(weights) == 0:
+                extra = {"channelid": channel.id, "userid": 0}
+                logger = logging.LoggerAdapter(bot.base_logger, extra)
+                logger.debug("A duck was ignored because all the weights were set to 0")
+                # Owner don't want ducks to spawn
+                return False
 
             type = random.choices(population, weights=weights, k=1)[0]
 

@@ -137,13 +137,26 @@
             data: [
                 {% for player in players|slice(0, 100)%}
                     {% if player.exp > 1 %}
-                        ['{{ player.name|escape('js') }}',{{ player.exp }}],
+                {
+                    'name' : '{{ player.name|escape('js') }}',
+                    'y' : {{ player.exp }},
+                    'url': 'duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}'
+                },
+
                     {% endif %}
                 {% endfor %}
             ],
             dataLabels: {
                 enabled: false
+            },
+            point: {
+                events: {
+                    click: function () {
+                        location.href =     this.options.url;
+                    }
+                }
             }
+
         }]
     });
 </script>
@@ -237,40 +250,61 @@
                     "name": "Normal Ducks",
                     "id": "ducks",
                     "data": [
-                        {% for player in (players | sortbyfield('killed_ducks', 'desc'))| slice(0, 20) %}
-
-                        {% if player.killed_ducks > 0 %}
-                        ["{{ player.name|escape('js') }}",
-                            {{ player.killed_ducks }}],
+                        {% for player in (players | sortbyfield('killed_normal_ducks', 'desc'))| slice(0, 20)  %}
+                        {% if player.killed_normal_ducks > 0 %}
+                        {'name' : "{{ player.name|escape('js') }}",
+                            'y'    : {{ player.killed_normal_ducks }},
+                            'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
                 },
                 {
                     "name": "Super Ducks",
                     "id": "super_ducks",
                     "data": [
-                        {% for player in (players | sortbyfield('killed_super_ducks', 'desc'))| slice(0, 20) %}
+                        {% for player in (players | sortbyfield('killed_super_ducks', 'desc'))| slice(0, 20)  %}
                         {% if player.killed_super_ducks > 0 %}
-                        ["{{ player.name|escape('js') }}",
-                            {{ player.killed_super_ducks }}],
+                        {'name' : "{{ player.name|escape('js') }}",
+                            'y'    : {{ player.killed_super_ducks }},
+                            'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
                 },
                 {
                     "name": "Baby Ducks",
                     "id": "baby_ducks",
                     "data": [
                         {% for player in (players | sortbyfield('killed_baby_ducks', 'desc'))| slice(0, 20)  %}
-
                         {% if player.killed_baby_ducks > 0 %}
-                        ["{{ player.name|escape('js') }}",
-                            {{ player.killed_baby_ducks }}],
+                        {'name' : "{{ player.name|escape('js') }}",
+                            'y'    : {{ player.killed_baby_ducks }},
+                            'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
-
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
                 },
                 {
                     "name": "Mother Of All Ducks",
@@ -278,11 +312,19 @@
                     "data": [
                         {% for player in (players | sortbyfield('killed_mother_of_all_ducks', 'desc'))| slice(0, 20)  %}
                         {% if player.killed_mother_of_all_ducks > 0 %}
-                        ["{{ player.name|escape('js') }}",
-                            {{ player.killed_mother_of_all_ducks }}],
+                        {'name' : "{{ player.name|escape('js') }}",
+                            'y'    : {{ player.killed_mother_of_all_ducks }},
+                            'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
                 },
                 {
                     "name": "Mechanical Ducks",
@@ -290,11 +332,20 @@
                     "data": [
                         {% for player in (players | sortbyfield('killed_mechanical_ducks', 'desc'))| slice(0, 20)  %}
                         {% if player.killed_mechanical_ducks > 0 %}
-                        ["{{ player.name|escape('js') }}",
-                            {{ player.killed_mechanical_ducks }}],
+                        {'name' : "{{ player.name|escape('js') }}",
+                            'y'    : {{ player.killed_mechanical_ducks }},
+                            'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
+
                 },
                 {
                     "name": "Players (Oops!)",
@@ -302,13 +353,24 @@
                     "data": [
                         {% for player in (players | sortbyfield('killed_players', 'desc'))| slice(0, 20)  %}
                         {% if player.killed_players > 0 %}
-                        [ "{{ player.name|escape('js') }}",
-                            {{ player.killed_players }}],
+                        {'name' : "{{ player.name|escape('js') }}",
+                         'y'    : {{ player.killed_players }},
+                         'url'  : "duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}"
+                        },
                         {% endif %}
                         {% endfor %}
-                    ]
+
+                    ],
+                    "events": {
+                        click: function (e) {
+                            location.href = e.point.url;
+                        }
+                    }
+
                 }
-            ]
+
+                ]
+
         }
     });
 </script>

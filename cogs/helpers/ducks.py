@@ -279,6 +279,9 @@ class Duck(BaseDuck):
         await duck._gen_discord_str()
         return duck
 
+    async def post_kill(self, author, exp):
+        await self.bot.db.add_to_stat(self.channel, author, "killed_normal_ducks", 1)
+
 
 class SuperDuck(BaseDuck):
     """

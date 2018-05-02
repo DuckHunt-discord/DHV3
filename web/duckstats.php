@@ -171,7 +171,7 @@ if (isset($_GET['cid'])) {
 
 
         foreach ($players_array as &$player) {
-            $total_normal_ducks     += $player['killed_ducks'] - $player['killed_super_ducks'] - $player['killed_baby_ducks'] - $player['killed_mother_of_all_ducks'] - $player['killed_mechanical_ducks'];
+            $total_normal_ducks     += $player['killed_normal_ducks'];
             $total_super_ducks      += $player['killed_super_ducks'];
             $total_baby_ducks       += $player['killed_baby_ducks'];
             $total_moad_ducks       += $player['killed_mother_of_all_ducks'];

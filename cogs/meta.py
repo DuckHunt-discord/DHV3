@@ -35,6 +35,7 @@ class Meta:
         await self.bot.hint(ctx=ctx, message=_("The bot frequently reboots for updates. Don't worry, it has a 99.8% of uptime.", language))
 
     @checks.is_channel_enabled()
+    @checks.is_server_admin()
     @commands.command(rest_is_raw=True, hidden=True, aliases=["say"])
     async def echo(self, ctx, *, content):
         await self.bot.send_message(ctx=ctx, message=content)
