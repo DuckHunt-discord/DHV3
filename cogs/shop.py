@@ -170,7 +170,7 @@ class Experience:
         else:
             await self.bot.send_message(ctx=ctx, message=_(":champagne: Your weapon is perfectly lubricated, you don't need any more grease.", language))
 
-    @shop.command(name="7", aliases=["sight"])
+    @shop.command(name="7", aliases=["sight", "scope"])
     @checks.have_exp(5)
     async def item7(self, ctx):
         """Buy a sight for your weapon (5 exp)
