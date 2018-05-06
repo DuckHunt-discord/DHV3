@@ -28,6 +28,7 @@ class User:
         else:
             await self.bot.send_message(ctx=ctx, can_pm=False, message=string)
 
+
     @commands.command()
     @checks.is_channel_enabled()
     @checks.had_giveback()
@@ -88,6 +89,8 @@ class User:
 
         await self.bot.send_message(ctx=ctx, message=_("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: {chargeurs_actuels}/{chargeurs_max}", language).format(
             **{"greet": greet, "balles_actuelles": balles, "balles_max": balles_max, "chargeurs_actuels": chargeurs, "chargeurs_max": chargeurs_max}))
+
+
 
     @commands.command(aliases=["pan", "pew", "pang", "shoot", "bong", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
     @checks.is_channel_enabled()
@@ -211,7 +214,7 @@ class User:
                 return
 
         # Now that we have the duck, We'll use a warpper to ease up the syntax for the rest of this function
-        duck_wrapper = DuckWrapper(duck, author)
+        duck_wrapper = DuckWrapper(current_duck, author)
 
         # 8/ Bullet fired
         await add_to_stat(channel, author, "balles", -1)
@@ -311,6 +314,43 @@ class User:
         # > Bushes < #
 
         # TODO : Stockage des items trouvés et les afficher
+
+    @commands.command(aliases=["calin", "<3", ":heart:", "wizzz"])
+    @checks.is_channel_enabled()
+    @checks.had_giveback()
+    async def hug(self, ctx):
+
+        message = ctx.message
+        channel = message.channel
+        author = message.author
+        guild = message.guild
+
+        # Coroutines
+        add_to_stat = self.bot.db.add_to_stat
+
+        get_pref = self.bot.db.get_pref
+
+        _ = self.bot._
+        language = await get_pref(guild, "language")
+
+        for duck in self.bot.ducks_spawned:
+            if duck.channel == channel and not duck.killed:
+                current_duck = duck
+                break
+        else:
+            await add_to_stat(channel, author, "hugs_no_duck", 1)
+            await self.bot.send_message(ctx=ctx,
+                                        message=_("There isn't any duck in here, what should you hug, a tree?!", language))
+
+            return
+
+        await add_to_stat(channel, author, "hugs", 1)
+
+        await self.bot.send_message(ctx=ctx, message=await current_duck.hug(ctx))
+
+
+
+
 
 
     @commands.command(aliases=["currentevent", "event", "events"])

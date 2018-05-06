@@ -85,13 +85,37 @@ class DuckHunt(commands.AutoShardedBot):
         logger.info(f"I see {len(self.guilds)} guilds")
         await self.log(level=30, title="Bot is ready", message=f"The bot has restarted. We can now see {len(self.guilds)} guilds on {self.shard_count} shards, and ducks can now spawn", where=None)
 
-    async def on_guild_channel_delete(self, channel):
-        logger.info(f"Channel removed (from discord) : {channel} :(!")
+    async def log_guild_stats(self, e, guild):
+        e.add_field(name='Name', value=guild.name)
+        e.add_field(name='ID', value=guild.id)
+        e.add_field(name='Owner', value=f'{guild.owner} (ID: {guild.owner.id})')
 
-        self.ducks_planning.pop(channel, None)
-        self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel != channel]
+        bots = sum(m.bot for m in guild.members)
+        total = guild.member_count
+        online = sum(m.status is discord.Status.online for m in guild.members)
+        e.add_field(name='Members', value=str(total))
+        e.add_field(name='Bots', value=f'{bots} ({bots/total:.2%})')
+        e.add_field(name='Online', value=f'{online} ({online/total:.2%})')
+
+        if guild.icon:
+            e.set_thumbnail(url=guild.icon_url)
+
+        if guild.me:
+            e.timestamp = guild.me.joined_at
+
+        await self.send_message(where=self.get_channel(self.log_channel_id), embed=e, mention=False, can_pm=False)
+
+    async def on_guild_join(self, guild):
+        e = discord.Embed(colour=0x53dda4, title='New Guild') # green colour
+        await self.log_guild_stats(e, guild)
+
+       # await self.log(level=6, title="Joined Guild", message=f"Yay! A new server! Current guild total : {len(self.guilds)}", where=guild)
 
     async def on_guild_remove(self, guild):
+        e = discord.Embed(colour=0xdd5f53, title='Left Guild') # red colour
+        await self.log_guild_stats(e, guild)
+
+        #await self.log(level=6, title="Left Guild", message=f"Goodbye! Current guild total : {len(self.guilds)}", where=guild)
         logger.info(f"Guild removed (from discord) : {guild} :(!")
 
         for channel in guild.channels:
@@ -102,6 +126,14 @@ class DuckHunt(commands.AutoShardedBot):
         self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel not in guild.channels]
 
         logger.info(f"After removing ducks, we have {len(bot.ducks_spawned)} ducks")
+
+
+    async def on_guild_channel_delete(self, channel):
+        logger.info(f"Channel removed (from discord) : {channel} :(!")
+
+        self.ducks_planning.pop(channel, None)
+        self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel != channel]
+
 
 
     async def on_command_error(self, context, exception):
@@ -135,12 +167,6 @@ class DuckHunt(commands.AutoShardedBot):
                 return
         logger.error('Ignoring exception in command {}:'.format(context.command))
         logger.error("".join(traceback.format_exception(type(exception), exception, exception.__traceback__)))
-
-    async def on_guild_join(self, guild):
-        await self.log(level=6, title="Joined Guild", message=f"Yay! A new server! Current guild total : {len(self.guilds)}", where=guild)
-
-    async def on_guild_remove(self, guild):
-        await self.log(level=6, title="Left Guild", message=f"Goodbye! Current guild total : {len(self.guilds)}", where=guild)
 
     async def hint(self, ctx, message):
         hint_start = ctx.bot._(":bulb: HINT: ")

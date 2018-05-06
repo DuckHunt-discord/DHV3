@@ -213,6 +213,19 @@ class BaseDuck:
                     "max_life": self.starting_life
                 })
 
+    async def hug(self, ctx):
+
+        author = ctx.author
+        _ = self.bot._
+        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        await self.bot.db.add_to_stat(self.channel, author, "hugged_nohug_ducks", 1)
+        await self.bot.db.add_to_stat(self.channel, author, "exp", -2)
+
+        if self.bot.db.get_stat(self.channel, author, "confisque"):
+            return _(":heart: You try to hug the duck, but he knows you killed his brother, so he flew away from you, back in the pond! [-2 exp]", language)
+        else:
+            return _(":heart: You try to hug the duck, but he saw the weapon you hid behing your back, and flew away from you, back in the pond! [-2 exp]", language)
+
     async def get_frighten_chance(self):
         return await self.bot.db.get_pref(self.channel.guild, "duck_frighten_chance")
 
@@ -231,6 +244,8 @@ class BaseDuck:
             return _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} ({current_life} / {max_life})]", language)
         else:
             return _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language)
+
+
 
     def __repr__(self):
         now = int(time.time())
@@ -463,6 +478,16 @@ class BabyDuck(BaseDuck):
 
     async def post_kill(self, author, exp):
         await self.bot.db.add_to_stat(self.channel, author, "killed_baby_ducks", 1)
+
+    async def hug(self, ctx):
+        _ = self.bot._
+        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        author = ctx.author
+        await self.bot.db.add_to_stat(self.channel, author, "hugged_baby_ducks", 1)
+        await self.bot.db.add_to_stat(self.channel, author, "exp", 3)
+        self.delete()
+        return _("<:BabyDuck_02:439551472762355724> **SMACK**\tYou hugged the baby duck, and now he's really happy! [3 exp]\n"
+                 "The baby duck left, feeling beloved", language)
 
 class MotherOfAllDucks(SuperDuck):
 
