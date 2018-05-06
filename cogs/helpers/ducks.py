@@ -486,7 +486,7 @@ class BabyDuck(BaseDuck):
         await self.bot.db.add_to_stat(self.channel, author, "hugged_baby_ducks", 1)
         await self.bot.db.add_to_stat(self.channel, author, "exp", 3)
         self.delete()
-        return _("<:BabyDuck_02:439551472762355724> **SMACK**\tYou hugged the baby duck, and now he's really happy! [3 exp]\n"
+        return _("<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and now he's really happy! [3 exp]\n"
                  "The baby duck left, feeling beloved", language)
 
 class MotherOfAllDucks(SuperDuck):
