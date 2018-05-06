@@ -173,8 +173,10 @@ class Experience:
     @shop.command(name="7", aliases=["sight", "scope"])
     @checks.have_exp(5)
     async def item7(self, ctx):
-        """Buy a sight for your weapon (5 exp)
-        !shop 7"""
+        """
+        Buy a sight for your weapon (5 exp)
+        !shop 7
+        """
         message = ctx.message
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.guild, "language")

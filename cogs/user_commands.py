@@ -240,7 +240,7 @@ class User:
         # 10c/ Sight on weapon
         sight = await get_stat(channel, author, "sight")
         if sight:
-            accuracy += (100 - accuracy) / 3
+            accuracy += max((100 - accuracy) / 3, 0)  # To ensure no negativity even if it shouldn't happen (but maybe because of an event or something that will be added later
             await set_stat(channel, author, "sight", sight - 1)
 
         # 10d/ Chance (will need to be smaller than accuracy to shoot properly)

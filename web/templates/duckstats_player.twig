@@ -338,6 +338,12 @@
 </p>
 <ul>
     {#How to compare dates :)#}
+    {% if sight > 0 %}
+        <li>
+            They have a <strong>sight</strong> mounted on their weapon good for
+            <span class="statistic">{{ sight }}</span> more shots.
+        </li>
+    {% endif %}
     {% if ap_ammo > "now"|date('U') %}
         <li>
             They have some <strong>Armor Piercing ammo</strong> until
