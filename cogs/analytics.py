@@ -6,6 +6,7 @@ import asyncio
 DISCORD_BOTS_API = 'https://bots.discord.pw/api'
 DISCORD_BOTS_ORG_API = 'https://discordbots.org/api'
 
+
 class Carbonitex:
     """Cog for updating bots.discord.pw bot information."""
 

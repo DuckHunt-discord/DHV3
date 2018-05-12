@@ -340,7 +340,7 @@ class User:
         else:
             await add_to_stat(channel, author, "hugs_no_duck", 1)
             await self.bot.send_message(ctx=ctx,
-                                        message=_("There isn't any duck in here, what should you hug, a tree?!", language))
+                                        message=_("There isn't any duck in here, what did you plan to hug, a tree?!", language))
 
             return
 

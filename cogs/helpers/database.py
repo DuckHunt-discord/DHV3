@@ -16,6 +16,9 @@ class Database:
         self.database = records.Database(f'mysql+mysqlconnector://{bot.database_user}:{bot.database_password}'
                                          f'@{bot.database_address}:{bot.database_port}'
                                          f'/{bot.database_name}?charset=utf8mb4')
+        self.recreate_caches()
+
+    def recreate_caches(self):
         self._settings = []
         self._settings_full = []
         self._channel_dbid_cache = {}
@@ -23,7 +26,6 @@ class Database:
         self._settings_dict = None
         self._settings_cache = {}
         self._stats_cache = {}
-
 
     # > Channels <
 

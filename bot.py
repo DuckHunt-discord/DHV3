@@ -159,11 +159,12 @@ class DuckHunt(commands.AutoShardedBot):
         elif isinstance(exception, discord.ext.commands.errors.CheckFailure):
             return
         elif isinstance(exception, discord.ext.commands.errors.CommandOnCooldown):
-            if context.message.author in self.admins:
+            if context.message.author.id in self.admins:
                 await context.reinvoke()
                 return
             else:
-                await self.send_message(context, message="You are on cooldown :(")
+
+                await self.send_message(context, message=_("You are on cooldown :(, try again in {seconds}", language).format(seconds=round(exception.retry_after, 1)))
                 return
         logger.error('Ignoring exception in command {}:'.format(context.command))
         logger.error("".join(traceback.format_exception(type(exception), exception, exception.__traceback__)))
