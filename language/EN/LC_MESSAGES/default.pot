@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-12 20:37+0000\n"
+"POT-Creation-Date: 2018-05-13 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1326,7 +1326,7 @@ msgstr ""
 
 #: cogs/helpers/ducks.py:227
 msgid ""
-":heart: You try to hug the duck, but he saw the weapon you hid behing "
+":heart: You try to hug the duck, but he saw the weapon you hid behind "
 "your back, and flew away from you, back in the pond! [-2 exp]"
 msgstr ""
 
