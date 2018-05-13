@@ -224,7 +224,7 @@ class BaseDuck:
         if self.bot.db.get_stat(self.channel, author, "confisque"):
             return _(":heart: You try to hug the duck, but he knows you killed his brother, so he flew away from you, back in the pond! [-2 exp]", language)
         else:
-            return _(":heart: You try to hug the duck, but he saw the weapon you hid behing your back, and flew away from you, back in the pond! [-2 exp]", language)
+            return _(":heart: You try to hug the duck, but he saw the weapon you hid behind your back, and flew away from you, back in the pond! [-2 exp]", language)
 
     async def get_frighten_chance(self):
         return await self.bot.db.get_pref(self.channel.guild, "duck_frighten_chance")
