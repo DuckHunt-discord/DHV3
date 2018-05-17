@@ -46,7 +46,7 @@ class Experience:
                 return
 
             if target == ctx.message.author:
-                await self.bot.send_message(ctx=ctx, message=_(":x: Wait... What? Are you trying to send experience to YOURSELF? That dosen't make sense.", language))
+                await self.bot.send_message(ctx=ctx, message=_(":x: Wait... What? Are you trying to send experience to YOURSELF? That doesn't make sense.", language))
                 return
 
             if await self.bot.db.get_stat(message.channel, message.author, "exp") >= amount:
