@@ -1,0 +1,661 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-05-13 15:57+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:146
+msgid ":x: A required argument is missing."
+msgstr ":x: manca un argomento obbligatorio."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Non hai abbastanza exp"
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr ":x: Non sei un amministratore del server"
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr ":x: Non sei un super admin"
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Questo comando è riservato ad i creatori del bot. Se ritieni che questo si "
+"tratti di un errore, perfavore, contatta il mio proprietario sul server di "
+"supporto DuckHunt (utilizza `dh!help`)."
+
+#: bot.py:167
+msgid "You are on cooldown :(, try again in {seconds}"
+msgstr "Sei in cooldown :(, riprova tra {seconds}"
+
+#: bot.py:173
+msgid ":bulb: HINT: "
+msgstr ":bulb: INDIZIO:"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Fatto, utente bannato. :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Fatto, rimosso il ban dall’utente. :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019>Fatto, il canale {channel} è stato "
+"aggiunto al gioco! Divertiti!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674>Fatto, il canale {channel} è "
+"stato rimosso dal gioco. Ciao!"
+
+#: cogs/admin_commands.py:89
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<:cmd_AdminAdded_01:439549846622568466>{admin} è stato aggiunto come un "
+"amministratore della gilda!"
+
+#: cogs/admin_commands.py:97
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440>{admin} rimosso dagli "
+"amministratori della gilda."
+
+#: cogs/admin_commands.py:146 cogs/admin_commands.py:172
+msgid "Done. User removed from the database, if it was in."
+msgstr "Fatto. Utente rimosso dal database, se presente"
+
+#: cogs/admin_commands.py:159
+msgid "Done. All the channel data was removed."
+msgstr "Fatto, tutti i dati del canale sono stati rimossi"
+
+#: cogs/admin_commands.py:184
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+":x: sintassi errata. Utilizzare il comando in questo modo: `!settings [view /"
+" set / reset / list / modified] [impostazione se applicabile]`"
+
+#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
+#: cogs/admin_commands.py:260
+msgid ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
+"setting"
+msgstr ""
+"<a:a_cmd_UnknownSetting:439550426862452746>**ERRORE** Non conosco questa "
+"impostazione"
+
+#: cogs/admin_commands.py:197
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: L’impostazione {pref} è impostata su `{value}` in questa gilda."
+
+#: cogs/admin_commands.py:219
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Bypassare il controllo max_ducks_per_day come se fossi il proprietario del "
+"bot. Sarebbe stato `{max}`."
+
+#: cogs/admin_commands.py:221
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Bypassare il controllo max_ducks_per_day come se fossi in una gilda VIP. Per "
+"favore non abusare di questo. Per informazione, il limite sarebbe stato "
+"fissato a `{max}` anatre al giorno."
+
+#: cogs/admin_commands.py:229
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050>Autorizzato ad impostare lo "
+"stato VIP!"
+
+#: cogs/admin_commands.py:231
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ""
+":x: Non autorizzato ad impostare lo stato VIP! non sei un proprietario"
+
+#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
+#: cogs/admin_commands.py:273
+msgid ":x: Incorrect value."
+msgstr ":x: Valore incorretto "
+
+#: cogs/admin_commands.py:244 cogs/admin_commands.py:269
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ""
+":ok: l’impostazione {pref} è stata impostata a `{value}` in questa gilda."
+
+#: cogs/admin_commands.py:296
+msgid ""
+"The list of preferences is available on our new website: https://duckhunt.me/"
+"bot-settings/"
+msgstr ""
+"L'elenco delle preferenze è disponibile sul nostro nuovo sito Web: https://"
+"duckhunt.me/bot-settings/"
+
+#: cogs/experience_related_commands.py:25
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"Congratulazioni, hai inviato / dato più esperienza del numero massimo che "
+"posso memorizzare."
+
+#: cogs/experience_related_commands.py:28
+msgid ":ok:, they now have {newexp} exp points!"
+msgstr ":ok:, ora loro hanno {newexp} punti d’esperienza!"
+
+#: cogs/experience_related_commands.py:41
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ""
+": x: per prevenire l’abuso di questo comando, non puoi inviare exp quando "
+"non hai un'arma."
+
+#: cogs/experience_related_commands.py:45
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: L’importo exp dev’essere positivo"
+
+#: cogs/experience_related_commands.py:49
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"dosen't make sense."
+msgstr ""
+":x: Aspetta... Cosa? Stai cercando di inviare esperienza a TE STESSO? Questo "
+"non ha senso."
+
+#: cogs/experience_related_commands.py:68
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Hai inviato {amount} exp a {target} (ed hai pagato {taxes} exp di tasse)!"
+
+#: cogs/experience_related_commands.py:71
+msgid "You don't have enough experience points"
+msgstr "Non hai abbastanza punti esperienza "
+
+#: cogs/experience_related_commands.py:73
+msgid ":x: Sending exp is disabled on this server"
+msgstr ":x: l'invio di exp è disabilitato su questo server"
+
+#: cogs/experience_related_commands.py:81 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (in {dans_jours} {dans_heures} e {dans_minutes})"
+
+#: cogs/experience_related_commands.py:82 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "%m /%d %H:%M:%S"
+
+#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans} giorni"
+
+#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans} ore"
+
+#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+msgid "{dans} minutes"
+msgstr "{dans} minuti"
+
+#: cogs/meta.py:35
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"Il bot si riavvia spesso per gli aggiornamenti. Non preoccuparti, il 99,8% "
+"delle volte è operativo"
+
+#: cogs/meta.py:60
+msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgstr "Qui trovi la lista dei comandi: http://duckhunt.me/command-list/"
+
+#: cogs/meta.py:70
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"Sono le `{hour}: {minutes}: {seconds}` nel fuso orario GMT (noto anche come "
+"UTC ± 00: 00), che è quello usato dal bot.\n"
+"Puoi utilizzare questo sito Web per confrontarlo con il tuo: https://time.is/"
+"compare/GMT"
+
+#: cogs/meta.py:71
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get back your "
+"weapons for free"
+msgstr ""
+"Puoi usare il comando `dh!freetime` per vedere quando potrai recuperare le "
+"tue armi gratuitamente"
+
+#: cogs/meta.py:84
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hours and {minutes} minutes)."
+msgstr ""
+":alarm_clock: il prossimo recupero delle armi e dei proiettili è in {sec} "
+"secondi ({ore} ore e {minuti} minuti)."
+
+#: cogs/meta.py:86
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr ""
+"Un “giveback” ti ridà le munizioni e la tua arma gratuitamente (se "
+"confiscata) ma non influenza il numero di proiettili all’interno del "
+"caricatore in uso. se puoi, ricarica prima"
+
+#: cogs/meta.py:99
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Stai usando {shard} shards su un totale di {total} shards"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are now available online at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}"
+msgstr ""
+"I punteggi sono ora disponibili online all'indirizzo http://duckhunt.api-d."
+"com/web/duckstats.php?cid={channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"The Duckstats are now available online at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Le duckstats sono ora disponibili online all'indirizzo http://duckhunt.api-d."
+"com/web/duckstats.php?cid={channel_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Ciao!\n"
+"Grazie per avermi aggiunto! Sono quasi pronto per iniziare il gioco!\n"
+"entra nel canale dove vuoi che io,vi faccia giocare, chiamami lì usando `dh! "
+"Setup` <:event_GuildAdded_01:439550913112309781>"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr ""
+"Ciao di nuovo!\n"
+"Farò un rapido controllo delle autorizzazioni e tornerò tra qualche secondo! "
+"attendere prego"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+":small_red_triangle: manca l'autorizzazione `read_message_history`.\n"
+"Questo è essenziale per il normale funzionamento del bot, in quanto ho "
+"bisogno dell’abilità di poter di leggere i messaggi.\n"
+"Puoi procedere senza, ma non dovresti."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: manca l'autorizzazione `add_reactions`.\n"
+"È un permesso richiesto per gli incorporamenti interattivi, e sono quasi "
+"ovunque.\n"
+"Potresti procedere senza, ma non è raccomandato e potrebbe portare a errori"
+
+#: cogs/setup_wizzard.py:61
+msgid ""
+":small_red_triangle: The permission `attach_files` is missing.\n"
+"It's a required permission for embeds, and they are almost everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: manca l'autorizzazione `add_reactions`.\n"
+"È un permesso richiesto per gli incorporamenti interattivi, e sono quasi "
+"ovunque.\n"
+"Potresti procedere senza, ma non è raccomandato e potrebbe portare a errori"
+
+#: cogs/setup_wizzard.py:66
+msgid ""
+":small_red_triangle: The permission `embed_links` is missing.\n"
+"This is used to send embeds\n"
+"You could proceed without it, but really shouldn't as it will lead to errors"
+msgstr ""
+":small_red_triangle: manca l'autorizzazione `embed_links`.\n"
+"Questa è usata per inviare incorporamenti\n"
+"Potresti procedere senza di esso, ma in realtà non dovresti, poiché porterà "
+"a errori"
+
+#: cogs/setup_wizzard.py:72
+msgid ""
+":small_orange_diamond: You gave me the `administrator` permission.\n"
+"Although this will not cause problems, it's unsafe to give bots such "
+"powerful permissions, especially if they don't need them.\n"
+"You can proceed with it."
+msgstr ""
+":small_orange_diamond: mi hai dato il permesso di \"amministratore\".\n"
+"Sebbene ciò non causi problemi, è pericoloso fornire ai robot autorizzazioni "
+"così potenti, specialmente se non ne hanno bisogno.\n"
+"Puoi procedere con esso."
+
+#: cogs/setup_wizzard.py:77
+msgid ""
+":small_orange_diamond: The permission `create_instant_invite` is missing.\n"
+"It's not really essential for the normal function of the bot, but needed for "
+"error reports.\n"
+"You can proceed without it."
+msgstr ""
+":small_orange_diamond: manca l'autorizzazione `create_instant_invite`.\n"
+"Non è veramente essenziale per la normale funzione del bot, ma è necessario "
+"per le segnalazioni di errore.\n"
+"Volendo, puoi procedere senza di essa."
+
+#: cogs/setup_wizzard.py:82
+msgid ""
+":small_orange_diamond: The permission `manage_messages` is missing.\n"
+"This is used to remove some messages on sneaky commands (weapon sabotage, "
+"etc.), and also if you use the `delete_commands` setting\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_orange_diamond: manca l'autorizzazione `manage_messages`.\n"
+"Questa è usata per rimuovere alcuni messaggi con comandi subdoli (sabotaggio "
+"dell'arma, ecc.), Ma se si usa l'impostazione `delete_commands`\n"
+"Potresti procedere senza, ma non è raccomandato e potrebbe portare a errori"
+
+#: cogs/setup_wizzard.py:87
+msgid ""
+":small_orange_diamond: You gave me the `mention_everyone` permission.\n"
+"This not used, but should't be given in case of a bug\n"
+"You could proceed with it safely."
+msgstr ""
+":small_orange_diamond: mi hai dato il permesso `mention_everyone`.\n"
+"Questo non è usato, ma non dovrebbe essere dato in caso di un bug\n"
+"Puoi procedere con sicurezza."
+
+#: cogs/setup_wizzard.py:92
+msgid ""
+":small_orange_diamond: The permission `external_emojis` is missing.\n"
+"This is used since DHV3 to add non-standard emojis to messages. You should "
+"probably give it to me\n"
+"You could proceed without it, and bug reports will be appreciated."
+msgstr ""
+":small_orange_diamond: manca l'autorizzazione `external_emojis`.\n"
+"Viene utilizzato dal momento che DHV3 aggiunge emoji non standard nei "
+"messaggi. Dovresti darmela,\n"
+"Puoi procedere senza di esso, le segnalazioni di bug saranno apprezzate."
+
+#: cogs/setup_wizzard.py:110
+msgid ""
+":small_blue_diamond: The permission `change_nickname` is missing.\n"
+"This is not yet used, but could be in the future. An announcement will be "
+"made then.\n"
+"You can safely proceed without it."
+msgstr ""
+": small_blue_diamond: manca l'autorizzazione `change_nickname`.\n"
+"Questo non è ancora usato, ma potrebbe essere in futuro. Allora, verrà fatto "
+"un annuncio.\n"
+"Puoi tranquillamente procedere senza di esso."
+
+#: cogs/setup_wizzard.py:115
+msgid ""
+":small_blue_diamond: The permission `send_tts_messages` is missing.\n"
+"This is used in case you want to enable tts ducks..\n"
+"You can safely proceed without it, but the `tts_ducks` setting won't work"
+msgstr ""
+":small_blue_diamond: manca l'autorizzazione `send_tts_messages`.\n"
+"Questo è usato nel caso in cui si desidera abilitare le anatre tts ..\n"
+"Puoi tranquillamente procedere senza di essa, ma l'impostazione `tts_ducks` "
+"non funzionerà"
+
+#: cogs/setup_wizzard.py:121
+msgid ""
+"I'm done! <:cmd_Setup_01:439551472804429836>\n"
+"Any warning has been sent above. I suggest fixing them, then running the "
+"command again!\n"
+"If there is none, congrats! You passed the tests brightfully!\n"
+"If you are ready to continue with the setup, use the command "
+"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
+"used, ducks will spawn automatically.\n"
+"Thanks for flying DucksAir. If you have any question, we are here to help at "
+"https://discord.gg/2BksEkV"
+msgstr ""
+"Ho finito! <:cmd_Setup_01:439551472804429836>\n"
+"Qualsiasi avviso è stato inviato sopra, Suggerisco di risolverli, quindi di "
+"eseguire nuovamente il comando!\n"
+"Se non ce ne sono, congratulazioni! Hai superato brillantemente i test!\n"
+"Se sei pronto a continuare con la configurazione, usa il comando `dh! "
+"Setup_settings`. Se vuoi giocare, usa `dh! Add_channel`. Una volta usato il "
+"comando, le anatre verranno generate automaticamente.\n"
+"Grazie per aver volato con DucksAir. Se avete qualche domanda, siamo qui per "
+"aiutare a https://discord.gg/2BksEkV"
+
+#: cogs/setup_wizzard.py:135
+msgid ""
+"Hey! Let's configure the server!\n"
+"I'll give you the most used parameters, and let you change them if you want. "
+"Any command written here is optional, and you can start playing now just by "
+"using `dh!add_channel`.\n"
+"\n"
+"**Before starting, please make sure this is the channel you want to use, and "
+"activate it with `dh!add_channel`.**\n"
+"\n"
+"**1/ Language used**:\n"
+"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
+"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
+"    \\* Another language we don't fully support yet? Help us translate "
+"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
+"    \n"
+"**2/ Ducks Per Day**:\n"
+"    This is the number of ducks that will spawn per day. They spawn a random "
+"intervals, but you can configure the number of ducks that will spawn.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"ducks_per_day XX`, where `XX` is a number.\n"
+"    \\* To prevent abuse, there is a limit that will be automatically "
+"enforced. If you need to lift it, contact my owner at the support server.\n"
+"    \n"
+"**3/ Exp Won Per Duck Killed**:\n"
+"    This is the experience won per duck killed. If your server is really "
+"popular, it might be worth it to push it up a little to make new hunters "
+"progress faster.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
+"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
+"good start\n"
+"    \n"
+"**4/ Other settings**:\n"
+"    This is starting to be lengthy, so I won't go into further details here. "
+"You are probably all set and can start the game by typing `dh!add_channel`.\n"
+"    More settings can be found using `dh!settings list`\n"
+"    \n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
+msgstr ""
+"Hey! Configuriamo il server!\n"
+"Ti darò i parametri più usati e ti permetterò di cambiarli se vuoi. "
+"Qualsiasi comando scritto qui è facoltativo, e puoi iniziare a giocare "
+"subito usando `dh! Add_channel`.\n"
+"\n"
+"** Prima di iniziare, assicurati che questo sia il canale che desideri "
+"utilizzare, poi, puoi attivalo con `dh! Add_channel`. **\n"
+"\n"
+"** 1 / Lingua utilizzata **:\n"
+"    \\* Se parli francese, usa`dh! Set language fr_FR`\n"
+"    \\* Se parli spagnolo, usa `dh! Settings set language es_ES`\n"
+"    \\* Se parli Inglese, usa `dh! Settings set language en_EN`\n"
+"    \\* Parli un altro linguaggio che non supportiamo ancora completamente? "
+"Aiutaci a tradurre DuckHunt! Trovaci su https://discord.gg/2BksEkV.\n"
+"    \n"
+"** 2 / numero di anatre giornaliere **:\n"
+"    Questo è il numero di anatre che si generano in un giorno. Si generano a "
+"intervalli casuali, ma è possibile configurare il numero di anatre che "
+"verranno generate.\n"
+"    \\* Usa il seguente comando per cambiarlo, usa `dh! Settings set "
+"ducks_per_day XX`, cambia ` XX` con un numero.\n"
+"    \\* Per prevenire gli abusi, esiste un limite che verrà automaticamente "
+"applicato. Se vuoi rimuoverlo, contatta il mio proprietario sul server di "
+"supporto.\n"
+"    \n"
+"** 3 / Exp vinti per ogni anatra uccisa **:\n"
+"    Questa è l'esperienza vinta per ogni anatra uccisa. Se il tuo server è "
+"molto popolare, potrebbe valere la pena spingerlo un po' per far avanzare i "
+"nuovi cacciatori più velocemente.\n"
+"    \\* Usa il seguente comando per cambiarlo: `dh! Settings set "
+"exp_won_per_duck_killed XX`, cambia ` XX` con un numero.\n"
+"    \\*:bulb: non andare troppo in alto, ci deve essere, anche se minima un "
+"poco di sfida. 15 è un buon inizio\n"
+"    \n"
+"** 4 / Altre impostazioni **:\n"
+"    Qui stiamo andando troppo per le lunghe, quindi non entrerò in ulteriori "
+"dettagli qui. Probabilmente sei pronto, puoi iniziare il gioco digitando "
+"`dh! Add_channel`.\n"
+"    È possibile trovare ulteriori impostazioni usando `dh! Settings list`\n"
+"    \n"
+"Grazie per aver giocato con me! <:official_Duck_01:439546719177539584>"
+
+#: cogs/shop.py:42
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+":x: sintassi errata. Utilizzare il comando in questo modo: `! Shop [list / "
+"item cnumber] [argomento se applicabile]`"
+
+#: cogs/shop.py:52
+msgid "Right now you have a total of {exp} exp points."
+msgstr "Al momento hai un totale di {exp} exp points."
+
+#: cogs/shop.py:59
+msgid ""
+"Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
+"Thanks "
+msgstr ""
+"Ecco l'elenco di tutti gli articoli del negozio: https://duckhunt.me/shop-"
+"items/. Grazie"
+
+#: cogs/shop.py:75
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ""
+": money_with_wings: hai aggiunto un proiettile alla tua arma per 7 punti exp."
+""
+
+#: cogs/shop.py:78
+msgid ":champagne: Your magazine is full!"
+msgstr ":champagne: la tua cartuccia è piena!"
+
+#: cogs/shop.py:94
+msgid ""
+":money_with_wings: You added a magazine to your weapon for 13 exp points."
+msgstr ""
+":money_with_wings: hai aggiunto una cartuccia alla tua arma per 13 punti exp."
+""
+
+#: cogs/shop.py:97
+msgid ":champagne: You have enough magazines!"
+msgstr ":champagne: hai abbastanza cartucce!"
+
+#: cogs/shop.py:111
+msgid ":money_with_wings: You purchased AP ammo for your weapon."
+msgstr ":money_with_wings: hai acquistato munizioni AP per la tua arma."
+
+#: cogs/shop.py:112
+msgid ""
+"For the next 24 hours, you will deal double damage to ducks. This does "
+"**not** stack with explosive ammo"
+msgstr ""
+"Per le prossime 24 ore, infliggerai un doppio danno alle anatre. Questo "
+"**non ** si somma con munizioni esplosive (non infliggeranno un doppio "
+"danno)"
+
+#: cogs/shop.py:115
+msgid ":champagne: You have enough AP ammo for now!"
+msgstr ":champagne: hai abbastanza munizioni AP per ora!"
+
+#: cogs/shop.py:129
+msgid ":money_with_wings: You purchased explosive ammo for your weapon."
+msgstr ""
+":money_with_wings: hai acquistato delle munizioni esplosive per la tua arma."
+
+#: cogs/shop.py:130
+msgid ""
+"For the next 24 hours, you will deal triple damage to ducks. This does "
+"**not** stack with AP ammo and trumps it if you have any."
+msgstr ""
+"Per le prossime 24 ore, potrai infliggere un triplo danno alle anatre. "
+"Questo ** non ** si somma con le munizioni AP e con I “Trumps” se ne hai."
+
+#: cogs/shop.py:133
+msgid ":champagne: You have enough explosive ammo for now!"
+msgstr ":champagne: hai abbastanza munizioni esplosive per ora!"
+
+#: cogs/shop.py:147
+msgid ":money_with_wings: You got your weapon back."
+msgstr ":money_with_wings: hai riavuto il tuo fucile indietro"
+
+#: cogs/shop.py:148
+msgid ""
+"You can get your weapon back for free if you wait until the daily weapon & "
+"magazine giveback. Type `dh!freetime` to find out when the next giveback is"
+msgstr ""
+"Puoi riavere la tua arma gratis se aspetti fino alla distribuzione "
+"giornaliara di armi e munizioni. Digita `dh! Freetime` per sapere quando è "
+"la prossima redistribuzione"
+
+#: cogs/shop.py:292
+msgid ""
+":money_with_wings: You have new dry clothes on you now. You look beautiful!"
+msgstr ""
+":money_with_wings: hai dei nuovi vestiti asciutti ora. Sei bellissimo!"
+
+#: cogs/shop.py:296
+msgid ""
+":money_with_wings: You bought brand new clothes, the only point of it being "
+"that you're much swagger now. :cool:"
+msgstr ""
+": money_with_wings: hai comprato vestiti nuovi di zecca, l'unico punto è che "
+"ora sei molto spavaldo. :freddo:"

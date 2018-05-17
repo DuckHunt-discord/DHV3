@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-27 23:20+0000\n"
+"POT-Creation-Date: 2018-05-13 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,50 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:114
+#: bot.py:146
 msgid ":x: A required argument is missing."
 msgstr ": x: Отсутствует требуемый аргумент."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr ": x: У вас недостаточно количество очков опыта для этого."
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr ": x: Вы не администратор сервера"
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr ": x: Вы не супер админ."
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Эта команда зарезервирована для владельцев ботов. Если вы считаете, что это "
+"ошибка, свяжитесь с моим владельцем на сервере поддержки DuckHunt (см. `Dh! "
+"Help`)."
+
+#: bot.py:173
+msgid ":bulb: HINT: "
+msgstr ":bulb: СОВЕТ:"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Готово, пользователь забанен :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Готово, пользователь разбанен :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019>Готово, канал {channel} добавлен в "
+"игру! Повеселись!"
 
 #: cogs/experience_related_commands.py:25
 msgid ""
@@ -43,7 +84,7 @@ msgstr ""
 
 #: cogs/experience_related_commands.py:71
 msgid "You don't have enough experience points"
-msgstr "У вас нет достаточного колличества очков опыта"
+msgstr "У вас нет достаточного количество очков опыта."
 
 #: cogs/experience_related_commands.py:73
 msgid ":x: Sending exp is disabled on this server"
@@ -75,34 +116,6 @@ msgstr ""
 "Етот бот часта перезагружается для обновления. Не бойтис, оно роботоет 99. "
 "8% времени."
 
-#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
-msgid "Exp points"
-msgstr "Очков опыта"
-
-#: cogs/scores.py:78 cogs/scores.py:307
-msgid "Ducks killed"
-msgstr "Уток убито"
-
-#: cogs/scores.py:179
-msgid "Player"
-msgstr "Игрок"
-
-#: cogs/scores.py:312
-msgid "Best killing time"
-msgstr "Лучшее время"
-
-#: cogs/scores.py:315
-msgid "Ratio (exp/ducks killed)"
-msgstr "Соотношение (опыт/уток убито)"
-
-#: cogs/helpers/database.py:207 cogs/scores.py:316
-msgid "Current level"
-msgstr "Текущий уровень"
-
-#: cogs/helpers/database.py:209 cogs/scores.py:317
-msgid "Shots accuracy"
-msgstr "Точность"
-
 #: cogs/setup_wizzard.py:51
 msgid ""
 ":small_red_triangle: The permission `read_message_history` is missing.\n"
@@ -119,11 +132,11 @@ msgstr ":champagne: У вас уже есть бронебойные патро�
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: У вас уже есть разрывные патроны!"
 
-#: cogs/shop.py:384
+#: cogs/shop.py:386
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: оружие {target} уже саботировано!"
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:148
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше оружие было саботировано, спасибо {assaillant} за эту плохую шутку."
@@ -328,18 +341,30 @@ msgstr "серийный убийца уток"
 msgid "old noob"
 msgstr "старый нуб"
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"
 msgstr "Уровень игрока {player} на канале #{channel}"
 
-#: cogs/helpers/database.py:196
+#: cogs/helpers/database.py:198
 msgid "You leveled down!"
 msgstr "Ваш уровень уменьшен!"
 
-#: cogs/helpers/database.py:199
+#: cogs/helpers/database.py:201
 msgid "You leveled up!"
 msgstr "Ваш уровень увеличен!"
 
-#: cogs/helpers/database.py:208
+#: cogs/helpers/database.py:209
+msgid "Current level"
+msgstr "Текущий уровень"
+
+#: cogs/helpers/database.py:210
 msgid "Previous level"
 msgstr "Предыдущий уровень"
+
+#: cogs/helpers/database.py:211
+msgid "Shots accuracy"
+msgstr "Точность"
+
+#: cogs/helpers/database.py:213
+msgid "Exp points"
+msgstr "Очков опыта"

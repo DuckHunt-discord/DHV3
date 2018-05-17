@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-27 23:20+0000\n"
+"POT-Creation-Date: 2018-05-13 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.5.3\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:114
+#: bot.py:146
 msgid ":x: A required argument is missing."
 msgstr ": x: Sebuah argumen yang diperlukan tidak ada."
 
-#: bot.py:117
+#: bot.py:149
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Kamu tidak punya cukup exp untuk ini"
 
-#: bot.py:120
+#: bot.py:152
 msgid ":x: You are not a server admin"
 msgstr ":x: Kamu bukan admin server"
 
-#: bot.py:123
+#: bot.py:155
 msgid ":x: You are not a super admin."
 msgstr ":x: Kamu bukan admin super."
 
-#: bot.py:124
+#: bot.py:156
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,7 +42,7 @@ msgstr ""
 "kesalahan, harap hubungi pemilik saya di Server Dukungan DuckHunt (lihat "
 "'dh!help`)."
 
-#: bot.py:146
+#: bot.py:173
 msgid ":bulb: HINT: "
 msgstr ":bulb: PETUNJUK:"
 
@@ -96,16 +96,17 @@ msgstr ""
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Tidak diizinkan menetapkan status VIP! Kamu bukan pemilik."
 
-#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
+#: cogs/admin_commands.py:273
 msgid ":x: Incorrect value."
 msgstr ":x: Nilai tidak benar."
 
-#: cogs/admin_commands.py:241
+#: cogs/admin_commands.py:244 cogs/admin_commands.py:269
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 ":ok: Pengaturan {pref} sudah di tetapkan menjadi `{value}` di guild ini."
 
-#: cogs/admin_commands.py:266
+#: cogs/admin_commands.py:296
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -179,11 +180,11 @@ msgstr ""
 "Bot melakukan pengaktifan-ulang berkala untuk pembaruan. Jangan khawatir, "
 "masa aktifnya 99.8%"
 
-#: cogs/meta.py:56
+#: cogs/meta.py:60
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr "Ini daftar perintahnya : http://duckhunt.me/command-list/"
 
-#: cogs/meta.py:66
+#: cogs/meta.py:70
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -194,7 +195,7 @@ msgstr ""
 "web ini dengan milikmu:\n"
 "https://times.is/compare/GMT"
 
-#: cogs/meta.py:67
+#: cogs/meta.py:71
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get back your "
 "weapons for free"
@@ -202,7 +203,7 @@ msgstr ""
 "Kamu bisa menggunakan perintah `dh!freetime` supaya tahu kapan mendapatkan "
 "kembali senjatamu."
 
-#: cogs/meta.py:80
+#: cogs/meta.py:84
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -210,7 +211,7 @@ msgstr ""
 ":alarm_clock: Pengembalian senjata dan magasen berikutnya dalam {sec} detik "
 "({hours} jam dan {minutes} menit"
 
-#: cogs/meta.py:82
+#: cogs/meta.py:86
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -220,239 +221,9 @@ msgstr ""
 "(bila disita), tapi itu tidak mempengaruhi peluru di magasenmu sekarang. "
 "Kalau bisa, isi ulang sebelum beraksi!"
 
-#: cogs/meta.py:95
+#: cogs/meta.py:99
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Kamu menngunakan sejumlah shard {shard} dari {total} shard total."
-
-#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
-msgid "Exp points"
-msgstr "Poin exp"
-
-#: cogs/scores.py:78 cogs/scores.py:307
-msgid "Ducks killed"
-msgstr "Bebek ditembak mati"
-
-#: cogs/scores.py:82 cogs/scores.py:323
-msgid "Shots missed"
-msgstr "Tembakan gagal"
-
-#: cogs/scores.py:86
-msgid "Best time"
-msgstr "Waktu terbaik"
-
-#: cogs/scores.py:100
-msgid "Can't post embeds!"
-msgstr "Tidak bisa memposkan lekatan!"
-
-#: cogs/scores.py:101
-msgid ""
-"Use `dh!setup` to see missing permissions and ask an admin to give me the "
-"missing ones!"
-msgstr ""
-"Gunakan `dh!setup` untuk mengetahui izin yang tidak ada dan minta seorang "
-"admin untuk memberikan izin tersebut!"
-
-#: cogs/scores.py:126
-msgid "Generating top scores for your channel, please wait!"
-msgstr "Mengumpulkan skor teratas kanal milikmu, tunggu ya!"
-
-#: cogs/scores.py:138
-msgid ":cocktail: Best scores for {channel_name} :cocktail:"
-msgstr ":cocktail: Skor terbaik untuk {channel_name} :cocktail:"
-
-#: cogs/scores.py:156 cogs/scores.py:163
-msgid "None!"
-msgstr "Kosong!"
-
-#: cogs/scores.py:179
-msgid "Player"
-msgstr "Pemain"
-
-#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
-msgid ""
-":warning: There was an error while sending the embed, please check if the "
-"bot has the `embed_links` permission and try again!"
-msgstr ""
-":warning: Ada kesalahan saat mengirim lekatan, harap periksa apakah bot "
-"memiliki izin `embed_links` dan cobalah lagi!"
-
-#: cogs/scores.py:275
-msgid "Generating DuckHunt statistics for you, please wait..."
-msgstr "Mengumpulkan statistik DuckHunt untukmu, silahkan tunggu..."
-
-#: cogs/scores.py:282
-msgid "Page {current}/{max}"
-msgstr "Laman {current}/{max}"
-
-#: cogs/scores.py:285
-msgid "\n"
-"Confiscated weapon!"
-msgstr "\n"
-"Senjata tersita!"
-
-#: cogs/scores.py:294
-msgid "General statistics"
-msgstr "Statistik umum"
-
-#: cogs/scores.py:300
-msgid "No best time."
-msgstr "Tidak ada waktu terbaik."
-
-#: cogs/scores.py:305
-msgid "No duck killed"
-msgstr "Tidak ada bebek mati"
-
-#: cogs/scores.py:308
-msgid "Super ducks killed"
-msgstr "Bebek super yang mati"
-
-#: cogs/scores.py:309
-msgid "Players killed"
-msgstr "Pemain tertembak mati"
-
-#: cogs/scores.py:310
-msgid "Self-killing shots"
-msgstr "Tembakan bunuh diri"
-
-#: cogs/scores.py:312
-msgid "Best killing time"
-msgstr "Waktu tembak mati terbaik"
-
-#: cogs/scores.py:313
-msgid "Bullets in current magazine"
-msgstr "Peluru magasen saat ini"
-
-#: cogs/scores.py:315
-msgid "Ratio (exp/ducks killed)"
-msgstr "Rasio (exp/bebek tertembak mati)"
-
-#: cogs/helpers/database.py:207 cogs/scores.py:316
-msgid "Current level"
-msgstr "Level saat ini"
-
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208 cogs/scores.py:316
-msgid "nom"
-msgstr "nom"
-
-#: cogs/helpers/database.py:209 cogs/scores.py:317
-msgid "Shots accuracy"
-msgstr "Ketepatan tembak"
-
-#: cogs/helpers/database.py:210 cogs/scores.py:318
-msgid "Weapon reliability"
-msgstr "Keandalan senjata"
-
-#: cogs/scores.py:320
-msgid "Shoots statistics"
-msgstr "Statistik tembakan"
-
-#: cogs/scores.py:322
-msgid "Shots fired"
-msgstr "Jumlah tembakan"
-
-#: cogs/scores.py:324
-msgid "Shots without ducks"
-msgstr "Tembakan tanpa bebek"
-
-#: cogs/scores.py:325
-msgid "Shots that frightened a duck"
-msgstr "Tembakan yang menakuti bebek"
-
-#: cogs/scores.py:326
-msgid "Shots that harmed a duck"
-msgstr "Tembakan yang melukai bebek"
-
-#: cogs/scores.py:327
-msgid "Shots stopped by the detector"
-msgstr "Tembakan yang dihentikan pendeteksi"
-
-#: cogs/scores.py:328
-msgid "Shots jamming a weapon"
-msgstr "Tembakan menyebabkan senjata macet"
-
-#: cogs/scores.py:329
-msgid "Shots with a sabotaged weapon"
-msgstr "Tembakan senjata yang disabotase"
-
-#: cogs/scores.py:330
-msgid "Shots with a jammed weapon"
-msgstr "Tembakan saat senjata macet"
-
-#: cogs/scores.py:331
-msgid "Shots without bullets"
-msgstr "Tembakan tanpa peluru"
-
-#: cogs/scores.py:332
-msgid "Shots without weapon"
-msgstr "Tembakan tanpa senjata"
-
-#: cogs/scores.py:333
-msgid "Shots when wet"
-msgstr "Tembakan saat basah"
-
-#: cogs/scores.py:336
-msgid "Reloads and items statistics"
-msgstr "Pengisian dan statistik barang"
-
-#: cogs/scores.py:338
-msgid "Reloads"
-msgstr "Pengisian"
-
-#: cogs/scores.py:339
-msgid "Reloads without magazines"
-msgstr "Pengisian tanpa magasen"
-
-#: cogs/scores.py:340
-msgid "Reloads not needed"
-msgstr "Pengisian yang tidak perlu"
-
-#: cogs/scores.py:342
-msgid "Trash found in bushes"
-msgstr "Sampah diketemukan di semak-semak"
-
-#: cogs/scores.py:344
-msgid "Exp earned with a clover"
-msgstr "Exp yang didapat dengan semanggi"
-
-#: cogs/scores.py:345
-msgid "Life insurance rewards"
-msgstr "Imbalan asuransi nyawa"
-
-#: cogs/scores.py:346
-msgid "Free givebacks used"
-msgstr "Pengembalian gratis terpakai"
-
-#: cogs/scores.py:349
-msgid "Possesed items and effects"
-msgstr "Barang dan efek yang dimiliki"
-
-#: cogs/scores.py:352
-msgid "Object: grease"
-msgstr "Barang: Pelumas"
-
-#: cogs/scores.py:355
-msgid "Object: infrared detector"
-msgstr "Barang: pendeteksi inframerah"
-
-#: cogs/scores.py:358
-msgid "Object: silencer"
-msgstr "Barang: peredam"
-
-#: cogs/scores.py:361
-msgid "Object: clover {exp} exp"
-msgstr "Barang: daun semanggi {exp} exp"
-
-#: cogs/scores.py:364
-msgid "Object: explosive ammo"
-msgstr "Barang: amunisi ledak"
-
-#: cogs/scores.py:366
-msgid "Object: AP ammo"
-msgstr "Barang: Amunisi AP"
-
-#: cogs/scores.py:369
-msgid "Effect: wet"
-msgstr "Efek: basah"
 
 #: cogs/setup_wizzard.py:35
 msgid ""
@@ -711,21 +482,21 @@ msgstr ""
 ":champagne: Senjatamu dilumasi dengan sempurna, kamu tidak lagi memerlukan "
 "pelumas."
 
-#: cogs/shop.py:185
+#: cogs/shop.py:187
 msgid ":money_with_wings: You added a sight to your weapon."
 msgstr ":money_with_wings: Kamu menambahkan penglihatan pada senjatamu."
 
-#: cogs/shop.py:186
+#: cogs/shop.py:188
 msgid ""
 "Your aiming was improved using this formula: (100 - current accuracy) / 3."
 msgstr ""
 "Bidikanmu ditingkatkan menggunakan formula: (100 - ketepatan saat ini) / 3."
 
-#: cogs/shop.py:189
+#: cogs/shop.py:191
 msgid ":champagne: You already have a sight on your weapon."
 msgstr ":champagne: Kamu sudah pasangkan penglihatan atas senjatamu"
 
-#: cogs/shop.py:206
+#: cogs/shop.py:208
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will "
 "prevent any waste of ammo for a day. Cost: 15 exp points."
@@ -734,15 +505,15 @@ msgstr ""
 "yang akan mencegah tersia-sianya amunisi selama satu hari. Biaya: 15 poin "
 "exp."
 
-#: cogs/shop.py:208
+#: cogs/shop.py:210
 msgid ":champagne: You already have an infrared detector on your weapon."
 msgstr ":champagne: Kamu sudah memiliki pendeteksi infra-merah di senjatamu."
 
-#: cogs/shop.py:222
+#: cogs/shop.py:224
 msgid ":money_with_wings: You added a silencer to your weapon."
 msgstr ":money_with_wings: Kamu sudah menambahkan peredam di senjatamu."
 
-#: cogs/shop.py:223
+#: cogs/shop.py:225
 msgid ""
 "The silencer works best if every hunter uses one, or if you're alone. With "
 "it, no ducks will fly away before you can kill them. What a good deal, they "
@@ -752,11 +523,11 @@ msgstr ""
 "sendiri. Dengannya, takkan ada bebek yang terbang menjauh sebelum berhasil "
 "kamu tembak mati. Lumayan kan, ongkosnya hanya 5 exp!"
 
-#: cogs/shop.py:227
+#: cogs/shop.py:229
 msgid ":champagne: You already have a silencer on your weapon"
 msgstr ":champagne: Kamu sudah pasangkan peredam di senjatamu"
 
-#: cogs/shop.py:251
+#: cogs/shop.py:253
 msgid ""
 ":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
 "{exp} more exp points for each killed duck for the next day."
@@ -765,11 +536,11 @@ msgstr ""
 "memberi tambahan {exp} poin exp untuk tiap bebek yang berhasil ditembak mati "
 "di hari berikut."
 
-#: cogs/shop.py:255
+#: cogs/shop.py:257
 msgid ":champagne: You already have 4-leaf clover on your weapon"
 msgstr ":chanpagne: Kamu sudah punya semanggi helai-4 di senjatamu"
 
-#: cogs/shop.py:271
+#: cogs/shop.py:273
 msgid ""
 ":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
 "immune to sunlight for a day."
@@ -777,7 +548,7 @@ msgstr ""
 ":money_with_wings: Kamu sudah membeli kacamata senilai 5 exp! Sekarang kamu "
 "kebal silau selama satu hari."
 
-#: cogs/shop.py:275
+#: cogs/shop.py:277
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
 "being that you're much swagger now. :cool:"
@@ -785,7 +556,7 @@ msgstr ""
 ":money_with_wings: Kamu sudah membeli kacamata baru, hal pentingnya adalah "
 "sekarang kamu jauh lebih keren. :cool:"
 
-#: cogs/shop.py:276
+#: cogs/shop.py:278
 msgid ""
 "Don't buy sunglasses if you still have them! This don't extend the time "
 "you'll have them, but still cost you some exp"
@@ -793,14 +564,14 @@ msgstr ""
 "Jangan beli kacamata jika kamu sudah memilikinya! Ini tidak menambah waktu "
 "kepemilikannya, tapi memakan jumlah exp yang sama."
 
-#: cogs/shop.py:290
+#: cogs/shop.py:292
 msgid ""
 ":money_with_wings: You have new dry clothes on you now. You look beautiful!"
 msgstr ""
 ":money_with_wings: Sekarang kamu sudah memakai baju kering yang baru. "
 "Terlihat elok!"
 
-#: cogs/shop.py:294
+#: cogs/shop.py:296
 msgid ""
 ":money_with_wings: You bought brand new clothes, the only point of it being "
 "that you're much swagger now. :cool:"
@@ -808,7 +579,7 @@ msgstr ""
 ":money_with_wings: Kamu sudah membeli beberapa baju baru, hal pentingnya "
 "adalah sekarang kamu jauh lebih keren. :cool:"
 
-#: cogs/shop.py:295
+#: cogs/shop.py:297
 msgid ""
 "Don't buy dry clothes if you aren't wet! They won't do anything, but will "
 "still cost you exp"
@@ -816,7 +587,7 @@ msgstr ""
 "Jangan beli baju kering jika kamu tidak basah! Tidak menghasilkan apapun, "
 "tapi tetap memakan jumlah exp yang sama."
 
-#: cogs/shop.py:309
+#: cogs/shop.py:311
 msgid ""
 ":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, "
 "or if your weapon was sabotaged, it's fixed now!"
@@ -824,7 +595,7 @@ msgstr ""
 ":money_with_wings: Kamu membersihkan senjatamu dengan biaya 6 exp. JIka ada "
 "pasir di dalamnya, atau senjatamu disabotase, sekarang sudah diperbaiki."
 
-#: cogs/shop.py:310
+#: cogs/shop.py:312
 msgid ""
 "Next time someone sabotages you, just shot, it won't do much damage but to "
 "your reputation"
@@ -832,11 +603,11 @@ msgstr ""
 "Sewaktu-waktu ada yang menyabotase kamu, tembak saja, tidak akan merusak "
 "apapun selain reputasimu."
 
-#: cogs/shop.py:323
+#: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ":x: Mustahil! {mention} punya kacamata! Ia kebal terhadap ini!"
 
-#: cogs/shop.py:324
+#: cogs/shop.py:326
 msgid ""
 "That bad move still took 5 exp from your account, due to you having to buy a "
 "mirror"
@@ -844,7 +615,7 @@ msgstr ""
 "Tidakan buruk tersebut masih mengambil 5 exp dari akunmu, lantaran kamu "
 "membeli sebuah cermin"
 
-#: cogs/shop.py:329
+#: cogs/shop.py:331
 msgid ""
 ":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
 "accuracy!"
@@ -852,7 +623,7 @@ msgstr ""
 ":money_with_wings: Kamu melimbungkan {mention}! Ketepatan tembakannya yang "
 "berikut berkurang 50%!"
 
-#: cogs/shop.py:330 cogs/shop.py:345
+#: cogs/shop.py:332 cogs/shop.py:347
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
 "would you"
@@ -860,11 +631,11 @@ msgstr ""
 "Adanya sebutan memang disengaja. Kamu tidak akan melakukannya di belakang "
 "mereka bukan?"
 
-#: cogs/shop.py:344
+#: cogs/shop.py:346
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Kamu menghamburkan pasir di senjatanya {mention}!"
 
-#: cogs/shop.py:358
+#: cogs/shop.py:360
 msgid ""
 ":money_with_wings: You dropped a bucket full of water on {target}, forcing "
 "them to wait 1 hour for their clothes to dry before they can return hunting."
@@ -873,17 +644,17 @@ msgstr ""
 "memaksanya menunggu 1 jam sampai bajunya kering sebelum bisa kembali berburu."
 ""
 
-#: cogs/shop.py:371
+#: cogs/shop.py:373
 msgid "You wouln't sabotage yourself, would you ?"
 msgstr "Kamu takkan menyabotase dirimu sendiri bukan?"
 
-#: cogs/shop.py:377
+#: cogs/shop.py:379
 msgid ""
 ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
 msgstr ""
 ":ok: Senjata {target} sudah disabotase... tapi mereka tidak tahu (14 exp)!"
 
-#: cogs/shop.py:380
+#: cogs/shop.py:382
 msgid ""
 "Don't use a mention for this. You can give me user ids or the full username "
 "in \"quotes\""
@@ -891,11 +662,11 @@ msgstr ""
 "Jangan gunakan sebutan untuk ini. Kamu bisa memberikan id pengguna atau nama "
 "pengguna utuh dalam \"kutipan\""
 
-#: cogs/shop.py:384
+#: cogs/shop.py:386
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: Senjata {target} sudah disabotase!"
 
-#: cogs/shop.py:389 cogs/shop.py:494
+#: cogs/shop.py:391 cogs/shop.py:496
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I will "
 "be able to delete that kind of shop commands ;)"
@@ -903,17 +674,17 @@ msgstr ""
 "Jika kamu minta admin server memberi saya izin`manage_message`, Saya bisa "
 "menghapus perintah belanja semacam itu;)"
 
-#: cogs/shop.py:406
+#: cogs/shop.py:408
 msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
 msgstr ""
 ":money_with_wings: Kamu sudah membeli asuransi jiwa untuk seminggu senilai "
 "10 exp."
 
-#: cogs/shop.py:410
+#: cogs/shop.py:412
 msgid ":champagne: You're already insured."
 msgstr ":champagne: Kamu sudah diasuransikan."
 
-#: cogs/shop.py:447
+#: cogs/shop.py:449
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
@@ -921,7 +692,7 @@ msgstr ""
 ":money_with_wings: Bebek-bebek sedang rehat, jadi umpanmu mungkin tidak "
 "berhasil..."
 
-#: cogs/shop.py:451
+#: cogs/shop.py:453
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
@@ -929,7 +700,7 @@ msgstr ""
 "Seekor bebek akan muncul di kanal pada 10 menit berikut, berkat umpannya "
 "{mention}. Ia membelinya senilai 8 exp!"
 
-#: cogs/shop.py:474
+#: cogs/shop.py:476
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 more seconds before leaving for the rest of the day!"
@@ -938,14 +709,14 @@ msgstr ""
 " Sebelum pergi bebek-bebek akan tinggal 20 detik lebih lama sepanjang sisa "
 "hari!"
 
-#: cogs/shop.py:475
+#: cogs/shop.py:477
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 ":money_with_wings: Roti bisa bertumpuk! Belilah lagi untuk menambah daya "
 "tariknya!"
 
-#: cogs/shop.py:499
+#: cogs/shop.py:501
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
@@ -953,41 +724,41 @@ msgstr ""
 ":money_with_wings: Kamu sudah menyiapkan bebek-bebekan di kanal senilai 40 "
 "exp. Ngawur, tapi lucu sekali!"
 
-#: cogs/user_commands.py:61 cogs/user_commands.py:132
+#: cogs/user_commands.py:62 cogs/user_commands.py:135
 msgid "You don't have a weapon."
 msgstr "Kamu tidak memiliki senjata."
 
-#: cogs/user_commands.py:67
+#: cogs/user_commands.py:68
 msgid "You unjammed your weapon."
 msgstr "Kamu sudah melancarkan senjatamu."
 
-#: cogs/user_commands.py:81
+#: cogs/user_commands.py:82
 msgid "You reloaded your weapon."
 msgstr "Kamu sudah mengisi ulang senjatamu."
 
-#: cogs/user_commands.py:83
+#: cogs/user_commands.py:84
 msgid "You don't have any ammo left!"
 msgstr "Kamu tidak punya amunisi lagi!"
 
-#: cogs/user_commands.py:86
+#: cogs/user_commands.py:87
 msgid "You don't need to reload your weapon."
 msgstr "Kamu tidak perlu mengisi ulang senjatamu."
 
-#: cogs/user_commands.py:125
+#: cogs/user_commands.py:128
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Pakaianmu basah, kamu tidak bisa berburu! Tunggulah {temps_restart} menit."
 
-#: cogs/user_commands.py:138
+#: cogs/user_commands.py:141
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Senjatamu macet, harus diisi ulang untuk melancarkannya."
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:148
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Senjatamu disabotase, syukur {assaillant} atas kelakar buruknya."
 
-#: cogs/user_commands.py:155
+#: cogs/user_commands.py:158
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -995,11 +766,11 @@ msgstr ""
 "** PENGOKANG KOSONG ** | Amunisi di senjata: {balles_actualles} / "
 "{balles_max) | Sisa magasen: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:180
+#: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Senjatamu macet, isi ulang untuk melancarkannya."
 
-#: cogs/user_commands.py:199
+#: cogs/user_commands.py:202
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -1007,7 +778,7 @@ msgstr ""
 "Tidak ada bebek di sini, tapi peluru tidak meletus karena pendeteksi infra "
 "merah yang kamu tambahkan di senjata memang berfungsi."
 
-#: cogs/user_commands.py:209
+#: cogs/user_commands.py:212
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -1015,7 +786,7 @@ msgstr ""
 "Sayang kamu meleset, tapi sebenarnya kamu membidik apa? Di sini tidak ada "
 "bebek... [gagal: -1 xp] [tembakan liar: -1 xp]"
 
-#: cogs/user_commands.py:292
+#: cogs/user_commands.py:295
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -1025,7 +796,7 @@ msgstr ""
 "mungkin kamu harus memutar sedikit senjatamu sebelum menembak? [gagal: -1 "
 "xp] [kecelakaan berburu: -2 xp] [**senjata disita**]"
 
-#: cogs/user_commands.py:297
+#: cogs/user_commands.py:300
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1033,7 +804,7 @@ msgstr ""
 "**DUAR**   Tembakanmu meleset... dan menembak {player}! [gagal: -1 xp] "
 "[kecelakaan berburu: -2 xp] [**senjata disita**]"
 
-#: cogs/user_commands.py:300
+#: cogs/user_commands.py:303
 msgid ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
 "it back for free (check when with `!freetime`)"
@@ -1041,7 +812,7 @@ msgstr ""
 "Kamu bisa memulihkan senjatamu di gerai (`dh!shop 5`) atau tunggu sampai "
 "kamu mendapatkannya kembali secara gratis (periksa dengan `!freetime`)"
 
-#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:309
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**TUUING**    Tembakanmu meleset! [gagal: -1 xp]"
 
@@ -1378,21 +1149,49 @@ msgstr "pemburu"
 msgid "unemployed due to extinction of the duck specie"
 msgstr "Menganggur karena punahnya jenis bebek"
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"
 msgstr "Level {player} di #{kanal}"
 
-#: cogs/helpers/database.py:196
+#: cogs/helpers/database.py:198
 msgid "You leveled down!"
 msgstr "Levelmu turun!"
 
-#: cogs/helpers/database.py:199
+#: cogs/helpers/database.py:201
 msgid "You leveled up!"
 msgstr "Levelmu naik!"
 
-#: cogs/helpers/database.py:208
+#: cogs/helpers/database.py:209
+msgid "Current level"
+msgstr "Level saat ini"
+
+#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+msgid "nom"
+msgstr "nom"
+
+#: cogs/helpers/database.py:210
 msgid "Previous level"
 msgstr "Level terdahulu"
+
+#: cogs/helpers/database.py:211
+msgid "Shots accuracy"
+msgstr "Ketepatan tembak"
+
+#: cogs/helpers/database.py:212
+msgid "Weapon reliability"
+msgstr "Keandalan senjata"
+
+#: cogs/helpers/database.py:213
+msgid "Exp points"
+msgstr "Poin exp"
+
+#: cogs/helpers/database.py:219
+msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ""
+":warning: Ada kesalahan saat mengirim lekatan, harap periksa apakah bot "
+"memiliki izin `embed_links` dan cobalah lagi!"
 
 #: cogs/helpers/ducks.py:95
 msgid ""
@@ -1426,7 +1225,7 @@ msgstr ""
 "Nyaris, kamu hampir menembak mati bebeknya, tapi pemburu lain menembak lebih "
 "dulu! [gagal; -1 xp]"
 
-#: cogs/helpers/ducks.py:223
+#: cogs/helpers/ducks.py:236
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1437,7 +1236,7 @@ msgstr ""
 "{time} detik, sekarang jumlah totalmu {total} bebek (yang {supercanards} "
 "merupakan bebek super) ditembak mati di #{channel}.    \\_X<   *KOUAK* {exp}"
 
-#: cogs/helpers/ducks.py:231
+#: cogs/helpers/ducks.py:244
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1445,7 +1244,7 @@ msgstr ""
 ":gun: Bebeknya masih hidup, coba lagi! *BEBEK SUPER TERDETEKSI*[nyawa: -"
 "{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:233
+#: cogs/helpers/ducks.py:246
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""

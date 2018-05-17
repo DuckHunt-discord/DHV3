@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-27 23:20+0000\n"
+"POT-Creation-Date: 2018-05-13 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,8 @@ msgstr ":ok: Fertig, Benutzer wurde entbannt. :eyes:"
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Du musst ein Eigentümer sein, um diesen Status zu vergeben."
 
-#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
+#: cogs/admin_commands.py:273
 msgid ":x: Incorrect value."
 msgstr ":x: Falscher Wert"
 
@@ -90,218 +91,13 @@ msgstr "{dans} Stunden"
 msgid "{dans} minutes"
 msgstr "{dans} Minuten"
 
-#: cogs/meta.py:80
+#: cogs/meta.py:84
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
 msgstr ""
 ":alarm_clock: Nächste Rückgabe von Waffen und Magazinen in {sec} Sekunden. "
 "({hours} Stunden und {minutes} Minuten)."
-
-#: cogs/helpers/database.py:211 cogs/scores.py:74 cogs/scores.py:314
-msgid "Exp points"
-msgstr "Erfahrungspunkte"
-
-#: cogs/scores.py:78 cogs/scores.py:307
-msgid "Ducks killed"
-msgstr "Getötete Enten"
-
-#: cogs/scores.py:82 cogs/scores.py:323
-msgid "Shots missed"
-msgstr "Verfehlte Schüsse"
-
-#: cogs/scores.py:86
-msgid "Best time"
-msgstr "Beste Zeit"
-
-#: cogs/scores.py:126
-msgid "Generating top scores for your channel, please wait!"
-msgstr "Generiere Bestenliste für diesen Kanal, bitte warten!"
-
-#: cogs/scores.py:156 cogs/scores.py:163
-msgid "None!"
-msgstr "Keine!"
-
-#: cogs/scores.py:179
-msgid "Player"
-msgstr "Spieler"
-
-#: cogs/helpers/database.py:217 cogs/scores.py:186 cogs/scores.py:378
-msgid ""
-":warning: There was an error while sending the embed, please check if the "
-"bot has the `embed_links` permission and try again!"
-msgstr ""
-":warning: Fehler beim Einbinden eines Links, bitte überprüfe, ob der Bot die "
-"Berechtigung `embed_links` (Links einbinden) hat und versuche es erneut!"
-
-#: cogs/scores.py:275
-msgid "Generating DuckHunt statistics for you, please wait..."
-msgstr "Generiere DuchHunt Statistiken, bitte warten..."
-
-#: cogs/scores.py:282
-msgid "Page {current}/{max}"
-msgstr "Seite {current}/{max}"
-
-#: cogs/scores.py:285
-msgid "\n"
-"Confiscated weapon!"
-msgstr "Deine Waffe wurde beschlagnahmt!\n"
-
-#: cogs/scores.py:294
-msgid "General statistics"
-msgstr "Generelle Statistiken"
-
-#: cogs/scores.py:300
-msgid "No best time."
-msgstr "Keine Bestzeit"
-
-#: cogs/scores.py:305
-msgid "No duck killed"
-msgstr "Keine Ente getötet"
-
-#: cogs/scores.py:308
-msgid "Super ducks killed"
-msgstr "getötete Super-Enten"
-
-#: cogs/scores.py:309
-msgid "Players killed"
-msgstr "getötete Spieler"
-
-#: cogs/scores.py:310
-msgid "Self-killing shots"
-msgstr "Suizidale Schüsse"
-
-#: cogs/scores.py:312
-msgid "Best killing time"
-msgstr "Schnellster Abschuss"
-
-#: cogs/scores.py:313
-msgid "Bullets in current magazine"
-msgstr "Kugeln im jetzigen Magazin"
-
-#: cogs/scores.py:315
-msgid "Ratio (exp/ducks killed)"
-msgstr "Schussrate (Exp/getötete Enten)"
-
-#: cogs/helpers/database.py:207 cogs/scores.py:316
-msgid "Current level"
-msgstr "Aktuelles Level"
-
-#: cogs/helpers/database.py:209 cogs/scores.py:317
-msgid "Shots accuracy"
-msgstr "Treffergenauigkeit"
-
-#: cogs/helpers/database.py:210 cogs/scores.py:318
-msgid "Weapon reliability"
-msgstr "Zuverlässigkeit der Waffe"
-
-#: cogs/scores.py:320
-msgid "Shoots statistics"
-msgstr "Schussstatistik"
-
-#: cogs/scores.py:322
-msgid "Shots fired"
-msgstr "Schüsse"
-
-#: cogs/scores.py:324
-msgid "Shots without ducks"
-msgstr "Schüsse ohne Enten"
-
-#: cogs/scores.py:325
-msgid "Shots that frightened a duck"
-msgstr "Schüsse, die Enten vertrieben haben"
-
-#: cogs/scores.py:326
-msgid "Shots that harmed a duck"
-msgstr "Schüsse, die eine Ente verletzten"
-
-#: cogs/scores.py:327
-msgid "Shots stopped by the detector"
-msgstr "Schüsse, die vom Detektor aufgehalten wurden"
-
-#: cogs/scores.py:328
-msgid "Shots jamming a weapon"
-msgstr "Schüsse, die die Waffe verklemmt haben"
-
-#: cogs/scores.py:329
-msgid "Shots with a sabotaged weapon"
-msgstr "Schüsse mit sabotierter Waffe"
-
-#: cogs/scores.py:330
-msgid "Shots with a jammed weapon"
-msgstr "Schüsse mit verstopfter Waffe"
-
-#: cogs/scores.py:331
-msgid "Shots without bullets"
-msgstr "Schüsse ohne Kugeln"
-
-#: cogs/scores.py:332
-msgid "Shots without weapon"
-msgstr "Schüsse ohne Waffe"
-
-#: cogs/scores.py:333
-msgid "Shots when wet"
-msgstr "Schüsse wenn du nass warst"
-
-#: cogs/scores.py:336
-msgid "Reloads and items statistics"
-msgstr "Nachlader- und Item-Statistiken"
-
-#: cogs/scores.py:338
-msgid "Reloads"
-msgstr "Nachgeladen"
-
-#: cogs/scores.py:339
-msgid "Reloads without magazines"
-msgstr "Anzahl Nachladeversuche ohne Magazin"
-
-#: cogs/scores.py:340
-msgid "Reloads not needed"
-msgstr "Nicht benötigtes Nachladen"
-
-#: cogs/scores.py:342
-msgid "Trash found in bushes"
-msgstr "In Büschen gefundener Müll"
-
-#: cogs/scores.py:344
-msgid "Exp earned with a clover"
-msgstr "Durch Kleeblätter erhaltene Exp"
-
-#: cogs/scores.py:346
-msgid "Free givebacks used"
-msgstr "Gratis verwendete Rückgaben"
-
-#: cogs/scores.py:349
-msgid "Possesed items and effects"
-msgstr "Besondere Gegenstände und Effekte"
-
-#: cogs/scores.py:352
-msgid "Object: grease"
-msgstr "Objekt: Schmierfett"
-
-#: cogs/scores.py:355
-msgid "Object: infrared detector"
-msgstr "Objekt: Infrarotdetektor"
-
-#: cogs/scores.py:358
-msgid "Object: silencer"
-msgstr "Objekt: Schalldämpfer"
-
-#: cogs/scores.py:361
-msgid "Object: clover {exp} exp"
-msgstr "Objekt: Klee {exp} exp"
-
-#: cogs/scores.py:364
-msgid "Object: explosive ammo"
-msgstr "Objekt: Explosive Munition"
-
-#: cogs/scores.py:366
-msgid "Object: AP ammo"
-msgstr "Objekt: Panzerbrechende Munition"
-
-#: cogs/scores.py:369
-msgid "Effect: wet"
-msgstr "Effekt: Nässe"
 
 #: cogs/shop.py:42
 msgid ""
@@ -344,7 +140,7 @@ msgid ""
 msgstr ""
 ":champagne: Deine Waffe ist perfekt geölt, du brauchst nicht noch mehr Fett."
 
-#: cogs/shop.py:206
+#: cogs/shop.py:208
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will "
 "prevent any waste of ammo for a day. Cost: 15 exp points."
@@ -353,11 +149,11 @@ msgstr ""
 "hinzugefügt, er wird dich davor bewahren für den nächsten Tag Munition zu "
 "verschwenden. Kosten: 15 Erfahrungspunkte."
 
-#: cogs/shop.py:208
+#: cogs/shop.py:210
 msgid ":champagne: You already have an infrared detector on your weapon."
 msgstr ":champagne: Du hast schon einen Infrarot-Detektor auf deiner Waffe."
 
-#: cogs/shop.py:271
+#: cogs/shop.py:273
 msgid ""
 ":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
 "immune to sunlight for a day."
@@ -365,7 +161,7 @@ msgstr ""
 ":money_with_wings: Du hast für 5 Erfahrungspunkte eine Sonnenbrille gekauft! "
 "Du bist somit immune für Sonnenlicht für einen Tag!"
 
-#: cogs/shop.py:275
+#: cogs/shop.py:277
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
 "being that you're much swagger now. :cool:"
@@ -373,7 +169,7 @@ msgstr ""
 ":money_with_wings: Du hast eine brandneue Sonnenbrille gekauft, der einzige "
 "Sinn dahinter ist, dass du jetzt noch cooler bist. :cool:"
 
-#: cogs/shop.py:294
+#: cogs/shop.py:296
 msgid ""
 ":money_with_wings: You bought brand new clothes, the only point of it being "
 "that you're much swagger now. :cool:"
@@ -381,7 +177,7 @@ msgstr ""
 ":money_with_wings: Du hast brandneue Kleidung gekauft, der einzige Sinn "
 "dahinter ist, dass du jetzt noch cooler bist. :cool:"
 
-#: cogs/shop.py:329
+#: cogs/shop.py:331
 msgid ""
 ":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
 "accuracy!"
@@ -389,11 +185,11 @@ msgstr ""
 ":money_with_wings: Du hast {mention} geblendet! Sein/Ihr nächster Schuss hat "
 "50% weniger genauigkeit!"
 
-#: cogs/shop.py:344
+#: cogs/shop.py:346
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Du hast Sand auf {mention}s Waffe geworfen! "
 
-#: cogs/shop.py:358
+#: cogs/shop.py:360
 msgid ""
 ":money_with_wings: You dropped a bucket full of water on {target}, forcing "
 "them to wait 1 hour for their clothes to dry before they can return hunting."
@@ -402,11 +198,11 @@ msgstr ""
 "zwingt eine Stunde zu warten weil ihre/seine Kleidung trocknen muss, bevor "
 "er wieder jagen gehen kann."
 
-#: cogs/shop.py:384
+#: cogs/shop.py:386
 msgid ":ok: {target} weapon is already sabotaged!"
 msgstr ":ok: Die Waffe von {target} ist bereits sabotiert!"
 
-#: cogs/shop.py:447
+#: cogs/shop.py:449
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
@@ -414,7 +210,7 @@ msgstr ""
 ":money_with_wings: Die Enten schlafen im Moment, deine Atrappe wird also "
 "wahrscheinlich nicht funktionieren."
 
-#: cogs/shop.py:451
+#: cogs/shop.py:453
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
@@ -422,7 +218,7 @@ msgstr ""
 ":money_with_wings: Eine Ente wird in den nächsten 10 Minuten in diesem Kanal "
 "auftauchen, da {mention} sie für 8 exp mit einem Köder angelockt hat!"
 
-#: cogs/shop.py:474
+#: cogs/shop.py:476
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 more seconds before leaving for the rest of the day!"
@@ -430,45 +226,45 @@ msgstr ""
 ":money_with_wings: Du hast etwas Brot in den Kanal gelegt um Enten "
 "anzuziehen. Sie werden heute 20 Sekunden länger bleiben!"
 
-#: cogs/user_commands.py:61 cogs/user_commands.py:132
+#: cogs/user_commands.py:62 cogs/user_commands.py:135
 msgid "You don't have a weapon."
 msgstr "Du hast keine Waffe."
 
-#: cogs/user_commands.py:67
+#: cogs/user_commands.py:68
 msgid "You unjammed your weapon."
 msgstr "Du hast deine Waffe "
 
-#: cogs/user_commands.py:81
+#: cogs/user_commands.py:82
 msgid "You reloaded your weapon."
 msgstr "Du hast deine Waffe nachgeladen."
 
-#: cogs/user_commands.py:83
+#: cogs/user_commands.py:84
 msgid "You don't have any ammo left!"
 msgstr "Du hast keine Munition mehr!"
 
-#: cogs/user_commands.py:86
+#: cogs/user_commands.py:87
 msgid "You don't need to reload your weapon."
 msgstr "Du musst deine Waffe nicht nachladen."
 
-#: cogs/user_commands.py:125
+#: cogs/user_commands.py:128
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Deine Kleidung ist nass, du kannst nicht jagen gehen. Warte {temps_restant} "
 "Minuten darauf, dass deine Kleidung trocknet."
 
-#: cogs/user_commands.py:138
+#: cogs/user_commands.py:141
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr ""
 "Deine Waffe hat sich verklemmt, lade nach, um wieder schießen zu können."
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:148
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Deine Waffe ist sabotiert, {assaillant} ist für diesen schlechten Scherz "
 "verantwortlich."
 
-#: cogs/user_commands.py:155
+#: cogs/user_commands.py:158
 msgid ""
 "** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -476,12 +272,12 @@ msgstr ""
 "** MAGAZIN LEER ** | Munition in der Waffe: {balles_actuelles} / "
 "{balles_max} | Verbleibende Magazine: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:180
+#: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr ""
 "Deine Waffe hat sich verklemmt, lade nach, um wieder schießen zu können."
 
-#: cogs/user_commands.py:199
+#: cogs/user_commands.py:202
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -489,7 +285,7 @@ msgstr ""
 "Hier ist weit und breit keine Ente, aber dein Gewehr hat nicht geschossen, "
 "weil dein Infrarotdetektor seine Arbeit macht."
 
-#: cogs/user_commands.py:209
+#: cogs/user_commands.py:212
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -497,7 +293,7 @@ msgstr ""
 "Zum Glück hast du verfehlt, aber auf was hast du genau gezielt?! Hier ist "
 "weit und breit keine [verfehlt: -1 xp] [Schuss ins Leere: -1 xp]"
 
-#: cogs/helpers/ducks.py:92 cogs/user_commands.py:306
+#: cogs/helpers/ducks.py:92 cogs/user_commands.py:309
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PENG** Du hast die Ente verfehlt! [verfehlt: -1 xp]"
 
@@ -625,21 +421,45 @@ msgstr "Entenhäuter"
 msgid "old noob"
 msgstr "alter Anfänger"
 
-#: cogs/helpers/database.py:193
+#: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"
 msgstr "Level von {player} in #{channel}"
 
-#: cogs/helpers/database.py:196
+#: cogs/helpers/database.py:198
 msgid "You leveled down!"
 msgstr "Du bist abgestiegen!"
 
-#: cogs/helpers/database.py:199
+#: cogs/helpers/database.py:201
 msgid "You leveled up!"
 msgstr "Du bist aufgestiegen!"
 
-#: cogs/helpers/database.py:208
+#: cogs/helpers/database.py:209
+msgid "Current level"
+msgstr "Aktuelles Level"
+
+#: cogs/helpers/database.py:210
 msgid "Previous level"
 msgstr "Zuvoriges Level"
+
+#: cogs/helpers/database.py:211
+msgid "Shots accuracy"
+msgstr "Treffergenauigkeit"
+
+#: cogs/helpers/database.py:212
+msgid "Weapon reliability"
+msgstr "Zuverlässigkeit der Waffe"
+
+#: cogs/helpers/database.py:213
+msgid "Exp points"
+msgstr "Erfahrungspunkte"
+
+#: cogs/helpers/database.py:219
+msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ""
+":warning: Fehler beim Einbinden eines Links, bitte überprüfe, ob der Bot die "
+"Berechtigung `embed_links` (Links einbinden) hat und versuche es erneut!"
 
 #: cogs/helpers/ducks.py:95
 msgid ""
