@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-18 07:41+0000\n"
+"POT-Creation-Date: 2018-05-18 08:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1370,6 +1370,10 @@ msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and"
 " now it is really happy! [3 exp]\n"
 "The baby duck left, feeling loved"
+msgstr ""
+
+#: cogs/helpers/ducks.py:500
+msgid "**I AM...** Your mother"
 msgstr ""
 
 #: cogs/helpers/ducks.py:509
