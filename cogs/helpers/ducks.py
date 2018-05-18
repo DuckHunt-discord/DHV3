@@ -497,7 +497,7 @@ class MotherOfAllDucks(SuperDuck):
 
         trace = random.choice(self.bot.canards_trace)
         corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
-        cri   = "**I AM...** Your mother"
+        cri   = _("**I AM...** Your mother", language)
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
