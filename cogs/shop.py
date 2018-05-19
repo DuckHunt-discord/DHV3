@@ -370,7 +370,7 @@ class Experience:
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         if target == ctx.message.author:
-            await self.bot.send_message(ctx=ctx, force_pm=True, message=_("You wouln't sabotage yourself, would you ?", language))
+            await self.bot.send_message(ctx=ctx, force_pm=True, message=_("You wouldn't sabotage yourself, would you ?", language))
             return
 
         if await self.bot.db.get_stat(message.channel, target, "sabotee") == "-":
