@@ -282,6 +282,12 @@ class User:
 
                     online_players = [p for p in guild.members if p.status.online or p.status.idle]
                     online_players += guild.members if len(online_players) <= 5 else [author]
+                    try:
+                        online_players.remove(guild.me)
+                    except ValueError:
+                        # Who cares if we are not in the list :)
+                        pass
+
                     # Double the chances of the author being selected, and add every possible member if we see less than 5 of them online
 
                     player_killed = random.choice(online_players)
@@ -299,6 +305,8 @@ class User:
                     # 11c/ Just shot someone else
                     await self.sendBangMessage(ctx, _("**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]", language).format(
                         **{"player": player_killed.mention if await get_pref(guild, "killed_mentions") else player_killed.name}))
+
+                    # TODO : Life insurence
 
                 await self.bot.hint(ctx=ctx, message=_("You can recover your weapon in the store (`dh!shop 5`) "
                                                        "or wait until you get it back for free (check when with `!freetime`)", language))
