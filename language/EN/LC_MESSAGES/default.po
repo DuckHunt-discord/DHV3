@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-18 08:49+0000\n"
+"POT-Creation-Date: 2018-05-19 22:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -818,8 +818,8 @@ msgstr ""
 "them to wait 1 hour for their clothes to dry before they can return hunting."
 
 #: cogs/shop.py:373
-msgid "You wouln't sabotage yourself, would you ?"
-msgstr "You wouln't sabotage yourself, would you ?"
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "You wouldn't sabotage yourself, would you ?"
 
 #: cogs/shop.py:379
 msgid ""
@@ -993,7 +993,7 @@ msgstr ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
 "it back for free (check when with `!freetime`)"
 
-#: cogs/helpers/ducks.py:92 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 
@@ -1515,7 +1515,7 @@ msgstr ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
 
-#: cogs/helpers/ducks.py:95
+#: cogs/helpers/ducks.py:96
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1523,48 +1523,48 @@ msgstr ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 
-#: cogs/helpers/ducks.py:106
+#: cogs/helpers/ducks.py:107
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:110
+#: cogs/helpers/ducks.py:111
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:180
+#: cogs/helpers/ducks.py:179
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
+
+#: cogs/helpers/ducks.py:214
+msgid ""
+":heart: You try to hug the duck, but he knows you killed his brother, so he "
+"flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: You try to hug the duck, but he knows you killed his brother, so he "
+"flew away from you, back in the pond! [-2 exp]"
+
+#: cogs/helpers/ducks.py:216
+msgid ""
+":heart: You try to hug the duck, but he saw the weapon you hid behind your "
+"back, and flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: You try to hug the duck, but he saw the weapon you hid behind your "
+"back, and flew away from you, back in the pond! [-2 exp]"
 
 #: cogs/helpers/ducks.py:225
 msgid ""
-":heart: You try to hug the duck, but he knows you killed his brother, so he "
-"flew away from you, back in the pond! [-2 exp]"
-msgstr ""
-":heart: You try to hug the duck, but he knows you killed his brother, so he "
-"flew away from you, back in the pond! [-2 exp]"
-
-#: cogs/helpers/ducks.py:227
-msgid ""
-":heart: You try to hug the duck, but he saw the weapon you hid behind your "
-"back, and flew away from you, back in the pond! [-2 exp]"
-msgstr ""
-":heart: You try to hug the duck, but he saw the weapon you hid behind your "
-"back, and flew away from you, back in the pond! [-2 exp]"
-
-#: cogs/helpers/ducks.py:236
-msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
 "{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
@@ -1575,7 +1575,7 @@ msgstr ""
 "{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
 "{exp}"
 
-#: cogs/helpers/ducks.py:244
+#: cogs/helpers/ducks.py:233
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1583,13 +1583,13 @@ msgstr ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:246
+#: cogs/helpers/ducks.py:235
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 
-#: cogs/helpers/ducks.py:414
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1597,11 +1597,11 @@ msgstr ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
 
-#: cogs/helpers/ducks.py:456
+#: cogs/helpers/ducks.py:436
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:475
+#: cogs/helpers/ducks.py:454
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1611,7 +1611,7 @@ msgstr ""
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
 "shouldn't kill babies\\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:489
+#: cogs/helpers/ducks.py:468
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1621,11 +1621,11 @@ msgstr ""
 "now it is really happy! [3 exp]\n"
 "The baby duck left, feeling loved"
 
-#: cogs/helpers/ducks.py:500
+#: cogs/helpers/ducks.py:480
 msgid "**I AM...** Your mother"
 msgstr "**I AM...** Your mother"
 
-#: cogs/helpers/ducks.py:509
+#: cogs/helpers/ducks.py:488
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

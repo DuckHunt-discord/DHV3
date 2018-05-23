@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-18 08:49+0000\n"
+"POT-Creation-Date: 2018-05-19 22:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgstr ""
 
 #: cogs/admin_commands.py:197
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
-msgstr ":ok A configuração {pref} está definida como `{value}` nesta guild."
+msgstr ":ok: A configuração {pref} está definida como `{value}` nesta guild."
 
 #: cogs/admin_commands.py:219
 msgid ""
@@ -656,7 +656,7 @@ msgid ""
 "It's really useful for new players. Use `dh!duckstats` to check your level "
 "and accuracy"
 msgstr ""
-"Isso reduz o risco de interferência em 50% por um dia, por apenas 8 pontos "
+"Isso reduz a chance da arma emperrar em 50% por um dia, por apenas 8 pontos "
 "de exp. É realmente útil para novos jogadores. Use `dh!duckstats` para "
 "chegar seu nível e precisão"
 
@@ -738,7 +738,7 @@ msgid ""
 "being that you're much swagger now. :cool:"
 msgstr ""
 ":money_with_wings: Você comprou novos óculos de sol, o único ponto disso é "
-"que você está muito swag agora :cool:"
+"que você está muito mais swag agora :cool:"
 
 #: cogs/shop.py:278
 msgid ""
@@ -752,7 +752,7 @@ msgstr ""
 msgid ""
 ":money_with_wings: You have new dry clothes on you now. You look beautiful!"
 msgstr ""
-":money_with_wings: Você tem novas roupas secas em você agora. Você está "
+":money_with_wings: Você está vestindo roupas secas agora. Você está "
 "lindo(a)!"
 
 #: cogs/shop.py:296
@@ -831,8 +831,8 @@ msgstr ""
 "caçada."
 
 #: cogs/shop.py:373
-msgid "You wouln't sabotage yourself, would you ?"
-msgstr "Você não sabotaria você mesmo, não é?"
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "Você não sabotaria a si mesmo, certo?"
 
 #: cogs/shop.py:379
 msgid ""
@@ -887,7 +887,7 @@ msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
 msgstr ""
-":money_with_wings: Um pato irá aparecer dentro de 10 minutos nesse canal, "
+":money_with_wings: Um pato irá aparecer dentro de 10 minutos nesse canal "
 "graças ao chamariz de {mention}. Ele(a) comprou por 8 exp!"
 
 #: cogs/shop.py:476
@@ -911,7 +911,7 @@ msgid ""
 "It's wrong, but so funny!"
 msgstr ""
 ":money_with_wings: Você preparou um pato mecânico no canal por 40 exp. é "
-"errado, mas tão engraçado!"
+"errado porém engraçado!"
 
 #: cogs/user_commands.py:62 cogs/user_commands.py:135
 msgid "You don't have a weapon."
@@ -939,7 +939,7 @@ msgid ""
 "{chargeurs_actuels}/{chargeurs_max}"
 msgstr ""
 "{greet} | Munição na arma: {balles_actuelles}/{balles_max} | Pentes "
-"restantes: {chargeurs_actuel}/{chargeurs_max}"
+"restantes: {chargeurs_actuels}/{chargeurs_max}"
 
 #: cogs/user_commands.py:128
 msgid ""
@@ -954,7 +954,7 @@ msgstr "Sua arma está emperrada, ela deve ser recarregada para destrava-lá."
 
 #: cogs/user_commands.py:148
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
-msgstr "Sua arma está sabotada, agradeça {assaillant} por essa péssima piada."
+msgstr "Sua arma foi sabotada, agradeça {assaillant} por essa péssima piada."
 
 #: cogs/user_commands.py:158
 msgid ""
@@ -1010,7 +1010,7 @@ msgstr ""
 "Você pode recuperar sua arma na loja (`dh!shop 5`) ou esperar até recuperá-"
 "la de graça (verificar quando com `!freetime`)"
 
-#: cogs/helpers/ducks.py:92 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW**   Você errou o pato! [errou: -1 xp]"
 
@@ -1068,7 +1068,7 @@ msgstr "O pato se dissipou no espaço tempo. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:64
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "O pato saiu de tanto tédio. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "O pato se entediou e partiu. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:64
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1076,7 +1076,7 @@ msgstr "O pato não quer ser baleado. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:64
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "O pato aproximou-se da barraca de limonada. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "O pato foi comprar limonada. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:68
 msgid "a stuffed duck."
@@ -1299,7 +1299,7 @@ msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them !"
 msgstr ""
-"Um florista abriu na cidade, e agora você pode achar trevo de 4 folhas "
+"Um florista abriu na cidade, e agora você pode achar trevos de 4 folhas "
 "melhores. Vá conferir!"
 
 #: cogs/helpers/config.py:187
@@ -1408,7 +1408,7 @@ msgstr "decepador de patos"
 
 #: cogs/helpers/config.py:385
 msgid "duck decorticator"
-msgstr "decotador de patos"
+msgstr "decorticador de patos"
 
 #: cogs/helpers/config.py:393
 msgid "duck fragger"
@@ -1534,31 +1534,31 @@ msgstr ""
 ":warning: Ocorreu um erro ao enviar o embed, por favor verifique se o bot "
 "tem a permissão `embed_links`ativa e tente novamente!"
 
-#: cogs/helpers/ducks.py:95
+#: cogs/helpers/ducks.py:96
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr ""
-"**FLAPP** Assustado com tantos barulhos, o pato fugiu! PARABÉNS! [errou: -1 "
+"**FLAPP** Assustado com tantos barulhos o pato fugiu! PARABÉNS! [errou: -1 "
 "xp]"
 
-#: cogs/helpers/ducks.py:106
+#: cogs/helpers/ducks.py:107
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:110
+#: cogs/helpers/ducks.py:111
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:180
+#: cogs/helpers/ducks.py:179
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1566,7 +1566,7 @@ msgstr ""
 "Essa passou perto, você quase matou o pato, mas o outro caçador pegou ele "
 "primeiro! [missed: -1 xp]"
 
-#: cogs/helpers/ducks.py:225
+#: cogs/helpers/ducks.py:214
 msgid ""
 ":heart: You try to hug the duck, but he knows you killed his brother, so he "
 "flew away from you, back in the pond! [-2 exp]"
@@ -1574,15 +1574,15 @@ msgstr ""
 ":heart: Você tenta abraçar o pato, mas ele sabe que você matou o irmão dele, "
 "então ele voou para longe de você, de volta à lagoa! [-2 exp]"
 
-#: cogs/helpers/ducks.py:227
+#: cogs/helpers/ducks.py:216
 msgid ""
 ":heart: You try to hug the duck, but he saw the weapon you hid behind your "
 "back, and flew away from you, back in the pond! [-2 exp]"
 msgstr ""
 ":hearth: Você tenta abraçar o pato, mas ele viu a arma que você escondeu nas "
-"suas costas, e voou para longe de você, de volta para à lagoa! [-2 exp]"
+"suas costas, e voou para longe de volta à lagoa! [-2 exp]"
 
-#: cogs/helpers/ducks.py:236
+#: cogs/helpers/ducks.py:225
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1591,24 +1591,25 @@ msgid ""
 msgstr ""
 ":skull_crossbones: **{onomatopoeia}**   Você matou o pato em {time} "
 "segundos, agora você está com um total de {total} patos (dos quais "
-"{supercanards} eram super-patos) mortos em #{channel}.   \\_X< *COUAC* {exp}"
+"{supercanards} eram super-patos) mortos em #{channel}.   \\_X<  *COUAC* "
+"{exp}"
 
-#: cogs/helpers/ducks.py:244
+#: cogs/helpers/ducks.py:233
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 msgstr ""
-":gun: O pato sobreviveu, tenta novamente! *SUPER PATO DETECTADO* [vida: -"
+":gun: O pato sobreviveu, tente novamente! *SUPER PATO DETECTADO* [vida: -"
 "{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:246
+#: cogs/helpers/ducks.py:235
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
-":gun: O pato sobreviveu, tenta novamente! *SUPER PATO DETECTADO* [vida: -"
+":gun: O pato sobreviveu, tente novamente! *SUPER PATO DETECTADO* [vida: -"
 "{vie}]"
 
-#: cogs/helpers/ducks.py:414
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1616,21 +1617,21 @@ msgstr ""
 "Você foi enganado para matar um pato mecânico por {user_mention}. Isso "
 "obviamente não vai funcionar, e você perdeu 1 exp por errar o tiro"
 
-#: cogs/helpers/ducks.py:456
+#: cogs/helpers/ducks.py:436
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "O pato bebê saiu procurando por um descando ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "O pato bebê saiu procurando por um descanso ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:475
+#: cogs/helpers/ducks.py:454
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
 "shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
 ":skull_crossbones: **{onomatopoeia}**   Você matou o pato bebê em {time} "
-"segundos, e você não deveria ter feito isso! Você irá perder algum exp, "
-"porque você não deveria matar bebês \\_X< *COUAC* {exp}"
+"segundos porém não deveria ter feito isso! Você irá perder algum exp pois "
+"não deveria matar bebês \\_X< *COUAC* {exp}"
 
-#: cogs/helpers/ducks.py:489
+#: cogs/helpers/ducks.py:468
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1639,10 +1640,14 @@ msgstr ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**   Você abraçou o pato bebê, e "
 "agora eles está muito feliz! [3 exp]\n"
 
-#: cogs/helpers/ducks.py:509
+#: cogs/helpers/ducks.py:480
+msgid "**I AM...** Your mother"
+msgstr "**EU SOU...** Sua mãe"
+
+#: cogs/helpers/ducks.py:488
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
 msgstr ""
 ":skull_crossbones: **{onomatopoeia}**   Você me matou em {time} segundos, "
-"mas você não ira matar meus filhos! \\_X< *COUAC*  {exp}"
+"mas você não vai matar meus filhos! \\_X< *COUAC*  {exp}"

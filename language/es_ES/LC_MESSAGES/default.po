@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-18 08:49+0000\n"
+"POT-Creation-Date: 2018-05-19 22:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,6 +43,10 @@ msgstr ""
 "Este comando es exclusivo para los dueños del bot. Si piensas que es un "
 "error, por favor contacta a mi dueño en el Servidor de Soporte de DuckHunt "
 "(escribe `dh!help`)."
+
+#: bot.py:167
+msgid "You are on cooldown :(, try again in {seconds}"
+msgstr "Estás con tiempo de enfriamiento :(, inténtalo de nuevo en  {seconds}"
 
 #: bot.py:173
 msgid ":bulb: HINT: "
@@ -189,6 +193,14 @@ msgstr ""
 #: cogs/experience_related_commands.py:45
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: la cantidad exp debe ser positiva."
+
+#: cogs/experience_related_commands.py:49
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+":x: Espera...Que? Estás tratando de mandar Puntos de Experiencia A TI MISMO? "
+"Eso no tiene sentido. "
 
 #: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
@@ -528,44 +540,44 @@ msgid ""
 "Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
 msgstr ""
 "Hey! Configuremos el servidor!\n"
-"Te mostraré los parámetros más usados, y te dejaré cambiarlos si quieres. "
+"Te daré los parámetros más usados, y te dejaré ajustarlos si quieres. "
 "Cualquier comando escrito aquí es opcional, y puedes empezar a jugar ahora "
-"escribiendo `dh!add_channel`.\n"
+"usando `dh!add_channel`.\n"
 "\n"
-"**Antes de empezar, por favor asegurate de saber en qué canal quieres usar "
-"el juego, y actívalo escribiendo en ese canal `dh!add_channel`.**\n"
+"**Antes de empezar, asegúrate de que canal que quieres usar, y actívalo con "
+"`dh!add_channel`.**\n"
 "\n"
 "**1/ Idioma**:\n"
-"\\* Si hablas francés, usa `dh!settings set language fr_FR`\n"
-"\\* Si hablas español, usa `dh!settings set language es_ES`\n"
-"\\* Hablas otro idioma que no aparece aquí? Ayúdanos a traducir DuckHunt! "
-"Encuéntranos en https://discord.gg/2BksEkV.\n"
+"\\* Si hablas Francés, usa `dh!settings set language fr_FR`\n"
+"\\* SI hablas Español, usa `dh!settings set language es_ES`\n"
+"\\* Algún otro idioma que no hemos traducido aún? Ayúdanos a traducir "
+"DuckHunt! Encuéntranos en https://discord.gg/2BksEkV.\n"
 "\n"
 "**2/ Patos por Día**:\n"
-"Este es el número de patos que aparecerán por día. Aparecerán aleatoriamente "
-"durante el día, pero puedes configurar el número de patos que van a aparecer."
+"Este es el número de Patos que aparecerán por día. Aparecen de forma "
+"aleatoria, pero puedes configurar el número de Patos que aparecerán por día.\n"
+"\\* Usa el siguiente comando para ajustarlo, usa `dh!settings set "
+"ducks_per_day XX`, donde `XX` es un número.\n"
+"\\* Para prevenir el abuso, hay un límite que automáticamente será forzado. "
+"Si necesitas subirlo más, contacta a mi dueño en el servidor de soporte.\n"
 "\n"
-"\\* Usa el siguiente comando para configurarlo, usa `dh!settings set "
-"ducks_per_day XX`, donde `XX` es el número.\n"
-"\\* Para prevenir el abuso de este ajuste, hay un límite de patos que "
-"automáticamente es forzado a ese valor si lo sobrepasas. Si necesitas subir "
-"más ese límite, contacta a mi dueño en el servidor de Soporte.\n"
+"**3/ Experiencia por pato asesinado**:\n"
+"Estos son los Puntos de Experiencia ganados por Pato asesinado. Si tu "
+"servidor es muy popular, valdría la pena subir la recompensa un poquito para "
+"que los nuevos cazadores progresen rápidamente.\n"
+"\\* Usa el siguiente comando para ajustarlo, usa `dh!settings set "
+"exp_won_per_duck_killed XX`, donde `XX` es un número.\n"
+"\\* :bulb: Tampoco lo subas tanto, debe haber algo de desafío. 15 Puntos es "
+"un buen comienzo\n"
 "\n"
-"**3/ Exp ganada por Pato Asesinado**:\n"
-"This is the experience won per duck killed. If your server is really "
-"popular, it might be worth it to push it up a little to make new hunters "
-"progress faster.\n"
-"\\* Use the following command to change it, use `dh!settings set "
-"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
-"\\* :bulb: Don't go too high tho, there must be some challenge. 15 is a good "
-"start\n"
+"**4/ Otros Ajustes**:\n"
+"Esto empieza a hacerse largo, así que no entraré en más detalles aquí. "
+"Probablemente tienes todo preparado y puedes empezar el juego escribiendo "
+"`dh!add_channel`.\n"
+"Puedes encontrar más ajustes escribiendo `dh!settings list`\n"
 "\n"
-"**4/ Other settings**:\n"
-"This is starting to be lengthy, so I won't go into further details here. You "
-"are probably all set and can start the game by typing `dh!add_channel`.\n"
-"More settings can be found using `dh!settings list`\n"
-"\n"
-"Gracias por jugar conmigo! <:official_Duck_01:439546719177539584>\n"
+"Gracias por jugar conmigo! \n"
+"<:official_Duck_01:439546719177539584>"
 
 #: cogs/shop.py:42
 msgid ""
@@ -842,8 +854,8 @@ msgstr ""
 "de nuevo."
 
 #: cogs/shop.py:373
-msgid "You wouln't sabotage yourself, would you ?"
-msgstr "No te Sabotearías a ti mismo, o no?"
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "No te sabotearías a ti mismo, no?"
 
 #: cogs/shop.py:379
 msgid ""
@@ -1025,9 +1037,13 @@ msgstr ""
 "te la devuelvan gratis (Ve cuanto queda para la devolución gratis con "
 "`!freetime`)"
 
-#: cogs/helpers/ducks.py:92 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** ¡Fallaste el disparo! [Por fallar: -1 xp]"
+
+#: cogs/user_commands.py:343
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "No hay ningún pato aquí, que planeabas abrazar? un árbol?!"
 
 #: cogs/user_commands.py:362
 msgid "**Current event**"
@@ -1545,7 +1561,7 @@ msgstr ""
 ":warning: Hubo un error al enviar el enlace, comprueba si el bot tiene el "
 "permiso `embed_links` (Insertar Enlaces) y vuelve a intentarlo!"
 
-#: cogs/helpers/ducks.py:95
+#: cogs/helpers/ducks.py:96
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1553,23 +1569,23 @@ msgstr ""
 "**FLAPP** Asustado por tanto ruido, ¡el pato huyó! ¡FELICIDADES! [Por haber "
 "fallado el disparo: -1 xp]"
 
-#: cogs/helpers/ducks.py:106
+#: cogs/helpers/ducks.py:107
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:110
+#: cogs/helpers/ducks.py:111
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/helpers/ducks.py:114
+#: cogs/helpers/ducks.py:115
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:180
+#: cogs/helpers/ducks.py:179
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1577,7 +1593,24 @@ msgstr ""
 "Eso estuvo cerca, casi matas al pato, ¡pero el otro cazador lo consiguió "
 "primero! [Por fallar: -1 xp]"
 
-#: cogs/helpers/ducks.py:236
+#: cogs/helpers/ducks.py:214
+msgid ""
+":heart: You try to hug the duck, but he knows you killed his brother, so he "
+"flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: Intentaste abrazar al pato, pero él sabe que mataste a su hermano, "
+"así que voló lejos de ti, de vuelta al estanque! [-2 Puntos de Experiencia]"
+
+#: cogs/helpers/ducks.py:216
+msgid ""
+":heart: You try to hug the duck, but he saw the weapon you hid behind your "
+"back, and flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: Intentaste abrazar al pato, pero vio el arma que escondiste en tu "
+"espalda, así que voló lejos de ti, de vuelta al estanque! [-2 Puntos de "
+"Experiencia]"
+
+#: cogs/helpers/ducks.py:225
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1589,7 +1622,7 @@ msgstr ""
 "{supercanards} fueron super-patos) asesinados en #{channel}.  \\ _X < * CUAC "
 "* {exp}"
 
-#: cogs/helpers/ducks.py:244
+#: cogs/helpers/ducks.py:233
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1597,14 +1630,14 @@ msgstr ""
 ":gun: El pato sobrevivió, Inténtalo otra vez! *SUPER PATO DETECTADO* [Puntos "
 "de Vida: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:246
+#: cogs/helpers/ducks.py:235
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
 
-#: cogs/helpers/ducks.py:414
+#: cogs/helpers/ducks.py:396
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1613,11 +1646,11 @@ msgstr ""
 "Obviamente el pato es falso, y perdiste 1 punto de experiencia por el tiro "
 "fallado."
 
-#: cogs/helpers/ducks.py:456
+#: cogs/helpers/ducks.py:436
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "El patito se ha ido buscando un lugar para dormir ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:475
+#: cogs/helpers/ducks.py:454
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1627,7 +1660,21 @@ msgstr ""
 "segundos, y no debiste haber hecho esto! Perderás algo de Puntos de "
 "Experiencia, porque no deberías matar patitos\\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:509
+#: cogs/helpers/ducks.py:468
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**  Abrazaste al patito, y ahora "
+"está muy contento! [3 Puntos de Experiencia]\n"
+"El patito se fue, sintiéndose amado"
+
+#: cogs/helpers/ducks.py:480
+msgid "**I AM...** Your mother"
+msgstr "**YO SOY...** Tu madre"
+
+#: cogs/helpers/ducks.py:488
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
