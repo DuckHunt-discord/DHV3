@@ -86,7 +86,6 @@ class Meta:
         await self.bot.hint(ctx=ctx, message=_("A giveback tops up your magazines and gives you your weapon back for free (if confiscated), but it doesn't affect the bullets in your current magazine. "
                                                "If you can, reload beforehand!", language))
 
-
     @commands.command()
     async def ping(self, ctx):
         resp = await ctx.send('Pong! Loading...')

@@ -50,7 +50,7 @@ class SuperAdmin:
     @checks.is_super_admin()
     async def reload_translations(self, ctx):
         """Reload the bot translations"""
-        await self.bot.log(level=1, title="Reloading bot trnaslations", message=f"Translations are beign reloaded", where=ctx)
+        await self.bot.log(level=1, title="Reloading bot trnaslations", message=f"Translations are being reloaded", where=ctx)
         if self.bot.translations.reload():
             await self.bot.send_message(ctx=ctx, message=":ok_hand: Translations reloaded")
         else:

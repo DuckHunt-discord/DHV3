@@ -1,3 +1,4 @@
+import aiohttp
 import time
 from discord.ext import commands
 
@@ -16,7 +17,7 @@ class NotSuperAdmin(commands.CheckFailure):
 
 def is_super_admin():
     async def predicate(ctx):
-        #await ctx.bot.wait_until_ready()
+        # await ctx.bot.wait_until_ready()
         cond = ctx.message.author.id in ctx.bot.admins
         ctx.logger.debug(f"Check for super-admin returned {cond}")
         if cond:
@@ -33,7 +34,7 @@ class NotServerAdmin(commands.CheckFailure):
 
 def is_server_admin():
     async def predicate(ctx):
-        #await ctx.bot.wait_until_ready()
+        # await ctx.bot.wait_until_ready()
         cond = ctx.message.author.id in ctx.bot.admins  # User is super admin
         cond = cond or ctx.message.channel.permissions_for(ctx.message.author).administrator  # User have server administrator permission
         cond = cond or ctx.message.author.id in await ctx.bot.db.get_admins(ctx.guild)  # User is admin as defined in the database
@@ -49,7 +50,7 @@ def is_server_admin():
 
 def is_channel_enabled():
     async def predicate(ctx):
-        #await ctx.bot.wait_until_ready()
+        # await ctx.bot.wait_until_ready()
         cond = await ctx.bot.db.channel_is_enabled(ctx.channel)  # Coroutine
         ctx.logger.debug(f"Check for channel enabled returned {cond}")
         return cond
@@ -59,7 +60,7 @@ def is_channel_enabled():
 
 def had_giveback():
     async def predicate(ctx):
-        #await ctx.bot.wait_until_ready()
+        # await ctx.bot.wait_until_ready()
 
         channel = ctx.message.channel
         player = ctx.message.author
@@ -85,7 +86,7 @@ class NotEnoughExp(commands.CheckFailure):
 
 def have_exp(exp_needed):
     async def predicate(ctx):
-        #await ctx.bot.wait_until_ready()
+        # await ctx.bot.wait_until_ready()
         channel = ctx.message.channel
         player = ctx.message.author
         exp = int(await ctx.bot.db.get_stat(channel, player, "exp"))
@@ -97,5 +98,30 @@ def have_exp(exp_needed):
         else:
             raise NotEnoughExp
 
+    return commands.check(predicate)
+
+
+DISCORD_BOTS_ORG_API = 'https://discordbots.org/api'
+session = aiohttp.ClientSession()
+
+
+class NoVotesOnDBL(commands.CheckFailure):
+    pass
+
+
+def voted_lately():
+    async def predicate(ctx):
+        player = ctx.message.author
+
+        headers = {'authorization': ctx.bot.discordbots_org_key, 'content-type': 'application/json'}
+
+        url = '{0}/bots/{1.user.id}/check?userId={2.id}'.format(DISCORD_BOTS_ORG_API, ctx.bot, player)
+        async with session.get(url, headers=headers) as resp:
+            cond = bool((await resp.json())['voted'])
+
+        if cond:
+            return True
+        else:
+            raise NoVotesOnDBL
 
     return commands.check(predicate)

@@ -106,16 +106,16 @@ class DuckHunt(commands.AutoShardedBot):
         await self.send_message(where=self.get_channel(self.log_channel_id), embed=e, mention=False, can_pm=False)
 
     async def on_guild_join(self, guild):
-        e = discord.Embed(colour=0x53dda4, title='New Guild') # green colour
+        e = discord.Embed(colour=0x53dda4, title='New Guild')  # green colour
         await self.log_guild_stats(e, guild)
 
-       # await self.log(level=6, title="Joined Guild", message=f"Yay! A new server! Current guild total : {len(self.guilds)}", where=guild)
+    # await self.log(level=6, title="Joined Guild", message=f"Yay! A new server! Current guild total : {len(self.guilds)}", where=guild)
 
     async def on_guild_remove(self, guild):
-        e = discord.Embed(colour=0xdd5f53, title='Left Guild') # red colour
+        e = discord.Embed(colour=0xdd5f53, title='Left Guild')  # red colour
         await self.log_guild_stats(e, guild)
 
-        #await self.log(level=6, title="Left Guild", message=f"Goodbye! Current guild total : {len(self.guilds)}", where=guild)
+        # await self.log(level=6, title="Left Guild", message=f"Goodbye! Current guild total : {len(self.guilds)}", where=guild)
         logger.info(f"Guild removed (from discord) : {guild} :(!")
 
         for channel in guild.channels:
@@ -127,14 +127,11 @@ class DuckHunt(commands.AutoShardedBot):
 
         logger.info(f"After removing ducks, we have {len(bot.ducks_spawned)} ducks")
 
-
     async def on_guild_channel_delete(self, channel):
         logger.info(f"Channel removed (from discord) : {channel} :(!")
 
         self.ducks_planning.pop(channel, None)
         self.ducks_spawned = [duck for duck in self.ducks_spawned if duck.channel != channel]
-
-
 
     async def on_command_error(self, context, exception):
         _ = self._;
@@ -143,7 +140,8 @@ class DuckHunt(commands.AutoShardedBot):
             return
 
         elif isinstance(exception, discord.ext.commands.errors.MissingRequiredArgument):
-            await self.send_message(ctx=context, message=_(":x: A required argument is missing."))  # Here is the command documentation : \n```\n", language) + context.command.__doc__ + "\n```")
+            await self.send_message(ctx=context, message=_(":x: A required argument is missing.", language))  # Here is the command documentation : \n```\n", language) + context.command.__doc__ +
+            # "\n```")
             return
         elif isinstance(exception, checks.NotEnoughExp):
             await self.send_message(ctx=context, message=_(":x: You don't have enough exp for this", language))
@@ -154,6 +152,12 @@ class DuckHunt(commands.AutoShardedBot):
         elif isinstance(exception, checks.NotSuperAdmin):
             await self.send_message(ctx=context, message=_(":x: You are not a super admin.", language))
             await self.hint(ctx=context, message=_("This command is reserved for the bot owners. "
+                                                   "If you think this is an error, please contact my owner at the DuckHunt Support Server (see `dh!help`).", language))
+            return
+        elif isinstance(exception, checks.NoVotesOnDBL):
+            await self.send_message(ctx=context, message=_(":x: You haven't voted for DuckHunt on DiscordBotList for a while.", language))
+            await self.hint(ctx=context, message=_("Support the bot to use this command by voting at <https://discordbots.org/bot/duckhunt>. "
+                                                   "Be aware that the votes can take a minute to be registered by Duckhunt"
                                                    "If you think this is an error, please contact my owner at the DuckHunt Support Server (see `dh!help`).", language))
             return
         elif isinstance(exception, discord.ext.commands.errors.CheckFailure):
@@ -173,7 +177,7 @@ class DuckHunt(commands.AutoShardedBot):
         hint_start = ctx.bot._(":bulb: HINT: ")
         await self.send_message(ctx, message=hint_start + message)
 
-    async def log(self, title:str, message:str, where:Union[CustomContext, discord.TextChannel, discord.Guild, None], level:int):
+    async def log(self, title: str, message: str, where: Union[CustomContext, discord.TextChannel, discord.Guild, None], level: int):
         if isinstance(where, CustomContext):
             footer = f"On {where.channel.id} (#{where.channel.name}), by {where.author.id} ({where.author.name}#{where.author.discriminator})"
         elif isinstance(where, discord.TextChannel):
@@ -202,12 +206,6 @@ class DuckHunt(commands.AutoShardedBot):
 
         await self.send_message(where=self.get_channel(self.log_channel_id), embed=embed, mention=False, can_pm=False)
 
-
-
-
-
-
-
     async def send_message(self, ctx: context.CustomContext = None, from_: discord.Member = None, where: discord.TextChannel = None, message: str = "", embed: discord.Embed = None,
                            can_pm: bool = True, force_pm: bool = False, mention=True, try_: int = 1, return_message: bool = False):
 
@@ -234,7 +232,7 @@ class DuckHunt(commands.AutoShardedBot):
                         to_send += "```"
                         line = "```" + line
 
-                    await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=True) #
+                    await self.send_message(ctx=ctx, from_=from_, where=where, message=to_send, embed=embed, can_pm=can_pm, force_pm=force_pm, mention=False, try_=try_, return_message=True)  #
                     # Return message at true to ensure order
                     to_send = line
 
@@ -336,18 +334,8 @@ logger.debug("Loading cogs : ")
 ###############   ####
 ##############   #####
 
-cogs = ['cogs.admin_commands',
-        'cogs.analytics',
-        'cogs.experience_related_commands',
-        'cogs.helpers.database',
-        'cogs.meta',
-        'cogs.scores',
-        'cogs.setup_wizzard',
-        'cogs.shop',
-        'cogs.superadmin_commands',
-        'cogs.user_commands',
-        'cogs.evals',
-        'cogs.api'  # This must be the last to run, comment if you don't need it
+cogs = ['cogs.admin_commands', 'cogs.analytics', 'cogs.experience_related_commands', 'cogs.helpers.database', 'cogs.meta', 'cogs.scores', 'cogs.setup_wizzard', 'cogs.shop', 'cogs.superadmin_commands',
+        'cogs.user_commands', 'cogs.evals', 'cogs.api'  # This must be the last to run, comment if you don't need it
         ]
 
 for extension in cogs:

@@ -36,6 +36,12 @@ class Carbonitex:
         async with self.session.post(url, data=payload, headers=headers) as resp:
             self.bot.logger.info('Bots_discord_pw statistics returned {0.status} for {1}'.format(resp, payload))
 
+
+        payload = json.dumps({
+            'server_count': len(self.bot.guilds),
+            'shard_count': len(self.bot.shards)
+        })
+
         ## DISCORD BOTS ORG ##
         headers = {
             'authorization': self.bot.discordbots_org_key,
