@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-19 22:23+0000\n"
+"POT-Creation-Date: 2018-05-23 09:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,7 +156,7 @@ msgstr ":x: Valor incorreto."
 
 #: cogs/admin_commands.py:244 cogs/admin_commands.py:269
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
-msgstr ":ok A configuração {pref} foi definida como `{value}` nesta guild."
+msgstr ":ok: A configuração {pref} foi definida como `{value}` nesta guild."
 
 #: cogs/admin_commands.py:296
 msgid ""
