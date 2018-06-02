@@ -19,7 +19,7 @@ $moderators = array(
     296573428293697536, // @⚜HappyWizzz⚜#5928
 );
 
-$translators   = array(
+$translators                    = array(
     193431551034392576, // barnabinnyu#9928
     211888559735570433, // pun1sher#1165
     300247046856900629, // Wolterhon#3938
@@ -43,10 +43,10 @@ $translators   = array(
     297391115890589699, // MonsterLava72#0001
 
 );
-$bug_hunters   = array(
+$bug_hunters                    = array(
     251996890369884161, // Subtleknifewielder#1927
 );
-$proficients   = array(
+$proficients                    = array(
     174670292994621440, // sholan#0922
     329940268457525249, // Deathclaw#7898
     251996890369884161, // Subtleknifewielder#1927
@@ -55,17 +55,26 @@ $proficients   = array(
     135446225565515776, // Taoshi#3480
     191602541534904321, // Volcanard#5926
 );
-$retired_staff = array(
+$retired_staff                  = array(
     94822638991454208,  // Diagamma#7456
 
 );
-$partners      = array(
+$partners                       = array(
     120193744707256320, // Dr Zachary Smith#9260
 );
-$donators      = array(
+$donators                       = array(
     296573428293697536, // ⚜HappyWizzz⚜#5928
     231196637874225152, // Dany#7189
     304581891590324225, // Will#0929
+);
+$enigma_event_winners_june_2018 = array(
+    276412993972207626, // Bigael#4025
+    248904069840764938, // boshaus#9999
+    132695220297924608, // BanditB17#2110
+    134119746118352906, // DeafieGamer#0666
+    135446225565515776, // Taoshi#3480
+    343891647785992193, // Missiwiss#8058
+    325434800192225290, // pokki#1490
 );
 
 
@@ -118,16 +127,17 @@ if (isset($_GET['cid'])) {
         $player_stats['channel_id']   = $channel_id;
 
         $player_stats['badges'] = array(
-            "banned"        => $player_stats['banned'],
-            "no_weapon"     => (time() - $player_stats['confiscated']) < 0,
-            "admin"         => in_array($player_stats['id_'], $admins),
-            "moderator"     => in_array($player_stats['id_'], $moderators),
-            "translator"    => in_array($player_stats['id_'], $translators),
-            "bug_hunter"    => in_array($player_stats['id_'], $bug_hunters),
-            "proficient"    => in_array($player_stats['id_'], $proficients),
-            "retired_staff" => in_array($player_stats['id_'], $retired_staff),
-            "partner"       => in_array($player_stats['id_'], $partners),
-            "donator"       => in_array($player_stats['id_'], $donators),
+            "banned"                        => $player_stats['banned'],
+            "no_weapon"                     => (time() - $player_stats['confiscated']) < 0,
+            "admin"                         => in_array($player_stats['id_'], $admins),
+            "moderator"                     => in_array($player_stats['id_'], $moderators),
+            "translator"                    => in_array($player_stats['id_'], $translators),
+            "bug_hunter"                    => in_array($player_stats['id_'], $bug_hunters),
+            "proficient"                    => in_array($player_stats['id_'], $proficients),
+            "retired_staff"                 => in_array($player_stats['id_'], $retired_staff),
+            "partner"                       => in_array($player_stats['id_'], $partners),
+            "donator"                       => in_array($player_stats['id_'], $donators),
+            "enigma_event_winner_june_2018" => in_array($player_stats['id_'], $enigma_event_winners_june_2018),
         );
 
         $player_stats['achievements'] = array(
