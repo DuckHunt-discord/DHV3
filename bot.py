@@ -12,13 +12,10 @@
 import logging
 import traceback
 
-import sys
-
 import time
 from typing import Union
 
 import cogs.helpers.aux_inits as inits
-import textwrap
 from cogs.helpers import checks
 from cogs.helpers.context import CustomContext
 

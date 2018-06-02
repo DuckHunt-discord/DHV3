@@ -306,6 +306,9 @@ class SuperDuck(BaseDuck):
         corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
+        if self.channel.id == 449726041548783636:  # Duck Enigma
+            cri = _(random.choice(self.bot.canards_cri + ["I Really Wanna See You Now", "I Really Wanna See You Now", "I Really Wanna See You Now", "I Really Wanna See You Now"]), language=language)
+
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
 

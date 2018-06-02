@@ -104,11 +104,13 @@ def config(bot):
     bot.blacklisted_users = [
         # 2018-03-01
         # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
-        377585801258598410,
+        # > Grown up since
+        # 377585801258598410,
 
         # 2018-03-01
         # Admin on the previous guy server
-        293533150204657675,
+        # > Was VIPER's fault (the previous guy, unbanning too)
+        # 293533150204657675,
 
         # 2018-03-01
         # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours.
