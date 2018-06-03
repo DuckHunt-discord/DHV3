@@ -155,7 +155,7 @@ class User:
         # 5/ Do he have bullets ?
         bullets = await get_stat(channel, author, "balles")
         if bullets <= 0:  # No more bullets in charger
-            await self.bot.send_message(ctx=ctx, message=_("** CHARGER EMPTY ** | "
+            await self.bot.send_message(ctx=ctx, message=_("** MAGAZINE EMPTY ** | "
                                                            "Ammunition in the weapon: {balles_actuelles} / {balles_max} | "
                                                            "Magazines remaining: {chargeurs_actuels} / {chargeurs_max}", language).format(
                 **{"balles_actuelles": bullets, "balles_max": level["balles"], "chargeurs_actuels": await get_stat(channel, author, "chargeurs"), "chargeurs_max": level["chargeurs"]}))
