@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 #: cogs/shop.py:115
@@ -201,87 +201,87 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "ribu."
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:211
 msgid "public danger"
 msgstr "Opća opasnost"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "Turist"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:227
 msgid "noob"
 msgstr "Noob"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:235
 msgid "trainee"
 msgstr "Početnik"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:243
 msgid "duck misser"
 msgstr "Promašivač patki"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:251
 msgid "member of the Comitee Against Ducks"
 msgstr "Član Društva Protiv Pataka"
 
-#: cogs/helpers/config.py:257
+#: cogs/helpers/config.py:259
 msgid "duck hater"
 msgstr "Mrzitelj pataka"
 
-#: cogs/helpers/config.py:281
+#: cogs/helpers/config.py:283
 msgid "duck plucker"
 msgstr "Rasčerupatelj pataka"
 
-#: cogs/helpers/config.py:289
+#: cogs/helpers/config.py:291
 msgid "hunter"
 msgstr "Lovac"
 
-#: cogs/helpers/config.py:313
+#: cogs/helpers/config.py:315
 msgid "duck chewer"
 msgstr "Patke = žvake"
 
-#: cogs/helpers/config.py:321
+#: cogs/helpers/config.py:323
 msgid "duck eater"
 msgstr "Gladan za patkama"
 
-#: cogs/helpers/config.py:345
+#: cogs/helpers/config.py:347
 msgid "duck demolisher"
 msgstr "Uništavatelj pataka"
 
-#: cogs/helpers/config.py:353
+#: cogs/helpers/config.py:355
 msgid "duck killer"
 msgstr "Ubojica pataka"
 
-#: cogs/helpers/config.py:369
+#: cogs/helpers/config.py:371
 msgid "predator"
 msgstr "Predator"
 
-#: cogs/helpers/config.py:417
+#: cogs/helpers/config.py:419
 msgid "duck breaker"
 msgstr "Razbijač pataka"
 
-#: cogs/helpers/config.py:449
+#: cogs/helpers/config.py:451
 msgid "ducks terror"
 msgstr "Pačji teror"
 
-#: cogs/helpers/config.py:457
+#: cogs/helpers/config.py:459
 msgid "duck exploder"
 msgstr "Pačji pirotehničar"
 
-#: cogs/helpers/config.py:513
+#: cogs/helpers/config.py:515
 msgid "serial duck killer"
 msgstr "Serijski ubojica pataka"
 
-#: cogs/helpers/config.py:521
+#: cogs/helpers/config.py:523
 msgid "duck genocider"
 msgstr "Genocid pataka"
 
-#: cogs/helpers/config.py:529
+#: cogs/helpers/config.py:531
 msgid "unemployed due to extinction of the duck specie"
 msgstr "Nezaposlen zbog nestanka pačje vrste"
 
-#: cogs/helpers/config.py:545
+#: cogs/helpers/config.py:547
 msgid "old noob"
 msgstr "Stari noob"
 

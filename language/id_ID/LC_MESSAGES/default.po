@@ -8,32 +8,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:146
+#: bot.py:140
 msgid ":x: A required argument is missing."
 msgstr ": x: Sebuah argumen yang diperlukan tidak ada."
 
-#: bot.py:149
+#: bot.py:144
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Kamu tidak punya cukup exp untuk ini"
 
-#: bot.py:152
+#: bot.py:147
 msgid ":x: You are not a server admin"
 msgstr ":x: Kamu bukan admin server"
 
-#: bot.py:155
+#: bot.py:150
 msgid ":x: You are not a super admin."
 msgstr ":x: Kamu bukan admin super."
 
-#: bot.py:156
+#: bot.py:151
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,7 +42,7 @@ msgstr ""
 "kesalahan, harap hubungi pemilik saya di Server Dukungan DuckHunt (lihat "
 "'dh!help`)."
 
-#: bot.py:173
+#: bot.py:174
 msgid ":bulb: HINT: "
 msgstr ":bulb: PETUNJUK:"
 
@@ -221,7 +221,7 @@ msgstr ""
 "(bila disita), tapi itu tidak mempengaruhi peluru di magasenmu sekarang. "
 "Kalau bisa, isi ulang sebelum beraksi!"
 
-#: cogs/meta.py:99
+#: cogs/meta.py:98
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Kamu menngunakan sejumlah shard {shard} dari {total} shard total."
 
@@ -754,14 +754,6 @@ msgstr "Senjatamu macet, harus diisi ulang untuk melancarkannya."
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Senjatamu disabotase, syukur {assaillant} atas kelakar buruknya."
 
-#: cogs/user_commands.py:158
-msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
-"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
-msgstr ""
-"** PENGOKANG KOSONG ** | Amunisi di senjata: {balles_actualles} / "
-"{balles_max) | Sisa magasen: {chargeurs_actuels} / {chargeurs_max}"
-
 #: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Senjatamu macet, isi ulang untuk melancarkannya."
@@ -782,7 +774,7 @@ msgstr ""
 "Sayang kamu meleset, tapi sebenarnya kamu membidik apa? Di sini tidak ada "
 "bebek... [gagal: -1 xp] [tembakan liar: -1 xp]"
 
-#: cogs/user_commands.py:295
+#: cogs/user_commands.py:301
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -792,7 +784,7 @@ msgstr ""
 "mungkin kamu harus memutar sedikit senjatamu sebelum menembak? [gagal: -1 "
 "xp] [kecelakaan berburu: -2 xp] [**senjata disita**]"
 
-#: cogs/user_commands.py:300
+#: cogs/user_commands.py:306
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -800,7 +792,7 @@ msgstr ""
 "**DUAR**   Tembakanmu meleset... dan menembak {player}! [gagal: -1 xp] "
 "[kecelakaan berburu: -2 xp] [**senjata disita**]"
 
-#: cogs/user_commands.py:303
+#: cogs/user_commands.py:311
 msgid ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
 "it back for free (check when with `!freetime`)"
@@ -808,7 +800,7 @@ msgstr ""
 "Kamu bisa memulihkan senjatamu di gerai (`dh!shop 5`) atau tunggu sampai "
 "kamu mendapatkannya kembali secara gratis (periksa dengan `!freetime`)"
 
-#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**TUUING**    Tembakanmu meleset! [gagal: -1 xp]"
 
@@ -1016,27 +1008,27 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "seekor ikan."
 
-#: cogs/helpers/config.py:146
+#: cogs/helpers/config.py:148
 msgid "Everything is calm"
 msgstr "Semuanya tenang"
 
-#: cogs/helpers/config.py:147
+#: cogs/helpers/config.py:149
 msgid "Nothing is happening right now."
 msgstr "Saat ini tidak terjadi apapun."
 
-#: cogs/helpers/config.py:151
+#: cogs/helpers/config.py:153
 msgid "Ducks are migrating"
 msgstr "Bebek-bebek bermigrasi."
 
-#: cogs/helpers/config.py:152
+#: cogs/helpers/config.py:154
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Bersiaplah menemukan lebih banyak bebek di jam berikutnya."
 
-#: cogs/helpers/config.py:157
+#: cogs/helpers/config.py:159
 msgid "Foggy weather"
 msgstr "Cuaca berkabut"
 
-#: cogs/helpers/config.py:158
+#: cogs/helpers/config.py:160
 msgid ""
 "It's harder to see ducks killed. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1044,11 +1036,11 @@ msgstr ""
 "Sulit melihat bebeknya tertembak mati. Memerlukan beberapa detik untuk "
 "mengetahui kamu meleset atau tidak."
 
-#: cogs/helpers/config.py:163
+#: cogs/helpers/config.py:165
 msgid "Steroids in the lake"
 msgstr "Steroid di danau"
 
-#: cogs/helpers/config.py:164
+#: cogs/helpers/config.py:166
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1058,21 +1050,21 @@ msgstr ""
 "bermutasi, dan kamu akan menemukan lebih banyak bebek super. Namun, berhati-"
 "hatilah, dan jangan minum airnya."
 
-#: cogs/helpers/config.py:169
+#: cogs/helpers/config.py:171
 msgid "Safety class canceled"
 msgstr "Kelas keselamatan dibatalkan."
 
-#: cogs/helpers/config.py:170
+#: cogs/helpers/config.py:172
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
 "Kelas keselamatan dibatalkan, awas jangan sampai menembak para pemburu yang "
 "lain."
 
-#: cogs/helpers/config.py:175
+#: cogs/helpers/config.py:177
 msgid "Connexion problems"
 msgstr "Masalah sambungan"
 
-#: cogs/helpers/config.py:176
+#: cogs/helpers/config.py:178
 msgid ""
 "Ducks cant use the computer due to connexion problems, and there will be "
 "less of them until it's repaired"
@@ -1080,11 +1072,11 @@ msgstr ""
 "Bebek tidak bisa menggunakan komputer karena masalah sambungani, dan hanya "
 "akan ada sedikit sampai sambungan diperbaiki."
 
-#: cogs/helpers/config.py:181
+#: cogs/helpers/config.py:183
 msgid "A new florist in town"
 msgstr "Sebuah gerai tanaman di kota"
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:184
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them !"
@@ -1092,56 +1084,56 @@ msgstr ""
 "Sebuah gerai tanaman sudah buka di kota, dan sekarang kamu bisa mendapatkan "
 "semanggi helai-4. Coba lihatlah!"
 
-#: cogs/helpers/config.py:187
+#: cogs/helpers/config.py:189
 msgid "Mega-ducks"
 msgstr "Bebek-mega"
 
-#: cogs/helpers/config.py:188
+#: cogs/helpers/config.py:190
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr ""
 "Seseorang sudah memompa bebek-super, dan sekarang menjadi LEBIH BESAR!"
 
-#: cogs/helpers/config.py:193
+#: cogs/helpers/config.py:195
 msgid "Windy weather"
 msgstr "Cuaca berangin"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:196
 msgid "Bullets are deflected by some strong wind"
 msgstr "Peluru dikelokkan oleh angin yang kuat"
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:211
 msgid "public danger"
 msgstr "ancaman publik"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "pelancong"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:227
 msgid "noob"
 msgstr "noob"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:235
 msgid "trainee"
 msgstr "magang"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:243
 msgid "duck misser"
 msgstr "penembak gagal"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:251
 msgid "member of the Comitee Against Ducks"
 msgstr "anggota Comitee Against Ducks"
 
-#: cogs/helpers/config.py:265
+#: cogs/helpers/config.py:267
 msgid "duck pest"
 msgstr "hama bebek"
 
-#: cogs/helpers/config.py:289
+#: cogs/helpers/config.py:291
 msgid "hunter"
 msgstr "pemburu"
 
-#: cogs/helpers/config.py:529
+#: cogs/helpers/config.py:531
 msgid "unemployed due to extinction of the duck specie"
 msgstr "Menganggur karena punahnya jenis bebek"
 

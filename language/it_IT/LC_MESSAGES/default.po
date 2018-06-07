@@ -8,32 +8,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:146
+#: bot.py:140
 msgid ":x: A required argument is missing."
 msgstr ":x: manca un argomento obbligatorio."
 
-#: bot.py:149
+#: bot.py:144
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Non hai abbastanza exp"
 
-#: bot.py:152
+#: bot.py:147
 msgid ":x: You are not a server admin"
 msgstr ":x: Non sei un amministratore del server"
 
-#: bot.py:155
+#: bot.py:150
 msgid ":x: You are not a super admin."
 msgstr ":x: Non sei un super admin"
 
-#: bot.py:156
+#: bot.py:151
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "tratti di un errore, perfavore, contatta il mio proprietario sul server di "
 "supporto DuckHunt (utilizza `dh!help`)."
 
-#: bot.py:167
+#: bot.py:168
 msgid "You are on cooldown :(, try again in {seconds}"
 msgstr "Sei in cooldown :(, riprova tra {seconds}"
 
-#: bot.py:173
+#: bot.py:174
 msgid ":bulb: HINT: "
 msgstr ":bulb: INDIZIO:"
 
@@ -274,7 +274,7 @@ msgstr ""
 "confiscata) ma non influenza il numero di proiettili all’interno del "
 "caricatore in uso. se puoi, ricarica prima"
 
-#: cogs/meta.py:99
+#: cogs/meta.py:98
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Stai usando {shard} shards su un totale di {total} shards"
 

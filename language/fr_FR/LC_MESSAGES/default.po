@@ -8,32 +8,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:146
+#: bot.py:140
 msgid ":x: A required argument is missing."
 msgstr ":x: Il manque un argument requis."
 
-#: bot.py:149
+#: bot.py:144
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Vous n'avez pas assez d'exp pour ça."
 
-#: bot.py:152
+#: bot.py:147
 msgid ":x: You are not a server admin"
 msgstr ":x: Vous n'êtes pas administrateur du serveur."
 
-#: bot.py:155
+#: bot.py:150
 msgid ":x: You are not a super admin."
 msgstr ":x: Vous n'êtes pas un super administrateur."
 
-#: bot.py:156
+#: bot.py:151
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,7 +42,30 @@ msgstr ""
 "s'agit d'une erreur, veuillez contacter mon administrateur sur le serveur de "
 "support DuckHunt (le lien est dans `dh!help`)"
 
-#: bot.py:173
+#: bot.py:155
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ""
+":x: Vous n'avez pas voté pour DuckHunt sur DiscordBotList depuis quelques "
+"temps."
+
+#: bot.py:156
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Aidez le bot pour utiliser cette commande en votant sur <https: //"
+"discordbots.org/bot/duckhunt>. Sachez que les votes peuvent prendre une "
+"minute pour être enregistré par Duckhunt. Si vous pensez qu'il s'agit d'une "
+"erreur, veuillez contacter mon propriétaire sur le serveur de support "
+"DuckHunt (voir `dh! Help`)."
+
+#: bot.py:168
+msgid "You are on cooldown :(, try again in {seconds}"
+msgstr "Attendez encore {seconds} secondes"
+
+#: bot.py:174
 msgid ":bulb: HINT: "
 msgstr ":bulb: ASTUCE :"
 
@@ -133,6 +156,14 @@ msgstr ""
 "êtes sur un serveur VIP. Veuillez ne pas en abuser :). Pour information, la "
 "limite aurait été fixée à `{max}` canards par jour."
 
+#: cogs/admin_commands.py:229
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050> Autorisé à définir le statut "
+"VIP!"
+
 #: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
@@ -176,6 +207,14 @@ msgstr ""
 #: cogs/experience_related_commands.py:45
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Le montant d'EXP doit être positif."
+
+#: cogs/experience_related_commands.py:49
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+":x: Attends ... Quoi? Est-ce que vous essayez de VOUS envoyer de "
+"l’expérience ? Ça n'a pas de sens."
 
 #: cogs/experience_related_commands.py:68
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
@@ -261,7 +300,7 @@ msgstr ""
 "mais ne rajoute pas de balles dans le chargeur actuel. Si vous le pouvez, "
 "rechargez avant!"
 
-#: cogs/meta.py:99
+#: cogs/meta.py:98
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Vous êtes sur la partition n°{shard}/{total}"
 
@@ -280,6 +319,19 @@ msgid ""
 msgstr ""
 "Les Duckstats sont maintenant disponibles en ligne sur http://duckhunt.api-d."
 "com/web/duckstats.php?cid={channel_id}&pid={player_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Coucou !\n"
+"Merci de m'avoir ajouté ici ! Je suis presque prêt à démarrer le jeu.\n"
+"Est-ce-que l'on peut aller dans le canal ou vous voulez que le jeu soit "
+"activé ? Une fois la bas, réveillez moi avec la commande `dh!setup` <:"
+"event_GuildAdded_01:439550913112309781>"
 
 #: cogs/setup_wizzard.py:35
 msgid ""
@@ -826,6 +878,10 @@ msgstr ""
 ":money_with_wings: Vous jetez un seau d'eau sur {target}, l'obligeant ainsi "
 "à attendre 1 heure avant de retourner chasser"
 
+#: cogs/shop.py:373
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "Tu ne voudrais pas te saboter tout seul, si ?"
+
 #: cogs/shop.py:379
 msgid ""
 ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
@@ -955,11 +1011,11 @@ msgstr ""
 
 #: cogs/user_commands.py:158
 msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
 msgstr ""
 "** CHARGEUR VIDE ** | Munitions dans l'arme: {balles_actuelles} / "
-"{balles_max} | Chargeurs restant: {chargeurs_actuels} / {chargeurs_max}"
+"{balles_max} | Chargeurs restants: {chargeurs_actuels} / {chargeurs_max}"
 
 #: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
@@ -981,7 +1037,7 @@ msgstr ""
 "Heureusement vous avez manqué, mais qu'est-ce que vous visiez exactement? Il "
 "n'y a pas de canard ici ... [manqué: -1 xp] [tir sauvage: -1 xp]"
 
-#: cogs/user_commands.py:295
+#: cogs/user_commands.py:301
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -991,7 +1047,7 @@ msgstr ""
 "Tenez votre arme à l'endroit la prochaine fois... [manqué: -1 xp] [accident "
 "de chasse: -2 xp] [arme confisquée]"
 
-#: cogs/user_commands.py:300
+#: cogs/user_commands.py:306
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -999,7 +1055,7 @@ msgstr ""
 "**BANG** Vous avez raté le canard... Et vous avez tiré sur {player}! [manqué "
 ": -1 xp] [accident de chasse : -2 xp] [arme confisquée]"
 
-#: cogs/user_commands.py:303
+#: cogs/user_commands.py:311
 msgid ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
 "it back for free (check when with `!freetime`)"
@@ -1008,11 +1064,15 @@ msgstr ""
 "simplement attendre qu'elle vous soit rendue gratuitement (quand ? "
 "`dh!freetime`)"
 
-#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** Vous avez manqué le canard! [manqué: -1 xp]"
 
-#: cogs/user_commands.py:362
+#: cogs/user_commands.py:351
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Il n'y a pas de canard ici, qu'as-tu prévu de câliner, un arbre?"
+
+#: cogs/user_commands.py:370
 msgid "**Current event**"
 msgstr "**Événement en cours**"
 
@@ -1221,27 +1281,27 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "un poisson."
 
-#: cogs/helpers/config.py:146
+#: cogs/helpers/config.py:148
 msgid "Everything is calm"
 msgstr "Tout est calme"
 
-#: cogs/helpers/config.py:147
+#: cogs/helpers/config.py:149
 msgid "Nothing is happening right now."
 msgstr "Rien ne se passe en ce moment."
 
-#: cogs/helpers/config.py:151
+#: cogs/helpers/config.py:153
 msgid "Ducks are migrating"
 msgstr "Les canards migrent"
 
-#: cogs/helpers/config.py:152
+#: cogs/helpers/config.py:154
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Préparez-vous à voir plus de canards dans l'heure qui suit."
 
-#: cogs/helpers/config.py:157
+#: cogs/helpers/config.py:159
 msgid "Foggy weather"
 msgstr "Temps brumeux"
 
-#: cogs/helpers/config.py:158
+#: cogs/helpers/config.py:160
 msgid ""
 "It's harder to see ducks killed. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1249,11 +1309,11 @@ msgstr ""
 "Il est plus dur de voir si vous tuez les canards. Vous aurez besoin "
 "d'attendre un peu plus de temps pour savoir si vous avez raté ou non."
 
-#: cogs/helpers/config.py:163
+#: cogs/helpers/config.py:165
 msgid "Steroids in the lake"
 msgstr "Stéroïdes dans le lac"
 
-#: cogs/helpers/config.py:164
+#: cogs/helpers/config.py:166
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1263,21 +1323,21 @@ msgstr ""
 "canards ont mutés, et vous verrez beaucoup plus de super canards. Mais, "
 "soyez prudent et ne buvez pas cette eau."
 
-#: cogs/helpers/config.py:169
+#: cogs/helpers/config.py:171
 msgid "Safety class canceled"
 msgstr "Cours de sécurité annulé"
 
-#: cogs/helpers/config.py:170
+#: cogs/helpers/config.py:172
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
 "Le cours de sécurité a été annulé, faites attention à ne pas tirer sur "
 "d'autres chasseurs !"
 
-#: cogs/helpers/config.py:175
+#: cogs/helpers/config.py:177
 msgid "Connexion problems"
 msgstr "Problèmes de connexion"
 
-#: cogs/helpers/config.py:176
+#: cogs/helpers/config.py:178
 msgid ""
 "Ducks cant use the computer due to connexion problems, and there will be "
 "less of them until it's repaired"
@@ -1285,11 +1345,11 @@ msgstr ""
 "Les canards ne peuvent utiliser l'ordinateur en raison de problèmes de "
 "connexion, et il y en aura moins jusqu'à ce qu'il soit réparé"
 
-#: cogs/helpers/config.py:181
+#: cogs/helpers/config.py:183
 msgid "A new florist in town"
 msgstr "Un nouveau fleuriste en ville"
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:184
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them !"
@@ -1297,193 +1357,193 @@ msgstr ""
 "Un fleuriste à ouvert en ville, et vous pouvez maintenant trouver de "
 "meilleurs trèfles à 4 feuilles. Allez donc le voir!"
 
-#: cogs/helpers/config.py:187
+#: cogs/helpers/config.py:189
 msgid "Mega-ducks"
 msgstr "Mega-canards"
 
-#: cogs/helpers/config.py:188
+#: cogs/helpers/config.py:190
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr ""
 "Quelqu'un a gonflé un super canard, et maintenant ils sont ENCORE PLUS "
 "GRANDS!"
 
-#: cogs/helpers/config.py:193
+#: cogs/helpers/config.py:195
 msgid "Windy weather"
 msgstr "Temps venteux"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:196
 msgid "Bullets are deflected by some strong wind"
 msgstr "Les balles sont déviées par un vent fort"
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:211
 msgid "public danger"
 msgstr "danger public"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "touriste"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:227
 msgid "noob"
 msgstr "noob"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:235
 msgid "trainee"
 msgstr "stagiaire"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:243
 msgid "duck misser"
 msgstr "rateur de canards"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:251
 msgid "member of the Comitee Against Ducks"
 msgstr "membre du Comité contre les canards"
 
-#: cogs/helpers/config.py:257
+#: cogs/helpers/config.py:259
 msgid "duck hater"
 msgstr "détesteur de canards"
 
-#: cogs/helpers/config.py:265
+#: cogs/helpers/config.py:267
 msgid "duck pest"
 msgstr "emmerdeur de canards"
 
-#: cogs/helpers/config.py:273
+#: cogs/helpers/config.py:275
 msgid "duck hassler"
 msgstr "déplumeur de canards"
 
-#: cogs/helpers/config.py:281
+#: cogs/helpers/config.py:283
 msgid "duck plucker"
 msgstr "plumeur de canards"
 
-#: cogs/helpers/config.py:289
+#: cogs/helpers/config.py:291
 msgid "hunter"
 msgstr "chasseur"
 
-#: cogs/helpers/config.py:297
+#: cogs/helpers/config.py:299
 msgid "inside out duck turner"
 msgstr "retourneur de canards"
 
-#: cogs/helpers/config.py:305
+#: cogs/helpers/config.py:307
 msgid "duck clobber"
 msgstr "assommeur de canards"
 
-#: cogs/helpers/config.py:313
+#: cogs/helpers/config.py:315
 msgid "duck chewer"
 msgstr "mâchouilleur de canards"
 
-#: cogs/helpers/config.py:321
+#: cogs/helpers/config.py:323
 msgid "duck eater"
 msgstr "bouffeur de canards"
 
-#: cogs/helpers/config.py:329
+#: cogs/helpers/config.py:331
 msgid "duck flattener"
 msgstr "aplatisseur de canards"
 
-#: cogs/helpers/config.py:337
+#: cogs/helpers/config.py:339
 msgid "duck disassembler"
 msgstr "démonteur de canards"
 
-#: cogs/helpers/config.py:345
+#: cogs/helpers/config.py:347
 msgid "duck demolisher"
 msgstr "démolisseur de canards"
 
-#: cogs/helpers/config.py:353
+#: cogs/helpers/config.py:355
 msgid "duck killer"
 msgstr "tueur de canards"
 
-#: cogs/helpers/config.py:361
+#: cogs/helpers/config.py:363
 msgid "duck skinner"
 msgstr "écorcheur de canards"
 
-#: cogs/helpers/config.py:369
+#: cogs/helpers/config.py:371
 msgid "predator"
 msgstr "prédateur"
 
-#: cogs/helpers/config.py:377
+#: cogs/helpers/config.py:379
 msgid "duck chopper"
 msgstr "découpeur de canards"
 
-#: cogs/helpers/config.py:385
+#: cogs/helpers/config.py:387
 msgid "duck decorticator"
 msgstr "décortiqueur de canards"
 
-#: cogs/helpers/config.py:393
+#: cogs/helpers/config.py:395
 msgid "duck fragger"
 msgstr "fraggeur de canards"
 
-#: cogs/helpers/config.py:401
+#: cogs/helpers/config.py:403
 msgid "duck shatterer"
 msgstr "éclateur de canards"
 
-#: cogs/helpers/config.py:409
+#: cogs/helpers/config.py:411
 msgid "duck smasher"
 msgstr "défonceur de canards"
 
-#: cogs/helpers/config.py:417
+#: cogs/helpers/config.py:419
 msgid "duck breaker"
 msgstr "bousilleur de canards"
 
-#: cogs/helpers/config.py:425
+#: cogs/helpers/config.py:427
 msgid "duck wrecker"
 msgstr "poutreur de canards"
 
-#: cogs/helpers/config.py:433
+#: cogs/helpers/config.py:435
 msgid "duck impaler"
 msgstr "empaleur de canards"
 
-#: cogs/helpers/config.py:441
+#: cogs/helpers/config.py:443
 msgid "duck eviscerator"
 msgstr "éventreur de canards"
 
-#: cogs/helpers/config.py:449
+#: cogs/helpers/config.py:451
 msgid "ducks terror"
 msgstr "terreur des canards"
 
-#: cogs/helpers/config.py:457
+#: cogs/helpers/config.py:459
 msgid "duck exploder"
 msgstr "exploseur de canards"
 
-#: cogs/helpers/config.py:465
+#: cogs/helpers/config.py:467
 msgid "duck destructor"
 msgstr "pulvérisateur de canards"
 
-#: cogs/helpers/config.py:473
+#: cogs/helpers/config.py:475
 msgid "duck blaster"
 msgstr "destructeur de canards"
 
-#: cogs/helpers/config.py:481
+#: cogs/helpers/config.py:483
 msgid "duck pulverizer"
 msgstr "pulvérisateur de canards"
 
-#: cogs/helpers/config.py:489
+#: cogs/helpers/config.py:491
 msgid "duck disintegrator"
 msgstr "désintégrateur de canards"
 
-#: cogs/helpers/config.py:497
+#: cogs/helpers/config.py:499
 msgid "duck atomizer"
 msgstr "atomiseur de canards"
 
-#: cogs/helpers/config.py:505
+#: cogs/helpers/config.py:507
 msgid "duck annihilator"
 msgstr "annihilateur de canards"
 
-#: cogs/helpers/config.py:513
+#: cogs/helpers/config.py:515
 msgid "serial duck killer"
 msgstr "serial duck killer"
 
-#: cogs/helpers/config.py:521
+#: cogs/helpers/config.py:523
 msgid "duck genocider"
 msgstr "génocideur de canards"
 
-#: cogs/helpers/config.py:529
+#: cogs/helpers/config.py:531
 msgid "unemployed due to extinction of the duck specie"
 msgstr "chômeur pour cause d'extinction de l'espèce"
 
-#: cogs/helpers/config.py:537
+#: cogs/helpers/config.py:539
 msgid "duck toaster"
 msgstr "toasteur de canards"
 
-#: cogs/helpers/config.py:545
+#: cogs/helpers/config.py:547
 msgid "old noob"
 msgstr "vieux noob"
 
@@ -1564,6 +1624,23 @@ msgstr ""
 "C'était proche, tu as presque tué le canard, mais l'autre chasseur l'a eu en "
 "premier. [Manqué: -1 xp]"
 
+#: cogs/helpers/ducks.py:214
+msgid ""
+":heart: You try to hug the duck, but he knows you killed his brother, so he "
+"flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: Vous essayez d'embrasser le canard, mais puisqu'il sait que vous "
+"avez tué son frère, il s'en retourne dans l'étang! [-2 exp]"
+
+#: cogs/helpers/ducks.py:216
+msgid ""
+":heart: You try to hug the duck, but he saw the weapon you hid behind your "
+"back, and flew away from you, back in the pond! [-2 exp]"
+msgstr ""
+":heart: Vous essayez de câliner le canard, mais il a vu l'arme que vous avez "
+"cachée derrière votre dos, et s'est envolé loin de vous, de retour dans "
+"l'étang! [-2 exp]"
+
 #: cogs/helpers/ducks.py:225
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
@@ -1588,7 +1665,7 @@ msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ":gun: Le canard a survécu! *SUPER CANARD DÉTECTÉ* [vie: -{vie}]"
 
-#: cogs/helpers/ducks.py:396
+#: cogs/helpers/ducks.py:399
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1596,27 +1673,41 @@ msgstr ""
 "{user_mention} vous à eu, en vous faisant tirer sur un canard mécanique. "
 "Vous perdez 1 exp à cause de cette expérience qui n'a absolument pas marché"
 
-#: cogs/helpers/ducks.py:436
+#: cogs/helpers/ducks.py:439
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "Le bébé canard est parti à la recherche d'un bon lit et d'une berceuse · ° "
 "'\\ `' ° -., ¸¸. · ° '\\`"
 
-#: cogs/helpers/ducks.py:454
+#: cogs/helpers/ducks.py:457
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
 "shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
-": skull_crossbones: ** {onomatopoeia} ** Vous avez tué le bébé canard en "
+":skull_crossbones: ** {onomatopoeia} ** Vous avez tué le bébé canard en "
 "{time} secondes, et vous allez le regretter! Vous allez perdre quelques "
 "points d'experience, car vous ne devriez pas tuer les bébés \\ _X < * COUAC "
 "* {exp}"
 
-#: cogs/helpers/ducks.py:488
+#: cogs/helpers/ducks.py:471
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451>** SMACK ** Vous avez câliné le bébé canard, "
+"et maintenant il est vraiment heureux! [3 exp]\n"
+"Le bébé canard est parti, se sentant aimé"
+
+#: cogs/helpers/ducks.py:483
+msgid "**I AM...** Your mother"
+msgstr "**Je suis...** ta mère"
+
+#: cogs/helpers/ducks.py:491
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
 msgstr ""
-": skull_crossbones: ** {onomatopoeia} ** Tu m'as tué en {time} secondes, "
-"mais tu ne tueras pas mes enfants! \\ _X < * COUAC * {exp}"
+":skull_crossbones: ** {onomatopoeia} ** Tu m'as tué en {time} secondes, mais "
+"tu ne tueras pas mes enfants! \\ _X < * COUAC * {exp}"

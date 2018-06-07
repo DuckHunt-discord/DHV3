@@ -8,32 +8,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:146
+#: bot.py:140
 msgid ":x: A required argument is missing."
 msgstr ":x: Et krævende argument mangler."
 
-#: bot.py:149
+#: bot.py:144
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Du har ikke nok exp til dette"
 
-#: bot.py:152
+#: bot.py:147
 msgid ":x: You are not a server admin"
 msgstr ":x: Du er ikke en serveradministrator"
 
-#: bot.py:155
+#: bot.py:150
 msgid ":x: You are not a super admin."
 msgstr ":x: Du er ikke en superadministrator."
 
-#: bot.py:156
+#: bot.py:151
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,11 +41,11 @@ msgstr ""
 "Denne kommando er forbeholdt botejerene. Hvis du mener, at dette er en fejl, "
 "bedes du kontakte min ejer på DuckHunt Support Server (se `dh!help`)."
 
-#: bot.py:167
+#: bot.py:168
 msgid "You are on cooldown :(, try again in {seconds}"
 msgstr "Du er på cooldown :( Prøv igen om {seconds}"
 
-#: bot.py:173
+#: bot.py:174
 msgid ":bulb: HINT: "
 msgstr ":bulb: HINT:"
 
@@ -276,7 +276,7 @@ msgstr ""
 "gratis (hvis konfiskeret), men det påvirker ikke kuglerne i dit nuværende "
 "magasin. Hvis du kan, skal du lade igen på forhånd!"
 
-#: cogs/meta.py:99
+#: cogs/meta.py:98
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Du bruger shard nummer {shard} ud af {total} totale shards"
 
@@ -943,14 +943,6 @@ msgstr "Dit våben er fastklemt, det skal genlades for at frigøre det."
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Dit våben er saboteret, tak {assaillant} for denne dårlige vittighed."
 
-#: cogs/user_commands.py:158
-msgid ""
-"** CHARGER EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
-"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
-msgstr ""
-"**GEVÆR TOM** | Ammunition i våbenet: {balles_actuelles}/{balles_max} | "
-"Magasiner tilbage: {chargeurs_actuels}/{chargeurs_max}"
-
 #: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Dit våben har sat sig fast, genlad det for at frigøre det."
@@ -971,7 +963,7 @@ msgstr ""
 "Heldigvis missede du, men hvad sigtede du præcist på? Der er ikke nogen and "
 "her... [misset: -1 xp] [vildt skud: -1 xp]"
 
-#: cogs/user_commands.py:295
+#: cogs/user_commands.py:301
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -981,7 +973,7 @@ msgstr ""
 "våben lidt inden du skyder næste gang? [misset: -1 xp] [jagtulykke: -2 xp] "
 "[**våben konfiskeret**]"
 
-#: cogs/user_commands.py:300
+#: cogs/user_commands.py:306
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -989,7 +981,7 @@ msgstr ""
 "**BANG** Du har misset anden... og skudt {player}! [misset: -1 xp] "
 "[jagtulykke: -2 xp] [**våben konfiskeret**]"
 
-#: cogs/user_commands.py:303
+#: cogs/user_commands.py:311
 msgid ""
 "You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
 "it back for free (check when with `!freetime`)"
@@ -997,15 +989,15 @@ msgstr ""
 "Du kan genskaffe dit våben i butikken (`dh!shop 5`) eller vente, indtil du "
 "får det tilbage gratis (se hvornår med`!freetime`)"
 
-#: cogs/helpers/ducks.py:93 cogs/user_commands.py:309
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Du missede anden! [misset: -1 xp]"
 
-#: cogs/user_commands.py:343
+#: cogs/user_commands.py:351
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Der er ikke nogen and her, hvad har du planer om at kramme, et træ?!"
 
-#: cogs/user_commands.py:362
+#: cogs/user_commands.py:370
 msgid "**Current event**"
 msgstr "**Nuværende begivenhed**"
 
@@ -1213,27 +1205,27 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgid "a fish."
 msgstr "en fisk."
 
-#: cogs/helpers/config.py:146
+#: cogs/helpers/config.py:148
 msgid "Everything is calm"
 msgstr "Alt er roligt"
 
-#: cogs/helpers/config.py:147
+#: cogs/helpers/config.py:149
 msgid "Nothing is happening right now."
 msgstr "Intet sker lige nu."
 
-#: cogs/helpers/config.py:151
+#: cogs/helpers/config.py:153
 msgid "Ducks are migrating"
 msgstr "Ænder migrerer"
 
-#: cogs/helpers/config.py:152
+#: cogs/helpers/config.py:154
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Forbered dig på at se flere ænder i den næste time."
 
-#: cogs/helpers/config.py:157
+#: cogs/helpers/config.py:159
 msgid "Foggy weather"
 msgstr "Tåget vejr"
 
-#: cogs/helpers/config.py:158
+#: cogs/helpers/config.py:160
 msgid ""
 "It's harder to see ducks killed. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1241,11 +1233,11 @@ msgstr ""
 "Det er sværere at se dræbte ænder. Du skal bruge et par sekunder til at "
 "vide, om du har misset eller ej."
 
-#: cogs/helpers/config.py:163
+#: cogs/helpers/config.py:165
 msgid "Steroids in the lake"
 msgstr "Steroider i søen"
 
-#: cogs/helpers/config.py:164
+#: cogs/helpers/config.py:166
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1254,19 +1246,19 @@ msgstr ""
 "Et medicinsk affaldsselskab dumpede steroider i søen. Ænder har muteret, og "
 "du vil se mange flere super-ænder. Men pas på, og drik ikke det vand."
 
-#: cogs/helpers/config.py:169
+#: cogs/helpers/config.py:171
 msgid "Safety class canceled"
 msgstr "Sikkerhedsklasse annulleret"
 
-#: cogs/helpers/config.py:170
+#: cogs/helpers/config.py:172
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr "Sikkerhedsklassen blev aflyst, pas på at ikke skyde andre jægere!"
 
-#: cogs/helpers/config.py:175
+#: cogs/helpers/config.py:177
 msgid "Connexion problems"
 msgstr "Forbindelsesproblemer"
 
-#: cogs/helpers/config.py:176
+#: cogs/helpers/config.py:178
 msgid ""
 "Ducks cant use the computer due to connexion problems, and there will be "
 "less of them until it's repaired"
@@ -1274,11 +1266,11 @@ msgstr ""
 "Ænder kan ikke bruge computeren på grund af forbindelsesproblemer, og der "
 "vil være mindre af dem, indtil det er repareret"
 
-#: cogs/helpers/config.py:181
+#: cogs/helpers/config.py:183
 msgid "A new florist in town"
 msgstr "En ny blomsterhandler i byen"
 
-#: cogs/helpers/config.py:182
+#: cogs/helpers/config.py:184
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them !"
@@ -1286,191 +1278,191 @@ msgstr ""
 "En blomsterhandler åbnede i byen, og du kan nu finde bedre firkløvere. Gå "
 "tjek dem!"
 
-#: cogs/helpers/config.py:187
+#: cogs/helpers/config.py:189
 msgid "Mega-ducks"
 msgstr "Mega-ænder"
 
-#: cogs/helpers/config.py:188
+#: cogs/helpers/config.py:190
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Nogen opblæste en super-and, og nu er de selv større!!"
 
-#: cogs/helpers/config.py:193
+#: cogs/helpers/config.py:195
 msgid "Windy weather"
 msgstr "Vind vejr"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:196
 msgid "Bullets are deflected by some strong wind"
 msgstr "Kuglerne afbøjes af en stærk vind"
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:211
 msgid "public danger"
 msgstr "offentlig fare"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:227
 msgid "noob"
 msgstr "nybegynder"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:235
 msgid "trainee"
 msgstr "praktikant"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:243
 msgid "duck misser"
 msgstr "ande-misser"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:251
 msgid "member of the Comitee Against Ducks"
 msgstr "medlem af komiteen mod ænder"
 
-#: cogs/helpers/config.py:257
+#: cogs/helpers/config.py:259
 msgid "duck hater"
 msgstr "andehader"
 
-#: cogs/helpers/config.py:265
+#: cogs/helpers/config.py:267
 msgid "duck pest"
 msgstr "andepest"
 
-#: cogs/helpers/config.py:273
+#: cogs/helpers/config.py:275
 msgid "duck hassler"
 msgstr "andebesværer"
 
-#: cogs/helpers/config.py:281
+#: cogs/helpers/config.py:283
 msgid "duck plucker"
 msgstr "andeplukker"
 
-#: cogs/helpers/config.py:289
+#: cogs/helpers/config.py:291
 msgid "hunter"
 msgstr "jæger"
 
-#: cogs/helpers/config.py:297
+#: cogs/helpers/config.py:299
 msgid "inside out duck turner"
 msgstr "ud og ind andevender"
 
-#: cogs/helpers/config.py:305
+#: cogs/helpers/config.py:307
 msgid "duck clobber"
 msgstr "andetæver"
 
-#: cogs/helpers/config.py:313
+#: cogs/helpers/config.py:315
 msgid "duck chewer"
 msgstr "andetygger"
 
-#: cogs/helpers/config.py:321
+#: cogs/helpers/config.py:323
 msgid "duck eater"
 msgstr "andespiser"
 
-#: cogs/helpers/config.py:329
+#: cogs/helpers/config.py:331
 msgid "duck flattener"
 msgstr "ande-fladder"
 
-#: cogs/helpers/config.py:337
+#: cogs/helpers/config.py:339
 msgid "duck disassembler"
 msgstr "ande-adskiller"
 
-#: cogs/helpers/config.py:345
+#: cogs/helpers/config.py:347
 msgid "duck demolisher"
 msgstr "ande-nedriver"
 
-#: cogs/helpers/config.py:353
+#: cogs/helpers/config.py:355
 msgid "duck killer"
 msgstr "andedræber"
 
-#: cogs/helpers/config.py:361
+#: cogs/helpers/config.py:363
 msgid "duck skinner"
 msgstr "andeskinder"
 
-#: cogs/helpers/config.py:369
+#: cogs/helpers/config.py:371
 msgid "predator"
 msgstr "rovdyr"
 
-#: cogs/helpers/config.py:377
+#: cogs/helpers/config.py:379
 msgid "duck chopper"
 msgstr "ande-fæller"
 
-#: cogs/helpers/config.py:385
+#: cogs/helpers/config.py:387
 msgid "duck decorticator"
 msgstr "ande-afskaller"
 
-#: cogs/helpers/config.py:393
+#: cogs/helpers/config.py:395
 msgid "duck fragger"
 msgstr "ande-fragger"
 
-#: cogs/helpers/config.py:401
+#: cogs/helpers/config.py:403
 msgid "duck shatterer"
 msgstr "ande-knuser"
 
-#: cogs/helpers/config.py:409
+#: cogs/helpers/config.py:411
 msgid "duck smasher"
 msgstr "ande-smasher"
 
-#: cogs/helpers/config.py:417
+#: cogs/helpers/config.py:419
 msgid "duck breaker"
 msgstr "ande-bryder"
 
-#: cogs/helpers/config.py:425
+#: cogs/helpers/config.py:427
 msgid "duck wrecker"
 msgstr "ande-vrager"
 
-#: cogs/helpers/config.py:433
+#: cogs/helpers/config.py:435
 msgid "duck impaler"
 msgstr "ande-spidder"
 
-#: cogs/helpers/config.py:441
+#: cogs/helpers/config.py:443
 msgid "duck eviscerator"
 msgstr "ande-udtager"
 
-#: cogs/helpers/config.py:449
+#: cogs/helpers/config.py:451
 msgid "ducks terror"
 msgstr "ænder terror"
 
-#: cogs/helpers/config.py:457
+#: cogs/helpers/config.py:459
 msgid "duck exploder"
 msgstr "ande-eksploderer"
 
-#: cogs/helpers/config.py:465
+#: cogs/helpers/config.py:467
 msgid "duck destructor"
 msgstr "ande-tilintetgører"
 
-#: cogs/helpers/config.py:473
+#: cogs/helpers/config.py:475
 msgid "duck blaster"
 msgstr "ande-blaster"
 
-#: cogs/helpers/config.py:481
+#: cogs/helpers/config.py:483
 msgid "duck pulverizer"
 msgstr "andepulveriser"
 
-#: cogs/helpers/config.py:489
+#: cogs/helpers/config.py:491
 msgid "duck disintegrator"
 msgstr "andenedbryder"
 
-#: cogs/helpers/config.py:497
+#: cogs/helpers/config.py:499
 msgid "duck atomizer"
 msgstr "andeforstøver"
 
-#: cogs/helpers/config.py:505
+#: cogs/helpers/config.py:507
 msgid "duck annihilator"
 msgstr "ande-tilintetgøre"
 
-#: cogs/helpers/config.py:513
+#: cogs/helpers/config.py:515
 msgid "serial duck killer"
 msgstr "serieandemorder"
 
-#: cogs/helpers/config.py:521
+#: cogs/helpers/config.py:523
 msgid "duck genocider"
 msgstr "ande-seriemorder"
 
-#: cogs/helpers/config.py:529
+#: cogs/helpers/config.py:531
 msgid "unemployed due to extinction of the duck specie"
 msgstr "arbejdsløse på grund af udryddelse af andearten"
 
-#: cogs/helpers/config.py:537
+#: cogs/helpers/config.py:539
 msgid "duck toaster"
 msgstr "andebrødrister"
 
-#: cogs/helpers/config.py:545
+#: cogs/helpers/config.py:547
 msgid "old noob"
 msgstr "gammel nybegynder"
 
@@ -1589,7 +1581,7 @@ msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ":gun: Anden overlevede, prøv igen! *SUPER-AND OPDAGET* [liv: -{vie}]"
 
-#: cogs/helpers/ducks.py:396
+#: cogs/helpers/ducks.py:399
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1597,11 +1589,11 @@ msgstr ""
 "Du er blevet narret af {user_mention} for at dræbe en mekanisk and. Det "
 "ville tydeligvis ikke fungere, og du tabte 1 exp for dette misset skud"
 
-#: cogs/helpers/ducks.py:436
+#: cogs/helpers/ducks.py:439
 msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "babyanden forlod efter lidt søvn ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:454
+#: cogs/helpers/ducks.py:457
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1611,7 +1603,7 @@ msgstr ""
 "sekunder, og du burde ikke have gjort dette! Du mister noget exp, fordi du "
 "ikke bør dræbe babyer\\ _X < *COUAC* {exp}"
 
-#: cogs/helpers/ducks.py:468
+#: cogs/helpers/ducks.py:471
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1621,11 +1613,11 @@ msgstr ""
 "rigtig glad! [3 exp]\n"
 "Babyanden gik, følte sig elsket"
 
-#: cogs/helpers/ducks.py:480
+#: cogs/helpers/ducks.py:483
 msgid "**I AM...** Your mother"
 msgstr "JEG ER... Din mor"
 
-#: cogs/helpers/ducks.py:488
+#: cogs/helpers/ducks.py:491
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

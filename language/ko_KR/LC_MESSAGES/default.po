@@ -8,11 +8,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-23 09:16+0000\n"
+"POT-Creation-Date: 2018-06-03 18:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:140
+msgid ":x: A required argument is missing."
+msgstr ":x: 필수 인수가 누락되었습니다."
+
+#: bot.py:144
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: 이에 대한 포인트가 부족합니다."
+
+#: bot.py:147
+msgid ":x: You are not a server admin"
+msgstr ":x: 당신은 서버 관리자가 아닙니다."
+
+#: bot.py:150
+msgid ":x: You are not a super admin."
+msgstr ":x: 너는 최고 관리자가 아니다."
+
+#: bot.py:151
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"이 명령은 보트 소유자를 위해 예약되어 있습니다. 이것이 오류라고 생각되면 DuckHunt 지원 서버 (Dh! help 참조)에 "
+"문의하십시오."
+
+#: bot.py:168
+msgid "You are on cooldown :(, try again in {seconds}"
+msgstr "재사용 대기 중입니다 :( {초} 만에 다시 시도하십시오."
+
+#: bot.py:174
+msgid ":bulb: HINT: "
+msgstr ":bulb: 힌트"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: 끝난, 이 사용자는 차단되었습니다. :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: 끝난, 사용자가 금지되지 않은 사용자 :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019> 끝난, 채널 {channel} 게임에 추가됨! 재밌게 놀아!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674> 끝난, 채널 {channel} 게임에서 제거하다. 안녕!"
