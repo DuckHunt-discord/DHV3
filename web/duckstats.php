@@ -16,7 +16,6 @@ $moderators = array(
     85708771053043712,  // @otagueule#7958
     251996890369884161, // @Subtleknifewielder#1927
     181846573351829504, // @PierrePV#3537
-    296573428293697536, // @⚜HappyWizzz⚜#5928
 );
 
 $translators                    = array(
@@ -57,6 +56,7 @@ $proficients                    = array(
 );
 $retired_staff                  = array(
     94822638991454208,  // Diagamma#7456
+    296573428293697536, // @⚜HappyWizzz⚜#5928
 
 );
 $partners                       = array(

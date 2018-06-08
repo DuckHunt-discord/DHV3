@@ -308,7 +308,7 @@ class User:
 
                     # TODO : Life insurence
 
-                await self.bot.hint(ctx=ctx, message=_("You can recover your weapon in the store (`dh!shop 5`) "
+                await self.bot.hint(ctx=ctx, message=_("You can buy your weapon back in the store (`dh!shop 5`) "
                                                        "or wait until you get it back for free (check when with `!freetime`)", language))
                 return
             else:  # Missed and none was shot

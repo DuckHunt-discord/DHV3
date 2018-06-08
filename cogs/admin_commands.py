@@ -143,7 +143,7 @@ class Admin:
 
         await ctx.bot.db.delete_stats(ctx.channel, user=user)
 
-        await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if it was in.", language))
+        await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if he was in.", language))
         await self.bot.hint(ctx=ctx, message="You can delete a user that left if you have his ID. Use `dh!del_user_id`")
 
     @commands.command(
@@ -156,7 +156,7 @@ class Admin:
 
         await ctx.bot.db.delete_channel_stats(ctx.channel)
 
-        await self.bot.send_message(ctx=ctx, message=_("Done. All the channel data was removed.", language))
+        await self.bot.send_message(ctx=ctx, message=_("Done. All channel data was removed.", language))
         await self.bot.hint(ctx=ctx, message="This does not stop the game. Use `dh!remove_channel` to stop it.")
 
     @commands.command(aliases=["reset_user_id"])
@@ -169,7 +169,7 @@ class Admin:
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         await ctx.bot.db.delete_stats(ctx.channel, user_id=user_to_delete_id)
-        await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if it was in.", language))
+        await self.bot.send_message(ctx=ctx, message=_("Done. User removed from the database, if he was in.", language))
 
     # > SETTINGS < #
 

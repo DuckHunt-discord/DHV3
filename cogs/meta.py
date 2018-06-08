@@ -68,7 +68,7 @@ class Meta:
         seconds = str(int(time_data % 60)).rjust(2, "0")
 
         await self.bot.send_message(ctx=ctx, message=_("It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:00), which is the one used by the bot. \nYou can use this website to compare it to yours: https://time.is/compare/GMT", language).format(hour=hour, minutes=minutes, seconds=seconds))
-        await self.bot.hint(ctx=ctx, message=_("You can use the `dh!freetime` command to see when you'll get back your weapons for free", language))
+        await self.bot.hint(ctx=ctx, message=_("You can use the `dh!freetime` command to see when you'll get your weapons back for free", language))
 
     @commands.command()
     @checks.is_channel_enabled()

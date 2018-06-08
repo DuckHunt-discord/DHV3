@@ -211,9 +211,9 @@ class BaseDuck:
         await self.bot.db.add_to_stat(self.channel, author, "exp", -2)
 
         if self.bot.db.get_stat(self.channel, author, "confisque"):
-            return _(":heart: You try to hug the duck, but he knows you killed his brother, so he flew away from you, back in the pond! [-2 exp]", language)
+            return _(":heart: You try to hug the duck, but it knows you killed its brother, so it fled from you and flew back into the pond![-2 exp]", language)
         else:
-            return _(":heart: You try to hug the duck, but he saw the weapon you hid behind your back, and flew away from you, back in the pond! [-2 exp]", language)
+            return _(":heart: You try to hug the duck, but it saw the weapon you hid behind your back, so it fled from you and flew back into the pond! [-2 exp]", language)
 
     async def get_frighten_chance(self):
         return await self.bot.db.get_pref(self.channel.guild, "duck_frighten_chance")
@@ -436,7 +436,7 @@ class BabyDuck(BaseDuck):
         cri = "**COIN**"
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
-        self.discord_leave_str = _("The baby duck left looking for some sleep ·°'\`'°-.,¸¸.·°'\`", language)
+        self.discord_leave_str = _("The baby duck left to take a little nap somewhere ·°'\`'°-.,¸¸.·°'\`", language)
 
     @classmethod
     async def create(cls, bot, channel, ignore_event=False):

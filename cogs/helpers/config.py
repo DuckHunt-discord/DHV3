@@ -57,7 +57,7 @@ def config(bot):
                         "\\_Õ\{", "\\_õ\{", "\\_Ô\{", "\\_ô\{", "\\_Ö\{", "\\_ö\{", "\\_Ø\{", "\\_ø\{", "\\_Ò\{", "\\_ò\{", "\\_Ó\{", "\\_ó\{", "\\_0\{", "\\_©\{", "\\_@\{", "\\_º\{", "\\_°\{", "\\_^\{", "/_O\{", "/_o\{", "/_Õ\{", "/_õ\{", "/_Ô\{", "/_ô\{", "/_Ö\{", "/_ö\{", "/_Ø\{", "/_ø\{", "/_Ò\{", "/_ò\{", "/_Ó\{", "/_ó\{", "/_0\{", "/_©\{", "/_@\{", "/_^\{", "§_O\{", "§_o\{", "§_Õ\{", "§_õ\{", "§_Ô\{", "§_ô\{", "§_Ö\{", "§_ö\{", "§_Ø\{", "§_ø\{", "§_Ò\{", "§_ò\{", "§_Ó\{", "§_ó\{", "§_0\{", "§_©\{", "§_@\{", "§_º\{", "§_°\{", "§_^\{"]
 
     # When a duck appears (part 3)
-    bot.canards_cri = ["COIN", "COIN", "COIN", "COIN", "COIN", "KWAK", "KWAK", "KWAAK", "KWAAK", "KWAAAK", "KWAAAK", "COUAK", "COUAK", "COUAAK", "COUAAK", "COUAAAK", "COUAAAK", "QUAK", "QUAK", "QUAAK", "QUAAK", "QUAAAK", "QUAAAK", "QUACK", "QUACK", "QUAACK", "QUAACK", "QUAAACK", "QUAAACK", "COUAC", "COUAC", "COUAAC", "COUAAC", "COUAAAC", "COUAAAC", "COUACK", "COUACK", "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI?", "PIOU?", _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "http://tinyurl.com/2qc9pl", _("Me too, I love you!"), _("Don't shoot me! I'm a fake duck!")]
+    bot.canards_cri = ["COIN", "COIN", "COIN", "COIN", "COIN", "KWAK", "KWAK", "KWAAK", "KWAAK", "KWAAAK", "KWAAAK", "COUAK", "COUAK", "COUAAK", "COUAAK", "COUAAAK", "COUAAAK", "QUAK", "QUAK", "QUAAK", "QUAAK", "QUAAAK", "QUAAAK", "QUACK", "QUACK", "QUAACK", "QUAACK", "QUAAACK", "QUAAACK", "COUAC", "COUAC", "COUAAC", "COUAAC", "COUAAAC", "COUAAAC", "COUACK", "COUACK", "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI?", "PIOU?", _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "http://tinyurl.com/2qc9pl", _("I love you too!"), _("Don't shoot me! I'm a fake duck!")]
 
 
     # When a duck leaves
@@ -65,8 +65,9 @@ def config(bot):
 
 
     # When a duck get killed
-    bot.inutilite = [_("a stuffed duck."), _("a rubber ducky."), _("a vibrating duck."), _("a pile of feathers."), _("a chewed chewing gum."), _("a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."), _("an old shoe."), _("a spring thingy."), _("a cow dung."), _("a dog dirt."), _("an expired hunting license."), _("a cartridge."), _("a cigarette butt."), _("a used condom."), _("a broken sight."), _("a broken infrared detector."), _("a bent silencer."), _("an empty box of AP ammo."), _("an empty box of explosive ammo."), _("a four-leaf clover with only 3 left."), _("a broken decoy."), _("a broken mirror."), _("a rusty mechanical duck."), _("a pair of sunglasses without glasses."), _("Donald's beret."), _("a half-melted peppermint."), _("a box of Abraxo cleaner."), _("a gun with banana peeled barrel."), _("an old hunting knife."), _("an old video recording: http://tinyurl.com/zbejktu"), _("an old hunting photo: http://tinyurl.com/hmn4r88"),
-                 _("an old postcard: http://tinyurl.com/hbnkpzr"), _("a golden duck photo: http://tinyurl.com/hle8fjf"), _("a hunter pin: http://tinyurl.com/hqy7fhq"), _("bushes."), _("https://www.youtube.com/watch?v=HP362ccZBmY"), _("a fish.")]
+    bot.inutilite = [_("a stuffed duck."), _("a rubber ducky."), _("a vibrating duck."), _("a pile of feathers."), _("a chewed chewing gum."), _("a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."), _("an old shoe."), _("a spring thingy."), _("cow dung."), _("dog poop."), _("an expired hunting license."), _("a cartridge."), _("a cigarette butt."), _("a used condom."), _("a broken sight."), _("a broken infrared detector."), _("a bent silencer."), _("an empty box of AP ammo."), _("an empty box of explosive ammo."), _("a four-leaf clover with only 3 left."), _("a broken decoy."), _("a broken mirror."), _("a rusty mechanical duck."), _("a pair of sunglasses without glasses."), _("Donald's beret."), _("a half-melted peppermint."), _("a box of Abraxo cleaner."), _("a gun with banana peeled barrel."), _("an old hunting knife."), _("an old video recording: http://tinyurl.com/zbejktu"), _("an old hunting photo: http://tinyurl.com/hmn4r88"),
+                 _("an old postcard: http://tinyurl.com/hbnkpzr"), _("a golden duck photo: http://tinyurl.com/hle8fjf"), _("a hunter pin: http://tinyurl.com/hqy7fhq"), _("bushes."),
+                     _("https://www.youtube.com/watch?v=HP362ccZBmY"), _("a fish."), _("even more bushes.")]
 
 
 
@@ -157,7 +158,7 @@ def config(bot):
         },
         {
             "name"       : _("Foggy weather"),
-            "description": _("It's harder to see ducks killed. You'll need a few more seconds to know if you missed or not."),
+            "description": _("It's harder to see killed ducks. You'll need a few more seconds to know if you missed or not."),
             "seconds_of_lag_added": 3,
             "id"         : 2
         },
@@ -174,14 +175,14 @@ def config(bot):
             "kill_chance_added": 5
         },
         {
-            "name"       : _("Connexion problems"),
-            "description": _("Ducks cant use the computer due to connexion problems, and there will be less of them until it's repaired"),
+            "name"       : _("Connection problems"),
+            "description": _("Ducks cant find your computer due to connection problems, and there will be less of them until it's repaired"),
             "id"         : 5,
             "ducks_cancel_chance": 10
         },
         {
             "name"       : _("A new florist in town"),
-            "description": _("A florist opened in town, and you can now find better 4-leaf-clovers. Go check them !"),
+            "description": _("A florist opened in town, and you can now find better 4-leaf-clovers. Go check them out!"),
             "id"         : 6,
             "ammount_to_add_to_max_exp": 10
         },
@@ -296,7 +297,7 @@ def config(bot):
     }, {
         "niveau"    : 11,
         "expMin"    : 650,
-        "nom"       : _("inside out duck turner"),
+        "nom"       : _("duck inside out turner"),
         "precision" : 73,
         "fiabilitee": 94,
         "balles"    : 4,
@@ -368,7 +369,7 @@ def config(bot):
     }, {
         "niveau"    : 20,
         "expMin"    : 2090,
-        "nom"       : _("predator"),
+        "nom"       : _("duck predator"),
         "precision" : 82,
         "fiabilitee": 97,
         "balles"    : 2,
@@ -528,7 +529,7 @@ def config(bot):
     }, {
         "niveau"    : 40,
         "expMin"    : 8200,
-        "nom"       : _("unemployed due to extinction of the duck specie"),
+        "nom"       : _("unemployed due to extinction of the duck species"),
         "precision" : 97,
         "fiabilitee": 99,
         "balles"    : 1,

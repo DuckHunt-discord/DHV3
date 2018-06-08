@@ -164,7 +164,7 @@ class Experience:
             await self.bot.db.set_stat(message.channel, message.author, "graisse", int(time.time() + DAY))
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -8)
             await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You added grease in your weapon.", language))
-            await self.bot.hint(ctx=ctx, message=_("This reduce jamming risks by 50 percent for a day, for only 8 exp points. It's really useful for new players. Use `dh!duckstats` to check your "
+            await self.bot.hint(ctx=ctx, message=_("This reduces jamming risks by 50 percent for a day, for only 8 exp points. It's really useful for new players. Use `dh!duckstats` to check your "
                                                    "level and accuracy", language))
 
         else:
@@ -270,12 +270,12 @@ class Experience:
             await self.bot.db.set_stat(message.channel, message.author, "dazzled", False)
 
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -5)
-            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now immune to sunlight for a day.", language))
+            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You bought a pair of sunglasses for 5 exp! You now won't be dazzled for a day.", language))
 
         else:
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -5)
             await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You bought brand new sunglasses, the only point of it being that you're much swagger now. :cool:", language))
-            await self.bot.hint(ctx=ctx, message=_("Don't buy sunglasses if you still have them! This don't extend the time you'll have them, but still cost you some exp", language))
+            await self.bot.hint(ctx=ctx, message=_("Don't buy sunglasses if you still have some! This doesn't extend the time you won't be dazzled, but still costs you some exp", language))
 
     @shop.command(name="12", aliases=["clothes", "dry", "dry_clothes"])
     @checks.have_exp(7)
@@ -289,7 +289,7 @@ class Experience:
         if await self.bot.db.get_stat(message.channel, message.author, "mouille") > time.time():
             await self.bot.db.set_stat(message.channel, message.author, "mouille", 0)
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -7)
-            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You have new dry clothes on you now. You look beautiful!", language))
+            await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You're wearing new dry clothes. You look fantastic!", language))
 
         else:
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -7)
@@ -309,7 +309,7 @@ class Experience:
         await self.bot.db.set_stat(message.channel, message.author, "sand", False)
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -6)
         await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, or if your weapon was sabotaged, it's fixed now!", language))
-        await self.bot.hint(ctx=ctx, message=_("Next time someone sabotages you, just shot, it won't do much damage but to your reputation", language))
+        await self.bot.hint(ctx=ctx, message=_("Next time someone sabotages you, just shot. It won't do much damage except for hurting your reputation", language))
 
     @shop.command(name="14", aliases=["dazzle", "mirror"])
     @checks.have_exp(5)
@@ -329,7 +329,7 @@ class Experience:
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -5)
             await self.bot.db.set_stat(message.channel, target, "dazzled", True)
             await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You dazzled {mention}! Their next shot will lose 50% accuracy!", language).format(mention=target.mention))
-            await self.bot.hint(ctx=ctx, message=_("The mention is here on purpose. You wouldn't do this behind their back, would you", language))
+            await self.bot.hint(ctx=ctx, message=_("The mention is here on purpose. You wouldn't do this behind their back, would you?", language))
 
     @shop.command(name="15", aliases=["sand"])
     @checks.have_exp(7)
@@ -383,7 +383,7 @@ class Experience:
 
 
         else:
-            await self.bot.send_message(ctx=ctx, force_pm=True, message=_(":ok: {target} weapon is already sabotaged!", language).format(**{"target": target.mention}))
+            await self.bot.send_message(ctx=ctx, force_pm=True, message=_(":ok: {target}'s weapon is already sabotaged!", language).format(**{"target": target.mention}))
 
         try:
             await ctx.message.delete()
@@ -473,7 +473,7 @@ class Experience:
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -2)
 
         await self.bot.send_message(ctx=ctx,
-                                    message=_(":money_with_wings: You put some bread on the channel to attract ducks. They'll stay 20 more seconds before leaving for the rest of the day!", language))
+                                    message=_(":money_with_wings: You put some bread on the channel to attract ducks. They'll stay 20 seconds longer before leaving for the rest of the day!", language))
         await self.bot.hint(ctx=ctx, message=_(":money_with_wings: Bread can stack! Buy some more to maximise the effects!", language))
 
     @shop.command(name="22", aliases=["NOT2"])

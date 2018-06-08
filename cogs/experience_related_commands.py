@@ -25,7 +25,7 @@ class Experience:
                                                            "number I'm able to store.", await self.bot.db.get_pref(ctx.guild, "language")))
             return
 
-        await self.bot.send_message(ctx=ctx, message=_(":ok:, they now have {newexp} exp points!", language).format(**{"newexp": await self.bot.db.get_stat(ctx.message.channel, target, "exp")}))
+        await self.bot.send_message(ctx=ctx, message=_(":ok:, he/she now has {newexp} exp points!", language).format(**{"newexp": await self.bot.db.get_stat(ctx.message.channel, target, "exp")}))
 
 
     @commands.command(aliases=['sendexp', 'send_xp', 'sendxp'])

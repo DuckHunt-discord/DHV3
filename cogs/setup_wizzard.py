@@ -91,7 +91,7 @@ class SetupWizzard:
         if not permissions.external_emojis:
             await self.bot.send_message(ctx=ctx, message=_(":small_orange_diamond: The permission `external_emojis` is missing.\n"
                                                            "This is used since DHV3 to add non-standard emojis to messages. You should probably give it to me\n"
-                                                           "You could proceed without it, and bug reports will be appreciated.", language))
+                                                           "You could proceed without it, but bug reports would be appreciated.", language))
 
         # Not bad
 
@@ -120,7 +120,7 @@ class SetupWizzard:
 
         await self.bot.send_message(ctx=ctx, message=_("I'm done! <:cmd_Setup_01:439551472804429836>\n"
                                                        "Any warning has been sent above. I suggest fixing them, then running the command again!\n"
-                                                       "If there is none, congrats! You passed the tests brightfully!\n"
+                                                       "If there is none, congrats! You passed the tests brilliantly!\n"
                                                        "If you are ready to continue with the setup, use the command `dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once used, "
                                                        "ducks will spawn automatically.\n"
                                                        "Thanks for flying DucksAir. If you have any question, we are here to help at https://discord.gg/2BksEkV",
@@ -144,7 +144,7 @@ I'll give you the most used parameters, and let you change them if you want. Any
     \* Another language we don't fully support yet? Help us translate DuckHunt! Find us at https://discord.gg/2BksEkV.
     
 **2/ Ducks Per Day**:
-    This is the number of ducks that will spawn per day. They spawn a random intervals, but you can configure the number of ducks that will spawn.
+    This is the number of ducks that will spawn per day. They spawn at random intervals, but you can configure the number of ducks that will spawn.
     \* Use the following command to change it, use `dh!settings set ducks_per_day XX`, where `XX` is a number.
     \* To prevent abuse, there is a limit that will be automatically enforced. If you need to lift it, contact my owner at the support server.
     
