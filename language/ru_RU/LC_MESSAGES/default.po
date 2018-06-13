@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-03 18:21+0000\n"
+"POT-Creation-Date: 2018-06-08 14:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,15 +107,6 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440>{admin} теперь не администратор "
 "сервера."
 
-#: cogs/admin_commands.py:146 cogs/admin_commands.py:172
-msgid "Done. User removed from the database, if it was in."
-msgstr ""
-"Готово, если пользователь числился в базе данных, то теперь его там нет."
-
-#: cogs/admin_commands.py:159
-msgid "Done. All the channel data was removed."
-msgstr "Готово, все данные, связанные с каналом, удалены."
-
 #: cogs/admin_commands.py:184
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
@@ -191,10 +182,6 @@ msgstr ""
 "Поздравляю, вы отправили настолько много очков опыта, что я не могу "
 "сохранить это число."
 
-#: cogs/experience_related_commands.py:28
-msgid ":ok:, they now have {newexp} exp points!"
-msgstr ":ok:, теперь у него/неё {newexp} очк. опыта!"
-
 #: cogs/experience_related_commands.py:41
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
@@ -267,13 +254,6 @@ msgstr ""
 "Используйте этот сайт для сравнения времени со своим: https://time.is/"
 "compare/GMT"
 
-#: cogs/meta.py:71
-msgid ""
-"You can use the `dh!freetime` command to see when you'll get back your "
-"weapons for free"
-msgstr ""
-"Напишите `dh!freetime`, чтобы узнать, когда вам отдадут оружие бесплатно."
-
 #: cogs/meta.py:84
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
@@ -324,9 +304,8 @@ msgid ""
 "Hello again!\n"
 " I'm just gonna run a quick permissions check and will be back in a few "
 "seconds! Please wait"
-msgstr ""
-"И снова здравствуйте!\n"
-"Дайте мне секунду, я проверю разрешения и вернусь!"
+msgstr "И снова здравствуйте!\n"
+"Дайте мне секунду, я проверю права и вернусь!"
 
 #: cogs/setup_wizzard.py:51
 msgid ""
@@ -423,18 +402,6 @@ msgstr ""
 "Оно не используется.\n"
 "Можно продолжать."
 
-#: cogs/setup_wizzard.py:92
-msgid ""
-":small_orange_diamond: The permission `external_emojis` is missing.\n"
-"This is used since DHV3 to add non-standard emojis to messages. You should "
-"probably give it to me\n"
-"You could proceed without it, and bug reports will be appreciated."
-msgstr ""
-":small_orange_diamond: У меня отсутствует право на использование эмодзи с "
-"других серверов.\n"
-"Оно используется для добавления разных эмодзи в мои сообщения.\n"
-"Я могу и без него, сообщайте о багах, заранее спасибо."
-
 #: cogs/setup_wizzard.py:110
 msgid ""
 ":small_blue_diamond: The permission `change_nickname` is missing.\n"
@@ -456,111 +423,6 @@ msgstr ""
 ":small_blue_diamond: Право на отправку озвучиваемых сообщений.\n"
 "Оно необходимо в случае, если вы хотите включить параметр `tts_ducks`.\n"
 "Без этого права параметр работать не будет."
-
-#: cogs/setup_wizzard.py:121
-msgid ""
-"I'm done! <:cmd_Setup_01:439551472804429836>\n"
-"Any warning has been sent above. I suggest fixing them, then running the "
-"command again!\n"
-"If there is none, congrats! You passed the tests brightfully!\n"
-"If you are ready to continue with the setup, use the command "
-"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
-"used, ducks will spawn automatically.\n"
-"Thanks for flying DucksAir. If you have any question, we are here to help at "
-"https://discord.gg/2BksEkV"
-msgstr ""
-"Готово! <:cmd_Setup_01:439551472804429836>\n"
-"Все ошибки, возникшие в процессе, вы можете увидеть выше. Советую "
-"разобраться с ними. Когда закончите, напишите команду ещё раз.\n"
-"Если ошибок нет, то мои поздравления! Проверка успешно завершена!\n"
-"Если вы готовы продолжить настройку,  напишите `dh!setup_settings`. Если вы "
-"просто хотите начать игру, то напишите `dh!add_channel`. После отправки утки "
-"начнут появляться автоматически.\n"
-"Если у вас есть вопросы, можете задать их на нашем сервере: https://discord."
-"gg/2BksEkV"
-
-#: cogs/setup_wizzard.py:135
-msgid ""
-"Hey! Let's configure the server!\n"
-"I'll give you the most used parameters, and let you change them if you want. "
-"Any command written here is optional, and you can start playing now just by "
-"using `dh!add_channel`.\n"
-"\n"
-"**Before starting, please make sure this is the channel you want to use, and "
-"activate it with `dh!add_channel`.**\n"
-"\n"
-"**1/ Language used**:\n"
-"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
-"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
-"    \\* Another language we don't fully support yet? Help us translate "
-"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
-"    \n"
-"**2/ Ducks Per Day**:\n"
-"    This is the number of ducks that will spawn per day. They spawn a random "
-"intervals, but you can configure the number of ducks that will spawn.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"ducks_per_day XX`, where `XX` is a number.\n"
-"    \\* To prevent abuse, there is a limit that will be automatically "
-"enforced. If you need to lift it, contact my owner at the support server.\n"
-"    \n"
-"**3/ Exp Won Per Duck Killed**:\n"
-"    This is the experience won per duck killed. If your server is really "
-"popular, it might be worth it to push it up a little to make new hunters "
-"progress faster.\n"
-"    \\* Use the following command to change it, use `dh!settings set "
-"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
-"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
-"good start\n"
-"    \n"
-"**4/ Other settings**:\n"
-"    This is starting to be lengthy, so I won't go into further details here. "
-"You are probably all set and can start the game by typing `dh!add_channel`.\n"
-"    More settings can be found using `dh!settings list`\n"
-"    \n"
-"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
-msgstr ""
-"Эй, давайте начнём настройку сервера!\n"
-"Ниже вы можете видеть главные параметры и изменить их. Или просто начать "
-"игру, написав `dh!add_channel`.\n"
-"\n"
-"**Перед тем, как начать, убедитесь, что вы правда хотите использовать этот "
-"канал для игры и напишите в нём `dh!add_channel`, чтобы добавить его в игру."
-"**\n"
-"\n"
-"**1. Язык бота**:\n"
-"    *Чтобы выбрать французский, используйте `dh!settings set languge fr_FR`\n"
-"    *Чтобы выбрать испанский, используйте `dh!settings set language es_ES`\n"
-"    *Чтобы выбрать русский язык, используйте `dh!settings set language "
-"ru_RU`\n"
-"    *Тут нет желаемого языка? Помогите нам с переводом! Заходите: https://"
-"discord.gg/2BksEkV.\n"
-"\n"
-"**2. Количество уток в день**:\n"
-"    Это количество уток, которое будет появляться за день. Они появляются с "
-"разным интервалом, но их общее количество за день можно изменить.\n"
-"    *Используйте команду `dh!settings set ducks_per_day XX` (XX замените "
-"желаемым числом уток), чтобы изменить значение этого параметра.\n"
-"    *Чтобы не было злоупотребления, установлен максимальное ограничение. "
-"Если вам нужно его увеличить, напишите моему хозяину на сервере поддержки "
-"DuckHunt.\n"
-"\n"
-"**3. Кол-во очков опыта за каждую убитую утку**:\n"
-"    Это количество очков опыта, начисляемое за каждую убитую утку. Если ваш "
-"сервер очень популярный, то имеет смысл увеличить значение этого параметра, "
-"чтобы новички развивались быстрее.\n"
-"    *Используйте команду `dh!settings set exp_won_per_duck_killed XX` (XX "
-"замените желаемым количеством очков опыта), чтобы изменить значение этого "
-"параметра.\n"
-"    *Не ставьте слишком большое значение, чтобы был интерес.\n"
-"\n"
-"**4. Другие параметры**:\n"
-"    Это сообщение уже довольно длинное, поэтому пора заканчивать. Скорее "
-"всего вы уже всё настроили, запустите игру с помощью команды "
-"`dh!add_channel`.\n"
-"    Полный список параметров можно увидеть, написав команду `dh!settings "
-"list`.\n"
-"\n"
-"Спасибо, что играете со мной!<:official_Duck_01:439546719177539584>"
 
 #: cogs/shop.py:42
 msgid ""
@@ -652,16 +514,6 @@ msgstr ":champagne: У вас уже есть ружьё, что вы пытае
 msgid ":money_with_wings: You added grease in your weapon."
 msgstr ":money_with_wings: Вы смазали своё ружьё."
 
-#: cogs/shop.py:167
-msgid ""
-"This reduce jamming risks by 50 percent for a day, for only 8 exp points. "
-"It's really useful for new players. Use `dh!duckstats` to check your level "
-"and accuracy"
-msgstr ""
-"Смазывание ружья уменьшает вероятность заклинивания на 50% процентов в "
-"течение 24 часов. Хорошо для новичков. Чтобы узнать свою точность и уровень, "
-"напишите `dh!duckstats`."
-
 #: cogs/shop.py:171
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
@@ -722,14 +574,6 @@ msgstr ""
 msgid ":champagne: You already have 4-leaf clover on your weapon"
 msgstr ":champagne: У вас уже есть 4-листный клевер."
 
-#: cogs/shop.py:273
-msgid ""
-":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
-"immune to sunlight for a day."
-msgstr ""
-":money_with_wings: Вы приобрели солнцезащитные очки за 5 очков опыта! Вы "
-"защищены от солнца на один день."
-
 #: cogs/shop.py:277
 msgid ""
 ":money_with_wings: You bought brand new sunglasses, the only point of it "
@@ -737,20 +581,6 @@ msgid ""
 msgstr ""
 ":money_with_wings: Вы купили новые солнцезащитные очки, толку от этого нет, "
 "зато теперь вы круче. :cool:"
-
-#: cogs/shop.py:278
-msgid ""
-"Don't buy sunglasses if you still have them! This don't extend the time "
-"you'll have them, but still cost you some exp"
-msgstr ""
-"Не покупайте новые солнцезащитные очки, если они у вас уже есть! Вы тратите "
-"очки опыта, а время, на которое вы защищены от солнца, не увеличивается."
-
-#: cogs/shop.py:292
-msgid ""
-":money_with_wings: You have new dry clothes on you now. You look beautiful!"
-msgstr ""
-":money_with_wings: На вас теперь новая сухая одежда. Вы круто выглядите!"
 
 #: cogs/shop.py:296
 msgid ""
@@ -782,15 +612,15 @@ msgstr ""
 ":x: Да не может такого быть! У {mention} есть солнцезащитные очки! Он/она от "
 "этого защищён/ена!"
 
-#: cogs/shop.py:332 cogs/shop.py:347
+#: cogs/shop.py:346
+msgid ":champagne: You threw sand in {mention}'s weapon!"
+msgstr ":champagne: Вы кинули песок в ружьё {mention}!"
+
+#: cogs/shop.py:347
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
 "would you"
 msgstr "Оповещение сделано специально. Вы же не будете крысить, правда?"
-
-#: cogs/shop.py:346
-msgid ":champagne: You threw sand in {mention}'s weapon!"
-msgstr ":champagne: Вы кинули песок в ружьё {mention}!"
 
 #: cogs/shop.py:360
 msgid ""
@@ -807,10 +637,6 @@ msgid ""
 msgstr ""
 "Не используйте @ для указания игрока. Используйте ID пользователя или полное "
 "имя в кавычках."
-
-#: cogs/shop.py:386
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr ":ok: оружие {target} уже саботировано!"
 
 #: cogs/shop.py:391 cogs/shop.py:496
 msgid ""
@@ -843,15 +669,6 @@ msgid ""
 msgstr ""
 ":money_with_wings: Утка появится в этом канале в ближайшие 10 минут "
 "благодаря приманке, которую купил/а {mention} за 8 очков опыта."
-
-#: cogs/shop.py:476
-msgid ""
-":money_with_wings: You put some bread on the channel to attract ducks. "
-"They'll stay 20 more seconds before leaving for the rest of the day!"
-msgstr ""
-":money_with_wings: Вы положили здесь немного хлебушка, чтобы привлечь уток. "
-"Они останутся здесь ещё на 20 секунд, а затем улетят и не вернуться до конца "
-"дня!"
 
 #: cogs/shop.py:477
 msgid ""
@@ -945,7 +762,7 @@ msgid ""
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
 "[hunting accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
-"**БУМ** Вы не попали в утку, но попали **сами в себя**! Может, немного "
+"**БУМ** Вы промахнулись по утке, но попали **сами в себя**! Может, немного "
 "повернёте оружие перед следующим выстрелом? [-1 очко опыта за промах] [-2 "
 "очка опыта за несчастный случай во время охоты] [**оружие конфисковано**]"
 
@@ -954,37 +771,73 @@ msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
-"**БУМ** Вы не попали в уткк, но попали в игрока {player}! [-1 очко опыта за "
-"промах] [-2 очка опыта за несчастный случай во время охоты] [**оружие "
+"**БУМ** Вы промахнулись по утке, но попали в игрока {player}! [-1 очко опыта "
+"за промах] [-2 очка опыта за несчастный случай во время охоты] [**оружие "
 "конфисковано**]"
 
-#: cogs/user_commands.py:311
-msgid ""
-"You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
-"it back for free (check when with `!freetime`)"
-msgstr ""
-"Вы можете вернуть оружие в магазине (`dh!shop 5`) или подождать бесплатную "
-"раздачу (`dh!freetime`)."
+#: cogs/helpers/ducks.py:93 cogs/user_commands.py:317
+msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
+msgstr "**ПИУ-У** Вы промахнулись по утке! [-1 очко опыта за промах]"
+
+#: cogs/user_commands.py:351
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Тут нет уток, что вы намеревались обнять, дерево что ли?!"
+
+#: cogs/user_commands.py:370
+msgid "**Current event**"
+msgstr "**Текущее событие**"
 
 #: cogs/helpers/config.py:60
 msgid "*cries*"
-msgstr "*плачет*"
+msgstr "*кричит*"
 
 #: cogs/helpers/config.py:60
 msgid "Hello world"
-msgstr "Привет мир"
+msgstr "Привет, мир"
 
 #: cogs/helpers/config.py:60
 msgid "How are you today?"
-msgstr "Как дела сегодня?"
+msgstr "Как у вас дела?"
 
 #: cogs/helpers/config.py:60
 msgid "Please don't kill me..."
-msgstr "Пожалуйста, не убивай меня..."
+msgstr "Пожалуйста, не убивайте меня..."
+
+#: cogs/helpers/config.py:60
+msgid "Don't shoot me! I'm a fake duck!"
+msgstr "Не стреляй по мне! Я ненастоящая!"
+
+#: cogs/helpers/config.py:64
+msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка ушла. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка ушла в другой мир. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "У утки не ббыло на это времени. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:64
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Утка улетела ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка улетела. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка растворилась в пространстве и времени. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утке стало скучно и она ушла. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка не хочет быть пристреленной. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:64
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка подошла к лемонадному киоску. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:68
 msgid "a stuffed duck."
@@ -996,7 +849,7 @@ msgstr "резиновую уточку."
 
 #: cogs/helpers/config.py:68
 msgid "a vibrating duck."
-msgstr "дрожащую утку."
+msgstr "вибрирующую утку."
 
 #: cogs/helpers/config.py:68
 msgid "a pile of feathers."
@@ -1004,23 +857,19 @@ msgstr "кучу перьев."
 
 #: cogs/helpers/config.py:68
 msgid "a chewed chewing gum."
-msgstr "жеванную жевательную резинку."
+msgstr "жёванную жевательную резинку."
 
 #: cogs/helpers/config.py:68
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
-msgstr "листовку из CACAD (Коалиция Против Комитета Против Уток)"
+msgstr "листовку из ОПКПУ (Объединение Против Комитета Против Уток)"
 
 #: cogs/helpers/config.py:68
 msgid "an old shoe."
 msgstr "старый башмак."
 
 #: cogs/helpers/config.py:68
-msgid "a cow dung."
-msgstr "коровий навоз."
-
-#: cogs/helpers/config.py:68
 msgid "an expired hunting license."
-msgstr "просроченную охотничью лицензию."
+msgstr "просроченную лицензиую на охоту."
 
 #: cogs/helpers/config.py:68
 msgid "a cartridge."
@@ -1052,11 +901,11 @@ msgstr "пустую коробку от бронебойных патронов
 
 #: cogs/helpers/config.py:68
 msgid "an empty box of explosive ammo."
-msgstr "пустую коробку от разрывных патронов."
+msgstr "пустую коробку от взрывных патронов."
 
 #: cogs/helpers/config.py:68
 msgid "a four-leaf clover with only 3 left."
-msgstr "четырехлистный клевер с тремя оставшимися листьями."
+msgstr "четырёхлистный клевер без одного листика."
 
 #: cogs/helpers/config.py:68
 msgid "a broken decoy."
@@ -1072,15 +921,23 @@ msgstr "ржавую механическую утку."
 
 #: cogs/helpers/config.py:68
 msgid "a pair of sunglasses without glasses."
-msgstr "пару солнцезащитных очков без линз."
+msgstr "солнцезащитные очки без линз."
 
 #: cogs/helpers/config.py:68
 msgid "Donald's beret."
 msgstr "берет Дональда."
 
 #: cogs/helpers/config.py:68
+msgid "a half-melted peppermint."
+msgstr "наполовину расплавленную перечную мяту."
+
+#: cogs/helpers/config.py:68
+msgid "a box of Abraxo cleaner."
+msgstr "коробкк чистящего средства «Абраксо»."
+
+#: cogs/helpers/config.py:68
 msgid "a gun with banana peeled barrel."
-msgstr "ружье с разорванным стволом."
+msgstr "ружьё с разорванным стволом."
 
 #: cogs/helpers/config.py:68
 msgid "an old hunting knife."
@@ -1103,66 +960,112 @@ msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "фото золотой утки: http://tinyurl.com/hle8fjf"
 
 #: cogs/helpers/config.py:69
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "значок охотника: http://tinyurl.com/hqy7fhq"
+
+#: cogs/helpers/config.py:69
 msgid "bushes."
 msgstr "кусты."
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:70
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:70
 msgid "a fish."
 msgstr "рыбу."
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:149
+msgid "Everything is calm"
+msgstr "Всё хорошо."
+
+#: cogs/helpers/config.py:150
+msgid "Nothing is happening right now."
+msgstr "Сейчас ничего не происходит,"
+
+#: cogs/helpers/config.py:154
+msgid "Ducks are migrating"
+msgstr "Утки перемещаются."
+
+#: cogs/helpers/config.py:155
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Приготовьтесь к наплыву уток в ближайший час."
+
+#: cogs/helpers/config.py:160
+msgid "Foggy weather"
+msgstr "Туманная погода"
+
+#: cogs/helpers/config.py:166
+msgid "Steroids in the lake"
+msgstr "Стероиды в озере"
+
+#: cogs/helpers/config.py:167
+msgid ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+msgstr ""
+"Медицинская компания избавилась от стероидов, выбросив их в озеро. Утки "
+"мутировали, суперуток будет намного больше. Но будьте осторожны, не пейте ту "
+"воду."
+
+#: cogs/helpers/config.py:184
+msgid "A new florist in town"
+msgstr "Новый флорист в городе"
+
+#: cogs/helpers/config.py:190
+msgid "Mega-ducks"
+msgstr "Мегаутки"
+
+#: cogs/helpers/config.py:191
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Кто-то надул суперутку, теперь они ЕЩЁ БОЛЬШЕ!!!"
+
+#: cogs/helpers/config.py:196
+msgid "Windy weather"
+msgstr "Ветренная погода"
+
+#: cogs/helpers/config.py:212
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:220
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:228
 msgid "noob"
-msgstr "нуб"
+msgstr "новичок"
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:236
 msgid "trainee"
-msgstr "стажер"
+msgstr "стажёр"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:252
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/helpers/config.py:291
+#: cogs/helpers/config.py:292
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/helpers/config.py:299
-msgid "inside out duck turner"
-msgstr "выворачиватель уток наизнанку"
-
-#: cogs/helpers/config.py:323
+#: cogs/helpers/config.py:324
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/helpers/config.py:355
+#: cogs/helpers/config.py:356
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:371
-msgid "predator"
-msgstr "хищник"
-
-#: cogs/helpers/config.py:507
+#: cogs/helpers/config.py:508
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/helpers/config.py:515
+#: cogs/helpers/config.py:516
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/helpers/config.py:547
+#: cogs/helpers/config.py:548
 msgid "old noob"
 msgstr "старый нуб"
 

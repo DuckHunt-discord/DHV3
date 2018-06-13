@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-03 18:21+0000\n"
+"POT-Creation-Date: 2018-06-08 14:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,12 +108,12 @@ msgstr ""
 "gildebeheerders."
 
 #: cogs/admin_commands.py:146 cogs/admin_commands.py:172
-msgid "Done. User removed from the database, if it was in."
+msgid "Done. User removed from the database, if he was in."
 msgstr ""
-"Klaar. Gebruiker verwijderd uit de database, als deze zich hierin bevond."
+"Klaar. Gebruiker verwijderd uit de database, als hij zich hierin bevond."
 
 #: cogs/admin_commands.py:159
-msgid "Done. All the channel data was removed."
+msgid "Done. All channel data was removed."
 msgstr "Klaar. Alle kanaaldata is verwijderd."
 
 #: cogs/admin_commands.py:184
@@ -194,8 +194,8 @@ msgstr ""
 "aantal dat ik kan opslaan."
 
 #: cogs/experience_related_commands.py:28
-msgid ":ok:, they now have {newexp} exp points!"
-msgstr ":ok:, ze hebben nu {newexp} exp punten!"
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ":ok:, hij/zij heeft nu {newexp} exp punten!"
 
 #: cogs/experience_related_commands.py:41
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
@@ -275,8 +275,8 @@ msgstr ""
 
 #: cogs/meta.py:71
 msgid ""
-"You can use the `dh!freetime` command to see when you'll get back your "
-"weapons for free"
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
 msgstr ""
 "Je kunt het `dh!freetime` commando gebruiken om te zien wanneer je je wapens "
 "gratis terug krijgt"
@@ -446,12 +446,13 @@ msgid ""
 ":small_orange_diamond: The permission `external_emojis` is missing.\n"
 "This is used since DHV3 to add non-standard emojis to messages. You should "
 "probably give it to me\n"
-"You could proceed without it, and bug reports will be appreciated."
+"You could proceed without it, but bug reports would be appreciated."
 msgstr ""
-":small_orange_diamond: de toestemming `external_emojis` ontbreekt.\n"
-"Dit wordt gebruikt sinds DHV3 om niet-standaard emoji's aan berichten toe te "
+":small_orange_diamond: De permissie `external_emojis` mist.\n"
+"Dit wordt gebruikt sinds DHV3 om niet-standaard-emoji's aan berichten toe te "
 "voegen. Je zou het waarschijnlijk aan mij moeten geven\n"
-"Je zou zonder het kunnen gaan, en foutenrapporten zullen worden gewaardeerd."
+"Je zou er zonder mee door kunnen gaan, maar foutrapporten zouden worden "
+"gewaardeerd."
 
 #: cogs/setup_wizzard.py:110
 msgid ""
@@ -481,7 +482,7 @@ msgid ""
 "I'm done! <:cmd_Setup_01:439551472804429836>\n"
 "Any warning has been sent above. I suggest fixing them, then running the "
 "command again!\n"
-"If there is none, congrats! You passed the tests brightfully!\n"
+"If there is none, congrats! You passed the tests brilliantly!\n"
 "If you are ready to continue with the setup, use the command "
 "`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
 "used, ducks will spawn automatically.\n"
@@ -489,8 +490,8 @@ msgid ""
 "https://discord.gg/2BksEkV"
 msgstr ""
 "Ik ben klaar! <:cmd_Setup_01:439551472804429836>\n"
-"Mogelijke waarschuwingen zijn hierboven verzonden. Ik stel voor ze te fixen "
-"en het commando opnieuw uit te voeren!\n"
+"Mogelijke waarschuwingen zijn hierboven verzonden. Ik stel voor ze op te "
+"lossen en het commando opnieuw uit te voeren!\n"
 "Als er geen meer zijn, gefeliciteerd! Je hebt de tests met glans doorstaan!\n"
 "Als je klaar bent om door te gaan met de installatie, gebruik je het "
 "commando `dh!setup_settings`. Als je alleen maar wil spelen, gebruik dan "
@@ -515,8 +516,8 @@ msgid ""
 "DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
 "    \n"
 "**2/ Ducks Per Day**:\n"
-"    This is the number of ducks that will spawn per day. They spawn a random "
-"intervals, but you can configure the number of ducks that will spawn.\n"
+"    This is the number of ducks that will spawn per day. They spawn at "
+"random intervals, but you can configure the number of ducks that will spawn.\n"
 "    \\* Use the following command to change it, use `dh!settings set "
 "ducks_per_day XX`, where `XX` is a number.\n"
 "    \\* To prevent abuse, there is a limit that will be automatically "
@@ -554,7 +555,7 @@ msgstr ""
 "    \n"
 "**2/ Eenden Per Dag**:\n"
 "    Dit is het aantal eenden dat per dag zal spawnen. Ze spawnen in "
-"willekeurige intervallen, maar je kunt het aantal eenden dat zal spawnen "
+"willekeurige intervallen, maar je kan het aantal eenden dat zal spawnen "
 "configureren.\n"
 "    \\* Gebruik het volgende commando om het te veranderen, gebruik "
 "`dh!settings set ducks_per_day XX`, waarbij`XX` een getal is.\n"
@@ -678,7 +679,7 @@ msgstr ":money_with_wings: Je hebt vet in je wapen toegevoegd."
 
 #: cogs/shop.py:167
 msgid ""
-"This reduce jamming risks by 50 percent for a day, for only 8 exp points. "
+"This reduces jamming risks by 50 percent for a day, for only 8 exp points. "
 "It's really useful for new players. Use `dh!duckstats` to check your level "
 "and accuracy"
 msgstr ""
@@ -753,11 +754,11 @@ msgstr ":champagne: Je hebt al een klavertje vier op je wapen zitten"
 
 #: cogs/shop.py:273
 msgid ""
-":money_with_wings: You bought a pair of sunglasses for 5 exp! You're now "
-"immune to sunlight for a day."
+":money_with_wings: You bought a pair of sunglasses for 5 exp! You now won't "
+"be dazzled for a day."
 msgstr ""
-":money_with_wings: Je hebt een zonnebril gekocht voor 5 exp! Je bent nu een "
-"dag immuun voor zonlicht."
+":money_with_wings: Je hebt een zonnebril gekocht voor 5 exp! Je zult nu een "
+"dag lang niet worden verblind."
 
 #: cogs/shop.py:277
 msgid ""
@@ -769,17 +770,16 @@ msgstr ""
 
 #: cogs/shop.py:278
 msgid ""
-"Don't buy sunglasses if you still have them! This don't extend the time "
-"you'll have them, but still cost you some exp"
+"Don't buy sunglasses if you still have some! This doesn't extend the time "
+"you won't be dazzled, but still costs you some exp"
 msgstr ""
-"Koop geen zonnebril als je er nog een hebt! Dit verlengt niet de tijd dat je "
-"ze hebt, maar kost je nog steeds wat exp"
+"Koop geen zonnebril als je er nog één hebt! Dit verlengt niet de tijd dat je "
+"niet verblind zult worden, maar kost je alsnog wat exp"
 
 #: cogs/shop.py:292
-msgid ""
-":money_with_wings: You have new dry clothes on you now. You look beautiful!"
+msgid ":money_with_wings: You're wearing new dry clothes. You look fantastic!"
 msgstr ""
-":money_with_wings: Je hebt nu nieuwe droge kleren aan. Je ziet er prachtig "
+":money_with_wings: Je draagt nieuwe, droge kleding. Je ziet er fantastisch "
 "uit!"
 
 #: cogs/shop.py:296
@@ -808,11 +808,11 @@ msgstr ""
 
 #: cogs/shop.py:312
 msgid ""
-"Next time someone sabotages you, just shot, it won't do much damage but to "
-"your reputation"
+"Next time someone sabotages you, just shot. It won't do much damage except "
+"for hurting your reputation"
 msgstr ""
 "De volgende keer dat iemand je saboteert, schiet je gewoon, het zal het niet "
-"veel schade aanrichten aan de persoon, maar wel aan je reputatie"
+"veel schade aanrichten behalve aan je reputatie"
 
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
@@ -836,10 +836,10 @@ msgstr ""
 ":money_with_wings: Je hebt {mention} verblind! Hun volgende schot verliest "
 "50% nauwkeurigheid!"
 
-#: cogs/shop.py:332 cogs/shop.py:347
+#: cogs/shop.py:332
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
-"would you"
+"would you?"
 msgstr ""
 "De vermelding is hier met opzet. Je zou dit toch zeker niet achter hun rug "
 "doen?"
@@ -847,6 +847,14 @@ msgstr ""
 #: cogs/shop.py:346
 msgid ":champagne: You threw sand in {mention}'s weapon!"
 msgstr ":champagne: Je gooide zand in het wapen van {mention}!"
+
+#: cogs/shop.py:347
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr ""
+"De vermelding is hier met opzet. Je zou dit toch zeker niet achter hun rug "
+"doen?"
 
 #: cogs/shop.py:360
 msgid ""
@@ -876,8 +884,8 @@ msgstr ""
 "gebruikers of de volledige gebruikersnaam geven in \"aanhalingstekens\""
 
 #: cogs/shop.py:386
-msgid ":ok: {target} weapon is already sabotaged!"
-msgstr ":ok: {target} wapen is al gesaboteerd!"
+msgid ":ok: {target}'s weapon is already sabotaged!"
+msgstr ":ok: {target}'s wapen is al gesaboteerd!"
 
 #: cogs/shop.py:391 cogs/shop.py:496
 msgid ""
@@ -922,7 +930,7 @@ msgstr ""
 #: cogs/shop.py:476
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
-"They'll stay 20 more seconds before leaving for the rest of the day!"
+"They'll stay 20 seconds longer before leaving for the rest of the day!"
 msgstr ""
 ":money_with_wings: Je hebt wat brood op het kanaal gelegd om eenden aan te "
 "trekken. Ze blijven gedurende de hele dag 20 seconden langer aanwezig "
@@ -987,6 +995,14 @@ msgstr ""
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Je wapen is gesaboteerd, bedank {assaillant} voor deze slechte grap."
 
+#: cogs/user_commands.py:158
+msgid ""
+"** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
+msgstr ""
+"** MAGAZIJN LEEG ** | Munitie in wapen: {balles_actuelles} / {balles_max} | "
+"Resterende magazijnen: {chargeurs_actuels} / {chargeurs_max}"
+
 #: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Je wapen is zojuist geblokkeerd, herlaad het om het te deblokkeren."
@@ -1027,11 +1043,11 @@ msgstr ""
 
 #: cogs/user_commands.py:311
 msgid ""
-"You can recover your weapon in the store (`dh!shop 5`) or wait until you get "
-"it back for free (check when with `!freetime`)"
+"You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
+"get it back for free (check when with `!freetime`)"
 msgstr ""
-"Je kan je wapen weer terugkrijgen in de winkel  (`dh!shop 5`) of wacht "
-"totdat je hem gratis terugkrijgt (controleer wanneer met`!freetime`)"
+"Je kan je wapen weer terugkopen in de winkel  (`dh!shop 5`) of wacht totdat "
+"je hem gratis terugkrijgt (controleer wanneer met`!freetime`)"
 
 #: cogs/helpers/ducks.py:93 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
@@ -1062,7 +1078,7 @@ msgid "Please don't kill me..."
 msgstr "Dood me alsjeblieft niet..."
 
 #: cogs/helpers/config.py:60
-msgid "Me too, I love you!"
+msgid "I love you too!"
 msgstr "Ik hou ook van jou!"
 
 #: cogs/helpers/config.py:60
@@ -1134,12 +1150,12 @@ msgid "a spring thingy."
 msgstr "een veerachtig ding."
 
 #: cogs/helpers/config.py:68
-msgid "a cow dung."
-msgstr "een koeienbel."
+msgid "cow dung."
+msgstr "koeienvlaai."
 
 #: cogs/helpers/config.py:68
-msgid "a dog dirt."
-msgstr "een hondendrol."
+msgid "dog poop."
+msgstr "hondenpoep."
 
 #: cogs/helpers/config.py:68
 msgid "an expired hunting license."
@@ -1241,47 +1257,51 @@ msgstr "een jagerspin: http://tinyurl.com/hqy7fhq"
 msgid "bushes."
 msgstr "struiken."
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:70
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:70
 msgid "a fish."
 msgstr "een vis."
 
-#: cogs/helpers/config.py:148
+#: cogs/helpers/config.py:70
+msgid "even more bushes."
+msgstr "nog meer struiken."
+
+#: cogs/helpers/config.py:149
 msgid "Everything is calm"
 msgstr "Alles is rustig"
 
-#: cogs/helpers/config.py:149
+#: cogs/helpers/config.py:150
 msgid "Nothing is happening right now."
 msgstr "Er gebeurt op dit moment niets."
 
-#: cogs/helpers/config.py:153
+#: cogs/helpers/config.py:154
 msgid "Ducks are migrating"
 msgstr "Eenden zijn aan het migreren"
 
-#: cogs/helpers/config.py:154
+#: cogs/helpers/config.py:155
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Bereid je voor om meer eenden te zien in het komende uur."
 
-#: cogs/helpers/config.py:159
+#: cogs/helpers/config.py:160
 msgid "Foggy weather"
 msgstr "Mistig weer"
 
-#: cogs/helpers/config.py:160
+#: cogs/helpers/config.py:161
 msgid ""
-"It's harder to see ducks killed. You'll need a few more seconds to know if "
+"It's harder to see killed ducks. You'll need a few more seconds to know if "
 "you missed or not."
 msgstr ""
-"Het is moeilijker om eenden gedood zien worden. Je hebt een paar seconden "
-"extra nodig om te weten of je gemist hebt of niet."
+"Het is moeilijker om gedode eenden te zien. Je hebt een paar seconden extra "
+"nodig om te weten of je gemist hebt of niet."
 
-#: cogs/helpers/config.py:165
+#: cogs/helpers/config.py:166
 msgid "Steroids in the lake"
 msgstr "Steroïden in het meer"
 
-#: cogs/helpers/config.py:166
+#: cogs/helpers/config.py:167
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1291,225 +1311,225 @@ msgstr ""
 "zijn gemuteerd en je zult veel meer super eenden zien. Maar wees voorzichtig "
 "en drink dat water niet."
 
-#: cogs/helpers/config.py:171
+#: cogs/helpers/config.py:172
 msgid "Safety class canceled"
 msgstr "Veiligheidsles geannuleerd"
 
-#: cogs/helpers/config.py:172
+#: cogs/helpers/config.py:173
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
 "De veiligheidsles is geannuleerd, pas op dat je niet op andere jagers "
 "schiet!"
 
-#: cogs/helpers/config.py:177
-msgid "Connexion problems"
+#: cogs/helpers/config.py:178
+msgid "Connection problems"
 msgstr "Verbindingsproblemen"
 
-#: cogs/helpers/config.py:178
+#: cogs/helpers/config.py:179
 msgid ""
-"Ducks cant use the computer due to connexion problems, and there will be "
+"Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
 msgstr ""
-"Eenden kunnen de computer niet gebruiken vanwege problemen met de "
-"verbinding, en er zullen er minder zijn totdat het is hersteld"
+"Eenden kunnen je computer niet vinden vanwege problemen met de verbinding, "
+"en er zullen er minder zijn totdat het is gerepareerd"
 
-#: cogs/helpers/config.py:183
+#: cogs/helpers/config.py:184
 msgid "A new florist in town"
 msgstr "Een nieuwe bloemist in de stad"
 
-#: cogs/helpers/config.py:184
+#: cogs/helpers/config.py:185
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
-"check them !"
+"check them out!"
 msgstr ""
-"Er is een bloemist in de stad geopend, en je kunt nu betere klavertjesvier "
-"vinden. Ga ze bekijken!"
+"Er is een bloemistenwinkel in de stad geopend, en je kunt nu betere "
+"klavertjesvier vinden. Ga ze bekijken!"
 
-#: cogs/helpers/config.py:189
+#: cogs/helpers/config.py:190
 msgid "Mega-ducks"
 msgstr "Mega-eenden"
 
-#: cogs/helpers/config.py:190
+#: cogs/helpers/config.py:191
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Iemand heeft een super eend opgeblazen, en nu zijn ze NOG GROTER!!"
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:196
 msgid "Windy weather"
 msgstr "Winderig weer"
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:197
 msgid "Bullets are deflected by some strong wind"
 msgstr "Kogels worden afgebogen door de sterke wind"
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:212
 msgid "public danger"
 msgstr "publiek gevaar"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:220
 msgid "tourist"
 msgstr "toerist"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:228
 msgid "noob"
 msgstr "noob"
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:236
 msgid "trainee"
 msgstr "stagiair"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:244
 msgid "duck misser"
 msgstr "eendenmisser"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:252
 msgid "member of the Comitee Against Ducks"
 msgstr "lid van het Comité Tegen Eenden"
 
-#: cogs/helpers/config.py:259
+#: cogs/helpers/config.py:260
 msgid "duck hater"
 msgstr "eendenhater"
 
-#: cogs/helpers/config.py:267
+#: cogs/helpers/config.py:268
 msgid "duck pest"
 msgstr "eendenplager"
 
-#: cogs/helpers/config.py:275
+#: cogs/helpers/config.py:276
 msgid "duck hassler"
 msgstr "eendenhinderaar"
 
-#: cogs/helpers/config.py:283
+#: cogs/helpers/config.py:284
 msgid "duck plucker"
 msgstr "eendenplukker"
 
-#: cogs/helpers/config.py:291
+#: cogs/helpers/config.py:292
 msgid "hunter"
 msgstr "jager"
 
-#: cogs/helpers/config.py:299
-msgid "inside out duck turner"
+#: cogs/helpers/config.py:300
+msgid "duck inside out turner"
 msgstr "eenden-binnenstebuitendraaier"
 
-#: cogs/helpers/config.py:307
+#: cogs/helpers/config.py:308
 msgid "duck clobber"
 msgstr "eendenomklemmer"
 
-#: cogs/helpers/config.py:315
+#: cogs/helpers/config.py:316
 msgid "duck chewer"
 msgstr "eendenkauwer"
 
-#: cogs/helpers/config.py:323
+#: cogs/helpers/config.py:324
 msgid "duck eater"
 msgstr "eendeneter"
 
-#: cogs/helpers/config.py:331
+#: cogs/helpers/config.py:332
 msgid "duck flattener"
 msgstr "eenden-platmaker"
 
-#: cogs/helpers/config.py:339
+#: cogs/helpers/config.py:340
 msgid "duck disassembler"
 msgstr "eenden-uit-elkaar-haler"
 
-#: cogs/helpers/config.py:347
+#: cogs/helpers/config.py:348
 msgid "duck demolisher"
 msgstr "eendensloper"
 
-#: cogs/helpers/config.py:355
+#: cogs/helpers/config.py:356
 msgid "duck killer"
 msgstr "eendendoder"
 
-#: cogs/helpers/config.py:363
+#: cogs/helpers/config.py:364
 msgid "duck skinner"
 msgstr "eendenvilder"
 
-#: cogs/helpers/config.py:371
-msgid "predator"
-msgstr "predator"
+#: cogs/helpers/config.py:372
+msgid "duck predator"
+msgstr "eenden-rover"
 
-#: cogs/helpers/config.py:379
+#: cogs/helpers/config.py:380
 msgid "duck chopper"
 msgstr "eendenhakker"
 
-#: cogs/helpers/config.py:387
+#: cogs/helpers/config.py:388
 msgid "duck decorticator"
 msgstr "eendenverscheurder"
 
-#: cogs/helpers/config.py:395
+#: cogs/helpers/config.py:396
 msgid "duck fragger"
 msgstr "eendenfragger"
 
-#: cogs/helpers/config.py:403
+#: cogs/helpers/config.py:404
 msgid "duck shatterer"
 msgstr "eendenbreker"
 
-#: cogs/helpers/config.py:411
+#: cogs/helpers/config.py:412
 msgid "duck smasher"
 msgstr "eendenverpletteraar"
 
-#: cogs/helpers/config.py:419
+#: cogs/helpers/config.py:420
 msgid "duck breaker"
 msgstr "eendenbreker"
 
-#: cogs/helpers/config.py:427
+#: cogs/helpers/config.py:428
 msgid "duck wrecker"
 msgstr "eendenverwoester"
 
-#: cogs/helpers/config.py:435
+#: cogs/helpers/config.py:436
 msgid "duck impaler"
 msgstr "eendenspieser"
 
-#: cogs/helpers/config.py:443
+#: cogs/helpers/config.py:444
 msgid "duck eviscerator"
 msgstr "eendenontleder"
 
-#: cogs/helpers/config.py:451
+#: cogs/helpers/config.py:452
 msgid "ducks terror"
 msgstr "eendenterreur"
 
-#: cogs/helpers/config.py:459
+#: cogs/helpers/config.py:460
 msgid "duck exploder"
 msgstr "eendenontploffer"
 
-#: cogs/helpers/config.py:467
+#: cogs/helpers/config.py:468
 msgid "duck destructor"
 msgstr "eendenvernietiger"
 
-#: cogs/helpers/config.py:475
+#: cogs/helpers/config.py:476
 msgid "duck blaster"
 msgstr "eendenblaster"
 
-#: cogs/helpers/config.py:483
+#: cogs/helpers/config.py:484
 msgid "duck pulverizer"
 msgstr "eendenverpulzeraar"
 
-#: cogs/helpers/config.py:491
+#: cogs/helpers/config.py:492
 msgid "duck disintegrator"
 msgstr "eendenhakmachine"
 
-#: cogs/helpers/config.py:499
+#: cogs/helpers/config.py:500
 msgid "duck atomizer"
 msgstr "eendenverstuiver"
 
-#: cogs/helpers/config.py:507
+#: cogs/helpers/config.py:508
 msgid "duck annihilator"
 msgstr "eendenuitroeier"
 
-#: cogs/helpers/config.py:515
+#: cogs/helpers/config.py:516
 msgid "serial duck killer"
 msgstr "serie-eendenmoordenaar"
 
-#: cogs/helpers/config.py:523
+#: cogs/helpers/config.py:524
 msgid "duck genocider"
 msgstr "eendengenocide-veroorzaker"
 
-#: cogs/helpers/config.py:531
-msgid "unemployed due to extinction of the duck specie"
+#: cogs/helpers/config.py:532
+msgid "unemployed due to extinction of the duck species"
 msgstr "werkloos vanwege de uitsterving van de eendensoort"
 
-#: cogs/helpers/config.py:539
+#: cogs/helpers/config.py:540
 msgid "duck toaster"
 msgstr "eendentoaster"
 
-#: cogs/helpers/config.py:547
+#: cogs/helpers/config.py:548
 msgid "old noob"
 msgstr "oude noob"
 
@@ -1592,16 +1612,16 @@ msgstr ""
 
 #: cogs/helpers/ducks.py:214
 msgid ""
-":heart: You try to hug the duck, but he knows you killed his brother, so he "
-"flew away from you, back in the pond! [-2 exp]"
+":heart: You try to hug the duck, but it knows you killed its brother, so it "
+"fled from you and flew back into the pond![-2 exp]"
 msgstr ""
 ":heart: Je probeert de eend te omhelzen, maar hij weet dat je zijn broer "
-"hebt gedood, dus vloog hij weg van jou, terug de vijver in! [-2 exp]"
+"hebt gedood, dus vloog hij weg van je, terug de vijver in![-2 exp]"
 
 #: cogs/helpers/ducks.py:216
 msgid ""
-":heart: You try to hug the duck, but he saw the weapon you hid behind your "
-"back, and flew away from you, back in the pond! [-2 exp]"
+":heart: You try to hug the duck, but it saw the weapon you hid behind your "
+"back, so it fled from you and flew back into the pond! [-2 exp]"
 msgstr ""
 ":heart: Je probeert de eend te omhelzen, maar hij zag het wapen dat je "
 "verborgen had achter je rug, en vloog weg van je, terug de vijver in! [-2 "
@@ -1642,8 +1662,10 @@ msgstr ""
 "zal natuurlijk niet werken, en je verloor 1 exp voor dit gemiste schot"
 
 #: cogs/helpers/ducks.py:439
-msgid "The baby duck left looking for some sleep ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "De baby-eend vertrok op zoek naar wat slaap ·°'\\`'°-.,¸¸.·°'\\`"
+msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"De babyeend is weggegaan om ergens een klein dutje te gaan doen ·°'\\`'°-."
+",¸¸.·°'\\`"
 
 #: cogs/helpers/ducks.py:457
 msgid ""
