@@ -44,6 +44,7 @@ $translators                    = array(
 );
 $bug_hunters                    = array(
     251996890369884161, // Subtleknifewielder#1927
+    282268617725444097, // 187#4114
 );
 $proficients                    = array(
     174670292994621440, // sholan#0922
