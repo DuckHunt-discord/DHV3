@@ -26,15 +26,17 @@ class Api:
         """
         A simple API request to get the number of ducks spawned, including the number of super ducks
 
-        :return: [current milis in unix (epoch) time, number of normal ducks, number of super ducks]
+        :return: [current milis in unix (epoch) time, number of normal ducks, number of super ducks, number of babies, number of moad]
         """
         bot.logger.debug("[API] Request for ducks_spawned!")
         await bot.wait_until_ready()
 
         total_ducks_spawned = len(bot.ducks_spawned)
         super_ducks_spawned = sum(isinstance(d, ducks.SuperDuck) for d in bot.ducks_spawned)
+        baby_ducks_spawned = sum(isinstance(d, ducks.BabyDuck) for d in bot.ducks_spawned)
+        moad_spawned = sum(isinstance(d, ducks.MotherOfAllDucks) for d in bot.ducks_spawned)
 
-        res = [int(time.time() * 1000), total_ducks_spawned - super_ducks_spawned, super_ducks_spawned]
+        res = [int(time.time() * 1000), total_ducks_spawned - super_ducks_spawned, super_ducks_spawned, baby_ducks_spawned, moad_spawned]
 
         return web.json_response(res)
 

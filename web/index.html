@@ -40,15 +40,17 @@
                 // longer than 20
 
                 // add the point
-                // console.log(point, [point[0], point[1]]);
+                console.log(point);
 
 
                 ducks_spawned.series[0].addPoint([point[0], point[1]], false, shift);
                 ducks_spawned.series[1].addPoint([point[0], point[2]], true, shift);
+                ducks_spawned.series[2].addPoint([point[0], point[3]], true, shift);
+                ducks_spawned.series[3].addPoint([point[0], point[4]], true, shift);
 
 
                 // call it again after one second
-                setTimeout(ducks_spawned_update, 5000);
+                setTimeout(ducks_spawned_update, 4000);
             },
             cache: false
         });
@@ -240,6 +242,12 @@
                 data: []
             }, {
                 name: 'Super ducks',
+                data: []
+            }, {
+                name: 'Baby ducks',
+                data: []
+            }, {
+                name: 'MOADs',
                 data: []
             }]
         });
