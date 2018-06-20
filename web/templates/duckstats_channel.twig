@@ -92,6 +92,14 @@
 </head>
 <body>
 
+<script>
+    function imgError(image) {
+        image.onerror = "";
+        image.src = "https://discordapp.com/assets/dd4dbc0016779df1378e7812eabaa04d.png";
+        return true;
+    }
+</script>
+
 
 <h1>DuckHunt TopScores for #{{ channel_name | escape }}</h1>
 
@@ -404,7 +412,7 @@
     <tbody>
     {% for player in players %}
         <tr>
-            <td><img align="center" class="profile_picture" src="{{ player.avatar_url|replace({'?size=1024': '?size=64'}) }}" /> &nbsp  <a href="duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}">{{ player.name|escape }}</a></td>
+            <td><img align="center" class="profile_picture" src="{{ player.avatar_url|replace({'?size=1024': '?size=64'}) }}" onerror="imgError(this);"/> &nbsp  <a href="duckstats.php?cid={{ channel_id }}&pid={{ player.id_ }}">{{ player.name|escape }}</a></td>
             <td>{{ player.exp }}</td>
             <td>{{ player.killed_ducks }}</td>
             <td>{{ (player.exp and player.killed_ducks ? player.exp / player.killed_ducks : 0)| number_format(2, '.', ',') }}</td>
