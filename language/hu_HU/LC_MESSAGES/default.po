@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-13 14:46+0000\n"
+"POT-Creation-Date: 2018-06-20 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,331 +81,331 @@ msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "*cries*"
 msgstr "*sír*"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Hello world"
 msgstr "Hello világ"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "How are you today?"
 msgstr "Hogy vagy ma? "
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Please don't kill me..."
 msgstr "Kérlek ne ölj meg... "
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:71
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elment. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:72
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa nem akarta, hogy lelőjék. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:72
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa felsétált a limonádéstandra. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a stuffed duck."
 msgstr "egy kitömött kacsa."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a rubber ducky."
 msgstr "egy gumikacsa."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a vibrating duck."
 msgstr "egy kacsavibrátor."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a pile of feathers."
 msgstr "egy tollkupac."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a chewed chewing gum."
 msgstr "egy megrágott rágógumi."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "egy szórólap a KKEEtől (Koalíció a Kacsaellenes Egyesület Ellen)."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "an old shoe."
 msgstr "egy régi bakancs."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a spring thingy."
 msgstr "egy rugószerűség."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "an expired hunting license."
 msgstr "egy lejárt vadászliszensz."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cartridge."
 msgstr "egy patron."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cigarette butt."
 msgstr "egy cigarettavég."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a used condom."
 msgstr "egy használt óvszer."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken sight."
 msgstr "egy törött látcső."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken infrared detector."
 msgstr "egy törött infravörös detektor."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a bent silencer."
 msgstr "egy görbe hangtompító."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of AP ammo."
 msgstr "egy üres AP muníciósláda."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of explosive ammo."
 msgstr "egy üres robbanó muníciósláda."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a four-leaf clover with only 3 left."
 msgstr "egy négylevelű lóhere, de csak 3 levéllel."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken decoy."
 msgstr "egy törött csapda."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken mirror."
 msgstr "egy törött tükör."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a rusty mechanical duck."
 msgstr "egy rozsdás robotkacsa."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a pair of sunglasses without glasses."
 msgstr "egy napszemüveg üveg nélkül."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "Donald's beret."
 msgstr "Donald kacsa svájcisapkája."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a half-melted peppermint."
 msgstr "félig megrágcsált borsmenta."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a box of Abraxo cleaner."
 msgstr "egy Abraxo tiszítós doboz."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "a gun with banana peeled barrel."
 msgstr "egy fegyver egy banánnal a csövén."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting knife."
 msgstr "egy régi vadászkés."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "egy régi videófelvétel: http://tinyurl.com/zbejktu"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "egy régi vadászfotó: http://tinyurl.com/hmn4r88"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "egy régi képeslap: http://tinyurl.com/hbnkpzr"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "egy aranykacsa fotója: http://tinyurl.com/hle8fjf"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr "egy vadászjelvény: http://tinyurl.com/hqy7fhq"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "bushes."
 msgstr "bokrok."
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY "
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "a fish."
 msgstr "egy hal."
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:171
 msgid "public danger"
 msgstr "közveszélyes "
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:172
 msgid "tourist"
 msgstr "turista "
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:173
 msgid "noob"
 msgstr "pancser "
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:174
 msgid "trainee"
 msgstr "újonc "
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:175
 msgid "duck misser"
 msgstr "kacsatévesztő"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:176
 msgid "member of the Comitee Against Ducks"
 msgstr "tagja a Kacsaellenes Egyesületnek"
 
-#: cogs/helpers/config.py:260
+#: cogs/helpers/config.py:177
 msgid "duck hater"
 msgstr "kacsautáló"
 
-#: cogs/helpers/config.py:268
+#: cogs/helpers/config.py:178
 msgid "duck pest"
 msgstr "a kacsák átka"
 
-#: cogs/helpers/config.py:276
+#: cogs/helpers/config.py:179
 msgid "duck hassler"
 msgstr "kacsavágó"
 
-#: cogs/helpers/config.py:284
+#: cogs/helpers/config.py:180
 msgid "duck plucker"
 msgstr "kacsatépő"
 
-#: cogs/helpers/config.py:292
+#: cogs/helpers/config.py:181
 msgid "hunter"
 msgstr "vadász"
 
-#: cogs/helpers/config.py:308
+#: cogs/helpers/config.py:183
 msgid "duck clobber"
 msgstr "kacsáknak kesztyűbe dudálástanító"
 
-#: cogs/helpers/config.py:316
+#: cogs/helpers/config.py:184
 msgid "duck chewer"
 msgstr "kacsa... bagózó?"
 
-#: cogs/helpers/config.py:324
+#: cogs/helpers/config.py:185
 msgid "duck eater"
 msgstr "kacsaevő"
 
-#: cogs/helpers/config.py:332
+#: cogs/helpers/config.py:186
 msgid "duck flattener"
 msgstr "kacsakalapácsoló"
 
-#: cogs/helpers/config.py:340
+#: cogs/helpers/config.py:187
 msgid "duck disassembler"
 msgstr "kacsaszétszedő"
 
-#: cogs/helpers/config.py:348
+#: cogs/helpers/config.py:188
 msgid "duck demolisher"
 msgstr "kacsapusztító"
 
-#: cogs/helpers/config.py:356
+#: cogs/helpers/config.py:189
 msgid "duck killer"
 msgstr "kacsaölő"
 
-#: cogs/helpers/config.py:364
+#: cogs/helpers/config.py:190
 msgid "duck skinner"
 msgstr "kacsanyúzó"
 
-#: cogs/helpers/config.py:380
+#: cogs/helpers/config.py:192
 msgid "duck chopper"
 msgstr "kacsacafatoló"
 
-#: cogs/helpers/config.py:388
+#: cogs/helpers/config.py:193
 msgid "duck decorticator"
 msgstr "kacsahámozó"
 
-#: cogs/helpers/config.py:396
+#: cogs/helpers/config.py:194
 msgid "duck fragger"
 msgstr "kacsadaraboló"
 
-#: cogs/helpers/config.py:404
+#: cogs/helpers/config.py:195
 msgid "duck shatterer"
 msgstr "kacsazúzó"
 
-#: cogs/helpers/config.py:412
+#: cogs/helpers/config.py:196
 msgid "duck smasher"
 msgstr "kacsaütő"
 
-#: cogs/helpers/config.py:420
+#: cogs/helpers/config.py:197
 msgid "duck breaker"
 msgstr "kacsatörő"
 
-#: cogs/helpers/config.py:428
+#: cogs/helpers/config.py:198
 msgid "duck wrecker"
 msgstr "kacsaroncsoló"
 
-#: cogs/helpers/config.py:436
+#: cogs/helpers/config.py:199
 msgid "duck impaler"
 msgstr "kacsák karóba húzója"
 
-#: cogs/helpers/config.py:444
+#: cogs/helpers/config.py:200
 msgid "duck eviscerator"
 msgstr "kacsabelező"
 
-#: cogs/helpers/config.py:452
+#: cogs/helpers/config.py:201
 msgid "ducks terror"
 msgstr "kacsák réme"
 
-#: cogs/helpers/config.py:460
+#: cogs/helpers/config.py:202
 msgid "duck exploder"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:468
+#: cogs/helpers/config.py:203
 msgid "duck destructor"
 msgstr "kacsasemmisítő"
 
-#: cogs/helpers/config.py:476
+#: cogs/helpers/config.py:204
 msgid "duck blaster"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:484
+#: cogs/helpers/config.py:205
 msgid "duck pulverizer"
 msgstr "kacsaporlasztó"
 
-#: cogs/helpers/config.py:492
+#: cogs/helpers/config.py:206
 msgid "duck disintegrator"
 msgstr "kacsaaprító"
 
-#: cogs/helpers/config.py:500
+#: cogs/helpers/config.py:207
 msgid "duck atomizer"
 msgstr "kacsaatomizáló"
 
-#: cogs/helpers/config.py:508
+#: cogs/helpers/config.py:208
 msgid "duck annihilator"
 msgstr "a kacsákat földdel egyenlővé tevő"
 
-#: cogs/helpers/config.py:516
+#: cogs/helpers/config.py:209
 msgid "serial duck killer"
 msgstr "sorozatos kacsagyilkos"
 
-#: cogs/helpers/config.py:524
+#: cogs/helpers/config.py:210
 msgid "duck genocider"
 msgstr "kacsairtó"
 
-#: cogs/helpers/config.py:540
+#: cogs/helpers/config.py:212
 msgid "duck toaster"
 msgstr "kacsapirító"
 
-#: cogs/helpers/config.py:548
+#: cogs/helpers/config.py:213
 msgid "old noob"
 msgstr "nyomi veterán"
 

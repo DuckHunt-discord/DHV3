@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-13 14:46+0000\n"
+"POT-Creation-Date: 2018-06-20 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -776,223 +776,223 @@ msgstr "ليس هناك أي بطة هنا ، ماذا كنت تخطط لعنا�
 msgid "**Current event**"
 msgstr "**الحدث الحالي**"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "*cries*"
 msgstr "* تبكي *"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Hello world"
 msgstr "مرحبا بالعالم"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "How are you today?"
 msgstr "كيف حالك اليوم؟"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Please don't kill me..."
 msgstr "من فضلك لا تقتلني ..."
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "لا تقتلني! أنا بطة مزيفة!"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:70
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "ذهب البط بعيدا. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:70
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "ذهب البط إلى عالم آخر. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:70
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "لم يكن للبطة الوقت لهذا. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:71
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr " غادرت البطة  · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:71
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "تبدد البط في المكان والزمان. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:71
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "غادرت البطة من الملل. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:72
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "لا تريد البطة أن تقتل. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:72
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "ذهب البط إلى موقف عصير الليمون. · ° '\\ `° -.، ¸¸ · °' \\ '"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a stuffed duck."
 msgstr "بطة محشوة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a rubber ducky."
 msgstr "حبيبة مطاطية."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a vibrating duck."
 msgstr "بطة تهتز."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a pile of feathers."
 msgstr "كومة من الريش."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a chewed chewing gum."
 msgstr "علكة ممضوغة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "نشرة من اضجضب (ائتلاف ضد جماعة ضد البط)."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "an old shoe."
 msgstr "حذاء قديم."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a spring thingy."
 msgstr "شيء ربيعي."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "an expired hunting license."
 msgstr "رخصة صيد منتهية الصلاحية."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cartridge."
 msgstr "خرطوشة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cigarette butt."
 msgstr "بعقب سيجارة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a used condom."
 msgstr "واقي ذكري مستخدم."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken sight."
 msgstr "مشهد مكسور."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken infrared detector."
 msgstr "كاشف بالأشعة تحت الحمراء منكسر."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a bent silencer."
 msgstr "كاتم الصوت عازمة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of AP ammo."
 msgstr "صندوق فارغ من الذخيرة AP."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of explosive ammo."
 msgstr "صندوق فارغ من الذخيرة المتفجرة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a four-leaf clover with only 3 left."
 msgstr "برسيم أربع أوراق بأوراق 3 فقط."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken decoy."
 msgstr "خدعة مكسورة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken mirror."
 msgstr "مرآة مكسورة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a rusty mechanical duck."
 msgstr "بطة ميكانيكية صدئة."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a pair of sunglasses without glasses."
 msgstr " النظارات الشمسية دون نظارات."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "Donald's beret."
 msgstr "قبعة دونالد."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a half-melted peppermint."
 msgstr "نعناع نصف ذائب."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a box of Abraxo cleaner."
 msgstr "صندوق من Abraxo cleaner ."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "a gun with banana peeled barrel."
 msgstr "مسدس مع برميل من الموز المقشر."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting knife."
 msgstr "سكين صيد قديم."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "تسجيل فيديو قديم: http://tinyurl.com/zbejktu"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "صورة صيد قديمة: http://tinyurl.com/hmn4r88"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "بطاقة بريدية قديمة: http://tinyurl.com/hbnkpzr"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "صورة بطة ذهبية: http://tinyurl.com/hle8fjf"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr "دبوس صياد: http://tinyurl.com/hqy7fhq"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "bushes."
 msgstr "الشجيرات."
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch؟v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "a fish."
 msgstr "سمكة."
 
-#: cogs/helpers/config.py:149
+#: cogs/helpers/config.py:156
 msgid "Everything is calm"
 msgstr "كل شيء هادئ."
 
-#: cogs/helpers/config.py:150
+#: cogs/helpers/config.py:156
 msgid "Nothing is happening right now."
 msgstr "لا شيء يحدث الآن."
 
-#: cogs/helpers/config.py:154
+#: cogs/helpers/config.py:157
 msgid "Ducks are migrating"
 msgstr "البط يهاجر."
 
-#: cogs/helpers/config.py:155
+#: cogs/helpers/config.py:157
 msgid "Prepare to see more ducks in the next hour."
 msgstr "استعد لرؤية المزيد من البط في الساعة القادمة."
 
-#: cogs/helpers/config.py:160
+#: cogs/helpers/config.py:158
 msgid "Foggy weather"
 msgstr "طقس ضبابي."
 
-#: cogs/helpers/config.py:166
+#: cogs/helpers/config.py:159
 msgid "Steroids in the lake"
 msgstr "المنشطات في البحيرة."
 
-#: cogs/helpers/config.py:167
+#: cogs/helpers/config.py:159
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1001,191 +1001,191 @@ msgstr ""
 "قامت شركة نفايات طبية بإلقاء الستيرويدات في البحيرة. البط تحور ، وسترى "
 "الكثير من البط السوبر. ولكن ، كن حذرا ، ولا تشرب تلك المياه."
 
-#: cogs/helpers/config.py:172
+#: cogs/helpers/config.py:160
 msgid "Safety class canceled"
 msgstr "قسم السلامة ملغى."
 
-#: cogs/helpers/config.py:173
+#: cogs/helpers/config.py:160
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr "تم إلغاء فئة السلامة ، احذر من إطلاق النار على صيادين آخرين!"
 
-#: cogs/helpers/config.py:184
+#: cogs/helpers/config.py:162
 msgid "A new florist in town"
 msgstr "بائع زهور جديد في المدينة."
 
-#: cogs/helpers/config.py:190
+#: cogs/helpers/config.py:163
 msgid "Mega-ducks"
 msgstr "ميجا-بط."
 
-#: cogs/helpers/config.py:191
+#: cogs/helpers/config.py:163
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "شخص ضخم بطة عظمى ، والآن هم أكبر من ذلك بكثير!"
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:164
 msgid "Windy weather"
 msgstr "طقس عاصف."
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:164
 msgid "Bullets are deflected by some strong wind"
 msgstr "ينحرف الرصاص من قبل بعض الرياح القوية."
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:171
 msgid "public danger"
 msgstr "خطر عام."
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:172
 msgid "tourist"
 msgstr "سائح."
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:173
 msgid "noob"
 msgstr "noob."
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:174
 msgid "trainee"
 msgstr "متدرب."
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:175
 msgid "duck misser"
 msgstr "فاقد البط."
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:176
 msgid "member of the Comitee Against Ducks"
 msgstr "عضو في جماعة ضد البط."
 
-#: cogs/helpers/config.py:260
+#: cogs/helpers/config.py:177
 msgid "duck hater"
 msgstr "كاره البط."
 
-#: cogs/helpers/config.py:268
+#: cogs/helpers/config.py:178
 msgid "duck pest"
 msgstr "بطة الآفات."
 
-#: cogs/helpers/config.py:276
+#: cogs/helpers/config.py:179
 msgid "duck hassler"
 msgstr "بطة هسلر."
 
-#: cogs/helpers/config.py:284
+#: cogs/helpers/config.py:180
 msgid "duck plucker"
 msgstr "بط ناتف."
 
-#: cogs/helpers/config.py:292
+#: cogs/helpers/config.py:181
 msgid "hunter"
 msgstr "صياد."
 
-#: cogs/helpers/config.py:308
+#: cogs/helpers/config.py:183
 msgid "duck clobber"
 msgstr "هازم البط."
 
-#: cogs/helpers/config.py:316
+#: cogs/helpers/config.py:184
 msgid "duck chewer"
 msgstr "ماضغ البط."
 
-#: cogs/helpers/config.py:324
+#: cogs/helpers/config.py:185
 msgid "duck eater"
 msgstr "آكل البط."
 
-#: cogs/helpers/config.py:332
+#: cogs/helpers/config.py:186
 msgid "duck flattener"
 msgstr "بطة مستوية."
 
-#: cogs/helpers/config.py:340
+#: cogs/helpers/config.py:187
 msgid "duck disassembler"
 msgstr "مفكك البط."
 
-#: cogs/helpers/config.py:348
+#: cogs/helpers/config.py:188
 msgid "duck demolisher"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:356
+#: cogs/helpers/config.py:189
 msgid "duck killer"
 msgstr "قاتل البط."
 
-#: cogs/helpers/config.py:364
+#: cogs/helpers/config.py:190
 msgid "duck skinner"
 msgstr "مرقق البط."
 
-#: cogs/helpers/config.py:380
+#: cogs/helpers/config.py:192
 msgid "duck chopper"
 msgstr "مفرم البط."
 
-#: cogs/helpers/config.py:388
+#: cogs/helpers/config.py:193
 msgid "duck decorticator"
 msgstr "مقشر البط."
 
-#: cogs/helpers/config.py:396
+#: cogs/helpers/config.py:194
 msgid "duck fragger"
 msgstr "بطة المفرغ."
 
-#: cogs/helpers/config.py:404
+#: cogs/helpers/config.py:195
 msgid "duck shatterer"
 msgstr "محطم البط."
 
-#: cogs/helpers/config.py:412
+#: cogs/helpers/config.py:196
 msgid "duck smasher"
 msgstr "ساحق البط."
 
-#: cogs/helpers/config.py:420
+#: cogs/helpers/config.py:197
 msgid "duck breaker"
 msgstr "مكسر البط."
 
-#: cogs/helpers/config.py:428
+#: cogs/helpers/config.py:198
 msgid "duck wrecker"
 msgstr "هادم البط."
 
-#: cogs/helpers/config.py:436
+#: cogs/helpers/config.py:199
 msgid "duck impaler"
 msgstr "متصدع البط."
 
-#: cogs/helpers/config.py:444
+#: cogs/helpers/config.py:200
 msgid "duck eviscerator"
 msgstr "نازع أحشاء البط."
 
-#: cogs/helpers/config.py:452
+#: cogs/helpers/config.py:201
 msgid "ducks terror"
 msgstr "راعب البط."
 
-#: cogs/helpers/config.py:460
+#: cogs/helpers/config.py:202
 msgid "duck exploder"
 msgstr "مفجر البط."
 
-#: cogs/helpers/config.py:468
+#: cogs/helpers/config.py:203
 msgid "duck destructor"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:476
+#: cogs/helpers/config.py:204
 msgid "duck blaster"
 msgstr "ناسف البط."
 
-#: cogs/helpers/config.py:484
+#: cogs/helpers/config.py:205
 msgid "duck pulverizer"
 msgstr "طاحن البط."
 
-#: cogs/helpers/config.py:492
+#: cogs/helpers/config.py:206
 msgid "duck disintegrator"
 msgstr "منحل البط."
 
-#: cogs/helpers/config.py:500
+#: cogs/helpers/config.py:207
 msgid "duck atomizer"
 msgstr " راذ البط."
 
-#: cogs/helpers/config.py:508
+#: cogs/helpers/config.py:208
 msgid "duck annihilator"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:516
+#: cogs/helpers/config.py:209
 msgid "serial duck killer"
 msgstr "مسلسل البط القاتل."
 
-#: cogs/helpers/config.py:524
+#: cogs/helpers/config.py:210
 msgid "duck genocider"
 msgstr " ذابح البط."
 
-#: cogs/helpers/config.py:540
+#: cogs/helpers/config.py:212
 msgid "duck toaster"
 msgstr "محمص البط."
 
-#: cogs/helpers/config.py:548
+#: cogs/helpers/config.py:213
 msgid "old noob"
 msgstr "مستجد قديم."
 

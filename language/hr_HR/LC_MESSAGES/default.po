@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-13 14:46+0000\n"
+"POT-Creation-Date: 2018-06-20 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,239 +29,239 @@ msgstr "Imaš dovoljno eksplozivne municije!"
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "*cries*"
 msgstr "*plače*"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Hello world"
 msgstr "Zdravo svijete"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "How are you today?"
 msgstr "Kako si danas?"
 
-#: cogs/helpers/config.py:60
+#: cogs/helpers/config.py:67
 msgid "Please don't kill me..."
 msgstr "Molim te, nemoj me ubit..."
 
-#: cogs/helpers/config.py:64
+#: cogs/helpers/config.py:71
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Patka nas je napustila ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a stuffed duck."
 msgstr "prepariranu patku."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a rubber ducky."
 msgstr "gumenu patkicu."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a vibrating duck."
 msgstr "vibrirajuću patku."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a pile of feathers."
 msgstr "hrpu perja."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:75
 msgid "a chewed chewing gum."
 msgstr "sažvakanu žvakaću."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr "letak od DPP-a (Društva Protiv Pataka)."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "an old shoe."
 msgstr "staru cipelu."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:76
 msgid "a spring thingy."
 msgstr "oprugu."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "an expired hunting license."
 msgstr "isteklu dozvolu za lov."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cartridge."
 msgstr "kasetu."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a cigarette butt."
 msgstr "opušak."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a used condom."
 msgstr "korišteni kondom."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken sight."
 msgstr "slomljeni nišan."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a broken infrared detector."
 msgstr "slomljeni infracrveni detektor."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:77
 msgid "a bent silencer."
 msgstr "savijeni prigušivač."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of AP ammo."
 msgstr "praznu kutiju protuoklopne municije."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "an empty box of explosive ammo."
 msgstr "praznu kutiju eksplozivne municije."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a four-leaf clover with only 3 left."
 msgstr "djetelinu od 4 lista sa 3 lista."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken decoy."
 msgstr "razbijeni mamac."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:78
 msgid "a broken mirror."
 msgstr "razbijeno ogledalo."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a rusty mechanical duck."
 msgstr "hrđavu mehaničku patku."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a pair of sunglasses without glasses."
 msgstr "sunčane naočale bez stakala."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "Donald's beret."
 msgstr "Donaldovu beretku."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a half-melted peppermint."
 msgstr "poluprobavljeni pepermint bombon."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:79
 msgid "a box of Abraxo cleaner."
 msgstr "kutiju Abraxo čistača."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "a gun with banana peeled barrel."
 msgstr "oružje s rascvjetanom cijevi."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting knife."
 msgstr "stari lovački nož."
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old video recording: http://tinyurl.com/zbejktu"
 msgstr "stari video: http://tinyurl.com/zbejktu"
 
-#: cogs/helpers/config.py:68
+#: cogs/helpers/config.py:80
 msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
 msgstr "staru lovačku fotografiju: http://tinyurl.com/hmn4r88"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "an old postcard: http://tinyurl.com/hbnkpzr"
 msgstr "staru razglednicu: http://tinyurl.com/hbnkpzr"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
 msgstr "fotografiju zlatne patke: http://tinyurl.com/hle8fjf"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
 msgstr "lovački bedž: http://tinyurl.com/hqy7fhq"
 
-#: cogs/helpers/config.py:69
+#: cogs/helpers/config.py:81
 msgid "bushes."
 msgstr "grmove."
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
 msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:82
 msgid "a fish."
 msgstr "ribu."
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:171
 msgid "public danger"
 msgstr "Opća opasnost"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:172
 msgid "tourist"
 msgstr "Turist"
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:173
 msgid "noob"
 msgstr "Noob"
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:174
 msgid "trainee"
 msgstr "Početnik"
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:175
 msgid "duck misser"
 msgstr "Promašivač patki"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:176
 msgid "member of the Comitee Against Ducks"
 msgstr "Član Društva Protiv Pataka"
 
-#: cogs/helpers/config.py:260
+#: cogs/helpers/config.py:177
 msgid "duck hater"
 msgstr "Mrzitelj pataka"
 
-#: cogs/helpers/config.py:284
+#: cogs/helpers/config.py:180
 msgid "duck plucker"
 msgstr "Rasčerupatelj pataka"
 
-#: cogs/helpers/config.py:292
+#: cogs/helpers/config.py:181
 msgid "hunter"
 msgstr "Lovac"
 
-#: cogs/helpers/config.py:316
+#: cogs/helpers/config.py:184
 msgid "duck chewer"
 msgstr "Patke = žvake"
 
-#: cogs/helpers/config.py:324
+#: cogs/helpers/config.py:185
 msgid "duck eater"
 msgstr "Gladan za patkama"
 
-#: cogs/helpers/config.py:348
+#: cogs/helpers/config.py:188
 msgid "duck demolisher"
 msgstr "Uništavatelj pataka"
 
-#: cogs/helpers/config.py:356
+#: cogs/helpers/config.py:189
 msgid "duck killer"
 msgstr "Ubojica pataka"
 
-#: cogs/helpers/config.py:420
+#: cogs/helpers/config.py:197
 msgid "duck breaker"
 msgstr "Razbijač pataka"
 
-#: cogs/helpers/config.py:452
+#: cogs/helpers/config.py:201
 msgid "ducks terror"
 msgstr "Pačji teror"
 
-#: cogs/helpers/config.py:460
+#: cogs/helpers/config.py:202
 msgid "duck exploder"
 msgstr "Pačji pirotehničar"
 
-#: cogs/helpers/config.py:516
+#: cogs/helpers/config.py:209
 msgid "serial duck killer"
 msgstr "Serijski ubojica pataka"
 
-#: cogs/helpers/config.py:524
+#: cogs/helpers/config.py:210
 msgid "duck genocider"
 msgstr "Genocid pataka"
 
-#: cogs/helpers/config.py:548
+#: cogs/helpers/config.py:213
 msgid "old noob"
 msgstr "Stari noob"
 
