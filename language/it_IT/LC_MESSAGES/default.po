@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-20 09:28+0000\n"
+"POT-Creation-Date: 2018-06-28 17:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,7 +140,9 @@ msgstr ":ok: L’impostazione {pref} è impostata su `{value}` in questa gilda."
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
-msgstr "Stai bypassando il max_ducks_per_day come se fossi il proprietario "
+msgstr ""
+"Stai bypassando il max_ducks_per_day come se fossi il proprietario. Sarebbe "
+"stato `{max}`."
 
 #: cogs/admin_commands.py:221
 msgid ""
@@ -163,12 +165,12 @@ msgstr ""
 #: cogs/admin_commands.py:231
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
-":x: Non autorizzato ad impostare lo stato VIP! non sei un proprietario"
+":x: Non autorizzato ad impostare lo stato VIP! non sei un proprietario."
 
 #: cogs/admin_commands.py:237 cogs/admin_commands.py:248
 #: cogs/admin_commands.py:273
 msgid ":x: Incorrect value."
-msgstr ":x: Valore incorretto "
+msgstr ":x: Valore incorretto."
 
 #: cogs/admin_commands.py:244 cogs/admin_commands.py:269
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
@@ -193,7 +195,7 @@ msgstr ""
 
 #: cogs/experience_related_commands.py:28
 msgid ":ok:, he/she now has {newexp} exp points!"
-msgstr ":ok:, lui/lei adesso hanno {newexp} punti exp!"
+msgstr ":ok:, lui/lei adesso ha {newexp} punti exp!"
 
 #: cogs/experience_related_commands.py:41
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
@@ -203,7 +205,7 @@ msgstr ""
 
 #: cogs/experience_related_commands.py:45
 msgid ":x: The exp amount needs to be positive."
-msgstr ":x: L’importo exp dev’essere positivo"
+msgstr ":x: L’importo exp dev’essere positivo."
 
 #: cogs/experience_related_commands.py:49
 msgid ""
@@ -266,7 +268,7 @@ msgid ""
 "00), which is the one used by the bot. \n"
 "You can use this website to compare it to yours: https://time.is/compare/GMT"
 msgstr ""
-"Sono le `{hour}: {minutes}: {seconds}` nel fuso orario GMT (noto anche come "
+"Sono le `{hour}:{minutes}:{seconds}` nel fuso orario GMT (noto anche come "
 "UTC ± 00: 00), che è quello usato dal bot.\n"
 "Puoi utilizzare questo sito Web per confrontarlo con il tuo: https://time.is/"
 "compare/GMT"
@@ -285,7 +287,7 @@ msgid ""
 "({hours} hours and {minutes} minutes)."
 msgstr ""
 ":alarm_clock: il prossimo recupero delle armi e dei proiettili è in {sec} "
-"secondi ({ore} ore e {minuti} minuti)."
+"secondi ({hours} ore e {minutes} minuti)."
 
 #: cogs/meta.py:86
 msgid ""
@@ -1514,7 +1516,7 @@ msgstr "serial killer d'anatre"
 
 #: cogs/helpers/config.py:210
 msgid "duck genocider"
-msgstr "genocidiatore della specie delle anatre"
+msgstr "genocida della specie delle anatre"
 
 #: cogs/helpers/config.py:211
 msgid "unemployed due to extinction of the duck species"
@@ -1570,7 +1572,7 @@ msgid ""
 "bot has the `embed_links` permission and try again!"
 msgstr ""
 ":warning: Si è verificato un errore durante l'invio dell'embed (messaggio "
-"con file attaccato), per favore controllare che il bot abbia il permesso "
+"con file/link allegato), per favore controllare che il bot abbia il permesso "
 "`embed_links` e ritentare!"
 
 #: cogs/helpers/ducks.py:96
@@ -1611,7 +1613,7 @@ msgid ""
 "fled from you and flew back into the pond![-2 exp]"
 msgstr ""
 ":heart: Hai tentato di abbracciare l'anatra, ma sa che hai ucciso suo "
-"fratello, così è scappata da te ed è volata di nuovo nello stagno![-2 exp]"
+"fratello, così è scappata da te ed è volata di nuovo nello stagno! [-2 exp]"
 
 #: cogs/helpers/ducks.py:216
 msgid ""
