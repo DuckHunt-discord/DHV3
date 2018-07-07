@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-28 17:46+0000\n"
+"POT-Creation-Date: 2018-06-29 13:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr "Sei in cooldown :(, riprova tra {seconds}"
 
 #: bot.py:174
 msgid ":bulb: HINT: "
-msgstr ":bulb: INDIZIO:"
+msgstr ":bulb: SUGGERIMENTO:"
 
 #: cogs/admin_commands.py:26
 msgid ":ok: Done, user banned. :gun:"
@@ -544,7 +544,7 @@ msgstr ""
 "desideri utilizzare, e attivalo con `dh!add_channel`.**\n"
 "\n"
 "**1/ Lingua utilizzata**:\n"
-"    \\* Se parli francese, utilizza dh!settings set language fr_FR`\n"
+"    \\* Se parli francese, utilizza `dh!settings set language fr_FR`\n"
 "    \\* Se parli spagnolo, utilizza `dh!settings set language es_ES`\n"
 "    \\* Se parli italiano, utilizza `dh!settings set language es_IT`\n"
 "    \\* Un'altra lingua che non supportiamo appieno al momento? Aiutaci a "
@@ -865,7 +865,7 @@ msgstr "Non ti saboteresti, vero?"
 #: cogs/shop.py:379
 msgid ""
 ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
-msgstr ":ok: L'arma di {target} ora è sabotata... ma non lo sanno (14 exp)!"
+msgstr ":ok: L'arma di {target} ora è sabotata... ma non lo sa (14 exp)!"
 
 #: cogs/shop.py:382
 msgid ""
@@ -1097,9 +1097,7 @@ msgstr "L'anatra se n'è andata. · ° '\\ `' ° -.., ¸¸ · ° '\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-"L'anatra si è dissipata nello spazio e nel tempo. · ° '\\ `' ° -.., ¸¸ · ° "
-"'\\`"
+msgstr "L'anatra si è dissipata nello spazio e nel tempo. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1107,7 +1105,7 @@ msgstr "L'anatra se ne andò via dalla noia. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:72
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra non vuole essere beccata. · ° '\\ `' ° -.., ¸¸ · ° '\\`"
+msgstr "L'anatra non vuole essere beccata. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:72
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1136,7 +1134,7 @@ msgstr "un chewing gum masticato."
 #: cogs/helpers/config.py:76
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
 msgstr ""
-"un volantino della CACAD (Coalition Against the Comitee Against Ducks)."
+"un volantino della CCCCA (Coalizione Contro il Comitato Contro le Anatre)."
 
 #: cogs/helpers/config.py:76
 msgid "an old shoe."
