@@ -208,6 +208,10 @@ class BaseDuck:
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
         await self.bot.db.add_to_stat(self.channel, author, "hugged_nohug_ducks", 1)
+
+        if author.id == 296573428293697536:  # ⚜WistfulWizzz⚜#5928
+            return _("<:Wizzz:365870248554921985> Wizzz huggy ducky!", language)
+
         await self.bot.db.add_to_stat(self.channel, author, "exp", -2)
 
         if self.bot.db.get_stat(self.channel, author, "confisque"):

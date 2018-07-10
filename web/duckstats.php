@@ -9,16 +9,13 @@ $password   = "duckhunt_web";
 $admins = array(
     138751484517941259, // Eyesofcreeper#0001
 );
-
 $bug_hunters = array(
     282268617725444097, // 187#4114
     251996890369884161, // Subtleknifewielder#1927
 );
-
 $donators = array(
     231196637874225152, // Dany#7189
 );
-
 $enigma_event_winners_june_2018 = array(
     132695220297924608, // BanditB17#2110
     276412993972207626, // Bigael#4025
@@ -34,20 +31,17 @@ $enigma_event_winners_june_2018 = array(
     248904069840764938, // boshaus#0999
     325434800192225290, // pokki#1490
 );
-
 $moderators = array(
     183273311503908864, // Olpouin#6797
     181846573351829504, // PierrePV#3537
     251996890369884161, // Subtleknifewielder#1927
     380118196742651906, // rulebritannia 🇬🇧#6894
 );
-
 $partners = array(
     120193744707256320, // Dr Zachary Smith#9260
 );
-
 $proficients = array(
-    329940268457525249, // Deathclaw Busy With Exams#7898
+    329940268457525249, // Deathclaw#7898
     231117724317646849, // Heroesflorian#4385
     251996890369884161, // Subtleknifewielder#1927
     135446225565515776, // Taoshi#3480
@@ -55,9 +49,7 @@ $proficients = array(
     380118196742651906, // rulebritannia 🇬🇧#6894
     174670292994621440, // sholan#0922
 );
-
 $translators = array(
-    316724329570238465, // !   a#2037
     286806848693338112, // Aragogne#0806
     236187090881085440, // Areisp#2416
     151016183401938944, // Chateaubriand#8877
@@ -65,18 +57,20 @@ $translators = array(
     239491845237899264, // Danijel Kralj#0812
     214345196207341572, // Hannes#0425
     331319593681289216, // ImparuZ#4007
+    207597032792260609, // KaySteR#9760
     255009837002260482, // Koen02#7956
     278599626922131459, // Legolas#2139
     350397621027864576, // Lord DréByte#2222
     297391115890589699, // MonsterLava72#0001
     263216424737046528, // SlimyMelon#5435
+    305771483865546752, // TBM38#2795
     135446225565515776, // Taoshi#3480
-    305771483865546752, // T̴̃̊B̴̪͌M̷͍̑3̷͂̀8̶͙̎#2795
     300247046856900629, // Wolterhon#3938
     193431551034392576, // barnabinnyu#9928
     202979770235879427, // estudiante#6170
     335578928335028236, // kei#7513
     211888559735570433, // pun1sher#1165
+    316724329570238465, // wiktor#2037
 );
 
 $retired_staff                  = array(

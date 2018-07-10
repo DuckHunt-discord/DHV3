@@ -347,8 +347,12 @@ class User:
                 break
         else:
             await add_to_stat(channel, author, "hugs_no_duck", 1)
-            await self.bot.send_message(ctx=ctx,
-                                        message=_("There isn't any duck in here, what did you plan to hug, a tree?!", language))
+            if author.id == 296573428293697536: # ⚜WistfulWizzz⚜#5928
+                await self.bot.send_message(ctx=ctx,
+                                            message=_("You hugged a tree, Wizzz?!", language))
+            else:
+                await self.bot.send_message(ctx=ctx,
+                                            message=_("There isn't any duck in here, what did you plan to hug, a tree?!", language))
 
             return
 
