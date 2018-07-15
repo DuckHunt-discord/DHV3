@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-07 18:03+0000\n"
+"POT-Creation-Date: 2018-07-15 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,8 +53,8 @@ msgstr ":ok: Ok, användaren förbjuden. :gun:"
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Ok, användaren är inte förbjuden nu. :eyes:"
 
-#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
-#: cogs/admin_commands.py:273
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
 msgid ":x: Incorrect value."
 msgstr ":x: Felaktig värde."
 

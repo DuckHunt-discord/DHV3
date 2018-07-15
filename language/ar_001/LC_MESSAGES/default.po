@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-07 18:03+0000\n"
+"POT-Creation-Date: 2018-07-15 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,7 +88,7 @@ msgstr ""
 "تمت إزالة <:cmd_AdminRemoved_01:439549845519335440>{admin} من مشرفي المجموعة."
 ""
 
-#: cogs/admin_commands.py:184
+#: cogs/admin_commands.py:180
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -96,19 +96,19 @@ msgstr ""
 ":x: بناء جملة غير صحيح. استخدم الأمر بهذه الطريقة: `! إعدادات [view / set / "
 "reset / list / modified] [setting if applicable]`"
 
-#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-#: cogs/admin_commands.py:260
+#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
+#: cogs/admin_commands.py:256
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
 msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746>** خطأ: ** لا أعرف هذا الإعداد."
 
-#: cogs/admin_commands.py:197
+#: cogs/admin_commands.py:193
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:219
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -116,7 +116,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day لأنك مالك البوت. كان من الممكن أن يكون "
 "\"{max}\"."
 
-#: cogs/admin_commands.py:221
+#: cogs/admin_commands.py:217
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -125,7 +125,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day كما كنت في نقابة كبار الشخصيات. من فضلك لا "
 "تسيء ذلك. للحصول على معلومات ، ربما تم تعيين الحد على `` max} `بط يوميًا."
 
-#: cogs/admin_commands.py:229
+#: cogs/admin_commands.py:225
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -133,20 +133,20 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>مرخص لتعيين حالة كبار "
 "الشخصيات!"
 
-#: cogs/admin_commands.py:231
+#: cogs/admin_commands.py:227
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: غير مصرح به لضبط حالة كبار الشخصيات! انت لست مالك."
 
-#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
-#: cogs/admin_commands.py:273
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
 msgid ":x: Incorrect value."
 msgstr " :x: قيمة غير صحيحة."
 
-#: cogs/admin_commands.py:244 cogs/admin_commands.py:269
+#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:296
+#: cogs/admin_commands.py:292
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -768,11 +768,11 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** لقد فاتتك البط! [غاب: 1 xp]"
 
-#: cogs/user_commands.py:351
+#: cogs/user_commands.py:355
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "ليس هناك أي بطة هنا ، ماذا كنت تخطط لعناق ، شجرة؟!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:374
 msgid "**Current event**"
 msgstr "**الحدث الحالي**"
 
@@ -1263,7 +1263,7 @@ msgstr ""
 "كان ذلك مقربًا ، لقد كادت تقتل البط ، لكن الصياد الآخر حصل عليه أولاً! [غاب: "
 "1- exp]"
 
-#: cogs/helpers/ducks.py:225
+#: cogs/helpers/ducks.py:229
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1274,7 +1274,7 @@ msgstr ""
 "، فأنت الآن في المجموع الكلي من {total {ducks (التي كانت {supercanards} فيها "
 "بطات فائقة) تقتل علىexp} {e{channel}#e} "
 
-#: cogs/helpers/ducks.py:233
+#: cogs/helpers/ducks.py:237
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1282,13 +1282,13 @@ msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * ({Super DUCK DETECTED * [life: - {vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:239
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * {Super DUCK DETECTED * [life: - {vie}]"
 
-#: cogs/helpers/ducks.py:399
+#: cogs/helpers/ducks.py:408
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1296,7 +1296,7 @@ msgstr ""
 "لقد تم خداعك بواسطة {user_mention} لقتل بطة ميكانيكية. لن ينجح الأمر ، وفقدت "
 "1 exp لهذه اللقطة المفقودة."
 
-#: cogs/helpers/ducks.py:457
+#: cogs/helpers/ducks.py:468
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1306,7 +1306,7 @@ msgstr ""
 "ثانية ، ولا يجب عليك فعل ذلك! ستفقد بعض التوقعات ، لأنه لا ينبغي عليك قتل "
 "الأطفال \\ {X < * COUAC * {exp}"
 
-#: cogs/helpers/ducks.py:471
+#: cogs/helpers/ducks.py:482
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1316,11 +1316,11 @@ msgstr ""
 "الآن سعيدة حقًا! [3 exp]\n"
 "غادرت البطة الصغيرة ، محبوبة."
 
-#: cogs/helpers/ducks.py:483
+#: cogs/helpers/ducks.py:494
 msgid "**I AM...** Your mother"
 msgstr "**انا..**  والدتك."
 
-#: cogs/helpers/ducks.py:491
+#: cogs/helpers/ducks.py:502
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

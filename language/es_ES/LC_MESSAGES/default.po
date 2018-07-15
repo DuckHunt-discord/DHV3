@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-07 18:03+0000\n"
+"POT-Creation-Date: 2018-07-15 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,16 +108,16 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} ha sido removido de los "
 "Admins del Servidor"
 
-#: cogs/admin_commands.py:146 cogs/admin_commands.py:172
+#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
 msgid "Done. User removed from the database, if he was in."
 msgstr ""
 "Hecho. Usuario eliminado de la base de datos, si es que estuvo en esta."
 
-#: cogs/admin_commands.py:159
+#: cogs/admin_commands.py:155
 msgid "Done. All channel data was removed."
 msgstr "Hecho. Toda la información del canal ha sido eliminada."
 
-#: cogs/admin_commands.py:184
+#: cogs/admin_commands.py:180
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -126,8 +126,8 @@ msgstr ""
 "reset/list/modified] (ver/configurar/reiniciar/lista/modificado) [setting if "
 "applicable] (ajuste si es aplicable)`"
 
-#: cogs/admin_commands.py:194 cogs/admin_commands.py:209
-#: cogs/admin_commands.py:260
+#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
+#: cogs/admin_commands.py:256
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -135,11 +135,11 @@ msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** No conozco este "
 "ajuste."
 
-#: cogs/admin_commands.py:197
+#: cogs/admin_commands.py:193
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} está configurado en `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:219
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -147,7 +147,7 @@ msgstr ""
 "Pasas por alto la cantidad máxima de patos por día dado que eres el "
 "propietario del bot. Habrían sido `{max}`. "
 
-#: cogs/admin_commands.py:221
+#: cogs/admin_commands.py:217
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -157,7 +157,7 @@ msgstr ""
 " Por favor no abuses de eso. Para que sepas, es recomendable que el limite "
 "de patos lo dejes en `{max}` patos por día."
 
-#: cogs/admin_commands.py:229
+#: cogs/admin_commands.py:225
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -165,22 +165,22 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> Autorizado para configurar "
 "el estatus de VIP!"
 
-#: cogs/admin_commands.py:231
+#: cogs/admin_commands.py:227
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: No estás autorizado para establecer el estado VIP! Usted no es uno de "
 "los dueños del bot."
 
-#: cogs/admin_commands.py:237 cogs/admin_commands.py:248
-#: cogs/admin_commands.py:273
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
 msgid ":x: Incorrect value."
 msgstr ":x: Valor incorrecto"
 
-#: cogs/admin_commands.py:244 cogs/admin_commands.py:269
+#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} se ha configurado a `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:296
+#: cogs/admin_commands.py:292
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -1062,11 +1062,11 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** ¡Fallaste el disparo! [Por fallar: -1 xp]"
 
-#: cogs/user_commands.py:351
+#: cogs/user_commands.py:355
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "No hay ningún pato aquí, que planeabas abrazar? un árbol?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:374
 msgid "**Current event**"
 msgstr "**Evento en curso**"
 
@@ -1618,7 +1618,7 @@ msgstr ""
 "Eso estuvo cerca, casi matas al pato, ¡pero el otro cazador lo consiguió "
 "primero! [Por fallar: -1 xp]"
 
-#: cogs/helpers/ducks.py:214
+#: cogs/helpers/ducks.py:218
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1626,7 +1626,7 @@ msgstr ""
 ":heart: Intentaste abrazar al pato, pero él sabe que mataste a su hermano, "
 "así que voló lejos de ti, de vuelta al estanque! [-2 exp]"
 
-#: cogs/helpers/ducks.py:216
+#: cogs/helpers/ducks.py:220
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1634,19 +1634,19 @@ msgstr ""
 ":heart: Intentaste abrazar al pato, pero vio el arma que escondiste en tu "
 "espalda, así que voló lejos de ti, de vuelta al estanque! [-2 exp]"
 
-#: cogs/helpers/ducks.py:225
+#: cogs/helpers/ducks.py:229
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
 "{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
 "{exp}"
 msgstr ""
-": skull_crossbones: ** {onomatopoeia} ** Has matado al pato en {time} "
+":skull_crossbones: ** {onomatopoeia} ** Has matado al pato en {time} "
 "segundos, ahora tienes un gran total de {total} patos (de los cuales "
 "{supercanards} fueron super-patos) asesinados en #{channel}.  \\ _X < * CUAC "
 "* {exp}"
 
-#: cogs/helpers/ducks.py:233
+#: cogs/helpers/ducks.py:237
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1654,14 +1654,14 @@ msgstr ""
 ":gun: El pato sobrevivió, Inténtalo otra vez! *SUPER PATO DETECTADO* [Puntos "
 "de Vida: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:239
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
 
-#: cogs/helpers/ducks.py:399
+#: cogs/helpers/ducks.py:408
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviouly won't work, and you lost 1 exp for this missed shot"
@@ -1670,13 +1670,13 @@ msgstr ""
 "Obviamente el pato es falso, y perdiste 1 punto de experiencia por el tiro "
 "fallado."
 
-#: cogs/helpers/ducks.py:439
+#: cogs/helpers/ducks.py:448
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "El patito se fue a tomar una pequeña siesta en algún lugar · ° '\\' '° -., "
 "¸¸. · °' \\ `"
 
-#: cogs/helpers/ducks.py:457
+#: cogs/helpers/ducks.py:468
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1686,7 +1686,7 @@ msgstr ""
 "segundos, y no debiste haber hecho esto! Perderás algo de Puntos de "
 "Experiencia, porque no deberías matar patitos\\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:471
+#: cogs/helpers/ducks.py:482
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1696,11 +1696,11 @@ msgstr ""
 "está muy contento! [3 Puntos de Experiencia]\n"
 "El patito se fue, sintiéndose amado"
 
-#: cogs/helpers/ducks.py:483
+#: cogs/helpers/ducks.py:494
 msgid "**I AM...** Your mother"
 msgstr "**YO SOY...** Tu madre"
 
-#: cogs/helpers/ducks.py:491
+#: cogs/helpers/ducks.py:502
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
