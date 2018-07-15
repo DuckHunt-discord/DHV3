@@ -106,7 +106,6 @@ class Admin:
         parser.add_argument('--super-duck', dest='super_duck', action='store_true', help='Is the duck a super duck ?')
         parser.add_argument('--baby-duck', dest='baby_duck', action='store_true', help='Is the duck a baby duck ?')
         parser.add_argument('--moad', dest='moad', action='store_true', help='Is the duck a moad ?')
-
         parser.add_argument('--life', dest='life', type=int, default=1)
 
         try:
@@ -124,10 +123,7 @@ class Admin:
         else:
             type = ducks.Duck
 
-        duck = await type.create(self.bot, ctx.channel)
-        if args.life:
-            duck.life = args.life
-            duck.starting_life = args.life
+        duck = await type.create(self.bot, ctx.channel, life=args.life)
 
 
 

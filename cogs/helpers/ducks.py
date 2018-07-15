@@ -73,7 +73,7 @@ class BaseDuck:
         return self.spawned_at
 
     @classmethod
-    async def create(cls, bot, channel, ignore_event=False):
+    async def create(cls, bot, channel, life=None, ignore_event=False):
         raise RuntimeError("Trying to create an instance of BaseDuck, or subclass not re-implementing create")
 
     def delete(self):
@@ -240,12 +240,12 @@ class BaseDuck:
 
     def __repr__(self):
         now = int(time.time())
-        return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name}" \
+        return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} | " \
                f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
 
     def __str__(self):
         now = int(time.time())
-        return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name}" \
+        return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name} | " \
                f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
 
 
@@ -272,7 +272,7 @@ class Duck(BaseDuck):
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
 
     @classmethod
-    async def create(cls, bot, channel, ignore_event=False):
+    async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
         ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
 
@@ -281,6 +281,8 @@ class Duck(BaseDuck):
 
         duck = cls(bot, channel, exp=exp_value, ttl=ttl)
         await duck._gen_discord_str()
+        if life:
+            duck.life = life
         return duck
 
     async def post_kill(self, author, exp):
@@ -320,7 +322,7 @@ class SuperDuck(BaseDuck):
         await self.bot.db.add_to_stat(self.channel, author, "killed_super_ducks", 1)
 
     @classmethod
-    async def create(cls, bot, channel, ignore_event=False):
+    async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
         ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
 
@@ -332,9 +334,10 @@ class SuperDuck(BaseDuck):
         max_life = await bot.db.get_pref(channel.guild, "super_ducks_maxlife")
 
         # Choosen life for this one
-        life = random.randint(min(min_life, max_life), max(min_life, max_life))
-        if not ignore_event and bot.current_event['id'] == 7:
-            life += bot.current_event['life_to_add']
+        if life is None:
+            life = random.randint(min(min_life, max_life), max(min_life, max_life))
+            if not ignore_event and bot.current_event['id'] == 7:
+                life += bot.current_event['life_to_add']
 
         # Choosen exp for this life
         exp_value = int(exp_value * await bot.db.get_pref(channel.guild, "super_ducks_exp_multiplier") * life)
@@ -391,9 +394,11 @@ class MechanicalDuck(BaseDuck):
         self.discord_leave_str = None
 
     @classmethod
-    async def create(cls, bot, channel, ignore_event=False, user=None):
+    async def create(cls, bot, channel, life=None, ignore_event=False, user=None):
         duck = cls(bot, channel, user=user)
         await duck._gen_discord_str()
+        if life:
+            duck.life = life
         return duck
 
     async def get_killed_string(self):
@@ -443,7 +448,7 @@ class BabyDuck(BaseDuck):
         self.discord_leave_str = _("The baby duck left to take a little nap somewhere ·°'\`'°-.,¸¸.·°'\`", language)
 
     @classmethod
-    async def create(cls, bot, channel, ignore_event=False):
+    async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
         ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
 
@@ -452,6 +457,8 @@ class BabyDuck(BaseDuck):
 
         duck = cls(bot, channel, exp=exp_value, ttl=ttl)
         await duck._gen_discord_str()
+        if life:
+            duck.life = life
         return duck
 
     async def get_killed_string(self):
