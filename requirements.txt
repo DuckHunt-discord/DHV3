@@ -2,3 +2,6 @@ mysqlclient
 sqlalchemy
 records
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
+tabulate
+psutil
+mysql-connector-python-rf
