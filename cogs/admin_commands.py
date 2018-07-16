@@ -125,8 +125,6 @@ class Admin:
 
         duck = await type.create(self.bot, ctx.channel, life=args.life)
 
-
-
         await spawning.spawn_duck(self.bot, ctx.channel, instance=duck)
 
     @commands.command(aliases=["reset_user"])
@@ -282,7 +280,7 @@ class Admin:
 
         table = []
         ignored_fields = ["server_id"]
-        settings = [s for s in self.bot.db.settings if s.Field not in ignored_fields]
+        settings = [s for s in self.bot.db.settings if (s.Field not in ignored_fields and not s.Field.startswith("debug_"))]
 
         for setting in settings:
             table.append([setting.Field, setting.Default, await self.bot.db.get_pref(ctx.guild, setting.Field)])
