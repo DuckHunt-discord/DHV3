@@ -17,14 +17,16 @@ DAY = HOUR * 24
 async def make_all_ducks_leave(bot):
     bot.logger.info("Bot shutting down")
     bot.can_spawn = False
+    s = len(bot.ducks_spawned)
+    i = 0
     for canard in bot.ducks_spawned[:]:
+        i += 1
         _ = bot._
         language = await bot.db.get_pref(canard.channel.guild, "language")
         bot.logger.debug(f"Force-leaving of {canard}")
-        s = len(bot.ducks_spawned)
-        i = 0
+
         if canard in bot.ducks_spawned:
-            i += 1
+
             try:
                 await bot.send_message(where=canard.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language=language), return_message=True)
             except:
