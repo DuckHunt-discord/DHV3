@@ -12,6 +12,7 @@ $admins = array(
 $bug_hunters = array(
     282268617725444097, // 187#4114
     251996890369884161, // Subtleknifewielder#1927
+    135446225565515776, // Taoshi#3480
 );
 $donators = array(
     231196637874225152, // Dany#7189
