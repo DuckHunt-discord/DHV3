@@ -13,6 +13,7 @@ MINUTE = 60
 HOUR = MINUTE * 60
 DAY = HOUR * 24
 
+
 async def make_all_ducks_leave(bot):
     bot.logger.info("Bot shutting down")
     bot.can_spawn = False
@@ -20,7 +21,10 @@ async def make_all_ducks_leave(bot):
         _ = bot._
         language = await bot.db.get_pref(canard.channel.guild, "language")
         bot.logger.debug(f"Force-leaving of {canard}")
+        s = len(bot.ducks_spawned)
+        i = 0
         if canard in bot.ducks_spawned:
+            i += 1
             try:
                 await bot.send_message(where=canard.channel, can_pm=False, mention=False, message=_(random.choice(bot.canards_bye), language=language), return_message=True)
             except:
@@ -30,6 +34,7 @@ async def make_all_ducks_leave(bot):
                 bot.ducks_spawned.remove(canard)
             except:
                 pass
+            print(str(i) + "/" + str(s))
         else:
             bot.logger.debug(f"{canard} alredy left :)")
 
@@ -87,22 +92,13 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
 
         if not instance:
 
-            population = [
-                ducks.Duck,
-                ducks.SuperDuck,
-                ducks.BabyDuck,
-                ducks.MotherOfAllDucks,
-            ]
+            population = [ducks.Duck, ducks.SuperDuck, ducks.BabyDuck, ducks.MotherOfAllDucks, ]
 
-            weights = [
-                await bot.db.get_pref(channel.guild, "ducks_chance"),
-                await bot.db.get_pref(channel.guild, "super_ducks_chance"),  # Modified below by event n°3
-                await bot.db.get_pref(channel.guild, "baby_ducks_chance"),
-                await bot.db.get_pref(channel.guild, "mother_of_all_ducks_chance"),
-            ]
+            weights = [await bot.db.get_pref(channel.guild, "ducks_chance"), await bot.db.get_pref(channel.guild, "super_ducks_chance"),  # Modified below by event n°3
+                await bot.db.get_pref(channel.guild, "baby_ducks_chance"), await bot.db.get_pref(channel.guild, "mother_of_all_ducks_chance"), ]
 
             if not ignore_event and bot.current_event['id'] == 3:
-                weights[1] += int(weights[1] * bot.current_event['chance_added_for_super_duck']/100)
+                weights[1] += int(weights[1] * bot.current_event['chance_added_for_super_duck'] / 100)
 
             if sum(weights) == 0:
                 extra = {"channelid": channel.id, "userid": 0}
@@ -111,13 +107,18 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
                 # Owner don't want ducks to spawn
                 return False
 
-            type = random.choices(population, weights=weights, k=1)[0]
+            type_ = random.choices(population, weights=weights, k=1)[0]
 
-            instance = await type.create(bot, channel, ignore_event)
+            instance = await type_.create(bot, channel, ignore_event=ignore_event)
 
         bot.ducks_spawned.append(instance)
 
-        await bot.send_message(where=channel, mention=False, can_pm=False, message=instance.discord_spawn_str)
+        message = instance.discord_spawn_str
+
+        if await bot.db.get_pref(channel.guild, "debug_show_ducks_class_on_spawn"):
+            message = f"[{type(instance).__name__}] -- {message}"
+
+        await bot.send_message(where=channel, mention=False, can_pm=False, message=message)
     else:
         return False
 
