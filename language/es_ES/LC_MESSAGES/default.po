@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-15 20:47+0000\n"
+"POT-Creation-Date: 2018-07-16 10:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,16 +108,16 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} ha sido removido de los "
 "Admins del Servidor"
 
-#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+#: cogs/admin_commands.py:140 cogs/admin_commands.py:166
 msgid "Done. User removed from the database, if he was in."
 msgstr ""
 "Hecho. Usuario eliminado de la base de datos, si es que estuvo en esta."
 
-#: cogs/admin_commands.py:155
+#: cogs/admin_commands.py:153
 msgid "Done. All channel data was removed."
 msgstr "Hecho. Toda la información del canal ha sido eliminada."
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:178
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -126,8 +126,8 @@ msgstr ""
 "reset/list/modified] (ver/configurar/reiniciar/lista/modificado) [setting if "
 "applicable] (ajuste si es aplicable)`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
+#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
+#: cogs/admin_commands.py:254
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -135,11 +135,11 @@ msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** No conozco este "
 "ajuste."
 
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:191
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} está configurado en `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:213
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -147,7 +147,7 @@ msgstr ""
 "Pasas por alto la cantidad máxima de patos por día dado que eres el "
 "propietario del bot. Habrían sido `{max}`. "
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -157,7 +157,7 @@ msgstr ""
 " Por favor no abuses de eso. Para que sepas, es recomendable que el limite "
 "de patos lo dejes en `{max}` patos por día."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:223
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -165,22 +165,22 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> Autorizado para configurar "
 "el estatus de VIP!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:225
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: No estás autorizado para establecer el estado VIP! Usted no es uno de "
 "los dueños del bot."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
+#: cogs/admin_commands.py:267
 msgid ":x: Incorrect value."
 msgstr ":x: Valor incorrecto"
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: El ajuste {pref} se ha configurado a `{value}` en este Servidor."
 
-#: cogs/admin_commands.py:292
+#: cogs/admin_commands.py:290
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"

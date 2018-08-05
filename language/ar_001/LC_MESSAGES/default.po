@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-15 20:47+0000\n"
+"POT-Creation-Date: 2018-07-16 10:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,7 +88,7 @@ msgstr ""
 "تمت إزالة <:cmd_AdminRemoved_01:439549845519335440>{admin} من مشرفي المجموعة."
 ""
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:178
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -96,19 +96,19 @@ msgstr ""
 ":x: بناء جملة غير صحيح. استخدم الأمر بهذه الطريقة: `! إعدادات [view / set / "
 "reset / list / modified] [setting if applicable]`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
+#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
+#: cogs/admin_commands.py:254
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
 msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746>** خطأ: ** لا أعرف هذا الإعداد."
 
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:191
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:213
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -116,7 +116,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day لأنك مالك البوت. كان من الممكن أن يكون "
 "\"{max}\"."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -125,7 +125,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day كما كنت في نقابة كبار الشخصيات. من فضلك لا "
 "تسيء ذلك. للحصول على معلومات ، ربما تم تعيين الحد على `` max} `بط يوميًا."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:223
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -133,20 +133,20 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>مرخص لتعيين حالة كبار "
 "الشخصيات!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:225
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: غير مصرح به لضبط حالة كبار الشخصيات! انت لست مالك."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
+#: cogs/admin_commands.py:267
 msgid ":x: Incorrect value."
 msgstr " :x: قيمة غير صحيحة."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:292
+#: cogs/admin_commands.py:290
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"

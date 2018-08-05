@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-15 20:47+0000\n"
+"POT-Creation-Date: 2018-07-16 10:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,16 +107,16 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440>{admin} verwijderd van de "
 "gildebeheerders."
 
-#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+#: cogs/admin_commands.py:140 cogs/admin_commands.py:166
 msgid "Done. User removed from the database, if he was in."
 msgstr ""
 "Klaar. Gebruiker verwijderd uit de database, als hij zich hierin bevond."
 
-#: cogs/admin_commands.py:155
+#: cogs/admin_commands.py:153
 msgid "Done. All channel data was removed."
 msgstr "Klaar. Alle kanaaldata is verwijderd."
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:178
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -124,8 +124,8 @@ msgstr ""
 ":x: Incorrecte syntax. Gebruik het commando op deze manier: `!settings [view/"
 "set/reset/list/modified] [instelling indien van toepassing]`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
+#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
+#: cogs/admin_commands.py:254
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -133,11 +133,11 @@ msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746>**FOUT:** Ik ken deze instelling "
 "niet"
 
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:191
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: De instelling {pref} is ingesteld op `{value}` in dit gilde."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:213
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -145,7 +145,7 @@ msgstr ""
 "De max_ducks_per_day-controle aan het omzeilen, omdat je de boteigenaar bent."
 " Het zou `{max}` geweest zijn."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -155,7 +155,7 @@ msgstr ""
 "bevindt. Misbruik dit alsjeblieft niet. Ter informatie: de limiet zou zijn "
 "ingesteld op `{max} 'eenden per dag."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:223
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -163,21 +163,21 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>Geautoriseerd om de VIP-"
 "status in te stellen!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:225
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: Ongeauthoriseerd om de VIP status in te stellen! Je bent geen eigenaar."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
+#: cogs/admin_commands.py:267
 msgid ":x: Incorrect value."
 msgstr ":x: Onjuiste waarde."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: De instelling {pref} is ingesteld op `{value}` in dit gilde."
 
-#: cogs/admin_commands.py:292
+#: cogs/admin_commands.py:290
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -1053,6 +1053,10 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEUWW** Je hebt de eend gemist! [gemist: -1 xp]"
 
+#: cogs/user_commands.py:352
+msgid "You hugged a tree, Wizzz?!"
+msgstr "Heb je een boom geknuffeld, Wizzz?!"
+
 #: cogs/user_commands.py:355
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Er is hier geen eend, wat was je van plan om te knuffelen, een boom?!"
@@ -1609,6 +1613,10 @@ msgid ""
 msgstr ""
 "Dat was in de buurt, je doodde de eend bijna, maar de andere jager was net "
 "iets eerder! [gemist: -1 xp]"
+
+#: cogs/helpers/ducks.py:213
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985>Wizzz huggy ducky!"
 
 #: cogs/helpers/ducks.py:218
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-15 20:47+0000\n"
+"POT-Creation-Date: 2018-07-16 10:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,15 +105,15 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440>{admin} fjernet fra guild-"
 "administratorerne."
 
-#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+#: cogs/admin_commands.py:140 cogs/admin_commands.py:166
 msgid "Done. User removed from the database, if he was in."
 msgstr "Udført. Bruger fjernet fra databasen, hvis han var i."
 
-#: cogs/admin_commands.py:155
+#: cogs/admin_commands.py:153
 msgid "Done. All channel data was removed."
 msgstr "Udført. Alt kanaldata blev fjernet."
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:178
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -121,8 +121,8 @@ msgstr ""
 ":x: Forkert syntaks. Brug kommandoen på denne måde: `!settings [view/set/"
 "reset/list/modified] [indstilling hvis relevant]`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
+#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
+#: cogs/admin_commands.py:254
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
@@ -130,11 +130,11 @@ msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746>**FEJL:** Jeg kender ikke denne "
 "indstilling"
 
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:191
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: Indstillingen {pref} er sat til `{value}` på dette guild."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:213
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -142,7 +142,7 @@ msgstr ""
 "Omgår max_ducks_per_day tjekket fordi du er botejer. Det ville have været "
 "`{max}`."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -151,7 +151,7 @@ msgstr ""
 "Omgår max_ducks_per_day tjekken fordi du er i et VIP-guild. Må ikke misbruge "
 "det. Grænsen ville have været sat til `{max}` ænder pr. Dag."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:223
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -159,20 +159,20 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>Godkendt til at indstille VIP "
 "status!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:225
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Uautoriseret til at indstille VIP status! Du er ikke ejer."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
+#: cogs/admin_commands.py:267
 msgid ":x: Incorrect value."
 msgstr ":x: Forkert værdi."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: Indstillingen {pref} er sat til `{value}` på dette guild."
 
-#: cogs/admin_commands.py:292
+#: cogs/admin_commands.py:290
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
