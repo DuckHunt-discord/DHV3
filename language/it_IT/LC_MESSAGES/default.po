@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-16 10:29+0000\n"
+"POT-Creation-Date: 2018-08-05 11:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -120,8 +120,8 @@ msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
 msgstr ""
-":x: sintassi errata. Utilizzare il comando in questo modo: `!settings [view /"
-" set / reset / list / modified] [impostazione se applicabile]`"
+":x: Sintassi errata. Utilizzare il comando in questo modo: `!settings [view/"
+"set/reset/list/modified] [impostazione se applicabile]`"
 
 #: cogs/admin_commands.py:188 cogs/admin_commands.py:203
 #: cogs/admin_commands.py:254
@@ -1086,11 +1086,11 @@ msgstr "Non mi sparare! Sono un'anatra fazulla1!!11!!"
 
 #: cogs/helpers/config.py:70
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra se ne andò. · ° '\\ `' ° -.., ¸¸ · ° '\\ `"
+msgstr "L'anatra se ne andò. · ° '\\`' ° -.., ¸¸ · ° '\\`"
 
 #: cogs/helpers/config.py:70
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra se ne andò in un altro mondo. · ° '\\ `' ° -.., ¸¸ · ° '\\ `"
+msgstr "L'anatra se ne andò in un altro mondo. · ° '\\`' ° -.., ¸¸ · ° '\\`"
 
 #: cogs/helpers/config.py:70
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #: cogs/helpers/config.py:71
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra se ne andò via dalla noia. ·°'\\ `'°-.,¸¸.·°'\\ `"
+msgstr "L'anatra se ne andò via dalla noia. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:72
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1127,7 +1127,7 @@ msgstr "una paperella di gomma."
 
 #: cogs/helpers/config.py:75
 msgid "a vibrating duck."
-msgstr "un'anatra vibrante. ( ͡° ͜ʖ ͡°)"
+msgstr "un'anatra vibrante. **( ͡° ͜ʖ ͡°)**"
 
 #: cogs/helpers/config.py:75
 msgid "a pile of feathers."
@@ -1309,7 +1309,7 @@ msgid ""
 "water."
 msgstr ""
 "Una società di rifiuti medici ha scaricato steroidi nel lago. Le anatre si "
-"sono mutato e vedrai molte più super anatre. Ma stai attento, e non bere "
+"sono mutate e vedrai molte più super anatre. Ma stai attento, e non bere "
 "quell'acqua."
 
 #: cogs/helpers/config.py:160
