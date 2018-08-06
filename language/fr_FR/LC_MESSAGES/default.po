@@ -1074,6 +1074,10 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** Vous avez manqué le canard! [manqué: -1 xp]"
 
+#: cogs/user_commands.py:352
+msgid "You hugged a tree, Wizzz?!"
+msgstr "Wizzz, tu fais un calin à un arbre ?!"
+
 #: cogs/user_commands.py:355
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Il n'y a pas de canard ici, qu'as-tu prévu de câliner, un arbre?"
@@ -1633,6 +1637,10 @@ msgid ""
 msgstr ""
 "C'était proche, tu as presque tué le canard, mais l'autre chasseur l'a eu en "
 "premier. [Manqué: -1 xp]"
+
+#: cogs/helpers/ducks.py:213
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985>Wizzz huggy ducky!"
 
 #: cogs/helpers/ducks.py:218
 msgid ""
