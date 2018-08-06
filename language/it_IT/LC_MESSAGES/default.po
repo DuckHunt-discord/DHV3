@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-05 11:08+0000\n"
+"POT-Creation-Date: 2018-08-06 07:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1094,16 +1094,15 @@ msgstr "L'anatra se ne andò in un altro mondo. · ° '\\`' ° -.., ¸¸ · ° '
 
 #: cogs/helpers/config.py:70
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra non ha avuto tempo per questo. · ° '\\ `' ° -.., ¸¸ · ° '\\ `"
+msgstr "L'anatra non ha avuto tempo per questo. · ° '\\`' ° -.., ¸¸ · ° '\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra se n'è andata. · ° '\\ `' ° -.., ¸¸ · ° '\\`"
+msgstr "L'anatra se n'è andata. · ° '\\`' ° -.., ¸¸ · ° '\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-"L'anatra si è dissipata nello spazio e nel tempo. ·°'\\ `'°-.,¸¸.·°'\\ `"
+msgstr "L'anatra si è dissipata nello spazio e nel tempo. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1111,11 +1110,11 @@ msgstr "L'anatra se ne andò via dalla noia. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:72
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra non vuole essere beccata. ·°'\\ `'°-.,¸¸.·°'\\ `"
+msgstr "L'anatra non vuole essere beccata. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:72
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "L'anatra si avvicinò al banchetto di limonate. ·°'\\ `'°-.,¸¸.·°'\\ `"
+msgstr "L'anatra si avvicinò al banchetto di limonate. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:75
 msgid "a stuffed duck."
