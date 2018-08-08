@@ -18,6 +18,7 @@ $bug_hunters = array(
 $donators = array(
     231196637874225152, // Dany#7189
     111681841034973184, // MalcolmHimself#7415
+    135446225565515776, // Taoshi#3480
 );
 $enigma_event_winners_june_2018 = array(
     132695220297924608, // BanditB17#2110
@@ -35,9 +36,12 @@ $enigma_event_winners_june_2018 = array(
     325434800192225290, // pokki#1490
 );
 $moderators = array(
+    135446225565515776, // Taoshi#3480
     183273311503908864, // Olpouin#6797
     181846573351829504, // PierrePV#3537
     251996890369884161, // Subtleknifewielder#1927
+    296573428293697536, // ⚜ReloadedHappyWizzz⚜#5928
+    300247046856900629, // Wolterhon#3938
     380118196742651906, // rulebritannia 🇬🇧#6894
 );
 $partners = array(
@@ -78,7 +82,6 @@ $translators = array(
 
 $retired_staff                  = array(
     94822638991454208,  // Diagamma#7456
-    296573428293697536, // ⚜HappyWizzz⚜#5928
 
 );
 
