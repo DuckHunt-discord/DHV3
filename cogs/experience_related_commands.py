@@ -34,7 +34,6 @@ class Experience:
         cmd = self.bot.get_command("send_exp")
         await ctx.invoke(cmd, target=user, amount=15)
 
-
     @commands.command(aliases=['sendexp', 'send_xp', 'sendxp'])
     @checks.is_channel_enabled()
     @checks.had_giveback()

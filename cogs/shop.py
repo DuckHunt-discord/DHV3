@@ -30,7 +30,7 @@ class Experience:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.group()
+    @commands.group(aliases=["buy", "shopping"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
     @commands.cooldown(10, 20, BucketType.user)
