@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-09 16:43+0000\n"
+"POT-Creation-Date: 2018-08-09 17:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,50 +165,50 @@ msgstr ""
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr ""
 
-#: cogs/experience_related_commands.py:48
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 
-#: cogs/experience_related_commands.py:52
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ""
 
-#: cogs/experience_related_commands.py:56
+#: cogs/experience_related_commands.py:55
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr ""
 
-#: cogs/experience_related_commands.py:75
+#: cogs/experience_related_commands.py:74
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 
-#: cogs/experience_related_commands.py:78
+#: cogs/experience_related_commands.py:77
 msgid "You don't have enough experience points"
 msgstr ""
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:79
 msgid ":x: Sending exp is disabled on this server"
 msgstr ""
 
-#: cogs/experience_related_commands.py:88 cogs/scores.py:33
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr ""
 
-#: cogs/experience_related_commands.py:89 cogs/scores.py:34
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr ""
 
-#: cogs/experience_related_commands.py:89 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr ""
 
-#: cogs/experience_related_commands.py:90 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr ""
 
-#: cogs/experience_related_commands.py:90 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr ""
 
@@ -256,13 +256,13 @@ msgstr ""
 
 #: cogs/scores.py:52
 msgid ""
-"The scores are now available online at "
+"The scores are online at "
 "http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
 msgstr ""
 
 #: cogs/scores.py:259
 msgid ""
-"The Duckstats are now available online at "
+"Your duckstats are waiting for you at "
 "http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}"
 msgstr ""
 
