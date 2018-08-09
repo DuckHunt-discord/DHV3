@@ -361,10 +361,6 @@ class User:
         await self.bot.send_message(ctx=ctx, message=await current_duck.hug(ctx))
 
 
-
-
-
-
     @commands.command(aliases=["currentevent", "event", "events"])
     @checks.is_channel_enabled()
     async def current_event(self, ctx):

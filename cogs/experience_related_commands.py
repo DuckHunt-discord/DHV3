@@ -27,6 +27,13 @@ class Experience:
 
         await self.bot.send_message(ctx=ctx, message=_(":ok:, he/she now has {newexp} exp points!", language).format(**{"newexp": await self.bot.db.get_stat(ctx.message.channel, target, "exp")}))
 
+    @commands.command(aliases=["thank", "thanksyou"])
+    @checks.is_channel_enabled()
+    @checks.had_giveback()
+    async def thanks(self, ctx, user:discord.Member):
+        cmd = self.bot.get_command("send_exp")
+        await ctx.invoke(cmd, target=user, amount=15)
+
 
     @commands.command(aliases=['sendexp', 'send_xp', 'sendxp'])
     @checks.is_channel_enabled()
@@ -81,7 +88,6 @@ class Experience:
         return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(
             **{"date": date_expiration.strftime(_('%m/%d at %H:%M:%S', language)), "dans_jours": _("{dans} days ", language).format(**{"dans": td.days}) if td.days else "",
                 "dans_heure": _("{dans} hours", language).format(**{"dans": td.seconds // 3600}), "dans_minutes": _("{dans} minutes", language).format(**{"dans": (td.seconds // 60) % 60})})
-
 
 
 def setup(bot):
