@@ -42,6 +42,10 @@ class Meta:
     @checks.is_server_admin()
     @commands.command(rest_is_raw=True, hidden=True, aliases=["say_nomention"])
     async def echo_nomention(self, ctx, *, content):
+        try:
+            await ctx.message.delete()
+        except:
+            pass
         await self.bot.send_message(ctx=ctx, message=content, mention=False)
 
     @commands.command(hidden=True)

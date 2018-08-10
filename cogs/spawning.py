@@ -54,6 +54,25 @@ async def get_number_of_ducks(total_ducks):
 
 async def planifie(bot, channel=None, new_day=True):
     if channel:
+        permissions_wanted = discord.Permissions.none()
+        permissions_wanted.read_messages = True
+        permissions_wanted.send_messages = True
+
+        permissions_okay = channel.permissions_for(channel.guild.me).is_superset(permissions_wanted)
+
+        if not permissions_okay:
+            # Remove the channel, cant send or write messages.
+            bot.logger.info(f"Removing channel as we have no I/O perms there.")
+            await bot.db.disable_channel(channel)
+
+            bot.ducks_planning.pop(channel, None)
+
+            for duck in bot.ducks_spawned[:]:
+                if duck.channel == channel:
+                    duck.delete()
+
+            return
+
         total_ducks = await bot.db.get_pref(channel.guild, "ducks_per_day")
 
         if not new_day:
@@ -75,8 +94,9 @@ async def planifie(bot, channel=None, new_day=True):
             if to_plan_guild:
                 to_plan_channel = to_plan_guild.get_channel(channel["channel"])
             if to_plan_channel:
-                total_global_ducks += await planifie(bot, channel=to_plan_channel, new_day=new_day)
-                channel_count += 1
+                x = await planifie(bot, channel=to_plan_channel, new_day=new_day)
+                total_global_ducks += x if x else 0
+                channel_count += 1 if x else 0
 
         await bot.log(level=30, title="New planification task done", message=f"{total_global_ducks} ducks are planned for today in {channel_count} channels.", where=None)
 
