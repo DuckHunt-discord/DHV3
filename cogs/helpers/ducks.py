@@ -378,8 +378,6 @@ class MechanicalDuck(BaseDuck):
 
     async def _gen_discord_str(self):
 
-        # Same as for the Normal Duck because they shouldn't be distinguished
-
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
         guild = self.channel.guild
@@ -405,7 +403,7 @@ class MechanicalDuck(BaseDuck):
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
-        return _("You have been tricked by {user_mention} to kill a mechanical duck. It obviouly won't work, and you lost 1 exp for this missed shot", language).format(user_mention=self.user_mention)
+        return _("You have been tricked by {user_mention} to kill a mechanical duck. It obviously won't work, and you lost 1 exp for this missed shot", language).format(user_mention=self.user_mention)
 
     async def get_frighten_chance(self):
         return 0
