@@ -61,7 +61,7 @@ class Meta:
     @commands.command()
     async def help(self, ctx):
         _ = self.bot._; language = await self.bot.db.get_pref(ctx.guild, "language")
-        await self.bot.send_message(ctx=ctx, message=_("Here is the command list : http://duckhunt.me/command-list/", language))
+        await self.bot.send_message(ctx=ctx, message=_("Here is the command list: http://duckhunt.me/command-list/", language))
 
     @commands.command(aliases=["date"])
     async def time(self, ctx):
