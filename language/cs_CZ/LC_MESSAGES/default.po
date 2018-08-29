@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-10 08:13+0000\n"
+"POT-Creation-Date: 2018-08-29 18:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,12 +19,360 @@ msgstr ""
 
 #: bot.py:140
 msgid ":x: A required argument is missing."
-msgstr "Požadovaný argument chybí"
+msgstr "Požadovaný argument chybí."
 
 #: bot.py:144
 msgid ":x: You don't have enough exp for this"
-msgstr "Nemáte dostatečný počet expů"
+msgstr "Nemáte dostatečný počet expů."
 
 #: bot.py:147
 msgid ":x: You are not a server admin"
-msgstr "Nejsi"
+msgstr ":x: Nejsi admin serveru."
+
+#: bot.py:150
+msgid ":x: You are not a super admin."
+msgstr ":x: Nejsi super-admin."
+
+#: bot.py:151
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Tento příkaz je rezervovaný pro majitele bota. Pokud si myslíte, že se toto "
+"stalo chybou, prosím kontaktujte DuckHunt Support Server (odkaz získáte "
+"příkazem `dh!help`)."
+
+#: bot.py:155
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x: Nějakou dobu jste nevolil pro DuckHunt na serveru DiscordBotList."
+
+#: bot.py:156
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Podpořte tohoto bota volením na <https://discordbots.org/bot/duckhunt>. "
+"Pamatujte, že registrace hlasům chvíli trvá.  Pokud si myslíte, že se toto "
+"stalo chybou, prosím kontaktujte DuckHunt Support Server (odkaz získáte "
+"příkazem `dh!help`)."
+
+#: bot.py:168
+msgid "You are on cooldown :(, try again in {seconds}"
+msgstr "Musíte chvíli počkat :(, zkuste to za {seconds}."
+
+#: bot.py:174
+msgid ":bulb: HINT: "
+msgstr ":bulb: :HINT:"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Hotovo, uživateli byl dán ban. :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Hotovo, uživatel byl zbaven banu. :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019> Hotovo, kanál {channel} byl přidán "
+"do hry! Bavte se!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Hotovo, kanál {channel} byl "
+"odebrán ze hry! Nashledanou!"
+
+#: cogs/admin_commands.py:89
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} byl přidán jako admin do "
+"skupiny!"
+
+#: cogs/admin_commands.py:97
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} byl odebrán ze seznamu "
+"adminů skupiny!"
+
+#: cogs/admin_commands.py:140 cogs/admin_commands.py:166
+msgid "Done. User removed from the database, if he was in."
+msgstr "Hotovo. Pokud byl uživatel v databázi, byl z ní odstraněn."
+
+#: cogs/admin_commands.py:153
+msgid "Done. All channel data was removed."
+msgstr "Hotovo. Všechna data kanálu byla odstraněna."
+
+#: cogs/admin_commands.py:178
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+":x: Neplatná syntaxe. Použijte tento příkaz takto: `!settings [view/set/"
+"reset/list/modified] [setting if applicable]`"
+
+#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
+#: cogs/admin_commands.py:254
+msgid ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
+"setting"
+msgstr ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **CHYBA** Toto nastavení neznám."
+
+#: cogs/admin_commands.py:191
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: Nastavení {pref} bylo pro tuto skupinu nastaveno na `{value}`"
+
+#: cogs/admin_commands.py:213
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Obejití max_ducks_per_day kontroluje, jestli jste vlastníkem bota. Bylo by "
+"to `{max}` ."
+
+#: cogs/admin_commands.py:215
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Obejití max_ducks_per_day kontroluje, jestli jste ve VIP skupině. "
+"Nezneužívejte toho prosím. Pro informaci, limit by byl nastaven na `{max}` "
+"kachen za den."
+
+#: cogs/admin_commands.py:223
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050> Oprávněn nastavit VIP status."
+""
+
+#: cogs/admin_commands.py:225
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ":x: Neoprávněn nastavit VIP status! Nejste vlastníkem serveru."
+
+#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
+#: cogs/admin_commands.py:267
+msgid ":x: Incorrect value."
+msgstr ":x: Neplatná hodnota."
+
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ":ok: Nastavení {pref} bylo pro tuto skupinu nastaveno na `{value}` ."
+
+#: cogs/admin_commands.py:290
+msgid ""
+"The list of preferences is available on our new website: https://duckhunt.me/"
+"bot-settings/"
+msgstr ""
+"Seznam nastavení je dostupný na naší webové stránce: https://duckhunt.me/bot-"
+"settings/"
+
+#: cogs/experience_related_commands.py:25
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"Blahopřeji, poslali/přijali jste více než maximum toho, co můžu uložit."
+
+#: cogs/experience_related_commands.py:28
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ":ok:, on/ona má nyní {newexp} exp bodů!"
+
+#: cogs/experience_related_commands.py:47
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ":x: Pro předejití vydírání nemůžete poslat expy když namáte zbraň."
+
+#: cogs/experience_related_commands.py:51
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Hodnota exp musí být kladná."
+
+#: cogs/experience_related_commands.py:55
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+":x: Počkat... Cože?! Snažíte se poslat expy sám sobě?! To nedává smysl."
+
+#: cogs/experience_related_commands.py:74
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Poslali jste {amount} expů {target} (a zaplatili {taxes} expů na daních)!"
+
+#: cogs/experience_related_commands.py:77
+msgid "You don't have enough experience points"
+msgstr "Nemáte dostatek expů!"
+
+#: cogs/experience_related_commands.py:79
+msgid ":x: Sending exp is disabled on this server"
+msgstr ":x: Posílání expů je na tomto serveru vypnuto"
+
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (v {dans_jours}{dans_heures} a {dans_minutes})"
+
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "%m/%d v %H:%M:%S"
+
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans} den/dny/dnů"
+
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans} hodina/hodiny/hodin"
+
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
+msgid "{dans} minutes"
+msgstr "{dans} minuta/minuty/minut"
+
+#: cogs/meta.py:35
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"Bot se pravidelně restartuje kvůli updatům, ale žádné strachy, je 99.8% času "
+"online."
+
+#: cogs/meta.py:64
+msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgstr "Zde je seznam příkazů: http://duckhunt.me/command-list/"
+
+#: cogs/meta.py:74
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"V GMT (UTC±00:00), která je používána botem, je`{hours}:{minutes}:{seconds}`\n"
+"Můžete použít tuto webovou stránku, aby jste ho porovnali s tím vaším: https:"
+"//time.is/compare/GMT"
+
+#: cogs/meta.py:75
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr ""
+"Pro zobrazení času do získání zbraně zpět zdarma použijte příkaz "
+"`dh!freetime`"
+
+#: cogs/meta.py:88
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hours and {minutes} minutes)."
+msgstr ""
+":alarm_clock: Do získání zbraní a nábojů zdarma zbýva {sec} vteřina/vteřiny/"
+"vteřin ({hours} hodina/hodiny/hodin a {minutes}  minuta/minuty/minut)."
+
+#: cogs/meta.py:90
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr "Před získáním nábojů zdarma doporučujeme znovu nabít!"
+
+#: cogs/meta.py:102
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Používáte shard číslo {shard} z {total} shardů."
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Skóre je online na http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Vaše lovecké statistiky na Vás čekají na http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Zdravím!\n"
+"Děkuji za přidání do tohoto serveru! Jsem téměř připraven na spuštění hry! "
+"Můžeme prosím jít do kanálu, kde chcete začít hru? Spusťte mě tam prosím "
+"pomocí příkazu `dh!setup`\n"
+"<:event_GuildAdded_01:439550913112309781>"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr ""
+"Zdravím!\n"
+"Jen udělám krátkou test oprávnění a budu zpět za pár vteřin! Vyčkejte prosím"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+":small_red_triangle: Oprávnění  `read_message_history` chybí.\n"
+"To je ale velmi důležité pro moji správnou funkci, protože potřebuji číst "
+"zprávy.\n"
+"Můžete bez něj pokračovat, ale není to správné."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Oprávnění `add_reactions` chybí.\n"
+"To je ale nezbytné pro vytváření formátovaných zpráv, které používám téměř "
+"neustále.\n"
+"Můžete bez něj pokračovat, ale bude to vést k chybám."
+
+#: cogs/setup_wizzard.py:61
+msgid ""
+":small_red_triangle: The permission `attach_files` is missing.\n"
+"It's a required permission for embeds, and they are almost everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Oprávnění `attach_files` chybí.\n"
+"To je ale nezbytné pro vytváření formátovaných zpráv, které používám téměř "
+"neustále.\n"
+"Můžete bez něj pokračovat, ale bude to vést k chybám."
+
+#: cogs/setup_wizzard.py:66
+msgid ""
+":small_red_triangle: The permission `embed_links` is missing.\n"
+"This is used to send embeds\n"
+"You could proceed without it, but really shouldn't as it will lead to errors"
+msgstr ""
+":small_red_triangle: Oprávnění `embed_links` chybí.\n"
+"To je ale nezbytné pro vytváření formátovaných zpráv, které používám téměř "
+"neustále.\n"
+"Můžete bez něj pokračovat, ale bude to vést k chybám."
