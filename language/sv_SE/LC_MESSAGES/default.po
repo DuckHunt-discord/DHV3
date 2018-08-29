@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,44 +66,44 @@ msgstr ""
 "Grattis, du skickade/gav mer erfarenhet än det maximala antalet jag kan "
 "lagra."
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: För att stoppa missbruk, kan du inte skicka erfarenhetspoäng när du inte "
 "har ett gevär."
 
-#: cogs/experience_related_commands.py:45
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Summan för erfarenhetspoäng måste vara positiv."
 
-#: cogs/experience_related_commands.py:68
+#: cogs/experience_related_commands.py:74
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Du har skickat {amount} exp till {target} (och har betalt {taxes} i "
 "skatter)!"
 
-#: cogs/experience_related_commands.py:71
+#: cogs/experience_related_commands.py:77
 msgid "You don't have enough experience points"
 msgstr "Du har inte tillräckligt med erfarenhetspoäng."
 
-#: cogs/experience_related_commands.py:73
+#: cogs/experience_related_commands.py:79
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server."
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:34
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d på %H:%M:%S"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dagar"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} timmar"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minuter"
 
@@ -116,7 +116,7 @@ msgstr ""
 "Botten uppdaterar regelbundet för uppdateringar. Oroa inte, botten har en "
 "upptid av 99.8%"
 
-#: cogs/meta.py:84
+#: cogs/meta.py:88
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."

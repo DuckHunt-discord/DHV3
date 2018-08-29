@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,16 +197,16 @@ msgstr ""
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr ":ok:, hij/zij heeft nu {newexp} exp punten!"
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Om misbruik te voorkomen, kun je geen exp sturen als je geen wapen hebt."
 
-#: cogs/experience_related_commands.py:45
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: De exp-hoeveelheid moet positief zijn."
 
-#: cogs/experience_related_commands.py:49
+#: cogs/experience_related_commands.py:55
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
@@ -214,38 +214,38 @@ msgstr ""
 ":x: Wacht... Wat? Probeer je ervaring naar JEZELF te sturen? Dat slaat "
 "nergens op."
 
-#: cogs/experience_related_commands.py:68
+#: cogs/experience_related_commands.py:74
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Je hebt {amount} exp verzonden naar {target} (en {belastingen} exp aan "
 "belastingen betaald)!"
 
-#: cogs/experience_related_commands.py:71
+#: cogs/experience_related_commands.py:77
 msgid "You don't have enough experience points"
 msgstr "Je hebt niet genoeg ervaringspunten"
 
-#: cogs/experience_related_commands.py:73
+#: cogs/experience_related_commands.py:79
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Het verzenden van exp is uitgeschakeld op deze server"
 
-#: cogs/experience_related_commands.py:81 cogs/scores.py:33
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (in {dans_jours} {dans_heures} en {dans_minutes})"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:34
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d bij %H:%M:%S"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dagen"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} uur"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minuten"
 
@@ -258,11 +258,11 @@ msgstr ""
 "De bot wordt vaak opnieuw opgestart voor updates. Maak je geen zorgen, de "
 "bot heeft een uptime van 99,8%."
 
-#: cogs/meta.py:60
+#: cogs/meta.py:64
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr "Hier is de lijst met commando's : http://duckhunt.me/command-list/"
 
-#: cogs/meta.py:70
+#: cogs/meta.py:74
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -273,7 +273,7 @@ msgstr ""
 "Je kunt deze website gebruiken om het met die van jou te vergelijken: https:/"
 "/time.is/compare/GMT"
 
-#: cogs/meta.py:71
+#: cogs/meta.py:75
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -281,7 +281,7 @@ msgstr ""
 "Je kunt het `dh!freetime` commando gebruiken om te zien wanneer je je wapens "
 "gratis terug krijgt"
 
-#: cogs/meta.py:84
+#: cogs/meta.py:88
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -289,7 +289,7 @@ msgstr ""
 ":alarm_clock: Volgende teruggave van wapens en magazijnen in {sec} seconden "
 "({hours} uur en {minutes} minuten)."
 
-#: cogs/meta.py:86
+#: cogs/meta.py:90
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -299,25 +299,9 @@ msgstr ""
 "het in beslag was genomen), maar het heeft geen invloed op de kogels in je "
 "huidige magazijn. Als het kan, herlaad dan van tevoren!"
 
-#: cogs/meta.py:98
+#: cogs/meta.py:102
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Je gebruikt shard nummer {shard} uit het totaal van {total} shards"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are now available online at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}"
-msgstr ""
-"De scores zijn nu online beschikbaar op http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"The Duckstats are now available online at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"De Duckstats zijn nu online beschikbaar op http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -1061,7 +1045,7 @@ msgstr "Heb je een boom geknuffeld, Wizzz?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Er is hier geen eend, wat was je van plan om te knuffelen, een boom?!"
 
-#: cogs/user_commands.py:374
+#: cogs/user_commands.py:370
 msgid "**Current event**"
 msgstr "**Huidig evenement**"
 
@@ -1661,21 +1645,13 @@ msgstr ""
 ":gun: De eend heeft het overleefd, probeer het opnieuw! *SUPER EEND "
 "GEDETECTEERD* [levens: -{vie}]"
 
-#: cogs/helpers/ducks.py:408
-msgid ""
-"You have been tricked by {user_mention} to kill a mechanical duck. It "
-"obviouly won't work, and you lost 1 exp for this missed shot"
-msgstr ""
-"Je bent misleid door {user_mention} om een mechanische eend te doden. Het "
-"zal natuurlijk niet werken, en je verloor 1 exp voor dit gemiste schot"
-
-#: cogs/helpers/ducks.py:448
+#: cogs/helpers/ducks.py:446
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "De babyeend is weggegaan om ergens een klein dutje te gaan doen ·°'\\`'°-."
 ",¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:468
+#: cogs/helpers/ducks.py:466
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1685,7 +1661,7 @@ msgstr ""
 "seconden gedood en dit had je niet moeten doen! Je verliest wat exp, omdat "
 "je geen baby's moet doden\\ _X< *COUAC* {exp}"
 
-#: cogs/helpers/ducks.py:482
+#: cogs/helpers/ducks.py:480
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1695,11 +1671,11 @@ msgstr ""
 "is hij heel blij! [3 exp]\n"
 "De baby-eend ging weg en voelde zich geliefd"
 
-#: cogs/helpers/ducks.py:494
+#: cogs/helpers/ducks.py:492
 msgid "**I AM...** Your mother"
 msgstr "**IK BEN...** Je moeder"
 
-#: cogs/helpers/ducks.py:502
+#: cogs/helpers/ducks.py:500
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

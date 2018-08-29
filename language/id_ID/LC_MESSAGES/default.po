@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,48 +114,48 @@ msgstr ""
 "Selamat ya, kamu sudah mengirim / memberi wawasan lebih banyak daripada "
 "jumlah maksimum yang dapat saya simpan."
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Guna mencegah penyalahgunaan, kamu tidak bisa mengirim exp bila tidak "
 "mempunyai senjata."
 
-#: cogs/experience_related_commands.py:45
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Jumlah exp haruslah positif."
 
-#: cogs/experience_related_commands.py:68
+#: cogs/experience_related_commands.py:74
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Kamu sudah mengirim {amount} exp kepada {target} (dan membayar {taxes} pajak "
 "exp)!"
 
-#: cogs/experience_related_commands.py:71
+#: cogs/experience_related_commands.py:77
 msgid "You don't have enough experience points"
 msgstr "Poin wawasan kamu tidak mencukupi"
 
-#: cogs/experience_related_commands.py:73
+#: cogs/experience_related_commands.py:79
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Mengirimkan exp dinonaktifkan di server ini"
 
-#: cogs/experience_related_commands.py:81 cogs/scores.py:33
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (pada {dans_jour}{dans_heures} dan {dans_minutes})"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:34
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d pada %J:%M:%D"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} hari"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} jam"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} menit"
 
@@ -168,11 +168,11 @@ msgstr ""
 "Bot melakukan pengaktifan-ulang berkala untuk pembaruan. Jangan khawatir, "
 "masa aktifnya 99.8%"
 
-#: cogs/meta.py:60
+#: cogs/meta.py:64
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr "Ini daftar perintahnya : http://duckhunt.me/command-list/"
 
-#: cogs/meta.py:70
+#: cogs/meta.py:74
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -183,7 +183,7 @@ msgstr ""
 "web ini dengan milikmu:\n"
 "https://times.is/compare/GMT"
 
-#: cogs/meta.py:84
+#: cogs/meta.py:88
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -191,7 +191,7 @@ msgstr ""
 ":alarm_clock: Pengembalian senjata dan magasen berikutnya dalam {sec} detik "
 "({hours} jam dan {minutes} menit"
 
-#: cogs/meta.py:86
+#: cogs/meta.py:90
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -201,7 +201,7 @@ msgstr ""
 "(bila disita), tapi itu tidak mempengaruhi peluru di magasenmu sekarang. "
 "Kalau bisa, isi ulang sebelum beraksi!"
 
-#: cogs/meta.py:98
+#: cogs/meta.py:102
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Kamu menngunakan sejumlah shard {shard} dari {total} shard total."
 

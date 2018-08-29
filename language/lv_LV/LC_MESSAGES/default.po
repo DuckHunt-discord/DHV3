@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,24 +25,24 @@ msgstr ""
 "Apveicu, tu aizsūtīji / saņēmi vairāk pieredzes punktu nekā maksimālais "
 "daudzums, ko es varu uzglabāt."
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Lai novērstu ļaunprātīgu izmantošanu, tu nevari sūtīt exp, ja tev nav "
 "ieroča."
 
-#: cogs/experience_related_commands.py:45
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Tev jānorāda pozitīvs numurs, lai sūtītu exp."
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dienas"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} stundas"
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minūtes"

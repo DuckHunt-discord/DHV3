@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,6 +137,24 @@ msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ""
 ": ok: Η ρύθμιση {pref} έχει οριστεί σε `{value} 'σε αυτή τη συντεχνία."
 
+#: cogs/admin_commands.py:213
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Παράκαμψη του ελέγχου max_ducks_per_day καθώς είστε ο ιδιοκτήτης bot. Θα "
+"ήταν «{max}»."
+
+#: cogs/admin_commands.py:215
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Παράκαμψη του ελέγχου max_ducks_per_day καθώς βρίσκεστε σε μια συντεχνία VIP."
+" Μην καταχραστείτε αυτήν την λειτουργία. Για πληροφορίες, το όριο θα είχε "
+"καθοριστεί σε   `{max}` πάπιες ημερησίως."
+
 #: cogs/admin_commands.py:223
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
@@ -154,6 +172,10 @@ msgstr ""
 #: cogs/admin_commands.py:267
 msgid ":x: Incorrect value."
 msgstr ":x: Εσφαλμένη τιμή."
+
+#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ":ok: Η ρύθμιση {pref} έχει οριστεί σε `{value} 'σε αυτή τη συντεχνία."
 
 #: cogs/admin_commands.py:290
 msgid ""
@@ -175,8 +197,433 @@ msgstr ""
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr ": ok :, έχει τώρα {newexp} πόντους εμπειρίας!"
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ": x: Για να αποφευχθεί η κατάχρηση, δεν μπορείτε να στείλετε εμπειρία όταν "
 "δεν έχετε όπλο."
+
+#: cogs/experience_related_commands.py:51
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Το ποσό exp πρέπει να είναι θετικό."
+
+#: cogs/experience_related_commands.py:55
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+": x: Περιμένετε ... Τι; Προσπαθείτε να στείλετε την εμπειρία στον εαυτό σας; "
+"Αυτό δεν έχει νόημα."
+
+#: cogs/experience_related_commands.py:74
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Έχετε αποστείλει {amount} exp σε {target} (και πληρώσατε {taxes} exp των "
+"φόρων)!"
+
+#: cogs/experience_related_commands.py:77
+msgid "You don't have enough experience points"
+msgstr "Δεν έχετε αρκετούς πόντους εμπειρίας"
+
+#: cogs/experience_related_commands.py:79
+msgid ":x: Sending exp is disabled on this server"
+msgstr ": x: Η αποστολή exp είναι απενεργοποιημένη σε αυτόν τον διακομιστή"
+
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (στις {dans_jours} {dans_heures} και {dans_minutes})"
+
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "%m/ %dσe %H:% M:% S"
+
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans} ημέρες"
+
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans} ώρες"
+
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
+msgid "{dans} minutes"
+msgstr "{dans} λεπτά"
+
+#: cogs/meta.py:35
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"Το σύστημα επανεκκινείται συχνά για ενημερώσεις. Μην ανησυχείτε, έχει 99,8% "
+"χρόνο λειτουργίας."
+
+#: cogs/meta.py:64
+msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgstr "Εδώ είναι η λίστα εντολών: http://duckhunt.me/command-list/"
+
+#: cogs/meta.py:74
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"Είναι `{ώρα}: {λεπτά}: {δευτερόλεπτα}` στη ζώνη ώρας GMT (επίσης γνωστή ως "
+"UTC ± 00: 00), που είναι αυτή που χρησιμοποιείται από το σύστημα.\n"
+"Μπορείτε να χρησιμοποιήσετε αυτόν τον ιστότοπο για να το συγκρίνετε με τη "
+"δική σας: https://time.is/compare/GMT"
+
+#: cogs/meta.py:75
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr ""
+"Μπορείτε να χρησιμοποιήσετε την εντολή `dh!freetime` για να δείτε πότε θα "
+"πάρετε τα όπλα σας πίσω δωρεάν"
+
+#: cogs/meta.py:88
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hours and {minutes} minutes)."
+msgstr ""
+": alarm_clock: Επόμενο ανανέωση όπλων και περιοδικών σε {δευτερόλεπτα "
+"δευτερόλεπτα ({ώρες} ώρες και {λεπτά} λεπτά)."
+
+#: cogs/meta.py:90
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr ""
+"Ένα δώρο αυξάνει τους γεμηστήρες σας και σας δίνει το όπλο σας πίσω δωρεάν "
+"(αν έχει κατασχεθεί), αλλά δεν επηρεάζει τις σφαίρες στο τρέχον περιοδικό "
+"σας. Εάν μπορείτε, οπλίστε ξαλνα εκ των προτέρων!"
+
+#: cogs/meta.py:102
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Χρησιμοποιείτε αριθμό shard {shard} από {σύνολο} συνολικών κομματιών"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Τα αποτελέσματα είναι τώρα διαθέσιμα στο διαδίκτυο στη διεύθυνση http://"
+"duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Τα Duckstats είναι τώρα διαθέσιμα στο διαδίκτυο στη διεύθυνση http://"
+"duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Γειά σου!\n"
+" Ευχαριστώ που με προσθέσατε εκεί! Είμαι σχεδόν έτοιμος να ξεκινήσω το "
+"παιχνίδι!\n"
+" Θα μπορούσαμε να παρευρεθούμε στο κανάλι όπου θέλετε να είναι το παιχνίδι; "
+"Παρακαλώ με καλέστε εκεί χρησιμοποιώντας το `dh!setup` <:event_GuildAdded_01:"
+"439550913112309781>"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr ""
+"Γεια σου και πάλι!\n"
+" Απλά θα εκτελέσω ένα γρήγορο έλεγχο δικαιωμάτων και θα επιστρέψω σε λίγα "
+"δευτερόλεπτα! Παρακαλώ περιμένετε"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+": small_red_triangle: Η άδεια `διαβάσματος ιστορικού μυνημάτων` λείπει.\n"
+"Αυτό είναι απαραίτητο για την κανονική λειτουργία του συστήματος, καθώς "
+"πρέπει να μπορώ να διαβάζω μηνύματα.\n"
+"Μπορείτε να προχωρήσετε χωρίς αυτό, αλλά δεν πρέπει."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+": small_red_triangle: Η άδεια `πρόσθεση αντιδράσεων` λείπει.\n"
+"Είναι μια απαραίτητη άδεια για διαδραστικές ενσωματώσεις και είναι σχεδόν "
+"παντού.\n"
+"Θα μπορούσατε να προχωρήσετε χωρίς αυτό, αλλά δεν συνιστάται και θα μπορούσε "
+"να οδηγήσει σε σφάλματα"
+
+#: cogs/setup_wizzard.py:61
+msgid ""
+":small_red_triangle: The permission `attach_files` is missing.\n"
+"It's a required permission for embeds, and they are almost everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+": small_red_triangle: Η άδεια `πρόσθεση αρχείων` λείπει.\n"
+"Είναι μια απαραίτητη άδεια για διαδραστικές ενσωματώσεις και είναι σχεδόν "
+"παντού.\n"
+"Θα μπορούσατε να προχωρήσετε χωρίς αυτό, αλλά δεν συνιστάται και θα μπορούσε "
+"να οδηγήσει σε σφάλματα"
+
+#: cogs/setup_wizzard.py:66
+msgid ""
+":small_red_triangle: The permission `embed_links` is missing.\n"
+"This is used to send embeds\n"
+"You could proceed without it, but really shouldn't as it will lead to errors"
+msgstr ""
+": small_red_triangle: Η άδεια `πρόσθεση συνδέσμων` λείπει.\n"
+"Αυτό χρησιμοποιείται για την αποστολή ενσωματώσεων\n"
+"Θα μπορούσατε να προχωρήσετε χωρίς αυτό, αλλά πραγματικά δεν πρέπει, καθώς "
+"θα οδηγήσει σε σφάλματα"
+
+#: cogs/setup_wizzard.py:72
+msgid ""
+":small_orange_diamond: You gave me the `administrator` permission.\n"
+"Although this will not cause problems, it's unsafe to give bots such "
+"powerful permissions, especially if they don't need them.\n"
+"You can proceed with it."
+msgstr ""
+": small_orange_diamond: Μου έδωσες την άδεια του διαχειριστή.\n"
+"Παρόλο που αυτό δεν θα προκαλέσει προβλήματα, δεν είναι ασφαλές να δίνεις "
+"στα bots τέτοια ισχυρά δικαιώματα, ειδικά αν δεν τα χρειάζονται.\n"
+"Μπορείτε να συνεχίσετε με αυτό."
+
+#: cogs/setup_wizzard.py:77
+msgid ""
+":small_orange_diamond: The permission `create_instant_invite` is missing.\n"
+"It's not really essential for the normal function of the bot, but needed for "
+"error reports.\n"
+"You can proceed without it."
+msgstr ""
+": small_orange_diamond: Η άδεια `δημιουργία πρόσκλησης` λείπει.\n"
+"Δεν είναι πραγματικά απαραίτητο για την κανονική λειτουργία του bot, αλλά "
+"χρειάζεται για αναφορές σφαλμάτων.\n"
+"Μπορείτε να προχωρήσετε χωρίς αυτό."
+
+#: cogs/setup_wizzard.py:82
+msgid ""
+":small_orange_diamond: The permission `manage_messages` is missing.\n"
+"This is used to remove some messages on sneaky commands (weapon sabotage, "
+"etc.), and also if you use the `delete_commands` setting\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+": small_orange_diamond: Η άδεια `διαχείριση μυνημάτων` λείπει.\n"
+"Αυτό χρησιμοποιείται για την κατάργηση μερικών μηνυμάτων σε ύπουλες εντολές "
+"(σαμποτάζ όπλων κ.λπ.), αλλά και να χρησιμοποιείτε τη ρύθμιση `διαγραφή "
+"εντολών`\n"
+"Θα μπορούσατε να προχωρήσετε χωρίς αυτό, αλλά δεν συνιστάται και θα μπορούσε "
+"να οδηγήσει σε σφάλματα"
+
+#: cogs/setup_wizzard.py:87
+msgid ""
+":small_orange_diamond: You gave me the `mention_everyone` permission.\n"
+"This not used, but should't be given in case of a bug\n"
+"You could proceed with it safely."
+msgstr ""
+": small_orange_diamond: Μου έδωσες την άδεια \"να κάνω tag όλους\".\n"
+"Αυτό δεν χρησιμοποιείται, αλλά δεν πρέπει να δίνεται σε περίπτωση σφάλματος\n"
+"Θα μπορούσατε να συνεχίσετε με ασφάλεια."
+
+#: cogs/setup_wizzard.py:92
+msgid ""
+":small_orange_diamond: The permission `external_emojis` is missing.\n"
+"This is used since DHV3 to add non-standard emojis to messages. You should "
+"probably give it to me\n"
+"You could proceed without it, but bug reports would be appreciated."
+msgstr ""
+": small_orange_diamond: Η άδεια `χρήση εξωτερικών emoji` λείπει.\n"
+"Αυτό χρησιμοποιείται από το DHV3 για να προσθέσετε μη τυποποιημένα emojis "
+"στα μηνύματα. Θα πρέπει μάλλον να το δώσετε σε μένα  την άδεια.\n"
+"Θα μπορούσατε να συνεχίσετε χωρίς αυτό, αλλά οι αναφορές σφαλμάτων θα "
+"εκτιμηθούν."
+
+#: cogs/setup_wizzard.py:110
+msgid ""
+":small_blue_diamond: The permission `change_nickname` is missing.\n"
+"This is not yet used, but could be in the future. An announcement will be "
+"made then.\n"
+"You can safely proceed without it."
+msgstr ""
+": small_blue_diamond: Η άδεια `αλλαγής nickname` λείπει.\n"
+"Αυτό δεν χρησιμοποιείται ακόμα, αλλά θα μπορούσε να είναι στο μέλλον. Θα "
+"γίνει τότε μια ανακοίνωση.\n"
+"Μπορείτε να προχωρήσετε με ασφάλεια χωρίς αυτό."
+
+#: cogs/setup_wizzard.py:115
+msgid ""
+":small_blue_diamond: The permission `send_tts_messages` is missing.\n"
+"This is used in case you want to enable tts ducks..\n"
+"You can safely proceed without it, but the `tts_ducks` setting won't work"
+msgstr ""
+": small_blue_diamond: Η άδεια `αποστολή tts μηνυμάτων` λείπει.\n"
+"Αυτό χρησιμοποιείται σε περίπτωση που θέλετε να ενεργοποιήσετε τις πάπιες "
+"tts ..\n"
+"Μπορείτε να προχωρήσετε με ασφάλεια χωρίς αυτό, αλλά η ρύθμιση `tts_ducks` "
+"δεν θα λειτουργήσει"
+
+#: cogs/setup_wizzard.py:121
+msgid ""
+"I'm done! <:cmd_Setup_01:439551472804429836>\n"
+"Any warning has been sent above. I suggest fixing them, then running the "
+"command again!\n"
+"If there is none, congrats! You passed the tests brilliantly!\n"
+"If you are ready to continue with the setup, use the command "
+"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
+"used, ducks will spawn automatically.\n"
+"Thanks for flying DucksAir. If you have any question, we are here to help at "
+"https://discord.gg/2BksEkV"
+msgstr ""
+"Τελείωσα! <:cmd_Setup_01:439551472804429836>\n"
+"Οποιαδήποτε προειδοποίηση έχει σταλεί παραπάνω. Σας προτείνω να τα "
+"διορθώσετε και στη συνέχεια να εκτελέσετε ξανά την εντολή!\n"
+"Εάν δεν υπάρχει κανένα, συγχαρητήρια! Πέρασες τις δοκιμές λαμπρά!\n"
+"Εάν είστε έτοιμοι να συνεχίσετε με τη ρύθμιση, χρησιμοποιήστε την εντολή "
+"`dh!setup_settings`. Αν θέλετε απλώς να παίξετε, χρησιμοποιήστε το "
+"`dh!add_channel`. Μόλις χρησιμοποιηθούν, οι πάπιες θα αναπαράγονται αυτόματα."
+"\n"
+"Ευχαριστώ που πετούσατε DucksAir. Εάν έχετε οποιαδήποτε ερώτηση, είμαστε εδώ "
+"για βοήθεια στη διεύθυνση https://discord.gg/2BksEkV"
+
+#: cogs/setup_wizzard.py:135
+msgid ""
+"Hey! Let's configure the server!\n"
+"I'll give you the most used parameters, and let you change them if you want. "
+"Any command written here is optional, and you can start playing now just by "
+"using `dh!add_channel`.\n"
+"\n"
+"**Before starting, please make sure this is the channel you want to use, and "
+"activate it with `dh!add_channel`.**\n"
+"\n"
+"**1/ Language used**:\n"
+"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
+"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
+"    \\* Another language we don't fully support yet? Help us translate "
+"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
+"    \n"
+"**2/ Ducks Per Day**:\n"
+"    This is the number of ducks that will spawn per day. They spawn at "
+"random intervals, but you can configure the number of ducks that will spawn.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"ducks_per_day XX`, where `XX` is a number.\n"
+"    \\* To prevent abuse, there is a limit that will be automatically "
+"enforced. If you need to lift it, contact my owner at the support server.\n"
+"    \n"
+"**3/ Exp Won Per Duck Killed**:\n"
+"    This is the experience won per duck killed. If your server is really "
+"popular, it might be worth it to push it up a little to make new hunters "
+"progress faster.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
+"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
+"good start\n"
+"    \n"
+"**4/ Other settings**:\n"
+"    This is starting to be lengthy, so I won't go into further details here. "
+"You are probably all set and can start the game by typing `dh!add_channel`.\n"
+"    More settings can be found using `dh!settings list`\n"
+"    \n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
+msgstr ""
+"Γεια σου! Ας ρυθμίσουμε το διακομιστή!\n"
+"Θα σας δώσω τις πιο χρησιμοποιούμενες παραμέτρους και θα σας επιτρέψω να τις "
+"αλλάξετε αν θέλετε. Οποιαδήποτε εντολή γραμμένη εδώ είναι προαιρετική και "
+"μπορείτε να ξεκινήσετε να παίζετε τώρα χρησιμοποιώντας το `dh! Add_channel`.\n"
+"\n"
+"** Πριν ξεκινήσετε, βεβαιωθείτε ότι πρόκειται για το κανάλι που θέλετε να "
+"χρησιμοποιήσετε και ενεργοποιήστε το με `dh! Add_channel '. **\n"
+"\n"
+"** 1 / Γλώσσα που χρησιμοποιείται **:\n"
+"    \\ * Εάν μιλάτε γαλλικά, χρησιμοποιήστε τη ρύθμιση `dh! Set language "
+"fr_FR`\n"
+"    \\ * Εάν μιλάτε ισπανικά, χρησιμοποιήστε τη ρύθμιση `dh! Set language "
+"es_ES '\n"
+"    \\ * Μια άλλη γλώσσα που δεν υποστηρίζουμε ακόμα πλήρως; Βοηθήστε μας να "
+"μεταφράσουμε το DuckHunt! Βρείτε μας στο https://discord.gg/2BksEkV.\n"
+"    \n"
+"** 2 / πάπιες ανά ημέρα **:\n"
+"    Αυτός είναι ο αριθμός των πάπιων που θα γεννήσουν την ημέρα. "
+"Αναπαράγονται με τυχαία χρονικά διαστήματα, αλλά μπορείτε να διαμορφώσετε "
+"τον αριθμό των πάπιων που θα γεννήσουν.\n"
+"    \\ * Χρησιμοποιήστε την ακόλουθη εντολή για να την αλλάξετε, "
+"χρησιμοποιήστε τις ρυθμίσεις `dh! Set ducks_per_day XX`, όπου` XX` είναι "
+"ένας αριθμός.\n"
+"    \\ * Για να αποφευχθεί η κατάχρηση, υπάρχει ένα όριο που θα εφαρμοστεί "
+"αυτόματα. Εάν πρέπει να το ανασηκώσετε, επικοινωνήστε με τον ιδιοκτήτη μου "
+"στο διακομιστή υποστήριξης.\n"
+"    \n"
+"** 3 / Επεισόδιο κερδισμένο ανά πάπια σκότωσε **:\n"
+"    Αυτή είναι η εμπειρία που κερδήθηκε ανά πάπια σκότωσε. Αν ο διακομιστής "
+"σας είναι πολύ δημοφιλής, ίσως αξίζει τον κόπο να το ωθήσετε λίγο για να "
+"φτάσετε πιο γρήγορα τους νέους κυνηγούς.\n"
+"    \\ * Χρησιμοποιήστε την ακόλουθη εντολή για να την αλλάξετε, "
+"χρησιμοποιήστε τις ρυθμίσεις `dh! Set exp_won_per_duck_killed XX`, όπου` XX` "
+"είναι ένας αριθμός.\n"
+"    \\ *: λαμπτήρας: Μην πάτε πάρα πολύ ψηλά, πρέπει να υπάρξει κάποια "
+"πρόκληση. 15 είναι μια καλή αρχή\n"
+"    \n"
+"** 4 / Άλλες ρυθμίσεις **:\n"
+"    Αυτό αρχίζει να είναι χρονοβόρα, επομένως δεν θα πάω σε περισσότερες "
+"λεπτομέρειες εδώ. Πιθανότατα έχετε ρυθμίσει και μπορείτε να ξεκινήσετε το "
+"παιχνίδι πληκτρολογώντας `dh! Add_channel`.\n"
+"    Περισσότερες ρυθμίσεις μπορείτε να βρείτε χρησιμοποιώντας τη λίστα `dh! "
+"Settings`\n"
+"    \n"
+"Ευχαριστώ που παίξατε μαζί μου! <:official_Duck_01:439546719177539584>"
+
+#: cogs/shop.py:42
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+": x: Εσφαλμένη σύνταξη. Χρησιμοποιήστε την εντολή με αυτόν τον τρόπο: `! "
+"Shop [list / item number] [επιχειρηματολογία εάν υπάρχει]`"
+
+#: cogs/shop.py:52
+msgid "Right now you have a total of {exp} exp points."
+msgstr "Αυτή τη στιγμή έχετε συνολικά {exp} exp πόντους."
+
+#: cogs/shop.py:59
+msgid ""
+"Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
+"Thanks "
+msgstr ""
+"Ακολουθεί ο κατάλογος όλων των ειδών των καταστημάτων: https://duckhunt.me/"
+"shop-items/. Ευχαριστώ"
+
+#: cogs/shop.py:75
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ""
+": money_with_wings: Προσθέσατε μια σφαίρα στο όπλο σας για 7 σημεία exp."
+
+#: cogs/shop.py:78
+msgid ":champagne: Your magazine is full!"
+msgstr ": σαμπάνια: Ο γεμιστήρας σας είναι γεμάτος!"
+
+#: cogs/shop.py:94
+msgid ""
+":money_with_wings: You added a magazine to your weapon for 13 exp points."
+msgstr ""
+": money_with_wings: Προσθέσατε μια σφαίρα στο όπλο σας για 7 πόντους exp."
+
+#: cogs/shop.py:97
+msgid ":champagne: You have enough magazines!"
+msgstr ": σαμπάνια: Έχετε αρκετούς γεμιστήρες!"

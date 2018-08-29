@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-06 07:52+0000\n"
+"POT-Creation-Date: 2018-08-10 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,17 +194,17 @@ msgstr ""
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr ":ok:, теперь у него/неё {newexp} очк. опыта!"
 
-#: cogs/experience_related_commands.py:41
+#: cogs/experience_related_commands.py:47
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Для предотвращения злоупотреблений, вы не можете передать очки опыта, "
 "пока ваше ружьё конфисковано."
 
-#: cogs/experience_related_commands.py:45
+#: cogs/experience_related_commands.py:51
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Количество очков опыта должно быть положительным."
 
-#: cogs/experience_related_commands.py:49
+#: cogs/experience_related_commands.py:55
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
@@ -212,38 +212,38 @@ msgstr ""
 ":x: Подождите-ка... Мне не кажется? Вы пытаетесь отправить опыт САМОМУ СЕБЕ? "
 "В этом нет никакого смысла."
 
-#: cogs/experience_related_commands.py:68
+#: cogs/experience_related_commands.py:74
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Вы отправили {amount} очк. опыта пользователю {target} (комиссия {taxes} очк."
 ")!"
 
-#: cogs/experience_related_commands.py:71
+#: cogs/experience_related_commands.py:77
 msgid "You don't have enough experience points"
 msgstr "У вас недостаточно очков опыта."
 
-#: cogs/experience_related_commands.py:73
+#: cogs/experience_related_commands.py:79
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Передача очков опыта отключена на этом сервере."
 
-#: cogs/experience_related_commands.py:81 cogs/scores.py:33
+#: cogs/experience_related_commands.py:87 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (в {dans_jours} {dans_heures} и {dans_minutes})"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:34
+#: cogs/experience_related_commands.py:88 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d в %H:%M:%S"
 
-#: cogs/experience_related_commands.py:82 cogs/scores.py:35
+#: cogs/experience_related_commands.py:88 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} дн."
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:36
+#: cogs/experience_related_commands.py:89 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} ч."
 
-#: cogs/experience_related_commands.py:83 cogs/scores.py:37
+#: cogs/experience_related_commands.py:89 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} мин."
 
@@ -255,11 +255,11 @@ msgid ""
 msgstr ""
 "Бот часто перезагружается для обновления. Не волнуйтесь, его аптайм — 99.8%."
 
-#: cogs/meta.py:60
+#: cogs/meta.py:64
 msgid "Here is the command list : http://duckhunt.me/command-list/"
 msgstr "Вот список команд: http://duckhunt.me/command-list/"
 
-#: cogs/meta.py:70
+#: cogs/meta.py:74
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -270,14 +270,14 @@ msgstr ""
 "Используйте этот сайт для сравнения времени со своим: https://time.is/"
 "compare/GMT"
 
-#: cogs/meta.py:71
+#: cogs/meta.py:75
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr ""
 "Напишите `dh!freetime`, чтобы узнать, когда вам отдадут оружие бесплатно."
 
-#: cogs/meta.py:84
+#: cogs/meta.py:88
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -285,7 +285,7 @@ msgstr ""
 ":alarm_clock: Ближайшая бесплатная выдача оружия и магазинов через {sec} сек."
 " ({hours} ч. и {minutes} мин.)."
 
-#: cogs/meta.py:86
+#: cogs/meta.py:90
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -295,20 +295,20 @@ msgstr ""
 "вам ваше ружьё бесплатно (если оно до этого было конфисковано). Если можете, "
 "перезарядитесь до раздачи!"
 
-#: cogs/meta.py:98
+#: cogs/meta.py:102
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Вы используете {shard} осколк. из общего количества ({total})"
 
 #: cogs/scores.py:52
 msgid ""
-"The scores are now available online at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}"
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
 msgstr ""
 "Статистика: http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
 
 #: cogs/scores.py:259
 msgid ""
-"The Duckstats are now available online at http://duckhunt.api-d.com/web/"
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
 "duckstats.php?cid={channel_id}&pid={player_id}"
 msgstr ""
 "Статистика: http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid="
@@ -1030,7 +1030,7 @@ msgstr "Вы обняли дерево?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Тут нет уток, что вы намеревались обнять, дерево что ли?!"
 
-#: cogs/user_commands.py:374
+#: cogs/user_commands.py:370
 msgid "**Current event**"
 msgstr "**Текущее событие**"
 
@@ -1515,20 +1515,11 @@ msgstr ""
 ":gun: Утка выжила, выстрелите ещё раз! *ОБНАРУЖЕНА СУПЕРУТКА* [вы отняли "
 "{vie} здоровья]"
 
-#: cogs/helpers/ducks.py:408
-msgid ""
-"You have been tricked by {user_mention} to kill a mechanical duck. It "
-"obviouly won't work, and you lost 1 exp for this missed shot"
-msgstr ""
-"Вы попытались убить механическую утку, которая появилась благодаря охотнику "
-"{user_mention}. Конечно, вы этого сделать не сможете, вы потеряли 1 очко "
-"опыта за этот выстрел."
-
-#: cogs/helpers/ducks.py:448
+#: cogs/helpers/ducks.py:446
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утёнок ушёл отдыхать в неизвестном направлении ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:468
+#: cogs/helpers/ducks.py:466
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1538,7 +1529,7 @@ msgstr ""
 "не должны были этого делать! Вы потеряли немного очков опыта, потому что "
 "убивать малышей не надо! \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:482
+#: cogs/helpers/ducks.py:480
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1548,11 +1539,11 @@ msgstr ""
 "очка опыта]\n"
 "Утёнок ушёл с чувством, что его любят."
 
-#: cogs/helpers/ducks.py:494
+#: cogs/helpers/ducks.py:492
 msgid "**I AM...** Your mother"
 msgstr "**Я...** твоя мать"
 
-#: cogs/helpers/ducks.py:502
+#: cogs/helpers/ducks.py:500
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

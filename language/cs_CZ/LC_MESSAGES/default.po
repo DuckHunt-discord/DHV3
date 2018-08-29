@@ -16,3 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:140
+msgid ":x: A required argument is missing."
+msgstr "Požadovaný argument chybí"
+
+#: bot.py:144
+msgid ":x: You don't have enough exp for this"
+msgstr "Nemáte dostatečný počet expů"
+
+#: bot.py:147
+msgid ":x: You are not a server admin"
+msgstr "Nejsi"
