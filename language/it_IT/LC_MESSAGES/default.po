@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -259,7 +259,7 @@ msgstr ""
 "delle volte è operativo"
 
 #: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgid "Here is the command list: http://duckhunt.me/command-list/"
 msgstr "Qui trovi la lista dei comandi: http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
@@ -1669,8 +1669,8 @@ msgstr ""
 #: cogs/helpers/ducks.py:446
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
-"L'anatroccolo se n'è andato a fare un pisolino da qualche parte · °'\\`'°-."
-",¸¸·°'\\`"
+"L'anatroccolo se n'è andato a fare un pisolino da qualche parte ·°'\\`'°-."
+",¸¸.·°'\\`"
 
 #: cogs/helpers/ducks.py:466
 msgid ""
@@ -1690,7 +1690,7 @@ msgid ""
 msgstr ""
 "<:cmd_Hug_01:442695336348221451>** SMACK ** Hai stretto l'anatroccolo e ora "
 "è davvero felice! Aww :heart: [3 exp]\n"
-"La piccola anatra se n'è andata, sentendosi amata"
+"L'anatroccolo se ne andò, sentendosi amato"
 
 #: cogs/helpers/ducks.py:492
 msgid "**I AM...** Your mother"

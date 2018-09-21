@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,22 +25,22 @@ msgstr ""
 
 #: bot.py:144
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: No tienes suficientes Puntos de Experiencia para esto."
+msgstr ":x: No tienes suficientes puntos de experiencia para esto."
 
 #: bot.py:147
 msgid ":x: You are not a server admin"
-msgstr ":x: Tu no eres un Administrador del servidor."
+msgstr ":x: Tu no eres un administrador del servidor."
 
 #: bot.py:150
 msgid ":x: You are not a super admin."
-msgstr ":x: Tu no eres un Super Admin."
+msgstr ":x: Tu no eres un super admin."
 
 #: bot.py:151
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"Este comando es exclusivo para los dueños del bot. Si piensas que es un "
+"Este comando es exclusivo para los dueños del bot. Si piensas que esta es un "
 "error, por favor contacta a mi dueño en el Servidor de Soporte de DuckHunt "
 "(escribe `dh!help`)."
 
@@ -262,8 +262,8 @@ msgstr ""
 "preocupes, tiene un 99.8% de tiempo de actividad habitual."
 
 #: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
-msgstr "Aquí está la lista de comandos: http://duckhunt.me/command-list/"
+msgid "Here is the command list: http://duckhunt.me/command-list/"
+msgstr "Aquí está la lista de Comandos: http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
 msgid ""
@@ -308,6 +308,22 @@ msgid "You are using shard number {shard} out of {total} total shards"
 msgstr ""
 "Estás usando el fragmento (Discord shard) {shard} de {total} fragmentos "
 "totales"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"La tabla de puntajes está en http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Tus estadísticas te esperan en http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -1644,6 +1660,15 @@ msgid ""
 msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
+
+#: cogs/helpers/ducks.py:406
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Has sido engañado por {user_mention} que te hizo matar un pato mecánico. "
+"Obviamente el pato es falso, y pierdes 1 punto de experiencia por este tiro "
+"fallido."
 
 #: cogs/helpers/ducks.py:446
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"

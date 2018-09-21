@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -259,7 +259,7 @@ msgstr ""
 "bot heeft een uptime van 99,8%."
 
 #: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgid "Here is the command list: http://duckhunt.me/command-list/"
 msgstr "Hier is de lijst met commando's : http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
@@ -302,6 +302,22 @@ msgstr ""
 #: cogs/meta.py:102
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Je gebruikt shard nummer {shard} uit het totaal van {total} shards"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"De scores zijn online op http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Je duckstats wachten op je op http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -1644,6 +1660,14 @@ msgid ""
 msgstr ""
 ":gun: De eend heeft het overleefd, probeer het opnieuw! *SUPER EEND "
 "GEDETECTEERD* [levens: -{vie}]"
+
+#: cogs/helpers/ducks.py:406
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Je bent misleid door {user_mention} om een mechanische eend te doden. Dit "
+"werkt natuurlijk niet, en je verloor 1 exp voor dit gemiste schot"
 
 #: cogs/helpers/ducks.py:446
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"

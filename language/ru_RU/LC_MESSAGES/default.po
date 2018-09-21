@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,7 +256,7 @@ msgstr ""
 "Бот часто перезагружается для обновления. Не волнуйтесь, его аптайм — 99.8%."
 
 #: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgid "Here is the command list: http://duckhunt.me/command-list/"
 msgstr "Вот список команд: http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
@@ -721,7 +721,7 @@ msgid ""
 ":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
 "{exp} more exp points for each killed duck for the next day."
 msgstr ""
-":money_with_wings; Вы купили 4-листный клевер, он будет приносить вам на "
+":money_with_wings: Вы купили 4-листный клевер, он будет приносить вам на "
 "{exp} очков опыта больше за каждую убитую утку ближайшие 24 часа."
 
 #: cogs/shop.py:257

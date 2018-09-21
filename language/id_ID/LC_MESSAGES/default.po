@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,10 +167,6 @@ msgid ""
 msgstr ""
 "Bot melakukan pengaktifan-ulang berkala untuk pembaruan. Jangan khawatir, "
 "masa aktifnya 99.8%"
-
-#: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
-msgstr "Ini daftar perintahnya : http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
 msgid ""

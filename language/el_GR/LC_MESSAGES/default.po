@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 18:03+0000\n"
+"POT-Creation-Date: 2018-08-29 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -260,7 +260,7 @@ msgstr ""
 "χρόνο λειτουργίας."
 
 #: cogs/meta.py:64
-msgid "Here is the command list : http://duckhunt.me/command-list/"
+msgid "Here is the command list: http://duckhunt.me/command-list/"
 msgstr "Εδώ είναι η λίστα εντολών: http://duckhunt.me/command-list/"
 
 #: cogs/meta.py:74
@@ -627,3 +627,11 @@ msgstr ""
 #: cogs/shop.py:97
 msgid ":champagne: You have enough magazines!"
 msgstr ": σαμπάνια: Έχετε αρκετούς γεμιστήρες!"
+
+#: cogs/shop.py:111
+msgid ":money_with_wings: You purchased AP ammo for your weapon."
+msgstr ":money_with_wings: Αγοράσατε AP πυρομαχικά για το όπλο σας."
+
+#: cogs/shop.py:115
+msgid ":champagne: You have enough AP ammo for now!"
+msgstr ":champagne: Έχετε αρκετά πυρομαχικά AP για τώρα!"
