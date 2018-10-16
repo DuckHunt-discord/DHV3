@@ -346,7 +346,7 @@ class Experience:
         await self.bot.send_message(ctx=ctx, message=_(":champagne: You threw sand in {mention}'s weapon!", language).format(mention=target.mention))
         await self.bot.hint(ctx=ctx, message=_("The mention is here on purpose. You wouldn't do this behind their back, would you", language))
 
-    @shop.command(name="16", aliases=["water", "water_bucket", "bukkit", "spigot"])  # wink, wink
+    @shop.command(name="16", aliases=["water", "water_bucket", "bucket", "bukkit", "spigot"])  # wink, wink
     @checks.have_exp(10)
     async def item16(self, ctx, target: discord.Member):
         """ Drop a water bucket on someone (10 exp)
@@ -499,8 +499,6 @@ class Experience:
 
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -40)
         await self.bot.send_message(ctx=ctx, force_pm=True, message=_(":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. It's wrong, but so funny!", language))
-
-
 
         async def spawn_mech_duck():
             await asyncio.sleep(90)

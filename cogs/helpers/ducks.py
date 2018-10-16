@@ -6,12 +6,58 @@ import random
 import time
 
 
+class BushObject:
+    name = None
+    db = None
+
+    async def give(self, bot, ctx):
+        """
+        Try and give the item if possible, then returns True. If not possible (invetory full), return False
+        """
+        return True
+
+
+class Nothing(BushObject):
+    name = _('Nothing')
+
+
+class Bushes(BushObject):
+    name = _('a lot a bushes.')
+
+
+class Bullet(BushObject):
+    name = _('a bullet')
+    db = 'found_bullets'
+
+    async def give(self, bot, ctx):
+        if await bot.db.get_stat(ctx.message.channel, ctx.message.author, "balles") < (await bot.db.get_level(channel=ctx.message.channel, player=ctx.message.author))["balles"]:
+            await bot.db.add_to_stat(ctx.message.channel, ctx.message.author, "balles", 1)
+        else:
+            return False
+
+
+class Charger(BushObject):
+    name = _('a full charger')
+    db = 'found_chargers'
+
+    async def give(self, bot, ctx):
+        if await bot.db.get_stat(ctx.message.channel, ctx.message.author, "chargeurs") < (await bot.db.get_level(channel=ctx.message.channel, player=ctx.message.author))["chargeurs"]:
+            await bot.db.add_to_stat(ctx.message.channel, ctx.message.author, "chargeurs", 1)
+        else:
+            return False
+
+
+bushes_objects = [Nothing, Bushes, Bullet, Charger]
+bushes_weights = [20, 20, 10, 10]
+
+
 class DuckWrapper:
     """Class used to pass a player as an argument to some duck functions in user_commands.py"""
 
-    def __init__(self, duck, shooter):
+    def __init__(self, duck, ctx):
         self.duck = duck
-        self.shooter = shooter
+        self.ctx = ctx
+        self.shooter = ctx.author
 
     def __getattr__(self, name, *args, **kwargs):
         """ In case we can't see the function, redirect to the duck object"""
@@ -21,7 +67,7 @@ class DuckWrapper:
         return await self.duck.frightened(self.shooter)
 
     async def shoot(self):
-        return await self.duck.shoot(self.shooter)
+        return await self.duck.shoot(self.ctx)
 
 
 class BaseDuck:
@@ -146,14 +192,38 @@ class BaseDuck:
     async def pre_shoot(self, author):
         pass
 
-    async def post_kill(self, author, exp):
+    async def _bushes(self, ctx):
+        if random.randint(5) == 1:
+            choosen = random.choices(bushes_objects, bushes_weights)()
+            result = await choosen.give(ctx.bot, ctx)
+
+            if choosen.db:
+                db_name = choosen.db
+                if not result:
+                    db_name += '_not_taken'
+
+                await ctx.bot.db.add_to_stat(ctx.message.channel, ctx.message.author, db_name, 1)
+
+            _ = self.bot._
+            language = await self.bot.db.get_pref(ctx.guild, "language")
+
+            if result:
+                await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**"))
+            else:
+                await self.bot.send_message(ctx=ctx, message=(
+                            _("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",
+                                                                                                                                 language)))
+
+    async def post_kill(self, ctx, exp):
+        await self._bushes(ctx)
         pass
 
     async def post_harmed(self, author):
         # Harmed but not killed
         await self.bot.db.add_to_stat(self.channel, author, "shoots_harmed_duck", 1)
 
-    async def shoot(self, author):
+    async def shoot(self, ctx):
+        author = ctx.author
         channel = self.channel
         _ = self.bot._
         language = await self.bot.db.get_pref(self.channel.guild, "language")
@@ -192,7 +262,7 @@ class BaseDuck:
             else:
                 exp_str = f"[{exp - trefle} exp + **{trefle} clover**]"
 
-            await self.post_kill(author, exp)
+            await self.post_kill(ctx, exp)
 
             return (await self.get_killed_string()).format(**{"time": round(time_taken, 4), "total": await self.bot.db.get_stat(channel, author, "killed_ducks"), "channel": channel, "exp": exp_str,
                                                               "supercanards": await self.bot.db.get_stat(channel, author, "killed_super_ducks"), "onomatopoeia": ono})

@@ -214,7 +214,7 @@ class User:
                 return
 
         # Now that we have the duck, We'll use a warpper to ease up the syntax for the rest of this function
-        duck_wrapper = DuckWrapper(current_duck, author)
+        duck_wrapper = DuckWrapper(current_duck, ctx)
 
         # 8/ Bullet fired
         await add_to_stat(channel, author, "balles", -1)

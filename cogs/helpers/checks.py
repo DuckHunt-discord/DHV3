@@ -65,8 +65,12 @@ def had_giveback():
         channel = ctx.message.channel
         player = ctx.message.author
         if await ctx.bot.db.get_stat(channel, player, "banned"):
-            ctx.logger.debug("Banned player trying to play :(")
-            return False
+            cond = ctx.message.author.id in ctx.bot.admins  # User is super admin
+            cond = cond or ctx.message.channel.permissions_for(ctx.message.author).administrator  # User have server administrator permission
+            cond = cond or ctx.message.author.id in await ctx.bot.db.get_admins(ctx.guild)  # User is admin as defined in the database
+            if not cond:  # Not even an admin so
+                ctx.logger.debug("Banned player trying to play :(")
+                return False
 
         lastGB = int(await ctx.bot.db.get_stat(channel, player, "lastGiveback"))
         if int(lastGB / 86400) != int(int(time.time()) / 86400):

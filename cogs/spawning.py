@@ -58,7 +58,11 @@ async def planifie(bot, channel=None, new_day=True):
         permissions_wanted.read_messages = True
         permissions_wanted.send_messages = True
 
-        permissions_okay = channel.permissions_for(channel.guild.me).is_superset(permissions_wanted)
+        try:
+            permissions_okay = channel.permissions_for(channel.guild.me).is_superset(permissions_wanted)
+        except AttributeError:
+            # Channel was deleted right then
+            permissions_okay = False
 
         if not permissions_okay:
             # Remove the channel, cant send or write messages.

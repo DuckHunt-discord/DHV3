@@ -1,4 +1,5 @@
 import datetime
+import random
 
 import discord
 import time
@@ -30,7 +31,12 @@ class Experience:
     @commands.command(aliases=["thank", "thanksyou"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
-    async def thanks(self, ctx, user:discord.Member):
+    async def thanks(self, ctx, user:discord.Member = None):
+        if not user:
+            user = ctx.guild.get_member(138751484517941259)  # Eyes
+            if not user:
+                user = random.choice([m for m in ctx.guild.members if not m.bot])
+
         cmd = self.bot.get_command("send_exp")
         await ctx.invoke(cmd, target=user, amount=15)
 
