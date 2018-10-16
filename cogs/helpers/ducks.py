@@ -8,6 +8,7 @@ import time
 # That function is here to mark items as "to be translated"
 def _(string):
     return string
+
 class BushObject:
     name = None
     db = None
@@ -359,7 +360,10 @@ class Duck(BaseDuck):
             duck.life = life
         return duck
 
-    async def post_kill(self, author, exp):
+    async def post_kill(self, ctx, exp):
+        await super().post_kill(ctx, exp)
+        author = ctx.message.author
+
         await self.bot.db.add_to_stat(self.channel, author, "killed_normal_ducks", 1)
 
 
@@ -392,7 +396,9 @@ class SuperDuck(BaseDuck):
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
         self.discord_leave_str = _(random.choice(self.bot.canards_bye), language)
 
-    async def post_kill(self, author, exp):
+    async def post_kill(self, ctx, exp):
+        await super().post_kill(ctx, exp)
+        author = ctx.message.author
         await self.bot.db.add_to_stat(self.channel, author, "killed_super_ducks", 1)
 
     @classmethod
@@ -492,7 +498,9 @@ class MechanicalDuck(BaseDuck):
         return f"Mechanical Duck spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name}" \
                f"Made by {self.user_name}"
 
-    async def post_kill(self, author, exp):
+    async def post_kill(self, ctx, exp):
+        await super().post_kill(ctx, exp)
+        author = ctx.message.author
         await self.bot.db.add_to_stat(self.channel, author, "killed_mechanical_ducks", 1)
 
 
@@ -541,7 +549,9 @@ class BabyDuck(BaseDuck):
                  " You'll lose some exp, because you shouldn't kill babies"
                  "\_X<   *COUAC*   {exp}", language)
 
-    async def post_kill(self, author, exp):
+    async def post_kill(self, ctx, exp):
+        await super().post_kill(ctx, exp)
+        author = ctx.message.author
         await self.bot.db.add_to_stat(self.channel, author, "killed_baby_ducks", 1)
 
     async def hug(self, ctx):
@@ -573,7 +583,9 @@ class MotherOfAllDucks(SuperDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
         return _(":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but you won't kill my children! \_X<   *COUAC*   {exp}", language)
 
-    async def post_kill(self, author, exp):
+    async def post_kill(self, ctx, exp):
+        await BaseDuck.post_kill(self, ctx, exp)
+        author = ctx.message.author
         await self.bot.db.add_to_stat(self.channel, author, "killed_mother_of_all_ducks", 1)
 
         from cogs import spawning
