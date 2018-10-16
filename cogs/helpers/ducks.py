@@ -6,12 +6,14 @@ import random
 import time
 
 # That function is here to mark items as "to be translated"
+
 def _(string):
     return string
 
+
 class BushObject:
     name = None
-    db = None
+    db = 'trashFound'
 
     async def give(self, bot, ctx):
         """
@@ -26,6 +28,14 @@ class Nothing(BushObject):
 
 class Bushes(BushObject):
     name = _('a lot a bushes.')
+
+
+class Condom(BushObject):
+    name = _('a used condom.')
+
+
+class DuckPin(BushObject):
+    name = _('a duck pin.')
 
 
 class Bullet(BushObject):
@@ -52,10 +62,78 @@ class Charger(BushObject):
             return False
 
 
+class ExplosiveAmmo(BushObject):
+    name = _('a box of explosive ammo')
+    db = 'found_explosive_ammo'
+
+    async def give(self, bot, ctx):
+        current = await bot.db.get_stat(ctx.message.channel, ctx.message.author, "explosive_ammo")
+        if current < int(time.time() + 86400):
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(time.time() + 86400))
+        else:
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(current + 86400))
+        return True
+
+
+class PartialExplosiveAmmo(BushObject):
+    name = _('an almost empty box of explosive ammo')
+    db = 'found_almost_empty_explosive_ammo'
+
+    async def give(self, bot, ctx):
+        current = await bot.db.get_stat(ctx.message.channel, ctx.message.author, "explosive_ammo")
+        if current < int(time.time() + 86400/4):
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(time.time() + 86400/4))
+        else:
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(current + 86400/4))
+
+        return True
+
+
+class Grease(BushObject):
+    name = _('some duck-grease')
+    db = 'found_grease'
+
+    async def give(self, bot, ctx):
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "grease", int(time.time() + 86400))
+        return True
+
+
+class Silencer(BushObject):
+    name = _('a full-featured silencer')
+    db = 'found_silencers'
+
+    async def give(self, bot, ctx):
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "silencieux", int(time.time() + 86400))
+        return True
+
+
+class InfraredDetector(BushObject):
+    name = _('a fully functionnal infrared detector')
+    db = 'found_infrared_detectors'
+
+    async def give(self, bot, ctx):
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteurInfra", int(time.time() + 86400))
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteur_infra_shots_left", 6)
+        return True
 del _
 
-bushes_objects = [Nothing, Bushes, Bullet, Charger]
-bushes_weights = [20, 20, 10, 10]
+bushes = {
+    Nothing: 20, Bushes: 20, Condom: 10, DuckPin: 1,
+    Bullet: 20,
+    Charger: 15,
+    ExplosiveAmmo: 2, PartialExplosiveAmmo: 6,
+    Grease: 15,
+    Silencer: 7,
+    InfraredDetector: 7,
+ }
+
+
+bushes_objects = []
+bushes_weights = []
+
+for object_, weight in bushes.items():
+    bushes_objects.append(object_)
+    bushes_weights.append(weight)
 
 
 class DuckWrapper:
