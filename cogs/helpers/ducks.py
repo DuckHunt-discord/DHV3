@@ -198,7 +198,7 @@ class BaseDuck:
         pass
 
     async def _bushes(self, ctx):
-        if random.randint(5) == 1:
+        if random.randint(0, 5) == 1:
             choosen = random.choices(bushes_objects, bushes_weights)()
             result = await choosen.give(ctx.bot, ctx)
 
