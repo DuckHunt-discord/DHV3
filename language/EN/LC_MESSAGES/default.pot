@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-16 08:46+0000\n"
+"POT-Creation-Date: 2018-10-16 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -652,65 +652,72 @@ msgid ""
 "return hunting."
 msgstr ""
 
-#: cogs/shop.py:373
+#: cogs/shop.py:379
+msgid ""
+":money_with_wings: You dropped a **SPECIAL** bucket full of water on "
+"{target}, forcing them to wait 2 hours (!) for their clothes to dry "
+"before they can return hunting."
+msgstr ""
+
+#: cogs/shop.py:393
 msgid "You wouldn't sabotage yourself, would you ?"
 msgstr ""
 
-#: cogs/shop.py:379
+#: cogs/shop.py:399
 msgid ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
 msgstr ""
 
-#: cogs/shop.py:382
+#: cogs/shop.py:402
 msgid ""
 "Don't use a mention for this. You can give me user ids or the full "
 "username in \"quotes\""
 msgstr ""
 
-#: cogs/shop.py:386
+#: cogs/shop.py:406
 msgid ":ok: {target}'s weapon is already sabotaged!"
 msgstr ""
 
-#: cogs/shop.py:391 cogs/shop.py:496
+#: cogs/shop.py:411 cogs/shop.py:516
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I "
 "will be able to delete that kind of shop commands ;)"
 msgstr ""
 
-#: cogs/shop.py:408
+#: cogs/shop.py:428
 msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
 msgstr ""
 
-#: cogs/shop.py:409
+#: cogs/shop.py:429
 msgid "If you get killed, you'll earn half the level of the killer in exp."
 msgstr ""
 
-#: cogs/shop.py:412
+#: cogs/shop.py:432
 msgid ":champagne: You're already insured."
 msgstr ""
 
-#: cogs/shop.py:449
+#: cogs/shop.py:469
 msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
 msgstr ""
 
-#: cogs/shop.py:453
+#: cogs/shop.py:473
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
 "channel, thanks to {mention}'s decoy. They bought it for 8 exp!"
 msgstr ""
 
-#: cogs/shop.py:476
+#: cogs/shop.py:496
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 "They'll stay 20 seconds longer before leaving for the rest of the day!"
 msgstr ""
 
-#: cogs/shop.py:477
+#: cogs/shop.py:497
 msgid ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 
-#: cogs/shop.py:501
+#: cogs/shop.py:521
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 "
 "exp. It's wrong, but so funny!"
@@ -795,7 +802,7 @@ msgid ""
 " get it back for free (check when with `!freetime`)"
 msgstr ""
 
-#: cogs/helpers/ducks.py:139 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:143 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr ""
 
@@ -1314,75 +1321,75 @@ msgid ""
 " bot has the `embed_links` permission and try again!"
 msgstr ""
 
-#: cogs/helpers/ducks.py:21
+#: cogs/helpers/ducks.py:23
 msgid "Nothing"
 msgstr ""
 
-#: cogs/helpers/ducks.py:25
+#: cogs/helpers/ducks.py:27
 msgid "a lot a bushes."
 msgstr ""
 
-#: cogs/helpers/ducks.py:29
+#: cogs/helpers/ducks.py:31
 msgid "a bullet"
 msgstr ""
 
-#: cogs/helpers/ducks.py:40
+#: cogs/helpers/ducks.py:42
 msgid "a full charger"
 msgstr ""
 
-#: cogs/helpers/ducks.py:142
+#: cogs/helpers/ducks.py:146
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed:"
 " -1 xp]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:153
+#: cogs/helpers/ducks.py:157
 msgid "BPAM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:157
+#: cogs/helpers/ducks.py:161
 msgid "BAAM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:161
+#: cogs/helpers/ducks.py:165
 msgid "BOUM"
 msgstr ""
 
-#: cogs/helpers/ducks.py:161
+#: cogs/helpers/ducks.py:165
 msgid "SPROTCH"
 msgstr ""
 
-#: cogs/helpers/ducks.py:211 cogs/helpers/ducks.py:214
+#: cogs/helpers/ducks.py:215 cogs/helpers/ducks.py:218
 msgid "Searching the bushes around the duck, you found..."
 msgstr ""
 
-#: cogs/helpers/ducks.py:214
+#: cogs/helpers/ducks.py:218
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr ""
 
-#: cogs/helpers/ducks.py:249
+#: cogs/helpers/ducks.py:253
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:283
+#: cogs/helpers/ducks.py:287
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr ""
 
-#: cogs/helpers/ducks.py:288
+#: cogs/helpers/ducks.py:292
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so "
 "it fled from you and flew back into the pond![-2 exp]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:290
+#: cogs/helpers/ducks.py:294
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind "
 "your back, so it fled from you and flew back into the pond! [-2 exp]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:299
+#: cogs/helpers/ducks.py:303
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1390,45 +1397,45 @@ msgid ""
 "*COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:307
+#: cogs/helpers/ducks.py:311
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:309
+#: cogs/helpers/ducks.py:313
 msgid ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 
-#: cogs/helpers/ducks.py:476
+#: cogs/helpers/ducks.py:480
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviously won't work, and you lost 1 exp for this missed shot"
 msgstr ""
 
-#: cogs/helpers/ducks.py:516
+#: cogs/helpers/ducks.py:520
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 
-#: cogs/helpers/ducks.py:536
+#: cogs/helpers/ducks.py:540
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time}"
 " seconds, and you shouldn't have done this! You'll lose some exp, because"
 " you shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
 
-#: cogs/helpers/ducks.py:550
+#: cogs/helpers/ducks.py:554
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and"
 " now it is really happy! [3 exp]\n"
 "The baby duck left, feeling loved"
 msgstr ""
 
-#: cogs/helpers/ducks.py:562
+#: cogs/helpers/ducks.py:566
 msgid "**I AM...** Your mother"
 msgstr ""
 
-#: cogs/helpers/ducks.py:570
+#: cogs/helpers/ducks.py:574
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, "
 "but you won't kill my children! \\_X<   *COUAC*   {exp}"
