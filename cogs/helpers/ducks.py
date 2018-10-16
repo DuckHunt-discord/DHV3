@@ -5,7 +5,9 @@ import logging
 import random
 import time
 
-
+# That function is here to mark items as "to be translated"
+def _(string):
+    return string
 class BushObject:
     name = None
     db = None
@@ -46,6 +48,8 @@ class Charger(BushObject):
         else:
             return False
 
+
+del _
 
 bushes_objects = [Nothing, Bushes, Bullet, Charger]
 bushes_weights = [20, 20, 10, 10]
@@ -208,7 +212,7 @@ class BaseDuck:
             language = await self.bot.db.get_pref(ctx.guild, "language")
 
             if result:
-                await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**"))
+                await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + _(choosen.name, language) + "**"))
             else:
                 await self.bot.send_message(ctx=ctx, message=(
                             _("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",

@@ -360,6 +360,26 @@ class Experience:
         await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You dropped a bucket full of water on {target}, "
                                                        "forcing them to wait 1 hour for their clothes to dry before they can return hunting.", language).format(**{"target": target.name}))
 
+    @shop.command(name="16special", aliases=["specialwater", "specialwater_bucket", "specialbucket", "specialbukkit", "specialspigot"])  # wink, wink
+    @checks.have_exp(30)
+    async def item16special(self, ctx, target: discord.Member):
+        """ Drop a SUPER water bucket on someone (10 exp)
+        !shop 16special [target]"""
+
+        message = ctx.message
+        _ = self.bot._;
+        language = await self.bot.db.get_pref(ctx.guild, "language")
+
+        if not ctx.author.id == 138751484517941259:
+            await self.bot.send_message(ctx=ctx, message="🖕")
+            return
+
+        await self.bot.db.set_stat(message.channel, target, "mouille", int(time.time()) + 2 * HOUR)
+        await self.bot.db.add_to_stat(message.channel, message.author, "exp", -30)
+        await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You dropped a **SPECIAL** bucket full of water on {target}, "
+                                                       "forcing them to wait 2 hours (!) for their clothes to dry before they can return hunting.", language).format(**{"target": target.name}))
+
+
     @shop.command(name="17", aliases=["sabotage", "prank"])
     @checks.have_exp(14)
     async def item17(self, ctx, target: discord.Member):
