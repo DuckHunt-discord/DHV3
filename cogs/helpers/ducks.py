@@ -35,6 +35,7 @@ class Bullet(BushObject):
     async def give(self, bot, ctx):
         if await bot.db.get_stat(ctx.message.channel, ctx.message.author, "balles") < (await bot.db.get_level(channel=ctx.message.channel, player=ctx.message.author))["balles"]:
             await bot.db.add_to_stat(ctx.message.channel, ctx.message.author, "balles", 1)
+            return True
         else:
             return False
 
@@ -46,6 +47,7 @@ class Charger(BushObject):
     async def give(self, bot, ctx):
         if await bot.db.get_stat(ctx.message.channel, ctx.message.author, "chargeurs") < (await bot.db.get_level(channel=ctx.message.channel, player=ctx.message.author))["chargeurs"]:
             await bot.db.add_to_stat(ctx.message.channel, ctx.message.author, "chargeurs", 1)
+            return True
         else:
             return False
 
@@ -199,8 +201,10 @@ class BaseDuck:
 
     async def _bushes(self, ctx):
         if random.randint(0, 5) == 1:
-            choosen = random.choices(bushes_objects, bushes_weights)()
+            choosen = random.choices(bushes_objects, bushes_weights)[0]()
             result = await choosen.give(ctx.bot, ctx)
+
+            ctx.logger.info("Found in bushes : " + choosen.name)
 
             if choosen.db:
                 db_name = choosen.db
