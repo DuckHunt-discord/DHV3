@@ -27,7 +27,7 @@ class Nothing(BushObject):
 
 
 class Bushes(BushObject):
-    name = _('a lot a bushes.')
+    name = _('a lot of bushes.')
 
 
 class Condom(BushObject):
@@ -94,7 +94,7 @@ class Grease(BushObject):
     db = 'found_grease'
 
     async def give(self, bot, ctx):
-        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "grease", int(time.time() + 86400))
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "graisse", int(time.time() + 86400))
         return True
 
 
@@ -108,7 +108,7 @@ class Silencer(BushObject):
 
 
 class InfraredDetector(BushObject):
-    name = _('a fully functionnal infrared detector')
+    name = _('a fully functional infrared detector')
     db = 'found_infrared_detectors'
 
     async def give(self, bot, ctx):
@@ -117,6 +117,7 @@ class InfraredDetector(BushObject):
         return True
 del _
 
+# noinspection PyInterpreter
 bushes = {
     Nothing: 20, Bushes: 20, Condom: 10, DuckPin: 1,
     Bullet: 20,
