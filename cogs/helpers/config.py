@@ -145,6 +145,28 @@ def config(bot):
         # 20 channels total, owner of the server
         339294911935414272,
 
+        # 2018-10-28
+        # For the following members, they are all banned besause they were part of a "Nazi" server
+        # Nicknamed the bot as Jew-Hunt, bad server all in all tbh, toxic people we just shouldn't have on discord.
+        194538610278531072,
+        438065378225029120,
+        287570926961426433,
+        397078847880691712,
+        253289917151445003,
+        473799598599700484,
+        228148908281298945,
+        351717657583812609,
+        143790475449466880,
+        329606284871729173,
+        246331155396165632,
+        233626052830822400,
+        369500736968720386,
+        251036600648073216,
+        475789560123490307,
+        365965970566807564,
+        307944507696087051,
+
+
         # All for now
     ]
 
