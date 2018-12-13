@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-08-29 20:11+0000\n"
+"POT-Creation-Date: 2018-10-27 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,63 +181,63 @@ msgstr ""
 "Seznam nastavení je dostupný na naší webové stránce: https://duckhunt.me/bot-"
 "settings/"
 
-#: cogs/experience_related_commands.py:25
+#: cogs/experience_related_commands.py:26
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
 "Blahopřeji, poslali/přijali jste více než maximum toho, co můžu uložit."
 
-#: cogs/experience_related_commands.py:28
+#: cogs/experience_related_commands.py:29
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr ":ok:, on/ona má nyní {newexp} exp bodů!"
 
-#: cogs/experience_related_commands.py:47
+#: cogs/experience_related_commands.py:53
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ":x: Pro předejití vydírání nemůžete poslat expy když namáte zbraň."
 
-#: cogs/experience_related_commands.py:51
+#: cogs/experience_related_commands.py:57
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Hodnota exp musí být kladná."
 
-#: cogs/experience_related_commands.py:55
+#: cogs/experience_related_commands.py:61
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr ""
 ":x: Počkat... Cože?! Snažíte se poslat expy sám sobě?! To nedává smysl."
 
-#: cogs/experience_related_commands.py:74
+#: cogs/experience_related_commands.py:80
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Poslali jste {amount} expů {target} (a zaplatili {taxes} expů na daních)!"
 
-#: cogs/experience_related_commands.py:77
+#: cogs/experience_related_commands.py:83
 msgid "You don't have enough experience points"
 msgstr "Nemáte dostatek expů!"
 
-#: cogs/experience_related_commands.py:79
+#: cogs/experience_related_commands.py:85
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Posílání expů je na tomto serveru vypnuto"
 
-#: cogs/experience_related_commands.py:87 cogs/scores.py:33
+#: cogs/experience_related_commands.py:93 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (v {dans_jours}{dans_heures} a {dans_minutes})"
 
-#: cogs/experience_related_commands.py:88 cogs/scores.py:34
+#: cogs/experience_related_commands.py:94 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d v %H:%M:%S"
 
-#: cogs/experience_related_commands.py:88 cogs/scores.py:35
+#: cogs/experience_related_commands.py:94 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} den/dny/dnů"
 
-#: cogs/experience_related_commands.py:89 cogs/scores.py:36
+#: cogs/experience_related_commands.py:95 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} hodina/hodiny/hodin"
 
-#: cogs/experience_related_commands.py:89 cogs/scores.py:37
+#: cogs/experience_related_commands.py:95 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minuta/minuty/minut"
 
