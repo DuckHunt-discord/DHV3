@@ -1,3 +1,4 @@
+import asyncio
 import inspect
 from cogs import spawning
 from discord.ext import commands
@@ -63,10 +64,22 @@ class SuperAdmin:
         """!broadcast [message]"""
         await self.bot.send_message(ctx=ctx, message="Starting the broadcast...")
         ctx.logger.warning(f"Starting broadcast with message : \n{bc}")
-        for channel in list(self.bot.ducks_planning.keys()):
+        channels = list(self.bot.ducks_planning.keys())
+        total = len(channels)
+        i = 0
+        f = 0
+        for channel in channels:
+            i += 1
+            if channel.guild.id in [268479971410837504, 336642139381301249]:
+                continue
             try:
-                await self.bot.send_message(where=channel, message=bc.format(channel_id=channel.id), can_pm=False, mention=False)
+                await channel.send(content=bc.format(channel_id=channel.id))
+                ctx.logger.debug(f"Broadcast : {i}/{total}")
+                await asyncio.sleep(3)
+                if i % 50 == 0:
+                    await self.bot.send_message(ctx=ctx, message=f"{i}/{total} ({f} failed)")
             except Exception as e:
+                f += 1
                 ctx.logger.info(f"Error broadcasting to {channel.name} : {e}")
                 pass
 
