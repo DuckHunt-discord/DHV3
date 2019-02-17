@@ -112,7 +112,8 @@ def config(bot):
     bot.admins = [138751484517941259]
 
     # This is a list of users that are blacklisted from the bot. The bot will ignore dem messages
-    bot.blacklisted_users = [# 2018-03-01
+    bot.blacklisted_users = [
+        # 2018-03-01
         # Abused a bug in the bot to set his server to 99999999999 ducks per day, and didn't report. Lagged the bot for a few hours
         # > Grown up since
         # 377585801258598410,
@@ -137,7 +138,8 @@ def config(bot):
         # Abused the unlimited number of channels to get an higer number of ducks on his 5 members guild.
         # With 26 channels created, we have a winner.
         # https://api-d.com/snaps/2018-04-15_23-14-13-3ggwqd57mj.png
-        331466244131782661,
+        # > 2019-02-01 : Unbanned
+        # 331466244131782661,
 
         # 2018-04-15
         # Abused the unlimited number of channels to get an higer number of ducks on his 1 member guild.
@@ -165,6 +167,12 @@ def config(bot):
         475789560123490307,
         365965970566807564,
         307944507696087051,
+
+        # 2019-01-27
+        # Asked to be removed from the web interface
+        # Applying a global ban so they doesn't get re-added anywhere
+        # May be removed on demand
+        441035268775215106,
 
 
         # All for now
