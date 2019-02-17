@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-17 18:21+0000\n"
+"POT-Creation-Date: 2019-02-17 18:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: bot.py:140
+#: bot.py:145
 msgid ":x: A required argument is missing."
 msgstr ""
 
-#: bot.py:144
+#: bot.py:149
 msgid ":x: You don't have enough exp for this"
 msgstr ""
 
-#: bot.py:147
+#: bot.py:152
 msgid ":x: You are not a server admin"
 msgstr ""
 
-#: bot.py:150
+#: bot.py:155
 msgid ":x: You are not a super admin."
 msgstr ""
 
-#: bot.py:151
+#: bot.py:156
 msgid ""
 "This command is reserved for the bot owners. If you think this is an "
 "error, please contact my owner at the DuckHunt Support Server (see "
 "`dh!help`)."
 msgstr ""
 
-#: bot.py:155
+#: bot.py:160
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ""
 
-#: bot.py:156
+#: bot.py:161
 msgid ""
 "Support the bot to use this command by voting at "
 "<https://discordbots.org/bot/duckhunt>. Be aware that the votes can take "
@@ -52,11 +52,11 @@ msgid ""
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
 
-#: bot.py:168
+#: bot.py:173
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
 
-#: bot.py:174
+#: bot.py:179
 msgid ":bulb: HINT: "
 msgstr ""
 
