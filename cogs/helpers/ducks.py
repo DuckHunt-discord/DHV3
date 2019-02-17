@@ -29,11 +29,6 @@ class Nothing(BushObject):
 class Bushes(BushObject):
     name = _('a lot of bushes.')
 
-
-class Condom(BushObject):
-    name = _('a used condom.')
-
-
 class DuckPin(BushObject):
     name = _('a duck pin.')
 
@@ -119,7 +114,7 @@ del _
 
 # noinspection PyInterpreter
 bushes = {
-    Nothing: 20, Bushes: 20, Condom: 10, DuckPin: 1,
+    Nothing: 20, Bushes: 20, DuckPin: 1,
     Bullet: 20,
     Charger: 15,
     ExplosiveAmmo: 2, PartialExplosiveAmmo: 6,
