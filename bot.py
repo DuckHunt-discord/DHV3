@@ -7,6 +7,11 @@
 # Have fun !
 # The doc for d.py rewrite is here : http://discordpy.readthedocs.io/en/rewrite/index.html
 
+
+# Installation tutorial : https://kb.api-d.com/en/code/duckhunt-how-to/
+# Support server : https://discord.gg/G4skWae
+
+
 # Importing and creating a logger
 
 import logging
