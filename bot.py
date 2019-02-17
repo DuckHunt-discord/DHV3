@@ -165,7 +165,7 @@ class DuckHunt(commands.AutoShardedBot):
                 return
             else:
 
-                await self.send_message(context, message=_("You are on cooldown :(, try again in {seconds}", language).format(seconds=round(exception.retry_after, 1)))
+                await self.send_message(context, message=_("You are on cooldown :(, try again in {seconds} seconds!", language).format(seconds=round(exception.retry_after, 1)))
                 return
         logger.error('Ignoring exception in command {}:'.format(context.command))
         logger.error("".join(traceback.format_exception(type(exception), exception, exception.__traceback__)))
