@@ -112,7 +112,8 @@ class Admin:
         try:
             args = parser.parse_args(args)
         except SystemExit:
-            await self.bot.hint(ctx=ctx, message="You have to use `--super-duck`, `--baby-duck` & `--life X` here.")
+            await self.bot.hint(ctx=ctx, message=f"You have to use `--super-duck`, `--baby-duck`, `--moad` & `--life X` here.\n For example `{ctx.prefix}coin --super-duck --life 4` for a super duck "
+            f"with 4 HP")
             return
 
         if args.baby_duck:
