@@ -104,15 +104,10 @@ catch (PDOException $e) {
 
 
 if (isset($_GET['cid'])) {
-    $loader = new Twig_Loader_Filesystem('templates');
-
-    $twig = new Twig_Environment($loader, array(//'cache' => 'cache',
-    ));
-    $twig->addExtension(new \Snilius\Twig\SortByFieldExtension());
-
     $channel_id   = (int)$_GET['cid'];
     $db_cid_query = $conn->prepare("SELECT id, channel_name FROM channels WHERE channel=:channel_id");
     $db_cid_query->bindParam(':channel_id', $channel_id);
+    $db_cid_query->setFetchMode(PDO::FETCH_ASSOC);
     $db_cid_query->execute();
     $db_c            = $db_cid_query->fetch();
     $db_channel_id   = $db_c['id'];
@@ -124,6 +119,7 @@ if (isset($_GET['cid'])) {
         $player_stats_query = $conn->prepare("SELECT * FROM players WHERE channel_id=:channel_id and id_=:player_id LIMIT 1");
         $player_stats_query->bindParam(':channel_id', $db_channel_id);
         $player_stats_query->bindParam(':player_id', $player_id);
+        $player_stats_query->setFetchMode(PDO::FETCH_ASSOC);
         $player_stats_query->execute();
 
         if ($player_stats_query->rowCount() == 0) {
@@ -174,13 +170,29 @@ if (isset($_GET['cid'])) {
         );
 
 
-        echo $twig->render('duckstats_player.twig', $player_stats);
+        if (isset($_GET['api-agent'])){
+            header('Content-Type: application/json');
+            echo json_encode($player_stats, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+            die();
+        } else {
+            $loader = new Twig_Loader_Filesystem('templates');
+
+            $twig = new Twig_Environment($loader, array(//'cache' => 'cache',
+            ));
+            $twig->addExtension(new \Snilius\Twig\SortByFieldExtension());
+
+            echo $twig->render('duckstats_player.twig', $player_stats);
+            die();
+        }
+
+
 
 
     } else {
         // Player not passed, displaying chan statistics
         $players_array_query = $conn->prepare("SELECT * FROM players WHERE channel_id=:channel_id AND (exp <> 0 OR killed_ducks > 0) ORDER BY exp DESC");
         $players_array_query->bindParam(':channel_id', $db_channel_id);
+        $players_array_query->setFetchMode(PDO::FETCH_ASSOC);
         $players_array_query->execute();
 
         if ($players_array_query->rowCount() == 0) {
@@ -222,7 +234,22 @@ if (isset($_GET['cid'])) {
         ];
 
 
-        echo $twig->render('duckstats_channel.twig', $passed);
+        if (isset($_GET['api-agent'])){
+            header('Content-Type: application/json');
+            $passed["players"] = array_values($passed["players"]);
+            echo json_encode($passed, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+            die();
+        } else {
+            $loader = new Twig_Loader_Filesystem('templates');
+
+            $twig = new Twig_Environment($loader, array(//'cache' => 'cache',
+            ));
+            $twig->addExtension(new \Snilius\Twig\SortByFieldExtension());
+
+            echo $twig->render('duckstats_channel.twig', $passed);
+            die();
+        }
+
 
 
     }
