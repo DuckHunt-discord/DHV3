@@ -101,6 +101,7 @@ class Admin:
     @checks.is_channel_enabled()
     @commands.cooldown(5, 30, BucketType.guild)
     async def spawn_duck(self, ctx, *, args: str = ""):
+        args = args.replace("—", "--")  #Fix for mobile users
         args = args.split()
         parser = argparse.ArgumentParser(description='Parse the spawn ducks command.')
         parser.add_argument('--super-duck', dest='super_duck', action='store_true', help='Is the duck a super duck ?')
