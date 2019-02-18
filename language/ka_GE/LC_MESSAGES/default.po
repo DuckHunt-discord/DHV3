@@ -187,8 +187,6 @@ msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
-"\n"
-" \n"
 "გილოცავთ, გაგიგზავნე / გაცილებით მეტი გამოცდილება, ვიდრე მაქსიმალური "
 "რაოდენობა მე შემიძლია შესანახად."
 
@@ -229,5 +227,4 @@ msgstr ": x: გამოცდილების გაგზავნა ა�
 
 #: cogs/experience_related_commands.py:93 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
-msgstr "\n"
-" {date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
