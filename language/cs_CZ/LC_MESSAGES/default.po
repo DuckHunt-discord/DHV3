@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2018 ORGANIZATION
+# Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-27 22:57+0000\n"
+"POT-Creation-Date: 2019-02-17 18:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:140
+#: bot.py:145
 msgid ":x: A required argument is missing."
 msgstr "Požadovaný argument chybí."
 
-#: bot.py:144
+#: bot.py:149
 msgid ":x: You don't have enough exp for this"
 msgstr "Nemáte dostatečný počet expů."
 
-#: bot.py:147
+#: bot.py:152
 msgid ":x: You are not a server admin"
 msgstr ":x: Nejsi admin serveru."
 
-#: bot.py:150
+#: bot.py:155
 msgid ":x: You are not a super admin."
 msgstr ":x: Nejsi super-admin."
 
-#: bot.py:151
+#: bot.py:156
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "stalo chybou, prosím kontaktujte DuckHunt Support Server (odkaz získáte "
 "příkazem `dh!help`)."
 
-#: bot.py:155
+#: bot.py:160
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Nějakou dobu jste nevolil pro DuckHunt na serveru DiscordBotList."
 
-#: bot.py:156
+#: bot.py:161
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -58,11 +58,7 @@ msgstr ""
 "stalo chybou, prosím kontaktujte DuckHunt Support Server (odkaz získáte "
 "příkazem `dh!help`)."
 
-#: bot.py:168
-msgid "You are on cooldown :(, try again in {seconds}"
-msgstr "Musíte chvíli počkat :(, zkuste to za {seconds}."
-
-#: bot.py:174
+#: bot.py:179
 msgid ":bulb: HINT: "
 msgstr ":bulb: :HINT:"
 
@@ -106,15 +102,15 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} byl odebrán ze seznamu "
 "adminů skupiny!"
 
-#: cogs/admin_commands.py:140 cogs/admin_commands.py:166
+#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
 msgid "Done. User removed from the database, if he was in."
 msgstr "Hotovo. Pokud byl uživatel v databázi, byl z ní odstraněn."
 
-#: cogs/admin_commands.py:153
+#: cogs/admin_commands.py:155
 msgid "Done. All channel data was removed."
 msgstr "Hotovo. Všechna data kanálu byla odstraněna."
 
-#: cogs/admin_commands.py:178
+#: cogs/admin_commands.py:180
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -122,19 +118,19 @@ msgstr ""
 ":x: Neplatná syntaxe. Použijte tento příkaz takto: `!settings [view/set/"
 "reset/list/modified] [setting if applicable]`"
 
-#: cogs/admin_commands.py:188 cogs/admin_commands.py:203
-#: cogs/admin_commands.py:254
+#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
+#: cogs/admin_commands.py:256
 msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
 msgstr ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **CHYBA** Toto nastavení neznám."
 
-#: cogs/admin_commands.py:191
+#: cogs/admin_commands.py:193
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: Nastavení {pref} bylo pro tuto skupinu nastaveno na `{value}`"
 
-#: cogs/admin_commands.py:213
+#: cogs/admin_commands.py:215
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -142,7 +138,7 @@ msgstr ""
 "Obejití max_ducks_per_day kontroluje, jestli jste vlastníkem bota. Bylo by "
 "to `{max}` ."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:217
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -152,7 +148,7 @@ msgstr ""
 "Nezneužívejte toho prosím. Pro informaci, limit by byl nastaven na `{max}` "
 "kachen za den."
 
-#: cogs/admin_commands.py:223
+#: cogs/admin_commands.py:225
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -160,20 +156,20 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> Oprávněn nastavit VIP status."
 ""
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:227
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Neoprávněn nastavit VIP status! Nejste vlastníkem serveru."
 
-#: cogs/admin_commands.py:231 cogs/admin_commands.py:242
-#: cogs/admin_commands.py:267
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
 msgid ":x: Incorrect value."
 msgstr ":x: Neplatná hodnota."
 
-#: cogs/admin_commands.py:238 cogs/admin_commands.py:263
+#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: Nastavení {pref} bylo pro tuto skupinu nastaveno na `{value}` ."
 
-#: cogs/admin_commands.py:290
+#: cogs/admin_commands.py:292
 msgid ""
 "The list of preferences is available on our new website: https://duckhunt.me/"
 "bot-settings/"
@@ -250,11 +246,7 @@ msgstr ""
 "Bot se pravidelně restartuje kvůli updatům, ale žádné strachy, je 99.8% času "
 "online."
 
-#: cogs/meta.py:64
-msgid "Here is the command list: http://duckhunt.me/command-list/"
-msgstr "Zde je seznam příkazů: http://duckhunt.me/command-list/"
-
-#: cogs/meta.py:74
+#: cogs/meta.py:75
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -264,7 +256,7 @@ msgstr ""
 "Můžete použít tuto webovou stránku, aby jste ho porovnali s tím vaším: https:"
 "//time.is/compare/GMT"
 
-#: cogs/meta.py:75
+#: cogs/meta.py:76
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -272,7 +264,7 @@ msgstr ""
 "Pro zobrazení času do získání zbraně zpět zdarma použijte příkaz "
 "`dh!freetime`"
 
-#: cogs/meta.py:88
+#: cogs/meta.py:89
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hours and {minutes} minutes)."
@@ -280,14 +272,14 @@ msgstr ""
 ":alarm_clock: Do získání zbraní a nábojů zdarma zbýva {sec} vteřina/vteřiny/"
 "vteřin ({hours} hodina/hodiny/hodin a {minutes}  minuta/minuty/minut)."
 
-#: cogs/meta.py:90
+#: cogs/meta.py:91
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr "Před získáním nábojů zdarma doporučujeme znovu nabít!"
 
-#: cogs/meta.py:102
+#: cogs/meta.py:103
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Používáte shard číslo {shard} z {total} shardů."
 
@@ -400,3 +392,322 @@ msgstr ""
 "Toto oprávnění pro mně není nezbytné pro mou správnou funkci, ale je potřeba "
 "při nahlašování chyb.\n"
 "S tímto nastavením můžete pokračovat."
+
+#: cogs/setup_wizzard.py:82
+msgid ""
+":small_orange_diamond: The permission `manage_messages` is missing.\n"
+"This is used to remove some messages on sneaky commands (weapon sabotage, "
+"etc.), and also if you use the `delete_commands` setting\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_orange_diamond: Nemám oprávnění `manage_messages`.\n"
+"To je používáno při provádění zákeřných příazů (sabotáž zbraně, atd.), a též "
+"může použít nastavení`delete_commands`\n"
+"Můžete bez něj pokračovat, ale bude to vést k chybám."
+
+#: cogs/shop.py:42
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+":x: Neplatná syntaxe. Příkaz použijte takto: `!shop [seznam/číslo položky] "
+"[popřípadě parametr]`"
+
+#: cogs/shop.py:52
+msgid "Right now you have a total of {exp} exp points."
+msgstr "Aktuálně máte {exp} expů."
+
+#: cogs/shop.py:59
+msgid ""
+"Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
+"Thanks "
+msgstr ""
+"Zde je seznam všech položek obchodu: https://duckhunt.me/shop-items/ . Díky"
+
+#: cogs/shop.py:75
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ":money_with_wings: Do vaší zbraně byla přidána kulka za 7 expů."
+
+#: cogs/shop.py:78
+msgid ":champagne: Your magazine is full!"
+msgstr ":champagne: Váš zásobník je plný!"
+
+#: cogs/shop.py:94
+msgid ""
+":money_with_wings: You added a magazine to your weapon for 13 exp points."
+msgstr ":money_with_wings: Do vaší zbraně byl přidán zásobník za 13 expů."
+
+#: cogs/shop.py:97
+msgid ":champagne: You have enough magazines!"
+msgstr ":champagne: Máte dostatek zásobníků!"
+
+#: cogs/shop.py:111
+msgid ":money_with_wings: You purchased AP ammo for your weapon."
+msgstr ":money_with_wings: Zakoupil/a jsi AP munici pro tvou zbraň."
+
+#: cogs/shop.py:112
+msgid ""
+"For the next 24 hours, you will deal double damage to ducks. This does "
+"**not** stack with explosive ammo"
+msgstr ""
+"Po následujících 24 hodin budete mít dvojnásbnou damage. Toto se "
+"**neslučuje** s explosivní municí."
+
+#: cogs/shop.py:115
+msgid ":champagne: You have enough AP ammo for now!"
+msgstr ":champagne: Prozatím máš dost AP munice!"
+
+#: cogs/shop.py:129
+msgid ":money_with_wings: You purchased explosive ammo for your weapon."
+msgstr ":money_with_wings: Zakoupil/a jsi explosivní munici pro tvou zbraň."
+
+#: cogs/shop.py:130
+msgid ""
+"For the next 24 hours, you will deal triple damage to ducks. This does "
+"**not** stack with AP ammo and trumps it if you have any."
+msgstr ""
+"Po následujících 24 hodin budete mít trojnásobnou damage. Toto se "
+"**neslučuje** s AP municí."
+
+#: cogs/shop.py:133
+msgid ":champagne: You have enough explosive ammo for now!"
+msgstr ":champagne: Prozatím máte dost explosivní munice!"
+
+#: cogs/shop.py:147
+msgid ":money_with_wings: You got your weapon back."
+msgstr ":money_with_wings: Byla vám navrácena zbraň."
+
+#: cogs/helpers/config.py:70
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Na tohle ta kachna neměla čas.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:71
+msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kachna odešla.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:71
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kachna se rozptýlila v čase a prostoru.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:71
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kachna se unudila k smrti.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:72
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kachna nechce být zastřelena.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:72
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kachna odešla k stánku s citróný.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:188
+msgid "Foggy weather"
+msgstr "Mlhavé počasí"
+
+#: cogs/helpers/config.py:188
+msgid ""
+"It's harder to see killed ducks. You'll need a few more seconds to know if "
+"you missed or not."
+msgstr ""
+"Lovení kachen se stížilo. Budeš potřebovat chvilku navíc, abyste zjistili, "
+"zdali jste se trefili."
+
+#: cogs/helpers/config.py:189
+msgid "Steroids in the lake"
+msgstr "Steroidy v jezeře"
+
+#: cogs/helpers/config.py:191
+msgid "Connection problems"
+msgstr "Problémy s připojením"
+
+#: cogs/helpers/config.py:192
+msgid "A new florist in town"
+msgstr "Nový zahradník ve městě"
+
+#: cogs/helpers/config.py:193
+msgid "Mega-ducks"
+msgstr "Mega-kachy"
+
+#: cogs/helpers/config.py:193
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Někdo nahustil super kachnu a teď jsou JEŠTĚ VĚTŠÍí!"
+
+#: cogs/helpers/config.py:194
+msgid "Windy weather"
+msgstr "Větrné počasí"
+
+#: cogs/helpers/config.py:194
+msgid "Bullets are deflected by some strong wind"
+msgstr "Kulky jsou vychylovány silným větrem"
+
+#: cogs/helpers/config.py:201
+msgid "public danger"
+msgstr "veřejné nebezpečí"
+
+#: cogs/helpers/config.py:202
+msgid "tourist"
+msgstr "turista"
+
+#: cogs/helpers/config.py:203
+msgid "noob"
+msgstr "nula"
+
+#: cogs/helpers/config.py:204
+msgid "trainee"
+msgstr "praktikant"
+
+#: cogs/helpers/config.py:205
+msgid "duck misser"
+msgstr "míječ kachen"
+
+#: cogs/helpers/config.py:206
+msgid "member of the Comitee Against Ducks"
+msgstr "člen výboru proti kachnám"
+
+#: cogs/helpers/config.py:208
+msgid "duck pest"
+msgstr "škůdce kachen"
+
+#: cogs/helpers/config.py:211
+msgid "hunter"
+msgstr "lovec"
+
+#: cogs/helpers/config.py:212
+msgid "duck inside out turner"
+msgstr "rozparovač kachen"
+
+#: cogs/helpers/config.py:215
+msgid "duck eater"
+msgstr "jedlík kachen"
+
+#: cogs/helpers/config.py:216
+msgid "duck flattener"
+msgstr "zplošťovač kachen"
+
+#: cogs/helpers/config.py:217
+msgid "duck disassembler"
+msgstr "rozebírač kachen"
+
+#: cogs/helpers/config.py:218
+msgid "duck demolisher"
+msgstr "bořič kachen"
+
+#: cogs/helpers/config.py:219
+msgid "duck killer"
+msgstr "kachní zabiják"
+
+#: cogs/helpers/config.py:239
+msgid "serial duck killer"
+msgstr "sériový vrah kachen"
+
+#: cogs/helpers/config.py:240
+msgid "duck genocider"
+msgstr "vyhlazovač kachen"
+
+#: cogs/helpers/config.py:241
+msgid "unemployed due to extinction of the duck species"
+msgstr "nezměstnaný kvůli vyhynutí kachen"
+
+#: cogs/helpers/config.py:242
+msgid "duck toaster"
+msgstr "toastovač kachen"
+
+#: cogs/helpers/config.py:243
+msgid "old noob"
+msgstr "stará nula"
+
+#: cogs/helpers/database.py:195
+msgid "Level of {player} on #{channel}"
+msgstr "Level {player} pro #{channel}"
+
+#: cogs/helpers/database.py:198
+msgid "You leveled down!"
+msgstr "Tvůj level se snížíl!"
+
+#: cogs/helpers/database.py:201
+msgid "You leveled up!"
+msgstr "Tvůj level se zvýšil!"
+
+#: cogs/helpers/database.py:209
+msgid "Current level"
+msgstr "Současný level"
+
+#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+msgid "nom"
+msgstr "nom"
+
+#: cogs/helpers/database.py:210
+msgid "Previous level"
+msgstr "Předchozí level"
+
+#: cogs/helpers/database.py:211
+msgid "Shots accuracy"
+msgstr "Přesnost střelby"
+
+#: cogs/helpers/database.py:212
+msgid "Weapon reliability"
+msgstr "Spolehlivost zbraně"
+
+#: cogs/helpers/database.py:213
+msgid "Exp points"
+msgstr "Počet expů"
+
+#: cogs/helpers/ducks.py:26
+msgid "Nothing"
+msgstr "Nic"
+
+#: cogs/helpers/ducks.py:30
+msgid "a lot of bushes."
+msgstr "hodně keřů."
+
+#: cogs/helpers/ducks.py:33
+msgid "a duck pin."
+msgstr "připínák kachen."
+
+#: cogs/helpers/ducks.py:37
+msgid "a bullet"
+msgstr "kulku."
+
+#: cogs/helpers/ducks.py:49
+msgid "a full charger"
+msgstr "plnou nabíječku."
+
+#: cogs/helpers/ducks.py:61
+msgid "a box of explosive ammo"
+msgstr "krabici výbušné munice."
+
+#: cogs/helpers/ducks.py:74
+msgid "an almost empty box of explosive ammo"
+msgstr "téměř prázdnou krabici výbušné munice."
+
+#: cogs/helpers/ducks.py:88
+msgid "some duck-grease"
+msgstr "trochu kachního maziva."
+
+#: cogs/helpers/ducks.py:97
+msgid "a full-featured silencer"
+msgstr "plnohodnotný tlumič."
+
+#: cogs/helpers/ducks.py:106
+msgid "a fully functional infrared detector"
+msgstr "plně funkční infračervený senzor."
+
+#: cogs/helpers/ducks.py:294 cogs/helpers/ducks.py:297
+msgid "Searching the bushes around the duck, you found..."
+msgstr "Při hledání v keřích kolem kachny si našel..."
+
+#: cogs/helpers/ducks.py:297
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "jež si nemohl vzít, protože tvůj batoh je plný."
+
+#: cogs/helpers/ducks.py:332
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr "To bylo těsné, ale jiný lovec ji sejmul jako první! [missed: -1]"
+
+#: cogs/helpers/ducks.py:654
+msgid "**I AM...** Your mother"
+msgstr "**JSEM...** Tvoje matka"

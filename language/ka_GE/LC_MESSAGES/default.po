@@ -1,0 +1,233 @@
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-17 18:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:145
+msgid ":x: A required argument is missing."
+msgstr "საჭირო არგუმენტი აკლია."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr "ამისთვის არ გყოფნით გამოცდილება."
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr "თქვენ არ ხართ სერვერის ადმინი."
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr "თქვენ არ ხართ სუპერ ადმინი."
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"ეს ბრძანება დაცულია ბოტის მფლობელებისთვის. თუ ფიქრობთ, რომ ეს შეცდომაა, "
+"გთხოვთ დაუკავშირდეთ ჩემს მფლობელს Duck Hunt მხარდაჭერის სერვერზე (იხ. `Dh! "
+"Help`)."
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr "თქვენ არ დაგიჭერიათ მხარი DuckHunt on DiscordBotList დიდი ხანი."
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"ბოტის მხარდასაჭერად ამ ბრძანების გამოყენება <https://discordbots.org/bot/"
+"duckhunt>. გაითვალისწინეთ, რომ ხმა მიიღებს წუთს დარეგისტრირება DuckhuntIf "
+"თქვენ ფიქრობთ, რომ ეს შეცდომაა, გთხოვთ დაუკავშირდეთ ჩემს მფლობელს DuckHunt "
+"მხარდაჭერის სერვერზე (იხილეთ dh! Help`)."
+
+#: bot.py:179
+msgid ":bulb: HINT: "
+msgstr ": ok: შესრულებულია, მომხმარებელი აკრძალულია. :gun:"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ": ok: შესრულებულია, მომხმარებელი აკრძალულია. :gun:\n"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: შესრულებულია, მომხმარებელი დაშვებულია. :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019> შესრულებულია, არხი {channel} "
+"დაემატა თამაშს! გაერტთე!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"\n"
+" <:cmd_ChannelRemoved_01:439546718737137674> შესრულებულია, არხი {channel} "
+"ამოიშალა თამაშიდან. ნახვამდის!"
+
+#: cogs/admin_commands.py:89
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"\n"
+"<:cmd_AdminAdded_01:439549846622568466> {admin} დამატებულია როგორც ადმინი "
+"კლანში!"
+
+#: cogs/admin_commands.py:97
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} გაგდებულია ადმინების "
+"კლანიდან."
+
+#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+msgid "Done. User removed from the database, if he was in."
+msgstr "შესრულებულია. მომხმარებელი ამოშლილია მონაცემთა ბაზიდან, თუ იყო იქ."
+
+#: cogs/admin_commands.py:155
+msgid "Done. All channel data was removed."
+msgstr "შესრულებულია. ყველა არხის მონაცემები ამოშლილია."
+
+#: cogs/admin_commands.py:180
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+":x: არასწორი სინტაქსი. გამოიყენეთ ბრძანება ამ გზით `!settings [view/set/"
+"reset/list/modified] [setting if applicable]`"
+
+#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
+#: cogs/admin_commands.py:256
+msgid ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
+"setting"
+msgstr ""
+"\n"
+" <a:a_cmd_UnknownSetting:439550426862452746> **შეცდომა:** არ ვიცი ეს "
+"პარამეტრი"
+
+#: cogs/admin_commands.py:193
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: პარამეტრი {pref} დაყენებულია `{value}` ამ კლანში."
+
+#: cogs/admin_commands.py:215
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"გვერდის ავლით max_ducks_per_day შემოწმება, როგორც თქვენ ხართ ბოტის მფლობელი. "
+"ეს იქნებოდა `{max}`."
+
+#: cogs/admin_commands.py:217
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"გვერდის ავლით max_ducks_per_day შეამოწმე როგორც VIP კლანში ხართ. გთხოვთ, "
+"ბოროტად არ გამოიყენოთ. ინფორმაციისთვის, ლიმიტი ექვემდებარება `{max}` იხვები "
+"დღეში."
+
+#: cogs/admin_commands.py:225
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"\n"
+" <:official_Duck_01_reversed:439576463436546050> VIP სტატუსის დაყენება "
+"უფლებამოსილია!"
+
+#: cogs/admin_commands.py:227
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ":x: VIP სტატუსის დაყენება არასანქცირებული! თქვენ არ ხართ მფლობელი."
+
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
+msgid ":x: Incorrect value."
+msgstr ": x: არასწორი მნიშვნელობა."
+
+#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ": ok: პარამეტრი {pref} შეიქმნა `{value}` ამ კლანში."
+
+#: cogs/admin_commands.py:292
+msgid ""
+"The list of preferences is available on our new website: https://duckhunt.me/"
+"bot-settings/"
+msgstr ""
+"პრეფერენციების ჩამონათვალი ხელმისაწვდომია ჩვენს ვებ-გვერდზე: https://"
+"duckhunt.me/bot-settings/"
+
+#: cogs/experience_related_commands.py:26
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"\n"
+" \n"
+"გილოცავთ, გაგიგზავნე / გაცილებით მეტი გამოცდილება, ვიდრე მაქსიმალური "
+"რაოდენობა მე შემიძლია შესანახად."
+
+#: cogs/experience_related_commands.py:29
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ": ok:, მან / მან ახლა {newexp} exp რაოდენობა!"
+
+#: cogs/experience_related_commands.py:53
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ""
+"x: ბოროტად გამოყენების თავიდან ასაცილებლად თქვენ არ შეგიძლიათ გააგზავნოთ "
+"ექსპ, როდესაც არ გაქვთ იარაღი."
+
+#: cogs/experience_related_commands.py:57
+msgid ":x: The exp amount needs to be positive."
+msgstr "x: ექსპრესი უნდა იყოს დადებითი."
+
+#: cogs/experience_related_commands.py:61
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+": x: დაველოდოთ ... რა? ცდილობთ გამოცდილებას გააგზავნოთ? ეს აზრი არ აქვს."
+
+#: cogs/experience_related_commands.py:80
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"თქვენ გამოგიგზავნეთ თანხა {target} გამოცდილება {target} (გადასახადების "
+"გადახდა გადასახადები)"
+
+#: cogs/experience_related_commands.py:83
+msgid "You don't have enough experience points"
+msgstr "საკმარისი გამოცდილება არ გაქვთ"
+
+#: cogs/experience_related_commands.py:85
+msgid ":x: Sending exp is disabled on this server"
+msgstr ": x: გამოცდილების გაგზავნა ამ სერვერზე გამორთულია"
+
+#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "\n"
+" {date} (in {dans_jours}{dans_heures} and {dans_minutes})"
