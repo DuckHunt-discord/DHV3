@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-17 18:23+0000\n"
+"POT-Creation-Date: 2019-02-18 13:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,6 +56,10 @@ msgstr ""
 "discordbots.org/bot/duckhunt>. Vær opmærksom på, at stemmerne kan tage et "
 "minut at blive registreret af Duckhunt. Hvis du mener, at dette er en fejl, "
 "bedes du kontakte min ejer på DuckHunt Support Server (se \"dh!help\")."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr "Du er på cooldown :( Prøv igen om {seconds}"
 
 #: bot.py:179
 msgid ":bulb: HINT: "
@@ -246,6 +250,16 @@ msgid ""
 msgstr ""
 "Botten genstarter ofte for opdateringer. Bare rolig, den har en 99,8% "
 "oppetid."
+
+#: cogs/meta.py:64
+msgid ""
+"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Her er kommandolisten: http://duckhunt.me/command-list/ | Hvis du har brug "
+"for noget, er du velkommen til at deltage i support-serveren på https://"
+"discordapp.com/invite/2BksEkV"
 
 #: cogs/meta.py:75
 msgid ""
