@@ -3,12 +3,18 @@ import json
 import aiohttp
 import asyncio
 
-DISCORD_BOTS_API = 'https://bots.discord.pw/api'
+from discord.ext import commands
+
+from cogs.helpers import checks
+
+DISCORD_BOTS_API = 'https://discord.bots.gg/api/v1'
 DISCORD_BOTS_ORG_API = 'https://discordbots.org/api'
 
 
 class Carbonitex:
-    """Cog for updating bots.discord.pw bot information."""
+    """Cog for updating bots.discord.pw bot information.
+
+    It's not longer limited to 1 website and bots.discord.pw isn't owned by the same guys anymore but it's basically the same"""
 
     def __init__(self, bot):
         self.bot = bot
@@ -19,9 +25,9 @@ class Carbonitex:
         self.bot.loop.create_task(self.session.close())
 
     async def update(self):
-
         payload = json.dumps({
-            'server_count': len(self.bot.guilds)
+            'server_count': len(self.bot.guilds),
+            'shard_count': len(self.bot.shards)
         })
 
         ## DISCORD BOTS ##
@@ -34,13 +40,10 @@ class Carbonitex:
 
         url = '{0}/bots/{1.user.id}/stats'.format(DISCORD_BOTS_API, self.bot)
         async with self.session.post(url, data=payload, headers=headers) as resp:
-            self.bot.logger.info('Bots_discord_pw statistics returned {0.status} for {1}'.format(resp, payload))
+            self.bot.logger.info('Bots_discord_pw|discord.bots.gg statistics returned {0.status} for {1} (url={2})'.format(resp, payload, url))
 
 
-        payload = json.dumps({
-            'server_count': len(self.bot.guilds),
-            'shard_count': len(self.bot.shards)
-        })
+
 
         ## DISCORD BOTS ORG ##
         headers = {
@@ -62,6 +65,12 @@ class Carbonitex:
     async def on_ready(self):
         await asyncio.sleep(60*2)  # To be sure we see everyone
         await self.update()
+
+    @commands.command()
+    @checks.is_super_admin()
+    async def analytics(self, ctx):
+        await self.update()
+        await ctx.send(":ok_hand:")
 
 
 def setup(bot):

@@ -77,7 +77,7 @@ class Experience:
         else:
             await self.bot.send_message(ctx=ctx, message=_(":champagne: Your magazine is full!", language))
 
-    @shop.command(name="2", aliases=["charger", "chargers"])
+    @shop.command(name="2", aliases=["charger", "chargers", "magazine", "magazines"])
     @checks.have_exp(13)
     async def item2(self, ctx):
         """Add a charger to your weapon (13 exp)
@@ -526,10 +526,6 @@ class Experience:
             await spawning.spawn_duck(self.bot, ctx.channel, instance=duck, ignore_event=True)
 
         asyncio.ensure_future(spawn_mech_duck())
-
-
-
-
 
 def setup(bot):
     bot.add_cog(Experience(bot))

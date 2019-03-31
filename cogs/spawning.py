@@ -279,6 +279,19 @@ async def background_loop(bot):
 
                         pass
 
+            n = datetime.datetime.now()
+
+            april_fools = n.day == 1 and n.month == 4
+
+            if april_fools:
+                random_channel = random.choice(list(bot.ducks_planning.keys()))
+                emoji = random.choice([":blowfish:", "🦞", ":shark:", ":octopus:", ":dolphin:" , ":squid:",  ":whale:", ":tropical_fish:", ":whale2:", "❥᷁)͜͡˒ ⋊"])
+                try:
+                    await bot.send_message(where=random_channel, can_pm=False, mention=False, message=f"-,..,.-'\`'°-,_,.-'\`'° {emoji} < **G**lub **G**lub")
+                except Exception as e:
+                    logger.exception("Couldn't send an april fool duck")
+
+
             now = time.time()
             # bot.logger.debug("On schedule : " + str(last_iter + 1 - now))
             bot.loop_latency = last_iter + 1 - now

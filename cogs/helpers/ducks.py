@@ -1,6 +1,7 @@
 """
 In this helper, every kind of duck the bot can spawn is defined.
 """
+import datetime
 import logging
 import random
 import time
@@ -46,7 +47,7 @@ class Bullet(BushObject):
 
 
 class Charger(BushObject):
-    name = _('a full charger')
+    name = _('a full magazine')
     db = 'found_chargers'
 
     async def give(self, bot, ctx):
@@ -418,7 +419,17 @@ class Duck(BaseDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
         trace = random.choice(self.bot.canards_trace)
-        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
+        n = datetime.datetime.now()
+
+        april_fools = n.day == 1 and n.month == 4
+
+        if april_fools:
+            corps = "🐟"
+        else:
+            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
+        
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
@@ -465,7 +476,16 @@ class SuperDuck(BaseDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
         trace = random.choice(self.bot.canards_trace)
-        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
+        n = datetime.datetime.now()
+
+        april_fools = n.day == 1 and n.month == 4
+
+        if april_fools:
+            corps = "🐟"
+        else:
+            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
         if self.channel.id == 449726041548783636:  # Duck Enigma
@@ -650,7 +670,16 @@ class MotherOfAllDucks(SuperDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
         trace = random.choice(self.bot.canards_trace)
-        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
+        n = datetime.datetime.now()
+
+        april_fools = n.day == 1 and n.month == 4
+
+        if april_fools:
+            corps = "🐟"
+        else:
+            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+
         cri = _("**I AM...** Your mother", language)
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
