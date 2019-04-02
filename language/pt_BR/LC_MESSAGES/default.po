@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-18 13:00+0000\n"
+"POT-Creation-Date: 2019-03-31 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -780,7 +780,7 @@ msgstr ""
 "**BANG**   Você errou o pato... e acertou {player}! [errou: -1 xp] [acidente "
 "de caça: -2 xp] [**arma confiscada**]"
 
-#: cogs/helpers/ducks.py:220 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW**   Você errou o pato! [errou: -1 xp]"
 
@@ -1252,7 +1252,7 @@ msgstr ""
 ":warning: Ocorreu um erro ao enviar o embed, por favor verifique se o bot "
 "tem a permissão `embed_links`ativa e tente novamente!"
 
-#: cogs/helpers/ducks.py:223
+#: cogs/helpers/ducks.py:224
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1260,23 +1260,23 @@ msgstr ""
 "**FLAPP** Assustado com tantos barulhos o pato fugiu! PARABÉNS! [errou: -1 "
 "xp]"
 
-#: cogs/helpers/ducks.py:234
+#: cogs/helpers/ducks.py:235
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:238
+#: cogs/helpers/ducks.py:239
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:242
+#: cogs/helpers/ducks.py:243
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:242
+#: cogs/helpers/ducks.py:243
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:332
+#: cogs/helpers/ducks.py:333
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1284,7 +1284,7 @@ msgstr ""
 "Essa passou perto, você quase matou o pato, mas o outro caçador pegou ele "
 "primeiro! [missed: -1 xp]"
 
-#: cogs/helpers/ducks.py:382
+#: cogs/helpers/ducks.py:383
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1296,7 +1296,7 @@ msgstr ""
 "{supercanards} eram super-patos) mortos em #{channel}.   \\_X<  *COUAC* "
 "{exp}"
 
-#: cogs/helpers/ducks.py:390
+#: cogs/helpers/ducks.py:391
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1304,14 +1304,14 @@ msgstr ""
 ":gun: O pato sobreviveu, tente novamente! *SUPER PATO DETECTADO* [vida: -"
 "{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:392
+#: cogs/helpers/ducks.py:393
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: O pato sobreviveu, tente novamente! *SUPER PATO DETECTADO* [vida: -"
 "{vie}]"
 
-#: cogs/helpers/ducks.py:626
+#: cogs/helpers/ducks.py:646
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1321,7 +1321,7 @@ msgstr ""
 "segundos porém não deveria ter feito isso! Você irá perder algum exp pois "
 "não deveria matar bebês \\_X< *COUAC* {exp}"
 
-#: cogs/helpers/ducks.py:642
+#: cogs/helpers/ducks.py:662
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1330,11 +1330,11 @@ msgstr ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**   Você abraçou o pato bebê, e "
 "agora eles está muito feliz! [3 exp]\n"
 
-#: cogs/helpers/ducks.py:654
+#: cogs/helpers/ducks.py:683
 msgid "**I AM...** Your mother"
 msgstr "**EU SOU...** Sua mãe"
 
-#: cogs/helpers/ducks.py:662
+#: cogs/helpers/ducks.py:691
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

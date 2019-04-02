@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-18 13:00+0000\n"
+"POT-Creation-Date: 2019-03-31 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -740,7 +740,7 @@ msgstr ""
 "** بانج ** لقد فاتتك البطة ... وأطلقت النار على {player}! [غاب: 1 xp] [حادث "
 "صيد: -2 xp] [** سلاح مصادر **]"
 
-#: cogs/helpers/ducks.py:220 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** لقد فاتتك البط! [غاب: 1 xp]"
 
@@ -1209,29 +1209,29 @@ msgstr ""
 ":warning: حدث خطأ أثناء إرسال التضمين ، يرجى التحقق مما إذا كان الروبوت لديه "
 "إذن `embed_links` وحاول مرة أخرى!"
 
-#: cogs/helpers/ducks.py:223
+#: cogs/helpers/ducks.py:224
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "** FLAPP ** خوفا من الضوضاء ، هرب البط! مبروك! [غاب: 1- exp]"
 
-#: cogs/helpers/ducks.py:234
+#: cogs/helpers/ducks.py:235
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:238
+#: cogs/helpers/ducks.py:239
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:242
+#: cogs/helpers/ducks.py:243
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:242
+#: cogs/helpers/ducks.py:243
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:332
+#: cogs/helpers/ducks.py:333
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1239,7 +1239,7 @@ msgstr ""
 "كان ذلك مقربًا ، لقد كادت تقتل البط ، لكن الصياد الآخر حصل عليه أولاً! [غاب: "
 "1- exp]"
 
-#: cogs/helpers/ducks.py:382
+#: cogs/helpers/ducks.py:383
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1250,7 +1250,7 @@ msgstr ""
 "، فأنت الآن في المجموع الكلي من {total {ducks (التي كانت {supercanards} فيها "
 "بطات فائقة) تقتل علىexp} {e{channel}#e} "
 
-#: cogs/helpers/ducks.py:390
+#: cogs/helpers/ducks.py:391
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1258,13 +1258,13 @@ msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * ({Super DUCK DETECTED * [life: - {vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:392
+#: cogs/helpers/ducks.py:393
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * {Super DUCK DETECTED * [life: - {vie}]"
 
-#: cogs/helpers/ducks.py:626
+#: cogs/helpers/ducks.py:646
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1274,7 +1274,7 @@ msgstr ""
 "ثانية ، ولا يجب عليك فعل ذلك! ستفقد بعض التوقعات ، لأنه لا ينبغي عليك قتل "
 "الأطفال \\ {X < * COUAC * {exp}"
 
-#: cogs/helpers/ducks.py:642
+#: cogs/helpers/ducks.py:662
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1284,11 +1284,11 @@ msgstr ""
 "الآن سعيدة حقًا! [3 exp]\n"
 "غادرت البطة الصغيرة ، محبوبة."
 
-#: cogs/helpers/ducks.py:654
+#: cogs/helpers/ducks.py:683
 msgid "**I AM...** Your mother"
 msgstr "**انا..**  والدتك."
 
-#: cogs/helpers/ducks.py:662
+#: cogs/helpers/ducks.py:691
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

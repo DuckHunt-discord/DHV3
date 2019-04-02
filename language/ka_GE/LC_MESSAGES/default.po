@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-18 13:00+0000\n"
+"POT-Creation-Date: 2019-03-31 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr ": ok: შესრულებულია, მომხმარებ�
 
 #: cogs/admin_commands.py:26
 msgid ":ok: Done, user banned. :gun:"
-msgstr ": ok: შესრულებულია, მომხმარებელი აკრძალულია. :gun:\n"
+msgstr ": ok: შესრულებულია, მომხმარებელი აკრძალულია. :gun:"
 
 #: cogs/admin_commands.py:38
 msgid ":ok: Done, user unbanned. :eyes:"
@@ -83,8 +83,7 @@ msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
 msgstr ""
-"\n"
-" <:cmd_ChannelRemoved_01:439546718737137674> შესრულებულია, არხი {channel} "
+"<:cmd_ChannelRemoved_01:439546718737137674> შესრულებულია, არხი {channel} "
 "ამოიშალა თამაშიდან. ნახვამდის!"
 
 #: cogs/admin_commands.py:89
@@ -92,7 +91,6 @@ msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
 msgstr ""
-"\n"
 "<:cmd_AdminAdded_01:439549846622568466> {admin} დამატებულია როგორც ადმინი "
 "კლანში!"
 
@@ -126,8 +124,7 @@ msgid ""
 "<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
 "setting"
 msgstr ""
-"\n"
-" <a:a_cmd_UnknownSetting:439550426862452746> **შეცდომა:** არ ვიცი ეს "
+"<a:a_cmd_UnknownSetting:439550426862452746> **შეცდომა:** არ ვიცი ეს "
 "პარამეტრი"
 
 #: cogs/admin_commands.py:193
@@ -157,8 +154,7 @@ msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
 msgstr ""
-"\n"
-" <:official_Duck_01_reversed:439576463436546050> VIP სტატუსის დაყენება "
+"<:official_Duck_01_reversed:439576463436546050> VIP სტატუსის დაყენება "
 "უფლებამოსილია!"
 
 #: cogs/admin_commands.py:227

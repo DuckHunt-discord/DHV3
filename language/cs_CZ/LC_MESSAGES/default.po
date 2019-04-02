@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-18 13:00+0000\n"
+"POT-Creation-Date: 2019-03-31 22:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -654,60 +654,56 @@ msgstr "Spolehlivost zbraně"
 msgid "Exp points"
 msgstr "Počet expů"
 
-#: cogs/helpers/ducks.py:26
+#: cogs/helpers/ducks.py:27
 msgid "Nothing"
 msgstr "Nic"
 
-#: cogs/helpers/ducks.py:30
+#: cogs/helpers/ducks.py:31
 msgid "a lot of bushes."
 msgstr "hodně keřů."
 
-#: cogs/helpers/ducks.py:33
+#: cogs/helpers/ducks.py:34
 msgid "a duck pin."
 msgstr "připínák kachen."
 
-#: cogs/helpers/ducks.py:37
+#: cogs/helpers/ducks.py:38
 msgid "a bullet"
 msgstr "kulku."
 
-#: cogs/helpers/ducks.py:49
-msgid "a full charger"
-msgstr "plnou nabíječku."
-
-#: cogs/helpers/ducks.py:61
+#: cogs/helpers/ducks.py:62
 msgid "a box of explosive ammo"
 msgstr "krabici výbušné munice."
 
-#: cogs/helpers/ducks.py:74
+#: cogs/helpers/ducks.py:75
 msgid "an almost empty box of explosive ammo"
 msgstr "téměř prázdnou krabici výbušné munice."
 
-#: cogs/helpers/ducks.py:88
+#: cogs/helpers/ducks.py:89
 msgid "some duck-grease"
 msgstr "trochu kachního maziva."
 
-#: cogs/helpers/ducks.py:97
+#: cogs/helpers/ducks.py:98
 msgid "a full-featured silencer"
 msgstr "plnohodnotný tlumič."
 
-#: cogs/helpers/ducks.py:106
+#: cogs/helpers/ducks.py:107
 msgid "a fully functional infrared detector"
 msgstr "plně funkční infračervený senzor."
 
-#: cogs/helpers/ducks.py:294 cogs/helpers/ducks.py:297
+#: cogs/helpers/ducks.py:295 cogs/helpers/ducks.py:298
 msgid "Searching the bushes around the duck, you found..."
 msgstr "Při hledání v keřích kolem kachny si našel..."
 
-#: cogs/helpers/ducks.py:297
+#: cogs/helpers/ducks.py:298
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr "jež si nemohl vzít, protože tvůj batoh je plný."
 
-#: cogs/helpers/ducks.py:332
+#: cogs/helpers/ducks.py:333
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr "To bylo těsné, ale jiný lovec ji sejmul jako první! [missed: -1]"
 
-#: cogs/helpers/ducks.py:654
+#: cogs/helpers/ducks.py:683
 msgid "**I AM...** Your mother"
 msgstr "**JSEM...** Tvoje matka"
