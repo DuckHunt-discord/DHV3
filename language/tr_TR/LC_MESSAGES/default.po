@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-31 22:19+0000\n"
+"POT-Creation-Date: 2019-04-02 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1589,6 +1589,10 @@ msgstr "bir ördek iğnesi."
 #: cogs/helpers/ducks.py:38
 msgid "a bullet"
 msgstr "bir kurşun"
+
+#: cogs/helpers/ducks.py:50
+msgid "a full magazine"
+msgstr "Tam dolu şarjör"
 
 #: cogs/helpers/ducks.py:62
 msgid "a box of explosive ammo"

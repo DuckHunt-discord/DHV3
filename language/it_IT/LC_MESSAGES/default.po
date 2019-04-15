@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-31 22:19+0000\n"
+"POT-Creation-Date: 2019-04-02 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -607,8 +607,7 @@ msgstr ""
 #: cogs/shop.py:75
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
-" :money_with_wings: Hai aggiunto un proiettile alla tua arma per 7 punti exp."
-""
+" :money_with_wings: Hai aggiunto un proiettile all'arma per 7 punti exp."
 
 #: cogs/shop.py:78
 msgid ":champagne: Your magazine is full!"
@@ -618,8 +617,7 @@ msgstr ":champagne: La tua cartuccia è piena!"
 msgid ""
 ":money_with_wings: You added a magazine to your weapon for 13 exp points."
 msgstr ""
-":money_with_wings: Hai aggiunto una cartuccia alla tua arma per 13 punti exp."
-""
+":money_with_wings: Hai aggiunto una cartuccia all'arma per 13 punti exp."
 
 #: cogs/shop.py:97
 msgid ":champagne: You have enough magazines!"
@@ -627,7 +625,7 @@ msgstr ":champagne: Hai abbastanza cartucce!"
 
 #: cogs/shop.py:111
 msgid ":money_with_wings: You purchased AP ammo for your weapon."
-msgstr ":money_with_wings: Hai acquistato munizioni AP per la tua arma."
+msgstr ":money_with_wings: Hai acquistato munizioni AP per l'arma corrente."
 
 #: cogs/shop.py:112
 msgid ""
@@ -645,7 +643,8 @@ msgstr ":champagne: Hai abbastanza munizioni AP per ora!"
 #: cogs/shop.py:129
 msgid ":money_with_wings: You purchased explosive ammo for your weapon."
 msgstr ""
-":money_with_wings: Hai acquistato delle munizioni esplosive per la tua arma."
+":money_with_wings: Hai acquistato delle munizioni esplosive per l'arma "
+"corrente."
 
 #: cogs/shop.py:130
 msgid ""
@@ -669,8 +668,8 @@ msgid ""
 "magazine giveback. Type `dh!freetime` to find out when the next giveback is"
 msgstr ""
 "Puoi riavere la tua arma gratis se aspetti fino alla distribuzione "
-"giornaliara di armi e munizioni. Digita `dh!freetime` per sapere quando è la "
-"prossima redistribuzione"
+"giornaliara di armi e munizioni. Digita `dh!freetime` per sapere quando ci "
+"sarà la prossima ridistribuzione"
 
 #: cogs/shop.py:152
 msgid ""
@@ -679,7 +678,7 @@ msgstr ":champagne: Hai già quest'arma, cosa stai cercando di comprare? :p"
 
 #: cogs/shop.py:166
 msgid ":money_with_wings: You added grease in your weapon."
-msgstr ":money_with_wings: Hai aggiunto del grasso nella tua arma."
+msgstr ":money_with_wings: Hai lubrificato l'arma con del grasso."
 
 #: cogs/shop.py:167
 msgid ""
@@ -701,7 +700,7 @@ msgstr ""
 
 #: cogs/shop.py:187
 msgid ":money_with_wings: You added a sight to your weapon."
-msgstr ":money_with_wings: Hai aggiunto un mirino alla tua arma."
+msgstr ":money_with_wings: Hai aggiunto un mirino all'arma."
 
 #: cogs/shop.py:188
 msgid ""
@@ -712,7 +711,7 @@ msgstr ""
 
 #: cogs/shop.py:191
 msgid ":champagne: You already have a sight on your weapon."
-msgstr ":champagne: Hai già un mirino sulla tua arma."
+msgstr ":champagne: Hai già un mirino sull'arma."
 
 #: cogs/shop.py:208
 msgid ""
@@ -724,11 +723,11 @@ msgstr ""
 
 #: cogs/shop.py:210
 msgid ":champagne: You already have an infrared detector on your weapon."
-msgstr ":champagne: Hai già un rilevatore a infrarossi sulla tua arma."
+msgstr ":champagne: Hai già un rilevatore a infrarossi sull'arma."
 
 #: cogs/shop.py:224
 msgid ":money_with_wings: You added a silencer to your weapon."
-msgstr ":champagne: Hai aggiunto un silenziatore alla tua arma."
+msgstr ":champagne: Hai aggiunto un silenziatore all'arma."
 
 #: cogs/shop.py:225
 msgid ""
@@ -742,7 +741,7 @@ msgstr ""
 
 #: cogs/shop.py:229
 msgid ":champagne: You already have a silencer on your weapon"
-msgstr ":champagne: Hai già un silenziatore sulla tua arma."
+msgstr ":champagne: Hai già un silenziatore sull'arma."
 
 #: cogs/shop.py:253
 msgid ""
@@ -754,7 +753,7 @@ msgstr ""
 
 #: cogs/shop.py:257
 msgid ":champagne: You already have 4-leaf clover on your weapon"
-msgstr ":champagne: Possiedi già un quadrifoglio sulla tua arma."
+msgstr ":champagne: Possiedi già un quadrifoglio sull'arma."
 
 #: cogs/shop.py:273
 msgid ""
@@ -994,8 +993,7 @@ msgstr ""
 
 #: cogs/user_commands.py:141
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
-msgstr ""
-"La tua arma è inceppata, dev'essere ricaricata per essere disinceppata."
+msgstr "L'arma è inceppata, dev'essere ricaricata per essere disinceppata."
 
 #: cogs/user_commands.py:148
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
@@ -1013,7 +1011,7 @@ msgstr ""
 
 #: cogs/user_commands.py:183
 msgid "Your weapon just jammed, reload it to unjam it."
-msgstr "La tua arma si è appena inceppata, ricaricala per disincepparla."
+msgstr "L'arma si è appena inceppata, ricaricala per disincepparla."
 
 #: cogs/user_commands.py:202
 msgid ""
@@ -1022,7 +1020,7 @@ msgid ""
 msgstr ""
 "Non c'è alcuna anatra qui, ma il proiettile non è stato sparato perché il "
 "rilevatore a infrarossi che hai aggiunto alla tua arma sta facendo il suo "
-"dovere!"
+"sporco dovere!"
 
 #: cogs/user_commands.py:212
 msgid ""
@@ -1057,7 +1055,7 @@ msgid ""
 "get it back for free (check when with `!freetime`)"
 msgstr ""
 "Puoi riacquistare l'arma nel negozio (`dh!shop 5`) o puoi attendere fino a "
-"quando non la riottieni gratis (controlla quando con `!freetime`)"
+"quando non la riottierrai gratis (controlla quando con `!freetime`)"
 
 #: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
@@ -1609,6 +1607,10 @@ msgstr "una spilla d'anatra."
 #: cogs/helpers/ducks.py:38
 msgid "a bullet"
 msgstr "un proiettile"
+
+#: cogs/helpers/ducks.py:50
+msgid "a full magazine"
+msgstr "Un caricatore pieno."
 
 #: cogs/helpers/ducks.py:62
 msgid "a box of explosive ammo"
