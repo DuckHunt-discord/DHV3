@@ -5,6 +5,7 @@ import random
 
 import time
 
+import dateutil
 import discord
 
 from cogs.helpers import ducks
@@ -283,6 +284,7 @@ async def background_loop(bot):
 
             april_fools = n.day == 1 and n.month == 4
 
+            # Fake ducks
             if april_fools:
                 random_channel = random.choice(list(bot.ducks_planning.keys()))
                 emoji = random.choice([":blowfish:", "🦞", ":shark:", ":octopus:", ":dolphin:" , ":squid:",  ":whale:", ":tropical_fish:", ":whale2:", "❥᷁)͜͡˒ ⋊"])

@@ -83,7 +83,7 @@ class Experience:
         """Add a charger to your weapon (13 exp)
         !shop 2"""
         message = ctx.message
-        _ = self.bot._;
+        _ = self.bot._
         language = await self.bot.db.get_pref(ctx.guild, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "chargeurs") < (await self.bot.db.get_level(channel=message.channel, player=message.author))["chargeurs"]:
@@ -526,6 +526,7 @@ class Experience:
             await spawning.spawn_duck(self.bot, ctx.channel, instance=duck, ignore_event=True)
 
         asyncio.ensure_future(spawn_mech_duck())
+
 
 def setup(bot):
     bot.add_cog(Experience(bot))

@@ -7,6 +7,8 @@ import random
 import time
 
 # That function is here to mark items as "to be translated"
+import dateutil
+
 
 def _(string):
     return string
@@ -423,9 +425,12 @@ class Duck(BaseDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"
+        elif easter_eggs:
+            corps = "🐰"
         else:
             corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
 
@@ -480,9 +485,12 @@ class SuperDuck(BaseDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"
+        elif easter_eggs:
+            corps = "🥚"
         else:
             corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
 
@@ -674,9 +682,12 @@ class MotherOfAllDucks(SuperDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"
+        elif easter_eggs:
+            corps = "🍳"
         else:
             corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
 
