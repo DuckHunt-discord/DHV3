@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-02 11:43+0000\n"
+"POT-Creation-Date: 2019-04-21 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1010,7 +1010,7 @@ msgstr ""
 "Вы можете купить оружие в магазине (`dh!shop 5`) или подождать бесплатную "
 "раздачу."
 
-#: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**ПИУ** Вы промахнулись по утке! [-1 очко опыта за промах]"
 
@@ -1433,11 +1433,11 @@ msgstr ""
 ":warning: Ошибка при отправке интерактивного меню. Пожалуйста, проверьте, "
 "есть ли у бота право на их отправку и повторите попытку!"
 
-#: cogs/helpers/ducks.py:27
+#: cogs/helpers/ducks.py:29
 msgid "Nothing"
 msgstr "Ничего"
 
-#: cogs/helpers/ducks.py:224
+#: cogs/helpers/ducks.py:226
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1445,23 +1445,23 @@ msgstr ""
 "**ВЗЛЁТ** Вы испугали утку своим шумом и она улетела! ПОЗДРАВЛЯЮ! [-1 очко "
 "опыта за промах]"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:237
 msgid "BPAM"
 msgstr "БУМ"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:241
 msgid "BAAM"
 msgstr "БДЫЩЬ"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "BOUM"
 msgstr "БЭУМ"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "SPROTCH"
 msgstr "БИУ"
 
-#: cogs/helpers/ducks.py:333
+#: cogs/helpers/ducks.py:335
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1469,7 +1469,7 @@ msgstr ""
 "Это было близко, вы почти убили утку, но другой охотник оказался шустрее "
 "вас! [-1 очко опыта за промах]"
 
-#: cogs/helpers/ducks.py:372
+#: cogs/helpers/ducks.py:374
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1477,7 +1477,7 @@ msgstr ""
 ":heart: Вы попытались обнять утку, но она знает, что вы убили её брата. Утка "
 "улетела от вас и вернулась к себе на пруд. [-2 очка опыта]"
 
-#: cogs/helpers/ducks.py:374
+#: cogs/helpers/ducks.py:376
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1485,7 +1485,7 @@ msgstr ""
 ":heart: Вы попытались обнять утку, но она увидела у вас за спиной оружие. "
 "Утка улетела от вас и вернулась к себе на пруд! [-2 очка опыта]"
 
-#: cogs/helpers/ducks.py:383
+#: cogs/helpers/ducks.py:385
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1496,7 +1496,7 @@ msgstr ""
 "убили уток в канале #{channel}: {total} ({supercanards} из которых — "
 "суперутки).     \\_X<   *КРЯ*   {exp}"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:393
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1504,18 +1504,18 @@ msgstr ""
 ":gun: Утка выжила, выстрелите ещё раз! *ОБНАРУЖЕНА СУПЕРУТКА* [вы отняли "
 "{vie} здоровья, осталось {current_life} из {max_life}]"
 
-#: cogs/helpers/ducks.py:393
+#: cogs/helpers/ducks.py:395
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: Утка выжила, выстрелите ещё раз! *ОБНАРУЖЕНА СУПЕРУТКА* [вы отняли "
 "{vie} здоровья]"
 
-#: cogs/helpers/ducks.py:626
+#: cogs/helpers/ducks.py:634
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утёнок ушёл отдыхать в неизвестном направлении ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:646
+#: cogs/helpers/ducks.py:654
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1525,7 +1525,7 @@ msgstr ""
 "не должны были этого делать! Вы потеряли немного очков опыта, потому что "
 "убивать малышей не надо! \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:662
+#: cogs/helpers/ducks.py:670
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1535,11 +1535,11 @@ msgstr ""
 "очка опыта]\n"
 "Утёнок ушёл с чувством, что его любят."
 
-#: cogs/helpers/ducks.py:683
+#: cogs/helpers/ducks.py:694
 msgid "**I AM...** Your mother"
 msgstr "**Я...** твоя мать"
 
-#: cogs/helpers/ducks.py:691
+#: cogs/helpers/ducks.py:702
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

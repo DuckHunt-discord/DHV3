@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-02 11:43+0000\n"
+"POT-Creation-Date: 2019-04-21 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -969,7 +969,7 @@ msgstr ""
 "**DUAR**   Tembakanmu meleset... dan menembak {player}! [gagal: -1 xp] "
 "[kecelakaan berburu: -2 xp] [**senjata disita**]"
 
-#: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**TUUING**    Tembakanmu meleset! [gagal: -1 xp]"
 
@@ -1306,7 +1306,7 @@ msgstr ""
 ":warning: Ada kesalahan saat mengirim lekatan, harap periksa apakah bot "
 "memiliki izin `embed_links` dan cobalah lagi!"
 
-#: cogs/helpers/ducks.py:224
+#: cogs/helpers/ducks.py:226
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1314,23 +1314,23 @@ msgstr ""
 "**KEKEPAK**   Takut karena banyak suara berisik, bebeknya terbang! BAGOOS! "
 "[gagal: -1 xp]"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:237
 msgid "BPAM"
 msgstr "BDAR"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:241
 msgid "BAAM"
 msgstr "DWAR"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "BOUM"
 msgstr "BUUM"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "SPROTCH"
 msgstr "CEPROT"
 
-#: cogs/helpers/ducks.py:333
+#: cogs/helpers/ducks.py:335
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1338,7 +1338,7 @@ msgstr ""
 "Nyaris, kamu hampir menembak mati bebeknya, tapi pemburu lain menembak lebih "
 "dulu! [gagal; -1 xp]"
 
-#: cogs/helpers/ducks.py:383
+#: cogs/helpers/ducks.py:385
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1349,7 +1349,7 @@ msgstr ""
 "{time} detik, sekarang jumlah totalmu {total} bebek (yang {supercanards} "
 "merupakan bebek super) ditembak mati di #{channel}.    \\_X<   *KOUAK* {exp}"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:393
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1357,7 +1357,7 @@ msgstr ""
 ":gun: Bebeknya masih hidup, coba lagi! *BEBEK SUPER TERDETEKSI*[nyawa: -"
 "{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:393
+#: cogs/helpers/ducks.py:395
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""

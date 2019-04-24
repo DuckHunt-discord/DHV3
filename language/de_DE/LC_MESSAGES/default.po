@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-02 11:43+0000\n"
+"POT-Creation-Date: 2019-04-21 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1094,7 +1094,7 @@ msgstr ""
 "Du kannst deine Waffe im Laden zurückkaufen (`dh! Shop 5`) oder warten, bis "
 "du sie kostenlos zurückbekommst (check wann mit`!freetime`)"
 
-#: cogs/helpers/ducks.py:221 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Du hast die Ente verfehlt! [verfehlt: -1 xp]"
 
@@ -1628,43 +1628,43 @@ msgstr ""
 ":warning: Es trat ein Fehler beim Einbetten des Links auf, bitte überprüfe, "
 "ob der Bot die Berechtigung `Links_einbetten` hat und versuche es erneut!"
 
-#: cogs/helpers/ducks.py:27
+#: cogs/helpers/ducks.py:29
 msgid "Nothing"
 msgstr "Nichts!"
 
-#: cogs/helpers/ducks.py:31
+#: cogs/helpers/ducks.py:33
 msgid "a lot of bushes."
 msgstr "eine Menge weiterer Büsche."
 
-#: cogs/helpers/ducks.py:34
+#: cogs/helpers/ducks.py:36
 msgid "a duck pin."
 msgstr "eine Enten-Anstecknadel."
 
-#: cogs/helpers/ducks.py:38
+#: cogs/helpers/ducks.py:40
 msgid "a bullet"
 msgstr "eine Gewehrkugel."
 
-#: cogs/helpers/ducks.py:62
+#: cogs/helpers/ducks.py:64
 msgid "a box of explosive ammo"
 msgstr "eine Schachtel explosiver Munition"
 
-#: cogs/helpers/ducks.py:75
+#: cogs/helpers/ducks.py:77
 msgid "an almost empty box of explosive ammo"
 msgstr "eine fast leere Shcachtel explosiver Munition."
 
-#: cogs/helpers/ducks.py:89
+#: cogs/helpers/ducks.py:91
 msgid "some duck-grease"
 msgstr "etwas Entenschmiere."
 
-#: cogs/helpers/ducks.py:98
+#: cogs/helpers/ducks.py:100
 msgid "a full-featured silencer"
 msgstr "ein vollwertiger Schalldämpfer."
 
-#: cogs/helpers/ducks.py:107
+#: cogs/helpers/ducks.py:109
 msgid "a fully functional infrared detector"
 msgstr "ein voll funktionstüchtiger Infrarotdetektor."
 
-#: cogs/helpers/ducks.py:224
+#: cogs/helpers/ducks.py:226
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1672,31 +1672,31 @@ msgstr ""
 "**FLAPP** Verschreckt durch so viel Lärm ist die Ente geflohen! HERZLICHEN "
 "GLÜCKWUNSCH! [verfehlt: -1 xp]"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:237
 msgid "BPAM"
 msgstr "BUMS"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:241
 msgid "BAAM"
 msgstr "BAMM"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "BOUM"
 msgstr "BUMM"
 
-#: cogs/helpers/ducks.py:243
+#: cogs/helpers/ducks.py:245
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:295 cogs/helpers/ducks.py:298
+#: cogs/helpers/ducks.py:297 cogs/helpers/ducks.py:300
 msgid "Searching the bushes around the duck, you found..."
 msgstr "Die Büsche rund um die Ente absuchend, findest Du..."
 
-#: cogs/helpers/ducks.py:298
+#: cogs/helpers/ducks.py:300
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr "aber leider kannst Du nichts mitnehmen, da Dein Rucksack voll ist."
 
-#: cogs/helpers/ducks.py:333
+#: cogs/helpers/ducks.py:335
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1704,11 +1704,11 @@ msgstr ""
 "Das war knapp, du hättest die Ente fast getötet, aber der andere Jäger hat "
 "sie zuerst erledigt! [verfehlt: -1 xp]"
 
-#: cogs/helpers/ducks.py:367
+#: cogs/helpers/ducks.py:369
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr "<:Wizzz:365870248554921985>Wizzz knuddelt Entchen!"
 
-#: cogs/helpers/ducks.py:372
+#: cogs/helpers/ducks.py:374
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1717,7 +1717,7 @@ msgstr ""
 "Bruder getötet hast und deshalb ist sie von Dir weggeflogen - zurück zum "
 "Teich! [-2 exp]"
 
-#: cogs/helpers/ducks.py:374
+#: cogs/helpers/ducks.py:376
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1726,7 +1726,7 @@ msgstr ""
 "Deinem Rücken entdeckt und deshalb ist sie von Dir weggeflogen - zurück zum "
 "Teich! [-2 exp]"
 
-#: cogs/helpers/ducks.py:383
+#: cogs/helpers/ducks.py:385
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1737,7 +1737,7 @@ msgstr ""
 "getötet. Du hast jetzt in #{channel}  insgesamt {total} Enten (von denen "
 "{supercanards} Super-Enten waren) getötet.     \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:393
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1745,14 +1745,14 @@ msgstr ""
 ":gun: Die Ente hat überlebt, versuch es nocheinmal! *SUPER ENTE GESICHTET* "
 "[life: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:393
+#: cogs/helpers/ducks.py:395
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: Die Ente hat überlebt, versuch es nocheinmal! *SUPER ENTE GESICHTET* "
 "[life: -{vie}]"
 
-#: cogs/helpers/ducks.py:584
+#: cogs/helpers/ducks.py:592
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviously won't work, and you lost 1 exp for this missed shot"
@@ -1761,13 +1761,13 @@ msgstr ""
 "mechanische Ente zu töten. Das klappt natürlich nicht, deshalb verlierst du "
 "1 exp für den missglückten Schuss"
 
-#: cogs/helpers/ducks.py:626
+#: cogs/helpers/ducks.py:634
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "Die Babyente ist weggewatschelt, um irgendwo ein kleines Nickerchen zu "
 "machen. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:646
+#: cogs/helpers/ducks.py:654
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1778,7 +1778,7 @@ msgstr ""
 "wirst einige Erfahrungs-Punkte verlieren, denn Babies solltest Du einfach "
 "nicht verletzten! \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:662
+#: cogs/helpers/ducks.py:670
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1788,11 +1788,11 @@ msgstr ""
 "und jetzt ist sie so richtig glücklich! [3 exp]\n"
 "Die Baby-Ente fühlt sich geliebt und verschwindet wieder."
 
-#: cogs/helpers/ducks.py:683
+#: cogs/helpers/ducks.py:694
 msgid "**I AM...** Your mother"
 msgstr "**ICH BIN...** Deine Mutter"
 
-#: cogs/helpers/ducks.py:691
+#: cogs/helpers/ducks.py:702
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
