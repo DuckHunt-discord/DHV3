@@ -1,6 +1,8 @@
 # Self-Hosting
 
 **DISCLAIMER: THE BOT IS NOT EXPLICITLY BUILT FOR SELF-HOSTING. IF YOU RUN INTO ISSUES, ONLY LIMITED SUPPORT WILL BE AVAILABLE.**
+This document might be out of date.
+
 
 ## Requirements
 
@@ -16,8 +18,8 @@ Additionally, the bot works only on Linux for the moment.
 
 ### Bot
 
-1. Clone the repository using `git clone https://github.com/DuckHunt-discord/DHV2.git`
-2. Navigate into the source folder using `cd DHV2`
+1. Clone the repository using `git clone https://github.com/DuckHunt-discord/DHV3.git`
+2. Navigate into the source folder using `cd DHV3`
 3. Install the dependencies using `python3 -m pip install -r requirements.txt`
 
 ### MySQL
@@ -101,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `players` (
 ## Configuration
 
 - Create a `credentials.json` file in the application root folder, and put the following in it:  
-```JavaScript
+```json
 {
    "token": "BOT_TOKEN",
    "client_id": "BOT ID",
