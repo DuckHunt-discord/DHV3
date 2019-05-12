@@ -7,7 +7,7 @@ import random
 import time
 
 # That function is here to mark items as "to be translated"
-import dateutil
+import dateutil.easter
 
 
 def _(string):
@@ -31,6 +31,7 @@ class Nothing(BushObject):
 
 class Bushes(BushObject):
     name = _('a lot of bushes.')
+
 
 class DuckPin(BushObject):
     name = _('a duck pin.')
@@ -79,10 +80,10 @@ class PartialExplosiveAmmo(BushObject):
 
     async def give(self, bot, ctx):
         current = await bot.db.get_stat(ctx.message.channel, ctx.message.author, "explosive_ammo")
-        if current < int(time.time() + 86400/4):
-            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(time.time() + 86400/4))
+        if current < int(time.time() + 86400 / 4):
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(time.time() + 86400 / 4))
         else:
-            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(current + 86400/4))
+            await bot.db.set_stat(ctx.message.channel, ctx.message.author, "explosive_ammo", int(current + 86400 / 4))
 
         return True
 
@@ -113,19 +114,12 @@ class InfraredDetector(BushObject):
         await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteurInfra", int(time.time() + 86400))
         await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteur_infra_shots_left", 6)
         return True
+
+
 del _
 
 # noinspection PyInterpreter
-bushes = {
-    Nothing: 20, Bushes: 20, DuckPin: 1,
-    Bullet: 20,
-    Charger: 15,
-    ExplosiveAmmo: 2, PartialExplosiveAmmo: 6,
-    Grease: 15,
-    Silencer: 7,
-    InfraredDetector: 7,
- }
-
+bushes = {Nothing: 20, Bushes: 20, DuckPin: 1, Bullet: 20, Charger: 15, ExplosiveAmmo: 2, PartialExplosiveAmmo: 6, Grease: 15, Silencer: 7, InfraredDetector: 7, }
 
 bushes_objects = []
 bushes_weights = []
@@ -297,8 +291,8 @@ class BaseDuck:
                 await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + _(choosen.name, language) + "**"))
             else:
                 await self.bot.send_message(ctx=ctx, message=(
-                            _("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",
-                                                                                                                                 language)))
+                        _("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",
+                                                                                                                             language)))
 
     async def post_kill(self, ctx, exp):
         await self._bushes(ctx)
@@ -370,8 +364,10 @@ class BaseDuck:
 
         await self.bot.db.add_to_stat(self.channel, author, "exp", -2)
 
-        if self.bot.db.get_stat(self.channel, author, "confisque"):
+        if await self.bot.db.get_stat(self.channel, author, "confisque"):
             return _(":heart: You try to hug the duck, but it knows you killed its brother, so it fled from you and flew back into the pond![-2 exp]", language)
+        elif await self.bot.db.get_stat(self.channel, author, "killed_ducks") == 0:
+            return _(":heart: You try to hug the duck, but it feels someting wrong about you, so it fled from you and flew back into the pond![-2 exp]", language)
         else:
             return _(":heart: You try to hug the duck, but it saw the weapon you hid behind your back, so it fled from you and flew back into the pond! [-2 exp]", language)
 
@@ -397,12 +393,12 @@ class BaseDuck:
     def __repr__(self):
         now = int(time.time())
         return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} | " \
-               f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
+            f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
 
     def __str__(self):
         now = int(time.time())
         return f"{self.__class__.__name__} spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name} | " \
-               f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
+            f"Life: {self.life} / {self.starting_life}, and an exp value of {self.exp_value}"
 
 
 class Duck(BaseDuck):
@@ -425,16 +421,15 @@ class Duck(BaseDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
-        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year) + datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"
         elif easter_eggs:
-            corps = "🐰"
+            corps = random.choice(["🐰", "🍫", "🔔", "🧺", "🐝", "🥕", "🌸", "🐇", "🐰"])
         else:
             corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
 
-        
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
@@ -485,12 +480,12 @@ class SuperDuck(BaseDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
-        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year) + datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"
         elif easter_eggs:
-            corps = "🥚"
+            corps = random.choice(["🐰", "🍫", "🔔", "🧺", "🐝", "🥕", "🌸", "🐇", "🐰"])
         else:
             corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
 
@@ -597,12 +592,12 @@ class MechanicalDuck(BaseDuck):
     def __repr__(self):
         now = int(time.time())
         return f"Mechanical Duck spawned {now - self.spawned_at} seconds ago on #{self.channel.name}" \
-               f"Made by {self.user_name}"
+            f"Made by {self.user_name}"
 
     def __str__(self):
         now = int(time.time())
         return f"Mechanical Duck spawned {now - self.spawned_at} seconds ago on #{self.channel.name} @ {self.channel.guild.name}" \
-               f"Made by {self.user_name}"
+            f"Made by {self.user_name}"
 
     async def post_kill(self, ctx, exp):
         await super().post_kill(ctx, exp)
@@ -627,7 +622,15 @@ class BabyDuck(BaseDuck):
         language = await self.bot.db.get_pref(self.channel.guild, "language")
 
         trace = random.choice(self.bot.canards_trace)
-        corps = random.choice(["<:BabyDuck_01:439546718263050241>", "<:BabyDuck_02:439551472762355724>", " <:official_BabyDuck_01:439546718527160322>"])
+        n = datetime.datetime.now()
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year) + datetime.timedelta(days=1)]
+
+        if easter_eggs:
+            corps = "🥚"
+        else:
+            corps = random.choice(["<:BabyDuck_01:439546718263050241>", "<:BabyDuck_02:439551472762355724>", " <:official_BabyDuck_01:439546718527160322>", "<a:a_BabyDuck_01:439546761091088385>",
+                                   " <a:a_BabyDuck_02:574299816155414531>"])
+
         cri = "**COIN**"
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
@@ -682,7 +685,7 @@ class MotherOfAllDucks(SuperDuck):
         n = datetime.datetime.now()
 
         april_fools = n.day == 1 and n.month == 4
-        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year)+datetime.timedelta(days=1)]
+        easter_eggs = n.date() in [dateutil.easter.easter(n.year), dateutil.easter.easter(n.year) + datetime.timedelta(days=1)]
 
         if april_fools:
             corps = "🐟"

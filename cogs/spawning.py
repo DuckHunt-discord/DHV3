@@ -5,7 +5,7 @@ import random
 
 import time
 
-import dateutil
+import dateutil.easter
 import discord
 
 from cogs.helpers import ducks
