@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-21 08:46+0000\n"
+"POT-Creation-Date: 2019-05-12 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,568 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:145
+msgid ":x: A required argument is missing."
+msgstr ":x: Липсва необходим аргумент."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Нямате достатъчно exp точки"
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr ":x: Вие не сте администратор на сървър"
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr ":x: Вие не сте супер администратор."
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Тази команда е запазена за собствениците на бот. Ако смятате, че това е "
+"грешка, моля свържете се с моя собственик в DuckHunt Server за поддръжка "
+"(вижте `dh! Help`)."
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x: Не сте гласували за DuckHunt на DiscordBotList за известно време."
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Подкрепете бота да използва тази команда, като гласувате на <https: //"
+"discordbots.org/bot/duckhunt>. Имайте предвид, че гласовете могат да отнемат "
+"минута, за да бъдат регистрирани от Duckhunt. Ако смятате, че това е грешка, "
+"моля свържете се с моя собственик на DuckHunt Server за поддръжка (вижте "
+"`dh! Help`)."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr ""
+"Вие сте в режим на охлаждане :(, опитайте отново след {seconds} секунди!"
+
+#: bot.py:179
+msgid ":bulb: HINT: "
+msgstr ":bulb: СЪВЕТ:"
+
+#: cogs/admin_commands.py:26
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Готово, потребителят е забранен. :gun:"
+
+#: cogs/admin_commands.py:38
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Готово, потребителят вече не е забранен. :eyes:"
+
+#: cogs/admin_commands.py:64
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019>Готово, канал {channel} е добавен в "
+"играта! Забавлявай се!"
+
+#: cogs/admin_commands.py:80
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674>Готово премахнат канал {channel} "
+"от играта. Чао!"
+
+#: cogs/admin_commands.py:89
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<:cmd_AdminAdded_01:439549846622568466>{admin} добавен като администратор "
+"към гилдията!"
+
+#: cogs/admin_commands.py:97
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440>{admin} е премахнат от "
+"администраторите на гилдията."
+
+#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+msgid "Done. User removed from the database, if he was in."
+msgstr "Готово. Потребителят е премахнат от базата данни, ако е бил в него."
+
+#: cogs/admin_commands.py:155
+msgid "Done. All channel data was removed."
+msgstr "Готово. Всички данни за канала бяха премахнати."
+
+#: cogs/admin_commands.py:180
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+":x: Неправилен синтаксис. Използвайте командата по следния начин: `! "
+"Settings [view / set / reset / list / modified] [настройка, ако е "
+"приложимо]`"
+
+#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
+#: cogs/admin_commands.py:256
+msgid ""
+"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
+"setting"
+msgstr ""
+"<a:a_cmd_UnknownSetting:439550426862452746>** ГРЕШКА: ** Не знам тази "
+"настройка"
+
+#: cogs/admin_commands.py:193
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: Настройката {pref} е настроена на `{value}` на тази гилдия."
+
+#: cogs/admin_commands.py:215
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Заобикаляне нa проверката на max_ducks_per_day, тъй като сте собственик на "
+"бот. Би било `{max}`."
+
+#: cogs/admin_commands.py:217
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Заобикаляне нa проверката на max_ducks_per_day, тъй като сте във VIP "
+"гилдията. Моля, не злоупотребявайте с това. За информация, лимитът би бил "
+"зададен на \"{max}\" патици на ден."
+
+#: cogs/admin_commands.py:225
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050>Разрешение да зададете VIP "
+"статус!"
+
+#: cogs/admin_commands.py:227
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ":x: Неоторизирано задаване на VIP статус! Вие не сте собственик."
+
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:269
+msgid ":x: Incorrect value."
+msgstr ":x: Неправилна стойност."
+
+#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ":ok: Настройката {pref} е настроена на `{value}` на тази гилдия."
+
+#: cogs/admin_commands.py:292
+msgid ""
+"The list of preferences is available on our new website: https://duckhunt.me/"
+"bot-settings/"
+msgstr ""
+"Списъкът с предпочитания е достъпен на нашия нов уебсайт: https://duckhunt."
+"me/bot-settings/"
+
+#: cogs/experience_related_commands.py:26
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr ""
+"Поздравления, изпратихте / дадохте повече exp точки от максималния брой "
+"който мога да запазя."
+
+#: cogs/experience_related_commands.py:29
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ":ok:, той / тя сега има {newexp} exp точки!"
+
+#: cogs/experience_related_commands.py:53
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr ""
+":x: За да предотвратите злоупотреби, не можете да изпращате exp точки когато "
+"нямате оръжие."
+
+#: cogs/experience_related_commands.py:57
+msgid ":x: The exp amount needs to be positive."
+msgstr ":x: Броят на exp точки трябва да бъде положителен."
+
+#: cogs/experience_related_commands.py:61
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+":x: Чакай ... Какво? Опитвате ли се да изпратите опит на СЕБЕ СИ? Това няма "
+"смисъл."
+
+#: cogs/experience_related_commands.py:80
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr ""
+"Изпратихте {amount} exp на {target} (и платихте {taxes} exp на данъци)!"
+
+#: cogs/experience_related_commands.py:83
+msgid "You don't have enough experience points"
+msgstr "Нямате достатъчно exp точки"
+
+#: cogs/experience_related_commands.py:85
+msgid ":x: Sending exp is disabled on this server"
+msgstr ": x: Изпращането на exp точки е деактивирано на този сървър"
+
+#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (в {dans_jours} {dans_heures} и {dans_minutes})"
+
+#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "% m / %d в % H:% M:% S"
+
+#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans} дни"
+
+#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans} часа"
+
+#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+msgid "{dans} minutes"
+msgstr "{dans} минути"
+
+#: cogs/meta.py:35
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"Ботът често се рестартира за актуализации. Не се притеснявайте, има 99,8% от "
+"времето на работа."
+
+#: cogs/meta.py:64
+msgid ""
+"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Ето списъка с команди: http://duckhunt.me/command-list/ | Ако имате нужда от "
+"нещо, не се колебайте да се присъедините към сървъра за поддръжка на https://"
+"discordapp.com/invite/2BksEkV"
+
+#: cogs/meta.py:75
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"Това е `{hour}:{minutes}:{seconds}`в часовия пояс на GMT (известен също като "
+"UTC ± 00: 00), който е използван от бота.\n"
+"Можете да използвате този уебсайт, за да го сравните с Вашия: https://time."
+"is/compare/GMT"
+
+#: cogs/meta.py:76
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr ""
+"Можете да използвате командата `dh!freetime`, за да видите кога ще получите "
+"оръжията си безплатно"
+
+#: cogs/meta.py:89
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hours and {minutes} minutes)."
+msgstr ""
+":alarm_clock: Следващо връщане на оръжия и списания в {sec} секунди ({часа) "
+"часа и {минути} минути)."
+
+#: cogs/meta.py:91
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr ""
+"Дареното връща вашите касети и ви връща безплатно оръжието си (ако е "
+"конфискувано), но това не засяга куршумите в сегашната ви касетa. Ако "
+"можете, презаредете предварително!"
+
+#: cogs/meta.py:103
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Използвате {shard} елитри от общо {total} елитри"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Резултатите са онлайн на адрес http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Вашите патици ви очакват на адрес http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Здравейте!\n"
+"Благодаря, че ме добавихте там! Почти съм готов да започна играта!\n"
+"Можем ли да влезем в канала, където искате да бъде играта? Моля, извикайте "
+"ме там, като използвате `dh!setup` <:event_GuildAdded_01:439550913112309781>"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr ""
+"Здравей отново!\n"
+"Просто ще проверя бързo разрешениятa и ще се върна след няколко секунди! "
+"Моля Изчакай"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+":small_red_triangle: Липсва разрешението `read_message_history`.\n"
+"Това е от съществено значение за нормалната функция на бота, тъй като трябва "
+"да мога да чета съобщения.\n"
+"Можете да продължите без него, но не трябва."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+": mall_red_triangle: Липсва разрешение `add_reactions`.\n"
+"Това е необходимо разрешение за интерактивни вграждания и те са почти "
+"навсякъде.\n"
+"Можете да продължите без него, но не се препоръчва и може да доведе до "
+"грешки"
+
+#: cogs/setup_wizzard.py:61
+msgid ""
+":small_red_triangle: The permission `attach_files` is missing.\n"
+"It's a required permission for embeds, and they are almost everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Липсва разрешението `attach_files`.\n"
+"Това е необходимо разрешение за вграждане и те са почти навсякъде.\n"
+"Можете да продължите без него, но не се препоръчва и може да доведе до "
+"грешки"
+
+#: cogs/setup_wizzard.py:66
+msgid ""
+":small_red_triangle: The permission `embed_links` is missing.\n"
+"This is used to send embeds\n"
+"You could proceed without it, but really shouldn't as it will lead to errors"
+msgstr ""
+":small_red_triangle: Липсва разрешението \"embed_links\".\n"
+"Това се използва за изпращане на вграждания\n"
+"Можете да продължите без него, но наистина не трябва, тъй като това ще "
+"доведе до грешки"
+
+#: cogs/setup_wizzard.py:72
+msgid ""
+":small_orange_diamond: You gave me the `administrator` permission.\n"
+"Although this will not cause problems, it's unsafe to give bots such "
+"powerful permissions, especially if they don't need them.\n"
+"You can proceed with it."
+msgstr ""
+":small_orange_diamond: Дадохте ми разрешение за администратор.\n"
+"Въпреки че това няма да доведе до проблеми, не е безопасно да се дават на "
+"ботове толкова мощни разрешения, особено ако не им трябват.\n"
+"Можете да продължите с него."
+
+#: cogs/setup_wizzard.py:77
+msgid ""
+":small_orange_diamond: The permission `create_instant_invite` is missing.\n"
+"It's not really essential for the normal function of the bot, but needed for "
+"error reports.\n"
+"You can proceed without it."
+msgstr ""
+":small_orange_diamond: Липсва разрешение `create_instant_invite`.\n"
+"Не е от съществено значение за нормалната функция на бота, но е необходим за "
+"доклади за грешки.\n"
+"Можете да продължите без него."
+
+#: cogs/setup_wizzard.py:82
+msgid ""
+":small_orange_diamond: The permission `manage_messages` is missing.\n"
+"This is used to remove some messages on sneaky commands (weapon sabotage, "
+"etc.), and also if you use the `delete_commands` setting\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_orange_diamond: Разрешението `manage_messages` липсва.\n"
+"Това се използва за премахване на някои съобщения на подъл команди (оръжейни "
+"саботажи и т.н.), а също и ако използвате настройката `delete_commands '\n"
+"Можете да продължите без него, но не се препоръчва и може да доведе до "
+"грешки"
+
+#: cogs/setup_wizzard.py:87
+msgid ""
+":small_orange_diamond: You gave me the `mention_everyone` permission.\n"
+"This not used, but should't be given in case of a bug\n"
+"You could proceed with it safely."
+msgstr ""
+":small_orange_diamond: Ти ми даде разрешение `mention_everyone`.\n"
+"Това не се използва, но не трябва да се дава в случай на грешка\n"
+"Можете да продължите безопасно с него."
+
+#: cogs/setup_wizzard.py:92
+msgid ""
+":small_orange_diamond: The permission `external_emojis` is missing.\n"
+"This is used since DHV3 to add non-standard emojis to messages. You should "
+"probably give it to me\n"
+"You could proceed without it, but bug reports would be appreciated."
+msgstr ""
+":small_orange_diamond: Разрешението `external_emojis` липсва.\n"
+"Това се използва от DHV3 за добавяне на нестандартни emojis към съобщенията. "
+"Може би трябва да ми го дадеш\n"
+"Можете да продължите без него, но докладите за грешки ще бъдат оценени."
+
+#: cogs/setup_wizzard.py:110
+msgid ""
+":small_blue_diamond: The permission `change_nickname` is missing.\n"
+"This is not yet used, but could be in the future. An announcement will be "
+"made then.\n"
+"You can safely proceed without it."
+msgstr ""
+":small_blue_diamond: Разрешението `change_nickname` липсва.\n"
+"Това все още не се използва, но може да бъде и в бъдеще. Тогава ще бъде "
+"направено съобщение.\n"
+"Можете спокойно да продължите без него."
+
+#: cogs/setup_wizzard.py:115
+msgid ""
+":small_blue_diamond: The permission `send_tts_messages` is missing.\n"
+"This is used in case you want to enable tts ducks..\n"
+"You can safely proceed without it, but the `tts_ducks` setting won't work"
+msgstr ""
+":small_blue_diamond: Липсва разрешение `send_tts_messages`.\n"
+"Това се използва в случай, че искате да разрешите tts патици ..\n"
+"Можете спокойно да продължите без него, но настройката `tts_ducks` няма да "
+"работи"
+
+#: cogs/setup_wizzard.py:121
+msgid ""
+"I'm done! <:cmd_Setup_01:439551472804429836>\n"
+"Any warning has been sent above. I suggest fixing them, then running the "
+"command again!\n"
+"If there is none, congrats! You passed the tests brilliantly!\n"
+"If you are ready to continue with the setup, use the command "
+"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
+"used, ducks will spawn automatically.\n"
+"Thanks for flying DucksAir. If you have any question, we are here to help at "
+"https://discord.gg/2BksEkV"
+msgstr ""
+"Приключих! <:cmd_Setup_01:439551472804429836>\n"
+"Всяко предупреждение е изпратено по-горе. Предлагам да ги поправяне, след "
+"това да изпълните командата отново!\n"
+"Ако няма, поздравления! Преминахте тестовете брилянтно!\n"
+"Ако сте готови да продължите с настройката, използвайте командата `dh! "
+"Setup_settings`. Ако просто искате да играете, използвайте `dh! Add_channel`."
+" Веднъж използван, патиците ще се хвърлят автоматично.\n"
+"Благодаря за летенето на DucksAir. Ако имате някакви въпроси, ние сме тук, "
+"за да помогнем на https://discord.gg/2BksEkV"
+
+#: cogs/setup_wizzard.py:135
+msgid ""
+"Hey! Let's configure the server!\n"
+"I'll give you the most used parameters, and let you change them if you want. "
+"Any command written here is optional, and you can start playing now just by "
+"using `dh!add_channel`.\n"
+"\n"
+"**Before starting, please make sure this is the channel you want to use, and "
+"activate it with `dh!add_channel`.**\n"
+"\n"
+"**1/ Language used**:\n"
+"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
+"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
+"    \\* Another language we don't fully support yet? Help us translate "
+"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
+"    \n"
+"**2/ Ducks Per Day**:\n"
+"    This is the number of ducks that will spawn per day. They spawn at "
+"random intervals, but you can configure the number of ducks that will spawn.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"ducks_per_day XX`, where `XX` is a number.\n"
+"    \\* To prevent abuse, there is a limit that will be automatically "
+"enforced. If you need to lift it, contact my owner at the support server.\n"
+"    \n"
+"**3/ Exp Won Per Duck Killed**:\n"
+"    This is the experience won per duck killed. If your server is really "
+"popular, it might be worth it to push it up a little to make new hunters "
+"progress faster.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
+"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
+"good start\n"
+"    \n"
+"**4/ Other settings**:\n"
+"    This is starting to be lengthy, so I won't go into further details here. "
+"You are probably all set and can start the game by typing `dh!add_channel`.\n"
+"    More settings can be found using `dh!settings list`\n"
+"    \n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
+msgstr ""
+"Хей! Нека конфигурираме сървъра!\n"
+"Ще ви дам най-използваните параметри и ще ви позволи да ги промените, ако "
+"желаете. Всяка написана тук команда е по желание и можете да започнете да "
+"играете сега само с помощта на `dh!add_channel`.\n"
+"\n"
+"** Преди да започнете, моля, уверете се, че това е каналът, който искате да "
+"използвате, и го активирайте с `dh!add_channel`. **\n"
+"\n"
+"** 1 / Използван език **:\n"
+"    \\* Ако говорите френски, използвайте `dh!settings set language fr_FR`\n"
+"    \\*Ако говорите испански, използвайте `dh!\n"
+"    \\*Друг език, на който още не подкрепяме напълно? Помогнете ни да "
+"преведем DuckHunt! Намерете ни на https://discord.gg/2BksEkV.\n"
+"    \n"
+"** 2 / Дъкс на ден **:\n"
+"    Това е броят на патиците, които ще се хвърлят на ден. Те се хвърлят в "
+"случайни интервали, но можете да конфигурирате броя на патиците, които ще се "
+"появят.\n"
+"    \\*Използвайте следната команда, за да я промените, използвайте `dh! Set "
+"set ducks_per_day XX`, където 'XX' е число.\n"
+"     \\*За да се предотврати злоупотреба, съществува ограничение, което "
+"автоматично ще бъде приложено. Ако трябва да го вдигнете, свържете се с моя "
+"собственик на сървъра за поддръжка.\n"
+"    \n"
+"** 3 / Exp Won Per Duck Killed **:\n"
+"     Това е опитът, спечелен за убита патица. Ако сървърът ви е наистина "
+"популярен, може би си заслужава да го избутате малко, за да направят новите "
+"ловци по-бързи.\n"
+"     \\*Използвайте следната команда, за да я промените, използвайте `dh! "
+"Set set exp_won_per_duck_killed XX`, където 'XX' е число.\n"
+"     \\*: bulb: Не отивай прекалено високо, трябва да има някакво "
+"предизвикателство. 15 е добро начало\n"
+"    \n"
+"** 4 / Други настройки **:\n"
+"    Това започва да е продължително, така че няма да навлизам в повече "
+"подробности тук. Вероятно всички сте настроени и можете да стартирате "
+"играта, като напишете `dh! Add_channel`.\n"
+"    Още настройки могат да бъдат намерени чрез `dh! Списък с настройки '\n"
+"    \n"
+"Благодаря, че играеш с мен! <:official_Duck_01:439546719177539584>"

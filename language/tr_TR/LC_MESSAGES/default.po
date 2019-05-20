@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-21 08:46+0000\n"
+"POT-Creation-Date: 2019-05-12 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1045,7 +1045,7 @@ msgstr ""
 "Silahınızı mağazadan geri satın alabilirsiniz (`dh! Shop 5`) veya ücretsiz "
 "olarak geri dönene kadar bekleyin (`! Freetime` ile ne zaman kontrol edin)"
 
-#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** Ördeği kaçırdın! [karavana: -1 xp]"
 
@@ -1582,39 +1582,39 @@ msgstr "Hiçbir şey "
 msgid "a lot of bushes."
 msgstr "çok çalılar."
 
-#: cogs/helpers/ducks.py:36
+#: cogs/helpers/ducks.py:37
 msgid "a duck pin."
 msgstr "bir ördek iğnesi."
 
-#: cogs/helpers/ducks.py:40
+#: cogs/helpers/ducks.py:41
 msgid "a bullet"
 msgstr "bir kurşun"
 
-#: cogs/helpers/ducks.py:52
+#: cogs/helpers/ducks.py:53
 msgid "a full magazine"
 msgstr "Tam dolu şarjör"
 
-#: cogs/helpers/ducks.py:64
+#: cogs/helpers/ducks.py:65
 msgid "a box of explosive ammo"
 msgstr "bir kutu patlayıcı cephane"
 
-#: cogs/helpers/ducks.py:77
+#: cogs/helpers/ducks.py:78
 msgid "an almost empty box of explosive ammo"
 msgstr "neredeyse boş bir patlayıcı cephane kutusu"
 
-#: cogs/helpers/ducks.py:91
+#: cogs/helpers/ducks.py:92
 msgid "some duck-grease"
 msgstr "biraz ördek yağı"
 
-#: cogs/helpers/ducks.py:100
+#: cogs/helpers/ducks.py:101
 msgid "a full-featured silencer"
 msgstr "tam özellikli bir susturucu"
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "a fully functional infrared detector"
 msgstr "tamamen işlevsel bir kızılötesi dedektör"
 
-#: cogs/helpers/ducks.py:226
+#: cogs/helpers/ducks.py:220
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1622,31 +1622,31 @@ msgstr ""
 "**FLAPP** Çok fazla gürültüden korkan ördek kaçtı! TEBRİKLER! [cevapsız: -1 "
 "xp]"
 
-#: cogs/helpers/ducks.py:237
+#: cogs/helpers/ducks.py:231
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:241
+#: cogs/helpers/ducks.py:235
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:297 cogs/helpers/ducks.py:300
+#: cogs/helpers/ducks.py:291 cogs/helpers/ducks.py:294
 msgid "Searching the bushes around the duck, you found..."
 msgstr "Ördek etrafındaki çalıları araştırırken buldun ..."
 
-#: cogs/helpers/ducks.py:300
+#: cogs/helpers/ducks.py:294
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr "sırt çantanız dolu olduğu için maalesef alamazsınız."
 
-#: cogs/helpers/ducks.py:335
+#: cogs/helpers/ducks.py:329
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1654,11 +1654,11 @@ msgstr ""
 "Çok yakındı, neredeyse ördekleri öldürüyordun, ama önce diğer avcı vurdu! "
 "[karavana: -1 xp]"
 
-#: cogs/helpers/ducks.py:369
+#: cogs/helpers/ducks.py:363
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr "<:Wizzz:365870248554921985>Wizzz huggy ducky!"
 
-#: cogs/helpers/ducks.py:374
+#: cogs/helpers/ducks.py:368
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1666,7 +1666,7 @@ msgstr ""
 ":heart: Ördeğe sarılmaya çalışıyorsun, ama kardeşini öldürdüğünü biliyor, bu "
 "yüzden senden kaçtı ve gölete geri döndü! [- 2 exp]"
 
-#: cogs/helpers/ducks.py:376
+#: cogs/helpers/ducks.py:372
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1674,7 +1674,7 @@ msgstr ""
 ":kalp: Ördeğe sarılmaya çalışıyorsun, ama arkanda sakladığın silahı gördü, "
 "bu yüzden senden kaçtı ve gölete geri döndü! [-2 exp]"
 
-#: cogs/helpers/ducks.py:385
+#: cogs/helpers/ducks.py:381
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1685,7 +1685,7 @@ msgstr ""
 "şimdi # {channel} 'da öldürülen toplam {total} ördek (bunlardan "
 "{supercanards} süper ördek idi). \\ _X < * COUAC * {exp}"
 
-#: cogs/helpers/ducks.py:393
+#: cogs/helpers/ducks.py:389
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1693,14 +1693,14 @@ msgstr ""
 ":gun: Ördek kurtuldu, tekrar dene! *SÜPER ÖRDEK TESPİT EDİLDİ* [can: - {vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:395
+#: cogs/helpers/ducks.py:391
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: Ördek kurtuldu, tekrar dene! * SÜPER ÖRDEK TESPİT EDİLDİ* [can: - "
 "{vie}]"
 
-#: cogs/helpers/ducks.py:592
+#: cogs/helpers/ducks.py:587
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviously won't work, and you lost 1 exp for this missed shot"
@@ -1708,13 +1708,13 @@ msgstr ""
 "Mekanik bir ördeği öldürmek için {user_mention} tarafından kandırdın. Belli "
 "ki işe yaramayacak ve bu karavana için 1 exp kaybettiniz."
 
-#: cogs/helpers/ducks.py:634
+#: cogs/helpers/ducks.py:637
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "Yavru ördek bir yere biraz kestirmek için ayrıldı · ° '\\ `' ° -., ·. · ° "
 "'\\`"
 
-#: cogs/helpers/ducks.py:654
+#: cogs/helpers/ducks.py:657
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1724,7 +1724,7 @@ msgstr ""
 "öldürdün, ve bunu yapmamalıydın! Bir miktar exp kaybedeceksiniz, çünkü "
 "bebekleri öldürmemelisiniz \\ _X < * COUAC * {exp}"
 
-#: cogs/helpers/ducks.py:670
+#: cogs/helpers/ducks.py:673
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1734,11 +1734,11 @@ msgstr ""
 "gerçekten çok mutlu! [3 exp]\n"
 "Yavru ördek gitti, sevildiğini hissediyor"
 
-#: cogs/helpers/ducks.py:694
+#: cogs/helpers/ducks.py:697
 msgid "**I AM...** Your mother"
 msgstr "**Ben..** senin annenim"
 
-#: cogs/helpers/ducks.py:702
+#: cogs/helpers/ducks.py:705
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

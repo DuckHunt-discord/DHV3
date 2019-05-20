@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-21 08:46+0000\n"
+"POT-Creation-Date: 2019-05-12 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1076,7 +1076,7 @@ msgstr ""
 "Puedes comprar tu arma de vuelta en la tienda (`dh!shop 5`) o esperar que la "
 "obtengas de vuelta gratis (revisa cuando con `!freetime`)"
 
-#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** ¡Fallaste el disparo! [Por fallar: -1 xp]"
 
@@ -1616,39 +1616,39 @@ msgstr "Nada"
 msgid "a lot of bushes."
 msgstr "un montón de arbustos."
 
-#: cogs/helpers/ducks.py:36
+#: cogs/helpers/ducks.py:37
 msgid "a duck pin."
 msgstr "una insignia de Pato."
 
-#: cogs/helpers/ducks.py:40
+#: cogs/helpers/ducks.py:41
 msgid "a bullet"
 msgstr "una bala"
 
-#: cogs/helpers/ducks.py:52
+#: cogs/helpers/ducks.py:53
 msgid "a full magazine"
 msgstr "un cartucho cargado"
 
-#: cogs/helpers/ducks.py:64
+#: cogs/helpers/ducks.py:65
 msgid "a box of explosive ammo"
 msgstr "una caja de munición Explosiva"
 
-#: cogs/helpers/ducks.py:77
+#: cogs/helpers/ducks.py:78
 msgid "an almost empty box of explosive ammo"
 msgstr "una caja casi vacía de munición Explosiva"
 
-#: cogs/helpers/ducks.py:91
+#: cogs/helpers/ducks.py:92
 msgid "some duck-grease"
 msgstr "algo de grasa de Pato"
 
-#: cogs/helpers/ducks.py:100
+#: cogs/helpers/ducks.py:101
 msgid "a full-featured silencer"
 msgstr "un silenciador con todas las funciones"
 
-#: cogs/helpers/ducks.py:109
+#: cogs/helpers/ducks.py:110
 msgid "a fully functional infrared detector"
 msgstr "un detector infrarrojo completamente funcional"
 
-#: cogs/helpers/ducks.py:226
+#: cogs/helpers/ducks.py:220
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1656,32 +1656,32 @@ msgstr ""
 "**FLAPP** Asustado por tanto ruido, ¡el pato huyó! ¡FELICIDADES! [Por haber "
 "fallado el disparo: -1 xp]"
 
-#: cogs/helpers/ducks.py:237
+#: cogs/helpers/ducks.py:231
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:241
+#: cogs/helpers/ducks.py:235
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:297 cogs/helpers/ducks.py:300
+#: cogs/helpers/ducks.py:291 cogs/helpers/ducks.py:294
 msgid "Searching the bushes around the duck, you found..."
 msgstr "Buscando entre los arbustos alrededor del pato, encontraste..."
 
-#: cogs/helpers/ducks.py:300
+#: cogs/helpers/ducks.py:294
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr ""
 "que desafortunadamente no pudiste tomar, porque tu mochila está llena."
 
-#: cogs/helpers/ducks.py:335
+#: cogs/helpers/ducks.py:329
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1689,11 +1689,11 @@ msgstr ""
 "Eso estuvo cerca, casi matas al pato, ¡pero el otro cazador lo consiguió "
 "primero! [Por fallar: -1 xp]"
 
-#: cogs/helpers/ducks.py:369
+#: cogs/helpers/ducks.py:363
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr "<:Wizzz:365870248554921985> Wizzz patito abrazable!"
 
-#: cogs/helpers/ducks.py:374
+#: cogs/helpers/ducks.py:368
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1701,7 +1701,7 @@ msgstr ""
 ":heart: Intentaste abrazar al pato, pero él sabe que mataste a su hermano, "
 "así que voló lejos de ti, de vuelta al estanque! [-2 exp]"
 
-#: cogs/helpers/ducks.py:376
+#: cogs/helpers/ducks.py:372
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1709,7 +1709,7 @@ msgstr ""
 ":heart: Intentaste abrazar al pato, pero vio el arma que escondiste en tu "
 "espalda, así que voló lejos de ti, de vuelta al estanque! [-2 exp]"
 
-#: cogs/helpers/ducks.py:385
+#: cogs/helpers/ducks.py:381
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1721,7 +1721,7 @@ msgstr ""
 "{supercanards} fueron super-patos) asesinados en #{channel}.  \\ _X < * CUAC "
 "* {exp}"
 
-#: cogs/helpers/ducks.py:393
+#: cogs/helpers/ducks.py:389
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1729,14 +1729,14 @@ msgstr ""
 ":gun: El pato sobrevivió, Inténtalo otra vez! *SUPER PATO DETECTADO* [Puntos "
 "de Vida: -{vie} ({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:395
+#: cogs/helpers/ducks.py:391
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: El Pato ha Sobrevivido, ¡inténtalo de nuevo! *SUPER PATO DETECTADO* "
 "[vida: -{vie}]"
 
-#: cogs/helpers/ducks.py:592
+#: cogs/helpers/ducks.py:587
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviously won't work, and you lost 1 exp for this missed shot"
@@ -1745,13 +1745,13 @@ msgstr ""
 "Obviamente el pato es falso, y pierdes 1 punto de experiencia por este tiro "
 "fallido."
 
-#: cogs/helpers/ducks.py:634
+#: cogs/helpers/ducks.py:637
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr ""
 "El patito se fue a tomar una pequeña siesta en algún lugar · ° '\\' '° -., "
 "¸¸. · °' \\ `"
 
-#: cogs/helpers/ducks.py:654
+#: cogs/helpers/ducks.py:657
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1761,7 +1761,7 @@ msgstr ""
 "segundos, y no debiste haber hecho esto! Perderás algo de Puntos de "
 "Experiencia, porque no deberías matar patitos\\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:670
+#: cogs/helpers/ducks.py:673
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1771,11 +1771,11 @@ msgstr ""
 "está muy contento! [3 Puntos de Experiencia]\n"
 "El patito se fue, sintiéndose amado"
 
-#: cogs/helpers/ducks.py:694
+#: cogs/helpers/ducks.py:697
 msgid "**I AM...** Your mother"
 msgstr "**YO SOY...** Tu madre"
 
-#: cogs/helpers/ducks.py:702
+#: cogs/helpers/ducks.py:705
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-21 08:46+0000\n"
+"POT-Creation-Date: 2019-05-12 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -191,7 +191,7 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/helpers/ducks.py:223 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
@@ -357,29 +357,29 @@ msgstr ""
 ":warning: Ett fel uppstod när du skickade inbäddningen, kolla om boten har "
 "`embed_links` tillåtelsen och försök igen!"
 
-#: cogs/helpers/ducks.py:226
+#: cogs/helpers/ducks.py:220
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
 
-#: cogs/helpers/ducks.py:237
+#: cogs/helpers/ducks.py:231
 msgid "BPAM"
 msgstr "PANG"
 
-#: cogs/helpers/ducks.py:241
+#: cogs/helpers/ducks.py:235
 msgid "BAAM"
 msgstr "BANG"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/helpers/ducks.py:245
+#: cogs/helpers/ducks.py:239
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:335
+#: cogs/helpers/ducks.py:329
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
