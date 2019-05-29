@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-12 21:57+0000\n"
+"POT-Creation-Date: 2019-05-20 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: bot.py:145
 msgid ":x: A required argument is missing."
-msgstr ":x: ein notwendiges Detail fehlt"
+msgstr ":x: ein notwendiges Argument fehlt"
 
 #: bot.py:149
 msgid ":x: You don't have enough exp for this"
@@ -1646,7 +1646,7 @@ msgstr "eine Gewehrkugel."
 
 #: cogs/helpers/ducks.py:53
 msgid "a full magazine"
-msgstr "eine volle Zeitschrift"
+msgstr "ein volles Magazin"
 
 #: cogs/helpers/ducks.py:65
 msgid "a box of explosive ammo"
@@ -1720,6 +1720,14 @@ msgstr ""
 ":heart: Du versuchst die Ente zu umarmen, aber sie weiß genau, dass Du ihren "
 "Bruder getötet hast und deshalb ist sie von Dir weggeflogen - zurück zum "
 "Teich! [-2 exp]"
+
+#: cogs/helpers/ducks.py:370
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Du hast versucht die Ente zu umarmen, aber sie vertraut dir nicht "
+"und flieht zurück in den Teich! [-2 exp]"
 
 #: cogs/helpers/ducks.py:372
 msgid ""

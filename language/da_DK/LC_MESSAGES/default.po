@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-12 21:57+0000\n"
+"POT-Creation-Date: 2019-05-20 07:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1579,6 +1579,10 @@ msgstr "en duck pin."
 msgid "a bullet"
 msgstr "en kugle"
 
+#: cogs/helpers/ducks.py:53
+msgid "a full magazine"
+msgstr "et fuldt magasin"
+
 #: cogs/helpers/ducks.py:65
 msgid "a box of explosive ammo"
 msgstr "en kasse med eksplosiv ammunition"
@@ -1649,6 +1653,14 @@ msgid ""
 msgstr ""
 ":heart: Du forsøger at kramme anden, men han ved, du dræbte sin bror, så han "
 "flygtede fra dig, og fløj tilbage i dammen! [-2 exp]"
+
+#: cogs/helpers/ducks.py:370
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Du forsøger at kramme anden, men anden føler noget forkert over dig, "
+"så det flygtede fra dig og fløj tilbage i dammen! [-2 exp]"
 
 #: cogs/helpers/ducks.py:372
 msgid ""
