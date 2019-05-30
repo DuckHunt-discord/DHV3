@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-20 07:51+0000\n"
+"POT-Creation-Date: 2019-05-29 07:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.7.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 #: bot.py:145
@@ -44,7 +44,7 @@ msgstr ""
 
 #: bot.py:160
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
-msgstr ": x: Bir süredir DiscordBotList'te DuckHunt için oy kullanmadın."
+msgstr ":x: Bir süredir DiscordBotList'te DuckHunt için oy kullanmadın."
 
 #: bot.py:161
 msgid ""
@@ -874,7 +874,7 @@ msgstr "Kendini sabote etmeyeceksin, değil mi?"
 msgid ""
 ":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
 msgstr ""
-":ok: {target}'in silahı şimdi sabote edildi ... ama bilmiyorlar (14 exp)!"
+":ok: {target} 'in silahı şimdi sabote edildi ... ama bilmiyorlar (14 exp)!"
 
 #: cogs/shop.py:402
 msgid ""
@@ -908,7 +908,7 @@ msgstr ""
 
 #: cogs/shop.py:432
 msgid ":champagne: You're already insured."
-msgstr ":şampanya: Sen zaten sigortalısın."
+msgstr ":champagne: Sen zaten sigortalısın."
 
 #: cogs/shop.py:469
 msgid ""
@@ -1512,7 +1512,7 @@ msgstr "ördek yok edici"
 
 #: cogs/helpers/config.py:239
 msgid "serial duck killer"
-msgstr "seri ördek öldürücü"
+msgstr "seri ördek katili"
 
 #: cogs/helpers/config.py:240
 msgid "duck genocider"
@@ -1536,11 +1536,11 @@ msgstr "#{channel} üzerindeki {player}'in seviyesi"
 
 #: cogs/helpers/database.py:198
 msgid "You leveled down!"
-msgstr "Seviye düştü!"
+msgstr "Seviyen düştü!"
 
 #: cogs/helpers/database.py:201
 msgid "You leveled up!"
-msgstr "Sen seviye atladın!"
+msgstr "Seviye atladın!"
 
 #: cogs/helpers/database.py:209
 msgid "Current level"
@@ -1619,8 +1619,7 @@ msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr ""
-"**FLAPP** Çok fazla gürültüden korkan ördek kaçtı! TEBRİKLER! [cevapsız: -1 "
-"xp]"
+"**FLAPP** Çok fazla gürültüden korkan ördek kaçtı! TEBRİKLER! [ıska: -1 xp]"
 
 #: cogs/helpers/ducks.py:231
 msgid "BPAM"
@@ -1666,6 +1665,14 @@ msgstr ""
 ":heart: Ördeğe sarılmaya çalışıyorsun, ama kardeşini öldürdüğünü biliyor, bu "
 "yüzden senden kaçtı ve gölete geri döndü! [- 2 exp]"
 
+#: cogs/helpers/ducks.py:370
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+": kalp: Ördeğe sarılmaya çalışıyorsun, ama senin hakkında yanlış bir şeyler "
+"hissediyor, bu yüzden senden kaçtı ve gölete geri döndü! [- 2 exp]"
+
 #: cogs/helpers/ducks.py:372
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
@@ -1681,7 +1688,7 @@ msgid ""
 "{supercanards} were super-ducks) killed on #{channel}.     \\_X<   *COUAC*   "
 "{exp}"
 msgstr ""
-":skull_crossbones: **{onomatopoeia}** Ördeği {zaman} saniye içinde öldürdün, "
+":skull_crossbones: **{onomatopoeia}** Ördeği {time} saniye içinde öldürdün, "
 "şimdi # {channel} 'da öldürülen toplam {total} ördek (bunlardan "
 "{supercanards} süper ördek idi). \\ _X < * COUAC * {exp}"
 
@@ -1720,7 +1727,7 @@ msgid ""
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
 "shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
-":skull_crossbones: **{onomatopoeia}** Yavru ördeği {zaman} saniye içinde "
+":skull_crossbones: **{onomatopoeia}** Yavru ördeği {time} saniye içinde "
 "öldürdün, ve bunu yapmamalıydın! Bir miktar exp kaybedeceksiniz, çünkü "
 "bebekleri öldürmemelisiniz \\ _X < * COUAC * {exp}"
 
@@ -1743,5 +1750,5 @@ msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
 msgstr ""
-":skull_crossbones: ** {onomatopoeia} ** Beni {zaman} saniye içinde öldürdün, "
+":skull_crossbones: ** {onomatopoeia} ** Beni {time} saniye içinde öldürdün, "
 "ama çocuklarımı öldürmeyeceksin! \\ _X < * COUAC * {exp}"
