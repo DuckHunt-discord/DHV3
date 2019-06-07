@@ -109,7 +109,7 @@ def config(bot):
     # > User settings < #
     # This is a list of users IDs that are set as super admins on the bot. The bot will accept any command, from them,
     # regardless of the server and their permissions there
-    bot.admins = [138751484517941259]
+    bot.admins = [138751484517941259, 251996890369884161]
 
     # This is a list of users that are blacklisted from the bot. The bot will ignore dem messages
     bot.blacklisted_users = [

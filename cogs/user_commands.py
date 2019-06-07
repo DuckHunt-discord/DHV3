@@ -92,7 +92,7 @@ class User:
 
 
 
-    @commands.command(aliases=["pan", "pew", "pang", "shoot", "bong", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
+    @commands.command(aliases=["pan", "pew", "pang", "shoot", "bong", "bonk", "itshighnoon", "its_high_noon", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
     async def bang(self, ctx, target:discord.Member = None):
