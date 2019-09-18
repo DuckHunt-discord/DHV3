@@ -238,9 +238,9 @@ def config(bot):
         {"niveau": 37, "expMin": 7020, "nom": _("duck annihilator"), "precision": 96, "fiabilitee": 99, "balles": 1, "chargeurs": 5},
         {"niveau": 38, "expMin": 7400, "nom": _("serial duck killer"), "precision": 96, "fiabilitee": 99, "balles": 1, "chargeurs": 5},
         {"niveau": 39, "expMin": 7790, "nom": _("duck genocider"), "precision": 97, "fiabilitee": 99, "balles": 1, "chargeurs": 5},
-        {"niveau": 40, "expMin": 8200, "nom": _("unemployed due to extinction of the duck species"), "precision": 97, "fiabilitee": 99, "balles": 1, "chargeurs": 5},
+        {"niveau": 40, "expMin": 8200, "nom": _("old noob"), "precision": 97, "fiabilitee": 99, "balles": 1, "chargeurs": 5},
         {"niveau": 41, "expMin": 9999, "nom": _("duck toaster"), "precision": 98, "fiabilitee": 99, "balles": 1, "chargeurs": 6},
-        {"niveau": 42, "expMin": 11111, "nom": _("old noob"), "precision": 99, "fiabilitee": 99, "balles": 1, "chargeurs": 7}]
+        {"niveau": 42, "expMin": 11111, "nom": _("unemployed due to extinction of the duck species"), "precision": 99, "fiabilitee": 99, "balles": 1, "chargeurs": 7}]
 
     ## END CONFIG HERE
 

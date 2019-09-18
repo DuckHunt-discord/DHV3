@@ -51,7 +51,7 @@ import discord.ext.commands as commands
 # Prepare the bot object
 
 async def get_prefix(bot, message):
-    extras = [await bot.db.get_pref(message.guild, "prefix"), "duckhunt", "dh!", "dh", "Dh", "Dh!", "dH!", "dH", "DH!", "DH"]
+    extras = [await bot.db.get_pref(message.guild, "prefix"), "duckhunt", "dh!", "Dh!", "dH!", "DH!", "dh", "Dh", "dH", "DH"]
     return commands.when_mentioned_or(*extras)(bot, message)
 
 

@@ -86,7 +86,7 @@ class Meta:
         seconds_left = DAY - (now - thisDay)
         hours = int(seconds_left / HOUR)
         minutes = int((seconds_left - (HOUR * hours)) / 60)
-        await self.bot.send_message(ctx=ctx, message=_(":alarm_clock: Next giveback of weapons and magazines in {sec} seconds ({hours} hours and {minutes} minutes).",
+        await self.bot.send_message(ctx=ctx, message=_(":alarm_clock: Next giveback of weapons and magazines in {sec} seconds ({hours} hour(s) and {minutes} minute(s)).",
                                                        language).format(sec=seconds_left, hours=hours, minutes=minutes))
         await self.bot.hint(ctx=ctx, message=_("A giveback tops up your magazines and gives you your weapon back for free (if confiscated), but it doesn't affect the bullets in your current magazine. "
                                                "If you can, reload beforehand!", language))

@@ -92,7 +92,7 @@ class User:
 
 
 
-    @commands.command(aliases=["pan", "pew", "pang", "shoot", "bong", "bonk", "itshighnoon", "its_high_noon", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
+    @commands.command(aliases=["pan", "pew", "pang", "shoot", "kablam", "pow", "bong", "bonk", "itshighnoon", "its_high_noon", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
     async def bang(self, ctx, target:discord.Member = None):
@@ -243,7 +243,7 @@ class User:
         # 10c/ Sight on weapon
         sight = await get_stat(channel, author, "sight")
         if sight:
-            accuracy += max((100 - accuracy) / 3, 0)  # To ensure no negativity even if it shouldn't happen (but maybe because of an event or something that will be added later
+            accuracy += max((100 - accuracy) / 3, 0)  # To ensure no negativity even if it shouldn't happen (but maybe because of an event or something that will be added later)
             await set_stat(channel, author, "sight", sight - 1)
 
         # 10d/ Chance (will need to be smaller than accuracy to shoot properly)
@@ -347,7 +347,7 @@ class User:
                 break
         else:
             await add_to_stat(channel, author, "hugs_no_duck", 1)
-            if author.id == 296573428293697536: # ⚜WistfulWizzz⚜#5928
+            if author.id == 296573428293697536:  # ⚜WistfulWizzz⚜#5928
                 await self.bot.send_message(ctx=ctx,
                                             message=_("You hugged a tree, Wizzz?!", language))
             else:
@@ -359,7 +359,6 @@ class User:
         await add_to_stat(channel, author, "hugs", 1)
 
         await self.bot.send_message(ctx=ctx, message=await current_duck.hug(ctx))
-
 
     @commands.command(aliases=["currentevent", "event", "events"])
     @checks.is_channel_enabled()

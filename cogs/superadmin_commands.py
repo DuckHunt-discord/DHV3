@@ -125,10 +125,8 @@ class SuperAdmin:
                 try:
                     await member.edit(roles=remove_so_role(member.roles), reason="server_owners_manager")
                 except discord.HTTPException as e:
-                    print("ko " + e.text)
                     f.write(f"\to {member.name}#{member.discriminator} ({member_id}) -- {e.text}\n")
                 else:
-                    print("ok")
                     f.write(f"\t* {member.name}#{member.discriminator} ({member_id})\n")
 
             await self.bot.send_message(ctx=ctx, message=f"Finished the small part of removing the role, now we are on for a bigger wait...")
