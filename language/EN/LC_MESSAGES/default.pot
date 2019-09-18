@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-18 14:39+0000\n"
+"POT-Creation-Date: 2019-09-18 14:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,7 +243,7 @@ msgstr ""
 #: cogs/meta.py:89
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
+"({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
 
 #: cogs/meta.py:91
@@ -817,7 +817,7 @@ msgstr ""
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr ""
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr ""
 
@@ -1271,7 +1271,7 @@ msgid "duck genocider"
 msgstr ""
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
+msgid "old noob"
 msgstr ""
 
 #: cogs/helpers/config.py:242
@@ -1279,7 +1279,7 @@ msgid "duck toaster"
 msgstr ""
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
+msgid "unemployed due to extinction of the duck species"
 msgstr ""
 
 #: cogs/helpers/database.py:195
