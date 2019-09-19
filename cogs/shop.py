@@ -309,7 +309,7 @@ class Experience:
         await self.bot.db.set_stat(message.channel, message.author, "sand", False)
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -6)
         await self.bot.send_message(ctx=ctx, message=_(":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, or if your weapon was sabotaged, it's fixed now!", language))
-        await self.bot.hint(ctx=ctx, message=_("Next time someone sabotages you, just shot. It won't do much damage except for hurting your reputation", language))
+        await self.bot.hint(ctx=ctx, message=_("Next time someone sabotages you, just shoot. It won't do much damage except for hurting your reputation", language))
 
     @shop.command(name="14", aliases=["dazzle", "mirror"])
     @checks.have_exp(5)
