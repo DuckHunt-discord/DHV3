@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -287,14 +287,6 @@ msgid ""
 msgstr ""
 "Je kunt het `dh!freetime` commando gebruiken om te zien wanneer je je wapens "
 "gratis terug krijgt"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Volgende teruggave van wapens en magazijnen in {sec} seconden "
-"({hours} uur en {minutes} minuten)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -813,14 +805,6 @@ msgstr ""
 ":money_with_wings: Je hebt je wapen schoongemaakt voor 6 exp. Als je zand "
 "erin had, of als je wapen was gesaboteerd, is alles nu weer in orde!"
 
-#: cogs/shop.py:312
-msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
-"for hurting your reputation"
-msgstr ""
-"De volgende keer dat iemand je saboteert, schiet je gewoon, het zal het niet "
-"veel schade aanrichten behalve aan je reputatie"
-
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -1078,7 +1062,7 @@ msgstr "Heb je een boom geknuffeld, Wizzz?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Er is hier geen eend, wat was je van plan om te knuffelen, een boom?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Huidig evenement**"
 
@@ -1543,16 +1527,16 @@ msgid "duck genocider"
 msgstr "eendengenocide-veroorzaker"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "werkloos vanwege de uitsterving van de eendensoort"
+msgid "old noob"
+msgstr "oude noob"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "eendentoaster"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "oude noob"
+msgid "unemployed due to extinction of the duck species"
+msgstr "werkloos vanwege de uitsterving van de eendensoort"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -287,14 +287,6 @@ msgid ""
 msgstr ""
 "Vous pouvez utiliser la commande `dh!freetime` pour voir quand vous "
 "récupérerez votre arme et vos chargeurs gratuitement"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Prochain rendu des armes et des chargeurs dans {sec} secondes "
-"(soit {hours} heures et {minutes} minutes)"
 
 #: cogs/meta.py:91
 msgid ""
@@ -832,14 +824,6 @@ msgstr ""
 ":money_with_wings: Vous nettoyez votre arme pour 6 points d’expérience. Si "
 "vous aviez du sable ou si votre arme était sabotée, elle ne l'est plus."
 
-#: cogs/shop.py:312
-msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
-"for hurting your reputation"
-msgstr ""
-"La prochaine fois que quelqu'un sabote votre arme, vous pouvez aussi tirer. "
-"Cela ne fera de dommages que sur votre réputation ;)."
-
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -1097,7 +1081,7 @@ msgstr "Wizzz, tu fais un calin à un arbre ?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Il n'y a pas de canard ici, qu'as-tu prévu de câliner, un arbre?"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Événement en cours**"
 
@@ -1565,16 +1549,16 @@ msgid "duck genocider"
 msgstr "génocideur de canards"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "chômeur pour cause d'extinction de l'espèce"
+msgid "old noob"
+msgstr "vieux noob"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "toasteur de canards"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "vieux noob"
+msgid "unemployed due to extinction of the duck species"
+msgstr "chômeur pour cause d'extinction de l'espèce"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

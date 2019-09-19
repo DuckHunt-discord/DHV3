@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,14 +291,6 @@ msgid ""
 msgstr ""
 "Puedes usar el comando`dh!freetime` para ver cuando se devolverán las armas "
 "gratuitamente."
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Siguiente devolución de armas y cargadores en {sec} segundos "
-"({hours} horas y {minutes} minutos)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -826,14 +818,6 @@ msgstr ""
 ":money_with_wings: Has limpiado tu arma por 6 Puntos de Experiencia. Si "
 "tenía arena, o tu arma fue Saboteada, está arreglada ahora!"
 
-#: cogs/shop.py:312
-msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
-"for hurting your reputation"
-msgstr ""
-"La próxima vez que alguien te sabotee, solo dispara, no hará mucho daño "
-"excepto por dañar tu reputación."
-
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ":x: No bromees! {mention} tiene Lentes de Sol! Es inmune a esto!"
@@ -1088,7 +1072,7 @@ msgstr "Abrazaste un árbol, Wizzz?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "No hay ningún pato aquí, que planeabas abrazar? un árbol?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Evento en curso**"
 
@@ -1553,16 +1537,16 @@ msgid "duck genocider"
 msgstr "Genocida de Patos"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "Desempleado por la extinción de las especies de Patos"
+msgid "old noob"
+msgstr "Viejo novato"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "Tostador de patos"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "Viejo novato"
+msgid "unemployed due to extinction of the duck species"
+msgstr "Desempleado por la extinción de las especies de Patos"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

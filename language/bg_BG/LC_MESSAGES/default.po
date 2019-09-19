@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -286,14 +286,6 @@ msgid ""
 msgstr ""
 "Можете да използвате командата `dh!freetime`, за да видите кога ще получите "
 "оръжията си безплатно"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Следващо връщане на оръжия и списания в {sec} секунди ({часа) "
-"часа и {минути} минути)."
 
 #: cogs/meta.py:91
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -272,14 +272,6 @@ msgid ""
 msgstr ""
 "Kamu dapat menggunakan perintah `dh!freetime` supaya tahu kapan menerima "
 "kembali senjatamu secara gratis."
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Pengembalian senjata dan magasen berikutnya dalam {sec} detik "
-"({hours} jam dan {minutes} menit"
 
 #: cogs/meta.py:91
 msgid ""

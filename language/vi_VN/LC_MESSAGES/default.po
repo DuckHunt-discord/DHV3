@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,8 +273,9 @@ msgstr "Dùng lệnh `dh!freetime` để xem khi nào có thính rơi. "
 #: cogs/meta.py:89
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr "Thính rơi trong {sec} giây ( {minutes} phút | {hours} giờ )"
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: Nhận lại vũ khí và đạn sau {hours} tiếng và {minutes} phút"
 
 #: cogs/meta.py:91
 msgid ""
@@ -677,7 +678,7 @@ msgstr ""
 
 #: cogs/shop.py:312
 msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
+"Next time someone sabotages you, just shoot. It won't do much damage except "
 "for hurting your reputation"
 msgstr ""
 "Lần sau ai đó phá hoại bạn, cứ bắn. Sẽ không gây ra nhiều thiệt hại ngoại "
@@ -754,7 +755,7 @@ msgid ""
 "Don't use a mention for this. You can give me user ids or the full username "
 "in \"quotes\""
 msgstr ""
-"Đưng dùng chức năng nhắc nhở. Bạn có thể đưa vịt id hoặc tên người dùng "
+"Đừng dùng chức năng nhắc nhở. Bạn có thể đưa vịt id hoặc tên người dùng "
 "trong ngoặc kép "
 
 #: cogs/shop.py:406
@@ -923,7 +924,7 @@ msgstr "Bạn vừa ôm một cái cây?"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Không có một con vịt nào ở đây cả, có lẽ nên ôm một cái cây?"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**EVENT hiện tại**"
 
@@ -937,7 +938,7 @@ msgstr "Bibop!Hello world!"
 
 #: cogs/helpers/config.py:67
 msgid "How are you today?"
-msgstr "trời quang mây tạnh gió hòa, van vật nện nhau sinh sôi....."
+msgstr "trời quang mây tạnh gió hòa, vạn vật nện nhau sinh sôi....."
 
 #: cogs/helpers/config.py:67
 msgid "Please don't kill me..."
@@ -1383,16 +1384,16 @@ msgid "duck genocider"
 msgstr "Kẻ diệt chủng loài vịt"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "Thất nghiệp vì vịt bị tuyệt chủng "
+msgid "old noob"
+msgstr "Già mà vẫn ngu"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "Máy nướng vịt"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "Già mà vẫn ngu"
+msgid "unemployed due to extinction of the duck species"
+msgstr "Thất nghiệp vì vịt bị tuyệt chủng "
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

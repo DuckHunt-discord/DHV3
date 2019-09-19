@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,14 +265,6 @@ msgid ""
 "back for free"
 msgstr ""
 "Můžeš použít `dh!freetime`, abys zjistil, kdy získáš své zbraně zpět zdarma"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Další navrácení zbraní a nábojů za {sec} vteřina/vteřiny/"
-"vteřin ({hours} hodina/hodiny/hodin a {minutes}  minuta/minuty/minut)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -612,16 +604,16 @@ msgid "duck genocider"
 msgstr "vyhlazovač kachen"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "nezměstnaný kvůli vyhynutí kachen"
+msgid "old noob"
+msgstr "stará nula"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "toastovač kachen"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "stará nula"
+msgid "unemployed due to extinction of the duck species"
+msgstr "nezměstnaný kvůli vyhynutí kachen"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

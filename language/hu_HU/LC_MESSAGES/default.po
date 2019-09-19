@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -401,13 +401,13 @@ msgstr "sorozatos kacsagyilkos"
 msgid "duck genocider"
 msgstr "kacsairtó"
 
+#: cogs/helpers/config.py:241
+msgid "old noob"
+msgstr "nyomi veterán"
+
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "kacsapirító"
-
-#: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "nyomi veterán"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,10 +283,10 @@ msgstr ""
 #: cogs/meta.py:89
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
+"({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
+"({hours} hour(s) and {minutes} minute(s))."
 
 #: cogs/meta.py:91
 msgid ""
@@ -792,10 +792,10 @@ msgstr ""
 
 #: cogs/shop.py:312
 msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
+"Next time someone sabotages you, just shoot. It won't do much damage except "
 "for hurting your reputation"
 msgstr ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
+"Next time someone sabotages you, just shoot. It won't do much damage except "
 "for hurting your reputation"
 
 #: cogs/shop.py:325
@@ -1044,7 +1044,7 @@ msgstr "You hugged a tree, Wizzz?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "There isn't any duck in here, what did you plan to hug, a tree?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Current event**"
 
@@ -1507,16 +1507,16 @@ msgid "duck genocider"
 msgstr "duck genocider"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "unemployed due to extinction of the duck species"
+msgid "old noob"
+msgstr "old noob"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "duck toaster"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "old noob"
+msgid "unemployed due to extinction of the duck species"
+msgstr "unemployed due to extinction of the duck species"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

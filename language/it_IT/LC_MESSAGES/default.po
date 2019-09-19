@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -286,14 +286,6 @@ msgid ""
 msgstr ""
 "Puoi usare il comando `dh!freetime` per vedere quando potrai recuperare le "
 "tue armi gratuitamente"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: il prossimo recupero delle armi e dei proiettili è in {sec} "
-"secondi ({hours} ore e {minutes} minuti)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -809,14 +801,6 @@ msgstr ""
 ":money_with_wings: Hai pulito la tua arma per 6 exp. Se avevi della sabbia "
 "dentro di essa, o se la tua arma era stata sabotata, ora è riparata!"
 
-#: cogs/shop.py:312
-msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
-"for hurting your reputation"
-msgstr ""
-"La prossima volta che qualcuno ti sabota, basta sparare. Non farà molti "
-"danni eccetto ferire la tua reputazione."
-
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -1070,7 +1054,7 @@ msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr ""
 "Non c'è alcuna anatra qui, cosa avevi intenzione di abbracciare, un albero?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Evento attuale**"
 
@@ -1536,16 +1520,16 @@ msgid "duck genocider"
 msgstr "genocida della specie delle anatre"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "disoccupato a causa dell'estinzione delle specie delle anatre"
+msgid "old noob"
+msgstr "vecchio nabbo"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "tostatore di anatre"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "vecchio nabbo"
+msgid "unemployed due to extinction of the duck species"
+msgstr "disoccupato a causa dell'estinzione delle specie delle anatre"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

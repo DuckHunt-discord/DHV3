@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,14 +221,6 @@ msgstr ""
 "إنها `{hour}: {minutes}: {seconds}` في المنطقة الزمنية بتوقيت جرينتش "
 "(والمعروفة أيضًا باسم UTC ± 00: 00) ، وهي التي يستخدمها Bot.\n"
 "يمكنك استخدام هذا الموقع لمقارنته بوقتك: https://time.is/compare/GMT"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: الارجاع التالي للأسلحة والمجلات خلال {sec} ثانية ({hours} ساعة "
-"و {minutes} دقائق)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -748,7 +740,7 @@ msgstr "** PIEWW ** لقد فاتتك البط! [غاب: 1 xp]"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "ليس هناك أي بطة هنا ، ماذا كنت تخطط لعناق ، شجرة؟!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**الحدث الحالي**"
 
@@ -1157,13 +1149,13 @@ msgstr "مسلسل البط القاتل."
 msgid "duck genocider"
 msgstr " ذابح البط."
 
+#: cogs/helpers/config.py:241
+msgid "old noob"
+msgstr "مستجد قديم."
+
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "محمص البط."
-
-#: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "مستجد قديم."
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

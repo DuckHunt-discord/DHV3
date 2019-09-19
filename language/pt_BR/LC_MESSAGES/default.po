@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -232,14 +232,6 @@ msgstr ""
 "UTC±00:00), no qual é usado pelo bot. Você pode usar esse site para compará-"
 "lo com o seu: \n"
 "https://time.is/compare/GMT"
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Próximo retorno de armas e pentes em {sec} segundos ({hours} "
-"horas e {minutes} minutos)."
 
 #: cogs/meta.py:91
 msgid ""
@@ -788,7 +780,7 @@ msgstr "**PIEWW**   Você errou o pato! [errou: -1 xp]"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Não há patos aqui, o que você planejou abraçar, uma árvore?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Evento Atual**"
 
@@ -1200,13 +1192,13 @@ msgstr "serial killer de patos"
 msgid "duck genocider"
 msgstr "genocida de patos"
 
+#: cogs/helpers/config.py:241
+msgid "old noob"
+msgstr "noob velho"
+
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "torrador de patos"
-
-#: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "noob velho"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"

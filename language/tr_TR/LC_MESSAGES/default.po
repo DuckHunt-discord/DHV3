@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-17 10:14+0000\n"
+"POT-Creation-Date: 2019-09-19 11:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -282,14 +282,6 @@ msgid ""
 msgstr ""
 "Silahınızı ne zaman ücretsiz alacağınızı görmek için `dh!freetime` komutunu "
 "kullanabilirsiniz."
-
-#: cogs/meta.py:89
-msgid ""
-":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
-"({hours} hours and {minutes} minutes)."
-msgstr ""
-":alarm_clock: Bir sonraki silah ve şarjörleri {sec} saniye ({hours} saat and "
-"{minutes} dakika) içinde geri alacaksınız."
 
 #: cogs/meta.py:91
 msgid ""
@@ -804,14 +796,6 @@ msgstr ""
 ":money_with_wings: Silahını 6 exp için temizledin. İçinde kum varsa ya da "
 "silahın sabote edilmişse, şimdi düzeltildi!"
 
-#: cogs/shop.py:312
-msgid ""
-"Next time someone sabotages you, just shot. It won't do much damage except "
-"for hurting your reputation"
-msgstr ""
-"Bir dahaki sefere birisi seni sabote ettiğinde, sadece ateş et. İtibarını "
-"incitmek dışında fazla zarar vermez"
-
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -1057,7 +1041,7 @@ msgstr "Ağaca sarıldın mı Wizzz ?!"
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Burada hiç ördek yok, bir ağacamı sarılmayı düşünüyorsun ?!"
 
-#: cogs/user_commands.py:370
+#: cogs/user_commands.py:369
 msgid "**Current event**"
 msgstr "**Güncel olay**"
 
@@ -1519,16 +1503,16 @@ msgid "duck genocider"
 msgstr "ördek soykırımı"
 
 #: cogs/helpers/config.py:241
-msgid "unemployed due to extinction of the duck species"
-msgstr "ördek türlerinin neslinin tükenmesi nedeniyle işsiz"
+msgid "old noob"
+msgstr "yaşlı acemi"
 
 #: cogs/helpers/config.py:242
 msgid "duck toaster"
 msgstr "ördek kızartma makinesi"
 
 #: cogs/helpers/config.py:243
-msgid "old noob"
-msgstr "yaşlı acemi"
+msgid "unemployed due to extinction of the duck species"
+msgstr "ördek türlerinin neslinin tükenmesi nedeniyle işsiz"
 
 #: cogs/helpers/database.py:195
 msgid "Level of {player} on #{channel}"
