@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-19 11:12+0000\n"
+"POT-Creation-Date: 2019-09-19 11:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -557,8 +557,8 @@ msgid ""
 "It's really useful for new players. Use `dh!duckstats` to check your level "
 "and accuracy"
 msgstr ""
-"Giảm tỉ lệ hụt đi 50% chỉ với 8 exp. Rất có ích với người chơi mới. Dùng "
-"`dh!duckstats` để kiểm tra cấp độ và độ chính xác."
+"Giảm tỉ lệ kẹt súng đi 50% chỉ với 8 exp. Rất có ích với người chơi mới. "
+"Dùng `dh!duckstats` để kiểm tra cấp độ và độ chính xác."
 
 #: cogs/shop.py:171
 msgid ""
@@ -616,7 +616,7 @@ msgid ""
 "{exp} more exp points for each killed duck for the next day."
 msgstr ""
 ":money_with_wings: Bạn đã mua cần 4 lá may mắn, hít vào sẽ cho bạn thêm "
-"{exp} exp với mỗi con vịt bạn giết vào hôm sau"
+"{exp} exp với mỗi con vịt bạn giết trong 24 tiếng tiếp theo"
 
 #: cogs/shop.py:257
 msgid ":champagne: You already have 4-leaf clover on your weapon"
@@ -1457,7 +1457,7 @@ msgstr "một viên đạn"
 
 #: cogs/helpers/ducks.py:53
 msgid "a full magazine"
-msgstr "một băng đạn đầy"
+msgstr "một băng đạn"
 
 #: cogs/helpers/ducks.py:65
 msgid "a box of explosive ammo"
