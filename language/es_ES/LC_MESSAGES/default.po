@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-19 11:52+0000\n"
+"POT-Creation-Date: 2019-09-20 12:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,6 +291,14 @@ msgid ""
 msgstr ""
 "Puedes usar el comando`dh!freetime` para ver cuando se devolverán las armas "
 "gratuitamente."
+
+#: cogs/meta.py:89
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: La siguiente devolución de Armas y Cargadores es en {sec} "
+"segundos ({hours} hora(s) y {minutes} minuto(s))."
 
 #: cogs/meta.py:91
 msgid ""
@@ -817,6 +825,14 @@ msgid ""
 msgstr ""
 ":money_with_wings: Has limpiado tu arma por 6 Puntos de Experiencia. Si "
 "tenía arena, o tu arma fue Saboteada, está arreglada ahora!"
+
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"La próxima vez que alguien te sabotee, solo dispara. No hará mucho daño "
+"aparte de dañar tu reputación."
 
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
@@ -1684,6 +1700,14 @@ msgid ""
 msgstr ""
 ":heart: Intentaste abrazar al pato, pero él sabe que mataste a su hermano, "
 "así que voló lejos de ti, de vuelta al estanque! [-2 exp]"
+
+#: cogs/helpers/ducks.py:370
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Tratas de abrazar al pato, pero él siente desconfianza de ti, así "
+"que escapó y voló de vuelta al estanque! [-2 exp]"
 
 #: cogs/helpers/ducks.py:372
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-19 11:52+0000\n"
+"POT-Creation-Date: 2019-09-20 12:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr ":x: Không phải admin của server"
 
 #: bot.py:155
 msgid ":x: You are not a super admin."
-msgstr ":x: Không phải admin xinh gái nhất sv"
+msgstr ":x: Không phải admin xinh gái nhất server"
 
 #: bot.py:156
 msgid ""
@@ -377,7 +377,7 @@ msgid ""
 "You can proceed with it."
 msgstr ""
 ":small_orange_diamond: Bạn đã cho vịt nắm quyền quản trị viên. Không nên cho "
-"một con vịt có quyền như tổng thống vì an toàn cho nhân loại....\n"
+"một con vịt có quyền như tổng thống vì sự an toàn cho nhân loại....\n"
 "Nhưng có cho cũng không sao cả."
 
 #: cogs/setup_wizzard.py:77
@@ -540,7 +540,7 @@ msgid ""
 "magazine giveback. Type `dh!freetime` to find out when the next giveback is"
 msgstr ""
 "Có thể nhận lại vũ khí miễn phí nếu bạn đợi cho đến khi thính xuất hiện. "
-"Nhập `dh!freetime` để em khi nào thính rơi"
+"Nhập `dh!freetime` để xem khi nào thính rơi"
 
 #: cogs/shop.py:152
 msgid ""
@@ -574,7 +574,8 @@ msgstr ":money_with_wings: Bạn đã thêm ống ngắm vào súng"
 msgid ""
 "Your aiming was improved using this formula: (100 - current accuracy) / 3."
 msgstr ""
-"Mục tiêu của bạn tuân theo công thức : (100 - độ chính xác hiện tại) / 3"
+"Độ chính xác của bạn được cải thiện theo công thức : (100 - độ chính xác "
+"hiện tại) / 3"
 
 #: cogs/shop.py:191
 msgid ":champagne: You already have a sight on your weapon."
@@ -775,7 +776,8 @@ msgstr ":money_with_wings: Bạn đã mua bảo hiểm trong 1 tuần với 10 e
 
 #: cogs/shop.py:429
 msgid "If you get killed, you'll earn half the level of the killer in exp."
-msgstr "Nếu bị giết, bạn sẽ nhận một nửa số exp của kẻ đã giết bạn"
+msgstr ""
+"Nếu bị bắn trúng, bạn sẽ nhận exp bằng một nửa cấp độ thợ săn của bạn "
 
 #: cogs/shop.py:432
 msgid ":champagne: You're already insured."
@@ -938,11 +940,11 @@ msgstr "Bibop!Hello world!"
 
 #: cogs/helpers/config.py:67
 msgid "How are you today?"
-msgstr "trời quang mây tạnh gió hòa, vạn vật nện nhau sinh sôi....."
+msgstr "MEOW ~"
 
 #: cogs/helpers/config.py:67
 msgid "Please don't kill me..."
-msgstr "Đua xe không cháu?"
+msgstr "Đua không cháu?"
 
 #: cogs/helpers/config.py:67
 msgid "I love you too!"
@@ -950,7 +952,7 @@ msgstr "Tao bắn mày á!"
 
 #: cogs/helpers/config.py:67
 msgid "Don't shoot me! I'm a fake duck!"
-msgstr "Xin đừng bắn! Tối chắc chắn không phải là một con vịt"
+msgstr "Em không phải vịt, đừng bắn em mà!"
 
 #: cogs/helpers/config.py:70
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -970,7 +972,7 @@ msgstr "Vịt đã bay đi ·°'\\`'°-.,¸¸.·°'\\`·°'\\`'°-.,¸¸.·°'\\
 
 #: cogs/helpers/config.py:71
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Con vịt hòa vào không - thời gian ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Vịt đã hòa vào không - thời gian ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:71
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1445,7 +1447,7 @@ msgstr "Chẳng có gì..."
 
 #: cogs/helpers/ducks.py:33
 msgid "a lot of bushes."
-msgstr "Rất nhiều bụi cây"
+msgstr "Thêm nhiều bụi cỏ nữa !"
 
 #: cogs/helpers/ducks.py:37
 msgid "a duck pin."
