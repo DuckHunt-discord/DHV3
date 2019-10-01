@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-20 12:58+0000\n"
+"POT-Creation-Date: 2019-09-21 21:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,7 +113,7 @@ msgstr "Fatto. Utente rimosso dal database, se presente."
 
 #: cogs/admin_commands.py:155
 msgid "Done. All channel data was removed."
-msgstr "Fatto. "
+msgstr "Fatto. Tutti i dati del canale sono stati rimossi."
 
 #: cogs/admin_commands.py:180
 msgid ""
@@ -287,15 +287,23 @@ msgstr ""
 "Puoi usare il comando `dh!freetime` per vedere quando potrai recuperare le "
 "tue armi gratuitamente"
 
+#: cogs/meta.py:89
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: La prossima ridistribuzione di armi e cartucce avverrà tra "
+"{sec} secondi ({hours} ora(e) e {minutes} minuto(i))."
+
 #: cogs/meta.py:91
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr ""
-"Un giveback ti riempie i caricatori e ti ridà indietro l'arma gratuitamente "
-"(se confiscata), ma non influisce sui proiettili nel tuo caricatore attuale. "
-"Se puoi, ricarica prima!"
+"Una ridistribuzione (giveback) ti riempie le cartucce e ti ridà indietro "
+"l'arma gratuitamente (se confiscata), ma non influisce sui proiettili nel "
+"tuo caricatore attuale. Se puoi, ricarica prima!"
 
 #: cogs/meta.py:103
 msgid "You are using shard number {shard} out of {total} total shards"
@@ -326,7 +334,7 @@ msgid ""
 msgstr ""
 "Ciao!\n"
 "Grazie per avermi aggiunto! Sono quasi pronto per iniziare il gioco!\n"
-"Potremmo cortesemente entrare nel canale dove vuoi che il gioco sia ? Per "
+"Potremmo cortesemente entrare nel canale dove vuoi che il gioco avvenga? Per "
 "piacere chiamami lì utilizzando `dh!setup` <:event_GuildAdded_01:"
 "439550913112309781>"
 
@@ -659,9 +667,9 @@ msgid ""
 "You can get your weapon back for free if you wait until the daily weapon & "
 "magazine giveback. Type `dh!freetime` to find out when the next giveback is"
 msgstr ""
-"Puoi riavere la tua arma gratis se aspetti fino alla distribuzione "
-"giornaliara di armi e munizioni. Digita `dh!freetime` per sapere quando ci "
-"sarà la prossima ridistribuzione"
+"Puoi riavere la tua arma da fuoco gratuitamente se aspetti fino alla "
+"distribuzione giornaliera di armi e munizioni. Digita `dh!freetime` per "
+"sapere quando ci sarà la prossima ridistribuzione"
 
 #: cogs/shop.py:152
 msgid ""
@@ -799,7 +807,16 @@ msgid ""
 "or if your weapon was sabotaged, it's fixed now!"
 msgstr ""
 ":money_with_wings: Hai pulito la tua arma per 6 exp. Se avevi della sabbia "
-"dentro di essa, o se la tua arma era stata sabotata, ora è riparata!"
+"dentro di essa, o se la tua arma da fuoco era stata sabotata in precedenza, "
+"ora è come nuova!"
+
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"La prossima volta che qualcuno ti sabota, spara. Ciò non farà danni se non "
+"danneggiando la tua reputazione"
 
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
@@ -1265,7 +1282,7 @@ msgstr "un pesce."
 
 #: cogs/helpers/config.py:82
 msgid "even more bushes."
-msgstr "ancora più cespugli."
+msgstr "altri cespugli."
 
 #: cogs/helpers/config.py:186
 msgid "Everything is calm"
