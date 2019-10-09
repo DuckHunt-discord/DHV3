@@ -148,7 +148,7 @@ def config(bot):
         339294911935414272,
 
         # 2018-10-28
-        # For the following members, they are all banned besause they were part of a "Nazi" server
+        # For the following members, they are all banned because they were part of a "Nazi" server
         # Nicknamed the bot as Jew-Hunt, bad server all in all tbh, toxic people we just shouldn't have on discord.
         194538610278531072,
         438065378225029120,

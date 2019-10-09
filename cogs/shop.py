@@ -77,7 +77,7 @@ class Experience:
         else:
             await self.bot.send_message(ctx=ctx, message=_(":champagne: Your magazine is full!", language))
 
-    @shop.command(name="2", aliases=["charger", "chargers", "magazine", "magazines"])
+    @shop.command(name="2", aliases=["charger", "chargers", "magazine", "magazines", "mag"])
     @checks.have_exp(13)
     async def item2(self, ctx):
         """Add a charger to your weapon (13 exp)
