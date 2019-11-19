@@ -20,15 +20,15 @@ class Get_Stats:
         return await self.bot.db.get_stat(self.channel, self.target, stat)
 
 
-class Scores:
+class Scores(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     async def objectTD(self, gs, object):
-        date_expiration = datetime.datetime.fromtimestamp(await gs(object))
-        td = date_expiration - datetime.datetime.now()
+        date_expiration = datetime.fromtimestamp(await gs(object))
+        td = date_expiration - datetime.now(timezone.utc)
         _ = gs.bot._
-        language = await self.bot.db.get_pref(gs.channel.guild, "language")
+        language = await self.bot.db.get_pref(gs.channel, "language")
 
         return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(
             **{"date": date_expiration.strftime(_('%m/%d at %H:%M:%S', language)),
@@ -45,7 +45,7 @@ class Scores:
         message = ctx.message
         channel = message.channel
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
 
 
@@ -143,7 +143,7 @@ class Scores:
                         })
 
                         embed.colour = discord.Colour.green()
-                        # embed.timestamp = datetime.datetime.now()
+                        # embed.timestamp = datetime.now(timezone.utc)
                         embed.url = 'https://duckhunt.me/'  # TODO: get the webinterface url and add it here inplace
 
                         players_list = ""
@@ -251,7 +251,7 @@ class Scores:
         message = ctx.message
         channel = message.channel
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not target:
             target = ctx.message.author

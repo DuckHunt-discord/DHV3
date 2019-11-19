@@ -1,21 +1,22 @@
 import asyncio
+from datetime import datetime, timedelta, timezone
+import dateutil.parser
 import random
 
 import discord
 import time
 from discord.ext import commands
 from cogs.helpers import checks
-from cogs.helpers import ducks
 
 from cogs.helpers.ducks import DuckWrapper
 
 
-class User:
+class User(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     async def sendBangMessage(self, ctx, string: str):
-        lag = await self.bot.db.get_pref(ctx.guild, "bang_lag")
+        lag = await self.bot.db.get_pref(ctx.channel, "bang_lag")
         if ctx.bot.current_event['id'] == 2:
             lag += ctx.bot.current_event['seconds_of_lag_added']
 
@@ -48,7 +49,7 @@ class User:
         get_pref = self.bot.db.get_pref
 
         _ = self.bot._
-        language = await get_pref(guild, "language")
+        language = await get_pref(channel, "language")
 
         balles = await get_stat(channel, author, "balles")
         balles_max = level["balles"]
@@ -111,7 +112,7 @@ class User:
         get_pref = self.bot.db.get_pref
 
         _ = self.bot._
-        language = await get_pref(guild, "language")
+        language = await get_pref(channel, "language")
 
         # Long and complicated function.
         # Broken in a few parts :
@@ -176,7 +177,7 @@ class User:
         chance = random.randint(0, 100)
 
         can_shoot = chance <= fiability
-        can_shoot = can_shoot or await get_stat(channel, author, "graisse") >= int(now)
+        can_shoot = can_shoot or await get_stat(channel, message.author, "graisse") > time.time()
 
         # 6c/ Jamming
         if not can_shoot:
@@ -196,7 +197,7 @@ class User:
                 break
         else:
             # No! There is no duck in there!
-            if await get_stat(channel, author, "detecteurInfra") > int(now) and await get_stat(channel, author, "detecteur_infra_shots_left") > 0:
+            if await self.bot.db.get_stat(message.channel, message.author, "detecteurInfra") > time.time() and await get_stat(channel, author, "detecteur_infra_shots_left") > 0:
                 # Infrared detector : No bullets wasted
                 await self.bot.send_message(ctx=ctx,
                                             message=_("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing its job!", language))
@@ -223,7 +224,7 @@ class User:
         # 9/ Will the duck stay ?
         chance = random.randint(0, 100)
         duck_will_leave = chance < await duck.get_frighten_chance()
-        duck_will_leave = duck_will_leave and not await get_stat(channel, author, "silencieux") > int(now)
+        duck_will_leave = duck_will_leave and not await get_stat(channel, author, "silencieux") > time.time()
 
         if duck_will_leave:
             await self.sendBangMessage(ctx, await duck_wrapper.frightened())
@@ -252,7 +253,7 @@ class User:
             chance += ctx.bot.current_event['miss_chance_to_add']
 
         # 10e/ Miss_chance multiplier
-        miss_multiplier = await get_pref(guild, "multiplier_miss_chance")
+        miss_multiplier = await get_pref(channel, "multiplier_miss_chance")
         chance *= miss_multiplier
 
         if target:
@@ -262,7 +263,7 @@ class User:
 
         if (chance > accuracy and duck.can_miss) or target:
 
-            kill_on_miss_chance = await get_pref(guild, "chance_to_kill_on_missed")
+            kill_on_miss_chance = await get_pref(channel, "chance_to_kill_on_missed")
             chance_kill = random.randint(0, 100)
 
             if target:
@@ -304,7 +305,7 @@ class User:
                 else:
                     # 11c/ Just shot someone else
                     await self.sendBangMessage(ctx, _("**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]", language).format(
-                        **{"player": player_killed.mention if await get_pref(guild, "killed_mentions") else player_killed.name}))
+                        **{"player": player_killed.mention if await get_pref(channel, "killed_mentions") else player_killed.name}))
 
                     # TODO : Life insurence
 
@@ -339,7 +340,7 @@ class User:
         get_pref = self.bot.db.get_pref
 
         _ = self.bot._
-        language = await get_pref(guild, "language")
+        language = await get_pref(channel, "language")
 
         for duck in self.bot.ducks_spawned:
             if duck.channel == channel and not duck.killed:
@@ -364,7 +365,7 @@ class User:
     @checks.is_channel_enabled()
     async def current_event(self, ctx):
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.message.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
         event = ctx.bot.current_event
         ce = _('**Current event**', language)
         string = f"""{ce} :\n{_(event['name'], language)} — {_(event['description'], language)}"""

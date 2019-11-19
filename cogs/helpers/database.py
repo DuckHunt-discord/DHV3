@@ -9,7 +9,6 @@ import time
 
 
 class Database:
-
     def __init__(self, bot):
         self.bot = bot
         # Create the database object
@@ -166,7 +165,7 @@ class Database:
 
     async def set_stat(self, channel, user, stat: str, value: int):
         # self.bot.logger.debug(f"set_stat for {channel.id} of {user.id} stat {stat} with value {value}")
-        cond = stat == "exp" and await self.get_pref(channel.guild, "announce_level_up")
+        cond = stat == "exp" and await self.get_pref(channel, "announce_level_up")
         if cond:
             ancien_niveau = await self.get_level(channel=channel, player=user)
 
@@ -176,7 +175,7 @@ class Database:
         # Now that we have the ID, we can get into duckhunt/players and update the player we need
         self.database.query(f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) "
                             f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url", channel_id=channel_id, user_id=user.id, stat_value=value,
-                            avatar_url=user.avatar_url_as(static_format='jpg', size=1024), name_=user.name + "#" + user.discriminator)
+                            avatar_url=str(user.avatar_url_as(static_format='jpg', size=1024)), name_=user.name + "#" + user.discriminator)
 
         if channel in self._stats_cache.keys():
             if user in self._stats_cache[channel]:
@@ -189,7 +188,7 @@ class Database:
             level = await self.get_level(channel=channel, player=user)
 
             _ = self.bot._
-            language = await self.get_pref(channel.guild, "language")
+            language = await self.get_pref(channel, "language")
 
             embed = discord.Embed(description=_("Level of {player} on #{channel}", language).format(**{"player": user.name, "channel": channel.name}))
 
@@ -294,7 +293,15 @@ class Database:
             self.bot.logger.warning(f"The type {type_} is unknown to me in {setting}. Passing not modified value.")
         return value
 
-    async def get_pref(self, guild, pref):
+    async def get_pref(self, channel, pref):
+
+        if isinstance(channel, discord.Guild):
+            self.bot.logger.warning(f"Using the old Guild in get_pref for pref={pref}")
+            guild = channel
+        else:
+            guild = channel.guild #as things should be
+
+
         try:
             setting = self.settings_dict[pref]
         except KeyError:
@@ -328,7 +335,14 @@ class Database:
     def bool_(self, b):
         return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on', 'vrai', 'ye', 'actif']
 
-    async def set_pref(self, guild, pref, value):
+    async def set_pref(self, channel, pref, value):
+
+        if isinstance(channel, discord.Guild):
+            self.bot.logger.warning(f"Using the old Guild in set_pref for pref={pref}")
+            guild = channel
+        else:
+            guild = channel.guild #as things should be
+
         try:
             setting = self.settings_dict[pref]
         except KeyError:

@@ -13,7 +13,7 @@ from cogs.helpers import checks
 import datetime
 from collections import Counter
 
-class Evals:
+class Evals(commands.Cog):
     """
     Clean code borrowed from R.Danny https://github.com/Rapptz/RoboDanny/blob/rewrite/cogs/admin.py#L70-L115
     """

@@ -5,4 +5,5 @@ records
 discord.py
 tabulate
 psutil
+uvloop
 mysql-connector-python-rf

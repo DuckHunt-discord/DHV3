@@ -23,7 +23,7 @@ async def make_all_ducks_leave(bot):
     for canard in bot.ducks_spawned[:]:
         i += 1
         _ = bot._
-        language = await bot.db.get_pref(canard.channel.guild, "language")
+        language = await bot.db.get_pref(canard.channel, "language")
         bot.logger.debug(f"Force-leaving of {canard}")
 
         if canard in bot.ducks_spawned:
@@ -53,7 +53,7 @@ async def get_number_of_ducks(total_ducks):
     return round(total_ducks * multiplicator)
 
 
-async def planifie(bot, channel=None, new_day=True):
+async def planifie(bot, channel=None, new_day=True, ducks_per_day=None):
     if channel:
         permissions_wanted = discord.Permissions.none()
         permissions_wanted.read_messages = True
@@ -75,10 +75,12 @@ async def planifie(bot, channel=None, new_day=True):
             for duck in bot.ducks_spawned[:]:
                 if duck.channel == channel:
                     duck.delete()
-
             return
 
-        total_ducks = await bot.db.get_pref(channel.guild, "ducks_per_day")
+        if not ducks_per_day:
+            total_ducks = await bot.db.get_pref(channel, "ducks_per_day")
+        else:
+            total_ducks = ducks_per_day
 
         if not new_day:
             total_ducks = await get_number_of_ducks(total_ducks)
@@ -121,8 +123,8 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
 
             population = [ducks.Duck, ducks.SuperDuck, ducks.BabyDuck, ducks.MotherOfAllDucks, ]
 
-            weights = [await bot.db.get_pref(channel.guild, "ducks_chance"), await bot.db.get_pref(channel.guild, "super_ducks_chance"),  # Modified below by event n°3
-                await bot.db.get_pref(channel.guild, "baby_ducks_chance"), await bot.db.get_pref(channel.guild, "mother_of_all_ducks_chance"), ]
+            weights = [await bot.db.get_pref(channel, "ducks_chance"), await bot.db.get_pref(channel, "super_ducks_chance"),  # Modified below by event n°3
+                await bot.db.get_pref(channel, "baby_ducks_chance"), await bot.db.get_pref(channel, "mother_of_all_ducks_chance"), ]
 
             if not ignore_event and bot.current_event['id'] == 3:
                 weights[1] += int(weights[1] * bot.current_event['chance_added_for_super_duck'] / 100)
@@ -142,7 +144,7 @@ async def spawn_duck(bot, channel, instance=None, ignore_event=False):
 
         message = instance.discord_spawn_str
 
-        if await bot.db.get_pref(channel.guild, "debug_show_ducks_class_on_spawn"):
+        if await bot.db.get_pref(channel, "debug_show_ducks_class_on_spawn"):
             message = f"[{type(instance).__name__}] -- {message}"
 
         await bot.send_message(where=channel, mention=False, can_pm=False, message=message)
@@ -222,8 +224,8 @@ async def background_loop(bot):
                 # 00:00 |-----==========---------| 23:59 (= quand les canards dorment)
                 # dans ce cas, il faut juste modifier la valeur de seconds_left pour enlever le nombre d'heure
                 # (en seconde) afin d'augmenter la probabilité qu'un canard apparaisse pendant le reste de la journée
-                sdstart = await bot.db.get_pref(channel.guild, "sleeping_ducks_start")
-                sdstop = await bot.db.get_pref(channel.guild, "sleeping_ducks_stop")
+                sdstart = await bot.db.get_pref(channel, "sleeping_ducks_start")
+                sdstop = await bot.db.get_pref(channel, "sleeping_ducks_stop")
                 currently_sleeping = False
 
                 if sdstart != sdstop:  # Dans ce cas, les canards dorment peut-etre!
@@ -309,4 +311,4 @@ async def background_loop(bot):
         raise
     except Exception as e:
         bot.logger.exception("Fatal Exception")
-        raise
+        raise e

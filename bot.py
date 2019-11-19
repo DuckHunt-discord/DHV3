@@ -51,7 +51,7 @@ import discord.ext.commands as commands
 # Prepare the bot object
 
 async def get_prefix(bot, message):
-    extras = [await bot.db.get_pref(message.guild, "prefix"), "duckhunt", "dh!", "Dh!", "dH!", "DH!", "dh", "Dh", "dH", "DH"]
+    extras = [await bot.db.get_pref(message.channel, "prefix"), "duckhunt", "dh!", "dh", "Dh", "Dh!", "dH!", "dH", "DH!", "DH"]
     return commands.when_mentioned_or(*extras)(bot, message)
 
 
@@ -79,7 +79,7 @@ class DuckHunt(commands.AutoShardedBot):
     async def on_command(self, ctx):
         bot.commands_used[ctx.command.name] += 1
         ctx.logger.info(f"<{ctx.command}> {ctx.message.clean_content}")
-        if await self.db.get_pref(ctx.guild, "delete_commands"):
+        if await self.db.get_pref(ctx.channel, "delete_commands"):
             await ctx.message.delete()
 
     async def on_ready(self):
@@ -137,7 +137,7 @@ class DuckHunt(commands.AutoShardedBot):
 
     async def on_command_error(self, context, exception):
         _ = self._;
-        language = await self.db.get_pref(context.guild, "language")
+        language = await self.db.get_pref(context.channel, "language")
         if isinstance(exception, discord.ext.commands.errors.CommandNotFound):
             return
 
@@ -252,7 +252,7 @@ class DuckHunt(commands.AutoShardedBot):
         # bot.logger.debug(f"Long message took : {time.time() - s}.")
 
         if where:  # Where is a TextChannel
-            if force_pm or (can_pm and await self.db.get_pref(where.guild, "pm_most_messages")):
+            if force_pm or (can_pm and await self.db.get_pref(where, "pm_most_messages")):
                 if from_:  # If I have someone to PM
                     where = await from_.create_dm()
                     permissions = True
@@ -336,7 +336,7 @@ logger.debug("Loading cogs : ")
 ###############   ####
 ##############   #####
 
-cogs = ['cogs.admin_commands', 'cogs.analytics', 'cogs.experience_related_commands', 'cogs.helpers.database', 'cogs.meta', 'cogs.scores', 'cogs.setup_wizzard', 'cogs.shop', 'cogs.superadmin_commands',
+cogs = ['jishaku', 'cogs.admin_commands', 'cogs.analytics', 'cogs.experience_related_commands', 'cogs.helpers.database', 'cogs.meta', 'cogs.scores', 'cogs.setup_wizzard', 'cogs.shop', 'cogs.superadmin_commands',
         'cogs.user_commands', 'cogs.evals', 'cogs.api'  # This must be the last to run, comment if you don't need it
         ]
 
