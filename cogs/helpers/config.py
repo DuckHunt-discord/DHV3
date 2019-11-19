@@ -255,6 +255,7 @@ def config(bot):
     bot.loop_latency = 1
 
     import datetime
+    import random
     # Set the bot start time
     bot.uptime = datetime.datetime.utcnow()
 
@@ -275,6 +276,9 @@ def config(bot):
                 return rv
 
         def get(self, msg: str, language: str = bot.default_language):
+            if language == "pain":
+                return random.choice(["🥖", "🍞"])
+
             return self._get_translation(language).gettext(msg)
 
         def reload(self):

@@ -1,4 +1,5 @@
 import asyncio
+import collections
 import inspect
 
 import discord
@@ -62,6 +63,44 @@ class SuperAdmin:
             await self.bot.send_message(ctx=ctx, message=":ok_hand: Translations reloaded")
         else:
             await self.bot.send_message(ctx=ctx, message=":x: Error reloading translations :(")
+
+    @commands.command()
+    @checks.is_super_admin()
+    async def find_same_discrim(self, ctx, current_discriminator:str, wanted_discriminator:str="0001"):
+        """Find names with a discriminator used"""
+
+        await ctx.send(f"We'll get you the #{wanted_discriminator}, please wait a moment for me to search for candidates...")
+
+        big_dict_of_names_and_discrims = collections.defaultdict(set)
+        set_of_intresting_names = set()
+        for user in self.bot.users:
+            name = user.name
+            discrim = user.discriminator
+            if discrim == current_discriminator:
+                set_of_intresting_names.add(name)
+
+            big_dict_of_names_and_discrims[name].add(discrim)
+
+        # await ctx.send(f"I found some names with the same discriminator as you: {set_of_intresting_names}")
+
+        unintresting_names = set()
+        intresting_names_dict = {}
+        for name in set_of_intresting_names:
+            if wanted_discriminator in big_dict_of_names_and_discrims[name]:
+                unintresting_names.add(name)
+            else:
+                intresting_names_dict[name] = len(big_dict_of_names_and_discrims[name])
+
+        sorted_intresting = sorted(intresting_names_dict.items(), key=lambda kv: -kv[1])
+
+        if len(unintresting_names) > 0:
+            await ctx.send(f"You shouldn't try to change to one of these: {unintresting_names}, as the #{wanted_discriminator} is already taken :(")
+
+        await ctx.send(f"The **best names** to try would be, in order of preference, {sorted_intresting[:10]}")
+
+        for i in range(min(3, len(sorted_intresting))):
+            name, nd = sorted_intresting[i]
+            await ctx.send(f"`{name}` taken discrims: {big_dict_of_names_and_discrims[name]}")
 
     @commands.command(pass_context=True)
     @checks.is_super_admin()

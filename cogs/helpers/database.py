@@ -176,8 +176,7 @@ class Database:
         # Now that we have the ID, we can get into duckhunt/players and update the player we need
         self.database.query(f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) "
                             f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url", channel_id=channel_id, user_id=user.id, stat_value=value,
-                            avatar_url=user.avatar_url_as(static_format='jpg', size=1024), name_=user.name + "#" +
-                                                                                                                                                                      user.discriminator)
+                            avatar_url=user.avatar_url_as(static_format='jpg', size=1024), name_=user.name + "#" + user.discriminator)
 
         if channel in self._stats_cache.keys():
             if user in self._stats_cache[channel]:

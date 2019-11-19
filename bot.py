@@ -353,6 +353,8 @@ try:
     bot.loop.run_until_complete(bot.start(bot.token))
 except KeyboardInterrupt:
     pass
+except Exception as e:
+    logger.exception("I AM RESTARTING BECAUSE SOMETHING FAILED HERE...")
 finally:
     # Stop cleanly : make ducks leave
     # try:
@@ -367,3 +369,4 @@ finally:
 
     asyncio.sleep(3)
     bot.loop.close()
+

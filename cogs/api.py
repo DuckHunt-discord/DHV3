@@ -119,17 +119,12 @@ class Api:
 
         return web.json_response(res)
 
-
-
-
-
     async def run(self):
         self.app.add_routes(routes)
         await self.runner.setup()
         site = web.TCPSite(self.runner, '0.0.0.0', 6872)
         await site.start()
         self.bot.logger.debug("API started")
-
 
 def setup(bot_):
     global bot
