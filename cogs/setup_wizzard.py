@@ -3,14 +3,14 @@ from discord.ext import commands
 
 from cogs.helpers import checks
 
-class SetupWizzard:
+
+class SetupWizzard(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.Cog.listener()
     async def on_guild_join(self, guild: discord.Guild):
-        channel: discord.TextChannel
-        _ = self.bot._
-        language = await self.bot.db.get_pref(guild, "language")
+
 
         for channel in guild.channels:
             if isinstance(channel, discord.TextChannel):
@@ -25,13 +25,13 @@ class SetupWizzard:
                                                                   "Thanks for adding me in there! I'm almost ready to start the game!\n "
                                                                   "Could we please go into the channel where you want the game to be ? "
                                                                   "Please invoke me there by using `dh!setup`"
-                                                                  "<:event_GuildAdded_01:439550913112309781>", language))
+                                                                  "<:event_GuildAdded_01:439550913112309781>"))
 
     @commands.command(aliases=["claimserver", "claim_server"])
     @checks.is_server_admin()
     async def setup(self, ctx):
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
         await self.bot.send_message(ctx=ctx, message=_("Hello again!\n "
                                                        "I'm just gonna run a quick permissions check and will be back in a few seconds! "
                                                        "Please wait", language))
@@ -130,7 +130,7 @@ class SetupWizzard:
     @checks.is_server_admin()
     async def setup_settings(self, ctx):
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         await self.bot.send_message(ctx=ctx, message=_(
             """Hey! Let's configure the server!

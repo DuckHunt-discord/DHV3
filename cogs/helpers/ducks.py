@@ -1,10 +1,17 @@
 """
 In this helper, every kind of duck the bot can spawn is defined.
 """
+#from datetime import datetime, timedelta, timezone
 import datetime
+
+import dateutil.parser
+
 import logging
 import random
 import time
+MINUTE = 60
+HOUR = MINUTE * 60
+DAY = HOUR * 24
 
 # That function is here to mark items as "to be translated"
 import dateutil.easter
@@ -31,7 +38,6 @@ class Nothing(BushObject):
 
 class Bushes(BushObject):
     name = _('a lot of bushes.')
-
 
 class DuckPin(BushObject):
     name = _('a duck pin.')
@@ -93,7 +99,7 @@ class Grease(BushObject):
     db = 'found_grease'
 
     async def give(self, bot, ctx):
-        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "graisse", int(time.time() + 86400))
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "graisse", time.time() + DAY)
         return True
 
 
@@ -102,7 +108,7 @@ class Silencer(BushObject):
     db = 'found_silencers'
 
     async def give(self, bot, ctx):
-        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "silencieux", int(time.time() + 86400))
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "silencieux", time.time() + DAY)
         return True
 
 
@@ -111,15 +117,22 @@ class InfraredDetector(BushObject):
     db = 'found_infrared_detectors'
 
     async def give(self, bot, ctx):
-        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteurInfra", int(time.time() + 86400))
+        await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteurInfra", time.time() + DAY)
         await bot.db.set_stat(ctx.message.channel, ctx.message.author, "detecteur_infra_shots_left", 6)
         return True
-
-
 del _
 
 # noinspection PyInterpreter
-bushes = {Nothing: 20, Bushes: 20, DuckPin: 1, Bullet: 20, Charger: 15, ExplosiveAmmo: 2, PartialExplosiveAmmo: 6, Grease: 15, Silencer: 7, InfraredDetector: 7, }
+bushes = {
+    Nothing: 20, Bushes: 20, DuckPin: 1,
+    Bullet: 20,
+    Charger: 15,
+    ExplosiveAmmo: 2, PartialExplosiveAmmo: 6,
+    Grease: 15,
+    Silencer: 7,
+    InfraredDetector: 7,
+ }
+
 
 bushes_objects = []
 bushes_weights = []
@@ -205,7 +218,7 @@ class BaseDuck:
 
     async def frightened(self, player):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         await self.bot.db.add_to_stat(self.channel, player, "exp", -1)
         try:
@@ -223,7 +236,7 @@ class BaseDuck:
         channel = self.channel
         now = time.time()
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         if await self.bot.db.get_stat(channel, author, "explosive_ammo") > int(now):
             self.life -= 3
@@ -285,7 +298,7 @@ class BaseDuck:
                 await ctx.bot.db.add_to_stat(ctx.message.channel, ctx.message.author, db_name, 1)
 
             _ = self.bot._
-            language = await self.bot.db.get_pref(ctx.guild, "language")
+            language = await self.bot.db.get_pref(ctx.channel, "language")
 
             if result:
                 await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + _(choosen.name, language) + "**"))
@@ -306,7 +319,7 @@ class BaseDuck:
         author = ctx.author
         channel = self.channel
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         await self.pre_shoot(author)
 
@@ -356,7 +369,7 @@ class BaseDuck:
 
         author = ctx.author
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
         await self.bot.db.add_to_stat(self.channel, author, "hugged_nohug_ducks", 1)
 
         if author.id == 296573428293697536:  # ⚜WistfulWizzz⚜#5928
@@ -372,20 +385,20 @@ class BaseDuck:
             return _(":heart: You try to hug the duck, but it saw the weapon you hid behind your back, so it fled from you and flew back into the pond! [-2 exp]", language)
 
     async def get_frighten_chance(self):
-        return await self.bot.db.get_pref(self.channel.guild, "duck_frighten_chance")
+        return await self.bot.db.get_pref(self.channel, "duck_frighten_chance")
 
     async def get_killed_string(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         return _(":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} "
                  "were super-ducks) killed on #{channel}.     \_X<   *COUAC*   {exp}", language)
 
     async def get_harmed_message(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
-        if await self.bot.db.get_pref(self.channel.guild, "show_super_ducks_life"):
+        if await self.bot.db.get_pref(self.channel, "show_super_ducks_life"):
             return _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} ({current_life} / {max_life})]", language)
         else:
             return _(":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]", language)
@@ -414,7 +427,7 @@ class Duck(BaseDuck):
 
     async def _gen_discord_str(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         trace = random.choice(self.bot.canards_trace)
 
@@ -428,7 +441,7 @@ class Duck(BaseDuck):
         elif easter_eggs:
             corps = random.choice(["🐰", "🍫", "🔔", "🧺", "🐝", "🥕", "🌸", "🐇", "🐰"])
         else:
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+            corps = await self.bot.db.get_pref(self.channel, "emoji_used")
 
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
@@ -438,10 +451,10 @@ class Duck(BaseDuck):
     @classmethod
     async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
-        ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
+        ttl = await bot.db.get_pref(channel, "time_before_ducks_leave")
 
         # Base duck exp
-        exp_value = await bot.db.get_pref(channel.guild, "exp_won_per_duck_killed")
+        exp_value = await bot.db.get_pref(channel, "exp_won_per_duck_killed")
 
         duck = cls(bot, channel, exp=exp_value, ttl=ttl)
         await duck._gen_discord_str()
@@ -473,7 +486,7 @@ class SuperDuck(BaseDuck):
         # Same as for the Normal Duck because they shouldn't be distinguished
 
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         trace = random.choice(self.bot.canards_trace)
 
@@ -487,7 +500,7 @@ class SuperDuck(BaseDuck):
         elif easter_eggs:
             corps = random.choice(["🐰", "🍫", "🔔", "🧺", "🐝", "🥕", "🌸", "🐇", "🐰"])
         else:
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+            corps = await self.bot.db.get_pref(self.channel, "emoji_used")
 
         cri = _(random.choice(self.bot.canards_cri), language=language)
 
@@ -505,14 +518,14 @@ class SuperDuck(BaseDuck):
     @classmethod
     async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
-        ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
+        ttl = await bot.db.get_pref(channel, "time_before_ducks_leave")
 
         # Base duck exp
-        exp_value = await bot.db.get_pref(channel.guild, "exp_won_per_duck_killed")
+        exp_value = await bot.db.get_pref(channel, "exp_won_per_duck_killed")
 
         # Super duck life
-        min_life = await bot.db.get_pref(channel.guild, "super_ducks_minlife")
-        max_life = await bot.db.get_pref(channel.guild, "super_ducks_maxlife")
+        min_life = await bot.db.get_pref(channel, "super_ducks_minlife")
+        max_life = await bot.db.get_pref(channel, "super_ducks_maxlife")
 
         # Choosen life for this one
         if life is None:
@@ -521,7 +534,7 @@ class SuperDuck(BaseDuck):
                 life += bot.current_event['life_to_add']
 
         # Choosen exp for this life
-        exp_value = int(exp_value * await bot.db.get_pref(channel.guild, "super_ducks_exp_multiplier") * life)
+        exp_value = int(exp_value * await bot.db.get_pref(channel, "super_ducks_exp_multiplier") * life)
 
         duck = cls(bot, channel, life=life, exp=exp_value, ttl=ttl)
         await duck._gen_discord_str()
@@ -560,13 +573,13 @@ class MechanicalDuck(BaseDuck):
     async def _gen_discord_str(self):
 
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
         guild = self.channel.guild
 
-        trace = random.choice(self.bot.canards_trace) if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 1 else "-_-'\`'°-_-.-'\`'°"
-        corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used") if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 2 else await self.bot.db.get_pref(
-            self.channel.guild, "emoji_used")  # TODO : Insert here a proper Mechanical Duck Emoji!
-        cri = _(random.choice(self.bot.canards_cri), language=language) if await self.bot.db.get_pref(self.channel.guild, "randomize_mechanical_ducks") >= 3 else "*BZAACK*"
+        trace = random.choice(self.bot.canards_trace) if await self.bot.db.get_pref(self.channel, "randomize_mechanical_ducks") >= 1 else "-_-'\`'°-_-.-'\`'°"
+        corps = await self.bot.db.get_pref(self.channel, "emoji_used") if await self.bot.db.get_pref(self.channel, "randomize_mechanical_ducks") >= 2 else await self.bot.db.get_pref(
+            self.channel, "emoji_used")  # TODO : Insert here a proper Mechanical Duck Emoji!
+        cri = _(random.choice(self.bot.canards_cri), language=language) if await self.bot.db.get_pref(self.channel, "randomize_mechanical_ducks") >= 3 else "*BZAACK*"
 
         self.discord_spawn_str = f"{trace} {corps} < {cri}"
 
@@ -582,7 +595,7 @@ class MechanicalDuck(BaseDuck):
 
     async def get_killed_string(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         return _("You have been tricked by {user_mention} to kill a mechanical duck. It obviously won't work, and you lost 1 exp for this missed shot", language).format(user_mention=self.user_mention)
 
@@ -619,7 +632,7 @@ class BabyDuck(BaseDuck):
 
     async def _gen_discord_str(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         trace = random.choice(self.bot.canards_trace)
         n = datetime.datetime.now()
@@ -639,10 +652,10 @@ class BabyDuck(BaseDuck):
     @classmethod
     async def create(cls, bot, channel, life=None, ignore_event=False):
         # Base duck time to live
-        ttl = await bot.db.get_pref(channel.guild, "time_before_ducks_leave")
+        ttl = await bot.db.get_pref(channel, "time_before_ducks_leave")
 
         # Base duck exp
-        exp_value = - await bot.db.get_pref(channel.guild, "exp_won_per_duck_killed")
+        exp_value = - await bot.db.get_pref(channel, "exp_won_per_duck_killed")
 
         duck = cls(bot, channel, exp=exp_value, ttl=ttl)
         await duck._gen_discord_str()
@@ -652,7 +665,7 @@ class BabyDuck(BaseDuck):
 
     async def get_killed_string(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         return _(":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} seconds, and you shouldn't have done this!"
                  " You'll lose some exp, because you shouldn't kill babies"
@@ -665,7 +678,7 @@ class BabyDuck(BaseDuck):
 
     async def hug(self, ctx):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
         author = ctx.author
         await self.bot.db.add_to_stat(self.channel, author, "hugged_baby_ducks", 1)
         await self.bot.db.add_to_stat(self.channel, author, "exp", 3)
@@ -678,7 +691,7 @@ class MotherOfAllDucks(SuperDuck):
 
     async def _gen_discord_str(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
 
         trace = random.choice(self.bot.canards_trace)
 
@@ -692,7 +705,7 @@ class MotherOfAllDucks(SuperDuck):
         elif easter_eggs:
             corps = "🍳"
         else:
-            corps = await self.bot.db.get_pref(self.channel.guild, "emoji_used")
+            corps = await self.bot.db.get_pref(self.channel, "emoji_used")
 
         cri = _("**I AM...** Your mother", language)
 
@@ -701,7 +714,7 @@ class MotherOfAllDucks(SuperDuck):
 
     async def get_killed_string(self):
         _ = self.bot._
-        language = await self.bot.db.get_pref(self.channel.guild, "language")
+        language = await self.bot.db.get_pref(self.channel, "language")
         return _(":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but you won't kill my children! \_X<   *COUAC*   {exp}", language)
 
     async def post_kill(self, ctx, exp):

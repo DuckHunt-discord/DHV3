@@ -10,17 +10,10 @@ from cogs.helpers import checks
 import random
 
 
-class SuperAdmin:
+class SuperAdmin(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-
-    @commands.command()
-    @checks.is_super_admin()
-    @checks.is_channel_enabled()
-    async def db_id(self, ctx):
-        dbid = await self.bot.db.get_channel_dbid(ctx.channel)
-        await self.bot.send_message(ctx=ctx, message=f"Channel ID in the DB is {dbid}")
 
     @commands.command()
     @checks.is_super_admin()

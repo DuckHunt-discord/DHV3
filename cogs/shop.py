@@ -26,7 +26,7 @@ class Get_Stats:
         return await self.bot.db.get_stat(self.channel, self.target, stat)
 
 
-class Experience:
+class Experience(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -36,16 +36,16 @@ class Experience:
     @commands.cooldown(10, 20, BucketType.user)
     async def shop(self, ctx):
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not ctx.invoked_subcommand:
             await ctx.bot.send_message(ctx=ctx, message=_(":x: Incorrect syntax. Use the command this way: `!shop [list/item number] [argument if applicable]`", language))
 
-    async def __after_invoke(self, ctx):
+    async def cog_after_invoke(self, ctx):
         # print('{0.command} is done...'.format(ctx))
 
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if ctx.command.parent == self.shop:
             await self.bot.send_message(ctx=ctx,
@@ -54,7 +54,7 @@ class Experience:
     @shop.command()
     async def list(self, ctx):
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         await self.bot.send_message(ctx=ctx, message=_("Here is the list of all the shops items : https://duckhunt.me/shop-items/ . Thanks ", language))
 
@@ -65,7 +65,7 @@ class Experience:
         !shop 1"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "balles") < (await self.bot.db.get_level(channel=message.channel, player=message.author))["balles"]:
 
@@ -84,7 +84,7 @@ class Experience:
         !shop 2"""
         message = ctx.message
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "chargeurs") < (await self.bot.db.get_level(channel=message.channel, player=message.author))["chargeurs"]:
 
@@ -103,7 +103,7 @@ class Experience:
         !shop 3"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "ap_ammo") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "ap_ammo", int(time.time() + DAY))
@@ -121,7 +121,7 @@ class Experience:
         !shop 4"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "explosive_ammo") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "explosive_ammo", int(time.time() + DAY))
@@ -139,7 +139,7 @@ class Experience:
         !shop 5"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "confisque"):
             await self.bot.db.set_stat(message.channel, message.author, "confisque", False)
@@ -158,7 +158,7 @@ class Experience:
         !shop 6"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "graisse") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "graisse", int(time.time() + DAY))
@@ -179,7 +179,7 @@ class Experience:
         """
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not await self.bot.db.get_stat(message.channel, message.author, "sight"):
             await self.bot.db.set_stat(message.channel, message.author, "sight", 6)
@@ -197,7 +197,7 @@ class Experience:
         !shop 8"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "detecteurInfra") < time.time() or await self.bot.db.get_stat(message.channel, message.author,
                                                                                                                                      "detecteur_infra_shots_left") <= 0:
@@ -216,7 +216,7 @@ class Experience:
         !shop 9"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "silencieux") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "silencieux", int(time.time() + DAY))
@@ -235,11 +235,11 @@ class Experience:
         !shop 10"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "trefle") < time.time():
-            min_c = await self.bot.db.get_pref(ctx.guild, "clover_min_exp")
-            max_c = await self.bot.db.get_pref(ctx.guild, "clover_max_exp")
+            min_c = await self.bot.db.get_pref(ctx.channel, "clover_min_exp")
+            max_c = await self.bot.db.get_pref(ctx.channel, "clover_max_exp")
 
             if ctx.bot.current_event['id'] == 6:
                 max_c += ctx.bot.current_event['ammount_to_add_to_max_exp']
@@ -263,7 +263,7 @@ class Experience:
         !shop 11"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "sunglasses") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "sunglasses", int(time.time() + DAY))
@@ -284,7 +284,7 @@ class Experience:
         !shop 12"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "mouille") > time.time():
             await self.bot.db.set_stat(message.channel, message.author, "mouille", 0)
@@ -303,7 +303,7 @@ class Experience:
         !shop 13"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         await self.bot.db.set_stat(message.channel, message.author, "sabotee", "-")
         await self.bot.db.set_stat(message.channel, message.author, "sand", False)
@@ -318,7 +318,7 @@ class Experience:
         !shop 14 [target]"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, target, "sunglasses") > time.time():
             await self.bot.db.add_to_stat(message.channel, message.author, "exp", -5)
@@ -338,7 +338,7 @@ class Experience:
         !shop 15"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         await self.bot.db.set_stat(message.channel, target, "graisse", 0)
         await self.bot.db.set_stat(message.channel, target, "sand", True)
@@ -353,7 +353,7 @@ class Experience:
         !shop 16 [target]"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         await self.bot.db.set_stat(message.channel, target, "mouille", int(time.time()) + HOUR)
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -10)
@@ -368,7 +368,7 @@ class Experience:
 
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not ctx.author.id == 138751484517941259:
             await self.bot.send_message(ctx=ctx, message="🖕")
@@ -387,7 +387,7 @@ class Experience:
         !shop 17 [target]"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if target == ctx.message.author:
             await self.bot.send_message(ctx=ctx, force_pm=True, message=_("You wouldn't sabotage yourself, would you ?", language))
@@ -420,7 +420,7 @@ class Experience:
 
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if await self.bot.db.get_stat(message.channel, message.author, "life_insurance") < time.time():
             await self.bot.db.set_stat(message.channel, message.author, "life_insurance", int(time.time() + DAY * 7))
@@ -442,15 +442,15 @@ class Experience:
         """Buy a decoy (8 exp)
         !shop 20"""
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
         message = ctx.message
         channel = message.channel
 
         currently_sleeping = False
 
-        if await self.bot.db.get_pref(ctx.guild, "disable_decoys_when_ducks_are_sleeping"):
-            sdstart = await self.bot.db.get_pref(ctx.guild, "sleeping_ducks_start")
-            sdstop = await self.bot.db.get_pref(ctx.guild, "sleeping_ducks_stop")
+        if await self.bot.db.get_pref(ctx.channel, "disable_decoys_when_ducks_are_sleeping"):
+            sdstart = await self.bot.db.get_pref(ctx.channel, "sleeping_ducks_start")
+            sdstop = await self.bot.db.get_pref(ctx.channel, "sleeping_ducks_stop")
 
             now = time.time()
             thishour = int((now % DAY) / HOUR)
@@ -485,7 +485,7 @@ class Experience:
     async def item21(self, ctx):
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
         if random.randint(1, 6) == 1:
             self.bot.ducks_planning[message.channel] += 1
         # TODO : For real, make it !
@@ -508,7 +508,7 @@ class Experience:
         !shop 23"""
         message = ctx.message
         _ = self.bot._;
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         try:
             await ctx.message.delete()

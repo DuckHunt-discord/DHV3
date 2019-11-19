@@ -1,4 +1,5 @@
-import datetime
+from datetime import datetime, timedelta, timezone
+
 import random
 
 import discord
@@ -8,7 +9,7 @@ from cogs.helpers import checks
 from cogs import spawning
 
 
-class Experience:
+class Experience(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -17,13 +18,13 @@ class Experience:
     @checks.is_channel_enabled()
     async def give_exp(self, ctx, target:discord.Member, amount:int):
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         try:
             await self.bot.db.add_to_stat(ctx.message.channel, target, "exp", amount)
         except OverflowError:
             await self.bot.send_message(ctx=ctx, message=_("Congratulations, you sent / gave more experience than the maximum "
-                                                           "number I'm able to store.", await self.bot.db.get_pref(ctx.guild, "language")))
+                                                           "number I'm able to store.", await self.bot.db.get_pref(ctx.channel, "language")))
             return
 
         await self.bot.send_message(ctx=ctx, message=_(":ok:, he/she now has {newexp} exp points!", language).format(**{"newexp": await self.bot.db.get_stat(ctx.message.channel, target, "exp")}))
@@ -45,10 +46,10 @@ class Experience:
     @checks.had_giveback()
     async def send_exp(self, ctx, target: discord.Member, amount: int):
         _ = self.bot._
-        language = await self.bot.db.get_pref(ctx.guild, "language")
+        language = await self.bot.db.get_pref(ctx.channel, "language")
 
         message = ctx.message
-        if await self.bot.db.get_pref(message.guild, "user_can_give_exp"):
+        if await self.bot.db.get_pref(message.channel, "user_can_give_exp"):
             if await self.bot.db.get_stat(message.channel, message.author, "confisque"):  # No weapon
                 await self.bot.send_message(ctx=ctx, message=_(":x: To prevent abuse, you can't send exp when you don't have a weapon.", language))
                 return
@@ -63,7 +64,7 @@ class Experience:
 
             if await self.bot.db.get_stat(message.channel, message.author, "exp") >= amount:
                 await self.bot.db.add_to_stat(message.channel, message.author, "exp", -amount)
-                tax = await self.bot.db.get_pref(message.guild, "tax_on_user_give")
+                tax = await self.bot.db.get_pref(message.channel, "tax_on_user_give")
 
                 if tax > 0:
                     taxes = amount * tax / 100
@@ -85,10 +86,10 @@ class Experience:
             await self.bot.send_message(ctx=ctx, message=_(":x: Sending exp is disabled on this server", language))
 
     async def objectTD(self, gs, object):
-        date_expiration = datetime.datetime.fromtimestamp(gs(object))
-        td = date_expiration - datetime.datetime.now()
+        date_expiration = datetime.fromtimestamp(gs(object))
+        td = date_expiration - datetime.now(timezone.utc)
         _ = gs.bot._
-        language = await self.bot.db.get_pref(gs.channel.guild, "language")
+        language = await self.bot.db.get_pref(gs.channel, "language")
 
         return _("{date} (in {dans_jours}{dans_heures} and {dans_minutes})", language).format(
             **{"date": date_expiration.strftime(_('%m/%d at %H:%M:%S', language)), "dans_jours": _("{dans} days ", language).format(**{"dans": td.days}) if td.days else "",
