@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-10-01 07:48+0000\n"
+"POT-Creation-Date: 2019-11-19 06:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1282,43 +1282,43 @@ msgstr ""
 msgid "unemployed due to extinction of the duck species"
 msgstr ""
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/database.py:194
 msgid "Level of {player} on #{channel}"
 msgstr ""
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/database.py:197
 msgid "You leveled down!"
 msgstr ""
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/database.py:200
 msgid "You leveled up!"
 msgstr ""
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/database.py:208
 msgid "Current level"
 msgstr ""
 
-#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+#: cogs/helpers/database.py:208 cogs/helpers/database.py:209
 msgid "nom"
 msgstr ""
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/database.py:209
 msgid "Previous level"
 msgstr ""
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/database.py:210
 msgid "Shots accuracy"
 msgstr ""
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/database.py:211
 msgid "Weapon reliability"
 msgstr ""
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/database.py:212
 msgid "Exp points"
 msgstr ""
 
-#: cogs/helpers/database.py:219
+#: cogs/helpers/database.py:218
 msgid ""
 ":warning: There was an error while sending the embed, please check if the"
 " bot has the `embed_links` permission and try again!"
