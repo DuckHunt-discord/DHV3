@@ -15,7 +15,7 @@ class Meta(commands.Cog):
         bot.remove_command("help")
 
     def get_bot_uptime(self):
-        now = datetime.utcnow()
+        now = datetime.datetime.utcnow()
         delta = now - self.bot.uptime
         hours, remainder = divmod(int(delta.total_seconds()), 3600)
         minutes, seconds = divmod(remainder, 60)

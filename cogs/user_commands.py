@@ -281,7 +281,7 @@ class User(commands.Cog):
 
                 if not target:
 
-                    online_players = [p for p in guild.members if p.status.online or p.status.idle]
+                    online_players = [p for p in guild.members if p.status in [discord.Status.online, discord.Status.idle, discord.Status.dnd]]
                     online_players += guild.members if len(online_players) <= 5 else [author]
                     try:
                         online_players.remove(guild.me)
@@ -327,7 +327,7 @@ class User(commands.Cog):
     @commands.command(aliases=["calin", "<3", ":heart:", "wizzz"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
-    async def hug(self, ctx):
+    async def hug(self, ctx, target:discord.Member = None):
 
         message = ctx.message
         channel = message.channel
@@ -341,6 +341,12 @@ class User(commands.Cog):
 
         _ = self.bot._
         language = await get_pref(channel, "language")
+
+        if target:
+            await add_to_stat(channel, author, "hugs_human", 1)
+            await self.bot.send_message(ctx=ctx,
+                                        message=_("You hugged {mention} as strongly as you could. They are filled with determination.", language).format(mention=target.mention))
+            return
 
         for duck in self.bot.ducks_spawned:
             if duck.channel == channel and not duck.killed:

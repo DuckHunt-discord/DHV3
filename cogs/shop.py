@@ -363,7 +363,7 @@ class Experience(commands.Cog):
     @shop.command(name="16special", aliases=["specialwater", "specialwater_bucket", "specialbucket", "specialbukkit", "specialspigot"])  # wink, wink
     @checks.have_exp(30)
     async def item16special(self, ctx, target: discord.Member):
-        """ Drop a SUPER water bucket on someone (10 exp)
+        """ Drop a SUPER water bucket on someone (30 exp)
         !shop 16special [target]"""
 
         message = ctx.message

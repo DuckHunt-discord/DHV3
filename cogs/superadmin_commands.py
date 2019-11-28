@@ -17,6 +17,41 @@ class SuperAdmin(commands.Cog):
 
     @commands.command()
     @checks.is_super_admin()
+    async def webinterface_roles(self, ctx):
+        roles = {
+            '$admins'                        : 'Owner',
+            '$moderators'                    : 'Moderator',
+            '$translators'                   : 'Translator',
+            '$bug_hunters'                   : 'Bug Hunters',
+            '$proficients'                   : 'Proficient',
+            '$partners'                      : 'Partner',
+            '$donators'                      : 'Donator',
+            '$enigma_event_winners_june_2018': 'DuckEnigma Event Winner 2018',
+            '$enigma_event_winners_november_2019': 'Eminigma Event Winner 2019'
+
+        }
+
+        member_list = sorted(ctx.guild.members, key=lambda u: u.name)
+
+        for role_var in sorted(roles.keys()):
+            role_name = roles[role_var]
+
+            role = discord.utils.get(ctx.guild.roles, name=role_name)
+            php_code = '```'
+            php_code += f"{role_var} = array(\n"
+
+            for member in member_list:
+                if role in member.roles:
+                    php_code += f"{member.id}, // {member.name}#{member.discriminator}\n"
+
+            php_code += ");\n\n"
+
+            php_code += '```'
+
+            await ctx.send(php_code, delete_after=120)
+
+    @commands.command()
+    @checks.is_super_admin()
     async def get_level_from_exp(self, ctx, exp: int):
         await self.bot.send_message(ctx=ctx, message=await self.bot.db.get_level(exp))
 
