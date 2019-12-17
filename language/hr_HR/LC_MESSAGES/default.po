@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr "Imaš dovoljno protuoklopne municije!"
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr "Imaš dovoljno eksplozivne municije!"
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
 
@@ -265,30 +265,30 @@ msgstr "Genocid pataka"
 msgid "old noob"
 msgstr "Stari noob"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Razina  {player} na {channel}"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Tvoja razina je narasla!"
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Tvoja razina se smanjila!"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "Trenutačna razina"
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Prethodna razina"
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "Preciznost"
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "Bodovi iskustva (exp)"

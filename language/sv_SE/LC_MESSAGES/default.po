@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,20 +45,20 @@ msgstr ""
 msgid ":bulb: HINT: "
 msgstr ":bulb: TIPS:"
 
-#: cogs/admin_commands.py:26
+#: cogs/admin_commands.py:27
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Ok, användaren förbjuden. :gun:"
 
-#: cogs/admin_commands.py:38
+#: cogs/admin_commands.py:39
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Ok, användaren är inte förbjuden nu. :eyes:"
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
+#: cogs/admin_commands.py:258
 msgid ":x: Incorrect value."
 msgstr ":x: Felaktig värde."
 
-#: cogs/experience_related_commands.py:26
+#: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
@@ -66,48 +66,48 @@ msgstr ""
 "Grattis, du skickade/gav mer erfarenhet än det maximala antalet jag kan "
 "lagra."
 
-#: cogs/experience_related_commands.py:53
+#: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: För att stoppa missbruk, kan du inte skicka erfarenhetspoäng när du inte "
 "har ett gevär."
 
-#: cogs/experience_related_commands.py:57
+#: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Summan för erfarenhetspoäng måste vara positiv."
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Du har skickat {amount} exp till {target} (och har betalt {taxes} i "
 "skatter)!"
 
-#: cogs/experience_related_commands.py:83
+#: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
 msgstr "Du har inte tillräckligt med erfarenhetspoäng."
 
-#: cogs/experience_related_commands.py:85
+#: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server."
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d på %H:%M:%S"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} dagar"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} timmar"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} minuter"
 
-#: cogs/meta.py:35
+#: cogs/meta.py:38
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
@@ -143,31 +143,31 @@ msgstr ""
 "För 24 timmar kommer du att göra dubbel skada, detta kommer **inte** att "
 "fungera tillsammans med explosiv ammunition."
 
-#: cogs/user_commands.py:62 cogs/user_commands.py:135
+#: cogs/user_commands.py:63 cogs/user_commands.py:136
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
-#: cogs/user_commands.py:128
+#: cogs/user_commands.py:129
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Dina kläder är helt dyngsura, det går inte att jaga ännu! Du får vänta "
 "{temps_restant} minuter innnan du kan gå och jaga igen."
 
-#: cogs/user_commands.py:141
+#: cogs/user_commands.py:142
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ditt vapen har varit saboterad, tacka {assaillant} för denna dåliga skämt."
 
-#: cogs/user_commands.py:183
+#: cogs/user_commands.py:184
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ditt vapen har fastnat, ladda om för att fixa det."
 
-#: cogs/user_commands.py:202
+#: cogs/user_commands.py:203
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -175,7 +175,7 @@ msgstr ""
 "Det finns ingen anka här, men skottet har inte avfyrats eftersom infraröd "
 "sensorn du köpte för ditt vapen gör sitt jobb!"
 
-#: cogs/user_commands.py:212
+#: cogs/user_commands.py:213
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -183,7 +183,7 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:318
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
@@ -325,23 +325,23 @@ msgstr "Seriemördare av ankor"
 msgid "duck genocider"
 msgstr "Anka massmördare"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "Träffsäkerhet av skott"
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
 msgid "Weapon reliability"
 msgstr "Trovärdighet av vapen"
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "Erfarenhetspoäng"
 
-#: cogs/helpers/database.py:219
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -349,29 +349,29 @@ msgstr ""
 ":warning: Ett fel uppstod när du skickade inbäddningen, kolla om boten har "
 "`embed_links` tillåtelsen och försök igen!"
 
-#: cogs/helpers/ducks.py:220
+#: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
 
-#: cogs/helpers/ducks.py:231
+#: cogs/helpers/ducks.py:244
 msgid "BPAM"
 msgstr "PANG"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:248
 msgid "BAAM"
 msgstr "BANG"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "BOUM"
 msgstr "BOOM"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:329
+#: cogs/helpers/ducks.py:342
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"

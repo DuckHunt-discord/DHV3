@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Generated-By: Babel 2.7.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: cogs/experience_related_commands.py:26
+#: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
@@ -25,47 +25,47 @@ msgstr ""
 "Gratula, te küldtél / kaptál több xp-t, mint a maximum összeg amit "
 "raktározni tudok."
 
-#: cogs/experience_related_commands.py:53
+#: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
 ":x: Hogy meggátoljuk a visszaéléseket, nem küldhetsz tapasztalatpontot, ha "
 "nincs fegyvered."
 
-#: cogs/experience_related_commands.py:57
+#: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
 "Elküldtél {amount} xp-t {target} nek (és fizettél {taxes} xp-t adónak) !"
 
-#: cogs/experience_related_commands.py:83
+#: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
 msgstr "Nincs elég tapasztalatpontod"
 
-#: cogs/experience_related_commands.py:85
+#: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Tapasztalatküldés nem engedélyezett ezen a szerveren"
 
-#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} ({dans_jours}{dans_heures} ban és {dans_minutes} ben)"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d %H:%M:%S nál"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} nap"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} óra"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
@@ -77,7 +77,7 @@ msgstr ":champagne: Van már elég AP muníciód mostanra!"
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
 
@@ -409,38 +409,39 @@ msgstr "nyomi veterán"
 msgid "duck toaster"
 msgstr "kacsapirító"
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje # {channel} en"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
-#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Előző szint"
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "Tapasztalatpontok"

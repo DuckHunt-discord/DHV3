@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,24 +23,24 @@ msgstr ":x: Пропущен обязательный параметр."
 
 #: bot.py:149
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: У вас недостаточно опыта для этого."
+msgstr ":x: У вас недостаточно опыта."
 
 #: bot.py:152
 msgid ":x: You are not a server admin"
-msgstr ":x: Вы не администратор этого сервера."
+msgstr ":x: У вас нет прав администратора."
 
 #: bot.py:155
 msgid ":x: You are not a super admin."
-msgstr ":x: Вы не администратор бота."
+msgstr ":x: Эту команду может использовать только создатель бота."
 
 #: bot.py:156
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"Эта команда зарезервирована для владельца ботов. Если вы считаете, что это "
-"ошибка, свяжитесь с моим владельцем на сервере поддержки DuckHunt "
-"(`dh!help`)."
+"Эта команда зарезервирована для создателя бота. Если вы считаете, что это "
+"ошибка, свяжитесь с моим создателем на сервере поддержки DuckHunt (см. "
+"`dh!help`)."
 
 #: bot.py:160
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
@@ -53,132 +53,118 @@ msgid ""
 "DuckhuntIf you think this is an error, please contact my owner at the "
 "DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"Поддержите меня, проголосуйте на сайте <https://discordbots.org/bot/"
-"duckhunt>. Не забывайте, что может потребоваться некоторое время на то, "
-"чтобы я зарегистрировал ваш голос. Если вы думаете, что это ошибка, "
-"пожалуйста, свяжитесь с моим владельцем на сервере поддержки DuckHunt "
-"(`dh!help`)."
+"Поддержите меня, проголосовав на сайте <https://discordbots.org/bot/"
+"duckhunt>. Иногда мне нужно время, чтобы зарегистрировать ваш голос. Если вы "
+"думаете, что это ошибка, пожалуйста, свяжитесь с моим владельцем на сервере "
+"поддержки DuckHunt (`dh!help`)."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr "Повторите попытку через {seconds} сек.!"
 
 #: bot.py:179
 msgid ":bulb: HINT: "
 msgstr ":bulb: СОВЕТ:"
 
-#: cogs/admin_commands.py:26
+#: cogs/admin_commands.py:27
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Готово, пользователь заблокирован. :gun:"
 
-#: cogs/admin_commands.py:38
+#: cogs/admin_commands.py:39
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Готово, пользователь разблокирован. :eyes:"
 
-#: cogs/admin_commands.py:64
+#: cogs/admin_commands.py:65
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
 msgstr ""
-"<:cmd_ChannelAdded_01:439546719143723019>Готово, канал {channel} добавлен в "
-"игру! Удачной игры!"
+"<:cmd_ChannelAdded_01:439546719143723019> Готово, канал \"{channel}\" "
+"добавлен в игру! Удачной игры!"
 
-#: cogs/admin_commands.py:80
+#: cogs/admin_commands.py:81
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
 msgstr ""
-"<:cmd_ChannelRemoved_01:439546718737137674>Готово, канал {channel} удалён из "
-"игры. Пока!"
+"<:cmd_ChannelRemoved_01:439546718737137674> Готово, канал \"{channel}\" "
+"удалён из игры. Пока!"
 
-#: cogs/admin_commands.py:89
+#: cogs/admin_commands.py:90
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
 msgstr ""
-"<:cmd_AdminAdded_01:439549846622568466>{admin} теперь является "
-"администратором сервера!"
+"<:cmd_AdminAdded_01:439549846622568466> Пользователь с ником {admin} теперь "
+"является администратором сервера!"
 
-#: cogs/admin_commands.py:97
+#: cogs/admin_commands.py:98
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
 msgstr ""
-"<:cmd_AdminRemoved_01:439549845519335440>{admin} теперь не администратор "
-"сервера."
+"<:cmd_AdminRemoved_01:439549845519335440> С пользователя {admin} сняты права "
+"администратора."
 
-#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
 msgid "Done. User removed from the database, if he was in."
 msgstr "Готово. Пользователь удалён из базы данных."
 
-#: cogs/admin_commands.py:155
+#: cogs/admin_commands.py:156
 msgid "Done. All channel data was removed."
 msgstr "Готово. Все данные, связанные с каналом, удалены."
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:181
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
 msgstr ""
 ":x: Неправильный синтаксис. Используйте команду следующим образом: "
-"\"!settings [view/set/reset/list/modified/] [настройка (если применимо)]\"."
+"`!settings [view/set/reset/list/modified/] [настройка (если применимо)]`."
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
-msgid ""
-"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
-"setting"
-msgstr ""
-"<a:a_cmd_UnknownSetting:439550426862452746>**ОШИБКА:** | Я не знаю такого "
-"параметра."
-
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:190
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
-msgstr ":ok: Значение параметра {pref} изменено на `{value}` на этом сервере."
+msgstr ":ok: Значение параметра {pref} на этом сервере изменено на `{value}`."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:208
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
-"Игнорирую max_ducks_per_day, т. к. вы владелец бота. Кстати, лимит был бы "
-"`{max}`."
+"Игнорирую переменную max_ducks_per_day, т. к. вы владелец бота. Кстати, "
+"лимит был бы `{max}`."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:210
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
 "ducks per day."
 msgstr ""
 "Игнорирую max_ducks_per_day, т. к. у вас есть привилегии VIP. Пожалуйста, не "
-"злоупотребляйте ими. Кстати, лимит был бы `{max}`."
+"злоупотребляйте этими преимуществами. Кстати, лимит был бы `{max}`."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:218
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
 msgstr ""
-"<:official_Duck_01_reversed:439576463436546050>Есть права, чтобы выдать "
-"привилегии VIP!"
+"<:official_Duck_01_reversed:439576463436546050> Можно выдать привилегии VIP!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:220
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
-msgstr ":x: Нет прав, чтобы выдать привилегии VIP! Вы не владелец."
+msgstr ""
+":x: Нет прав, чтобы выдать привилегии VIP! Вы не являетесь создателем."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
+#: cogs/admin_commands.py:258
 msgid ":x: Incorrect value."
 msgstr ":x: Неверное значение."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
-msgstr ":ok: Значение параметра {pref} изменено на `{value}` на этом сервере."
+msgstr ":ok: Значение параметра {pref} на этом сервере изменено на `{value}`."
 
-#: cogs/admin_commands.py:292
-msgid ""
-"The list of preferences is available on our new website: https://duckhunt.me/"
-"bot-settings/"
-msgstr ""
-"Список параметров можно найти на нашем сайте: https://duckhunt.me/bot-"
-"settings/"
-
-#: cogs/experience_related_commands.py:26
+#: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
@@ -186,117 +172,136 @@ msgstr ""
 "Поздравляю, вы отправили настолько много очков опыта, что я не могу "
 "сохранить это число."
 
-#: cogs/experience_related_commands.py:29
+#: cogs/experience_related_commands.py:30
 msgid ":ok:, he/she now has {newexp} exp points!"
-msgstr ":ok:, теперь у него/неё {newexp} очк. опыта!"
+msgstr ":ok:, теперь у получателя {newexp} очк. опыта!"
 
-#: cogs/experience_related_commands.py:53
+#: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
-":x: Для предотвращения злоупотреблений, вы не можете передать очки опыта, "
-"пока ваше ружьё конфисковано."
+":x: Чтобы предотвратить жульничество, передача очков опыта недоступна, пока "
+"у вас конфисковано оружие."
 
-#: cogs/experience_related_commands.py:57
+#: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Количество очков опыта должно быть положительным."
 
-#: cogs/experience_related_commands.py:61
+#: cogs/experience_related_commands.py:62
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr ""
-":x: Подождите-ка... Мне не кажется? Вы пытаетесь отправить опыт САМОМУ СЕБЕ? "
-"В этом нет никакого смысла."
+":x: Мне кажется, или вы пытаетесь отправить очки опыта самому себе? Но это "
+"же бессмысленно!"
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
-"Вы отправили {amount} очк. опыта пользователю {target} (комиссия {taxes} очк."
-")!"
+"Вы отправили {amount} очк. опыта пользователю {target} (взимаемая комиссия: "
+"{taxes} очк.)!"
 
-#: cogs/experience_related_commands.py:83
+#: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
-msgstr "У вас недостаточно очков опыта."
+msgstr "У вас недостаточно опыта."
 
-#: cogs/experience_related_commands.py:85
+#: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: Передача очков опыта отключена на этом сервере."
 
-#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (в {dans_jours} {dans_heures} и {dans_minutes})"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d в %H:%M:%S"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} дн."
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} ч."
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} мин."
 
-#: cogs/meta.py:35
+#: cogs/meta.py:38
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr ""
-"Бот часто перезагружается для обновления. Не волнуйтесь, его аптайм — 99.8%."
+"Иногда бот перезагружается для загрузки обновления. Наш uptime — 99.8%."
 
-#: cogs/meta.py:75
+#: cogs/meta.py:69
+msgid ""
+"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Вот список команд: http://duckhunt.me/command-list/ |Если есть вопросы, "
+"заходите на сервер поддержки по ссылке: https://discordapp.com/invite/"
+"2BksEkV"
+
+#: cogs/meta.py:82
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
 "You can use this website to compare it to yours: https://time.is/compare/GMT"
 msgstr ""
 "Сейчас `{hour}:{minutes}:{seconds}` по GMT (или UTC±00:00), бот использует "
-"его для игры.\n"
-"Используйте этот сайт для сравнения времени со своим: https://time.is/"
-"compare/GMT"
+"этот часовой пояс в игре.\n"
+"Можете использовать данный сайт для сравнения времени со своим: https://time."
+"is/compare/GMT"
 
-#: cogs/meta.py:76
+#: cogs/meta.py:85
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr ""
-"Напишите `dh!freetime`, чтобы узнать, когда вам отдадут оружие бесплатно."
+"Напишите `dh!freetime`, чтобы узнать, когда произойдёт бесплатная раздача."
 
-#: cogs/meta.py:91
+#: cogs/meta.py:100
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: Следующая бесплатная раздача произойдёт через {sec} сек. "
+"({hours} ч. и {minutes} мин.)."
+
+#: cogs/meta.py:103
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr ""
-"Бесплатная раздача заполняет все пустые магазины (кроме текущего) и отдаёт "
-"вам ваше ружьё бесплатно (если оно до этого было конфисковано). Если можете, "
-"перезарядитесь до раздачи!"
+"Бесплатная раздача заполняет все пустые запасные магазины (кроме текущего) и "
+"отдаёт вам ваше оружие (если оно до этого было конфисковано). Советуем "
+"перезарядиться перед раздачей!"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:117
 msgid "You are using shard number {shard} out of {total} total shards"
-msgstr "Вы используете {shard} осколк. из общего количества ({total})"
+msgstr "Вы используете сервер под номером {shard}. Всего доступно {total}."
 
 #: cogs/scores.py:52
 msgid ""
 "The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
 "{channel_id}"
 msgstr ""
-"Статистика: http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
+"Статистика канала: http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
 
 #: cogs/scores.py:259
 msgid ""
 "Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
 "duckstats.php?cid={channel_id}&pid={player_id}"
 msgstr ""
-"Статистика: http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid="
-"{player_id}"
+"Ваша личная статистика: http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -307,7 +312,7 @@ msgid ""
 msgstr ""
 "Здравствуйте!\n"
 "Спасибо за приглашение! Я почти готов начать игру!\n"
-"Давайте перейдём в канал, который вы хотите добавить в игру. Напишите в нём "
+"Перейдите в канал, который вы хотите добавить в игру и напишите в нём "
 "`dh!setup`<:event_GuildAdded_01:439550913112309781>"
 
 #: cogs/setup_wizzard.py:35
@@ -315,8 +320,9 @@ msgid ""
 "Hello again!\n"
 " I'm just gonna run a quick permissions check and will be back in a few "
 "seconds! Please wait"
-msgstr "И снова здравствуйте!\n"
-"Дайте мне секунду, я проверю права и вернусь!"
+msgstr ""
+"И снова здравствуйте!\n"
+"Пожалуйста, подождите несколько секунд, мне нужно проверить права!"
 
 #: cogs/setup_wizzard.py:51
 msgid ""
@@ -325,9 +331,9 @@ msgid ""
 "to read messages.\n"
 "You can proceed without it, but shouldn't."
 msgstr ""
-" :small_red_triangle: У меня отсутствует право читать сообщения.\n"
-"Для любого нормального бота читать сообщения нормально.\n"
-"Я могу и без него, но лучше не пытайтесь."
+" :small_red_triangle: У меня отсутствует право на чтение сообщений.\n"
+"Для исправного функционирования бота ему обязательно обладать этим правом.\n"
+"Я могу попробовать поработать без него, но лучше не делайте так."
 
 #: cogs/setup_wizzard.py:56
 msgid ""
@@ -764,6 +770,14 @@ msgstr ""
 ":money_with_wings: Вы постирали свою одежду за 6 очков опыта. Если она была "
 "в песке или ваше ружьё саботировали, то теперь всё нормально!"
 
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"В следующий раз, когда с вами попытаются сыграть шутку, просто стреляйте. "
+"Это нанесёт урон только вашей репутации."
+
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -790,7 +804,9 @@ msgstr ""
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
 "would you?"
-msgstr "Оповещение сделано специально. Вы же не будете крысить, правда?"
+msgstr ""
+"Оповещение сделано специально. Вы же не собирались делать это втихаря, "
+"правда?"
 
 #: cogs/shop.py:346
 msgid ":champagne: You threw sand in {mention}'s weapon!"
@@ -800,7 +816,9 @@ msgstr ":champagne: Вы кинули песок в ружьё охотника 
 msgid ""
 "The mention is here on purpose. You wouldn't do this behind their back, "
 "would you"
-msgstr "Оповещение сделано специально. Вы же не будете крысить, правда?"
+msgstr ""
+"Оповещение сделано специально. Вы же не собирались делать это втихаря, "
+"правда?"
 
 #: cogs/shop.py:360
 msgid ""
@@ -809,6 +827,15 @@ msgid ""
 msgstr ""
 ":money_with_wings: Вы окатили ведром воды {target}, ему/ей нужно подождать "
 "час, чтобы одежда высохла и можно было продолжить охоту."
+
+#: cogs/shop.py:379
+msgid ""
+":money_with_wings: You dropped a **SPECIAL** bucket full of water on "
+"{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
+"they can return hunting."
+msgstr ""
+":money_with_wings: Вы окатили **ОСОБЫМ** ведром воды пользователя с ником "
+"{target}, вашей жертве теперь нужно подождать час, пока высохнет одежда."
 
 #: cogs/shop.py:393
 msgid "You wouldn't sabotage yourself, would you ?"
@@ -895,27 +922,27 @@ msgstr ""
 ":money_with_wings: Вы потратили 40 очков опыта, в канале появится "
 "механическая утка. Это неправильно, но так смешно!"
 
-#: cogs/user_commands.py:62 cogs/user_commands.py:135
+#: cogs/user_commands.py:63 cogs/user_commands.py:136
 msgid "You don't have a weapon."
-msgstr "У вас нет ружья"
+msgstr "У вас нет ружья."
 
-#: cogs/user_commands.py:68
+#: cogs/user_commands.py:69
 msgid "You unjammed your weapon."
 msgstr "Вы справились с клином ружья."
 
-#: cogs/user_commands.py:82
+#: cogs/user_commands.py:83
 msgid "You reloaded your weapon."
 msgstr "Вы перезарядили ружьё."
 
-#: cogs/user_commands.py:84
+#: cogs/user_commands.py:85
 msgid "You don't have any ammo left!"
 msgstr "В магазине не осталось патронов!"
 
-#: cogs/user_commands.py:87
+#: cogs/user_commands.py:88
 msgid "You don't need to reload your weapon."
 msgstr "Перезарядка не требуется."
 
-#: cogs/user_commands.py:90
+#: cogs/user_commands.py:91
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -923,23 +950,23 @@ msgstr ""
 "{greet} | Патронов в магазине: {balles_actuelles}/{balles_max} | Магазинов "
 "осталось: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:128
+#: cogs/user_commands.py:129
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "В мокрой одежде на охоту нельзя! Она высохнет через {temps_restant} мин."
 
-#: cogs/user_commands.py:141
+#: cogs/user_commands.py:142
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ваше ружьё заклинило, требуется перезарядка."
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше ружьё было саботировано, спасибо охотнику {assaillant} за эту плохую "
 "шутку."
 
-#: cogs/user_commands.py:158
+#: cogs/user_commands.py:159
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -947,11 +974,11 @@ msgstr ""
 "**МАГАЗИН ПУСТ** | Патронов в магазине : {balles_actuelles}/{balles_max} | "
 "Магазинов осталось: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:183
+#: cogs/user_commands.py:184
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ваше ружьё заклинило, требуется перезарядка."
 
-#: cogs/user_commands.py:202
+#: cogs/user_commands.py:203
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -959,7 +986,7 @@ msgstr ""
 "Уток тут нет, но благодаря инфракрасному датчику вы не потратили пулю просто "
 "так!"
 
-#: cogs/user_commands.py:212
+#: cogs/user_commands.py:213
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -967,26 +994,26 @@ msgstr ""
 "К счастью, вы промахнулись, но... во что вы, собственно, целились? Тут не во "
 "что стрелять... [-1 очко опыта за промах] [-1 очко опыта за выстрел вникуда]"
 
-#: cogs/user_commands.py:301
+#: cogs/user_commands.py:302
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
 "[hunting accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
-"**БУМ** Вы промахнулись по утке, но попали **сами в себя**! Может, немного "
+"**БАХ** Вы промахнулись по утке, но попали **сами в себя**! Может, немного "
 "повернёте оружие перед следующим выстрелом? [-1 очко опыта за промах] [-2 "
 "очка опыта за несчастный случай во время охоты] [**ружьё конфисковано**]"
 
-#: cogs/user_commands.py:306
+#: cogs/user_commands.py:307
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
 msgstr ""
-"**БУМ** Вы промахнулись по утке, но попали в игрока {player}! [-1 очко опыта "
+"**БАХ** Вы промахнулись по утке, но попали в игрока {player}! [-1 очко опыта "
 "за промах] [-2 очка опыта за несчастный случай во время охоты] [**ружьё "
 "конфисковано**]"
 
-#: cogs/user_commands.py:311
+#: cogs/user_commands.py:312
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -994,19 +1021,27 @@ msgstr ""
 "Вы можете купить оружие в магазине (`dh!shop 5`) или подождать бесплатную "
 "раздачу."
 
-#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:318
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**ПИУ** Вы промахнулись по утке! [-1 очко опыта за промах]"
 
-#: cogs/user_commands.py:352
+#: cogs/user_commands.py:348
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr ""
+"Вы обняли пользователя с ником {mention} настолько сильно, насколько это "
+"только возможно."
+
+#: cogs/user_commands.py:359
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Вы обняли дерево?!"
 
-#: cogs/user_commands.py:355
+#: cogs/user_commands.py:362
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
-msgstr "Тут нет уток, что вы намеревались обнять, дерево что ли?!"
+msgstr "Тут нет уток, что вы намеревались обнять, дерево, что ли?!"
 
-#: cogs/user_commands.py:369
+#: cogs/user_commands.py:376
 msgid "**Current event**"
 msgstr "**Текущее событие**"
 
@@ -1064,7 +1099,7 @@ msgstr "Утка не хочет, чтобы её застрелили. ·°'\\`
 
 #: cogs/helpers/config.py:72
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Утка подошла к лемонадному киоску. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Утка подошла к лимонадному киоску. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:75
 msgid "a stuffed duck."
@@ -1220,7 +1255,7 @@ msgstr "много кустов."
 
 #: cogs/helpers/config.py:186
 msgid "Everything is calm"
-msgstr "Всё хорошо."
+msgstr "Всё спокойно."
 
 #: cogs/helpers/config.py:186
 msgid "Nothing is happening right now."
@@ -1341,21 +1376,121 @@ msgstr "ненавистник уток"
 msgid "duck pest"
 msgstr "утиный вредитель"
 
+#: cogs/helpers/config.py:209
+msgid "duck hassler"
+msgstr "ночной сон уток"
+
+#: cogs/helpers/config.py:210
+msgid "duck plucker"
+msgstr "ощипыватель уток"
+
 #: cogs/helpers/config.py:211
 msgid "hunter"
 msgstr "охотник"
+
+#: cogs/helpers/config.py:212
+msgid "duck inside out turner"
+msgstr "выворачивает уток наизнанку"
+
+#: cogs/helpers/config.py:213
+msgid "duck clobber"
+msgstr "колошматит уток"
+
+#: cogs/helpers/config.py:214
+msgid "duck chewer"
+msgstr "жуёт уток, как жвачку"
 
 #: cogs/helpers/config.py:215
 msgid "duck eater"
 msgstr "пожиратель уток"
 
+#: cogs/helpers/config.py:216
+msgid "duck flattener"
+msgstr "расплющивает уток"
+
+#: cogs/helpers/config.py:217
+msgid "duck disassembler"
+msgstr "разбирает уток на части"
+
+#: cogs/helpers/config.py:218
+msgid "duck demolisher"
+msgstr "крушит уток"
+
 #: cogs/helpers/config.py:219
 msgid "duck killer"
 msgstr "убийца уток"
 
+#: cogs/helpers/config.py:220
+msgid "duck skinner"
+msgstr "ошкуривает уток"
+
 #: cogs/helpers/config.py:221
 msgid "duck predator"
 msgstr "утиный хищник"
+
+#: cogs/helpers/config.py:222
+msgid "duck chopper"
+msgstr "крушитель уток"
+
+#: cogs/helpers/config.py:223
+msgid "duck decorticator"
+msgstr "снимает с уток кожу"
+
+#: cogs/helpers/config.py:224
+msgid "duck fragger"
+msgstr "убийца уток"
+
+#: cogs/helpers/config.py:225
+msgid "duck shatterer"
+msgstr "разбивает уток"
+
+#: cogs/helpers/config.py:226
+msgid "duck smasher"
+msgstr "раздавливает уток в лепёшку"
+
+#: cogs/helpers/config.py:227
+msgid "duck breaker"
+msgstr "дробит уток"
+
+#: cogs/helpers/config.py:228
+msgid "duck wrecker"
+msgstr "крушитель уток"
+
+#: cogs/helpers/config.py:229
+msgid "duck impaler"
+msgstr "прокалыватель уток"
+
+#: cogs/helpers/config.py:230
+msgid "duck eviscerator"
+msgstr "потрошитель уток"
+
+#: cogs/helpers/config.py:231
+msgid "ducks terror"
+msgstr "утиный кошмар"
+
+#: cogs/helpers/config.py:232
+msgid "duck exploder"
+msgstr "взрыватель уток"
+
+#: cogs/helpers/config.py:233
+msgid "duck destructor"
+msgstr "уничтожитель уток"
+
+#: cogs/helpers/config.py:234
+msgid "duck blaster"
+msgstr "утко-бластер"
+
+#: cogs/helpers/config.py:235
+msgid "duck pulverizer"
+msgstr "утко-пульвелизатор"
+
+#: cogs/helpers/config.py:236
+msgid "duck disintegrator"
+msgstr "утко-дезинтегратор"
+
+#: cogs/helpers/config.py:237
+msgid "duck atomizer"
+msgstr "разъедает уток на атомы"
 
 #: cogs/helpers/config.py:238
 msgid "duck annihilator"
@@ -1365,51 +1500,60 @@ msgstr "анигилятор уток"
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
+#: cogs/helpers/config.py:240
+msgid "duck genocider"
+msgstr "главный по утиному геноциду"
+
 #: cogs/helpers/config.py:241
 msgid "old noob"
 msgstr "старый новичок"
 
+#: cogs/helpers/config.py:242
+msgid "duck toaster"
+msgstr "поджариватель уток"
+
 #: cogs/helpers/config.py:243
 msgid "unemployed due to extinction of the duck species"
-msgstr "уволен(а) из-за исчезновения видов уток"
+msgstr "уволен(а) из-за исчезновения уток как вида."
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Уровень игрока {player} в канале #{channel}"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Ваш уровень уменьшен!"
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Ваш уровень повышен!"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "Текущий уровень"
 
-#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
 msgid "nom"
 msgstr "ням"
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Предыдущий уровень"
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "Точность"
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
 msgid "Weapon reliability"
 msgstr "Надёжность ружья"
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "Очков опыта"
 
-#: cogs/helpers/database.py:219
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -1417,11 +1561,47 @@ msgstr ""
 ":warning: Ошибка при отправке интерактивного меню. Пожалуйста, проверьте, "
 "есть ли у бота право на их отправку и повторите попытку!"
 
-#: cogs/helpers/ducks.py:29
+#: cogs/helpers/ducks.py:36
 msgid "Nothing"
 msgstr "Ничего"
 
-#: cogs/helpers/ducks.py:220
+#: cogs/helpers/ducks.py:40
+msgid "a lot of bushes."
+msgstr "кучу кустов."
+
+#: cogs/helpers/ducks.py:43
+msgid "a duck pin."
+msgstr "брошку-утку."
+
+#: cogs/helpers/ducks.py:47
+msgid "a bullet"
+msgstr "пулю"
+
+#: cogs/helpers/ducks.py:59
+msgid "a full magazine"
+msgstr "полный магазин пуль."
+
+#: cogs/helpers/ducks.py:71
+msgid "a box of explosive ammo"
+msgstr "коробку разрывных патронов"
+
+#: cogs/helpers/ducks.py:84
+msgid "an almost empty box of explosive ammo"
+msgstr "почти пустую коробку разрывных патронов"
+
+#: cogs/helpers/ducks.py:98
+msgid "some duck-grease"
+msgstr "немножко утиного жира."
+
+#: cogs/helpers/ducks.py:107
+msgid "a full-featured silencer"
+msgstr "полностью рабочий глушитель"
+
+#: cogs/helpers/ducks.py:116
+msgid "a fully functional infrared detector"
+msgstr "полностью рабочий инфракрасный детектор"
+
+#: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1429,23 +1609,31 @@ msgstr ""
 "**ВЗЛЁТ** Вы испугали утку своим шумом и она улетела! ПОЗДРАВЛЯЮ! [-1 очко "
 "опыта за промах]"
 
-#: cogs/helpers/ducks.py:231
+#: cogs/helpers/ducks.py:244
 msgid "BPAM"
-msgstr "БУМ"
+msgstr "БАМ"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:248
 msgid "BAAM"
 msgstr "БДЫЩЬ"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "BOUM"
-msgstr "БЭУМ"
+msgstr "БУМ"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "SPROTCH"
-msgstr "БИУ"
+msgstr "ХЛЮП"
 
-#: cogs/helpers/ducks.py:329
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
+msgid "Searching the bushes around the duck, you found..."
+msgstr "Поискав в кустах около утки, вы обнаружили..."
+
+#: cogs/helpers/ducks.py:307
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "...жаль, что места под находку в рюкзаке нет."
+
+#: cogs/helpers/ducks.py:342
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1453,7 +1641,11 @@ msgstr ""
 "Это было близко, вы почти убили утку, но другой охотник оказался шустрее "
 "вас! [-1 очко опыта за промах]"
 
-#: cogs/helpers/ducks.py:368
+#: cogs/helpers/ducks.py:376
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+
+#: cogs/helpers/ducks.py:381
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1461,7 +1653,15 @@ msgstr ""
 ":heart: Вы попытались обнять утку, но она знает, что вы убили её брата. Утка "
 "улетела от вас и вернулась к себе на пруд. [-2 очка опыта]"
 
-#: cogs/helpers/ducks.py:372
+#: cogs/helpers/ducks.py:383
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart:Вы попытались обнять утку, но она улетела, потому что вы показались "
+"ей подозрительным. [-2 очк. опыта]"
+
+#: cogs/helpers/ducks.py:385
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1469,7 +1669,7 @@ msgstr ""
 ":heart: Вы попытались обнять утку, но она увидела у вас за спиной оружие. "
 "Утка улетела от вас и вернулась к себе на пруд! [-2 очка опыта]"
 
-#: cogs/helpers/ducks.py:381
+#: cogs/helpers/ducks.py:394
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1480,7 +1680,7 @@ msgstr ""
 "убили уток в канале #{channel}: {total} ({supercanards} из которых — "
 "суперутки).     \\_X<   *КРЯ*   {exp}"
 
-#: cogs/helpers/ducks.py:389
+#: cogs/helpers/ducks.py:402
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1488,18 +1688,26 @@ msgstr ""
 ":gun: Утка выжила, выстрелите ещё раз! *ОБНАРУЖЕНА СУПЕРУТКА* [вы отняли "
 "{vie} здоровья, осталось {current_life} из {max_life}]"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:404
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: Утка выжила, выстрелите ещё раз! *ОБНАРУЖЕНА СУПЕРУТКА* [вы отняли "
 "{vie} здоровья]"
 
-#: cogs/helpers/ducks.py:637
+#: cogs/helpers/ducks.py:600
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Пользователь с ниом {user_mention} подсунул вам механическую утку. Очевидно, "
+"она неубиваема. [-1 очк. опыта]"
+
+#: cogs/helpers/ducks.py:650
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Утёнок ушёл отдыхать в неизвестном направлении ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:657
+#: cogs/helpers/ducks.py:670
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1509,7 +1717,7 @@ msgstr ""
 "не должны были этого делать! Вы потеряли немного очков опыта, потому что "
 "убивать малышей не надо! \\_X<   *COUAC*   {exp}"
 
-#: cogs/helpers/ducks.py:673
+#: cogs/helpers/ducks.py:686
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1519,11 +1727,11 @@ msgstr ""
 "очка опыта]\n"
 "Утёнок ушёл с чувством, что его любят."
 
-#: cogs/helpers/ducks.py:697
+#: cogs/helpers/ducks.py:710
 msgid "**I AM...** Your mother"
 msgstr "**Я...** твоя мать"
 
-#: cogs/helpers/ducks.py:705
+#: cogs/helpers/ducks.py:718
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

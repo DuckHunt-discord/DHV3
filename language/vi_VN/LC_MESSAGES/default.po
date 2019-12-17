@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,15 +66,15 @@ msgstr ""
 msgid ":bulb: HINT: "
 msgstr ":ear: Nói nhỏ nè :"
 
-#: cogs/admin_commands.py:26
+#: cogs/admin_commands.py:27
 msgid ":ok: Done, user banned. :gun:"
 msgstr "Người dùng bị chặt cu :ok_hand: "
 
-#: cogs/admin_commands.py:38
+#: cogs/admin_commands.py:39
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr "Người dùng vừa cứng lại rồi :D"
 
-#: cogs/admin_commands.py:64
+#: cogs/admin_commands.py:65
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
@@ -82,14 +82,14 @@ msgstr ""
 "<:cmd_ChannelAdded_01:439546719143723019> Vịt đã vào phòng {channel}. Xách "
 "súng lên nào !"
 
-#: cogs/admin_commands.py:80
+#: cogs/admin_commands.py:81
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
 msgstr ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Vịt đã chạy khỏi {channel}."
 
-#: cogs/admin_commands.py:89
+#: cogs/admin_commands.py:90
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
@@ -97,7 +97,7 @@ msgstr ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} đã được làm một thằng chăn "
 "vịt, chúc mừng! :clap:"
 
-#: cogs/admin_commands.py:97
+#: cogs/admin_commands.py:98
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
@@ -105,17 +105,17 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} đã bị sa thải khỏi ngành "
 "chăn vịt :wave:"
 
-#: cogs/admin_commands.py:142 cogs/admin_commands.py:168
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
 msgid "Done. User removed from the database, if he was in."
 msgstr "Đã bị xóa khỏi hồ sơ chăn vịt."
 
-#: cogs/admin_commands.py:155
+#: cogs/admin_commands.py:156
 msgid "Done. All channel data was removed."
 msgstr ""
 ":boom: :boom: :boom: Kênh vừa bị thả nuke. Không còn gì sống sót.... :fire: :"
 "fire: :fire: "
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:181
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -123,18 +123,11 @@ msgstr ""
 ":x: Thần chú không chính xác, hãy niệm chú theo cách này : `!settings [view/"
 "set/reset/list/modified] [setting if applicable]`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
-msgid ""
-"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
-"setting"
-msgstr "<a:a_cmd_UnknownSetting:439550426862452746> Phép thuật gì đây ?"
-
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:190
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: Cài đặt {pref} được đổi thành `{value}` trong nhóm này."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:208
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -142,7 +135,7 @@ msgstr ""
 "bỏ qua kiểm tra max_ducks_per_day vì bạn sở hữu con vịt này. Nó sẽ là "
 "`{max}`."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:210
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -151,7 +144,7 @@ msgstr ""
 "Bỏ qua kiểm tra max_ducks_per_day khi đang là 1 thành viên chăn vịp VIP. "
 "Đừng lạm dụng!!! . Giới hạn sẽ được đặt ở `{max}` vịt mỗi ngày."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:218
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -159,27 +152,20 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> Được phép đặt trạng thái VIP "
 "!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:220
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Không được phép đặt trạng thái vip vì không sở hữu con vịt này."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
+#: cogs/admin_commands.py:258
 msgid ":x: Incorrect value."
 msgstr ":x: Niệm chú sai, 1 điểm về chuồng."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: Cài đặt {pref} đã đổi thành `{value}` trong nhóm này."
 
-#: cogs/admin_commands.py:292
-msgid ""
-"The list of preferences is available on our new website: https://duckhunt.me/"
-"bot-settings/"
-msgstr ""
-"Xem thêm các thiết lập cho vịt tại :  https://duckhunt.me/bot-settings/"
-
-#: cogs/experience_related_commands.py:26
+#: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
@@ -187,65 +173,65 @@ msgstr ""
 "Chúc mừng bạn đã gửi (nhận) số kinh nghiệm nhiều hơn số có thể dự trữ . :"
 "money_mouth: "
 
-#: cogs/experience_related_commands.py:29
+#: cogs/experience_related_commands.py:30
 msgid ":ok:, he/she now has {newexp} exp points!"
 msgstr "Thợ săn này đang có {newexp} exp !"
 
-#: cogs/experience_related_commands.py:53
+#: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr "Không thể gửi exp khi không có vũ khí :P"
 
-#: cogs/experience_related_commands.py:57
+#: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
 msgstr "Số exp cần phải lớn hơn 0."
 
-#: cogs/experience_related_commands.py:61
+#: cogs/experience_related_commands.py:62
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr "Tự đút đít à, hay đấy :heart_eyes: "
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr "Đã gửi {amount} exp đến {target} (và đã trả {taxes} tiền thuế )!"
 
-#: cogs/experience_related_commands.py:83
+#: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
 msgstr "Không đủ exp"
 
-#: cogs/experience_related_commands.py:85
+#: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: không thể gửi exp tại đây"
 
-#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (trong {dans_jours}{dans_heures} và {dans_minutes})"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d hoặc %H:%M:%S"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} ngày"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} giờ"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} phút"
 
-#: cogs/meta.py:35
+#: cogs/meta.py:38
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr "Vịt đang phải nằm viện. Nhấn F và cầu nguyện :clap: "
 
-#: cogs/meta.py:64
+#: cogs/meta.py:69
 msgid ""
 "Here is the command list: http://duckhunt.me/command-list/ | If you need "
 "anything, feel free to join the support server at https://discordapp.com/"
@@ -254,7 +240,7 @@ msgstr ""
 "Học tiếng vịt kêu tại : http://duckhunt.me/command-list/ | Nếu cần giúp đỡ "
 ",hãy gia nhập hội chăn vịt tại https://discordapp.com/invite/2BksEkV"
 
-#: cogs/meta.py:75
+#: cogs/meta.py:82
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -264,20 +250,20 @@ msgstr ""
 "dụng.\n"
 "Có thể so sánh tại: https://time.is/compare/GMT"
 
-#: cogs/meta.py:76
+#: cogs/meta.py:85
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr "Dùng lệnh `dh!freetime` để xem khi nào có thính rơi. "
 
-#: cogs/meta.py:89
+#: cogs/meta.py:100
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
 ":alarm_clock: Nhận lại vũ khí và đạn sau {hours} tiếng và {minutes} phút"
 
-#: cogs/meta.py:91
+#: cogs/meta.py:103
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -286,7 +272,7 @@ msgstr ""
 "Nhặt được thùng thính sẽ được nạp thêm băng đạn và cả súng (nếu bị mất), "
 "không ảnh hưởng đến số đạn trong băng đạn hiện tại. Nên nạp đạn trước :gun:"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:117
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Đang dùng  {shard} mảnh trong tổng số  {total} mảnh"
 
@@ -818,27 +804,27 @@ msgid ""
 "It's wrong, but so funny!"
 msgstr ":money_with_wings: Bạn vừa thả một con vịt máy vào với giá 40 exp !"
 
-#: cogs/user_commands.py:62 cogs/user_commands.py:135
+#: cogs/user_commands.py:63 cogs/user_commands.py:136
 msgid "You don't have a weapon."
 msgstr "Không có vũ khí"
 
-#: cogs/user_commands.py:68
+#: cogs/user_commands.py:69
 msgid "You unjammed your weapon."
 msgstr "Bạn đã gỡ kẹt vũ khí"
 
-#: cogs/user_commands.py:82
+#: cogs/user_commands.py:83
 msgid "You reloaded your weapon."
 msgstr "Bạn đã nạp đạn"
 
-#: cogs/user_commands.py:84
+#: cogs/user_commands.py:85
 msgid "You don't have any ammo left!"
 msgstr "Hết đạn!"
 
-#: cogs/user_commands.py:87
+#: cogs/user_commands.py:88
 msgid "You don't need to reload your weapon."
 msgstr "Không cần nạp đạn"
 
-#: cogs/user_commands.py:90
+#: cogs/user_commands.py:91
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -846,20 +832,20 @@ msgstr ""
 "{greet} | Đạn trong vũ khí : {balles_actuelles}/{balles_max} | Băng đạn còn "
 "lại: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:128
+#: cogs/user_commands.py:129
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr "Quần áo đang ướt, không thể đi săn! Hãy đợi {temps_restant} phút"
 
-#: cogs/user_commands.py:141
+#: cogs/user_commands.py:142
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Vũ khí bị kẹt, phải nạp lại đạn "
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vũ khí của bạn vừa bị phá, cảm ơn thằng {assaillant}"
 
-#: cogs/user_commands.py:158
+#: cogs/user_commands.py:159
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -867,11 +853,11 @@ msgstr ""
 "** HẾT ĐẠN ** | Đạn trong vũ khí: {balles_actuelles} / {balles_max} | Băng "
 "đạn còn lại: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:183
+#: cogs/user_commands.py:184
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Vũ khí bị kẹt, nạp đạn để gỡ kẹt"
 
-#: cogs/user_commands.py:202
+#: cogs/user_commands.py:203
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -879,7 +865,7 @@ msgstr ""
 "Không có con vịt nào ở đây, nhưng vũ khí không bắn vì đầu dò hồng ngoại đang "
 "làm việc rất tốt !"
 
-#: cogs/user_commands.py:212
+#: cogs/user_commands.py:213
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -887,7 +873,7 @@ msgstr ""
 "Chính xác thì bạn đang cố bắn cái gì vậy? Không có con vịt nào trong phòng "
 "cả... ( bắn trượt: -1 exp) ( bắn ngu: -1 exp )"
 
-#: cogs/user_commands.py:301
+#: cogs/user_commands.py:302
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -897,7 +883,7 @@ msgstr ""
 "mình... nên quay súng của bạn ngược lại vào lần sau ( bắn trượt: -1 exp) ( "
 "tai nạn nghề nghiệp: -2 exp) + ( súng bị tịch thu )"
 
-#: cogs/user_commands.py:306
+#: cogs/user_commands.py:307
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -906,7 +892,7 @@ msgstr ""
 "{player} ( bắn trượt: -1 exp ) ( tai nạn nghề nghiệp: -2 exp) + ( tịch thu "
 "vũ khí )"
 
-#: cogs/user_commands.py:311
+#: cogs/user_commands.py:312
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -914,19 +900,19 @@ msgstr ""
 "bạn có thể mua vũ khí tại cửa hàng (`dh!shop 5`) hoặc đợi thính rơi ( "
 "`!freetime`)"
 
-#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:318
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Bắn trượt ! ( -1 exp )"
 
-#: cogs/user_commands.py:352
+#: cogs/user_commands.py:359
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Bạn vừa ôm một cái cây?"
 
-#: cogs/user_commands.py:355
+#: cogs/user_commands.py:362
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Không có một con vịt nào ở đây cả, có lẽ nên ôm một cái cây?"
 
-#: cogs/user_commands.py:369
+#: cogs/user_commands.py:376
 msgid "**Current event**"
 msgstr "**EVENT hiện tại**"
 
@@ -1397,43 +1383,44 @@ msgstr "Máy nướng vịt"
 msgid "unemployed due to extinction of the duck species"
 msgstr "Thất nghiệp vì vịt bị tuyệt chủng "
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "Cấp độ của {player} trong khu săn bắn #{channel}"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "Bạn vừa bị giáng cấp!!"
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "Bạn vừa lên cấp"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "Cấp độ hiện tại"
 
-#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
 msgid "nom"
 msgstr "Đề cử"
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "Cấp độ lần trước"
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "Độ chính xác"
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
 msgid "Weapon reliability"
 msgstr "Độ may mắn của vũ khí"
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "Exp"
 
-#: cogs/helpers/database.py:219
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -1441,47 +1428,47 @@ msgstr ""
 ":warning: Có lỗi khi gửi links nhúng, vui lòng kiểm tra xem vịt có quyền "
 "`embed_links` hay không và thử lại!"
 
-#: cogs/helpers/ducks.py:29
+#: cogs/helpers/ducks.py:36
 msgid "Nothing"
 msgstr "Chẳng có gì..."
 
-#: cogs/helpers/ducks.py:33
+#: cogs/helpers/ducks.py:40
 msgid "a lot of bushes."
 msgstr "Thêm nhiều bụi cỏ nữa !"
 
-#: cogs/helpers/ducks.py:37
+#: cogs/helpers/ducks.py:43
 msgid "a duck pin."
 msgstr "một cái ghim vịt"
 
-#: cogs/helpers/ducks.py:41
+#: cogs/helpers/ducks.py:47
 msgid "a bullet"
 msgstr "một viên đạn"
 
-#: cogs/helpers/ducks.py:53
+#: cogs/helpers/ducks.py:59
 msgid "a full magazine"
 msgstr "một băng đạn"
 
-#: cogs/helpers/ducks.py:65
+#: cogs/helpers/ducks.py:71
 msgid "a box of explosive ammo"
 msgstr "một thùng đạn nổ"
 
-#: cogs/helpers/ducks.py:78
+#: cogs/helpers/ducks.py:84
 msgid "an almost empty box of explosive ammo"
 msgstr "một thùng đạn nổ rỗng"
 
-#: cogs/helpers/ducks.py:92
+#: cogs/helpers/ducks.py:98
 msgid "some duck-grease"
 msgstr "một ít mỡ vịt"
 
-#: cogs/helpers/ducks.py:101
+#: cogs/helpers/ducks.py:107
 msgid "a full-featured silencer"
 msgstr "một cái giảm thanh"
 
-#: cogs/helpers/ducks.py:110
+#: cogs/helpers/ducks.py:116
 msgid "a fully functional infrared detector"
 msgstr "một đầu dò hồng ngoại"
 
-#: cogs/helpers/ducks.py:220
+#: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
@@ -1489,31 +1476,31 @@ msgstr ""
 "***FAPP FAPP*** Vịt đã bay đi vì nghe thấy quá nhiều tiếng ồn, chúc mừng! ( "
 "bắn trượt: -1 exp)"
 
-#: cogs/helpers/ducks.py:231
+#: cogs/helpers/ducks.py:244
 msgid "BPAM"
 msgstr "BAMM"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:248
 msgid "BAAM"
 msgstr "BÙMMM"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "BOUM"
 msgstr "CHÍUUUU"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "SPROTCH"
 msgstr "TẠCH TẠCH"
 
-#: cogs/helpers/ducks.py:291 cogs/helpers/ducks.py:294
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
 msgid "Searching the bushes around the duck, you found..."
 msgstr "Trong bụi cỏ gần con vịt, tìm thấy... "
 
-#: cogs/helpers/ducks.py:294
+#: cogs/helpers/ducks.py:307
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr "Túi đã đầy, không thể nhặt thêm "
 
-#: cogs/helpers/ducks.py:329
+#: cogs/helpers/ducks.py:342
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1521,11 +1508,11 @@ msgstr ""
 "Bạn gần như đã bắn trúng con vịt, nhưng người khác đã hạ nó ( bắn trượt: - 1 "
 "exp)"
 
-#: cogs/helpers/ducks.py:363
+#: cogs/helpers/ducks.py:376
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr "<:Wizzz:365870248554921985> Cú ôm của loài vịt!"
 
-#: cogs/helpers/ducks.py:368
+#: cogs/helpers/ducks.py:381
 msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
@@ -1534,7 +1521,7 @@ msgstr ""
 "bác ông nội ông ngoại cháu chắt người yêu và cả con của nó, nên con vịt bay "
 "đi chỗ khác~ ( - 2 exp)"
 
-#: cogs/helpers/ducks.py:370
+#: cogs/helpers/ducks.py:383
 msgid ""
 ":heart: You try to hug the duck, but it feels someting wrong about you, so "
 "it fled from you and flew back into the pond![-2 exp]"
@@ -1542,7 +1529,7 @@ msgstr ""
 ":heart: Bạn thử ôm con vịt, nhưng vì mặt bạn quá ngu, nên nó đã bay đi chỗ "
 "khác ( - 2 exp)"
 
-#: cogs/helpers/ducks.py:372
+#: cogs/helpers/ducks.py:385
 msgid ""
 ":heart: You try to hug the duck, but it saw the weapon you hid behind your "
 "back, so it fled from you and flew back into the pond! [-2 exp]"
@@ -1550,7 +1537,7 @@ msgstr ""
 ":heart: Bạn thử ôm con vịt, nhưng nó đã thấy vũ khí của bạn, con vịt bay đi "
 "(- 2 exp)"
 
-#: cogs/helpers/ducks.py:381
+#: cogs/helpers/ducks.py:394
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1561,7 +1548,7 @@ msgstr ""
 "tổng cộng {total} vịt ( với {supercanards} con là siêu vịt ) trong khu "
 "#{channel}. Nhận về {exp}"
 
-#: cogs/helpers/ducks.py:389
+#: cogs/helpers/ducks.py:402
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1569,12 +1556,12 @@ msgstr ""
 ":gun: Vịt vẫn còn sống, hãy thử lại! *PHÁT HIỆN SIÊU VỊT*  [life: -{vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:404
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ":gun: Vịt vẫn sống, hãy bắn lại! *PHÁT HIỆN SIÊU VỊT* [life: -{vie}]"
 
-#: cogs/helpers/ducks.py:587
+#: cogs/helpers/ducks.py:600
 msgid ""
 "You have been tricked by {user_mention} to kill a mechanical duck. It "
 "obviously won't work, and you lost 1 exp for this missed shot"
@@ -1582,11 +1569,11 @@ msgstr ""
 "Bạn đã bị lửa bởi {user_mention} khiến bạn vừa bắn vào một con vịt máy."
 "Tinnguoivkl ( - 1 exp)"
 
-#: cogs/helpers/ducks.py:637
+#: cogs/helpers/ducks.py:650
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Vịt con đã bay đi vì nhớ nhà ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/ducks.py:657
+#: cogs/helpers/ducks.py:670
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1595,7 +1582,7 @@ msgstr ""
 ":skull_crossbones: **{onomatopoeia}** Vịt con bị giết trong {time} giây, trừ "
 "exp vì tội bạo hành trẻ em {exp}"
 
-#: cogs/helpers/ducks.py:673
+#: cogs/helpers/ducks.py:686
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1606,11 +1593,11 @@ msgstr ""
 "Vịt con bay đi, không biết rằng kẻ chú vừa ôm chính là kẻ đã giết mẹ :"
 "heart_eyes: "
 
-#: cogs/helpers/ducks.py:697
+#: cogs/helpers/ducks.py:710
 msgid "**I AM...** Your mother"
 msgstr "**CHÀO BỐ ĐI CON**"
 
-#: cogs/helpers/ducks.py:705
+#: cogs/helpers/ducks.py:718
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"

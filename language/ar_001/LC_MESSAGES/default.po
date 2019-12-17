@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-21 21:30+0000\n"
+"POT-Creation-Date: 2019-11-28 21:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,15 +45,15 @@ msgstr ""
 msgid ":bulb: HINT: "
 msgstr ":bulb: HINT:"
 
-#: cogs/admin_commands.py:26
+#: cogs/admin_commands.py:27
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: تم إبعاد المستخدم. :gun:"
 
-#: cogs/admin_commands.py:38
+#: cogs/admin_commands.py:39
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ": ok: فعلت ، إلغاء حظر المستخدم. : eyes:"
 
-#: cogs/admin_commands.py:64
+#: cogs/admin_commands.py:65
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
@@ -61,7 +61,7 @@ msgstr ""
 "<:cmd_ChannelAdded_01:439546719143723019>تمت إضافة القناة {channel} إلى "
 "اللعبة! إستمتع!"
 
-#: cogs/admin_commands.py:80
+#: cogs/admin_commands.py:81
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
@@ -69,14 +69,14 @@ msgstr ""
 "<:cmd_ChannelRemoved_01:439546718737137674>تم حذف القناة {channel} من اللعبة."
 " وداعا!"
 
-#: cogs/admin_commands.py:89
+#: cogs/admin_commands.py:90
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
 msgstr ""
 "تمت إضافة <:cmd_AdminAdded_01:439549846622568466>{admin} كمشرف إلى المجموعة!"
 
-#: cogs/admin_commands.py:97
+#: cogs/admin_commands.py:98
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
@@ -84,7 +84,7 @@ msgstr ""
 "تمت إزالة <:cmd_AdminRemoved_01:439549845519335440>{admin} من مشرفي المجموعة."
 ""
 
-#: cogs/admin_commands.py:180
+#: cogs/admin_commands.py:181
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
 "list/modified] [setting if applicable]`"
@@ -92,19 +92,11 @@ msgstr ""
 ":x: بناء جملة غير صحيح. استخدم الأمر بهذه الطريقة: `! إعدادات [view / set / "
 "reset / list / modified] [setting if applicable]`"
 
-#: cogs/admin_commands.py:190 cogs/admin_commands.py:205
-#: cogs/admin_commands.py:256
-msgid ""
-"<a:a_cmd_UnknownSetting:439550426862452746> **ERROR:** I don't know this "
-"setting"
-msgstr ""
-"<a:a_cmd_UnknownSetting:439550426862452746>** خطأ: ** لا أعرف هذا الإعداد."
-
-#: cogs/admin_commands.py:193
+#: cogs/admin_commands.py:190
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:215
+#: cogs/admin_commands.py:208
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -112,7 +104,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day لأنك مالك البوت. كان من الممكن أن يكون "
 "\"{max}\"."
 
-#: cogs/admin_commands.py:217
+#: cogs/admin_commands.py:210
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -121,7 +113,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day كما كنت في نقابة كبار الشخصيات. من فضلك لا "
 "تسيء ذلك. للحصول على معلومات ، ربما تم تعيين الحد على `` max} `بط يوميًا."
 
-#: cogs/admin_commands.py:225
+#: cogs/admin_commands.py:218
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -129,81 +121,74 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>مرخص لتعيين حالة كبار "
 "الشخصيات!"
 
-#: cogs/admin_commands.py:227
+#: cogs/admin_commands.py:220
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: غير مصرح به لضبط حالة كبار الشخصيات! انت لست مالك."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:244
-#: cogs/admin_commands.py:269
+#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
+#: cogs/admin_commands.py:258
 msgid ":x: Incorrect value."
 msgstr " :x: قيمة غير صحيحة."
 
-#: cogs/admin_commands.py:240 cogs/admin_commands.py:265
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:292
-msgid ""
-"The list of preferences is available on our new website: https://duckhunt.me/"
-"bot-settings/"
-msgstr ""
-"قائمة التفضيلات متوفرة على موقعنا الجديد: https://duckhunt.me/bot-settings/"
-
-#: cogs/experience_related_commands.py:26
+#: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
 "تهانينا ، لقد أرسلت / أعطيت exp أكثر من العدد الأقصى الذي يمكنني تخزينه."
 
-#: cogs/experience_related_commands.py:53
+#: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ":x: لمنع سوء الاستخدام ، لا يمكنك إرسال exp عندما لا يكون لديك سلاح."
 
-#: cogs/experience_related_commands.py:57
+#: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: يجب أن تكون قيمة exp موجبة."
 
-#: cogs/experience_related_commands.py:61
+#: cogs/experience_related_commands.py:62
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr ":x: انتظر ... ماذا؟ أتحاول إرسال exp إلى نفسك؟ هذا غير منطقي."
 
-#: cogs/experience_related_commands.py:80
+#: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr "لقد أرسلت  {amount}  إلى {target} (ودفع الضرائب {tax} المدفوعة)!"
 
-#: cogs/experience_related_commands.py:83
+#: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
 msgstr "ليس لديك ما يكفي من exp."
 
-#: cogs/experience_related_commands.py:85
+#: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: تم إزالة ارسال exp على هذا الملقم."
 
-#: cogs/experience_related_commands.py:93 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (في {dans_jours} {dans_heures} و {dans_minutes})"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "٪ m / %dعند٪ H:٪ M:٪ S"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 msgid "{dans} days "
 msgstr "{dans} يومًا."
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
 msgid "{dans} hours"
 msgstr "{dans} ساعة."
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} minutes"
 msgstr "{dans} دقيقة."
 
-#: cogs/meta.py:35
+#: cogs/meta.py:38
 #, python-format
 msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
@@ -212,7 +197,7 @@ msgstr ""
 "يعيد البوت الروبوت في كثير من الأحيان للتحديثات. لا تقلق ، فهو مشتغل 99.8 % "
 "من الوقت."
 
-#: cogs/meta.py:75
+#: cogs/meta.py:82
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -222,7 +207,7 @@ msgstr ""
 "(والمعروفة أيضًا باسم UTC ± 00: 00) ، وهي التي يستخدمها Bot.\n"
 "يمكنك استخدام هذا الموقع لمقارنته بوقتك: https://time.is/compare/GMT"
 
-#: cogs/meta.py:91
+#: cogs/meta.py:103
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -231,7 +216,7 @@ msgstr ""
 "يتصدى الارتداد للمجلات الخاصة بك ويعطيك سلاحك مجانًا (إذا تمت مصادرته) ، "
 "ولكنه لا يؤثر على الرصاص في مجلتك الحالية. إذا استطعت ، أعد تحميلها مسبقًا!"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:117
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "أنت تستخدم رقم القطع {shard} من إجمالي {shard} الإجمالي."
 
@@ -652,27 +637,27 @@ msgstr ""
 ":money_with_wings: لقد أعددت بطة ميكانيكية على القناة ب40 exp. هذا خطأ ، لكن "
 "مضحك للغاية!"
 
-#: cogs/user_commands.py:62 cogs/user_commands.py:135
+#: cogs/user_commands.py:63 cogs/user_commands.py:136
 msgid "You don't have a weapon."
 msgstr "ليس لديك سلاح."
 
-#: cogs/user_commands.py:68
+#: cogs/user_commands.py:69
 msgid "You unjammed your weapon."
 msgstr "أنت غير مرتبك سلاحك."
 
-#: cogs/user_commands.py:82
+#: cogs/user_commands.py:83
 msgid "You reloaded your weapon."
 msgstr "لقد أعدت تحميل سلاحك."
 
-#: cogs/user_commands.py:84
+#: cogs/user_commands.py:85
 msgid "You don't have any ammo left!"
 msgstr "ليس لديك أي ذخيرة متبقية!"
 
-#: cogs/user_commands.py:87
+#: cogs/user_commands.py:88
 msgid "You don't need to reload your weapon."
 msgstr "لست بحاجة إلى إعادة تحميل سلاحك."
 
-#: cogs/user_commands.py:90
+#: cogs/user_commands.py:91
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -680,25 +665,25 @@ msgstr ""
 "{greet} | الذخيرة في السلاح: {balles_actuelles} / {balles_max} | المجلات "
 "المتبقية: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:128
+#: cogs/user_commands.py:129
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "ملابسك مبللة ، لا يمكنك الذهاب للصيد! انتظر {temps_restant} من الدقائق."
 
-#: cogs/user_commands.py:141
+#: cogs/user_commands.py:142
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "سلاحك محشور ، يجب إعادة تحميله لإستعماله."
 
-#: cogs/user_commands.py:148
+#: cogs/user_commands.py:149
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "تم تخريب سلاحك ، نشكر {assaillant} على هذه المزحة السيئة."
 
-#: cogs/user_commands.py:183
+#: cogs/user_commands.py:184
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "سلاحك محشور فقط ، قم بإعادة تحميله لإستعماله."
 
-#: cogs/user_commands.py:202
+#: cogs/user_commands.py:203
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -706,7 +691,7 @@ msgstr ""
 "ليس هناك أي بطة هنا ، لكن الرصاصة لم تطلق لأن كاشف الأشعة تحت الحمراء الذي "
 "أضفته إلى سلاحك يقوم بعمله!"
 
-#: cogs/user_commands.py:212
+#: cogs/user_commands.py:213
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -714,7 +699,7 @@ msgstr ""
 "لحسن الحظ غاب ، ولكن ماذا كنت تهدف بالضبط؟ ليس هناك أي بطة هنا ... [غاب: 1 "
 "xp] [wild shot: -1 exp]"
 
-#: cogs/user_commands.py:301
+#: cogs/user_commands.py:302
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -724,7 +709,7 @@ msgstr ""
 "سلاحك قليلا قبل اطلاق النار في المرة القادمة؟ [غاب: 1 xp] [حادث صيد: -2 xp] "
 "[** سلاح مصادر **]"
 
-#: cogs/user_commands.py:306
+#: cogs/user_commands.py:307
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -732,15 +717,15 @@ msgstr ""
 "** بانج ** لقد فاتتك البطة ... وأطلقت النار على {player}! [غاب: 1 xp] [حادث "
 "صيد: -2 xp] [** سلاح مصادر **]"
 
-#: cogs/helpers/ducks.py:217 cogs/user_commands.py:317
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:318
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** لقد فاتتك البط! [غاب: 1 xp]"
 
-#: cogs/user_commands.py:355
+#: cogs/user_commands.py:362
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "ليس هناك أي بطة هنا ، ماذا كنت تخطط لعناق ، شجرة؟!"
 
-#: cogs/user_commands.py:369
+#: cogs/user_commands.py:376
 msgid "**Current event**"
 msgstr "**الحدث الحالي**"
 
@@ -1157,43 +1142,44 @@ msgstr "مستجد قديم."
 msgid "duck toaster"
 msgstr "محمص البط."
 
-#: cogs/helpers/database.py:195
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
 msgid "Level of {player} on #{channel}"
 msgstr "مستوى {player} على # {channel}"
 
-#: cogs/helpers/database.py:198
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
 msgid "You leveled down!"
 msgstr "لقد نزل مستواك!"
 
-#: cogs/helpers/database.py:201
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
 msgid "You leveled up!"
 msgstr "لقد ارتفع مستواك!"
 
-#: cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
 msgid "Current level"
 msgstr "المستوى الحالي."
 
-#: cogs/helpers/database.py:209 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
 msgid "nom"
 msgstr "اسم."
 
-#: cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
 msgid "Previous level"
 msgstr "المستوى السابق."
 
-#: cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
 msgid "Shots accuracy"
 msgstr "لقطات مضبوطة."
 
-#: cogs/helpers/database.py:212
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
 msgid "Weapon reliability"
 msgstr "اعتمادية السلاح."
 
-#: cogs/helpers/database.py:213
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
 msgid "Exp points"
 msgstr "exp."
 
-#: cogs/helpers/database.py:219
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
@@ -1201,29 +1187,29 @@ msgstr ""
 ":warning: حدث خطأ أثناء إرسال التضمين ، يرجى التحقق مما إذا كان الروبوت لديه "
 "إذن `embed_links` وحاول مرة أخرى!"
 
-#: cogs/helpers/ducks.py:220
+#: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
 msgstr "** FLAPP ** خوفا من الضوضاء ، هرب البط! مبروك! [غاب: 1- exp]"
 
-#: cogs/helpers/ducks.py:231
+#: cogs/helpers/ducks.py:244
 msgid "BPAM"
 msgstr "BPAM"
 
-#: cogs/helpers/ducks.py:235
+#: cogs/helpers/ducks.py:248
 msgid "BAAM"
 msgstr "BAAM"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "BOUM"
 msgstr "BOUM"
 
-#: cogs/helpers/ducks.py:239
+#: cogs/helpers/ducks.py:252
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
-#: cogs/helpers/ducks.py:329
+#: cogs/helpers/ducks.py:342
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
@@ -1231,7 +1217,7 @@ msgstr ""
 "كان ذلك مقربًا ، لقد كادت تقتل البط ، لكن الصياد الآخر حصل عليه أولاً! [غاب: "
 "1- exp]"
 
-#: cogs/helpers/ducks.py:381
+#: cogs/helpers/ducks.py:394
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
 "seconds, you are now at a grand total of {total} ducks (of which "
@@ -1242,7 +1228,7 @@ msgstr ""
 "، فأنت الآن في المجموع الكلي من {total {ducks (التي كانت {supercanards} فيها "
 "بطات فائقة) تقتل علىexp} {e{channel}#e} "
 
-#: cogs/helpers/ducks.py:389
+#: cogs/helpers/ducks.py:402
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
@@ -1250,13 +1236,13 @@ msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * ({Super DUCK DETECTED * [life: - {vie} "
 "({current_life} / {max_life})]"
 
-#: cogs/helpers/ducks.py:391
+#: cogs/helpers/ducks.py:404
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
 ":gun: نجى البط ، حاول مرة أخرى! * {Super DUCK DETECTED * [life: - {vie}]"
 
-#: cogs/helpers/ducks.py:657
+#: cogs/helpers/ducks.py:670
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
 "seconds, and you shouldn't have done this! You'll lose some exp, because you "
@@ -1266,7 +1252,7 @@ msgstr ""
 "ثانية ، ولا يجب عليك فعل ذلك! ستفقد بعض التوقعات ، لأنه لا ينبغي عليك قتل "
 "الأطفال \\ {X < * COUAC * {exp}"
 
-#: cogs/helpers/ducks.py:673
+#: cogs/helpers/ducks.py:686
 msgid ""
 "<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
 "now it is really happy! [3 exp]\n"
@@ -1276,11 +1262,11 @@ msgstr ""
 "الآن سعيدة حقًا! [3 exp]\n"
 "غادرت البطة الصغيرة ، محبوبة."
 
-#: cogs/helpers/ducks.py:697
+#: cogs/helpers/ducks.py:710
 msgid "**I AM...** Your mother"
 msgstr "**انا..**  والدتك."
 
-#: cogs/helpers/ducks.py:705
+#: cogs/helpers/ducks.py:718
 msgid ""
 ":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
 "you won't kill my children! \\_X<   *COUAC*   {exp}"
