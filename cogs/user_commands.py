@@ -20,7 +20,6 @@ class User(commands.Cog):
         if ctx.bot.current_event['id'] == 2:
             lag += ctx.bot.current_event['seconds_of_lag_added']
 
-
         if lag > 0:
             tmp = await ctx.channel.send(str(ctx.message.author.mention) + " > BANG")
             await asyncio.sleep(lag)
@@ -28,7 +27,6 @@ class User(commands.Cog):
 
         else:
             await self.bot.send_message(ctx=ctx, can_pm=False, message=string)
-
 
     @commands.command()
     @checks.is_channel_enabled()
@@ -88,15 +86,18 @@ class User(commands.Cog):
             greet = _("You don't need to reload your weapon.", language)
             await add_to_stat(channel, message.author, "unneeded_reloads", 1)
 
-        await self.bot.send_message(ctx=ctx, message=_("{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: {chargeurs_actuels}/{chargeurs_max}", language).format(
-            **{"greet": greet, "balles_actuelles": balles, "balles_max": balles_max, "chargeurs_actuels": chargeurs, "chargeurs_max": chargeurs_max}))
+        await self.bot.send_message(ctx=ctx, message=_(
+            "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: {chargeurs_actuels}/{chargeurs_max}",
+            language).format(
+            **{"greet": greet, "balles_actuelles": balles, "balles_max": balles_max, "chargeurs_actuels": chargeurs,
+               "chargeurs_max": chargeurs_max}))
 
-
-
-    @commands.command(aliases=["pan", "pew", "pang", "shoot", "kablam", "pow", "bong", "bonk", "itshighnoon", "its_high_noon", "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
+    @commands.command(
+        aliases=["pan", "pew", "pang", "shoot", "kablam", "pow", "bong", "bonk", "itshighnoon", "its_high_noon",
+                 "killthatfuckingduck", "kill_that_fucking_duck", "kill_that_fucking_duck_omg"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
-    async def bang(self, ctx, target:discord.Member = None):
+    async def bang(self, ctx, target: discord.Member = None):
         now = time.time()
         message = ctx.message
         channel = message.channel
@@ -126,7 +127,8 @@ class User(commands.Cog):
         # 1/ Is the user wet ?
         mouille = await get_stat(channel, author, "mouille")
         if mouille > int(now):
-            await self.bot.send_message(ctx=ctx, message=_("Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes.", language).format(
+            await self.bot.send_message(ctx=ctx, message=_(
+                "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes.", language).format(
                 **{"temps_restant": int((mouille - int(time.time())) / 60)}))
             await add_to_stat(channel, author, "shoots_tried_while_wet", 1)
             return
@@ -139,14 +141,17 @@ class User(commands.Cog):
 
         # 3/ Is the weapon jammed ?
         if await get_stat(channel, author, "enrayee"):
-            await self.bot.send_message(ctx=ctx, message=_("Your weapon is jammed, it must be reloaded to unjam it.", language))
+            await self.bot.send_message(ctx=ctx,
+                                        message=_("Your weapon is jammed, it must be reloaded to unjam it.", language))
             await add_to_stat(channel, author, "shoots_with_jammed_weapon", 1)
             return
 
         # 4/ Is the weapon sabotaged ?
         sabotaged_by = await get_stat(channel, author, "sabotee")
         if sabotaged_by != "-":
-            await self.bot.send_message(ctx=ctx, message=_("Your weapon is sabotaged, thank {assaillant} for this bad joke.", language).format(**{"assaillant": sabotaged_by}))
+            await self.bot.send_message(ctx=ctx,
+                                        message=_("Your weapon is sabotaged, thank {assaillant} for this bad joke.",
+                                                  language).format(**{"assaillant": sabotaged_by}))
 
             await add_to_stat(channel, author, "shoots_sabotaged", 1)
             await set_stat(channel, author, "enrayee", True)
@@ -158,8 +163,11 @@ class User(commands.Cog):
         if bullets <= 0:  # No more bullets in charger
             await self.bot.send_message(ctx=ctx, message=_("** MAGAZINE EMPTY ** | "
                                                            "Ammunition in the weapon: {balles_actuelles} / {balles_max} | "
-                                                           "Magazines remaining: {chargeurs_actuels} / {chargeurs_max}", language).format(
-                **{"balles_actuelles": bullets, "balles_max": level["balles"], "chargeurs_actuels": await get_stat(channel, author, "chargeurs"), "chargeurs_max": level["chargeurs"]}))
+                                                           "Magazines remaining: {chargeurs_actuels} / {chargeurs_max}",
+                                                           language).format(
+                **{"balles_actuelles": bullets, "balles_max": level["balles"],
+                   "chargeurs_actuels": await get_stat(channel, author, "chargeurs"),
+                   "chargeurs_max": level["chargeurs"]}))
             await add_to_stat(channel, author, "shoots_without_bullets", 1)
             return
 
@@ -197,10 +205,14 @@ class User(commands.Cog):
                 break
         else:
             # No! There is no duck in there!
-            if await self.bot.db.get_stat(message.channel, message.author, "detecteurInfra") > time.time() and await get_stat(channel, author, "detecteur_infra_shots_left") > 0:
+            if await self.bot.db.get_stat(message.channel, message.author,
+                                          "detecteurInfra") > time.time() and await get_stat(channel, author,
+                                                                                             "detecteur_infra_shots_left") > 0:
                 # Infrared detector : No bullets wasted
                 await self.bot.send_message(ctx=ctx,
-                                            message=_("There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing its job!", language))
+                                            message=_(
+                                                "There isn't any duck in here, but the bullet wasn't fired because the infrared detector you added to your weapon is doing its job!",
+                                                language))
                 await add_to_stat(channel, author, "shoots_infrared_detector", 1)
                 await add_to_stat(channel, author, "detecteur_infra_shots_left", -1)
                 return
@@ -210,7 +222,9 @@ class User(commands.Cog):
                 await add_to_stat(channel, author, "shoots_fired", 1)
                 await add_to_stat(channel, author, "exp", -2)
                 await add_to_stat(channel, author, "shoots_no_duck", 1)
-                await self.sendBangMessage(ctx, _("Luckily you missed, but what were you aiming at exactly? There isn't any duck in here... [missed: -1 xp] [wild shot: -1 xp]", language))
+                await self.sendBangMessage(ctx, _(
+                    "Luckily you missed, but what were you aiming at exactly? There isn't any duck in here... [missed: -1 xp] [wild shot: -1 xp]",
+                    language))
                 # TODO : kill people here too ?
                 return
 
@@ -244,7 +258,8 @@ class User(commands.Cog):
         # 10c/ Sight on weapon
         sight = await get_stat(channel, author, "sight")
         if sight:
-            accuracy += max((100 - accuracy) / 3, 0)  # To ensure no negativity even if it shouldn't happen (but maybe because of an event or something that will be added later)
+            accuracy += max((100 - accuracy) / 3,
+                            0)  # To ensure no negativity even if it shouldn't happen (but maybe because of an event or something that will be added later)
             await set_stat(channel, author, "sight", sight - 1)
 
         # 10d/ Chance (will need to be smaller than accuracy to shoot properly)
@@ -281,7 +296,8 @@ class User(commands.Cog):
 
                 if not target:
 
-                    online_players = [p for p in guild.members if p.status in [discord.Status.online, discord.Status.idle, discord.Status.dnd]]
+                    online_players = [p for p in guild.members if
+                                      p.status in [discord.Status.online, discord.Status.idle, discord.Status.dnd]]
                     online_players += guild.members if len(online_players) <= 5 else [author]
                     try:
                         online_players.remove(guild.me)
@@ -299,18 +315,23 @@ class User(commands.Cog):
                 if player_killed == author:
                     # 11b/ How unlucky can you be ? You shot yourself!
                     await add_to_stat(channel, author, "self_killing_shoots", 1)
-                    await self.sendBangMessage(ctx, _("**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should turn your weapon a little before shooting the next time? "
-                                                      "[missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]", language))
+                    await self.sendBangMessage(ctx, _(
+                        "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should turn your weapon a little before shooting the next time? "
+                        "[missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]", language))
 
                 else:
                     # 11c/ Just shot someone else
-                    await self.sendBangMessage(ctx, _("**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]", language).format(
-                        **{"player": player_killed.mention if await get_pref(channel, "killed_mentions") else player_killed.name}))
+                    await self.sendBangMessage(ctx, _(
+                        "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting accident: -2 xp] [**weapon confiscated**]",
+                        language).format(
+                        **{"player": player_killed.mention if await get_pref(channel,
+                                                                             "killed_mentions") else player_killed.name}))
 
                     # TODO : Life insurence
 
                 await self.bot.hint(ctx=ctx, message=_("You can buy your weapon back in the store (`dh!shop 5`) "
-                                                       "or wait until you get it back for free (check when with `!freetime`)", language))
+                                                       "or wait until you get it back for free (check when with `!freetime`)",
+                                                       language))
                 return
             else:  # Missed and none was shot
                 await add_to_stat(channel, author, "exp", -1)
@@ -327,7 +348,7 @@ class User(commands.Cog):
     @commands.command(aliases=["calin", "<3", ":heart:", "wizzz"])
     @checks.is_channel_enabled()
     @checks.had_giveback()
-    async def hug(self, ctx, target:discord.Member = None):
+    async def hug(self, ctx, target: discord.Member = None):
 
         message = ctx.message
         channel = message.channel
@@ -345,7 +366,9 @@ class User(commands.Cog):
         if target:
             await add_to_stat(channel, author, "hugs_human", 1)
             await self.bot.send_message(ctx=ctx,
-                                        message=_("You hugged {mention} as strongly as you could. They are filled with determination.", language).format(mention=target.mention))
+                                        message=_(
+                                            "You hugged {mention} as strongly as you could. They are filled with determination.",
+                                            language).format(mention=target.mention))
             return
 
         for duck in self.bot.ducks_spawned:
@@ -359,7 +382,9 @@ class User(commands.Cog):
                                             message=_("You hugged a tree, Wizzz?!", language))
             else:
                 await self.bot.send_message(ctx=ctx,
-                                            message=_("There isn't any duck in here, what did you plan to hug, a tree?!", language))
+                                            message=_(
+                                                "There isn't any duck in here, what did you plan to hug, a tree?!",
+                                                language))
 
             return
 

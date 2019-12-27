@@ -357,7 +357,7 @@ class BaseDuck:
 
             await self.post_kill(ctx, exp)
 
-            return (await self.get_killed_string()).format(**{"time": round(time_taken, 4), "total": await self.bot.db.get_stat(channel, author, "killed_ducks"), "channel": channel, "exp": exp_str,
+            return (await self.get_killed_string()).format(**{"time": round(time_taken, 4), "total": await self.bot.db.get_stat(channel, author, "killed_ducks"), "channel": channel.mention, "exp": exp_str,
                                                               "supercanards": await self.bot.db.get_stat(channel, author, "killed_super_ducks"), "onomatopoeia": ono})
 
         else:
