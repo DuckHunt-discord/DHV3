@@ -64,12 +64,13 @@ def config(bot):
     bot.canards_cri = ["COIN", "COIN", "COIN", "COIN", "COIN", "KWAK", "KWAK", "KWAAK", "KWAAK", "KWAAAK", "KWAAAK", "COUAK", "COUAK", "COUAAK", "COUAAK", "COUAAAK", "COUAAAK", "QUAK", "QUAK",
                        "QUAAK", "QUAAK", "QUAAAK", "QUAAAK", "QUACK", "QUACK", "QUAACK", "QUAACK", "QUAAACK", "QUAAACK", "COUAC", "COUAC", "COUAAC", "COUAAC", "COUAAAC", "COUAAAC", "COUACK", "COUACK",
                        "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI?", "PIOU?",
-                       _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "http://tinyurl.com/2qc9pl", _("I love you too!"), _("Don't shoot me! I'm a fake duck!")]
+                       _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "https://youtu.be/r8EBoX9iUw4?t=25", _("I love you too!"), _("Don't shoot me! I'm a fake duck!")]
 
     # When a duck leaves
     bot.canards_bye = [_("The duck went away.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck went to another world.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck didn't have time for this.  ·°'\`'°-.,¸¸.·°'\`"),
                        _("The duck left.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck dissipated in space and time.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck left out of boredom.  ·°'\`'°-.,¸¸.·°'\`"),
-                       _("The duck doesn't want to be sniped.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck walked up to the lemonade stand.  ·°'\`'°-.,¸¸.·°'\`")]
+                       _("The duck doesn't want to be sniped.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck walked up to the lemonade stand.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck flew over a disproportionately small gap. ·°'\`'°-.,¸¸.·°'\`"),
+                       _("The duck chickened out.  ·°'\`'°-.,¸¸.·°'\`")]
 
     # When a duck get killed
     bot.inutilite = [_("a stuffed duck."), _("a rubber ducky."), _("a vibrating duck."), _("a pile of feathers."), _("a chewed chewing gum."),
