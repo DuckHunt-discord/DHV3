@@ -64,7 +64,9 @@ def config(bot):
     bot.canards_cri = ["COIN", "COIN", "COIN", "COIN", "COIN", "KWAK", "KWAK", "KWAAK", "KWAAK", "KWAAAK", "KWAAAK", "COUAK", "COUAK", "COUAAK", "COUAAK", "COUAAAK", "COUAAAK", "QUAK", "QUAK",
                        "QUAAK", "QUAAK", "QUAAAK", "QUAAAK", "QUACK", "QUACK", "QUAACK", "QUAACK", "QUAAACK", "QUAAACK", "COUAC", "COUAC", "COUAAC", "COUAAC", "COUAAAC", "COUAAAC", "COUACK", "COUACK",
                        "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI?", "PIOU?",
-                       _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "https://youtu.be/r8EBoX9iUw4?t=25", _("I love you too!"), _("Don't shoot me! I'm a fake duck!")]
+                       _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "https://youtu.be/r8EBoX9iUw4?t=25", _("I love you too!"), _("Don't shoot me! I'm a fake duck!"), "https://youtu.be/_0AAbWqxIs8",
+                       _("**Duck fact**: Some ducks can fly up to 332 miles in a single day!"), _("**Duck fact**: The feathers on a ducks back are waterproof."), _("**Duck fact**: Ducks have three eyelids!"), _("**Duck fact**: Depending on the species, a duck can live between 2 and 12 years. Not the ducks on this game tho..."),
+                       ]
 
     # When a duck leaves
     bot.canards_bye = [_("The duck went away.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck went to another world.  ·°'\`'°-.,¸¸.·°'\`"), _("The duck didn't have time for this.  ·°'\`'°-.,¸¸.·°'\`"),
