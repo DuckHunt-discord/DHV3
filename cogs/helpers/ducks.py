@@ -392,7 +392,7 @@ class BaseDuck:
         language = await self.bot.db.get_pref(self.channel, "language")
 
         return _(":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} seconds, you are now at a grand total of {total} ducks (of which {supercanards} "
-                 "were super-ducks) killed on #{channel}.     \_X<   *COUAC*   {exp}", language)
+                 "were super-ducks) killed on {channel}.     \\_X<   *COUAC*   {exp}", language)
 
     async def get_harmed_message(self):
         _ = self.bot._
