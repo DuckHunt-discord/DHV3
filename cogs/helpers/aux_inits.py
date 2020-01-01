@@ -1,4 +1,4 @@
-def init_logger():
+def     init_logger():
     import logging
 
     # Create the logger

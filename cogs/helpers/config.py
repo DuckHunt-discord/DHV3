@@ -66,6 +66,11 @@ def config(bot):
                        "COUAACK", "COUAACK", "COUAAACK", "COUAAACK", "QWACK", "QWACK", "QWAACK", "QWAACK", "QWAAACK", "QWAAACK", "ARK", "ARK", "AARK", "AARK", "AAARK", "AAARK", "CUI?", "PIOU?",
                        _("*cries*"), _("Hello world"), _("How are you today?"), _("Please don't kill me..."), "https://youtu.be/r8EBoX9iUw4?t=25", _("I love you too!"), _("Don't shoot me! I'm a fake duck!"), "https://youtu.be/_0AAbWqxIs8",
                        _("**Duck fact**: Some ducks can fly up to 332 miles in a single day!"), _("**Duck fact**: The feathers on a ducks back are waterproof."), _("**Duck fact**: Ducks have three eyelids!"), _("**Duck fact**: Depending on the species, a duck can live between 2 and 12 years. Not the ducks on this game tho..."),
+                       _("I am invisible, don't bother killing me"), _("Who is the little ████ here that killed my friend ?"), _("You can't aim for good..."), _("The duck left"), _("The duck right"), _("STOP! It's not what you think"),
+                       _("Killing me will cost you 1562 experience points."), _("I have a secret plan to kill all hunters but I'm already short on breath I don't think I'll be able to explain it all to you before..."), _("[INSERT DUCK NOISE HERE]"), "https://youtu.be/JZGjyxPc41o",
+                       "https://tenor.com/4nwy.gif", _("It's rabbit season."), _("Got a spare cape?"), _("Which side of a duck has more feathers? The outside."), _("I steal money. I'm a robber ducky."), _("I'm a very special duck."), _("**DuckHunt ProTip®**: use clovers to get more experience"),
+                       _("**DuckHunt ProTip®**: use sights to improve accuracy at lower levels"), _("**DuckHunt ProTip®**: use grease to prevent weapon jams"), _("**DuckHunt ProTip®**: use clovers to get more experience"), _("*Slurp*"), _("Hopefully you are all AFK..."), _("**DuckHunt ProTip®**: use infrared detectors to prevent useless shots"),
+                       _("I'm just doing my job"), _("Hey there, DuckHunt quality insurance duck here. How would you rate your experience killing ducks so far ?"), _("YoU hAvE bEeN cOrRuPtEd."),
                        ]
 
     # When a duck leaves
