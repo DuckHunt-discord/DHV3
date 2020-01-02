@@ -1,0 +1,148 @@
+# Translations template for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-01-02 21:50+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:145
+msgid ":x: A required argument is missing."
+msgstr "Un argument necesar lipsește."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr "Nu ai suficientă expunere pentru asta"
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr "Nu sunteți administrator"
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr "Nu ești un super administrator."
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Această comandă este rezervată proprietarilor de bot.  Dacă credeți că "
+"aceasta este o eroare, vă rugăm să contactați proprietarul meu de la "
+"DuckHunt Support Server (consultați `dh!Help`)."
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr "Nu ați votat pentru DuckHunt pe DiscordBotList de ceva vreme."
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Sprijiniți botul să utilizeze această comandă votând la <https://discordbots."
+"org/bot/duckhunt>.  Fiți conștienți că voturile pot dura un minut pentru a "
+"fi înregistrate de Duckhunt Dacă credeți că aceasta este o eroare, vă rugăm "
+"să contactați proprietarul meu de pe serverul de asistență DuckHunt (a se "
+"vedea `dh! Ajutor`)."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr ""
+"Vă aflați în modul de recuperare :(, încercați din nou în {secunde} secunde!"
+
+#: bot.py:179
+msgid ":bulb: HINT: "
+msgstr ":bec: INDICARE"
+
+#: cogs/admin_commands.py:27
+msgid ":ok: Done, user banned. :gun:"
+msgstr ": ok: Done, interzis de utilizator.  : Gun:"
+
+#: cogs/admin_commands.py:39
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ": ok: Efectuat, utilizator neînregistrat.  : Ochi:"
+
+#: cogs/admin_commands.py:65
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<: cmd_ChannelAdded_01: 439546719143723019> Gata, canalul {canal} adăugat la "
+"joc!  Distreaza-te!"
+
+#: cogs/admin_commands.py:81
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<: cmd_ChannelRemoved_01: 439546718737137674> Gata, canalul {canal} eliminat "
+"din joc.  Pa!<:cmd_ChannelRemoved_01:439546718737137674>"
+
+#: cogs/admin_commands.py:90
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<: cmd_AdminAdded_01: 439549846622568466> {admin} adăugat ca admin la "
+"breaslă!"
+
+#: cogs/admin_commands.py:98
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<: cmd_AdminRemoved_01: 439549845519335440> {admin} eliminat din "
+"administratorii breslei."
+
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+msgid "Done. User removed from the database, if he was in."
+msgstr ""
+"Efectuat.  Utilizatorul a fost eliminat din baza de date, dacă se afla."
+
+#: cogs/admin_commands.py:156
+msgid "Done. All channel data was removed."
+msgstr "Efectuat.  Toate datele canalului au fost eliminate."
+
+#: cogs/admin_commands.py:181
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr ""
+": x: Sintaxa incorectă.  Utilizați comanda astfel: `! Setări [vizualizare / "
+"set / resetare / listare / modificare] [setare dacă este cazul] '"
+
+#: cogs/admin_commands.py:190
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ": ok: Setarea {pref} este setată pe `{value}` pe această breaslă."
+
+#: cogs/admin_commands.py:208
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Evitarea verificării max_ducks_per_day, deoarece sunteți proprietarul "
+"botului.  Ar fi fost {{max} `."
+
+#: cogs/admin_commands.py:210
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Trecând la verificarea max_ducks_per_day așa cum vă aflați într-o breaslă "
+"VIP.  Vă rugăm să nu abuzați de asta.  Pentru informații, limita ar fi fost "
+"stabilită la `{max}` rațe pe zi."

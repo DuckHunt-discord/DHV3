@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-02 16:58+0000\n"
+"POT-Creation-Date: 2020-01-02 21:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1142,6 +1142,113 @@ msgstr ""
 "**Fait canard**: Selon l'espèce, un canard peut vivre entre 2 et 12 ans. "
 "Contrairement aux canards dans ce jeu..."
 
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Je suis invisible, ne t'embête pas à me tuer..."
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Qui est le petit ████ qui a tué mon ami ?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Vous ne visez vraiment pas bien ..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Le canard est parti."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Le canard est revenu."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "ARRÊTEZ! Ce n'est pas ce que vous pensez!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Me tuer vous coûtera 1562 points d'expérience."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"J'ai un plan secret pour tuer tous les chasseurs mais je suis déjà à bout de "
+"souffle, je ne pense pas que je pourrai tout vous expliquer avant..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[INSÉRER UN BRUIT DE CANARD ICI]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "C'est la chasse aux lapins."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "T'as un chargeur en rab ?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "De quel côté d'un canard a plus de plumes? À l'extérieur."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Les mains en l'air. Donne moi tout tes points d'expérience."
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Je suis un canard très spécial."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr ""
+"**DuckHunt ProTip®**: utilisez des trèfles pour obtenir plus d'expérience."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: utilisez des viseurs pour améliorer votre précision "
+"lorsque vous avez peu d'exp."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr ""
+"**DuckHunt ProTip®**: utilisez de la graisse pour éviter que votre arme "
+"s'enraye."
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Slurp*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "J'espère que vous êtes tous AFK ..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: utilisez des détecteurs infrarouges pour éviter les "
+"tirs inutiles."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Je fais juste mon travail ..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Hé là, je suis un canard du service qualité de DuckHunt. Comment évalueriez-"
+"vous votre expérience de meurtre canardien jusqu'à présent?"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "VoUs AvEz ÉtÉ cOrRoMpU."
+
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Le canard s'en est allé.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1757,6 +1864,17 @@ msgstr ""
 ":heart: Vous essayez de câliner le canard, mais il a vu l'arme que vous avez "
 "cachée derrière votre dos, s'est envolé loin de vous, et est de retour dans "
 "l'étang! [-2 exp]"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Vous l’avez eu en {time} secondes, ce "
+"qui vous fait un total de {total} canards (dont {supercanards} supercanards) "
+"sur {channel}.     \\_X<   *COUAC*   [{exp} exp]"
 
 #: cogs/helpers/ducks.py:402
 msgid ""
