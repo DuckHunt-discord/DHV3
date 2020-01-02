@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-01 23:54+0000\n"
+"POT-Creation-Date: 2020-01-02 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -869,15 +869,15 @@ msgid "You can't aim for good..."
 msgstr ""
 
 #: cogs/helpers/config.py:69
-msgid "The duck left"
+msgid "The duck left."
 msgstr ""
 
 #: cogs/helpers/config.py:69
-msgid "The duck right"
+msgid "The duck right."
 msgstr ""
 
 #: cogs/helpers/config.py:69
-msgid "STOP! It's not what you think"
+msgid "STOP! It's not what you think!"
 msgstr ""
 
 #: cogs/helpers/config.py:70
@@ -915,11 +915,11 @@ msgid "I'm a very special duck."
 msgstr ""
 
 #: cogs/helpers/config.py:71 cogs/helpers/config.py:72
-msgid "**DuckHunt ProTip®**: use clovers to get more experience"
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
 msgstr ""
 
 #: cogs/helpers/config.py:72
-msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels"
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
 msgstr ""
 
 #: cogs/helpers/config.py:72
@@ -935,11 +935,11 @@ msgid "Hopefully you are all AFK..."
 msgstr ""
 
 #: cogs/helpers/config.py:72
-msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots"
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
 msgstr ""
 
 #: cogs/helpers/config.py:73
-msgid "I'm just doing my job"
+msgid "I'm just doing my job..."
 msgstr ""
 
 #: cogs/helpers/config.py:73
