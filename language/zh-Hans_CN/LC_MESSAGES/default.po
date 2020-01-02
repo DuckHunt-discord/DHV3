@@ -1,18 +1,293 @@
 # Translations template for PROJECT.
-# Copyright (C) 2019 ORGANIZATION
+# Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-17 13:03+0000\n"
+"POT-Creation-Date: 2020-01-02 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:145
+msgid ":x: A required argument is missing."
+msgstr ":x:缺少必需的参数。"
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr ":X: 你的经验不够完成这个任务"
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr ":x: 你不是一位管理员"
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr ":x: 你不是一位超级管理员"
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr "该命令仅供机器人所有者使用。如果您认为这是错误，请与DuckHunt支持服务器上的我的所有者联系（请参阅dh！help）。"
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x:你已经有了一段时间没有在 DiscordBotList 上给 DuckHunt 投票了。"
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"通过在<https：//discordbots.org/bot/"
+"duckhunt>上投票来支持该机器人使用此命令。请注意，Duckhunt可能需要花费一分钟才能完成投票。如果您认为这是错误的，请与DuckHunt支持服务器上的我的所有者联系（请参阅dh！help）。"
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr "您正在冷却:(，请在{秒}秒后重试！"
+
+#: bot.py:179
+msgid ":bulb: HINT: "
+msgstr "：bulb：提示："
+
+#: cogs/admin_commands.py:27
+msgid ":ok: Done, user banned. :gun:"
+msgstr "：ok：完成，用户被禁止。 ：枪："
+
+#: cogs/admin_commands.py:39
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr "：ok：完成，用户不受限制。 ：眼睛"
+
+#: cogs/admin_commands.py:65
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr "<:cmd_ChannelAdded_01:439546719143723019>完成，已将频道{channel}添加到游戏中！玩得开心！"
+
+#: cogs/admin_commands.py:81
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr "<:cmd_ChannelRemoved_01:439546718737137674>已完成，频道{channel}已从游戏中移除。再见！"
+
+#: cogs/admin_commands.py:90
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr "<:cmd_AdminAdded_01:439549846622568466>{admin}已添加为公会管理员！"
+
+#: cogs/admin_commands.py:98
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr "<:cmd_AdminRemoved_01:439549845519335440>{admin}已从行会管理员中移除。"
+
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+msgid "Done. User removed from the database, if he was in."
+msgstr "做完了用户从数据库中删除（如果他在其中）。"
+
+#: cogs/admin_commands.py:156
+msgid "Done. All channel data was removed."
+msgstr "完成，所有平台信息都清除掉了。"
+
+#: cogs/admin_commands.py:181
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
+"list/modified] [setting if applicable]`"
+msgstr "：x：语法错误。以这种方式使用命令：`！settings [视图/设置/重置/列表/修改] [设置（如果适用）]`"
+
+#: cogs/admin_commands.py:190
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr "：ok：在公会上，设置{pref}设置为`{value}`。"
+
+#: cogs/admin_commands.py:208
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr "如果您是漫游器所有者，请跳过max_ducks_per_day检查。应该是{max}。"
+
+#: cogs/admin_commands.py:210
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr "像在VIP公会中一样绕过max_ducks_per_day检查。请不要滥用。作为参考，该限制应设置为每天“ {max}”只鸭子。"
+
+#: cogs/admin_commands.py:218
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr "<:official_Duck_01_reversed:439576463436546050>授权设置VIP状态！"
+
+#: cogs/admin_commands.py:220
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr "：x：未经授权设置VIP状态！您不是所有者。"
+
+#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
+#: cogs/admin_commands.py:258
+msgid ":x: Incorrect value."
+msgstr "：x：错误的值。"
+
+#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr "：ok：在公会上，设置{pref}已设置为`{value}`。"
+
+#: cogs/experience_related_commands.py:27
+msgid ""
+"Congratulations, you sent / gave more experience than the maximum number I'm "
+"able to store."
+msgstr "恭喜，您发送/提供的经验超过了我可以存储的最大数量。"
+
+#: cogs/experience_related_commands.py:30
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr "：ok :，他/她现在有{newexp}经验值！"
+
+#: cogs/experience_related_commands.py:54
+msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
+msgstr "：x：为防止滥用，如果没有武器，则不能发送exp。"
+
+#: cogs/experience_related_commands.py:58
+msgid ":x: The exp amount needs to be positive."
+msgstr "：x：exp量必须为正。"
+
+#: cogs/experience_related_commands.py:62
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr "：x：等待...什么？您是否要向自己发送经验？那没有道理。"
+
+#: cogs/experience_related_commands.py:81
+msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
+msgstr "您向{target}发送了{amount}个exp（并支付了{taxes}个税）！"
+
+#: cogs/experience_related_commands.py:84
+msgid "You don't have enough experience points"
+msgstr "您的经验不够"
+
+#: cogs/experience_related_commands.py:86
+msgid ":x: Sending exp is disabled on this server"
+msgstr "：x：在此服务器上禁用了发送exp"
+
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date}（在{dans_jours} {dans_heures}和{dans_minutes}中）"
+
+#: cogs/experience_related_commands.py:95 cogs/scores.py:34
+#, python-format
+msgid "%m/%d at %H:%M:%S"
+msgstr "％m / %d，位于％H：％M：％S"
+
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
+msgid "{dans} days "
+msgstr "{dans}天"
+
+#: cogs/experience_related_commands.py:96 cogs/scores.py:36
+msgid "{dans} hours"
+msgstr "{dans}小时"
+
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
+msgid "{dans} minutes"
+msgstr "{dans}分钟"
+
+#: cogs/meta.py:38
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr "僵尸程序经常重启以进行更新。不用担心，它具有99.8％的正常运行时间。"
+
+#: cogs/meta.py:69
+msgid ""
+"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"这是命令列表：http://duckhunt.me/command-list/ |如果您有任何需要，请随时通过https://discordapp."
+"com/invite/2BksEkV加入支持服务器。"
+
+#: cogs/meta.py:82
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"现在是GMT时区中的“ {小时}：{分钟}：{秒}”（也称为UTC±00：00），这是机器人使用的时区。\n"
+"您可以使用此网站与您的网站进行比较：https://time.is/compare/GMT"
+
+#: cogs/meta.py:85
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr "您可以使用dh！freetime命令查看何时免费退还武器。"
+
+#: cogs/meta.py:100
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr "：alarm_clock：下一次交还武器和弹匣的时间为{sec}秒（{hours}小时和{minutes}分钟。）。"
+
+#: cogs/meta.py:103
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr "赠送会为您的杂志充值，并免费为您送回武器（如果没收），但这不会影响您当前杂志的子弹。如果可以，请事先重新加载！"
+
+#: cogs/meta.py:117
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "您正在使用{total}个总分片中的{shard}个分片"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr "分数可在线访问http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"您的duckstats正在http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}&pid={player_id}等着您"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"你好！\n"
+" 感谢您将我加入其中！我几乎准备开始游戏了！\n"
+" 我们可以进入您想要游戏的频道吗？请使用dh！setup <:event_GuildAdded_01:439550913112309781>在此处调用我"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr "再一次问好！\n"
+" 我将进行快速权限检查，并在几秒钟后回来！请耐心等待"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+"：small_red_triangle：缺少权限“ read_message_history”。\n"
+"这对于机器人的正常功能至关重要，因为我需要能够读取消息。\n"
+"您可以在没有它的情况下继续进行，但不应这样做。"

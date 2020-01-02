@@ -1,20 +1,20 @@
 # Translations template for PROJECT.
-# Copyright (C) 2019 ORGANIZATION
+# Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-17 13:03+0000\n"
+"POT-Creation-Date: 2020-01-02 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
 #: bot.py:145
@@ -417,8 +417,8 @@ msgid ""
 "This not used, but should't be given in case of a bug\n"
 "You could proceed with it safely."
 msgstr ""
-":small_orange_diamond: Dali jste mi oprávnění `zmínit každého`. Toto není "
-"použito, ale nemělo by být dáno v případě chyby.\n"
+":small_orange_diamond: Dali jste mi oprávnění `zmínit každého`.\n"
+"Toto není použito, ale nemělo by být dáno v případě chyby.\n"
 "Můžeš s ním bezpečně pokračovat."
 
 #: cogs/setup_wizzard.py:92
@@ -428,9 +428,9 @@ msgid ""
 "probably give it to me\n"
 "You could proceed without it, but bug reports would be appreciated."
 msgstr ""
-":small_orange_diamond: Oprávnění `používat externí smajlíky` chybí. Toto je "
-"použito už od DHV3 k přidání nestandardních smajlíků k zprávám. Měl byste mi "
-"ho pravděpodobně dát\n"
+":small_orange_diamond: Oprávnění `používat externí smajlíky` chybí.\n"
+"Toto je použito už od DHV3 k přidání nestandardních smajlíků k zprávám. Měli "
+"byste mi ho pravděpodobně dát\n"
 "Můžete bez něj pokračovat, ale ocenil bych chybová hlášení"
 
 #: cogs/setup_wizzard.py:110
@@ -440,8 +440,9 @@ msgid ""
 "made then.\n"
 "You can safely proceed without it."
 msgstr ""
-":small_blue_diamond: Oprávnění `změna přezdívky` chybí. Toto zatím není "
-"použito, ale mohlo by být v budoucnosti. Potom bude vydáno oznámení.\n"
+":small_blue_diamond: Oprávnění `změna přezdívky` chybí.\n"
+"Toto zatím není použito, ale mohlo by být v budoucnosti. Potom bude vydáno "
+"oznámení.\n"
 "Můžete bez něj bezpečně pokračovat."
 
 #: cogs/setup_wizzard.py:115
@@ -450,8 +451,8 @@ msgid ""
 "This is used in case you want to enable tts ducks..\n"
 "You can safely proceed without it, but the `tts_ducks` setting won't work"
 msgstr ""
-":small_blue_diamond: Oprávnění `odesílat zprávy tts` chybí. Toto je použito "
-"v případě, že zapnete tts kachny...\n"
+":small_blue_diamond: Oprávnění `odesílat zprávy tts` chybí.\n"
+"Toto je použito v případě, že zapnete tts kachny...\n"
 "Můžete bez něj bezpečně pokračovat, ale nastavení `tts_ducks` nebude "
 "fungovat"
 
@@ -473,9 +474,9 @@ msgstr ""
 "Pokud tam nejsou žádné, gratuluji! Prošel si brilantně testem!\n"
 "Pokud si připravený pokračovat s nastavováním, použij příkaz "
 "`dh!setup_settings`. Pokud už chceš jenom hrát, použij `dh!add_channel`. "
-"Jednou použito, kachny se začnou automaticky objevovat. Díky létajícím "
-"DucksAir. Pokud máte nějaké otázky, jsme na https://discord.gg/2BksEkV "
-",abychom vám pomohli."
+"Jednou použito, kachny se začnou automaticky objevovat.\n"
+"Díky létajícím DucksAir. Pokud máte nějaké otázky, jsme na https://discord."
+"gg/2BksEkV , abychom vám pomohli."
 
 #: cogs/setup_wizzard.py:135
 msgid ""
@@ -575,8 +576,7 @@ msgid ""
 "Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
 "Thanks "
 msgstr ""
-"Zde je list všech předmětů obchodu: https://duckhunt.me/shop-items/ .\n"
-"Díky"
+"Zde je list všech předmětů obchodu: https://duckhunt.me/shop-items/ . Díky"
 
 #: cogs/shop.py:75
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
@@ -924,27 +924,27 @@ msgstr ""
 ":money_with_wings: Připravil si mechanickou kachnu na kanál za 40 expů. Je "
 "to špatné, ale tak vtipné!"
 
-#: cogs/user_commands.py:63 cogs/user_commands.py:136
+#: cogs/user_commands.py:61 cogs/user_commands.py:138
 msgid "You don't have a weapon."
 msgstr "Nemáš zbraň."
 
-#: cogs/user_commands.py:69
+#: cogs/user_commands.py:67
 msgid "You unjammed your weapon."
 msgstr "Odblokoval jsi svoji zbraň."
 
-#: cogs/user_commands.py:83
+#: cogs/user_commands.py:81
 msgid "You reloaded your weapon."
 msgstr "Přebil jsi svoji zbraň."
 
-#: cogs/user_commands.py:85
+#: cogs/user_commands.py:83
 msgid "You don't have any ammo left!"
 msgstr "Nezbývají ti žádné náboje!"
 
-#: cogs/user_commands.py:88
+#: cogs/user_commands.py:86
 msgid "You don't need to reload your weapon."
 msgstr "Nepotřebuješ si přebít svou zbraň."
 
-#: cogs/user_commands.py:91
+#: cogs/user_commands.py:89
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -952,22 +952,22 @@ msgstr ""
 "{greet} | Náboje ve zbrani: {balles_actuelles}/{balles_max} | Zbývající "
 "zásobníky: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:129
+#: cogs/user_commands.py:130
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Tvé oblečení je mokré, nemůžeš jít lovit! Počkej {temps_restant} minuta/"
 "minuty/minut."
 
-#: cogs/user_commands.py:142
+#: cogs/user_commands.py:145
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Tvá zbraň je zablokovaná, musíš přebít, abys ji odblokoval."
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:153
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Tvá zbraň byla sabotována, poděkuj {assaillant} za tento špatný vtip."
 
-#: cogs/user_commands.py:159
+#: cogs/user_commands.py:164
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -975,11 +975,11 @@ msgstr ""
 "** ZÁSOBNÍK PRÁZDNÝ ** | Náboje ve zbrani: {balles_actuelles} / {balles_max} "
 "| Zásobníků zbývá: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:184
+#: cogs/user_commands.py:192
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Tvá zbraň se zrovna zablokovala, přebij ji, abys ji odblokoval."
 
-#: cogs/user_commands.py:203
+#: cogs/user_commands.py:213
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -987,7 +987,7 @@ msgstr ""
 "Široko daleko žádná kachna, kulka nebyla vystřelena, protože infračervený "
 "senzor, který jsi si přidal na svou zbraň děla svou práci!"
 
-#: cogs/user_commands.py:213
+#: cogs/user_commands.py:225
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -995,7 +995,7 @@ msgstr ""
 "Naštěstí jsi minul, ale na co si vlastně mířil? Vždyť tu žádná kachna není..."
 " [minul jsi: -1 exp.] [divoký výstřel: -1 exp.]"
 
-#: cogs/user_commands.py:302
+#: cogs/user_commands.py:318
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -1005,7 +1005,7 @@ msgstr ""
 "trošičičku otočit svou zbraň než budeš příště střílet? [minul jsi: -1 exp.] "
 "[lovecká nehoda: -2 exp.] [**zbraň zabavena**]"
 
-#: cogs/user_commands.py:307
+#: cogs/user_commands.py:324
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1013,7 +1013,7 @@ msgstr ""
 "**BANG** Minul jsi kachnu... a střelil {player}! [minul jsi: -1 exp.] "
 "[lovecká nehoda: -2 exp.] [**zbraň zabavena**]"
 
-#: cogs/user_commands.py:312
+#: cogs/user_commands.py:332
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -1021,22 +1021,22 @@ msgstr ""
 "Můžeš si koupit svou zbraň zpět v obchodě (`dh!shop 5`) nebo počkej, dokud "
 "ji nedostaneš zdarma zpět (zjisti kdy s `dh!freetime`)"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:318
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:339
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PEW** Minul jsi kachnu! [minul jsi: -1 exp.]"
 
-#: cogs/user_commands.py:348
+#: cogs/user_commands.py:369
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
 msgstr ""
 "Objal jsi {metion}, tak silně, jak si jen mohl. Jsou naplněni odhodláním!"
 
-#: cogs/user_commands.py:359
+#: cogs/user_commands.py:382
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Objal jsi strom, ?? ?!"
 
-#: cogs/user_commands.py:376
+#: cogs/user_commands.py:401
 msgid "**Current event**"
 msgstr "**Aktuální událost**"
 
@@ -1064,67 +1064,203 @@ msgstr "Já tě taky miluji!"
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "Nestřílej mě! Já jsem falešná kachna!"
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna odešla pryč. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:77
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna odešla do jiného světa. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:70
+#: cogs/helpers/config.py:77
 msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Na tohle kachna neměla čas. ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:71
+#: cogs/helpers/config.py:78
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna odešla.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:71
+#: cogs/helpers/config.py:78
 msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna se rozptýlila v čase a prostoru.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:71
+#: cogs/helpers/config.py:78
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna se unudila k smrti.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:72
+#: cogs/helpers/config.py:79
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna nechce být zastřelena.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:72
+#: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Kachna odešla k stánku s limonádou.  ·°'\\`'°-.,¸¸.·°'\\`"
 
-#: cogs/helpers/config.py:75
+#: cogs/helpers/config.py:83
 msgid "a stuffed duck."
 msgstr "vycpanou kachnu."
 
-#: cogs/helpers/config.py:75
+#: cogs/helpers/config.py:83
 msgid "a rubber ducky."
 msgstr "gumovou kachničku."
 
-#: cogs/helpers/config.py:75
+#: cogs/helpers/config.py:83
 msgid "a vibrating duck."
 msgstr "vibrující kachnu."
 
-#: cogs/helpers/config.py:75
+#: cogs/helpers/config.py:83
 msgid "a pile of feathers."
 msgstr "hromádku peří."
 
-#: cogs/helpers/config.py:75
+#: cogs/helpers/config.py:83
 msgid "a chewed chewing gum."
-msgstr " "
+msgstr "vyžvýkanou žvýkací gumu."
 
-#: cogs/helpers/config.py:76
+#: cogs/helpers/config.py:84
 msgid "an old shoe."
 msgstr "starou botu."
 
-#: cogs/helpers/config.py:188
+#: cogs/helpers/config.py:84
+msgid "a spring thingy."
+msgstr "pružinovou věcičku."
+
+#: cogs/helpers/config.py:84
+msgid "cow dung."
+msgstr "kravský hnůj."
+
+#: cogs/helpers/config.py:84
+msgid "dog poop."
+msgstr "psí hovínko."
+
+#: cogs/helpers/config.py:85
+msgid "an expired hunting license."
+msgstr "prošlou loveckou licenci."
+
+#: cogs/helpers/config.py:85
+msgid "a cigarette butt."
+msgstr "cigaretový nedopalek."
+
+#: cogs/helpers/config.py:85
+msgid "a used condom."
+msgstr "použitý kondom."
+
+#: cogs/helpers/config.py:85
+msgid "a broken sight."
+msgstr "rozbitý zaměřovač."
+
+#: cogs/helpers/config.py:85
+msgid "a broken infrared detector."
+msgstr "rozbitý infračervený senzor."
+
+#: cogs/helpers/config.py:85
+msgid "a bent silencer."
+msgstr "ohnutý tlumič."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of AP ammo."
+msgstr "prázdnou krabici od AP nábojů."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of explosive ammo."
+msgstr "prázdnou krabici od výbušných nábojů."
+
+#: cogs/helpers/config.py:86
+msgid "a four-leaf clover with only 3 left."
+msgstr "čtyřlístek, kterému zbývají pouze 3 lístky."
+
+#: cogs/helpers/config.py:86
+msgid "a broken decoy."
+msgstr "rozbitou návnadu."
+
+#: cogs/helpers/config.py:86
+msgid "a broken mirror."
+msgstr "rozbité zrcadlo."
+
+#: cogs/helpers/config.py:87
+msgid "a rusty mechanical duck."
+msgstr "rezavou mechanickou kachnu."
+
+#: cogs/helpers/config.py:87
+msgid "a pair of sunglasses without glasses."
+msgstr "sluneční brýle bez sklíček."
+
+#: cogs/helpers/config.py:87
+msgid "Donald's beret."
+msgstr "Donaldův baret."
+
+#: cogs/helpers/config.py:87
+msgid "a half-melted peppermint."
+msgstr "polorozpuštěnou peppermintku."
+
+#: cogs/helpers/config.py:87
+msgid "a box of Abraxo cleaner."
+msgstr "krabici čističe Abraxo."
+
+#: cogs/helpers/config.py:88
+msgid "a gun with banana peeled barrel."
+msgstr "pistol s hlavní, která vypadá jak oloupaný banán."
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting knife."
+msgstr "starý lovecký nůž."
+
+#: cogs/helpers/config.py:88
+msgid "an old video recording: http://tinyurl.com/zbejktu"
+msgstr "starou video nahrávku: http://tinyurl.com/zbejktu"
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
+msgstr "starou loveckou fotku: http://tinyurl.com/hmn4r88"
+
+#: cogs/helpers/config.py:89
+msgid "an old postcard: http://tinyurl.com/hbnkpzr"
+msgstr "starou pohlednici: http://tinyurl.com/hbnkpzr"
+
+#: cogs/helpers/config.py:89
+msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
+msgstr "fotku zlaté kachny: http://tinyurl.com/hle8fjf"
+
+#: cogs/helpers/config.py:89
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "lovecký odznak: http://tinyurl.com/hqy7fhq"
+
+#: cogs/helpers/config.py:89
+msgid "bushes."
+msgstr "keře."
+
+#: cogs/helpers/config.py:90
+msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
+msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
+
+#: cogs/helpers/config.py:90
+msgid "a fish."
+msgstr "rybu."
+
+#: cogs/helpers/config.py:90
+msgid "even more bushes."
+msgstr "ještě více keřů."
+
+#: cogs/helpers/config.py:194
+msgid "Everything is calm"
+msgstr "Všechno je poklidné"
+
+#: cogs/helpers/config.py:194
+msgid "Nothing is happening right now."
+msgstr "Nic se zrovna teď neděje."
+
+#: cogs/helpers/config.py:195
+msgid "Ducks are migrating"
+msgstr "Kachny migrují"
+
+#: cogs/helpers/config.py:195
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Připrav se, že uvidíš více kachen v příští hodině."
+
+#: cogs/helpers/config.py:196
 msgid "Foggy weather"
 msgstr "Mlhavé počasí"
 
-#: cogs/helpers/config.py:188
+#: cogs/helpers/config.py:196
 msgid ""
 "It's harder to see killed ducks. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1132,15 +1268,15 @@ msgstr ""
 "Je težší vidět zabité kachny. Budeš potřebovat pár sekund navíc než zjistíš "
 "zda jsi minul nebo ne."
 
-#: cogs/helpers/config.py:189
+#: cogs/helpers/config.py:197
 msgid "Steroids in the lake"
 msgstr "Steroidy v jezeře"
 
-#: cogs/helpers/config.py:191
+#: cogs/helpers/config.py:199
 msgid "Connection problems"
 msgstr "Problémy s připojením"
 
-#: cogs/helpers/config.py:191
+#: cogs/helpers/config.py:199
 msgid ""
 "Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
@@ -1148,99 +1284,99 @@ msgstr ""
 "Kachny nemohou najít tvůj počítač kvůli problémům s připojením, a bude jich "
 "méně dokud se to neopraví"
 
-#: cogs/helpers/config.py:192
+#: cogs/helpers/config.py:200
 msgid "A new florist in town"
 msgstr "Nový květinář ve městě"
 
-#: cogs/helpers/config.py:193
+#: cogs/helpers/config.py:201
 msgid "Mega-ducks"
 msgstr "Mega-kachy"
 
-#: cogs/helpers/config.py:193
+#: cogs/helpers/config.py:201
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Někdo nafoukl super kachny, a nyní jsou JEŠTĚ VĚTŠÍ!"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:202
 msgid "Windy weather"
 msgstr "Větrné počasí"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:202
 msgid "Bullets are deflected by some strong wind"
 msgstr "Kulky jsou vychylovány silným větrem"
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:209
 msgid "public danger"
 msgstr "veřejné nebezpečí"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:210
 msgid "tourist"
 msgstr "turista"
 
-#: cogs/helpers/config.py:203
+#: cogs/helpers/config.py:211
 msgid "noob"
 msgstr "nula"
 
-#: cogs/helpers/config.py:204
+#: cogs/helpers/config.py:212
 msgid "trainee"
 msgstr "praktikant"
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:213
 msgid "duck misser"
 msgstr "míječ kachen"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:214
 msgid "member of the Comitee Against Ducks"
 msgstr "člen Sdružení Proti Kachnám"
 
-#: cogs/helpers/config.py:208
+#: cogs/helpers/config.py:216
 msgid "duck pest"
 msgstr "škůdce kachen"
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:219
 msgid "hunter"
 msgstr "lovec"
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:220
 msgid "duck inside out turner"
 msgstr "rozparovač kachen"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:223
 msgid "duck eater"
 msgstr "jedlík kachen"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:224
 msgid "duck flattener"
 msgstr "zplošťovač kachen"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:225
 msgid "duck disassembler"
 msgstr "rozebírač kachen"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:226
 msgid "duck demolisher"
 msgstr "bořič kachen"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:227
 msgid "duck killer"
 msgstr "kachní vrah"
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:247
 msgid "serial duck killer"
 msgstr "sériový vrah kachen"
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:248
 msgid "duck genocider"
 msgstr "vyhlazovač kachen"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:249
 msgid "old noob"
 msgstr "stará nula"
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:250
 msgid "duck toaster"
 msgstr "toastovač kachen"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:251
 msgid "unemployed due to extinction of the duck species"
 msgstr "nezměstnaný kvůli vyhynutí kachního druhu"
 
@@ -1291,7 +1427,7 @@ msgstr "hodně keřů."
 
 #: cogs/helpers/ducks.py:43
 msgid "a duck pin."
-msgstr "připínák kachen."
+msgstr "odznak kachny."
 
 #: cogs/helpers/ducks.py:47
 msgid "a bullet"
