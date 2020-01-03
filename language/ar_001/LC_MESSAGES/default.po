@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-02 21:50+0000\n"
+"POT-Creation-Date: 2020-01-03 00:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -637,27 +637,27 @@ msgstr ""
 ":money_with_wings: لقد أعددت بطة ميكانيكية على القناة ب40 exp. هذا خطأ ، لكن "
 "مضحك للغاية!"
 
-#: cogs/user_commands.py:61 cogs/user_commands.py:138
+#: cogs/user_commands.py:72 cogs/user_commands.py:159
 msgid "You don't have a weapon."
 msgstr "ليس لديك سلاح."
 
-#: cogs/user_commands.py:67
+#: cogs/user_commands.py:78
 msgid "You unjammed your weapon."
 msgstr "أنت غير مرتبك سلاحك."
 
-#: cogs/user_commands.py:81
+#: cogs/user_commands.py:92
 msgid "You reloaded your weapon."
 msgstr "لقد أعدت تحميل سلاحك."
 
-#: cogs/user_commands.py:83
+#: cogs/user_commands.py:94
 msgid "You don't have any ammo left!"
 msgstr "ليس لديك أي ذخيرة متبقية!"
 
-#: cogs/user_commands.py:86
+#: cogs/user_commands.py:97
 msgid "You don't need to reload your weapon."
 msgstr "لست بحاجة إلى إعادة تحميل سلاحك."
 
-#: cogs/user_commands.py:89
+#: cogs/user_commands.py:100
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -665,25 +665,25 @@ msgstr ""
 "{greet} | الذخيرة في السلاح: {balles_actuelles} / {balles_max} | المجلات "
 "المتبقية: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:130
+#: cogs/user_commands.py:149
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "ملابسك مبللة ، لا يمكنك الذهاب للصيد! انتظر {temps_restant} من الدقائق."
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:168
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "سلاحك محشور ، يجب إعادة تحميله لإستعماله."
 
-#: cogs/user_commands.py:153
+#: cogs/user_commands.py:178
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "تم تخريب سلاحك ، نشكر {assaillant} على هذه المزحة السيئة."
 
-#: cogs/user_commands.py:192
+#: cogs/user_commands.py:225
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "سلاحك محشور فقط ، قم بإعادة تحميله لإستعماله."
 
-#: cogs/user_commands.py:213
+#: cogs/user_commands.py:252
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -691,7 +691,7 @@ msgstr ""
 "ليس هناك أي بطة هنا ، لكن الرصاصة لم تطلق لأن كاشف الأشعة تحت الحمراء الذي "
 "أضفته إلى سلاحك يقوم بعمله!"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:267
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -699,7 +699,7 @@ msgstr ""
 "لحسن الحظ غاب ، ولكن ماذا كنت تهدف بالضبط؟ ليس هناك أي بطة هنا ... [غاب: 1 "
 "xp] [wild shot: -1 exp]"
 
-#: cogs/user_commands.py:318
+#: cogs/user_commands.py:375
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -709,7 +709,7 @@ msgstr ""
 "سلاحك قليلا قبل اطلاق النار في المرة القادمة؟ [غاب: 1 xp] [حادث صيد: -2 xp] "
 "[** سلاح مصادر **]"
 
-#: cogs/user_commands.py:324
+#: cogs/user_commands.py:382
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -717,15 +717,15 @@ msgstr ""
 "** بانج ** لقد فاتتك البطة ... وأطلقت النار على {player}! [غاب: 1 xp] [حادث "
 "صيد: -2 xp] [** سلاح مصادر **]"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:339
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** لقد فاتتك البط! [غاب: 1 xp]"
 
-#: cogs/user_commands.py:385
+#: cogs/user_commands.py:447
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "ليس هناك أي بطة هنا ، ماذا كنت تخطط لعناق ، شجرة؟!"
 
-#: cogs/user_commands.py:401
+#: cogs/user_commands.py:463
 msgid "**Current event**"
 msgstr "**الحدث الحالي**"
 
@@ -921,31 +921,31 @@ msgstr "https://www.youtube.com/watch؟v=HP362ccZBmY"
 msgid "a fish."
 msgstr "سمكة."
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:198
 msgid "Everything is calm"
 msgstr "كل شيء هادئ."
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:198
 msgid "Nothing is happening right now."
 msgstr "لا شيء يحدث الآن."
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Ducks are migrating"
 msgstr "البط يهاجر."
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Prepare to see more ducks in the next hour."
 msgstr "استعد لرؤية المزيد من البط في الساعة القادمة."
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:200
 msgid "Foggy weather"
 msgstr "طقس ضبابي."
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid "Steroids in the lake"
 msgstr "المنشطات في البحيرة."
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -954,191 +954,191 @@ msgstr ""
 "قامت شركة نفايات طبية بإلقاء الستيرويدات في البحيرة. البط تحور ، وسترى "
 "الكثير من البط السوبر. ولكن ، كن حذرا ، ولا تشرب تلك المياه."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:202
 msgid "Safety class canceled"
 msgstr "قسم السلامة ملغى."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:202
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr "تم إلغاء فئة السلامة ، احذر من إطلاق النار على صيادين آخرين!"
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:204
 msgid "A new florist in town"
 msgstr "بائع زهور جديد في المدينة."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:205
 msgid "Mega-ducks"
 msgstr "ميجا-بط."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:205
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "شخص ضخم بطة عظمى ، والآن هم أكبر من ذلك بكثير!"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:206
 msgid "Windy weather"
 msgstr "طقس عاصف."
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:206
 msgid "Bullets are deflected by some strong wind"
 msgstr "ينحرف الرصاص من قبل بعض الرياح القوية."
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:213
 msgid "public danger"
 msgstr "خطر عام."
 
-#: cogs/helpers/config.py:210
+#: cogs/helpers/config.py:214
 msgid "tourist"
 msgstr "سائح."
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:215
 msgid "noob"
 msgstr "noob."
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:216
 msgid "trainee"
 msgstr "متدرب."
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:217
 msgid "duck misser"
 msgstr "فاقد البط."
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:218
 msgid "member of the Comitee Against Ducks"
 msgstr "عضو في جماعة ضد البط."
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:219
 msgid "duck hater"
 msgstr "كاره البط."
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:220
 msgid "duck pest"
 msgstr "بطة الآفات."
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:221
 msgid "duck hassler"
 msgstr "بطة هسلر."
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:222
 msgid "duck plucker"
 msgstr "بط ناتف."
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:223
 msgid "hunter"
 msgstr "صياد."
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:225
 msgid "duck clobber"
 msgstr "هازم البط."
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:226
 msgid "duck chewer"
 msgstr "ماضغ البط."
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:227
 msgid "duck eater"
 msgstr "آكل البط."
 
-#: cogs/helpers/config.py:224
+#: cogs/helpers/config.py:228
 msgid "duck flattener"
 msgstr "بطة مستوية."
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:229
 msgid "duck disassembler"
 msgstr "مفكك البط."
 
-#: cogs/helpers/config.py:226
+#: cogs/helpers/config.py:230
 msgid "duck demolisher"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:231
 msgid "duck killer"
 msgstr "قاتل البط."
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:232
 msgid "duck skinner"
 msgstr "مرقق البط."
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:234
 msgid "duck chopper"
 msgstr "مفرم البط."
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:235
 msgid "duck decorticator"
 msgstr "مقشر البط."
 
-#: cogs/helpers/config.py:232
+#: cogs/helpers/config.py:236
 msgid "duck fragger"
 msgstr "بطة المفرغ."
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:237
 msgid "duck shatterer"
 msgstr "محطم البط."
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:238
 msgid "duck smasher"
 msgstr "ساحق البط."
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:239
 msgid "duck breaker"
 msgstr "مكسر البط."
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:240
 msgid "duck wrecker"
 msgstr "هادم البط."
 
-#: cogs/helpers/config.py:237
+#: cogs/helpers/config.py:241
 msgid "duck impaler"
 msgstr "متصدع البط."
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:242
 msgid "duck eviscerator"
 msgstr "نازع أحشاء البط."
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:243
 msgid "ducks terror"
 msgstr "راعب البط."
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:244
 msgid "duck exploder"
 msgstr "مفجر البط."
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:245
 msgid "duck destructor"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:246
 msgid "duck blaster"
 msgstr "ناسف البط."
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:247
 msgid "duck pulverizer"
 msgstr "طاحن البط."
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:248
 msgid "duck disintegrator"
 msgstr "منحل البط."
 
-#: cogs/helpers/config.py:245
+#: cogs/helpers/config.py:249
 msgid "duck atomizer"
 msgstr " راذ البط."
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:250
 msgid "duck annihilator"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:251
 msgid "serial duck killer"
 msgstr "مسلسل البط القاتل."
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:252
 msgid "duck genocider"
 msgstr " ذابح البط."
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:253
 msgid "old noob"
 msgstr "مستجد قديم."
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:254
 msgid "duck toaster"
 msgstr "محمص البط."
 

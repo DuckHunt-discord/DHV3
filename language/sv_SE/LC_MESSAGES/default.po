@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-02 21:50+0000\n"
+"POT-Creation-Date: 2020-01-03 00:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,31 +143,31 @@ msgstr ""
 "För 24 timmar kommer du att göra dubbel skada, detta kommer **inte** att "
 "fungera tillsammans med explosiv ammunition."
 
-#: cogs/user_commands.py:61 cogs/user_commands.py:138
+#: cogs/user_commands.py:72 cogs/user_commands.py:159
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
-#: cogs/user_commands.py:130
+#: cogs/user_commands.py:149
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Dina kläder är helt dyngsura, det går inte att jaga ännu! Du får vänta "
 "{temps_restant} minuter innnan du kan gå och jaga igen."
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:168
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 
-#: cogs/user_commands.py:153
+#: cogs/user_commands.py:178
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ditt vapen har varit saboterad, tacka {assaillant} för denna dåliga skämt."
 
-#: cogs/user_commands.py:192
+#: cogs/user_commands.py:225
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ditt vapen har fastnat, ladda om för att fixa det."
 
-#: cogs/user_commands.py:213
+#: cogs/user_commands.py:252
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -175,7 +175,7 @@ msgstr ""
 "Det finns ingen anka här, men skottet har inte avfyrats eftersom infraröd "
 "sensorn du köpte för ditt vapen gör sitt jobb!"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:267
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -183,7 +183,7 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:339
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
@@ -223,31 +223,31 @@ msgstr "Buskar."
 msgid "a fish."
 msgstr "en fisk"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:198
 msgid "Everything is calm"
 msgstr "Allt är lungt"
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:198
 msgid "Nothing is happening right now."
 msgstr "Ingenting händer just nu."
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Ducks are migrating"
 msgstr "Ankor migrerar"
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Förbred för att se många ankor i nästa timme."
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:200
 msgid "Foggy weather"
 msgstr "Dimmigt väder"
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid "Steroids in the lake"
 msgstr "Steroider i sjön"
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -257,71 +257,71 @@ msgstr ""
 "Ankorna har muterat, och du kommer att se mycket mer superankor, var "
 "försiktig ock drick inte vattnet!"
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:213
 msgid "public danger"
 msgstr "Offentliga fara"
 
-#: cogs/helpers/config.py:210
+#: cogs/helpers/config.py:214
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:215
 msgid "noob"
 msgstr "nybörjare"
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:216
 msgid "trainee"
 msgstr "Praktikant"
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:217
 msgid "duck misser"
 msgstr "Anka missare"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:218
 msgid "member of the Comitee Against Ducks"
 msgstr "Medlem av Kommittén mot Ankor"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:219
 msgid "duck hater"
 msgstr "Anka hatare"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:220
 msgid "duck pest"
 msgstr "Ankpest"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:221
 msgid "duck hassler"
 msgstr "Anka hasslare"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:223
 msgid "hunter"
 msgstr "Jägare"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:227
 msgid "duck eater"
 msgstr "Ankätare"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:231
 msgid "duck killer"
 msgstr "Ankmördare"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:247
 msgid "duck pulverizer"
 msgstr "Ankpulverisör"
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:248
 msgid "duck disintegrator"
 msgstr "Ankdisintegratör"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:250
 msgid "duck annihilator"
 msgstr "Annihilator av Ankor"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:251
 msgid "serial duck killer"
 msgstr "Seriemördare av ankor"
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:252
 msgid "duck genocider"
 msgstr "Anka massmördare"
 

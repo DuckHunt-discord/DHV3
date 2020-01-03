@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-02 21:50+0000\n"
+"POT-Creation-Date: 2020-01-03 00:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -922,27 +922,27 @@ msgstr ""
 ":money_with_wings: Вы потратили 40 очков опыта, в канале появится "
 "механическая утка. Это неправильно, но так смешно!"
 
-#: cogs/user_commands.py:61 cogs/user_commands.py:138
+#: cogs/user_commands.py:72 cogs/user_commands.py:159
 msgid "You don't have a weapon."
 msgstr "У вас нет ружья."
 
-#: cogs/user_commands.py:67
+#: cogs/user_commands.py:78
 msgid "You unjammed your weapon."
 msgstr "Вы справились с клином ружья."
 
-#: cogs/user_commands.py:81
+#: cogs/user_commands.py:92
 msgid "You reloaded your weapon."
 msgstr "Вы перезарядили ружьё."
 
-#: cogs/user_commands.py:83
+#: cogs/user_commands.py:94
 msgid "You don't have any ammo left!"
 msgstr "В магазине не осталось патронов!"
 
-#: cogs/user_commands.py:86
+#: cogs/user_commands.py:97
 msgid "You don't need to reload your weapon."
 msgstr "Перезарядка не требуется."
 
-#: cogs/user_commands.py:89
+#: cogs/user_commands.py:100
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -950,23 +950,23 @@ msgstr ""
 "{greet} | Патронов в магазине: {balles_actuelles}/{balles_max} | Магазинов "
 "осталось: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:130
+#: cogs/user_commands.py:149
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "В мокрой одежде на охоту нельзя! Она высохнет через {temps_restant} мин."
 
-#: cogs/user_commands.py:145
+#: cogs/user_commands.py:168
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ваше ружьё заклинило, требуется перезарядка."
 
-#: cogs/user_commands.py:153
+#: cogs/user_commands.py:178
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ваше ружьё было саботировано, спасибо охотнику {assaillant} за эту плохую "
 "шутку."
 
-#: cogs/user_commands.py:164
+#: cogs/user_commands.py:191
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -974,11 +974,11 @@ msgstr ""
 "**МАГАЗИН ПУСТ** | Патронов в магазине : {balles_actuelles}/{balles_max} | "
 "Магазинов осталось: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:192
+#: cogs/user_commands.py:225
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ваше ружьё заклинило, требуется перезарядка."
 
-#: cogs/user_commands.py:213
+#: cogs/user_commands.py:252
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -986,7 +986,7 @@ msgstr ""
 "Уток тут нет, но благодаря инфракрасному датчику вы не потратили пулю просто "
 "так!"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:267
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -994,7 +994,7 @@ msgstr ""
 "К счастью, вы промахнулись, но... во что вы, собственно, целились? Тут не во "
 "что стрелять... [-1 очко опыта за промах] [-1 очко опыта за выстрел вникуда]"
 
-#: cogs/user_commands.py:318
+#: cogs/user_commands.py:375
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -1004,7 +1004,7 @@ msgstr ""
 "повернёте оружие перед следующим выстрелом? [-1 очко опыта за промах] [-2 "
 "очка опыта за несчастный случай во время охоты] [**ружьё конфисковано**]"
 
-#: cogs/user_commands.py:324
+#: cogs/user_commands.py:382
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1013,7 +1013,7 @@ msgstr ""
 "за промах] [-2 очка опыта за несчастный случай во время охоты] [**ружьё "
 "конфисковано**]"
 
-#: cogs/user_commands.py:332
+#: cogs/user_commands.py:391
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -1021,11 +1021,11 @@ msgstr ""
 "Вы можете купить оружие в магазине (`dh!shop 5`) или подождать бесплатную "
 "раздачу."
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:339
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**ПИУ** Вы промахнулись по утке! [-1 очко опыта за промах]"
 
-#: cogs/user_commands.py:369
+#: cogs/user_commands.py:431
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
@@ -1033,15 +1033,15 @@ msgstr ""
 "Вы обняли пользователя с ником {mention} настолько сильно, насколько это "
 "только возможно."
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:444
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Вы обняли дерево?!"
 
-#: cogs/user_commands.py:385
+#: cogs/user_commands.py:447
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Тут нет уток, что вы намеревались обнять, дерево, что ли?!"
 
-#: cogs/user_commands.py:401
+#: cogs/user_commands.py:463
 msgid "**Current event**"
 msgstr "**Текущее событие**"
 
@@ -1090,6 +1090,108 @@ msgid ""
 msgstr ""
 "**Утко-факт**: Разные виды уток живут от двух до двенадцати лет (к уткам из "
 "этой игры это не относится, кстати...)"
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Я невидимая, даже не пытайтесь убить меня"
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Что за ████ убила моего друга?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Вы ужасно целитесь..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Утка улетела."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "ОСТАНОВИТЕСЬ! Это не то, о чём вы подумали!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Если убьёте меня, потеряете 1562 очка опыта."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"У меня есть секретный план убийства всех охотников, но у меня уже одышка, "
+"так что я не думаю, что успею тебе его объяснить до..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[ВСТАВЬТЕ ЗДЕСЬ КРИК УТКИ]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Это сезон охоты на кроликов."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Есть лишний плащ?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "С какой стороны у утки больше перьев? Снаружи."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Я ворую деньги. Я вор и я утка."
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Я совершенно особенная утка."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr ""
+"**DuckHunt-подсказка®**: используйте клевер, чтобы получать больше опыта."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt-подсказка®**: используйте прицел, чтобы увеличить точность на "
+"первых порах игры."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr ""
+"**DuckHunt-подсказка®**: смазывайте оружие, чтобы оно меньше заклинивало."
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*хлебание*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Надеюсь, вы все здесь все куда-то ушли..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt-подсказка®**: используйте инфракрасный датчик, чтобы меньше "
+"стрелять впустую."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Я просто выполняю свою работу..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Добрый день, я утка из отдела обеспечения качества DuckHunt. Оцените, "
+"пожалуйста, процесс убийства уток."
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "Вы ПоВрЕжДеНы."
 
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1283,27 +1385,31 @@ msgstr "рыбу."
 msgid "even more bushes."
 msgstr "много кустов."
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Ваша рука больше, чем лицо?"
+
+#: cogs/helpers/config.py:198
 msgid "Everything is calm"
 msgstr "Всё спокойно."
 
-#: cogs/helpers/config.py:194
+#: cogs/helpers/config.py:198
 msgid "Nothing is happening right now."
 msgstr "Сейчас ничего не происходит,"
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Ducks are migrating"
 msgstr "Утки перемещаются."
 
-#: cogs/helpers/config.py:195
+#: cogs/helpers/config.py:199
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Приготовьтесь к наплыву уток в ближайший час."
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:200
 msgid "Foggy weather"
 msgstr "Туманная погода"
 
-#: cogs/helpers/config.py:196
+#: cogs/helpers/config.py:200
 msgid ""
 "It's harder to see killed ducks. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1311,11 +1417,11 @@ msgstr ""
 "Трудно что-то увидеть в тумане. Вам нужно подождать пару секунд, прежде чем "
 "вы узнаете последствия выстрела."
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid "Steroids in the lake"
 msgstr "Стероиды в озере"
 
-#: cogs/helpers/config.py:197
+#: cogs/helpers/config.py:201
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1325,20 +1431,20 @@ msgstr ""
 "мутировали, суперуток будет намного больше. Но будьте осторожны, не пейте ту "
 "воду."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:202
 msgid "Safety class canceled"
 msgstr "Класс безопасности отменён"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:202
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
 "Класс безопасности был отменен, старайтесь не стрелять по другим охотникам!"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:203
 msgid "Connection problems"
 msgstr "Проблемы с соединением"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:203
 msgid ""
 "Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
@@ -1346,11 +1452,11 @@ msgstr ""
 "Утки не могут найти ваш компьютер из-за проблем с соединением, пока их не "
 "устранят, утки будут появляться намного реже."
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:204
 msgid "A new florist in town"
 msgstr "Новый цветочный магазин в городе"
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:204
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them out!"
@@ -1358,191 +1464,191 @@ msgstr ""
 "В городе открылся новый цветочный магазин, там вы сможете приобрести более "
 "качественный четырёхлистный клевер."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:205
 msgid "Mega-ducks"
 msgstr "Мегаутки"
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:205
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Кто-то надул суперутку, теперь они ЕЩЁ БОЛЬШЕ!!!"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:206
 msgid "Windy weather"
 msgstr "Ветренная погода"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:206
 msgid "Bullets are deflected by some strong wind"
 msgstr "Пулям мешает сильный ветер"
 
-#: cogs/helpers/config.py:209
+#: cogs/helpers/config.py:213
 msgid "public danger"
 msgstr "угроза обществу"
 
-#: cogs/helpers/config.py:210
+#: cogs/helpers/config.py:214
 msgid "tourist"
 msgstr "турист"
 
-#: cogs/helpers/config.py:211
+#: cogs/helpers/config.py:215
 msgid "noob"
 msgstr "новичок"
 
-#: cogs/helpers/config.py:212
+#: cogs/helpers/config.py:216
 msgid "trainee"
 msgstr "стажёр"
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:217
 msgid "duck misser"
 msgstr "бывалый стажёр"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:218
 msgid "member of the Comitee Against Ducks"
 msgstr "член Комитета Против Уток"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:219
 msgid "duck hater"
 msgstr "ненавистник уток"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:220
 msgid "duck pest"
 msgstr "утиный вредитель"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:221
 msgid "duck hassler"
 msgstr "ночной сон уток"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:222
 msgid "duck plucker"
 msgstr "ощипыватель уток"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:223
 msgid "hunter"
 msgstr "охотник"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:224
 msgid "duck inside out turner"
 msgstr "выворачивает уток наизнанку"
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:225
 msgid "duck clobber"
 msgstr "колошматит уток"
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:226
 msgid "duck chewer"
 msgstr "жуёт уток, как жвачку"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:227
 msgid "duck eater"
 msgstr "пожиратель уток"
 
-#: cogs/helpers/config.py:224
+#: cogs/helpers/config.py:228
 msgid "duck flattener"
 msgstr "расплющивает уток"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:229
 msgid "duck disassembler"
 msgstr "разбирает уток на части"
 
-#: cogs/helpers/config.py:226
+#: cogs/helpers/config.py:230
 msgid "duck demolisher"
 msgstr "крушит уток"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:231
 msgid "duck killer"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:232
 msgid "duck skinner"
 msgstr "ошкуривает уток"
 
-#: cogs/helpers/config.py:229
+#: cogs/helpers/config.py:233
 msgid "duck predator"
 msgstr "утиный хищник"
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:234
 msgid "duck chopper"
 msgstr "крушитель уток"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:235
 msgid "duck decorticator"
 msgstr "снимает с уток кожу"
 
-#: cogs/helpers/config.py:232
+#: cogs/helpers/config.py:236
 msgid "duck fragger"
 msgstr "убийца уток"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:237
 msgid "duck shatterer"
 msgstr "разбивает уток"
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:238
 msgid "duck smasher"
 msgstr "раздавливает уток в лепёшку"
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:239
 msgid "duck breaker"
 msgstr "дробит уток"
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:240
 msgid "duck wrecker"
 msgstr "крушитель уток"
 
-#: cogs/helpers/config.py:237
+#: cogs/helpers/config.py:241
 msgid "duck impaler"
 msgstr "прокалыватель уток"
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:242
 msgid "duck eviscerator"
 msgstr "потрошитель уток"
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:243
 msgid "ducks terror"
 msgstr "утиный кошмар"
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:244
 msgid "duck exploder"
 msgstr "взрыватель уток"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:245
 msgid "duck destructor"
 msgstr "уничтожитель уток"
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:246
 msgid "duck blaster"
 msgstr "утко-бластер"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:247
 msgid "duck pulverizer"
 msgstr "утко-пульвелизатор"
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:248
 msgid "duck disintegrator"
 msgstr "утко-дезинтегратор"
 
-#: cogs/helpers/config.py:245
+#: cogs/helpers/config.py:249
 msgid "duck atomizer"
 msgstr "разъедает уток на атомы"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:250
 msgid "duck annihilator"
 msgstr "анигилятор уток"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:251
 msgid "serial duck killer"
 msgstr "серийный убийца уток"
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:252
 msgid "duck genocider"
 msgstr "главный по утиному геноциду"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:253
 msgid "old noob"
 msgstr "старый новичок"
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:254
 msgid "duck toaster"
 msgstr "поджариватель уток"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:255
 msgid "unemployed due to extinction of the duck species"
 msgstr "уволен(а) из-за исчезновения уток как вида."
 
