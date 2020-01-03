@@ -10,7 +10,7 @@ class SetupWizzard(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild: discord.Guild):
-
+        _ = self.bot._
 
         for channel in guild.channels:
             if isinstance(channel, discord.TextChannel):

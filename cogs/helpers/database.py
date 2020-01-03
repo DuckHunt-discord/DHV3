@@ -330,7 +330,7 @@ class Database:
             self.bot.logger.info(f"Adding server {guild.id} ({guild.name}) to the prefs database")
             # The guild wasn't created in the DB yet.
             self.database.query("INSERT INTO prefs (server_id) VALUES (:guild_id)", guild_id=guild.id)
-            return await self.get_pref(guild, pref)  # Return the pref now
+            return await self.get_pref(channel, pref)  # Return the pref now
 
     def bool_(self, b):
         return str(b).lower() in ['true', '1', 't', 'y', 'yes', 'yeah', 'yep', 'yup', 'absolutely', 'certainly', 'definitely', 'uh-huh', 'ouais', 'oui', 'ok', 'on', 'vrai', 'ye', 'actif']

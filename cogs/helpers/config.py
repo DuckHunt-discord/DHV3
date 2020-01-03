@@ -87,7 +87,7 @@ def config(bot):
                      _("a rusty mechanical duck."), _("a pair of sunglasses without glasses."), _("Donald's beret."), _("a half-melted peppermint."), _("a box of Abraxo cleaner."),
                      _("a gun with banana peeled barrel."), _("an old hunting knife."), _("an old video recording: http://tinyurl.com/zbejktu"), _("an old hunting photo: http://tinyurl.com/hmn4r88"),
                      _("an old postcard: http://tinyurl.com/hbnkpzr"), _("a golden duck photo: http://tinyurl.com/hle8fjf"), _("a hunter pin: http://tinyurl.com/hqy7fhq"), _("bushes."),
-                     _("https://www.youtube.com/watch?v=HP362ccZBmY"), _("a fish."), _("even more bushes.")]
+                     _("https://www.youtube.com/watch?v=HP362ccZBmY"), _("a fish."), _("even more bushes."), _("Is your hand bigger than your face ?")]
 
     # > Database settings < #
     # User used to connect to the Mysql DB
@@ -182,7 +182,11 @@ def config(bot):
         # May be removed on demand
         441035268775215106,
 
-
+        # 2020-01-02
+        # Spamming the !help command a ton of times
+        # Probably to try to lag bots
+        234344797412786176,
+        427945413669158912
         # All for now
     ]
 
