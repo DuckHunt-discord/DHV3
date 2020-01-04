@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-03 00:59+0000\n"
+"POT-Creation-Date: 2020-01-03 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1106,6 +1106,10 @@ msgstr "Вы ужасно целитесь..."
 #: cogs/helpers/config.py:69
 msgid "The duck left."
 msgstr "Утка улетела."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Утка никуда не ушла."
 
 #: cogs/helpers/config.py:69
 msgid "STOP! It's not what you think!"
