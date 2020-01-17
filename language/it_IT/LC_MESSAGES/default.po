@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-04 11:35+0000\n"
+"POT-Creation-Date: 2020-01-06 09:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1123,6 +1123,10 @@ msgstr "Chi è il piccolo ████ qui che ha ucciso il mio amico?"
 msgid "You can't aim for good..."
 msgstr "Non sei proprio capace di mirare..."
 
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "SMETTILA! Non è come pensi!"
+
 #: cogs/helpers/config.py:70
 msgid "Killing me will cost you 1562 experience points."
 msgstr "Uccidermi ti costerà 1562 punti esperienza."
@@ -1159,6 +1163,16 @@ msgstr "Rubo denaro. Sono una robber ducky."
 msgid "I'm a very special duck."
 msgstr "Sono un'antra molto speciale"
 
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**DuckHunt ProTip®**: usa i trifogli per guadagnare più esperienza."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: usa i mirini per migliorare la precisione ai livelli "
+"più bassi."
+
 #: cogs/helpers/config.py:72
 msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
 msgstr ""
@@ -1172,6 +1186,16 @@ msgstr "*Slurp*"
 #: cogs/helpers/config.py:72
 msgid "Hopefully you are all AFK..."
 msgstr "Spero che siate tutti AFK ..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: usa i rilevatori a infrarossi per evitare colpi "
+"inutili."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Sto solo facendo il mio lavoro..."
 
 #: cogs/helpers/config.py:73
 msgid ""
@@ -1379,6 +1403,10 @@ msgstr "un pesce."
 #: cogs/helpers/config.py:90
 msgid "even more bushes."
 msgstr "altri cespugli."
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Fammi capire, hai la mano che è più grande del viso?"
 
 #: cogs/helpers/config.py:198
 msgid "Everything is calm"

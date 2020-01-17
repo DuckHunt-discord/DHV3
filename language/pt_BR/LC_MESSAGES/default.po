@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-04 11:35+0000\n"
+"POT-Creation-Date: 2020-01-06 09:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1081,6 +1081,133 @@ msgstr "Eu amo você também"
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "Não atire em mim! Eu sou um pato falso!"
 
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr ""
+"**Fato Patístico**: Alguns patos podem voar por mais de 322 milhas em apenas "
+"um dia!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Fato Patístico**: As penas nas costas dos patos são à prova d'água."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Fato Patístico**: Patos tem três pálpebras!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"**Fato Patístico**: Dependendo da espécie, um pato pode viver entre 2 e 12 "
+"anos. Não os patos que vivem nesse jogo que..."
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Eu estou invisível, não se incomode em me matar"
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Quem é o pequeno ████ aqui que matou meu amigo?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "você não mira muito bem"
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "O pato saiu."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "O pato certo."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "PARE! Isso não é o que você está pensando!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Por me matar isso custou a você 1562 pontos de experiência."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Eu tenho um plano secreto para matar todos os caçadores, mas eu já estou com "
+"falta de ar, eu penso que não estarei hábil para explicar tudo antes..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[INSIRA UM GRITO DE PATO AQUI]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "É temporada de caça ao coelho."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Tem uma capa sobressalente?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "Qual o lado do pato que tem mais penas? O lado de fora."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Eu roubo dinheiro. Eu sou um patinho ladrão."
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Eu sou um pato muito especial."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**DuckHunt Dica de Pro®**: Use trevos para ganhar mais experiência."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt Dica de Pro®**: Use óculos para aumentar a sua precisão nos "
+"níveis mais baixos."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr ""
+"**DuckHunt Dica de Pro®**: Use graxa para prevenir o travamento de armas."
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Slurp*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Espero que todos vocês estejam AFK..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt Dica de Pro®**: Use detectores infra-vermelhos para prevenir "
+"tiros errados"
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Eu estou apenas fazendo meu trabalho..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Olá, aqui quem fala é o seguro de qualidade do DuckHunt. Como você avalia "
+"sua experiência em matar patos até agora? "
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "VoCê fOi CoRrOmPiDo."
+
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "O pato foi embora. ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1112,6 +1239,16 @@ msgstr "O pato não quer ser baleado. ·°'\\`'°-.,¸¸.·°'\\`"
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "O pato foi comprar limonada. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"O pato voou sobre um espaço desproporcionalmente pequeno ·°'\\`'°-.,¸¸."
+"·°'\\`"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "O pato ficou empolgado ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:83
 msgid "a stuffed duck."
@@ -1264,6 +1401,10 @@ msgstr "Um peixe."
 #: cogs/helpers/config.py:90
 msgid "even more bushes."
 msgstr "mais alguns arbustos"
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Sua mão é maior que seu rosto?"
 
 #: cogs/helpers/config.py:198
 msgid "Everything is calm"
@@ -1681,6 +1822,17 @@ msgid ""
 msgstr ""
 ":heart: Você tentou abraçar o pato, mas ele viu a arma que você tem nas suas "
 "costas. então ele voou para longe de você para a lagoa![-2 exp]"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones:**{onomatopoeia}** Você matou o pato em {time} segundos, "
+"você agora tem um total de {total} patos(dos quais {supercanards} são super-"
+"patos) mortos em {channel}. "
 
 #: cogs/helpers/ducks.py:402
 msgid ""

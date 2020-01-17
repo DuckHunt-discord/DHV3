@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-04 11:35+0000\n"
+"POT-Creation-Date: 2020-01-06 09:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -904,6 +904,12 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Bắn trượt ! ( -1 exp )"
 
+#: cogs/user_commands.py:431
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr "Bạn ôm chặt lấy {mention}. "
+
 #: cogs/user_commands.py:444
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Bạn vừa ôm một cái cây?"
@@ -940,6 +946,125 @@ msgstr "Tao bắn mày á!"
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "Em không phải vịt, đừng bắn em mà!"
 
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr "**Góc khoa học**: Vịt có thể bay tới 332 dặm trong một ngày!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Góc khoa học**: Lông vịt chống nước."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Góc khoa học**: Vịt có tới 3 mí mắt!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"**Góc khoa học**: Một số loài vịt có thể sống từ 2 tới 12 năm ( không phải "
+"loài vịt trong khu bắn vịt này )"
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Vịt tàng hình bay ngang qua."
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Thằng nào vừa chê tóc tao xấu đấy?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Bắn ngu thế?"
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Vịt đã biến mất."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Vịt chưa biến mất."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "Giữa chúng ta không có thù oán cá nhân gì đâu nhé?"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Bạn sẽ bị trừ 1562exp khi giết con vịt này."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr "Bọn thợ săn đâu hết rồi?"
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "QuÁC qUác "
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Đây là mùa săn thỏ."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Đang cảm thấy may mắn à?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "Bên nào của con vịt có nhiều lông nhất? Bên ngoài."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Vịt đạo tặc là ta!"
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Em đã có chồng rồi <3"
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**DuckHunt ProTip®**: Sử dụng cần 4 lá để nhận thêm kinh nghiệm."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: sử dụng ống ngắm khi cấp độ đang thấp để tăng độ chính "
+"xác."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr "**DuckHunt ProTip®**: Dùng dầu ăn để chống kẹt súng."
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*SỤT SỊT*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Hi vọng là bọn nó AFK hết rồi..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: Dùng đầu dò hồng ngoại để chống láng phí đạn dược."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Chỉ là công việc thôi..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr "Đây là bảng khảo sát cho DuckHunt. Bạn sẽ cho bao nhiêu vịt đây?"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "BẠn Đã bỊ ngUyỀn RủA."
+
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Vịt đã đi xa ·°'\\`'°-.,¸¸.·°'\\`"
@@ -971,6 +1096,14 @@ msgstr "Vì sợ bị bắn, con vịt bay đi ·°'\\`'°-.,¸¸.·°'\\`"
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Vịt đã bay đi đá phò ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Vịt đã chui vào khe tường ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Vịt đã chui vào vỏ trứng ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:83
 msgid "a stuffed duck."
@@ -1123,6 +1256,10 @@ msgstr "một con cá"
 #: cogs/helpers/config.py:90
 msgid "even more bushes."
 msgstr "thêm nhiều bụi cây khô"
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Tay nhanh hơn não à?"
 
 #: cogs/helpers/config.py:198
 msgid "Everything is calm"
@@ -1536,6 +1673,17 @@ msgid ""
 msgstr ""
 ":heart: Bạn thử ôm con vịt, nhưng nó đã thấy vũ khí của bạn, con vịt bay đi "
 "(- 2 exp)"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Vịt bị hạ trong  {time}  giây, bạn hạ "
+"được tổng cộng {total} vịt  (Trong đó có {supercanards} con là siêu vịt) bị "
+"hạ trong khu {channel}.     \\_X<   *COUAC*   {exp}"
 
 #: cogs/helpers/ducks.py:402
 msgid ""
