@@ -62,12 +62,12 @@ def had_giveback():
     async def predicate(ctx):
         # await ctx.bot.wait_until_ready()
 
-        channel = ctx.message.channel
-        player = ctx.message.author
+        channel = ctx.channel
+        player = ctx.author
         if await ctx.bot.db.get_stat(channel, player, "banned"):
-            cond = ctx.message.author.id in ctx.bot.admins  # User is super admin
-            cond = cond or ctx.message.channel.permissions_for(ctx.message.author).administrator  # User have server administrator permission
-            cond = cond or ctx.message.author.id in await ctx.bot.db.get_admins(ctx.guild)  # User is admin as defined in the database
+            cond = ctx.author.id in ctx.bot.admins  # User is super admin
+            cond = cond or ctx.channel.permissions_for(ctx.author).administrator  # User have server administrator permission
+            cond = cond or ctx.author.id in await ctx.bot.db.get_admins(ctx.guild)  # User is admin as defined in the database
             if not cond:  # Not even an admin so
                 ctx.logger.debug("Banned player trying to play :(")
                 return False

@@ -178,7 +178,7 @@ class Admin(commands.Cog):
         language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not ctx.invoked_subcommand:
-            await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/list/modified] [setting if applicable]`", language))
+            await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] [setting]`", language))
 
     @settings.command(name='view')
     @commands.cooldown(5, 20, BucketType.guild)
@@ -186,6 +186,10 @@ class Admin(commands.Cog):
         """!settings get"""
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.channel, "language")
+
+        if pref not in self.bot.db.settings_dict.keys():
+            await self.bot.send_message(ctx=ctx, message=_("Unknown setting...", language))
+            return
 
         await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} is set to `{value}` on this guild.", language).format(
             **{"value": await self.bot.db.get_pref(ctx.message.channel, pref), "pref": pref}))
@@ -197,6 +201,10 @@ class Admin(commands.Cog):
         """!settings set"""
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
+
+        if pref not in self.bot.db.settings_dict.keys():
+            await self.bot.send_message(ctx=ctx, message=_("Unknown setting...", language))
+            return
 
         # Special cases
         try:
@@ -244,6 +252,10 @@ class Admin(commands.Cog):
         """!settings reset"""
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
+
+        if pref not in self.bot.db.settings_dict.keys():
+            await self.bot.send_message(ctx=ctx, message=_("Unknown setting...", language))
+            return
 
         value = self.bot.db.settings_dict[pref]["Default"]
 

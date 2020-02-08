@@ -134,42 +134,80 @@ class Database:
             self._stats_cache[channel] = {}
 
     async def get_stat(self, channel, user, stat: str):
+        timings = []
+        start_time = time.time()
+        timings.append(f"[+{round(time.time() - start_time, 2)}] get_stat for {channel}, {user} and {stat}")
         # self.bot.logger.debug(f"get_stat for {channel.id} of {user.id} stat {stat}")
 
         if channel in self._stats_cache.keys():
             if user in self._stats_cache[channel]:
+                timings.append(f"[+{round(time.time() - start_time, 2)}] Found in cache")
                 return self._stats_cache[channel][user][stat]
         else:
             self._stats_cache[channel] = {}
 
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Not found in cache")
+
         channel_id = await self.get_channel_dbid(channel)
+
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Got DBID")
+
+        if channel_id is None:
+            self.bot.logger.error(f"Channel_id is None in get_stat for channel {channel}")
+
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
         row = None
         while not row:
+            timings.append(f"[+{round(time.time() - start_time, 2)}] Searching in DB")
             # Now that we have the ID, we can get into duckhunt/players and find the player we need
             row = self.database.query("SELECT * FROM players WHERE channel_id=:channel_id AND id_=:user_id LIMIT 1;", stat=stat, channel_id=channel_id, user_id=user.id)
 
             if row.first() is None:
+                timings.append(f"[+{round(time.time() - start_time, 2)}] Not in DB, inserting")
                 # Wasn't in the DB
                 self.database.query("INSERT INTO players (id_, channel_id, name) VALUES (:user_id, :channel_id, :name_)", channel_id=channel_id, user_id=user.id,
                                     name_=user.name + "#" + user.discriminator)
 
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Got row")
         row = row.first()
+
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Got first element")
         # self.bot.logger.debug(f"> Value : {value}")
 
         self._stats_cache[channel][user] = row
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Added in cache")
+
         value = row[stat]
+        timings.append(f"[+{round(time.time() - start_time, 2)}] Got value={value}")
+
+        if time.time() - start_time > 0.5:
+            self.bot.logger.warning("\n".join(timings))
 
         return value
 
     async def set_stat(self, channel, user, stat: str, value: int):
+        start = time.time()
+        timings = []
+
+        now = time.time()
+        delta = round(now - start, 2)
+        timings.append(f"[+{delta}] Init")
+
         # self.bot.logger.debug(f"set_stat for {channel.id} of {user.id} stat {stat} with value {value}")
         cond = stat == "exp" and await self.get_pref(channel, "announce_level_up")
         if cond:
             ancien_niveau = await self.get_level(channel=channel, player=user)
 
+        now = time.time()
+        delta = round(now - start, 2)
+        timings.append(f"[+{delta}] Got level_up cond")
+
         channel_id = await self.get_channel_dbid(channel)
+
+        now = time.time()
+        delta = round(now - start, 2)
+        timings.append(f"[+{delta}] Got channel dbid")
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
         # Now that we have the ID, we can get into duckhunt/players and update the player we need
@@ -177,11 +215,27 @@ class Database:
                             f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url", channel_id=channel_id, user_id=user.id, stat_value=value,
                             avatar_url=str(user.avatar_url_as(static_format='jpg', size=1024)), name_=user.name + "#" + user.discriminator)
 
+        now = time.time()
+        delta = round(now - start, 2)
+        timings.append(f"[+{delta}] Executed slow query")
+
         if channel in self._stats_cache.keys():
             if user in self._stats_cache[channel]:
                 self._stats_cache[channel].pop(user)
         else:
             self._stats_cache[channel] = {}
+
+        now = time.time()
+        delta = round(now - start, 2)
+        timings.append(f"[+{delta}] Cleaned cache")
+
+        total_taken = time.time() - start
+        if total_taken > 0.5:
+            self.bot.logger.warning(f"⚠️ SLOW QUERY DETECTED ⚠️ \n"
+                                    f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) \n"
+                                    f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url\n"
+                                    f"With values channel_id={channel_id}, user_id={user.id}, stat_value={value}, avatar_url={str(user.avatar_url_as(static_format='jpg', size=1024))}, name_={user.name + '#' + user.discriminator}\n"
+                                    f"⚠️ SLOW QUERY TIMINGS: \n" + "\n".join(timings))
 
         ## LEVEL UP EMBEDS ##
         if cond:
@@ -384,6 +438,9 @@ class Database:
             return True
         except sqlalchemy.exc.IntegrityError:  # user is admin already
             return False
+
+    async def cleanup_database(self):
+        self.database.query("INSERT INTO admins (server_id, user_id) VALUES (:guild_id, :user_id)", guild_id=guild.id, user_id=user.id)
 
     async def del_admin(self, guild, user):
         # self.bot.logger.debug(f"del_admin for {guild.id} and user {user.id}")

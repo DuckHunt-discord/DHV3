@@ -209,8 +209,12 @@ async def background_loop(bot):
                 bot.logger.info("Current ducks: {canards}".format(**{"canards": len(bot.ducks_spawned)}))
 
             if int(now) % 3600 == 0:
-                await event_gen(bot)
-
+                try:
+                    # Well, this often fails with a connexion closed error, I don't really know why, but probably not crashing the loop would be a better way to proceed...
+                    await event_gen(bot)
+                except Exception as e:
+                    bot.logger.exception("Huh, couldn't event_gen when I should have been able.")
+                    pass
             thishour = int((now % DAY) / HOUR)
             for channel in list(bot.ducks_planning.keys()):
 

@@ -130,7 +130,7 @@ class SuperAdmin(commands.Cog):
             name, nd = sorted_intresting[i]
             await ctx.send(f"`{name}` taken discrims: {big_dict_of_names_and_discrims[name]}")
 
-    @commands.command(pass_context=True)
+    @commands.command()
     @checks.is_super_admin()
     async def server_owners_manager(self, ctx):
 

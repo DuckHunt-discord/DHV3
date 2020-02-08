@@ -186,7 +186,12 @@ def config(bot):
         # Spamming the !help command a ton of times
         # Probably to try to lag bots
         234344797412786176,
-        427945413669158912
+        427945413669158912,
+
+        # 2020-01-08
+        # Spaming the !say command to make the bot say insluts and mass pings
+        505412708234035201,
+
         # All for now
     ]
 
