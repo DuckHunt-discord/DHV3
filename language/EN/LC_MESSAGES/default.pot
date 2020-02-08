@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-17 20:40+0000\n"
+"POT-Creation-Date: 2020-02-08 10:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -667,7 +667,7 @@ msgstr ""
 msgid ":ok: {target}'s weapon is already sabotaged!"
 msgstr ""
 
-#: cogs/shop.py:411 cogs/shop.py:516
+#: cogs/shop.py:411 cogs/shop.py:524
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I "
 "will be able to delete that kind of shop commands ;)"
@@ -697,17 +697,15 @@ msgid ""
 "channel, thanks to {mention}'s decoy. They bought it for 8 exp!"
 msgstr ""
 
-#: cogs/shop.py:496
-msgid ""
-":money_with_wings: You put some bread on the channel to attract ducks. "
-"They'll stay 20 seconds longer before leaving for the rest of the day!"
+#: cogs/shop.py:500
+msgid ":money_with_wings: You put some bread on the channel to attract ducks. "
 msgstr ""
 
-#: cogs/shop.py:497
+#: cogs/shop.py:505
 msgid ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 
-#: cogs/shop.py:521
+#: cogs/shop.py:529
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 "
 "exp. It's wrong, but so funny!"
