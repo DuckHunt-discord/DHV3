@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,8 +53,8 @@ msgstr ":ok: Ok, användaren förbjuden. :gun:"
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Ok, användaren är inte förbjuden nu. :eyes:"
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ":x: Felaktig värde."
 
@@ -223,31 +223,31 @@ msgstr "Buskar."
 msgid "a fish."
 msgstr "en fisk"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Everything is calm"
 msgstr "Allt är lungt"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Nothing is happening right now."
 msgstr "Ingenting händer just nu."
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Ducks are migrating"
 msgstr "Ankor migrerar"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Förbred för att se många ankor i nästa timme."
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "Dimmigt väder"
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
 msgstr "Steroider i sjön"
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -257,91 +257,91 @@ msgstr ""
 "Ankorna har muterat, och du kommer att se mycket mer superankor, var "
 "försiktig ock drick inte vattnet!"
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:218
 msgid "public danger"
 msgstr "Offentliga fara"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:220
 msgid "noob"
 msgstr "nybörjare"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:221
 msgid "trainee"
 msgstr "Praktikant"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:222
 msgid "duck misser"
 msgstr "Anka missare"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
 msgstr "Medlem av Kommittén mot Ankor"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:224
 msgid "duck hater"
 msgstr "Anka hatare"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:225
 msgid "duck pest"
 msgstr "Ankpest"
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:226
 msgid "duck hassler"
 msgstr "Anka hasslare"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "Jägare"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "Ankätare"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "Ankmördare"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:252
 msgid "duck pulverizer"
 msgstr "Ankpulverisör"
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:253
 msgid "duck disintegrator"
 msgstr "Ankdisintegratör"
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:255
 msgid "duck annihilator"
 msgstr "Annihilator av Ankor"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:256
 msgid "serial duck killer"
 msgstr "Seriemördare av ankor"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:257
 msgid "duck genocider"
 msgstr "Anka massmördare"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
 msgstr "Träffsäkerhet av skott"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
 msgstr "Trovärdighet av vapen"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
 msgstr "Erfarenhetspoäng"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"

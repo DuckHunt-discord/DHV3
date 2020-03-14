@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,20 +114,11 @@ msgstr "Hotovo. Pokud byl uživatel v databázi, byl z ní odstraněn."
 msgid "Done. All channel data was removed."
 msgstr "Hotovo. Všechna data kanálu byla odstraněna."
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-":x: Neplatná syntaxe. Použij tento příkaz takto: `!settings [view/set/reset/"
-"list/modified] [nastavení, pokud lze aplikovat]` [zobrazit/nastavit/"
-"vyresetovat/list/upraveno]"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: Nastavení {pref} bylo pro tento cech nastaveno na `{value}`"
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -135,7 +126,7 @@ msgstr ""
 "Obcházím kontrolu max_ducks_per_day (max kachen za den), protože jsi "
 "vlastníkem bota. Jinak by maximum bylo `{max}`."
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -145,7 +136,7 @@ msgstr ""
 "cechu. Prosím, nezneužívej toho. Pro informaci, limit by byl jinak nastaven "
 "na `{max}` kachen za den."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:226
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -153,16 +144,16 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> Oprávněn nastavit VIP "
 "status!"
 
-#: cogs/admin_commands.py:220
+#: cogs/admin_commands.py:228
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: Neoprávněn nastavit VIP status! Nejste vlastníkem serveru."
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ":x: Neplatná hodnota."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: Nastavení {pref} bylo pro tento cech nastaveno na `{value}` ."
 
@@ -865,7 +856,7 @@ msgstr ""
 msgid ":ok: {target}'s weapon is already sabotaged!"
 msgstr ":ok: Zbraň {target} je už sabotovaná!"
 
-#: cogs/shop.py:411 cogs/shop.py:516
+#: cogs/shop.py:411 cogs/shop.py:524
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I will "
 "be able to delete that kind of shop commands ;)"
@@ -901,22 +892,14 @@ msgstr ""
 ":money_with_wings: Kachna se objeví v dalších 10 minutách v tomto kanále, "
 "díky návnadě {mention}. Koupili ji za 8 expů!"
 
-#: cogs/shop.py:496
-msgid ""
-":money_with_wings: You put some bread on the channel to attract ducks. "
-"They'll stay 20 seconds longer before leaving for the rest of the day!"
-msgstr ""
-":money_with_wings: Položil/a jsi trochu chleba na kanál, abys přilákal/a "
-"kachny. Zůstanou o 20 sekund déle před odchodem po zbytek dne!"
-
-#: cogs/shop.py:497
+#: cogs/shop.py:505
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 ":money_with_wings: Chleba se může nahromadit! Kupte ho trošku více, abyste "
 "maximalizovali tyto efekty!"
 
-#: cogs/shop.py:521
+#: cogs/shop.py:529
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
@@ -1240,27 +1223,27 @@ msgstr "rybu."
 msgid "even more bushes."
 msgstr "ještě více keřů."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Everything is calm"
 msgstr "Všechno je poklidné"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Nothing is happening right now."
 msgstr "Nic se zrovna teď neděje."
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Ducks are migrating"
 msgstr "Kachny migrují"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Připrav se, že uvidíš více kachen v příští hodině."
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "Mlhavé počasí"
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid ""
 "It's harder to see killed ducks. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1268,15 +1251,15 @@ msgstr ""
 "Je težší vidět zabité kachny. Budeš potřebovat pár sekund navíc než zjistíš "
 "zda jsi minul nebo ne."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
 msgstr "Steroidy v jezeře"
 
-#: cogs/helpers/config.py:203
+#: cogs/helpers/config.py:208
 msgid "Connection problems"
 msgstr "Problémy s připojením"
 
-#: cogs/helpers/config.py:203
+#: cogs/helpers/config.py:208
 msgid ""
 "Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
@@ -1284,136 +1267,136 @@ msgstr ""
 "Kachny nemohou najít tvůj počítač kvůli problémům s připojením, a bude jich "
 "méně dokud se to neopraví"
 
-#: cogs/helpers/config.py:204
+#: cogs/helpers/config.py:209
 msgid "A new florist in town"
 msgstr "Nový květinář ve městě"
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Mega-ducks"
 msgstr "Mega-kachy"
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Někdo nafoukl super kachny, a nyní jsou JEŠTĚ VĚTŠÍ!"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Windy weather"
 msgstr "Větrné počasí"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Bullets are deflected by some strong wind"
 msgstr "Kulky jsou vychylovány silným větrem"
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:218
 msgid "public danger"
 msgstr "veřejné nebezpečí"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "turista"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:220
 msgid "noob"
 msgstr "nula"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:221
 msgid "trainee"
 msgstr "praktikant"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:222
 msgid "duck misser"
 msgstr "míječ kachen"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
 msgstr "člen Sdružení Proti Kachnám"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:225
 msgid "duck pest"
 msgstr "škůdce kachen"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "lovec"
 
-#: cogs/helpers/config.py:224
+#: cogs/helpers/config.py:229
 msgid "duck inside out turner"
 msgstr "rozparovač kachen"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "jedlík kachen"
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:233
 msgid "duck flattener"
 msgstr "zplošťovač kachen"
 
-#: cogs/helpers/config.py:229
+#: cogs/helpers/config.py:234
 msgid "duck disassembler"
 msgstr "rozebírač kachen"
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:235
 msgid "duck demolisher"
 msgstr "bořič kachen"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "kachní vrah"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:256
 msgid "serial duck killer"
 msgstr "sériový vrah kachen"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:257
 msgid "duck genocider"
 msgstr "vyhlazovač kachen"
 
-#: cogs/helpers/config.py:253
+#: cogs/helpers/config.py:258
 msgid "old noob"
 msgstr "stará nula"
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:259
 msgid "duck toaster"
 msgstr "toastovač kachen"
 
-#: cogs/helpers/config.py:255
+#: cogs/helpers/config.py:260
 msgid "unemployed due to extinction of the duck species"
 msgstr "nezměstnaný kvůli vyhynutí kachního druhu"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
 msgid "Level of {player} on #{channel}"
 msgstr "Level {player} na #{channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
 msgid "You leveled down!"
 msgstr "Tvůj level se snížíl!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
 msgid "You leveled up!"
 msgstr "Tvůj level se zvýšil!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "Současný level"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
+#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
 msgid "Previous level"
 msgstr "Předchozí level"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
 msgstr "Přesnost střelby"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
 msgstr "Spolehlivost zbraně"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
 msgstr "Exp. bodů"
 

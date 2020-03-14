@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,19 +110,11 @@ msgstr "შესრულებულია. მომხმარებელ�
 msgid "Done. All channel data was removed."
 msgstr "შესრულებულია. ყველა არხის მონაცემები ამოშლილია."
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-":x: არასწორი სინტაქსი. გამოიყენეთ ბრძანება ამ გზით `!settings [view/set/"
-"reset/list/modified] [setting if applicable]`"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: პარამეტრი {pref} დაყენებულია `{value}` ამ კლანში."
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -130,7 +122,7 @@ msgstr ""
 "გვერდის ავლით max_ducks_per_day შემოწმება, როგორც თქვენ ხართ ბოტის მფლობელი. "
 "ეს იქნებოდა `{max}`."
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -140,7 +132,7 @@ msgstr ""
 "ბოროტად არ გამოიყენოთ. ინფორმაციისთვის, ლიმიტი ექვემდებარება `{max}` იხვები "
 "დღეში."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:226
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -148,16 +140,16 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050> VIP სტატუსის დაყენება "
 "უფლებამოსილია!"
 
-#: cogs/admin_commands.py:220
+#: cogs/admin_commands.py:228
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: VIP სტატუსის დაყენება არასანქცირებული! თქვენ არ ხართ მფლობელი."
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ": x: არასწორი მნიშვნელობა."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ": ok: პარამეტრი {pref} შეიქმნა `{value}` ამ კლანში."
 

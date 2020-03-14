@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,19 +117,11 @@ msgstr ""
 msgid "Done. All channel data was removed."
 msgstr "Efectuat.  Toate datele canalului au fost eliminate."
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-": x: Sintaxa incorectă.  Utilizați comanda astfel: `! Setări [vizualizare / "
-"set / resetare / listare / modificare] [setare dacă este cazul] '"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ": ok: Setarea {pref} este setată pe `{value}` pe această breaslă."
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -137,7 +129,7 @@ msgstr ""
 "Evitarea verificării max_ducks_per_day, deoarece sunteți proprietarul "
 "botului.  Ar fi fost {{max} `."
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "

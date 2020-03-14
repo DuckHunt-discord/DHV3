@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,19 +114,11 @@ msgstr "Tamam: Eğer içindeyse kullanıcı veritabanından kaldırıldı."
 msgid "Done. All channel data was removed."
 msgstr "Tamam. Tüm kanal verileri kaldırıldı."
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-":x: Yanlış sözdizimi. Bu komutu şu şekilde kullanın: `!settings [view/set/"
-"reset/list/modified] [Varsa ayar]"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: {pref} ayarı bu sunucuda `{value}` olarak ayarlanmıştır."
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -134,7 +126,7 @@ msgstr ""
 "Max_ducks_per_day kontrolünü atlayarak bot sahibi olduğunuzu kontrol edin. "
 "`{max}` olurdu."
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -144,7 +136,7 @@ msgstr ""
 "edin. Lütfen bunu kötüye kullanmayın. Bilgi için, sınır günde ördekler "
 "`{max}` olarak ayarlanmış olacaktı."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:226
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -152,16 +144,16 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>VIP durumunu ayarlamaya izin "
 "verildi"
 
-#: cogs/admin_commands.py:220
+#: cogs/admin_commands.py:228
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: VIP durumunu ayarlamak için yetkisiz! Sahip değilsin."
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ":x: Yanlış değer"
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: Bu sunucuda {pref} ayarı `{value}` olarak ayarlandı."
 
@@ -266,6 +258,14 @@ msgid ""
 msgstr ""
 "Silahınızı ne zaman ücretsiz alacağınızı görmek için `dh!freetime` komutunu "
 "kullanabilirsiniz."
+
+#: cogs/meta.py:100
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: Bir sonraki silah ve şarjörleri {sec} saniye ({hours} saat and "
+"{minutes} dakika) içinde geri alacaksınız."
 
 #: cogs/meta.py:103
 msgid ""
@@ -780,6 +780,14 @@ msgstr ""
 ":money_with_wings: Silahını 6 exp için temizledin. İçinde kum varsa ya da "
 "silahın sabote edilmişse, şimdi düzeltildi!"
 
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"Bir dahaki sefere birisi seni sabote ettiğinde, sadece ateş et. İtibarını "
+"incitmek dışında fazla zarar vermez"
+
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
@@ -856,7 +864,7 @@ msgstr ""
 msgid ":ok: {target}'s weapon is already sabotaged!"
 msgstr ":ok: {target} 'in silahı zaten sabote edildi!"
 
-#: cogs/shop.py:411 cogs/shop.py:516
+#: cogs/shop.py:411 cogs/shop.py:524
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I will "
 "be able to delete that kind of shop commands ;)"
@@ -894,22 +902,14 @@ msgstr ""
 ":money_with_wings: Kanalda önümüzdeki 10 dakika içinde bir ördek belirecek, "
 "{mention} a teşekkürler. 8 exp karşılığında satın aldı!"
 
-#: cogs/shop.py:496
-msgid ""
-":money_with_wings: You put some bread on the channel to attract ducks. "
-"They'll stay 20 seconds longer before leaving for the rest of the day!"
-msgstr ""
-":money_with_wings: Kanalda ördekleri çekmek için biraz ekmek koydun. Günün "
-"geri kalanında gitmeden önce 20 saniye daha uzun süre kalacaklar!"
-
-#: cogs/shop.py:497
+#: cogs/shop.py:505
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 ":money_with_wings: Ekmek istifleyebilir! Etkilerini en üst düzeye çıkarmak "
 "için biraz daha satın alın!"
 
-#: cogs/shop.py:521
+#: cogs/shop.py:529
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
@@ -1017,6 +1017,13 @@ msgstr ""
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** Ördeği kaçırdın! [karavana: -1 xp]"
 
+#: cogs/user_commands.py:431
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr ""
+"Olabildiğince güçlü bir şekilde {mention}. Kararlılıkla doldurulurlar."
+
 #: cogs/user_commands.py:444
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Ağaca sarıldın mı Wizzz ?!"
@@ -1053,6 +1060,132 @@ msgstr "Ben de seni seviyorum!"
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "Beni vurma! Ben sahte bir ördeğim!"
 
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr "** Ördek gerçeği **: Bazı ördekler bir günde 332 mil kadar uçabilir!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "** Ördek gerçeği **: Ördeklerin arkasındaki tüyler su geçirmezdir."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "** Ördek gerçeği **: Ördeklerin üç göz kapağı var!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"** Ördek gerçeği **: Türlere bağlı olarak, bir ördek 2 ile 12 yıl arasında "
+"yaşayabilir. Bu oyundaki ördekler değil ..."
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Görünmezim, beni öldürme zahmetine girme"
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Burada arkadaşımı öldüren küçük kim?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Nişan alamıyorsun"
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Ördek ayrıldı. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Ördek haklı"
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "DUR! Düşündüğün şey değil!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Beni öldürmek sana 1562 tecrübe puanı kaybettirecek"
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Tüm avcıları öldürmek için gizli bir planım var ama zaten nefes darlığı "
+"çekiyorum, daha önce hepsini açıklayabileceğimi sanmıyorum ..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[BURAYA ÖRDEK GÜRÜLTÜSÜ EKLEYİN]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Tavşan mevsimi."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Yedek pelerin var mı?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "Bir ördeğin hangi tarafında daha fazla tüy var? Dışarısı."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Para çalıyorum. Ben soyguncuyum."
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Ben çok özel bir ördeğim."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr ""
+"** DuckHunt ProTip® **: daha fazla deneyim elde etmek için yonca kullanın."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"** DuckHunt ProTip® **: düşük seviyelerde isabeti artırmak için nişangahı "
+"kullanın."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr ""
+"** DuckHunt ProTip® **: Silah sıkışmalarını önlemek için gres kullanın"
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Slurp*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Umarım hepiniz AFK'siniz ..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"** DuckHunt ProTip® **: gereksiz çekimleri önlemek için kızılötesi "
+"dedektörler kullanın."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Sadece işimi yapıyorum ..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Selam, DuckHunt kalite sigorta ördeği. Ördekleri öldürme deneyiminizi nasıl "
+"değerlendirirsiniz?"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "SeN YoZlAşMıŞsIn"
+
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Ördek gitti. · ° '\\'' ° -.., ¸¸ · °' \\ '"
@@ -1084,6 +1217,16 @@ msgstr "Ördek nişan alınmak istemiyor. · ° '\\'' ° -.., ¸¸ · °' \\ '"
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "Ördek limonata standına doğru yürüdü. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"Ördek orantısız olarak küçük bir uçurumun üzerinden uçtu. · ° '\\'' ° -.., "
+"¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ördek dışarı çıktı. · ° '\\'' ° -.., ¸¸ · °' \\ `"
 
 #: cogs/helpers/config.py:83
 msgid "a stuffed duck."
@@ -1237,27 +1380,31 @@ msgstr "bir balık."
 msgid "even more bushes."
 msgstr "daha da çalılar."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Eliniz yüzünüzden daha mı büyük?"
+
+#: cogs/helpers/config.py:203
 msgid "Everything is calm"
 msgstr "Her şey sakin"
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Nothing is happening right now."
 msgstr "Şu anda hiçbir şey olmuyor."
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Ducks are migrating"
 msgstr "Ördekler göç ediyor"
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
 msgstr "Önümüzdeki saatte daha fazla ördek görmeye hazırlanın."
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "Sisli hava"
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid ""
 "It's harder to see killed ducks. You'll need a few more seconds to know if "
 "you missed or not."
@@ -1265,11 +1412,11 @@ msgstr ""
 "Öldürülen ördekleri görmek zor. Kaçırıp kaçmadığınızı bilmek için birkaç "
 "saniyeye ihtiyacınız olacak."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
 msgstr "Gölde Steroidler"
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -1278,19 +1425,19 @@ msgstr ""
 "Bir tıbbi atık şirketi göle steroid attı. Ördekler mutasyon geçirdi ve çok "
 "daha fazla süper ördek göreceksiniz. Ancak, dikkatli olun ve o suyu içmeyin."
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:207
 msgid "Safety class canceled"
 msgstr "Güvenlik sınıfı iptal edildi"
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:207
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr "Güvenlik sınıfı iptal edildi, diğer avcıları vurmamaya dikkat edin!"
 
-#: cogs/helpers/config.py:203
+#: cogs/helpers/config.py:208
 msgid "Connection problems"
 msgstr "Bağlantı problemleri"
 
-#: cogs/helpers/config.py:203
+#: cogs/helpers/config.py:208
 msgid ""
 "Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
@@ -1298,11 +1445,11 @@ msgstr ""
 "Ördekler, bağlantı sorunları nedeniyle bilgisayarınızı bulamıyor ve "
 "onarılana kadar bunlardan daha az olacak"
 
-#: cogs/helpers/config.py:204
+#: cogs/helpers/config.py:209
 msgid "A new florist in town"
 msgstr "Kasabada yeni bir çiçekçi"
 
-#: cogs/helpers/config.py:204
+#: cogs/helpers/config.py:209
 msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them out!"
@@ -1310,232 +1457,232 @@ msgstr ""
 "Kasabada bir çiçekçi açıldı ve şimdi 4 yapraklı yoncayı daha iyi "
 "bulabilirsiniz. Git onları kontrol et!"
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Mega-ducks"
 msgstr "Mega ördekler"
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "Biri süper bir ördek şişirdi ve şimdi onlar DAHA BÜYÜK !!"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Windy weather"
 msgstr "Rüzgarlı hava"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Bullets are deflected by some strong wind"
 msgstr "Mermiler kuvvetli rüzgar tarafından saptırılır"
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:218
 msgid "public danger"
 msgstr "kamu tehlikesi"
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "turist"
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:220
 msgid "noob"
 msgstr "çaylak"
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:221
 msgid "trainee"
 msgstr "stajyer"
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:222
 msgid "duck misser"
 msgstr "ördekleri vuramayan"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
 msgstr "Ördeklere Karşı Komite Üyesi"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:224
 msgid "duck hater"
 msgstr "ördeklerden nefret eden"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:225
 msgid "duck pest"
 msgstr "ördek haşere"
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:226
 msgid "duck hassler"
 msgstr "ördeklere güçlük çıkaran"
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:227
 msgid "duck plucker"
 msgstr "ördek avcısı"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "avcı"
 
-#: cogs/helpers/config.py:224
+#: cogs/helpers/config.py:229
 msgid "duck inside out turner"
 msgstr "ördek içini dışına çıkartan"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:230
 msgid "duck clobber"
 msgstr "ördek dayakçısı"
 
-#: cogs/helpers/config.py:226
+#: cogs/helpers/config.py:231
 msgid "duck chewer"
 msgstr "ördek çiğneyen"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "ördek yiyen"
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:233
 msgid "duck flattener"
 msgstr "ördek düzleştirici"
 
-#: cogs/helpers/config.py:229
+#: cogs/helpers/config.py:234
 msgid "duck disassembler"
 msgstr "ördek sökücü"
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:235
 msgid "duck demolisher"
 msgstr "ördek yıkıcı"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "ördek katili"
 
-#: cogs/helpers/config.py:232
+#: cogs/helpers/config.py:237
 msgid "duck skinner"
 msgstr "ördek derisi"
 
-#: cogs/helpers/config.py:233
+#: cogs/helpers/config.py:238
 msgid "duck predator"
 msgstr "ördek yırtıcı"
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:239
 msgid "duck chopper"
 msgstr "ördek kıyıcı"
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:240
 msgid "duck decorticator"
 msgstr "ördek dekoratikatoru"
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:241
 msgid "duck fragger"
 msgstr "ördek parçalayıcı"
 
-#: cogs/helpers/config.py:237
+#: cogs/helpers/config.py:242
 msgid "duck shatterer"
 msgstr "ördek paramparça"
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:243
 msgid "duck smasher"
 msgstr "ördek ezici"
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:244
 msgid "duck breaker"
 msgstr "ördek kırıcı"
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:245
 msgid "duck wrecker"
 msgstr "ördek tamircisi"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:246
 msgid "duck impaler"
 msgstr "ördek emici"
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:247
 msgid "duck eviscerator"
 msgstr "ördek kaçakçısı"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:248
 msgid "ducks terror"
 msgstr "ördekler terör"
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:249
 msgid "duck exploder"
 msgstr "ördek patlatıcısı"
 
-#: cogs/helpers/config.py:245
+#: cogs/helpers/config.py:250
 msgid "duck destructor"
 msgstr "ördek yıkıcısı"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:251
 msgid "duck blaster"
 msgstr "ördek blaster"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:252
 msgid "duck pulverizer"
 msgstr "ördek ezmesi"
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:253
 msgid "duck disintegrator"
 msgstr "ördek parçalayıcı"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:254
 msgid "duck atomizer"
 msgstr "ördek atomizer"
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:255
 msgid "duck annihilator"
 msgstr "ördek yok edici"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:256
 msgid "serial duck killer"
 msgstr "seri ördek katili"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:257
 msgid "duck genocider"
 msgstr "ördek soykırımı"
 
-#: cogs/helpers/config.py:253
+#: cogs/helpers/config.py:258
 msgid "old noob"
 msgstr "yaşlı acemi"
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:259
 msgid "duck toaster"
 msgstr "ördek kızartma makinesi"
 
-#: cogs/helpers/config.py:255
+#: cogs/helpers/config.py:260
 msgid "unemployed due to extinction of the duck species"
 msgstr "ördek türlerinin neslinin tükenmesi nedeniyle işsiz"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
 msgid "Level of {player} on #{channel}"
 msgstr "#{channel} üzerindeki {player}'in seviyesi"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
 msgid "You leveled down!"
 msgstr "Seviyen düştü!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
 msgid "You leveled up!"
 msgstr "Seviye atladın!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "Mevcut seviye"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
+#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
 msgid "Previous level"
 msgstr "Önceki seviye"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
 msgstr "Atış doğruluğu"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
 msgstr "Silah güvenilirliği"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
 msgstr "Tecrübe puanı"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"

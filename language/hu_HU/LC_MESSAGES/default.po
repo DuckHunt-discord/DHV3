@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,157 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
+#: bot.py:145
+msgid ":x: A required argument is missing."
+msgstr ":x: Hiányzik egy szükséges paraméter."
+
+#: bot.py:149
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: Nincs elég tapasztalatod ehhez."
+
+#: bot.py:152
+msgid ":x: You are not a server admin"
+msgstr ":x: Nem vagy adminisztrátor ezen a szerveren."
+
+#: bot.py:155
+msgid ":x: You are not a super admin."
+msgstr ":x: Nem vagy szuperadminisztrátor."
+
+#: bot.py:156
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Ez a parancs a bottulajdonosok számára van fenntartva. Ha úgy gondolod, hogy "
+"ez egy hiba, vegye fel a kapcsolatot a tulajdonosommal a hivatalos DuckHunt "
+"szerveren (lásd: \"dh!help\")."
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x: Egy ideje nem szavaztál a DuckHunt-ra a DiscordBotList-en."
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Hogy használhasd ezt a parancsot, kérlek támogasd a botot ezen a weblapon:"
+"<https://discordbots.org/bot/duckhunt>. Vedd figyelembe, hogy a szavazatok "
+"eltarthatnak egy percig, amíg a DuckHunt-nál regisztrálja magát. Ha úgy "
+"gondolod, hogy ez egy hiba, vedd fel a kapcsolatot a tulajdonosommal a "
+"DuckHunt támogatási szerveren (lásd: \"dh!help\")."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr "El vagy fáradva, próbáld újra {seconds} másodperc múlva!"
+
+#: bot.py:179
+msgid ":bulb: HINT: "
+msgstr ":bulb: NYOM:"
+
+#: cogs/admin_commands.py:27
+msgid ":ok: Done, user banned. :gun:"
+msgstr ":ok: Kész, felhasználó tilitva. :gun:"
+
+#: cogs/admin_commands.py:39
+msgid ":ok: Done, user unbanned. :eyes:"
+msgstr ":ok: Kész, felhasználó visszavéve. :eyes:"
+
+#: cogs/admin_commands.py:65
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019> Kész, csatorna {channel} hozzáadva "
+"a játékhoz. Jó szórakozást!"
+
+#: cogs/admin_commands.py:81
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Kész, a {channel} csatorna "
+"eltávolítva a játékból. Viszlát!"
+
+#: cogs/admin_commands.py:90
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} hozzáadva az adminokhoz!"
+
+#: cogs/admin_commands.py:98
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} eltávolítva az adminok "
+"közül."
+
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+msgid "Done. User removed from the database, if he was in."
+msgstr "Kész. Felhasználó törölve az adatbázisból, ha benne volt."
+
+#: cogs/admin_commands.py:156
+msgid "Done. All channel data was removed."
+msgstr "Kész. A csatorna összes adatát töröltük."
+
+#: cogs/admin_commands.py:181
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
+"[setting]`"
+msgstr ""
+":x: Helytelen parancs. A következő parancsot használd: `!settings [view "
+"(nézet)/set (átállítás)/reset (visszaállítás)] [(beállításmód)]`"
+
+#: cogs/admin_commands.py:191 cogs/admin_commands.py:206
+#: cogs/admin_commands.py:257
+msgid "Unknown setting..."
+msgstr "Ismeretlen beállítás..."
+
+#: cogs/admin_commands.py:194
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ""
+":ok: A {pref} beállítás {value} értékre lett állítva ezen a szerveren."
+
+#: cogs/admin_commands.py:216
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Kitérsz a max_ducks_per_day ellenőrzés alól, mert te vagy a bot gazdája. Ez "
+"{max} lenne."
+
+#: cogs/admin_commands.py:226
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050> Engedély a VIP státuszra!"
+
+#: cogs/admin_commands.py:228
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ""
+":x: Nincs engedélyed rá, hogy VIP státuszra emelj! Nem vagy tulajdonos."
+
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
+msgid ":x: Incorrect value."
+msgstr ":x: Hibás összeg."
+
 #: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
-"Gratula, te küldtél / kaptál több xp-t, mint a maximum összeg amit "
+"Gratula, te több tapasztalatot küldtél/kaptál, mint a maximum összeg amit "
 "raktározni tudok."
+
+#: cogs/experience_related_commands.py:30
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ":ok: Neki már {newexp} tapasztalatpontja van!"
 
 #: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
@@ -33,12 +177,20 @@ msgstr ""
 
 #: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
-msgstr ":x: Pozitív összeget kell beírnod, hogy xp-t küldhess."
+msgstr ":x: Pozitív összeget kell beírnod, hogy tapasztalatot küldhess."
+
+#: cogs/experience_related_commands.py:62
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+":x: Várj... Mi? MAGADNAK próbálsz tapasztalatot küldeni?! Ez nem így megy."
 
 #: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
-"Elküldtél {amount} xp-t {target} nek (és fizettél {taxes} xp-t adónak) !"
+"Elküldtél {amount} tapasztalatot {target}-nek (és fizettél {taxes} "
+"tapasztalatot adóként)!"
 
 #: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
@@ -69,17 +221,460 @@ msgstr "{dans} óra"
 msgid "{dans} minutes"
 msgstr "{dans} perc"
 
+#: cogs/meta.py:38
+#, python-format
+msgid ""
+"The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
+"uptime."
+msgstr ""
+"A bot gyakran újraindul a frissítések miatt. Ne aggódj, az örökkévalóság "
+"99,8%-ában a rendelkezésedre áll."
+
+#: cogs/meta.py:117
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "A {shard}es számú szilánkot használod az összes {total} szilánkból"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"A pontszámok fent vannak online a http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id} oldalon."
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Kacsastatok várnak rád a http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}&pid={player_id} oldalon"
+
+#: cogs/setup_wizzard.py:135
+msgid ""
+"Hey! Let's configure the server!\n"
+"I'll give you the most used parameters, and let you change them if you want. "
+"Any command written here is optional, and you can start playing now just by "
+"using `dh!add_channel`.\n"
+"\n"
+"**Before starting, please make sure this is the channel you want to use, and "
+"activate it with `dh!add_channel`.**\n"
+"\n"
+"**1/ Language used**:\n"
+"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
+"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
+"    \\* Another language we don't fully support yet? Help us translate "
+"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
+"    \n"
+"**2/ Ducks Per Day**:\n"
+"    This is the number of ducks that will spawn per day. They spawn at "
+"random intervals, but you can configure the number of ducks that will spawn.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"ducks_per_day XX`, where `XX` is a number.\n"
+"    \\* To prevent abuse, there is a limit that will be automatically "
+"enforced. If you need to lift it, contact my owner at the support server.\n"
+"    \n"
+"**3/ Exp Won Per Duck Killed**:\n"
+"    This is the experience won per duck killed. If your server is really "
+"popular, it might be worth it to push it up a little to make new hunters "
+"progress faster.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
+"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
+"good start\n"
+"    \n"
+"**4/ Other settings**:\n"
+"    This is starting to be lengthy, so I won't go into further details here. "
+"You are probably all set and can start the game by typing `dh!add_channel`.\n"
+"    More settings can be found using `dh!settings list`\n"
+"    \n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
+msgstr ""
+"Hé! Konfiguráljuk a szervert! \n"
+"Megmutatom a leggyakrabban használt paramétereket, és hagyom hogy "
+"megváltoztasd őket, ha szeretnéd. Minden itt írt parancs megváltoztatható, "
+"és máris elkezdhetsz játszani a `dh!add_channel` parancs megadásával.\n"
+"\n"
+"**Mielőtt elkezdenéd, kérlek légy biztos benne hogy ez az a csatorna, "
+"amelyet használni szeretnél, és aktiváld a `dh!add_channel` paranccsal.**\n"
+"\n"
+"**1/ Nyelv**:\n"
+"Ha a botot külföldi nyelvre szeretnéd állítani használd a `dh!settings set "
+"language [nyelvkód (pl. hu_HU)]` parancsot. Ha nem ismered valamely nyelv "
+"kódját, rákereshetsz ezen az oldalon: https://github.com/DuckHunt-discord/"
+"DHV3/tree/master/language Ha úgy látod, a bot nincsen lefordítva a nyelvre, "
+"amelyre te szeretnéd, érj el minket a https://discord.gg/2BksEkV oldalon és "
+"ajánlkozz fel fordítói segítségre!\n"
+"\n"
+"**2/ Napi kacsák száma**:\n"
+"Ezalatt a naponta megjelenő kacsákat kell érteni. Véletlenszerű idősíkban "
+"kelnek elő, de azt tudod szabályozni, hogy mennyien jöjjenek.\n"
+"Használd a `dh!settings set ducks_per_day [szám]` parncsot ehhez.\n"
+"Hogy megelőzzük az áthágásokat, van egy bizonyos felső határ. Ha fel "
+"szeretnéd oldani, beszélj a gazdával a bot szerverén.\n"
+"\n"
+"**3/Tapasztalat kacsák megölése során**:\n"
+"Ez a tapasztalat\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"<:official_Duck_01:439546719177539584>"
+
+#: cogs/shop.py:42
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+":x: Helytelen parancs: `!shop [list (lista)/(áruszám)] [(paraméter ha "
+"szükséges)]`"
+
+#: cogs/shop.py:52
+msgid "Right now you have a total of {exp} exp points."
+msgstr "Jelenleg összesen {exp} tapasztalatpont áll rendelkezésedre."
+
+#: cogs/shop.py:75
+msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
+msgstr ""
+":money_with_wings: Hozzáadtál egy lövedéket a fegyveredhez 7 "
+"tapasztalatpontért."
+
+#: cogs/shop.py:78
+msgid ":champagne: Your magazine is full!"
+msgstr ":champagne: A tárad tele van!"
+
+#: cogs/shop.py:97
+msgid ":champagne: You have enough magazines!"
+msgstr ":champagne: Van elég tárad!"
+
+#: cogs/shop.py:111
+msgid ":money_with_wings: You purchased AP ammo for your weapon."
+msgstr ":money_with_wings: AP lőszert vettél a fegyveredhez."
+
 #: cogs/shop.py:115
 msgid ":champagne: You have enough AP ammo for now!"
 msgstr ":champagne: Van már elég AP muníciód mostanra!"
+
+#: cogs/shop.py:129
+msgid ":money_with_wings: You purchased explosive ammo for your weapon."
+msgstr ":money_with_wings: Robbanótöltetet szereztél a fegyveredhez. "
+
+#: cogs/shop.py:130
+msgid ""
+"For the next 24 hours, you will deal triple damage to ducks. This does "
+"**not** stack with AP ammo and trumps it if you have any."
+msgstr ""
+"A következő 24 órában háromszoros sérülést okozol a kacsáknak. Ez **nem** "
+"halmozódik az AP lőszerrel, hanem semlegesíti azt."
 
 #: cogs/shop.py:133
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr ":champagne: Van már elég robbanótölteted mostanra!"
 
+#: cogs/shop.py:147
+msgid ":money_with_wings: You got your weapon back."
+msgstr ":money_with_wings: Visszaszerezted a fegyveredet."
+
+#: cogs/shop.py:152
+msgid ""
+":champagne: You already have your weapon, what are you trying to buy? :p"
+msgstr ":champagne: Már megvan a fegyvered, mit próbálsz megvenni? : p"
+
+#: cogs/shop.py:166
+msgid ":money_with_wings: You added grease in your weapon."
+msgstr ":money_with_wings: Megkented a fegyveredet."
+
+#: cogs/shop.py:167
+msgid ""
+"This reduces jamming risks by 50 percent for a day, for only 8 exp points. "
+"It's really useful for new players. Use `dh!duckstats` to check your level "
+"and accuracy"
+msgstr ""
+"Ez egy napra 50%-kal csökkenti az elakadási kockázatok számát, mindössze 8 "
+"tapasztalatpont árán. Nagyon hasznos az új játékosok számára. Használd a "
+"`dh!duckstats` parancsot, hogy lásd a szintedet és a pontosságodat."
+
+#: cogs/shop.py:171
+msgid ""
+":champagne: Your weapon is perfectly lubricated, you don't need any more "
+"grease."
+msgstr ""
+":champagne: A fegyvered tökéletesen meg van kenve, nem kell több zsír."
+
+#: cogs/shop.py:187
+msgid ":money_with_wings: You added a sight to your weapon."
+msgstr ": money_with_wings: Céltávcsövet szereltél a fegyveredre."
+
+#: cogs/shop.py:188
+msgid ""
+"Your aiming was improved using this formula: (100 - current accuracy) / 3."
+msgstr "A célzásod e képlet alapján javult: (100 - jelenlegi pontosság) / 3."
+
+#: cogs/shop.py:191
+msgid ":champagne: You already have a sight on your weapon."
+msgstr ":champagne: Már van egy céltávcső a fegyvereden."
+
+#: cogs/shop.py:208
+msgid ""
+":money_with_wings: You added an infrared detector to your weapon, it will "
+"prevent any waste of ammo for a day. Cost: 15 exp points."
+msgstr ""
+":money_with_wings: Infravörös detektort szereztél be a fegyveredhez, amely "
+"minden lőszer elvesztegetését megakadályozza egy napra. Ára: 15 "
+"tapasztalatpont."
+
+#: cogs/shop.py:210
+msgid ":champagne: You already have an infrared detector on your weapon."
+msgstr ":champagne: Már van egy infravörös detektor a fegyvereden, nem?"
+
+#: cogs/shop.py:224
+msgid ":money_with_wings: You added a silencer to your weapon."
+msgstr ":money_with_wings: Hangtompítót szereltél a fegyveredre."
+
+#: cogs/shop.py:225
+msgid ""
+"The silencer works best if every hunter uses one, or if you're alone. With "
+"it, no ducks will fly away before you can kill them. What a good deal, they "
+"only cost 5 exp!"
+msgstr ""
+"A hangtompító akkor működik legjobban, ha minden vadász használ egyet, vagy "
+"ha egyedül vagy. Így egyetlen kacsa sem repül el, mielőtt megölted őket. "
+"(Meg utána sem.) Milyen jó üzlet, csak 5 tapasztalatpontba kerül!"
+
+#: cogs/shop.py:229
+msgid ":champagne: You already have a silencer on your weapon"
+msgstr ":champagne: Már van hangtompító a fegyvereden, nem?"
+
+#: cogs/shop.py:253
+msgid ""
+":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
+"{exp} more exp points for each killed duck for the next day."
+msgstr ""
+":money_with_wings: Vettél egy friss négylevelű lóherét, ami {exp}-vel több "
+"tapasztalatpontot ad minden egyes lelőtt kacsa után az elkövetkező 24 óráig."
+
+#: cogs/shop.py:257
+msgid ":champagne: You already have 4-leaf clover on your weapon"
+msgstr ":champagne: Már van négylevelű lóhere a fegyvereden."
+
+#: cogs/shop.py:273
+msgid ""
+":money_with_wings: You bought a pair of sunglasses for 5 exp! You now won't "
+"be dazzled for a day."
+msgstr ""
+":money_with_wings: Vettél egy napszemüveget 5 tapasztalatpontért! Immunis "
+"vagy a napsugárzásra egy napig."
+
+#: cogs/shop.py:277
+msgid ""
+":money_with_wings: You bought brand new sunglasses, the only point of it "
+"being that you're much swagger now. :cool:"
+msgstr ""
+":money_with_wings: Vettél új napszemüveget a semmiért, de most legalább te "
+"vagy a legswagebb a szobában. :cool:"
+
+#: cogs/shop.py:278
+msgid ""
+"Don't buy sunglasses if you still have some! This doesn't extend the time "
+"you won't be dazzled, but still costs you some exp"
+msgstr ""
+"Ne vásárolj napszemüveget, ha még van neked! Ez nem hosszabbítja meg a "
+"használati időt, de így is tapasztalatba kerül."
+
+#: cogs/shop.py:292
+msgid ":money_with_wings: You're wearing new dry clothes. You look fantastic!"
+msgstr ":money_with_wings: Új, száraz ruhát viselsz. Fantasztikusan nézel ki!"
+
+#: cogs/shop.py:296
+msgid ""
+":money_with_wings: You bought brand new clothes, the only point of it being "
+"that you're much swagger now. :cool:"
+msgstr ""
+":money_with_wings:  Vettél új ruhákat a semmiért, de most legalább te vagy a "
+"legswagebb a szobában. :cool:"
+
+#: cogs/shop.py:297
+msgid ""
+"Don't buy dry clothes if you aren't wet! They won't do anything, but will "
+"still cost you exp"
+msgstr ""
+"Ne vásárolj száraz ruhát, ha nem vagy nedves! Nem fog csinálni semmit, de "
+"továbbra is tapasztalatba kerül."
+
+#: cogs/shop.py:311
+msgid ""
+":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, "
+"or if your weapon was sabotaged, it's fixed now!"
+msgstr ""
+":money_with_wings: Kitisztítottad a fegyveredet 6 tapasztalatpontért. Ha "
+"homok volt benne, vagy szabotálták, már meg van javítva!"
+
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"Legközelebb, amikor valaki szabotál téged, csak lőjj. Nem fog nagy károkat "
+"okozni, csak a hírneveden."
+
+#: cogs/shop.py:325
+msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
+msgstr ":x: Na ne! {mention}-nek napszemüvege van! Immunis erre!"
+
+#: cogs/shop.py:332
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you?"
+msgstr "Az említés szándékosan van itt. Nem tennéd ezt a háta mögött, igaz?"
+
+#: cogs/shop.py:346
+msgid ":champagne: You threw sand in {mention}'s weapon!"
+msgstr ":champagne: Homokot dobtál {mention} fegyverébe!"
+
+#: cogs/shop.py:347
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr "Az említés szándékosan van itt. Nem tennéd ezt a háta mögött, igaz?"
+
+#: cogs/shop.py:393
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "Nem szabotálnád magad, ugye?"
+
+#: cogs/shop.py:399
+msgid ""
+":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
+msgstr ""
+":ok:  {target} fegyverét elrontottad... de nem is tudja! :D (14 "
+"tapasztalatpont)"
+
+#: cogs/shop.py:406
+msgid ":ok: {target}'s weapon is already sabotaged!"
+msgstr ":ok: {target} fegyverét már elrontottad!"
+
+#: cogs/shop.py:428
+msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
+msgstr ""
+":money_with_wings: Egy hétre életbiztosítást vásároltál 10 tapasztalatért."
+
+#: cogs/shop.py:429
+msgid "If you get killed, you'll earn half the level of the killer in exp."
+msgstr "Ha meghalsz, akkor megkapod a gyilkos tapasztalatának felét."
+
+#: cogs/shop.py:432
+msgid ":champagne: You're already insured."
+msgstr ":champagne: Már biztosítva vagy."
+
+#: cogs/shop.py:469
+msgid ""
+":money_with_wings: Ducks are resting right now, so your decoy probably "
+"didn't work..."
+msgstr ""
+":money_with_wings: A kacsák most pihennek, tehát a csalid valószínűleg nem "
+"működött..."
+
+#: cogs/shop.py:473
+msgid ""
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to {mention}'s decoy. They bought it for 8 exp!"
+msgstr ""
+":money_with_wings: Egy kacsa fog megjelenni a következő 10 percben a "
+"szobában, köszönhetően {mention} csalijának. 8 tapasztalatért vette!"
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ":money_with_wings: Kenyeret tettél le, hogy idecsalogasd a kacsákat."
+
+#: cogs/shop.py:505
+msgid ""
+":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
+msgstr ""
+":money_with_wings: A kenyerek felhalmozódnak! Vásárolj még néhányat a hatás "
+"maximalizálása érdekében!"
+
+#: cogs/shop.py:529
+msgid ""
+":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
+"It's wrong, but so funny!"
+msgstr ""
+":money_with_wings: Robotkacsát tettél, 40 tapasztalatért. Ez gonosz, de "
+"annyira vicces!  "
+
+#: cogs/user_commands.py:72 cogs/user_commands.py:159
+msgid "You don't have a weapon."
+msgstr "Nincsen fegyvered."
+
+#: cogs/user_commands.py:78
+msgid "You unjammed your weapon."
+msgstr "Kilazítottad a fegyvered."
+
+#: cogs/user_commands.py:92
+msgid "You reloaded your weapon."
+msgstr "Újratöltötted a fegyvered."
+
+#: cogs/user_commands.py:94
+msgid "You don't have any ammo left!"
+msgstr "Nincs több lőszered! "
+
+#: cogs/user_commands.py:97
+msgid "You don't need to reload your weapon."
+msgstr "Nem kell újratöltened a fegyvered. "
+
+#: cogs/user_commands.py:149
+msgid ""
+"Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
+msgstr "Nem vagy száraz, nem mehetsz vadászni! Várj {temps_restant} percet."
+
+#: cogs/user_commands.py:168
+msgid "Your weapon is jammed, it must be reloaded to unjam it."
+msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
+
 #: cogs/user_commands.py:178
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
-msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet  {assaillant} "
+msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet {assaillant}-nek."
+
+#: cogs/user_commands.py:225
+msgid "Your weapon just jammed, reload it to unjam it."
+msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
+
+#: cogs/user_commands.py:252
+msgid ""
+"There isn't any duck in here, but the bullet wasn't fired because the "
+"infrared detector you added to your weapon is doing its job!"
+msgstr ""
+"Itt egyáltalán nincsenek kacsák, de a lövedéket nem lőtted ki, mert az "
+"infravörös detektor amit hozzáadtál a fegyverhez teszi a dolgát!"
+
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
+msgstr "**PIEWW** Nem találtad el a kacsát! [-1 tapasztalatpont]"
+
+#: cogs/user_commands.py:431
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr ""
+"Olyan erősen ölelted meg {mention}-t amennyire csak tudtad. Megtelt "
+"elszántsággal."
+
+#: cogs/user_commands.py:444
+msgid "You hugged a tree, Wizzz?!"
+msgstr "Megöleltél egy fát, fütty?!"
+
+#: cogs/user_commands.py:447
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Nincs itt semmilyen kacsa, mit akartál átölelni, egy fát?!"
+
+#: cogs/user_commands.py:463
+msgid "**Current event**"
+msgstr "**Aktuális esemény**"
 
 #: cogs/helpers/config.py:67
 msgid "*cries*"
@@ -87,7 +682,7 @@ msgstr "*sír*"
 
 #: cogs/helpers/config.py:67
 msgid "Hello world"
-msgstr "Hello világ"
+msgstr "Helló világ"
 
 #: cogs/helpers/config.py:67
 msgid "How are you today?"
@@ -97,9 +692,141 @@ msgstr "Hogy vagy ma? "
 msgid "Please don't kill me..."
 msgstr "Kérlek ne ölj meg... "
 
+#: cogs/helpers/config.py:67
+msgid "I love you too!"
+msgstr "Én is szeretlek!"
+
+#: cogs/helpers/config.py:67
+msgid "Don't shoot me! I'm a fake duck!"
+msgstr "Ne lőjj le! Hamis kacsa vagyok!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr ""
+"**Kacsatény**: Néhány kacsa egyetlen nap alatt akár 332 mérföldre is "
+"elrepülhet!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Kacsa tény**: A kacsa hátán lévő toll vízhatlan."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Kacsatény**: A kacsáknak három szemhéja van!"
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Láthatatlan vagyok, ne is próbálj megölni."
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Béna a célzásod..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "A kacsa balra ment."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "A kacsa jobbra ment."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "ÁLLJ! Ez nem az, amire gondolsz!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Ha megölsz, veszítesz 1562 tapasztalatpontot. Nem viccelek."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Titkos tervem van minden vadász megölésére, de kifogytam a szuszból, nem "
+"hiszem, hogy mindent el tudnék magyarázni neked mielőtt..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[KÉPZELJ IDE HÁPOGÁST]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Nyúlszezon van."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Van egy tartalék köpenyed?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "A kacsa melyik oldalán van több toll? A külsőn."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr ""
+"I steal money. I'm a robber ducky. (Bárcsak lenne ennek magyarul is értelme."
+")"
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Nagyon különleges kacsa vagyok."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr ""
+"**DuckHunt ProTip®**: használd a lóheréket, hogy több tapasztalatot kaphass."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: használj céltávcsöveket, hogy növelhesd a pontosságot "
+"az alacsonyabb szinteken."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr ""
+"**DuckHunt ProTip®**: kenj zsírt a fegyver elakadásának megakadályozására"
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Szürcs*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Remélhetőleg mind AFK vagytok..."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Csak a munkámat végzem..."
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "MeG lEtTéL sZáLlVa."
+
+#: cogs/helpers/config.py:77
+msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa elhagyott minket. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa átment egy másik világba. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsának nem volt erre ideje. ·°'\\`'°-.,¸¸.·°'\\` "
+
 #: cogs/helpers/config.py:78
 msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa elment. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa elveszett a tér-időben. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa hazament unalmában. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:79
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -108,6 +835,15 @@ msgstr "A kacsa nem akarta, hogy lelőjék. ·°'\\`'°-.,¸¸.·°'\\`"
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A kacsa felsétált a limonádéstandra. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"A kacsa átrepült egy aránytalanul kis résen. ·°'\\'' ° -., ¸¸. · °' \\ `"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A kacsa elvágtázott. ·°'\\'' ° -., ¸¸. · °' \\ `"
 
 #: cogs/helpers/config.py:83
 msgid "a stuffed duck."
@@ -140,6 +876,14 @@ msgstr "egy régi bakancs."
 #: cogs/helpers/config.py:84
 msgid "a spring thingy."
 msgstr "egy rugószerűség."
+
+#: cogs/helpers/config.py:84
+msgid "cow dung."
+msgstr "szaftos kis tehénfos."
+
+#: cogs/helpers/config.py:84
+msgid "dog poop."
+msgstr "kutyakaki."
 
 #: cogs/helpers/config.py:85
 msgid "an expired hunting license."
@@ -249,199 +993,363 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY "
 msgid "a fish."
 msgstr "egy hal."
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:90
+msgid "even more bushes."
+msgstr "még több bokor."
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "A kezed nagyobb, mint az arcod?"
+
+#: cogs/helpers/config.py:203
+msgid "Everything is calm"
+msgstr "Minden nyugodt."
+
+#: cogs/helpers/config.py:203
+msgid "Nothing is happening right now."
+msgstr "Jelenleg semmi sem történik."
+
+#: cogs/helpers/config.py:204
+msgid "Ducks are migrating"
+msgstr "Kacsák vándorolnak."
+
+#: cogs/helpers/config.py:205
+msgid "Foggy weather"
+msgstr "Ködös idő."
+
+#: cogs/helpers/config.py:206
+msgid "Steroids in the lake"
+msgstr "Szteroidok a tóban."
+
+#: cogs/helpers/config.py:208
+msgid "Connection problems"
+msgstr "Csatlakozási problémák"
+
+#: cogs/helpers/config.py:209
+msgid "A new florist in town"
+msgstr "Egy új virágüzlet a városban."
+
+#: cogs/helpers/config.py:209
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them out!"
+msgstr ""
+"A városban megnyílt egy virágüzlet, és most már jobb négylevelűeket "
+"találhatsz. Nézz be hozzájuk!"
+
+#: cogs/helpers/config.py:210
+msgid "Mega-ducks"
+msgstr "Megakacsák"
+
+#: cogs/helpers/config.py:210
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Valaki felfújt egy szuperkacsát, és most ***MÉG NAGYOBB LETT***!!"
+
+#: cogs/helpers/config.py:211
+msgid "Windy weather"
+msgstr "Szeles idő"
+
+#: cogs/helpers/config.py:211
+msgid "Bullets are deflected by some strong wind"
+msgstr "A golyókat erős szél téríti el"
+
+#: cogs/helpers/config.py:218
 msgid "public danger"
 msgstr "közveszélyes "
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "turista "
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:220
 msgid "noob"
 msgstr "pancser "
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:221
 msgid "trainee"
 msgstr "újonc "
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:222
 msgid "duck misser"
 msgstr "kacsatévesztő"
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
 msgstr "tagja a Kacsaellenes Egyesületnek"
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:224
 msgid "duck hater"
 msgstr "kacsautáló"
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:225
 msgid "duck pest"
 msgstr "a kacsák átka"
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:226
 msgid "duck hassler"
 msgstr "kacsavágó"
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:227
 msgid "duck plucker"
 msgstr "kacsatépő"
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "vadász"
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:229
+msgid "duck inside out turner"
+msgstr "kacsák belsejéből kifordítója"
+
+#: cogs/helpers/config.py:230
 msgid "duck clobber"
 msgstr "kacsáknak kesztyűbe dudálástanító"
 
-#: cogs/helpers/config.py:226
+#: cogs/helpers/config.py:231
 msgid "duck chewer"
 msgstr "kacsa... bagózó?"
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "kacsaevő"
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:233
 msgid "duck flattener"
 msgstr "kacsakalapácsoló"
 
-#: cogs/helpers/config.py:229
+#: cogs/helpers/config.py:234
 msgid "duck disassembler"
 msgstr "kacsaszétszedő"
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:235
 msgid "duck demolisher"
 msgstr "kacsapusztító"
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "kacsaölő"
 
-#: cogs/helpers/config.py:232
+#: cogs/helpers/config.py:237
 msgid "duck skinner"
 msgstr "kacsanyúzó"
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:238
+msgid "duck predator"
+msgstr "kacsaragadozó"
+
+#: cogs/helpers/config.py:239
 msgid "duck chopper"
 msgstr "kacsacafatoló"
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:240
 msgid "duck decorticator"
 msgstr "kacsahámozó"
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:241
 msgid "duck fragger"
 msgstr "kacsadaraboló"
 
-#: cogs/helpers/config.py:237
+#: cogs/helpers/config.py:242
 msgid "duck shatterer"
 msgstr "kacsazúzó"
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:243
 msgid "duck smasher"
 msgstr "kacsaütő"
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:244
 msgid "duck breaker"
 msgstr "kacsatörő"
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:245
 msgid "duck wrecker"
 msgstr "kacsaroncsoló"
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:246
 msgid "duck impaler"
 msgstr "kacsák karóba húzója"
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:247
 msgid "duck eviscerator"
 msgstr "kacsabelező"
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:248
 msgid "ducks terror"
 msgstr "kacsák réme"
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:249
 msgid "duck exploder"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:245
+#: cogs/helpers/config.py:250
 msgid "duck destructor"
 msgstr "kacsasemmisítő"
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:251
 msgid "duck blaster"
 msgstr "kacsarobbantó"
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:252
 msgid "duck pulverizer"
 msgstr "kacsaporlasztó"
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:253
 msgid "duck disintegrator"
 msgstr "kacsaaprító"
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:254
 msgid "duck atomizer"
 msgstr "kacsaatomizáló"
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:255
 msgid "duck annihilator"
 msgstr "a kacsákat földdel egyenlővé tevő"
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:256
 msgid "serial duck killer"
 msgstr "sorozatos kacsagyilkos"
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:257
 msgid "duck genocider"
 msgstr "kacsairtó"
 
-#: cogs/helpers/config.py:253
+#: cogs/helpers/config.py:258
 msgid "old noob"
 msgstr "nyomi veterán"
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:259
 msgid "duck toaster"
 msgstr "kacsapirító"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
-msgid "Level of {player} on #{channel}"
-msgstr "{player} szintje # {channel} en"
+#: cogs/helpers/config.py:260
+msgid "unemployed due to extinction of the duck species"
+msgstr "munkanélküli a teljes kacsapopuláció kiirtása miatt"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+msgid "Level of {player} on #{channel}"
+msgstr "{player} szintje {channel}-en"
+
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
+#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
 msgid "Previous level"
 msgstr "Előző szint"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
+
+#: cogs/helpers/ducks.py:36
+msgid "Nothing"
+msgstr "Semmi"
+
+#: cogs/helpers/ducks.py:40
+msgid "a lot of bushes."
+msgstr "rengeteg bokor."
+
+#: cogs/helpers/ducks.py:43
+msgid "a duck pin."
+msgstr "egy kacsacsipesz."
+
+#: cogs/helpers/ducks.py:47
+msgid "a bullet"
+msgstr "egy töltény."
+
+#: cogs/helpers/ducks.py:59
+msgid "a full magazine"
+msgstr "egy teljes tölténytár."
+
+#: cogs/helpers/ducks.py:71
+msgid "a box of explosive ammo"
+msgstr "egy üres doboz, egykor tele robbanó lőszerrel."
+
+#: cogs/helpers/ducks.py:84
+msgid "an almost empty box of explosive ammo"
+msgstr "egy majdnem üres doboz, benne pár robbanólőszerrel."
+
+#: cogs/helpers/ducks.py:98
+msgid "some duck-grease"
+msgstr "némi kacsazsír"
+
+#: cogs/helpers/ducks.py:233
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
+"xp]"
+msgstr ""
+"**FLAPP** A túl sok zajtól megijedve, a kacsa elrepült! GRATULA! "
+"[veszítettél: -1 tapasztalat]"
+
+#: cogs/helpers/ducks.py:244
+msgid "BPAM"
+msgstr "BAPAMM"
+
+#: cogs/helpers/ducks.py:248
+msgid "BAAM"
+msgstr "BAMM"
+
+#: cogs/helpers/ducks.py:252
+msgid "BOUM"
+msgstr "BUMM"
+
+#: cogs/helpers/ducks.py:252
+msgid "SPROTCH"
+msgstr "PLACCCS"
+
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
+msgid "Searching the bushes around the duck, you found..."
+msgstr "Miközben keresgéltél a bokrok közt, a kezedbe akadt..."
+
+#: cogs/helpers/ducks.py:307
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "amit sajnos nem tudtál elvenni, mert a hátizsákod tele van."
+
+#: cogs/helpers/ducks.py:376
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985> Gyere kiskacsa!"
+
+#: cogs/helpers/ducks.py:381
+msgid ""
+":heart: You try to hug the duck, but it knows you killed its brother, so it "
+"fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Megpróbáltad átölelni a kacsát, de tudta, hogy megölted a testvérét, "
+"ezért elmenekült tőled és visszatért a tóba! [-2 tapasztalat]"
+
+#: cogs/helpers/ducks.py:383
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Megpróbáltad átölelni a kacsát, de úgy érezte, hogy valami nincs "
+"rendben veled, ezért elmenekült tőled és visszatért a tóba! [-2 tapasztalat]"
+
+#: cogs/helpers/ducks.py:650
+msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "A bébikacsa elkacsázott, hogy valahol ledőlhessen ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/ducks.py:710
+msgid "**I AM...** Your mother"
+msgstr "**ÉN VAGYOK...** Az anyád"

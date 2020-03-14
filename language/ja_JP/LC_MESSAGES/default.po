@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,25 +108,17 @@ msgstr "ユーザーがデータベースから削除されました。"
 msgid "Done. All channel data was removed."
 msgstr "すべてのチャンネルデータが削除されました。"
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-":x: 構文が正しくありません。次のようにコマンドを使用します： `!settings [view/set/reset/list/modified] "
-"[該当する場合は設定]`"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: 設定 {pref} は `{value}` に設定されました。"
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr "ボットの所有者であるため、max_ducks_per_day チェックをバイパスします。それは`{max}`だったでしょう。"
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -135,22 +127,22 @@ msgstr ""
 "VIPギルドにいるときに max_ducks_per_day "
 "チェックをバイパスします。それを悪用しないでください。詳細については、制限は1日あたり`{max}`アヒルに設定されていました。"
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:226
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
 msgstr "<:official_Duck_01_reversed:439576463436546050>　VIPステータスを設定する権限があります！"
 
-#: cogs/admin_commands.py:220
+#: cogs/admin_commands.py:228
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: VIPステータスを設定する権限がありません！あなたは所有者ではありません。"
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr ":x: 正しくない値"
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ":ok: このギルドで、設定 {pref} が `{value}` に設定されました。"
 

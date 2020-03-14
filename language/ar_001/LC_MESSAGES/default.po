@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-06 09:16+0000\n"
+"POT-Creation-Date: 2020-02-08 12:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,19 +84,11 @@ msgstr ""
 "تمت إزالة <:cmd_AdminRemoved_01:439549845519335440>{admin} من مشرفي المجموعة."
 ""
 
-#: cogs/admin_commands.py:181
-msgid ""
-":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset/"
-"list/modified] [setting if applicable]`"
-msgstr ""
-":x: بناء جملة غير صحيح. استخدم الأمر بهذه الطريقة: `! إعدادات [view / set / "
-"reset / list / modified] [setting if applicable]`"
-
-#: cogs/admin_commands.py:190
+#: cogs/admin_commands.py:194
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
-#: cogs/admin_commands.py:208
+#: cogs/admin_commands.py:216
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -104,7 +96,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day لأنك مالك البوت. كان من الممكن أن يكون "
 "\"{max}\"."
 
-#: cogs/admin_commands.py:210
+#: cogs/admin_commands.py:218
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -113,7 +105,7 @@ msgstr ""
 "تجاوز التحقق max_ducks_per_day كما كنت في نقابة كبار الشخصيات. من فضلك لا "
 "تسيء ذلك. للحصول على معلومات ، ربما تم تعيين الحد على `` max} `بط يوميًا."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:226
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -121,16 +113,16 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>مرخص لتعيين حالة كبار "
 "الشخصيات!"
 
-#: cogs/admin_commands.py:220
+#: cogs/admin_commands.py:228
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ":x: غير مصرح به لضبط حالة كبار الشخصيات! انت لست مالك."
 
-#: cogs/admin_commands.py:226 cogs/admin_commands.py:237
-#: cogs/admin_commands.py:258
+#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
+#: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
 msgstr " :x: قيمة غير صحيحة."
 
-#: cogs/admin_commands.py:233 cogs/admin_commands.py:254
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr " :ok: تم تعيين الإعداد {pref} على `{value}` في هذه المجموعة."
 
@@ -587,7 +579,7 @@ msgstr ""
 "لا تستخدم ذكر لهذا. يمكنك إعطائي ids مستخدم أو اسم المستخدم بالكامل في "
 "\"عروض\"."
 
-#: cogs/shop.py:411 cogs/shop.py:516
+#: cogs/shop.py:411 cogs/shop.py:524
 msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I will "
 "be able to delete that kind of shop commands ;)"
@@ -622,14 +614,14 @@ msgstr ""
 ":money_with_wings: ستظهر البطة في الدقائق العشر القادمة على القناة ، وذلك "
 "بفضل خدعة {mention}. اشتروها ب8 exp!"
 
-#: cogs/shop.py:497
+#: cogs/shop.py:505
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
 ":money_with_wings: الخبز يمكن أن يتراكم! شراء المزيد من أجل تحقيق أقصى قدر "
 "من الآثار!"
 
-#: cogs/shop.py:521
+#: cogs/shop.py:529
 msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
@@ -921,31 +913,31 @@ msgstr "https://www.youtube.com/watch؟v=HP362ccZBmY"
 msgid "a fish."
 msgstr "سمكة."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Everything is calm"
 msgstr "كل شيء هادئ."
 
-#: cogs/helpers/config.py:198
+#: cogs/helpers/config.py:203
 msgid "Nothing is happening right now."
 msgstr "لا شيء يحدث الآن."
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Ducks are migrating"
 msgstr "البط يهاجر."
 
-#: cogs/helpers/config.py:199
+#: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
 msgstr "استعد لرؤية المزيد من البط في الساعة القادمة."
 
-#: cogs/helpers/config.py:200
+#: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "طقس ضبابي."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
 msgstr "المنشطات في البحيرة."
 
-#: cogs/helpers/config.py:201
+#: cogs/helpers/config.py:206
 msgid ""
 "A medical waste company dumped steroids in the lake. Ducks have mutated, and "
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
@@ -954,232 +946,232 @@ msgstr ""
 "قامت شركة نفايات طبية بإلقاء الستيرويدات في البحيرة. البط تحور ، وسترى "
 "الكثير من البط السوبر. ولكن ، كن حذرا ، ولا تشرب تلك المياه."
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:207
 msgid "Safety class canceled"
 msgstr "قسم السلامة ملغى."
 
-#: cogs/helpers/config.py:202
+#: cogs/helpers/config.py:207
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr "تم إلغاء فئة السلامة ، احذر من إطلاق النار على صيادين آخرين!"
 
-#: cogs/helpers/config.py:204
+#: cogs/helpers/config.py:209
 msgid "A new florist in town"
 msgstr "بائع زهور جديد في المدينة."
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Mega-ducks"
 msgstr "ميجا-بط."
 
-#: cogs/helpers/config.py:205
+#: cogs/helpers/config.py:210
 msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
 msgstr "شخص ضخم بطة عظمى ، والآن هم أكبر من ذلك بكثير!"
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Windy weather"
 msgstr "طقس عاصف."
 
-#: cogs/helpers/config.py:206
+#: cogs/helpers/config.py:211
 msgid "Bullets are deflected by some strong wind"
 msgstr "ينحرف الرصاص من قبل بعض الرياح القوية."
 
-#: cogs/helpers/config.py:213
+#: cogs/helpers/config.py:218
 msgid "public danger"
 msgstr "خطر عام."
 
-#: cogs/helpers/config.py:214
+#: cogs/helpers/config.py:219
 msgid "tourist"
 msgstr "سائح."
 
-#: cogs/helpers/config.py:215
+#: cogs/helpers/config.py:220
 msgid "noob"
 msgstr "noob."
 
-#: cogs/helpers/config.py:216
+#: cogs/helpers/config.py:221
 msgid "trainee"
 msgstr "متدرب."
 
-#: cogs/helpers/config.py:217
+#: cogs/helpers/config.py:222
 msgid "duck misser"
 msgstr "فاقد البط."
 
-#: cogs/helpers/config.py:218
+#: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
 msgstr "عضو في جماعة ضد البط."
 
-#: cogs/helpers/config.py:219
+#: cogs/helpers/config.py:224
 msgid "duck hater"
 msgstr "كاره البط."
 
-#: cogs/helpers/config.py:220
+#: cogs/helpers/config.py:225
 msgid "duck pest"
 msgstr "بطة الآفات."
 
-#: cogs/helpers/config.py:221
+#: cogs/helpers/config.py:226
 msgid "duck hassler"
 msgstr "بطة هسلر."
 
-#: cogs/helpers/config.py:222
+#: cogs/helpers/config.py:227
 msgid "duck plucker"
 msgstr "بط ناتف."
 
-#: cogs/helpers/config.py:223
+#: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "صياد."
 
-#: cogs/helpers/config.py:225
+#: cogs/helpers/config.py:230
 msgid "duck clobber"
 msgstr "هازم البط."
 
-#: cogs/helpers/config.py:226
+#: cogs/helpers/config.py:231
 msgid "duck chewer"
 msgstr "ماضغ البط."
 
-#: cogs/helpers/config.py:227
+#: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "آكل البط."
 
-#: cogs/helpers/config.py:228
+#: cogs/helpers/config.py:233
 msgid "duck flattener"
 msgstr "بطة مستوية."
 
-#: cogs/helpers/config.py:229
+#: cogs/helpers/config.py:234
 msgid "duck disassembler"
 msgstr "مفكك البط."
 
-#: cogs/helpers/config.py:230
+#: cogs/helpers/config.py:235
 msgid "duck demolisher"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:231
+#: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "قاتل البط."
 
-#: cogs/helpers/config.py:232
+#: cogs/helpers/config.py:237
 msgid "duck skinner"
 msgstr "مرقق البط."
 
-#: cogs/helpers/config.py:234
+#: cogs/helpers/config.py:239
 msgid "duck chopper"
 msgstr "مفرم البط."
 
-#: cogs/helpers/config.py:235
+#: cogs/helpers/config.py:240
 msgid "duck decorticator"
 msgstr "مقشر البط."
 
-#: cogs/helpers/config.py:236
+#: cogs/helpers/config.py:241
 msgid "duck fragger"
 msgstr "بطة المفرغ."
 
-#: cogs/helpers/config.py:237
+#: cogs/helpers/config.py:242
 msgid "duck shatterer"
 msgstr "محطم البط."
 
-#: cogs/helpers/config.py:238
+#: cogs/helpers/config.py:243
 msgid "duck smasher"
 msgstr "ساحق البط."
 
-#: cogs/helpers/config.py:239
+#: cogs/helpers/config.py:244
 msgid "duck breaker"
 msgstr "مكسر البط."
 
-#: cogs/helpers/config.py:240
+#: cogs/helpers/config.py:245
 msgid "duck wrecker"
 msgstr "هادم البط."
 
-#: cogs/helpers/config.py:241
+#: cogs/helpers/config.py:246
 msgid "duck impaler"
 msgstr "متصدع البط."
 
-#: cogs/helpers/config.py:242
+#: cogs/helpers/config.py:247
 msgid "duck eviscerator"
 msgstr "نازع أحشاء البط."
 
-#: cogs/helpers/config.py:243
+#: cogs/helpers/config.py:248
 msgid "ducks terror"
 msgstr "راعب البط."
 
-#: cogs/helpers/config.py:244
+#: cogs/helpers/config.py:249
 msgid "duck exploder"
 msgstr "مفجر البط."
 
-#: cogs/helpers/config.py:245
+#: cogs/helpers/config.py:250
 msgid "duck destructor"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:246
+#: cogs/helpers/config.py:251
 msgid "duck blaster"
 msgstr "ناسف البط."
 
-#: cogs/helpers/config.py:247
+#: cogs/helpers/config.py:252
 msgid "duck pulverizer"
 msgstr "طاحن البط."
 
-#: cogs/helpers/config.py:248
+#: cogs/helpers/config.py:253
 msgid "duck disintegrator"
 msgstr "منحل البط."
 
-#: cogs/helpers/config.py:249
+#: cogs/helpers/config.py:254
 msgid "duck atomizer"
 msgstr " راذ البط."
 
-#: cogs/helpers/config.py:250
+#: cogs/helpers/config.py:255
 msgid "duck annihilator"
 msgstr "مدمر البط."
 
-#: cogs/helpers/config.py:251
+#: cogs/helpers/config.py:256
 msgid "serial duck killer"
 msgstr "مسلسل البط القاتل."
 
-#: cogs/helpers/config.py:252
+#: cogs/helpers/config.py:257
 msgid "duck genocider"
 msgstr " ذابح البط."
 
-#: cogs/helpers/config.py:253
+#: cogs/helpers/config.py:258
 msgid "old noob"
 msgstr "مستجد قديم."
 
-#: cogs/helpers/config.py:254
+#: cogs/helpers/config.py:259
 msgid "duck toaster"
 msgstr "محمص البط."
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:193
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
 msgid "Level of {player} on #{channel}"
 msgstr "مستوى {player} على # {channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:196
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
 msgid "You leveled down!"
 msgstr "لقد نزل مستواك!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:199
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
 msgid "You leveled up!"
 msgstr "لقد ارتفع مستواك!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:207
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "المستوى الحالي."
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:207 cogs/helpers/database.py:208
+#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
 msgid "nom"
 msgstr "اسم."
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:208
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
 msgid "Previous level"
 msgstr "المستوى السابق."
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:209
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
 msgstr "لقطات مضبوطة."
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:210
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
 msgstr "اعتمادية السلاح."
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:211
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
 msgstr "exp."
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:217
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
