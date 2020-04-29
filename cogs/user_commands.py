@@ -43,7 +43,6 @@ class User(commands.Cog):
     @checks.is_channel_enabled()
     @checks.had_giveback()
     async def reload(self, ctx):
-
         message = ctx.message
         channel = message.channel
         author = message.author
@@ -452,7 +451,7 @@ class User(commands.Cog):
 
         await add_to_stat(channel, author, "hugs", 1)
 
-        await self.bot.send_message(ctx=ctx, message=await current_duck.hug(ctx))
+        await self.bot.send_message(ctx=ctx, can_pm=False, message=await current_duck.hug(ctx))
 
     @commands.command(aliases=["currentevent", "event", "events"])
     @checks.is_channel_enabled()

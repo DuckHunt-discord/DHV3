@@ -34,7 +34,7 @@ $key = $_GET['endpoint'];
 
 $value = $cache->get($key);
 if ($value == null) {
-    $value = file_get_contents("http://duckhunt.api-d.com:6872/" . $key);
+    $value = file_get_contents("http://localhost:6872/" . $key);
     $cache->set($key, $value);
     //echo 'created ' . $value;
 }

@@ -60,14 +60,20 @@ class Meta(commands.Cog):
 
     @commands.command()
     async def wiki(self, ctx):
-        await self.bot.send_message(ctx=ctx, message="https://duckhunt.me/")
+        _ = self.bot._
+        await self.bot.send_message(ctx=ctx, message=_("https://docs.duckhunt.me/"))
+
+    @commands.command()
+    async def invite(self, ctx):
+        _ = self.bot._
+        await self.bot.send_message(ctx=ctx, message=_("Follow this link to invite me to your server: https://docs.duckhunt.me/bot-administration/admin-quickstart"))
 
     @commands.command()
     async def help(self, ctx):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
         await self.bot.send_message(ctx=ctx, message=_(
-            "Here is the command list: http://duckhunt.me/command-list/ | If you need anything, feel free to join the "
+            "If you are a new player, read this: <https://docs.duckhunt.me/players-guide/players-quickstart>. Otherwise, here is the players command list <https://docs.duckhunt.me/players-guide/player-commands> and the admin commands <https://docs.duckhunt.me/bot-administration/admin-commands> | If you need anything, feel free to join the "
             "support server at https://discordapp.com/invite/2BksEkV", language))
 
     @commands.command(aliases=["date"])
@@ -85,7 +91,7 @@ class Meta(commands.Cog):
         await self.bot.hint(ctx=ctx, message=_(
             "You can use the `dh!freetime` command to see when you'll get your weapons back for free", language))
 
-    @commands.command()
+    @commands.command(aliases=["giveback"])
     @checks.is_channel_enabled()
     async def freetime(self, ctx):
         HOUR = 3600
@@ -117,6 +123,34 @@ class Meta(commands.Cog):
         await self.bot.send_message(ctx=ctx, message=_("You are using shard number {shard} out of {total} total shards",
                                                        language).format(shard=ctx.guild.shard_id,
                                                                         total=len(self.bot.shards)))
+
+    @commands.command(aliases=["shard_status"])
+    async def shards(self, ctx):
+        """
+        Check the status of every shard the bot is hosting.
+        """
+        if self.bot.shard_count == 1:
+            await ctx.send("The bot is not yet sharded.")
+            return
+
+        latencies = sorted(self.bot.latencies, key=lambda l: l[0])
+        message = "```"
+
+        for shard, latency in latencies:
+            if shard == ctx.guild.shard_id:
+                message += "**"
+            message += f"•\t Shard ID {shard}: {round(latency, 2)}ms"
+            if shard in self.bot.shards_ready:
+                message += f" (ready)"
+            if shard == ctx.guild.shard_id:
+                message += "**"
+            message += "\n"
+
+        message += f"\n```\n\nAvg latency: {self.bot.latency}ms"
+        if self.bot.is_ready():
+            message += " (bot ready)"
+
+        await ctx.send(message)
 
 
 def setup(bot):

@@ -151,7 +151,7 @@ if (isset($_GET['cid'])) {
 
         $player_stats['badges'] = array(
             "banned"                        => $player_stats['banned'],
-            "no_weapon"                     => (time() - $player_stats['confiscated']) < 0,
+            "no_weapon"                     => $player_stats['confisque'],
             "admin"                         => in_array($player_stats['id_'], $admins),
             "moderator"                     => in_array($player_stats['id_'], $moderators),
             "translator"                    => in_array($player_stats['id_'], $translators),

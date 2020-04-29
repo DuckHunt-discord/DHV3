@@ -61,6 +61,16 @@ from cogs.helpers import context
 
 
 class DuckHunt(commands.AutoShardedBot):
+    def __init__(self, command_prefix, **options):
+        super().__init__(command_prefix, **options)
+        self.shards_ready = set()
+
+    async def on_shard_ready(self, shard_id):
+        self.shards_ready.add(shard_id)
+
+    async def on_disconnect(self):
+        self.shards_ready = set()
+
     async def on_message(self, message):
         if message.author.bot:
             return  # ignore messages from other bots
@@ -307,7 +317,7 @@ class DuckHunt(commands.AutoShardedBot):
                                                return_message=return_message)
 
 
-bot = DuckHunt(command_prefix=get_prefix, case_insensitive=True)
+bot = DuckHunt(command_prefix=get_prefix, case_insensitive=True, fetch_offline_members=False)
 
 logger.debug("Configuring the bot")
 

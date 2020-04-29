@@ -12,7 +12,7 @@ def add_to_csv(file_name, values, columns):
 
 
 def get_from_api(endpoint):
-    with urllib.request.urlopen("http://duckhunt.api-d.com:6872/" + endpoint) as url:
+    with urllib.request.urlopen("http://localhost:6872/" + endpoint) as url:
         return json.loads(url.read().decode())
 
 

@@ -64,7 +64,7 @@ def had_giveback():
 
         channel = ctx.channel
         player = ctx.author
-        if await ctx.bot.db.get_stat(channel, player, "banned"):
+        if int(await ctx.bot.db.get_stat(channel, player, "banned")) == 1:
             cond = ctx.author.id in ctx.bot.admins  # User is super admin
             cond = cond or ctx.channel.permissions_for(ctx.author).administrator  # User have server administrator permission
             cond = cond or ctx.author.id in await ctx.bot.db.get_admins(ctx.guild)  # User is admin as defined in the database

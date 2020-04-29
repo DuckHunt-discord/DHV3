@@ -8,8 +8,15 @@ def     init_logger():
 
     formatter = logging.Formatter('%(asctime)s :: %(levelname)s :: %(channelid)s - %(userid)s :: %(message)s')
 
+    sql_logger = logging.getLogger('sqlalchemy.engine')
+    sql_logger.setLevel(logging.DEBUG)
+
     # Logging to a file
     from logging.handlers import RotatingFileHandler
+
+    sqla_file_handler = RotatingFileHandler('sqla.log', 'a', 10000000, 1)
+    sqla_file_handler.setLevel(logging.DEBUG)
+    sql_logger.addHandler(sqla_file_handler)
 
     file_handler = RotatingFileHandler('duckhunt_all.log', 'a', 10000000, 10)
     file_handler.setFormatter(formatter)
@@ -141,6 +148,10 @@ def     init_logger():
 
     steam_handler.setFormatter(formatter)
     base_logger.addHandler(steam_handler)
+
+    sql_steam_handler = ColorStreamHandler()
+    sql_steam_handler.setLevel(logging.DEBUG)
+    sql_logger.addHandler(sql_steam_handler)
 
     return base_logger
 

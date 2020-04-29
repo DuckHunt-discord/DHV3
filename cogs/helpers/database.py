@@ -1,3 +1,5 @@
+import logging
+
 import discord
 import records
 
@@ -12,7 +14,7 @@ class Database:
     def __init__(self, bot):
         self.bot = bot
         # Create the database object
-        self.database = records.Database(f'mysql+mysqlconnector://{bot.database_user}:{bot.database_password}'
+        self.database = records.Database(f'mysql+mysqldb://{bot.database_user}:{bot.database_password}'
                                          f'@{bot.database_address}:{bot.database_port}'
                                          f'/{bot.database_name}?charset=utf8mb4')
         self.recreate_caches()
@@ -211,9 +213,32 @@ class Database:
         # self.bot.logger.debug(f"> In the DB, the channel is {channel_id}")
 
         # Now that we have the ID, we can get into duckhunt/players and update the player we need
-        self.database.query(f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) "
-                            f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url", channel_id=channel_id, user_id=user.id, stat_value=value,
-                            avatar_url=str(user.avatar_url_as(static_format='jpg', size=1024)), name_=user.name + "#" + user.discriminator)
+        name_ = user.name + "#" + user.discriminator
+        avatar_url = str(user.avatar_url_as(static_format='jpg', size=1024))
+        with self.database.get_connection() as conn:
+            now = time.time()
+            delta = round(now - start, 2)
+            timings.append(f"[+{delta}] Got connection")
+            now = time.time()
+            delta = round(now - start, 2)
+            timings.append(f"[+{delta}] --> UPDATE players SET {stat} = %s, name=%s, avatar_url=%s WHERE channel_id=%s and id_=%s, ({value}, {name_}, {avatar_url}, {channel_id}, {user.id})")
+
+            q = conn._conn.execute(f"UPDATE players SET {stat} = %s, name=%s, avatar_url=%s WHERE channel_id=%s and id_=%s",
+                                     value, name_, avatar_url, channel_id, user.id)
+            now = time.time()
+            delta = round(now - start, 2)
+            timings.append(f"[+{delta}] Updated row (?) rc={q.rowcount}")
+            if q.rowcount == 0:
+                now = time.time()
+                delta = round(now - start, 2)
+                timings.append(f"[+{delta}] --> INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value), channel_id={channel_id}, user_id={user.id}, stat_value={value}, avatar_url={avatar_url}, name_={name_}")
+
+                self.database.query(f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value)",
+                                    channel_id=channel_id, user_id=user.id, stat_value=value,
+                                    avatar_url=avatar_url, name_=name_)
+                now = time.time()
+                delta = round(now - start, 2)
+                timings.append(f"[+{delta}] Inserted new player")
 
         now = time.time()
         delta = round(now - start, 2)
@@ -232,9 +257,6 @@ class Database:
         total_taken = time.time() - start
         if total_taken > 0.5:
             self.bot.logger.warning(f"⚠️ SLOW QUERY DETECTED ⚠️ \n"
-                                    f"INSERT INTO players (channel_id, id_, name, avatar_url, {stat}) VALUES (:channel_id, :user_id, :name_, :avatar_url, :stat_value) \n"
-                                    f"ON DUPLICATE KEY UPDATE {stat} = :stat_value, name=:name_, avatar_url=:avatar_url\n"
-                                    f"With values channel_id={channel_id}, user_id={user.id}, stat_value={value}, avatar_url={str(user.avatar_url_as(static_format='jpg', size=1024))}, name_={user.name + '#' + user.discriminator}\n"
                                     f"⚠️ SLOW QUERY TIMINGS: \n" + "\n".join(timings))
 
         ## LEVEL UP EMBEDS ##
@@ -256,7 +278,7 @@ class Database:
                 return
 
             embed.set_thumbnail(url=user.avatar_url if user.avatar_url else self.bot.user.avatar_url)
-            embed.url = 'https://duckhunt.me/'
+            embed.url = 'https://docs.duckhunt.me/players-guide/levels-and-experience'
 
             embed.add_field(name=_("Current level", language), value=str(level["niveau"]) + " (" + _(level["nom"], language) + ")")
             embed.add_field(name=_("Previous level", language), value=str(ancien_niveau["niveau"]) + " (" + _(ancien_niveau["nom"], language) + ")")
