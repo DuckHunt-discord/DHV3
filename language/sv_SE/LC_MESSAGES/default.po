@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-08 12:13+0000\n"
+"POT-Creation-Date: 2020-03-14 22:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ":x: Du har inte tillräckligt med erfarenhetspoäng för detta."
 
 #: bot.py:152
 msgid ":x: You are not a server admin"
-msgstr ":x: Du är inte ett serveradministratör."
+msgstr ":x: Du är inte en serveradministratör."
 
 #: bot.py:155
 msgid ":x: You are not a super admin."
@@ -39,7 +39,27 @@ msgid ""
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
 "Detta kommando är reserverat för ägarna av botten. Om du tycker detta är ett "
-"misstag, kontakta ägaren på DuckHunts Support Server (se `dh!help`)"
+"misstag, kontakta min ägare på DuckHunts Support Server (se `dh!help`)"
+
+#: bot.py:160
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x: Du har inte röstat på DuckHunt på DiscordBotList på ett tag."
+
+#: bot.py:161
+msgid ""
+"Support the bot to use this command by voting at <https://discordbots.org/"
+"bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
+"DuckhuntIf you think this is an error, please contact my owner at the "
+"DuckHunt Support Server (see `dh!help`)."
+msgstr ""
+"Stöd bot för att använda detta kommando genom att rösta på <https://"
+"discordbots.org/bot/duckhunt>. Var medveten om att rösterna kan ta en minut "
+"att registreras av Duckhunt. Om du tycker att detta är ett fel, vänligen "
+"kontakta min ägare vid DuckHunt Support Server (se `dh!help`)."
+
+#: bot.py:173
+msgid "You are on cooldown :(, try again in {seconds} seconds!"
+msgstr "Du är på nedkylning :(, försök igen om {seconds} sekunder!"
 
 #: bot.py:179
 msgid ":bulb: HINT: "
@@ -47,24 +67,120 @@ msgstr ":bulb: TIPS:"
 
 #: cogs/admin_commands.py:27
 msgid ":ok: Done, user banned. :gun:"
-msgstr ":ok: Ok, användaren förbjuden. :gun:"
+msgstr ":ok: Gjort, användaren bannlyst. :gun:"
 
 #: cogs/admin_commands.py:39
 msgid ":ok: Done, user unbanned. :eyes:"
-msgstr ":ok: Ok, användaren är inte förbjuden nu. :eyes:"
+msgstr ":ok: Gjort, användaren är inte bannlyst nu. :eyes:"
+
+#: cogs/admin_commands.py:65
+msgid ""
+"<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
+"the game! Have fun!"
+msgstr ""
+"<:cmd_ChannelAdded_01:439546719143723019> Klar, kanal {channel} läggs till i "
+"spelet! Ha så kul!"
+
+#: cogs/admin_commands.py:81
+msgid ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
+"from the game. Bye!"
+msgstr ""
+"<:cmd_ChannelRemoved_01:439546718737137674> Klar, kanal {channel} tas bort "
+"från spelet. Hejdå!"
+
+#: cogs/admin_commands.py:90
+msgid ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
+"guild!"
+msgstr ""
+"<:cmd_AdminAdded_01:439549846622568466> {admin} har lagts till som admin i "
+"guilden!"
+
+#: cogs/admin_commands.py:98
+msgid ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
+"admins."
+msgstr ""
+"<:cmd_AdminRemoved_01:439549845519335440> {admin} tas bort från guild-"
+"administratörerna."
+
+#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+msgid "Done. User removed from the database, if he was in."
+msgstr "Gjort. Användaren tas bort från databasen om han var i."
+
+#: cogs/admin_commands.py:156
+msgid "Done. All channel data was removed."
+msgstr "Gjort. All kanaldata togs bort."
+
+#: cogs/admin_commands.py:181
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
+"[setting]`"
+msgstr ""
+": x: Fel syntax. Använd kommandot på detta sätt: `!settings [view /set /"
+"reset] [inställning]`"
+
+#: cogs/admin_commands.py:191 cogs/admin_commands.py:206
+#: cogs/admin_commands.py:257
+msgid "Unknown setting..."
+msgstr "Okänd inställning..."
+
+#: cogs/admin_commands.py:194
+msgid ":ok: The setting {pref} is set to `{value}` on this guild."
+msgstr ":ok: Inställningen {pref} är inställd på `{value}` på denna guild."
+
+#: cogs/admin_commands.py:216
+msgid ""
+"Bypassing the max_ducks_per_day check as you are the bot owner. It would "
+"have been `{max}`."
+msgstr ""
+"Omkopplingen av max_ducks_per_day-kontroll eftersom du är bot-ägaren. Det "
+"skulle ha varit `{max}`."
+
+#: cogs/admin_commands.py:218
+msgid ""
+"Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
+"don't abuse that. For information, the limit would have been set at `{max}` "
+"ducks per day."
+msgstr ""
+"Omkopplar max_ducks_per_day-kontrollen eftersom du är i en VIP-guild. Snälla "
+"missbruka inte det. För din information skulle gränsen max ha ställts in "
+"till `{max}` ankor per dag."
+
+#: cogs/admin_commands.py:226
+msgid ""
+"<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
+"status!"
+msgstr ""
+"<:official_Duck_01_reversed:439576463436546050> Behörig att ställa in VIP-"
+"status!"
+
+#: cogs/admin_commands.py:228
+msgid ":x: Unauthorised to set the VIP status! You are not an owner."
+msgstr ": x: Obehörigt att ställa in VIP-status! Du är inte en ägare."
 
 #: cogs/admin_commands.py:234 cogs/admin_commands.py:245
 #: cogs/admin_commands.py:270
 msgid ":x: Incorrect value."
-msgstr ":x: Felaktig värde."
+msgstr ":x: Felaktigt värde."
+
+#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
+msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
+msgstr ""
+": ok: Inställningen {pref} har ställts in som`{value}` på denna guild."
 
 #: cogs/experience_related_commands.py:27
 msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
-"Grattis, du skickade/gav mer erfarenhet än det maximala antalet jag kan "
+"Grattis, du skickade / gav mer erfarenhet än det maximala antalet jag kan "
 "lagra."
+
+#: cogs/experience_related_commands.py:30
+msgid ":ok:, he/she now has {newexp} exp points!"
+msgstr ":ok: han/hon har nu {newexp} exp-poäng!"
 
 #: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
@@ -76,6 +192,14 @@ msgstr ""
 msgid ":x: The exp amount needs to be positive."
 msgstr ":x: Summan för erfarenhetspoäng måste vara positiv."
 
+#: cogs/experience_related_commands.py:62
+msgid ""
+":x: Wait... What? Are you trying to send experience to YOURSELF? That "
+"doesn't make sense."
+msgstr ""
+": x: Vänta ... Va? Försöker du skicka erfarenhetspoäng till DIG SJÄLV? Det "
+"är inte meningsfullt."
+
 #: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
@@ -84,11 +208,15 @@ msgstr ""
 
 #: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
-msgstr "Du har inte tillräckligt med erfarenhetspoäng."
+msgstr "Du har inte tillräckligt med erfarenhetspoäng"
 
 #: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
-msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server."
+msgstr ":x: Att skicka erfarenhetspoäng är inte tillåtet på denna server"
+
+#: cogs/experience_related_commands.py:94 cogs/scores.py:33
+msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
+msgstr "{date} (i {dans_jours}{dans_heures} och {dans_minutes})"
 
 #: cogs/experience_related_commands.py:95 cogs/scores.py:34
 #, python-format
@@ -113,46 +241,728 @@ msgid ""
 "The bot frequently reboots for updates. Don't worry, it has a 99.8% of "
 "uptime."
 msgstr ""
-"Botten uppdaterar regelbundet för uppdateringar. Oroa inte, botten har en "
-"upptid av 99.8%"
+"Boten startar om regelbundet för uppdateringar. Oroa dig inte, boten har 99."
+"8% drifttid. "
+
+#: cogs/meta.py:69
+msgid ""
+"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Här är kommandolistan: http://duckhunt.me/command-list/ | Om du behöver "
+"något annat så kan du gå med i supportservern på https://discordapp.com/"
+"invite/2BksEkV"
+
+#: cogs/meta.py:82
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"Det är `{hour}: {minutes}: {seconds}` i GMT-tidszonen (även känd som UTC±00: "
+"00), vilket är den som används av boten. Du kan använda den här webbplatsen "
+"för att jämföra den med din tidszon: https://time.is/compare/GMT"
+
+#: cogs/meta.py:85
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr ""
+"Du kan använda kommandot `dh!freetime` för att se när du får tillbaka dina "
+"vapen gratis"
+
+#: cogs/meta.py:100
+msgid ""
+":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
+"({hours} hour(s) and {minutes} minute(s))."
+msgstr ""
+":alarm_clock: Nästa återgivning av vapen och \n"
+"vapenmagasin på {sec} sekunder ({hours} timmar och {minuter} minuter)."
+
+#: cogs/meta.py:103
+msgid ""
+"A giveback tops up your magazines and gives you your weapon back for free "
+"(if confiscated), but it doesn't affect the bullets in your current magazine."
+" If you can, reload beforehand!"
+msgstr ""
+"En återuppbackning fyller upp dina vapenmagasiner och ger dig ditt vapen "
+"tillbaka gratis (om det konfiskeras), men det påverkar inte kulorna i ditt "
+"nuvarande magasin. Om du kan, ladda om i förväg!"
+
+#: cogs/meta.py:117
+msgid "You are using shard number {shard} out of {total} total shards"
+msgstr "Du använder skärvsnummer {shard} av {total} totala skärvor"
+
+#: cogs/scores.py:52
+msgid ""
+"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Poängen är online på http://duckhunt.api-d.com/web/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:259
+msgid ""
+"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Dina duckstatser väntar på dig http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+
+#: cogs/setup_wizzard.py:24
+msgid ""
+"Hello!\n"
+" Thanks for adding me in there! I'm almost ready to start the game!\n"
+" Could we please go into the channel where you want the game to be ? Please "
+"invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
+msgstr ""
+"Hej! Tack för att du lägger till mig där! Jag är nästan redo att starta "
+"spelet! Kan vi snälla gå in i kanalen där du vill att spelet ska vara? "
+"Vänligen påkalla mig där genom att använda `dh!setup` <:event_GuildAdded_01:"
+"439550913112309781>"
+
+#: cogs/setup_wizzard.py:35
+msgid ""
+"Hello again!\n"
+" I'm just gonna run a quick permissions check and will be back in a few "
+"seconds! Please wait"
+msgstr ""
+"Hej igen! Jag ska bara köra en snabb behörighetskontroll och kommer tillbaka "
+"om några sekunder! Vänta"
+
+#: cogs/setup_wizzard.py:51
+msgid ""
+":small_red_triangle: The permission `read_message_history` is missing.\n"
+"This is essential for the normal function of the bot, as I need to be able "
+"to read messages.\n"
+"You can proceed without it, but shouldn't."
+msgstr ""
+":small_red_triangle: Tillståndet `read_message_history` saknas. Detta är "
+"väsentligt för botens normala funktion, eftersom jag behöver kunna läsa "
+"meddelanden. Du kan fortsätta utan det, men borde inte göra det."
+
+#: cogs/setup_wizzard.py:56
+msgid ""
+":small_red_triangle: The permission `add_reactions` is missing.\n"
+"It's a required permission for interactive embeds, and they are almost "
+"everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Tillståndet `add_reactions` saknas. Det är en "
+"obligatorisk tillåtelse för interaktiva inbäddningar, och de finns nästan "
+"överallt. Du kan fortsätta utan det, men det rekommenderas inte och kan leda "
+"till fel"
+
+#: cogs/setup_wizzard.py:61
+msgid ""
+":small_red_triangle: The permission `attach_files` is missing.\n"
+"It's a required permission for embeds, and they are almost everywhere.\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_red_triangle: Tillståndet `attach_files` saknas. Det är ett krävt "
+"tillstånd för inbäddningar, och de finns nästan överallt. Du kan fortsätta "
+"utan det, men det rekommenderas inte och kan leda till fel"
+
+#: cogs/setup_wizzard.py:66
+msgid ""
+":small_red_triangle: The permission `embed_links` is missing.\n"
+"This is used to send embeds\n"
+"You could proceed without it, but really shouldn't as it will lead to errors"
+msgstr ""
+":small_red_triangle: Tillståndet `embed_links` saknas. Detta används för att "
+"skicka inbäddningar Du kan fortsätta utan det, men borde verkligen inte "
+"eftersom det kommer att leda till fel"
+
+#: cogs/setup_wizzard.py:72
+msgid ""
+":small_orange_diamond: You gave me the `administrator` permission.\n"
+"Although this will not cause problems, it's unsafe to give bots such "
+"powerful permissions, especially if they don't need them.\n"
+"You can proceed with it."
+msgstr ""
+":small_orange_diamond: Du gav mig behörigheten `administratör`. Även om "
+"detta inte kommer att orsaka problem, är det osäkert att ge bots så "
+"kraftfulla behörigheter, särskilt om de inte behöver dem. Du kan fortsätta "
+"med det."
+
+#: cogs/setup_wizzard.py:77
+msgid ""
+":small_orange_diamond: The permission `create_instant_invite` is missing.\n"
+"It's not really essential for the normal function of the bot, but needed for "
+"error reports.\n"
+"You can proceed without it."
+msgstr ""
+":small_orange_diamond: Tillståndet `create_instant_invite` saknas. \n"
+"Det är inte riktigt väsentligt för botens normala funktion, men är "
+"nödvändigt för felrapporter. \n"
+"Du kan fortsätta utan det."
+
+#: cogs/setup_wizzard.py:82
+msgid ""
+":small_orange_diamond: The permission `manage_messages` is missing.\n"
+"This is used to remove some messages on sneaky commands (weapon sabotage, "
+"etc.), and also if you use the `delete_commands` setting\n"
+"You could proceed without it, but it's not recommended and could lead to "
+"errors"
+msgstr ""
+":small_orange_diamond: Tillståndet `manage_messages` saknas.\n"
+"Detta behöver boten för att radera vissa meddelanden på smyga kommandon "
+"(vapen sabotage, etc.),\n"
+"ifall du använder inställningen `delete_commands` så kan du fortsätta med "
+"det men det rekommenderas inte eftersom det kan leda till fel."
+
+#: cogs/setup_wizzard.py:87
+msgid ""
+":small_orange_diamond: You gave me the `mention_everyone` permission.\n"
+"This not used, but should't be given in case of a bug\n"
+"You could proceed with it safely."
+msgstr ""
+":small_orange_diamond: Du gav mig behörigheten `mention_everyone`.\n"
+"Detta används inte, men borde inte ges ifall ett fel sker.\n"
+"Du kan fortsätta med det på ett säkert sätt."
+
+#: cogs/setup_wizzard.py:92
+msgid ""
+":small_orange_diamond: The permission `external_emojis` is missing.\n"
+"This is used since DHV3 to add non-standard emojis to messages. You should "
+"probably give it to me\n"
+"You could proceed without it, but bug reports would be appreciated."
+msgstr ""
+":small_orange_diamond: Tillståndet `external_emojis` saknas.\n"
+"Det här är använt för att tillåta DHV3 att lägga till icke-standard emojis i "
+"meddelanden. Du borde förmodligen ge den till mig.\n"
+"Du kan fortsätta utan den, men felrapporter skulle uppskattas."
+
+#: cogs/setup_wizzard.py:110
+msgid ""
+":small_blue_diamond: The permission `change_nickname` is missing.\n"
+"This is not yet used, but could be in the future. An announcement will be "
+"made then.\n"
+"You can safely proceed without it."
+msgstr ""
+":small_blue_diamond: Tillståndet `change_nickname` saknas.\n"
+"Det här kommandot används inte än, men kan användas i framtiden. Ett "
+"tillkännagivande kommer att skapas då.\n"
+"Du kan fortsätta säkert utan det."
+
+#: cogs/setup_wizzard.py:115
+msgid ""
+":small_blue_diamond: The permission `send_tts_messages` is missing.\n"
+"This is used in case you want to enable tts ducks..\n"
+"You can safely proceed without it, but the `tts_ducks` setting won't work"
+msgstr ""
+":small_blue_diamond: Tillståndet `send_tts_messages` saknas.\n"
+"Detta är använt ifall du vill aktivera tts ankor.\n"
+"Du kan fortsätta säkert utan det, men inställningen `tts_ducks` fungerar "
+"inte."
+
+#: cogs/setup_wizzard.py:121
+msgid ""
+"I'm done! <:cmd_Setup_01:439551472804429836>\n"
+"Any warning has been sent above. I suggest fixing them, then running the "
+"command again!\n"
+"If there is none, congrats! You passed the tests brilliantly!\n"
+"If you are ready to continue with the setup, use the command "
+"`dh!setup_settings`. If you just want to play, use `dh!add_channel`. Once "
+"used, ducks will spawn automatically.\n"
+"Thanks for flying DucksAir. If you have any question, we are here to help at "
+"https://discord.gg/2BksEkV"
+msgstr ""
+"Klar! <:cmd_Setup_01:439551472804429836>\n"
+"Varningar har skickats ovan. Jag föreslår att du fixar dem och sedan kör "
+"kommandot igen! \n"
+"Om det inte fanns några varningar, grattis!\n"
+"Du klarade testet briljant! Om du är redo att fortsätta med installationen "
+"så kan du använda kommandot `dh!setup_settings`. Om du bara vill spela, "
+"använd `dh!add_channel`. När kommandot har använts så börjar ankorna komma "
+"automatiskt.\n"
+"Tack för att du har flygit på DucksAir. Om du har några frågor, är vi här "
+"för att hjälpa dig vid https://discord.gg/2BksEkV"
+
+#: cogs/setup_wizzard.py:135
+msgid ""
+"Hey! Let's configure the server!\n"
+"I'll give you the most used parameters, and let you change them if you want. "
+"Any command written here is optional, and you can start playing now just by "
+"using `dh!add_channel`.\n"
+"\n"
+"**Before starting, please make sure this is the channel you want to use, and "
+"activate it with `dh!add_channel`.**\n"
+"\n"
+"**1/ Language used**:\n"
+"    \\* If you speak french, use `dh!settings set language fr_FR`\n"
+"    \\* If you speak spanish, use `dh!settings set language es_ES`\n"
+"    \\* Another language we don't fully support yet? Help us translate "
+"DuckHunt! Find us at https://discord.gg/2BksEkV.\n"
+"    \n"
+"**2/ Ducks Per Day**:\n"
+"    This is the number of ducks that will spawn per day. They spawn at "
+"random intervals, but you can configure the number of ducks that will spawn.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"ducks_per_day XX`, where `XX` is a number.\n"
+"    \\* To prevent abuse, there is a limit that will be automatically "
+"enforced. If you need to lift it, contact my owner at the support server.\n"
+"    \n"
+"**3/ Exp Won Per Duck Killed**:\n"
+"    This is the experience won per duck killed. If your server is really "
+"popular, it might be worth it to push it up a little to make new hunters "
+"progress faster.\n"
+"    \\* Use the following command to change it, use `dh!settings set "
+"exp_won_per_duck_killed XX`, where `XX` is a number.\n"
+"    \\* :bulb: Don't go too high tho, there must be some challenge. 15 is a "
+"good start\n"
+"    \n"
+"**4/ Other settings**:\n"
+"    This is starting to be lengthy, so I won't go into further details here. "
+"You are probably all set and can start the game by typing `dh!add_channel`.\n"
+"    More settings can be found using `dh!settings list`\n"
+"    \n"
+"Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
+msgstr ""
+"Hallå! Låt oss konfigurera servern!\n"
+"Jag ger dig de mest använda parametrarna och låter dig ändra dem om du vill. "
+"Alla kommandon skrivet i det här meddelandet är frivilligt och du kan bara "
+"börja spela nu med att använda kommandot `dh!add_channel`.\n"
+"\n"
+"**Före du börjar, var säker på att det här är den kannalen du vill använda "
+"och aktivera den med `dh!add_channel`.**\n"
+"\n"
+"**1/Använda språk**:\n"
+"    \\* Om du pratar franska, använd `dh!settings set language fr_FR`\n"
+"    \\* Om du pratar svenska, använd `dh!settings set language sv_SE`\n"
+"    \\* Finns det något annat språk vi inte har helt stöd för än? Hjälp oss "
+"översätta DuckHunt! Hitta oss vid https://discord.gg/2BksEkV.\n"
+"\n"
+"**2/ Ankor Per Dag**:\n"
+"     Det här är numret av ankor som kommer genereras per dag. De kommer "
+"genereras vid slumpmässiga intervaller, men du kan konfigurera numret av "
+"ankor som kommer genereras.\n"
+"    \\* Använd följande kommando för att ändra det, använd `dh!settings set "
+"ducks_per_day XX`, där `XX` är ett nummer.\n"
+"    \\* För att förhindra missbruk så finns det en gräns som kommer att "
+"automatiskt bli upprätthålld. Om du behöver höja det, kontakta mind ägare "
+"inuti hjälp servern.\n"
+"\n"
+"**3/ Exp Vunnen Per Anka Dödad**:\n"
+"    Detta är erfaranhetspoängen vunnen för varje dödad anka. Om din server "
+"är väldigt populär så är det en bra idé att höja antalet lite så att det går "
+"snabbare att få mer erfarenhetspoäng.\n"
+"    \\* Använd följande kommando för att ändra det, använd `dh!settings set "
+"exp_won_per_duck_killed XX`, där `XX` är ett nummer.\n"
+"    \\* :bulb: Höj det inte för mycket, eftersom det måste vara en utmaning. "
+"15 är ett bra nummer att starta med\n"
+"\n"
+"**4/ Andra Inställningar**:\n"
+"    Det här börjar bli långt så jag kommer inte gå in med mer detaljer här. "
+"Du klarar dig säkert härifrån och kan börja spelet med `dh!add_channel`.\n"
+"    Mer inställningar kan hittas med kommandot `dh!settings list`\n"
+"\n"
+"Tack för att du spelar med mig! <:official_Duck_01:439546719177539584>"
+
+#: cogs/shop.py:42
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!shop [list/item number] "
+"[argument if applicable]`"
+msgstr ""
+":x: Fel syntax. Använd kommandot på det här sättet: `!shop [lista/"
+"artikelnummer] [arhument om tillämpligt]`"
+
+#: cogs/shop.py:52
+msgid "Right now you have a total of {exp} exp points."
+msgstr "Just nu har du totalt {exp} exp-poäng."
+
+#: cogs/shop.py:59
+msgid ""
+"Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
+"Thanks "
+msgstr ""
+"Här är listan över all butiksartiklar: https://duckhunt.me/shop-items/ . "
+"Tack"
 
 #: cogs/shop.py:75
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
-":money_with_wings_ Du lade till ett skott i ditt vapen för 7 "
+":money_with_wings_ Du har lagt till ett skott i ditt vapen för 7 "
 "erfarenhetspoäng"
 
 #: cogs/shop.py:78
 msgid ":champagne: Your magazine is full!"
-msgstr ":champagne: Ditt magasin är full!"
+msgstr ":champagne: Ditt magasin är fullt!"
 
 #: cogs/shop.py:94
 msgid ""
 ":money_with_wings: You added a magazine to your weapon for 13 exp points."
-msgstr ":money_with_wings: Du köpte en magasin för ditt vapen för 13 poäng."
+msgstr ":money_with_wings: Du köpte ett magasin till ditt vapen för 13 poäng."
 
 #: cogs/shop.py:97
 msgid ":champagne: You have enough magazines!"
 msgstr ":champagne: Du har tillräckligt med magasin!"
+
+#: cogs/shop.py:111
+msgid ":money_with_wings: You purchased AP ammo for your weapon."
+msgstr ":money_with_wings: Du köpte AP ammunition för ditt vapen."
 
 #: cogs/shop.py:112
 msgid ""
 "For the next 24 hours, you will deal double damage to ducks. This does "
 "**not** stack with explosive ammo"
 msgstr ""
-"För 24 timmar kommer du att göra dubbel skada, detta kommer **inte** att "
-"fungera tillsammans med explosiv ammunition."
+"Under de kommande 24 timmarna kommer du att göra dubbel skada på ankor, "
+"detta kommer **inte** att fungera tillsammans med explosiv ammunition."
+
+#: cogs/shop.py:115
+msgid ":champagne: You have enough AP ammo for now!"
+msgstr ":champagne: Du har tillräckligt med AP ammunition för nu!"
+
+#: cogs/shop.py:129
+msgid ":money_with_wings: You purchased explosive ammo for your weapon."
+msgstr ":money_with_wings: Du köpte explosiv ammunition för ditt vapen."
+
+#: cogs/shop.py:130
+msgid ""
+"For the next 24 hours, you will deal triple damage to ducks. This does "
+"**not** stack with AP ammo and trumps it if you have any."
+msgstr ""
+"Under det kommande dygnet kommer du att göra tredubbla skador på ankor. "
+"Detta stackar **inte** med AP-ammunition och preferera det om du har något."
+
+#: cogs/shop.py:133
+msgid ":champagne: You have enough explosive ammo for now!"
+msgstr ":champagne: Du har tillräckligt med explosiv ammunition för nu!"
+
+#: cogs/shop.py:147
+msgid ":money_with_wings: You got your weapon back."
+msgstr ":money_with_wings: Du fick tillbaka ditt vapen."
+
+#: cogs/shop.py:148
+msgid ""
+"You can get your weapon back for free if you wait until the daily weapon & "
+"magazine giveback. Type `dh!freetime` to find out when the next giveback is"
+msgstr ""
+"Du kan få tillbaka ditt vapen gratis om du väntar tills det dagliga vapen & "
+"magasin återgivande. Skriv \"dh!freetime\" för att ta reda på när nästa "
+"återgivande är"
+
+#: cogs/shop.py:152
+msgid ""
+":champagne: You already have your weapon, what are you trying to buy? :p"
+msgstr ":champagne: Du har redan ditt vapen, vad försöker du köpa? :p"
+
+#: cogs/shop.py:166
+msgid ":money_with_wings: You added grease in your weapon."
+msgstr ":money_with_wings: Du har lagt till fett i ditt vapen."
+
+#: cogs/shop.py:167
+msgid ""
+"This reduces jamming risks by 50 percent for a day, for only 8 exp points. "
+"It's really useful for new players. Use `dh!duckstats` to check your level "
+"and accuracy"
+msgstr ""
+"Detta minskar fastställningsriskerna med 50 procent per dag, för endast 8 "
+"exp-poäng. Det är verkligen användbart för nya spelare. Använd "
+"`dh!duckstats` för att kontrollera din nivå och träffsäkerhet"
+
+#: cogs/shop.py:171
+msgid ""
+":champagne: Your weapon is perfectly lubricated, you don't need any more "
+"grease."
+msgstr ":champagne: Ditt vapen är redan smörjat, du behöver inte mer fett."
+
+#: cogs/shop.py:187
+msgid ":money_with_wings: You added a sight to your weapon."
+msgstr ":money_with_wings: Du lade till ett sikte till ditt vapen."
+
+#: cogs/shop.py:188
+msgid ""
+"Your aiming was improved using this formula: (100 - current accuracy) / 3."
+msgstr ""
+"Din träffsäkerhet förbättrades med denna formel: (100 - nuvarande "
+"träffsäkerhet) / 3."
+
+#: cogs/shop.py:191
+msgid ":champagne: You already have a sight on your weapon."
+msgstr ":champagne: Du har redan ett syn på ditt vapen."
+
+#: cogs/shop.py:208
+msgid ""
+":money_with_wings: You added an infrared detector to your weapon, it will "
+"prevent any waste of ammo for a day. Cost: 15 exp points."
+msgstr ""
+":money_with_wings: Du har lagt till en infraröd detektor till ditt vapen, "
+"det kommer att förhindra avfall av ammunition under en dag. Kostnad: 15 exp."
+
+#: cogs/shop.py:210
+msgid ":champagne: You already have an infrared detector on your weapon."
+msgstr ":champagne: Du har redan en infraröd detektor på ditt vapen."
+
+#: cogs/shop.py:224
+msgid ":money_with_wings: You added a silencer to your weapon."
+msgstr ":money_with_wings: Du har lagt till en ljuddämpare till ditt vapen."
+
+#: cogs/shop.py:225
+msgid ""
+"The silencer works best if every hunter uses one, or if you're alone. With "
+"it, no ducks will fly away before you can kill them. What a good deal, they "
+"only cost 5 exp!"
+msgstr ""
+"Ljuddämparen fungerar bäst om varje jägare använder en, eller om du är ensam."
+" Med det kommer inga ankor att flyga bort innan du kan döda dem. Vad en bra "
+"affär, de kostar bara 5 exp!"
+
+#: cogs/shop.py:229
+msgid ":champagne: You already have a silencer on your weapon"
+msgstr ":champagne: Du har redan en ljuddämpare på ditt vapen"
+
+#: cogs/shop.py:253
+msgid ""
+":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
+"{exp} more exp points for each killed duck for the next day."
+msgstr ""
+":money_with_wings: Du köpte en färsk fyrklöver som ger dig {exp} fler "
+"erfaranhetspoäng för varje dödad anka nästa dag."
+
+#: cogs/shop.py:257
+msgid ":champagne: You already have 4-leaf clover on your weapon"
+msgstr ":champagne: Du har redan fyrklöver på ditt vapen"
+
+#: cogs/shop.py:273
+msgid ""
+":money_with_wings: You bought a pair of sunglasses for 5 exp! You now won't "
+"be dazzled for a day."
+msgstr ""
+":money_with_wings: Du köpte ett par solglasögon för 5 exp! Du blir nu inte "
+"bländad på en dag."
+
+#: cogs/shop.py:277
+msgid ""
+":money_with_wings: You bought brand new sunglasses, the only point of it "
+"being that you're much swagger now. :cool:"
+msgstr ""
+":money_with_wings: Du köpte helt nya solglasögon, den enda poängen med det "
+"är att du är väldigt cool nu. :cool:"
+
+#: cogs/shop.py:278
+msgid ""
+"Don't buy sunglasses if you still have some! This doesn't extend the time "
+"you won't be dazzled, but still costs you some exp"
+msgstr ""
+"Köp inte solglasögon om du fortfarande har några! Detta förlänger inte tiden "
+"du inte blir bländad, men kostar fortfarande en del exp"
+
+#: cogs/shop.py:292
+msgid ":money_with_wings: You're wearing new dry clothes. You look fantastic!"
+msgstr ":money_with_wings: Du bär nya torra kläder. Du ser fantastisk ut!"
+
+#: cogs/shop.py:296
+msgid ""
+":money_with_wings: You bought brand new clothes, the only point of it being "
+"that you're much swagger now. :cool:"
+msgstr ""
+":money_with_wings: Du köpte helt nya kläder, den enda poängen med det är att "
+"du är väldigt vacker nu. :cool:"
+
+#: cogs/shop.py:297
+msgid ""
+"Don't buy dry clothes if you aren't wet! They won't do anything, but will "
+"still cost you exp"
+msgstr ""
+"Köp inte torra kläder om du inte är våt! De kommer inte att göra någonting, "
+"men kommer fortfarande att kosta dig exp"
+
+#: cogs/shop.py:311
+msgid ""
+":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, "
+"or if your weapon was sabotaged, it's fixed now!"
+msgstr ""
+":money_with_wings: Du städade ditt vapen för 6 exp. Om du hade sand i det, "
+"eller om ditt vapen saboterades är det fixat nu!"
+
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr ""
+"Nästa gång någon saboterar dig, skjut bara. Det kommer inte att göra mycket "
+"skada förutom att skada ditt rykte"
+
+#: cogs/shop.py:325
+msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
+msgstr ""
+":x: Aldrig i livet! {mention} har solglasögon! De är immuniserade mot detta!"
+
+#: cogs/shop.py:326
+msgid ""
+"That bad move still took 5 exp from your account, due to you having to buy a "
+"mirror"
+msgstr ""
+"Den dåliga rörelsen tog fortfarande 5 exp från ditt konto, på grund av att "
+"du var tvungen att köpa en spegel"
+
+#: cogs/shop.py:331
+msgid ""
+":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
+"accuracy!"
+msgstr ""
+":money_with_wings: Du bländade {mention}! Deras nästa skott förlorar 50% "
+"träffsäkerhet!"
+
+#: cogs/shop.py:332
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you?"
+msgstr ""
+"Namnet är här med avsikt. Du skulle inte göra det bakom deras rygg, eller "
+"hur?"
+
+#: cogs/shop.py:346
+msgid ":champagne: You threw sand in {mention}'s weapon!"
+msgstr ":champagne: Du kastade sand i {mention}'s vapen!"
+
+#: cogs/shop.py:347
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr ""
+"Namnet är här med avsikt. Du skulle inte göra det bakom deras rygg, eller "
+"hur?"
+
+#: cogs/shop.py:360
+msgid ""
+":money_with_wings: You dropped a bucket full of water on {target}, forcing "
+"them to wait 1 hour for their clothes to dry before they can return hunting."
+msgstr ""
+":money_with_wings: Du tappade en hink full med vatten på {target} och "
+"tvingade dem att vänta 1 timme på att deras kläder skulle torka innan de kan "
+"återvända till jakt."
+
+#: cogs/shop.py:379
+msgid ""
+":money_with_wings: You dropped a **SPECIAL** bucket full of water on "
+"{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
+"they can return hunting."
+msgstr ""
+":money_with_wings: Du tappade en **SPECIAL** hink full med vatten på "
+"{target} och tvingade dem att vänta 2 timmar (!) på att deras kläder skulle "
+"torka innan de kan återvända till jakt."
+
+#: cogs/shop.py:393
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "Du skulle inte sabotera dig själv, eller hur?"
+
+#: cogs/shop.py:399
+msgid ""
+":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
+msgstr ""
+":ok: {target}'s vapen är nu saboterat ... men de vet inte det (14 exp)!"
+
+#: cogs/shop.py:402
+msgid ""
+"Don't use a mention for this. You can give me user ids or the full username "
+"in \"quotes\""
+msgstr ""
+"Använd inte ett namn för detta. Du kan ge mig användar-id eller fullt "
+"användarnamn i ett \"citat\""
+
+#: cogs/shop.py:406
+msgid ":ok: {target}'s weapon is already sabotaged!"
+msgstr ":ok: {target}'s vapen är redan saboterat!"
+
+#: cogs/shop.py:411 cogs/shop.py:524
+msgid ""
+"If you ask a server admin to give me the `manage_message` permission, I will "
+"be able to delete that kind of shop commands ;)"
+msgstr ""
+"Om du ber en serveradministratör att ge mig behörigheten \"manage_message\" "
+"kommer jag att kunna ta bort den typen av butikskommandon ;)"
+
+#: cogs/shop.py:428
+msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
+msgstr ""
+":money_with_wings: Du köpte en livförsäkring för en vecka för 10 "
+"erfarenhetspoäng."
+
+#: cogs/shop.py:429
+msgid "If you get killed, you'll earn half the level of the killer in exp."
+msgstr "Om du dödas, tjänar du halva nivån på mördaren i erfarenhetspoäng."
+
+#: cogs/shop.py:432
+msgid ":champagne: You're already insured."
+msgstr ":champagne: Du är redan försäkrad."
+
+#: cogs/shop.py:469
+msgid ""
+":money_with_wings: Ducks are resting right now, so your decoy probably "
+"didn't work..."
+msgstr ""
+":money_with_wings: Ankor vilar just nu, så din lockelse fungerade "
+"förmodligen inte..."
+
+#: cogs/shop.py:473
+msgid ""
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to {mention}'s decoy. They bought it for 8 exp!"
+msgstr ""
+":money_with_wings: En anka kommer att dyka upp under de kommande tio "
+"minuterna på kanalen, tack vare {mention}'s lokka. De köpte den för 8 exp!"
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ""
+":money_with_wings: Du lägger lite bröd på kanalen för att locka ankor."
+
+#: cogs/shop.py:505
+msgid ""
+":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
+msgstr ""
+":money_with_wings: Bröd kan staplas! Köp lite mer för att maximera "
+"effekterna!"
+
+#: cogs/shop.py:529
+msgid ""
+":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
+"It's wrong, but so funny!"
+msgstr ""
+":money_with_wings: Du förberedde en mekanisk anka på kanalen för 40 exp. Det "
+"är fel, men så roligt!"
 
 #: cogs/user_commands.py:72 cogs/user_commands.py:159
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
+#: cogs/user_commands.py:78
+msgid "You unjammed your weapon."
+msgstr "Du har avblockerat ditt vapen."
+
+#: cogs/user_commands.py:92
+msgid "You reloaded your weapon."
+msgstr "Du laddade om ditt vapen."
+
+#: cogs/user_commands.py:94
+msgid "You don't have any ammo left!"
+msgstr "Du har ingen ammunition kvar!"
+
+#: cogs/user_commands.py:97
+msgid "You don't need to reload your weapon."
+msgstr "Du behöver inte ladda om ditt vapen."
+
+#: cogs/user_commands.py:100
+msgid ""
+"{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
+"{chargeurs_actuels}/{chargeurs_max}"
+msgstr ""
+"{greet} | Ammunition i vapen: {balles_actuelles} / {balles_max} | Magasin "
+"kvar: {chargeurs_actuels}/{chargeurs_max}"
+
 #: cogs/user_commands.py:149
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
-"Dina kläder är helt dyngsura, det går inte att jaga ännu! Du får vänta "
-"{temps_restant} minuter innnan du kan gå och jaga igen."
+"Dina kläder är blöta, det går inte att jaga ännu! Du får vänta "
+"{temps_restant} minuter."
 
 #: cogs/user_commands.py:168
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
@@ -161,7 +971,15 @@ msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 #: cogs/user_commands.py:178
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
-"Ditt vapen har varit saboterad, tacka {assaillant} för denna dåliga skämt."
+"Ditt vapen har varit saboterad, tacka {assaillant} för detta dåliga skämt."
+
+#: cogs/user_commands.py:191
+msgid ""
+"** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
+msgstr ""
+"**MAGASIN SLUT** | Ammunition i vapnet: {balles_actuelles} / {balles_max} | "
+"Återstående magasin: {chargeurs_actuels} / {chargeurs_max}"
 
 #: cogs/user_commands.py:225
 msgid "Your weapon just jammed, reload it to unjam it."
@@ -183,9 +1001,58 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
+#: cogs/user_commands.py:375
+msgid ""
+"**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
+"turn your weapon a little before shooting the next time? [missed: -1 xp] "
+"[hunting accident: -2 xp] [**weapon confiscated**]"
+msgstr ""
+"**BANG** Du missade ankan... och sköt **dig själv**! Du kanske borde vända "
+"ditt vapen lite innan du skjuter nästa gång? [missat: -1 xp] [jaktolycka: -2 "
+"xp] [**vapen konfiskerat**]"
+
+#: cogs/user_commands.py:382
+msgid ""
+"**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
+"accident: -2 xp] [**weapon confiscated**]"
+msgstr ""
+"**BANG** Du missade ankan... och sköt {spelare}! [missat: -1 xp] [jaktolycka:"
+" -2 xp] [**vapen konfiskerat**]"
+
+#: cogs/user_commands.py:391
+msgid ""
+"You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
+"get it back for free (check when with `!freetime`)"
+msgstr ""
+"Du kan köpa ditt vapen tillbaka i butiken (`dh!shop 5`) eller vänta tills du "
+"får tillbaka det gratis (kontrollera när med`dh!freetime`)"
+
 #: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
+
+#: cogs/user_commands.py:431
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr ""
+"Du kramade {mention} så starkt som du kunde. De är fyllda med beslutsamhet."
+
+#: cogs/user_commands.py:444
+msgid "You hugged a tree, Wizzz?!"
+msgstr "Du kramade ett träd, Konstigt?!"
+
+#: cogs/user_commands.py:447
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Det finns ingen anka här, vad tänkte du krama, ett träd?"
+
+#: cogs/user_commands.py:463
+msgid "**Current event**"
+msgstr "**Nuvarande händelse**"
+
+#: cogs/helpers/config.py:67
+msgid "*cries*"
+msgstr "*gråter*"
 
 #: cogs/helpers/config.py:67
 msgid "Hello world"
@@ -193,11 +1060,273 @@ msgstr "Hej världen"
 
 #: cogs/helpers/config.py:67
 msgid "How are you today?"
-msgstr "Hur mår du idag ?"
+msgstr "Hur mår du idag?"
+
+#: cogs/helpers/config.py:67
+msgid "Please don't kill me..."
+msgstr "Snälla döda mig inte..."
+
+#: cogs/helpers/config.py:67
+msgid "I love you too!"
+msgstr "Jag älskar dig också!"
+
+#: cogs/helpers/config.py:67
+msgid "Don't shoot me! I'm a fake duck!"
+msgstr "Skjut inte mig! Jag är en falsk anka!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr "**Ank fakta**: Vissa ankor kan flyga upp till 534km på en enda dag!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Ank fakta**: Fjädrarna på en ankas rygg är vattentäta."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Ank fakta**: Ankor har tre ögonlock!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"**Andfakta**: Beroende på ank arten kan en anka leva mellan 2 och 12 år. "
+"Inte ankorna på det här spelet dock..."
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Jag är osynlig, strunta i att döda mig"
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Vem är den lilla ██████ här som dödade min vän?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Du kan inte sikta för 10 öre..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Ankan lämnade."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Ankan stack."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "SLUTA! Det är inte vad du tror!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Att döda mig kommer att kosta 1562 erfarenhetspoäng."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Jag har en hemlig plan för att döda alla jägare men jag är redan anfådd, jag "
+"tror inte att jag kommer att kunna förklara allt för dig innan..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[LÄGG IN ANK LJUD HÄR]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Det är kaninsäsong."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Har du en extra mantel?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "Vilken sida av en anka har fler fjädrar? Utsidan."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Jag stjäl pengar. Jag kommer stjäla dina erfarenhetspoäng!"
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Jag är en väldigt speciell anka."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**DuckHunt ProTip®**: använd klöver för att få mer erfarenhetspoäng."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: använd sikten för att förbättra din träffsäkerhet på "
+"lägre nivåer."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr "**DuckHunt ProTip®**: använd fett för att förhindra vapenstopp"
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Sörpla*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Förhoppningsvis är ni alla AFK..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: använd infraröda detektorer för att förhindra "
+"värdelösa skott."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Jag gör bara mitt jobb..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Hej där, DuckHunt kvalitetsförsäkring anka här. Hur skulle du betygsätta din "
+"upplevelse med att döda ankor hittills?"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "dU HaR BlIvIT KoRrUpterAD"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan gick bort. · ° '\\`' ° -.., ¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan gick till en annan värld. · ° '\\`' ° -.., ¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:77
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan hade inte tid för detta. · ° '\\`' ° -.., ¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan lämnade. · ° '\\`' ° -.., ¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:78
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan försvann i tid och rum. · ° '\\`' ° -.., ¸¸ · °' \\ `"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan lämnade tristess. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:79
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan vill inte bli snipad. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:79
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan gick upp till lemonadståndet. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"Ankan flög över ett oproportionerligt litet gap. · ° '\\'' ° -.., ¸¸ · °' \\ "
+"'"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Ankan blev för skrämd. · ° '\\'' ° -.., ¸¸ · °' \\ '"
+
+#: cogs/helpers/config.py:83
+msgid "a stuffed duck."
+msgstr "en fylld anka."
+
+#: cogs/helpers/config.py:83
+msgid "a rubber ducky."
+msgstr "en gummi anka."
+
+#: cogs/helpers/config.py:83
+msgid "a vibrating duck."
+msgstr "en vibrerande anka."
+
+#: cogs/helpers/config.py:83
+msgid "a pile of feathers."
+msgstr "en hög med fjädrar."
+
+#: cogs/helpers/config.py:83
+msgid "a chewed chewing gum."
+msgstr "ett tuggat tuggummi."
+
+#: cogs/helpers/config.py:84
+msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
+msgstr "en broschyr från KMKMA (Koalition mot Kommittén mot Ankor)."
 
 #: cogs/helpers/config.py:84
 msgid "an old shoe."
 msgstr "En gammal sko"
+
+#: cogs/helpers/config.py:84
+msgid "a spring thingy."
+msgstr "en fjäder sak."
+
+#: cogs/helpers/config.py:84
+msgid "cow dung."
+msgstr "kogödsel."
+
+#: cogs/helpers/config.py:84
+msgid "dog poop."
+msgstr "hundbajs."
+
+#: cogs/helpers/config.py:85
+msgid "an expired hunting license."
+msgstr "ett ogiltigt jaktlicens."
+
+#: cogs/helpers/config.py:85
+msgid "a cartridge."
+msgstr "en patron."
+
+#: cogs/helpers/config.py:85
+msgid "a cigarette butt."
+msgstr "en cigarett-rumpa."
+
+#: cogs/helpers/config.py:85
+msgid "a used condom."
+msgstr "en använd kondom."
+
+#: cogs/helpers/config.py:85
+msgid "a broken sight."
+msgstr "ett trasigt sikte."
+
+#: cogs/helpers/config.py:85
+msgid "a broken infrared detector."
+msgstr "en trasig infraröd detektor."
+
+#: cogs/helpers/config.py:85
+msgid "a bent silencer."
+msgstr "en böjd ljuddämpare."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of AP ammo."
+msgstr "en tom låda med AP-ammunition."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of explosive ammo."
+msgstr "en tom låda med explosiv ammunition."
+
+#: cogs/helpers/config.py:86
+msgid "a four-leaf clover with only 3 left."
+msgstr "en fyrklöver med endast 3 löv kvar."
+
+#: cogs/helpers/config.py:86
+msgid "a broken decoy."
+msgstr "ett trasigt lokk."
+
+#: cogs/helpers/config.py:86
+msgid "a broken mirror."
+msgstr "en trasig spegel."
 
 #: cogs/helpers/config.py:87
 msgid "a rusty mechanical duck."
@@ -211,17 +1340,61 @@ msgstr "Ett par glasögon utan linser."
 msgid "Donald's beret."
 msgstr "Donald's basker"
 
+#: cogs/helpers/config.py:87
+msgid "a half-melted peppermint."
+msgstr "en halvsmält pepparmynta."
+
+#: cogs/helpers/config.py:87
+msgid "a box of Abraxo cleaner."
+msgstr "en låda med Abraxo-rengöringsmedel."
+
+#: cogs/helpers/config.py:88
+msgid "a gun with banana peeled barrel."
+msgstr "en pistol med bananskalad gevärspipa."
+
 #: cogs/helpers/config.py:88
 msgid "an old hunting knife."
 msgstr "En gammal jaktkniv."
 
+#: cogs/helpers/config.py:88
+msgid "an old video recording: http://tinyurl.com/zbejktu"
+msgstr "en gammal videoinspelning: http://tinyurl.com/zbejktu"
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
+msgstr "ett gammalt jaktfoto: http://tinyurl.com/hmn4r88"
+
+#: cogs/helpers/config.py:89
+msgid "an old postcard: http://tinyurl.com/hbnkpzr"
+msgstr "ett gammalt vykort: http://tinyurl.com/hbnkpzr"
+
+#: cogs/helpers/config.py:89
+msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
+msgstr "ett gyllene anka foto: http://tinyurl.com/hle8fjf"
+
+#: cogs/helpers/config.py:89
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "en jägarnål: http://tinyurl.com/hqy7fhq"
+
 #: cogs/helpers/config.py:89
 msgid "bushes."
-msgstr "Buskar."
+msgstr "buskar."
+
+#: cogs/helpers/config.py:90
+msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
+msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
 #: cogs/helpers/config.py:90
 msgid "a fish."
 msgstr "en fisk"
+
+#: cogs/helpers/config.py:90
+msgid "even more bushes."
+msgstr "ännu fler buskar."
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Är din hand större än ditt ansikte?"
 
 #: cogs/helpers/config.py:203
 msgid "Everything is calm"
@@ -237,11 +1410,19 @@ msgstr "Ankor migrerar"
 
 #: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
-msgstr "Förbred för att se många ankor i nästa timme."
+msgstr "Förbered dig för att se många ankor i nästa timme."
 
 #: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "Dimmigt väder"
+
+#: cogs/helpers/config.py:205
+msgid ""
+"It's harder to see killed ducks. You'll need a few more seconds to know if "
+"you missed or not."
+msgstr ""
+"Det är svårare att se dödade ankor. Du behöver några sekunder till för att "
+"veta om du missade eller inte."
 
 #: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
@@ -253,9 +1434,57 @@ msgid ""
 "you'll see a lot more super ducks. But, be careful, and don't drink that "
 "water."
 msgstr ""
-"En bolag som tar hand om medicinsk avfall har släppt ut steroider i sjön. "
+"Et bolag som tar hand om medicinsk avfall har släppt ut steroider i sjön. "
 "Ankorna har muterat, och du kommer att se mycket mer superankor, var "
 "försiktig ock drick inte vattnet!"
+
+#: cogs/helpers/config.py:207
+msgid "Safety class canceled"
+msgstr "Säkerhetsklass avbruten"
+
+#: cogs/helpers/config.py:207
+msgid "The safety class was canceled, beware not to shoot others hunters!"
+msgstr "Säkerhetsklassen avbröts, se upp för att inte skjuta andra jägare!"
+
+#: cogs/helpers/config.py:208
+msgid "Connection problems"
+msgstr "Anslutningsproblem"
+
+#: cogs/helpers/config.py:208
+msgid ""
+"Ducks cant find your computer due to connection problems, and there will be "
+"less of them until it's repaired"
+msgstr ""
+"Ankor kan inte hitta din dator på grund av anslutningsproblem, och det "
+"kommer att finnas mindre av dem tills den har reparerats"
+
+#: cogs/helpers/config.py:209
+msgid "A new florist in town"
+msgstr "En ny blomsterhandlare i stan"
+
+#: cogs/helpers/config.py:209
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them out!"
+msgstr ""
+"En blomsterhandlare öppnade i stan, och du kan nu hitta bättre 4-klöver. Gå "
+"kolla in dem!"
+
+#: cogs/helpers/config.py:210
+msgid "Mega-ducks"
+msgstr "Mega-ankor"
+
+#: cogs/helpers/config.py:210
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Någon blåste upp en super anka, och nu är de ÄNNU STÖRRE!!"
+
+#: cogs/helpers/config.py:211
+msgid "Windy weather"
+msgstr "Blåsigt väder"
+
+#: cogs/helpers/config.py:211
+msgid "Bullets are deflected by some strong wind"
+msgstr "Kulor avböjs av en stark vind"
 
 #: cogs/helpers/config.py:218
 msgid "public danger"
@@ -275,7 +1504,7 @@ msgstr "Praktikant"
 
 #: cogs/helpers/config.py:222
 msgid "duck misser"
-msgstr "Anka missare"
+msgstr "Ank missare"
 
 #: cogs/helpers/config.py:223
 msgid "member of the Comitee Against Ducks"
@@ -283,7 +1512,7 @@ msgstr "Medlem av Kommittén mot Ankor"
 
 #: cogs/helpers/config.py:224
 msgid "duck hater"
-msgstr "Anka hatare"
+msgstr "Ank hatare"
 
 #: cogs/helpers/config.py:225
 msgid "duck pest"
@@ -291,19 +1520,107 @@ msgstr "Ankpest"
 
 #: cogs/helpers/config.py:226
 msgid "duck hassler"
-msgstr "Anka hasslare"
+msgstr "Ankhasslare"
+
+#: cogs/helpers/config.py:227
+msgid "duck plucker"
+msgstr "ankplockare"
 
 #: cogs/helpers/config.py:228
 msgid "hunter"
 msgstr "Jägare"
 
+#: cogs/helpers/config.py:229
+msgid "duck inside out turner"
+msgstr "ank-ut-och-in-vändare"
+
+#: cogs/helpers/config.py:230
+msgid "duck clobber"
+msgstr "ankklöver"
+
+#: cogs/helpers/config.py:231
+msgid "duck chewer"
+msgstr "anktuggare"
+
 #: cogs/helpers/config.py:232
 msgid "duck eater"
 msgstr "Ankätare"
 
+#: cogs/helpers/config.py:233
+msgid "duck flattener"
+msgstr "ankplattare"
+
+#: cogs/helpers/config.py:234
+msgid "duck disassembler"
+msgstr "isärankplockaren"
+
+#: cogs/helpers/config.py:235
+msgid "duck demolisher"
+msgstr "ankförstörare"
+
 #: cogs/helpers/config.py:236
 msgid "duck killer"
 msgstr "Ankmördare"
+
+#: cogs/helpers/config.py:237
+msgid "duck skinner"
+msgstr "ankflåaren"
+
+#: cogs/helpers/config.py:238
+msgid "duck predator"
+msgstr "ankrovdjur"
+
+#: cogs/helpers/config.py:239
+msgid "duck chopper"
+msgstr "ankplockare"
+
+#: cogs/helpers/config.py:240
+msgid "duck decorticator"
+msgstr "ankdekortikator"
+
+#: cogs/helpers/config.py:241
+msgid "duck fragger"
+msgstr "ankgranataren"
+
+#: cogs/helpers/config.py:242
+msgid "duck shatterer"
+msgstr "ankkrossare"
+
+#: cogs/helpers/config.py:243
+msgid "duck smasher"
+msgstr "anksmällare"
+
+#: cogs/helpers/config.py:244
+msgid "duck breaker"
+msgstr "ankförstörare"
+
+#: cogs/helpers/config.py:245
+msgid "duck wrecker"
+msgstr "ankförstörare"
+
+#: cogs/helpers/config.py:246
+msgid "duck impaler"
+msgstr "ankspetsare"
+
+#: cogs/helpers/config.py:247
+msgid "duck eviscerator"
+msgstr "ankeviskerator"
+
+#: cogs/helpers/config.py:248
+msgid "ducks terror"
+msgstr "ankterror"
+
+#: cogs/helpers/config.py:249
+msgid "duck exploder"
+msgstr "anksprängare"
+
+#: cogs/helpers/config.py:250
+msgid "duck destructor"
+msgstr "ankförstörare"
+
+#: cogs/helpers/config.py:251
+msgid "duck blaster"
+msgstr "ankskjutare"
 
 #: cogs/helpers/config.py:252
 msgid "duck pulverizer"
@@ -312,6 +1629,10 @@ msgstr "Ankpulverisör"
 #: cogs/helpers/config.py:253
 msgid "duck disintegrator"
 msgstr "Ankdisintegratör"
+
+#: cogs/helpers/config.py:254
+msgid "duck atomizer"
+msgstr "ankatomiserare"
 
 #: cogs/helpers/config.py:255
 msgid "duck annihilator"
@@ -325,17 +1646,50 @@ msgstr "Seriemördare av ankor"
 msgid "duck genocider"
 msgstr "Anka massmördare"
 
+#: cogs/helpers/config.py:258
+msgid "old noob"
+msgstr "gammal nybörjare"
+
+#: cogs/helpers/config.py:259
+msgid "duck toaster"
+msgstr "ankrostare"
+
+#: cogs/helpers/config.py:260
+msgid "unemployed due to extinction of the duck species"
+msgstr "arbetslös på grund av utrotning av ankarter"
+
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+msgid "Level of {player} on #{channel}"
+msgstr "Nivå på {player} i #{channel}"
+
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+msgid "You leveled down!"
+msgstr "Du gick ner en nivå!"
+
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+msgid "You leveled up!"
+msgstr "Du gick upp en nivå!"
+
 #: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+msgid "nom"
+msgstr "nom"
+
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+msgid "Previous level"
+msgstr "Föregående nivå"
+
 #: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
 msgid "Shots accuracy"
-msgstr "Träffsäkerhet av skott"
+msgstr "Skott träffsäkerhet"
 
 #: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
 msgid "Weapon reliability"
-msgstr "Trovärdighet av vapen"
+msgstr "Vapen trovärdighet"
 
 #: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
 msgid "Exp points"
@@ -349,11 +1703,52 @@ msgstr ""
 ":warning: Ett fel uppstod när du skickade inbäddningen, kolla om boten har "
 "`embed_links` tillåtelsen och försök igen!"
 
+#: cogs/helpers/ducks.py:36
+msgid "Nothing"
+msgstr "Ingenting"
+
+#: cogs/helpers/ducks.py:40
+msgid "a lot of bushes."
+msgstr "Många buskar."
+
+#: cogs/helpers/ducks.py:43
+msgid "a duck pin."
+msgstr "en ank nål."
+
+#: cogs/helpers/ducks.py:47
+msgid "a bullet"
+msgstr "en kula"
+
+#: cogs/helpers/ducks.py:59
+msgid "a full magazine"
+msgstr "ett helt magasin"
+
+#: cogs/helpers/ducks.py:71
+msgid "a box of explosive ammo"
+msgstr "en låda med explosiv ammunition"
+
+#: cogs/helpers/ducks.py:84
+msgid "an almost empty box of explosive ammo"
+msgstr "en nästan tom låda med explosiv ammunition"
+
+#: cogs/helpers/ducks.py:98
+msgid "some duck-grease"
+msgstr "lite ankfett"
+
+#: cogs/helpers/ducks.py:107
+msgid "a full-featured silencer"
+msgstr "en fullständig ljuddämpare"
+
+#: cogs/helpers/ducks.py:116
+msgid "a fully functional infrared detector"
+msgstr "en helt funktionell infraröd detektor"
+
 #: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
 "xp]"
-msgstr "**FLAPP** Skrämd av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
+msgstr ""
+"**FLAPP** Skrämd så mycket av ljuden, ankan flydde! GRATTIS!! [Miss: -1 xp]"
 
 #: cogs/helpers/ducks.py:244
 msgid "BPAM"
@@ -371,9 +1766,117 @@ msgstr "BOOM"
 msgid "SPROTCH"
 msgstr "SPROTCH"
 
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
+msgid "Searching the bushes around the duck, you found..."
+msgstr "i buskarna runt ankan hittade du..."
+
+#: cogs/helpers/ducks.py:307
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "som du tyvärr inte kunde ta, för din ryggsäck är full."
+
 #: cogs/helpers/ducks.py:342
 msgid ""
 "That was close, you almost killed the duck, but the other hunter got it "
 "first! [missed: -1 xp]"
 msgstr ""
-"Det var nära, du dödade nästan ankan, men andra jägaren fick ankan först!"
+"Det var nära, du dödade nästan ankan, men den andra jägaren fick ankan "
+"först!"
+
+#: cogs/helpers/ducks.py:376
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+
+#: cogs/helpers/ducks.py:381
+msgid ""
+":heart: You try to hug the duck, but it knows you killed its brother, so it "
+"fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Du försöker krama ankan, men den vet att du dödade sin bror, så den "
+"flydde från dig och flög tillbaka in i dammen! [- 2 exp]"
+
+#: cogs/helpers/ducks.py:383
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Du försöker krama ankan, men det känns att det är fel på dig, så den "
+"flydde från dig och flög tillbaka in i dammen! [- 2 exp]"
+
+#: cogs/helpers/ducks.py:385
+msgid ""
+":heart: You try to hug the duck, but it saw the weapon you hid behind your "
+"back, so it fled from you and flew back into the pond! [-2 exp]"
+msgstr ""
+":heart: Du försöker krama ankan, men den såg vapnet du gömde bakom ryggen, "
+"så den flydde från dig och flög tillbaka in i dammen! [-2 exp]"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Du dödade ankan på {time} sekunder, du "
+"är nu på en total summa av {total} ankor (varav {supercanards} var super-"
+"ankor) dödade på {channel}. \\ _X <* COUAC * {exp}"
+
+#: cogs/helpers/ducks.py:402
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+":gun: Ankan överlevde, försök igen! *SUPER ANKA DETEKTERAD* [life: - {vie} "
+"({current_life} / {max_life})]"
+
+#: cogs/helpers/ducks.py:404
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
+msgstr ""
+":gun: Ankan överlevde, försök igen!  *SUPER ANKA DETEKTERAD* [life: - {vie}]"
+
+#: cogs/helpers/ducks.py:600
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Du har blivit lurad av {user_mention} att döda en mekanisk anka. Det "
+"fungerar uppenbarligen inte, och du tappade 1 exp för detta missade skott"
+
+#: cogs/helpers/ducks.py:650
+msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"Bebis ankan lämnade för att ta en liten tupplur någonstans · ° '\\ `' ° -., "
+"¸¸. · ° '\\`"
+
+#: cogs/helpers/ducks.py:670
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
+"seconds, and you shouldn't have done this! You'll lose some exp, because you "
+"shouldn't kill babies\\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Du dödade babysanden på {time} "
+"sekunder, och du borde inte ha gjort det! Du tappar lite exp, för du bör "
+"inte döda bebisar \\ _X <* COUAC * {exp}"
+
+#: cogs/helpers/ducks.py:686
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451> **SMACK** Du kramade babyandan, och nu är "
+"den riktigt glad! [3 exp] \n"
+"Barn ankan lämnade, medan den känner sig älskad"
+
+#: cogs/helpers/ducks.py:710
+msgid "**I AM...** Your mother"
+msgstr "**JAG ÄR...** Din mamma"
+
+#: cogs/helpers/ducks.py:718
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
+"you won't kill my children! \\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Du dödade mig på {time} sekunder, men "
+"du dödar inte mina barn! \\ _X <* COUAC * {exp}"
