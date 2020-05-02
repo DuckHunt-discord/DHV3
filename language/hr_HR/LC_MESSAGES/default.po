@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr "Imaš dovoljno protuoklopne municije!"
 msgid ":champagne: You have enough explosive ammo for now!"
 msgstr "Imaš dovoljno eksplozivne municije!"
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vaše oružje je sabotirano, zahvalite {assaillant} na ovoj lošoj šali."
 
@@ -265,30 +265,30 @@ msgstr "Genocid pataka"
 msgid "old noob"
 msgstr "Stari noob"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "Razina  {player} na {channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Tvoja razina je narasla!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Tvoja razina se smanjila!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Trenutačna razina"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Prethodna razina"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Preciznost"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Bodovi iskustva (exp)"

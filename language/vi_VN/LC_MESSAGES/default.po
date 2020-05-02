@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Thiếu một giá trị bắt buộc"
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Không đủ điểm kinh nghiệm"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Không phải admin của server"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Không phải admin xinh gái nhất server"
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,11 +41,11 @@ msgstr ""
 "Lệnh chỉ dùng cho người sở hữu bot này. Nếu bạn nghĩ đây là lỗi ,liên hệ với "
 "chủ sở hữu tại DuckHunt ( dh!help )"
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr "Lâu rồi chưa bình chọn cho DuckHunt trên DiscordBot nhỉ :P"
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -57,12 +57,12 @@ msgstr ""
 "lỗi, hãy liên hệ chủ sở hữu của con vịt này tại DuckHunt Support Server ( "
 "dh!help )"
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
 "Đang hồi năng lượng, đừng sồn sồn lên chứ :( , thử lại sau {seconds} giây :D"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":ear: Nói nhỏ nè :"
 
@@ -223,16 +223,7 @@ msgid ""
 "uptime."
 msgstr "Vịt đang phải nằm viện. Nhấn F và cầu nguyện :clap: "
 
-#: cogs/meta.py:69
-msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
-"anything, feel free to join the support server at https://discordapp.com/"
-"invite/2BksEkV"
-msgstr ""
-"Học tiếng vịt kêu tại : http://duckhunt.me/command-list/ | Nếu cần giúp đỡ "
-",hãy gia nhập hội chăn vịt tại https://discordapp.com/invite/2BksEkV"
-
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -242,20 +233,20 @@ msgstr ""
 "dụng.\n"
 "Có thể so sánh tại: https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr "Dùng lệnh `dh!freetime` để xem khi nào có thính rơi. "
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
 ":alarm_clock: Nhận lại vũ khí và đạn sau {hours} tiếng và {minutes} phút"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -264,24 +255,9 @@ msgstr ""
 "Nhặt được thùng thính sẽ được nạp thêm băng đạn và cả súng (nếu bị mất), "
 "không ảnh hưởng đến số đạn trong băng đạn hiện tại. Nên nạp đạn trước :gun:"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Đang dùng  {shard} mảnh trong tổng số  {total} mảnh"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"Xem điểm tại : http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Vịt của bạn đang đợi tại : http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -788,27 +764,27 @@ msgid ""
 "It's wrong, but so funny!"
 msgstr ":money_with_wings: Bạn vừa thả một con vịt máy vào với giá 40 exp !"
 
-#: cogs/user_commands.py:72 cogs/user_commands.py:159
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."
 msgstr "Không có vũ khí"
 
-#: cogs/user_commands.py:78
+#: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
 msgstr "Bạn đã gỡ kẹt vũ khí"
 
-#: cogs/user_commands.py:92
+#: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
 msgstr "Bạn đã nạp đạn"
 
-#: cogs/user_commands.py:94
+#: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
 msgstr "Hết đạn!"
 
-#: cogs/user_commands.py:97
+#: cogs/user_commands.py:96
 msgid "You don't need to reload your weapon."
 msgstr "Không cần nạp đạn"
 
-#: cogs/user_commands.py:100
+#: cogs/user_commands.py:99
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -816,20 +792,20 @@ msgstr ""
 "{greet} | Đạn trong vũ khí : {balles_actuelles}/{balles_max} | Băng đạn còn "
 "lại: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr "Quần áo đang ướt, không thể đi săn! Hãy đợi {temps_restant} phút"
 
-#: cogs/user_commands.py:168
+#: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Vũ khí bị kẹt, phải nạp lại đạn "
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "Vũ khí của bạn vừa bị phá, cảm ơn thằng {assaillant}"
 
-#: cogs/user_commands.py:191
+#: cogs/user_commands.py:190
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -837,11 +813,11 @@ msgstr ""
 "** HẾT ĐẠN ** | Đạn trong vũ khí: {balles_actuelles} / {balles_max} | Băng "
 "đạn còn lại: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:224
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Vũ khí bị kẹt, nạp đạn để gỡ kẹt"
 
-#: cogs/user_commands.py:252
+#: cogs/user_commands.py:251
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -849,7 +825,7 @@ msgstr ""
 "Không có con vịt nào ở đây, nhưng vũ khí không bắn vì đầu dò hồng ngoại đang "
 "làm việc rất tốt !"
 
-#: cogs/user_commands.py:267
+#: cogs/user_commands.py:266
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -857,7 +833,7 @@ msgstr ""
 "Chính xác thì bạn đang cố bắn cái gì vậy? Không có con vịt nào trong phòng "
 "cả... ( bắn trượt: -1 exp) ( bắn ngu: -1 exp )"
 
-#: cogs/user_commands.py:375
+#: cogs/user_commands.py:374
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -867,7 +843,7 @@ msgstr ""
 "mình... nên quay súng của bạn ngược lại vào lần sau ( bắn trượt: -1 exp) ( "
 "tai nạn nghề nghiệp: -2 exp) + ( súng bị tịch thu )"
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:381
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -876,7 +852,7 @@ msgstr ""
 "{player} ( bắn trượt: -1 exp ) ( tai nạn nghề nghiệp: -2 exp) + ( tịch thu "
 "vũ khí )"
 
-#: cogs/user_commands.py:391
+#: cogs/user_commands.py:390
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -884,25 +860,25 @@ msgstr ""
 "bạn có thể mua vũ khí tại cửa hàng (`dh!shop 5`) hoặc đợi thính rơi ( "
 "`!freetime`)"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Bắn trượt ! ( -1 exp )"
 
-#: cogs/user_commands.py:431
+#: cogs/user_commands.py:430
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
 msgstr "Bạn ôm chặt lấy {mention}. "
 
-#: cogs/user_commands.py:444
+#: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Bạn vừa ôm một cái cây?"
 
-#: cogs/user_commands.py:447
+#: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Không có một con vịt nào ở đây cả, có lẽ nên ôm một cái cây?"
 
-#: cogs/user_commands.py:463
+#: cogs/user_commands.py:462
 msgid "**Current event**"
 msgstr "**EVENT hiện tại**"
 
@@ -1504,44 +1480,44 @@ msgstr "Máy nướng vịt"
 msgid "unemployed due to extinction of the duck species"
 msgstr "Thất nghiệp vì vịt bị tuyệt chủng "
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "Cấp độ của {player} trong khu săn bắn #{channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Bạn vừa bị giáng cấp!!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Bạn vừa lên cấp"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Cấp độ hiện tại"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
 msgid "nom"
 msgstr "Đề cử"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Cấp độ lần trước"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Độ chính xác"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
 msgid "Weapon reliability"
 msgstr "Độ may mắn của vũ khí"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Exp"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"

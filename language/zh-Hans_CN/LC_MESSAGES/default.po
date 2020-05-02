@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x:缺少必需的参数。"
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":X: 你的经验不够完成这个任务"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: 你不是一位管理员"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: 你不是一位超级管理员"
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr "该命令仅供机器人所有者使用。如果您认为这是错误，请与DuckHunt支持服务器上的我的所有者联系（请参阅dh！help）。"
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x:你已经有了一段时间没有在 DiscordBotList 上给 DuckHunt 投票了。"
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -53,11 +53,11 @@ msgstr ""
 "通过在<https：//discordbots.org/bot/"
 "duckhunt>上投票来支持该机器人使用此命令。请注意，Duckhunt可能需要花费一分钟才能完成投票。如果您认为这是错误的，请与DuckHunt支持服务器上的我的所有者联系（请参阅dh！help）。"
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "您正在冷却:(，请在{秒}秒后重试！"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr "：bulb：提示："
 
@@ -201,16 +201,7 @@ msgid ""
 "uptime."
 msgstr "僵尸程序经常重启以进行更新。不用担心，它具有99.8％的正常运行时间。"
 
-#: cogs/meta.py:69
-msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
-"anything, feel free to join the support server at https://discordapp.com/"
-"invite/2BksEkV"
-msgstr ""
-"这是命令列表：http://duckhunt.me/command-list/ |如果您有任何需要，请随时通过https://discordapp."
-"com/invite/2BksEkV加入支持服务器。"
-
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -219,42 +210,28 @@ msgstr ""
 "现在是GMT时区中的“ {小时}：{分钟}：{秒}”（也称为UTC±00：00），这是机器人使用的时区。\n"
 "您可以使用此网站与您的网站进行比较：https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr "您可以使用dh！freetime命令查看何时免费退还武器。"
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
 msgstr "：alarm_clock：下一次交还武器和弹匣的时间为{sec}秒（{hours}小时和{minutes}分钟。）。"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr "赠送会为您的杂志充值，并免费为您送回武器（如果没收），但这不会影响您当前杂志的子弹。如果可以，请事先重新加载！"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "您正在使用{total}个总分片中的{shard}个分片"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr "分数可在线访问http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"您的duckstats正在http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}&pid={player_id}等着您"
 
 #: cogs/setup_wizzard.py:24
 msgid ""

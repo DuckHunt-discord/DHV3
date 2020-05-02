@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: ein notwendiges Argument fehlt"
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Dafür hast nicht genügend Erfahrungs-Punkte"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Du bist kein Server-Administrator"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Du bist kein Super Administrator"
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,13 +42,13 @@ msgstr ""
 "dabei um einen Fehler handelt, dann kontaktiere meinen Besitzer im DuckHunt "
 "Hilfe Server (siehe `dh!help`)."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ""
 ":x: Du hast schon länger nicht mehr Deine Stimme für DuckHunt auf der "
 "DiscordBotList abgegeben."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -62,13 +62,13 @@ msgstr ""
 "wende Dich bitte an meinen Besitzer im DuckHunt Hilfe Server. (siehe "
 "`dh!help`)"
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
 "Du bist noch in der Abklingzeit :( Versuch's einfach nochmal in {seconds} "
 "Sekunden!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: TIPP: "
 
@@ -245,17 +245,7 @@ msgstr ""
 "Der Bot wird häufig für Updates neu gestartet. Aber keine Sorge, er hat ein "
 "Uptime von 99,8%."
 
-#: cogs/meta.py:69
-msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
-"anything, feel free to join the support server at https://discordapp.com/"
-"invite/2BksEkV"
-msgstr ""
-"Hier findest Du die Kommandoliste: http://duckhunt.me/command-list/ | Wenn "
-"Du sonst irgendetwas benötigst, zögere nicht den Support-Server aufzusuchen: "
-"https://discordapp.com/invite/2BksEkV"
-
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -266,7 +256,7 @@ msgstr ""
 "Du kannst diese Webseite benutzen, um die Zeit mit Deiner zu vergleichen: "
 "https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -274,7 +264,7 @@ msgstr ""
 "Du kannst den `dh!freetime` Befehl verwenden, um zu sehen, wann Du Deine "
 "Waffen gratis zurückbekommst"
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
@@ -282,7 +272,7 @@ msgstr ""
 ":alarm_clock: Du erhältst Deine Waffen und Magazine in {sec} Sekunden "
 "({hours} Stunde(n) und {minutes} Minute(n) zurück."
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -292,25 +282,9 @@ msgstr ""
 "(sollte sie konfisziert worden sein), beeinflusst aber nicht die Anzahl der "
 "Patronen in Deinem momentanen Magazin. Wenn möglich, lade immer voher!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Du verwendest Shard Nummer {shard} von insgesamt {total} shards"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"Die Ergebnisse sind jetzt online verfügbar unter http://duckhunt.api-d.com/"
-"web/duckstats.php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Deine Entenstatistik warten hier auf dich http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -961,27 +935,27 @@ msgstr ""
 ":money_with_wings: Du hast für 40 Erfahrungs-Punkte eine mechanische Ente "
 "für diesen Kanal vorbereitet. Das ist gemein, aber lustig!"
 
-#: cogs/user_commands.py:72 cogs/user_commands.py:159
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."
 msgstr "Du hast keine Waffe."
 
-#: cogs/user_commands.py:78
+#: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
 msgstr "Du hast deine Waffe entsperrt."
 
-#: cogs/user_commands.py:92
+#: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
 msgstr "Du hast deine Waffe nachgeladen."
 
-#: cogs/user_commands.py:94
+#: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
 msgstr "Du hast keine Munition mehr!"
 
-#: cogs/user_commands.py:97
+#: cogs/user_commands.py:96
 msgid "You don't need to reload your weapon."
 msgstr "Du musst deine Waffe nicht nachladen."
 
-#: cogs/user_commands.py:100
+#: cogs/user_commands.py:99
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -989,25 +963,25 @@ msgstr ""
 "{greet} | Munition in der Waffe: {balles_actuelles}/{balles_max} | Übrige "
 "Magazine: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Deine Kleidung ist nass, du kannst nicht jagen gehen! Warte {temps_restant} "
 "Minuten darauf, dass deine Kleidung trocknet."
 
-#: cogs/user_commands.py:168
+#: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr ""
 "Deine Waffe hat sich verklemmt, lade nach, um wieder schießen zu können."
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Deine Waffe ist sabotiert, {assaillant} ist für diesen schlechten Scherz "
 "verantwortlich."
 
-#: cogs/user_commands.py:191
+#: cogs/user_commands.py:190
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -1015,11 +989,11 @@ msgstr ""
 "** MAGAZIN LEER ** | Munition in der Waffe: {balles_actuelles} / "
 "{balles_max} | Übrige Magazine: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:224
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Deine Waffe hat sich verklemmt. Lade nach, um sie zu entsperren."
 
-#: cogs/user_commands.py:252
+#: cogs/user_commands.py:251
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -1027,7 +1001,7 @@ msgstr ""
 "Hier ist weit und breit keine Ente, aber dein Gewehr hat nicht geschossen, "
 "weil dein Infrarotdetektor seine Arbeit macht."
 
-#: cogs/user_commands.py:267
+#: cogs/user_commands.py:266
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -1035,7 +1009,7 @@ msgstr ""
 "Zum Glück hast du verfehlt, aber auf was hast du genau gezielt?! Hier ist "
 "weit und breit keine Ente... [verfehlt: -1 xp] [Schuss ins Leere: -1 xp]"
 
-#: cogs/user_commands.py:375
+#: cogs/user_commands.py:374
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -1045,7 +1019,7 @@ msgstr ""
 "Vielleicht solltest Du das nächste Mal besser aufpassen wohin Du Deine Waffe "
 "richtest? [verfehlt: -1 xp] [Jagdunfall: -2 xp] [**Waffe konfisziert**]"
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:381
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1053,7 +1027,7 @@ msgstr ""
 "**BANG** Du hast die Ente verfehlt... und {player} angeschossen! [verfehlt: -"
 "1 xp] [Jagdunfall: -2 xp] [**Waffe konfisziert**]"
 
-#: cogs/user_commands.py:391
+#: cogs/user_commands.py:390
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -1061,11 +1035,11 @@ msgstr ""
 "Du kannst deine Waffe im Laden zurückkaufen (`dh! Shop 5`) oder warten, bis "
 "du sie kostenlos zurückbekommst (check wann mit`!freetime`)"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Du hast die Ente verfehlt! [verfehlt: -1 xp]"
 
-#: cogs/user_commands.py:431
+#: cogs/user_commands.py:430
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
@@ -1073,15 +1047,15 @@ msgstr ""
 "Du hast {mention} so fest umarmt, wie Du konntest. They are filled with "
 "determination."
 
-#: cogs/user_commands.py:444
+#: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Du hast einen Baum umarmt, Wizzz?!"
 
-#: cogs/user_commands.py:447
+#: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Hier ist doch keine Ente! Was wolltest Du denn umarmen, einen Baum?!"
 
-#: cogs/user_commands.py:463
+#: cogs/user_commands.py:462
 msgid "**Current event**"
 msgstr "**Momentanes Event**"
 
@@ -1703,44 +1677,44 @@ msgstr "Enten-Röster"
 msgid "unemployed due to extinction of the duck species"
 msgstr "arbeitslos, auf Grund des Aussterbens der Entenart"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "Level von {player} in #{channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Du bist abgestiegen!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Du bist aufgestiegen!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Aktueller Level"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Vorheriger Level"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Treffergenauigkeit"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
 msgid "Weapon reliability"
 msgstr "Zuverlässigkeit der Waffe"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Erfahrungs-Punkte"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"

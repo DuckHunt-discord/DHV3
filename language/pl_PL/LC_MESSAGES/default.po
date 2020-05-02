@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Brakuje wymaganego argumentu."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: Nie posiadasz wystarczająco doświadczenia."
+msgstr ":x: Nie posiadasz wystarczającej ilości doświadczenia."
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Nie jesteś Adminem Serwera."
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Nie jesteś Super Adminem."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "błąd, skontaktuj się z moim właścicielem na serwerze pomocy technicznej "
 "DuckHunt (patrz „dh!help”)."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Od dawna nie głosowałeś na DuckHunt na DiscordBotList."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -58,11 +58,11 @@ msgstr ""
 "minutę. Jeśli uważasz, że to błąd, skontaktuj się z moim właścicielem na "
 "serwerze pomocy technicznej DuckHunt (patrz „dh!help”)."
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "Musisz ochłonąć! :( Spróbuj ponownie za {seconds} sekund!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: WSKAZÓWKA: "
 
@@ -245,17 +245,35 @@ msgstr ""
 "Bot często restartuje się w celu aktualizacji. Nie martw się, ma 99,8% czasu "
 "uptime."
 
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
 #: cogs/meta.py:69
 msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Kliknij ten link, aby zaprosić mnie na swój serwer: https://docs.duckhunt.me/"
+"bot-administration/admin-quickstart"
+
+#: cogs/meta.py:75
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
 "anything, feel free to join the support server at https://discordapp.com/"
 "invite/2BksEkV"
 msgstr ""
-"Oto lista komend: http://duckhunt.me/command-list/ | Jeśli czegoś "
-"potrzebujesz, możesz dołączyć do serwera Pomocy Technicznej: https://"
+"Jeśli jesteś nowym graczem, przeczytaj to: <https://docs.duckhunt.me/players-"
+"guide/players-quickstart>. W przeciwnym razie, oto lista poleceń gracza "
+"<https://docs.duckhunt.me/players-guide/player-commands> i poleceń admina "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | Jeśli "
+"potrzebujesz czegoś, możesz dołączyć do serwera wsparcia pod adresem https://"
 "discordapp.com/invite/2BksEkV"
 
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -265,7 +283,7 @@ msgstr ""
 "również jako UTC±00:00), która również jest używana przez bota. Możesz użyć "
 "tej strony aby porównać strefy czasowe: https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -273,7 +291,7 @@ msgstr ""
 "Możesz użyć komendy `dh!freetime` aby zobaczyć kiedy dostaniesz swoją broń z "
 "powrotem za darmo"
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
@@ -281,7 +299,7 @@ msgstr ""
 ":alarm_clock: Następny zwrot broni i magazynów za {sec} sekund ({hours} "
 "godzin i {minutes} minut)."
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -291,24 +309,24 @@ msgstr ""
 "zostanie skonfiskowana), ale nie wpływa to na pociski w bieżącym magazynie. "
 "Jeśli możesz, przeładuj wcześniej!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Używasz odłamka numer {shard} z {total} odłamków ogółem."
 
 #: cogs/scores.py:52
 msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
 "{channel_id}"
 msgstr ""
-"Wyniki są dostępne online na stronie http://duckhunt.api-d.com/web/duckstats."
+"Wyniki są dostępne online na stronie: https://duckstats.api-d.com/duckstats."
 "php?cid={channel_id}"
 
 #: cogs/scores.py:259
 msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
+"Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
 msgstr ""
-"Twoje kaczkostaty czekają na Ciebie na stronie http://duckhunt.api-d.com/web/"
+"Twoje kaczko-staty czekają na Ciebie na stronie https://duckstats.api-d.com/"
 "duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
@@ -801,3 +819,808 @@ msgid ""
 msgstr ""
 "Ten zły ruch nadal zabrał 5 expa z twojego konta, ponieważ musiałeś kupić "
 "lustro."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Duck fact** Pióra na grzbiecie kaczki są wodoodporne."
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Duck fact** Kaczki mają trzy powieki!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"**Duck fact** W zależności od gatunku, kaczka może żyć od 2 do 12 lat. Ale..."
+" nie kaczki w tej grze."
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Jestem niewidzialny, nie próbuj mnie zabijać."
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Kto tu jest małym ********, który zabił mojego przyjaciela?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Nie umiesz dobrze celować..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Kaczka odeszła."
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Kaczka na prawo."
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "STOP! To nie jest to, co myślisz!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Zabicie mnie będzie Cię kosztowało 1562 punktów doświadczenia."
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Mam tajny plan zabicia wszystkich myśliwych, ale chyba nie będę w stanie "
+"wyjaśnić Ci tego wszystkiego..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[KWAK]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Jest sezon na króliki."
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "Masz zapasową pelerynę?"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "Która strona kaczki ma więcej piór? Zewnętrzna."
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "Kradnę pieniądze, jestem złodziejską kaczką."
+
+#: cogs/helpers/config.py:71
+msgid "I'm a very special duck."
+msgstr "Jestem bardzo wyjątkową kaczką."
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**DuckHunt ProTip®**: Użyj koniczyny, by zdobyć więcej doświadczenia."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr ""
+"**DuckHunt ProTip®**: Używaj celowników, aby poprawić celność na niższych "
+"poziomach."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr "**DuckHunt ProTip®**: Użyj smaru, aby zapobiec zacinaniu się broni."
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*Siorbanie*"
+
+#: cogs/helpers/config.py:72
+msgid "Hopefully you are all AFK..."
+msgstr "Mam nadzieje, że wszyscy jesteście AFK..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: Stosuj czujniki podczerwieni, aby zapobiec "
+"bezużytecznym strzałom."
+
+#: cogs/helpers/config.py:73
+msgid "I'm just doing my job..."
+msgstr "Ja tylko wykonuję swoją pracę..."
+
+#: cogs/helpers/config.py:73
+msgid ""
+"Hey there, DuckHunt quality insurance duck here. How would you rate your "
+"experience killing ducks so far ?"
+msgstr ""
+"Hejka! Kaczka Ubezpieczeniowa wysokiej jakości tutaj. Jak byś ocenił swoją "
+"satysfakcję z zabijania kaczek do tej pory?"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "ZoStAŁeŚ PrŻeKuPiOnY"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka odeszła. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka odeszła do innego świata. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka nie miała na to czasu. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka odeszła. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka zniknęła w przestrzeni i czasie. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka wyszła z nudów.  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka nie chce zostać zestrzelona. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka podeszła do stoiska z lemoniadą. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr ""
+"Kaczka przeleciała nad nieproporcjonalnie małą szczeliną. ·°'\\`'°-.,¸¸."
+"·°'\\`"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka się wystraszyła. ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:83
+msgid "a stuffed duck."
+msgstr "Wypchana kaczka."
+
+#: cogs/helpers/config.py:83
+msgid "a rubber ducky."
+msgstr "Gumowa kaczka."
+
+#: cogs/helpers/config.py:83
+msgid "a vibrating duck."
+msgstr "Wibrująca kaczka."
+
+#: cogs/helpers/config.py:83
+msgid "a pile of feathers."
+msgstr "Stos piór."
+
+#: cogs/helpers/config.py:83
+msgid "a chewed chewing gum."
+msgstr "Przeżuta guma do żucia."
+
+#: cogs/helpers/config.py:84
+msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
+msgstr "ulotkę od CACAD (Koalicja przeciwko Komitecie przeciwko Kaczkom)."
+
+#: cogs/helpers/config.py:84
+msgid "an old shoe."
+msgstr "Stary but."
+
+#: cogs/helpers/config.py:84
+msgid "a spring thingy."
+msgstr "kawałek sprężyny"
+
+#: cogs/helpers/config.py:84
+msgid "cow dung."
+msgstr "Krowie łajno."
+
+#: cogs/helpers/config.py:84
+msgid "dog poop."
+msgstr "Psia kupa."
+
+#: cogs/helpers/config.py:85
+msgid "an expired hunting license."
+msgstr "Wygasła licencja na polowanie."
+
+#: cogs/helpers/config.py:85
+msgid "a cartridge."
+msgstr "kaseta."
+
+#: cogs/helpers/config.py:85
+msgid "a cigarette butt."
+msgstr "użyty papieros."
+
+#: cogs/helpers/config.py:85
+msgid "a used condom."
+msgstr "zużyta prezerwatywa."
+
+#: cogs/helpers/config.py:85
+msgid "a broken sight."
+msgstr "zepsuty celownik."
+
+#: cogs/helpers/config.py:85
+msgid "a broken infrared detector."
+msgstr "zepsuty detektor podczerwieni."
+
+#: cogs/helpers/config.py:85
+msgid "a bent silencer."
+msgstr "wygięty tłumik."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of AP ammo."
+msgstr "puste pudełko z amunicją AP."
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of explosive ammo."
+msgstr "puste pudełko z amunicją wybuchową."
+
+#: cogs/helpers/config.py:86
+msgid "a four-leaf clover with only 3 left."
+msgstr "czterolistna koniczyna, na której pozostały tylko 3 liście."
+
+#: cogs/helpers/config.py:86
+msgid "a broken decoy."
+msgstr "zepsuta przynętą."
+
+#: cogs/helpers/config.py:86
+msgid "a broken mirror."
+msgstr "rozbite lustro."
+
+#: cogs/helpers/config.py:87
+msgid "a rusty mechanical duck."
+msgstr "zardzewiałą mechaniczna kaczka."
+
+#: cogs/helpers/config.py:87
+msgid "a pair of sunglasses without glasses."
+msgstr "parę okularów słonecznych bez szkiełek."
+
+#: cogs/helpers/config.py:87
+msgid "Donald's beret."
+msgstr "Beret Donalda."
+
+#: cogs/helpers/config.py:87
+msgid "a half-melted peppermint."
+msgstr "roztopiona miętówka."
+
+#: cogs/helpers/config.py:87
+msgid "a box of Abraxo cleaner."
+msgstr "Pudełko z  "
+
+#: cogs/helpers/config.py:88
+msgid "a gun with banana peeled barrel."
+msgstr "pistolet z lufą obraną z bananów."
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting knife."
+msgstr "stary nóż myśliwski."
+
+#: cogs/helpers/config.py:88
+msgid "an old video recording: http://tinyurl.com/zbejktu"
+msgstr "stare nagranie wideo: http://tinyurl.com/zbejktu"
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
+msgstr "stare zdjęcie z polowania: http://tinyurl.com/hmn4r88"
+
+#: cogs/helpers/config.py:89
+msgid "an old postcard: http://tinyurl.com/hbnkpzr"
+msgstr "stara pocztówka: http://tinyurl.com/hbnkpzr"
+
+#: cogs/helpers/config.py:89
+msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
+msgstr "zdjęcie złotej kaczki: http://tinyurl.com/hle8fjf"
+
+#: cogs/helpers/config.py:89
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "szpilka myśliwska: http://tinyurl.com/hqy7fhq"
+
+#: cogs/helpers/config.py:89
+msgid "bushes."
+msgstr "krzaki."
+
+#: cogs/helpers/config.py:90
+msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
+msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
+
+#: cogs/helpers/config.py:90
+msgid "a fish."
+msgstr "ryba."
+
+#: cogs/helpers/config.py:90
+msgid "even more bushes."
+msgstr "jeszcze więcej krzaków."
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "Czy twoja ręka jest większa od twarzy?"
+
+#: cogs/helpers/config.py:203
+msgid "Everything is calm"
+msgstr "Wszystko jest spokojne"
+
+#: cogs/helpers/config.py:203
+msgid "Nothing is happening right now."
+msgstr "W tej chwili nic się nie dzieje."
+
+#: cogs/helpers/config.py:204
+msgid "Ducks are migrating"
+msgstr "Kaczki migrują"
+
+#: cogs/helpers/config.py:204
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Przygotuj się na większą liczbę kaczek w ciągu najbliższej godziny."
+
+#: cogs/helpers/config.py:205
+msgid "Foggy weather"
+msgstr "Mglista pogoda"
+
+#: cogs/helpers/config.py:205
+msgid ""
+"It's harder to see killed ducks. You'll need a few more seconds to know if "
+"you missed or not."
+msgstr ""
+"Trudniej jest zobaczyć zabite kaczki. Będziesz potrzebował jeszcze kilka "
+"sekund, żeby wiedzieć, czy przegapiłeś, czy nie."
+
+#: cogs/helpers/config.py:206
+msgid "Steroids in the lake"
+msgstr "Sterydy w jeziorze"
+
+#: cogs/helpers/config.py:206
+msgid ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+msgstr ""
+"Firma zajmująca się odpadami medycznymi wrzuciła sterydy do jeziora. Kaczki "
+"zmutowały, a ty zobaczysz dużo więcej super kaczek. Ale uważajcie i nie "
+"pijcie tej wody."
+
+#: cogs/helpers/config.py:207
+msgid "Safety class canceled"
+msgstr "Klasa bezpieczeństwa odwołana"
+
+#: cogs/helpers/config.py:207
+msgid "The safety class was canceled, beware not to shoot others hunters!"
+msgstr ""
+"Klasa bezpieczeństwa została odwołana, uważaj, aby nie zastrzelić innych "
+"myśliwych!"
+
+#: cogs/helpers/config.py:208
+msgid "Connection problems"
+msgstr "Problemy z połączeniem"
+
+#: cogs/helpers/config.py:208
+msgid ""
+"Ducks cant find your computer due to connection problems, and there will be "
+"less of them until it's repaired"
+msgstr ""
+"Kaczki nie mogą znaleść Twojego komputera z powodu słabego połączenia. Bezie "
+"mniej kaczek do puki nie poprawi się połączenie"
+
+#: cogs/helpers/config.py:209
+msgid "A new florist in town"
+msgstr "Nowa kwiaciarnia w mieście"
+
+#: cogs/helpers/config.py:209
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them out!"
+msgstr ""
+"W mieście otwarto kwiaciarnię, a teraz można znaleźć lepsze czterolistne "
+"koniczyny. Idź je sprawdzić!"
+
+#: cogs/helpers/config.py:210
+msgid "Mega-ducks"
+msgstr "Mega-kaczki"
+
+#: cogs/helpers/config.py:210
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "Ktoś nadmuchał super kaczkę, i teraz są WIELKIE!"
+
+#: cogs/helpers/config.py:211
+msgid "Windy weather"
+msgstr "Wietrzna pogoda"
+
+#: cogs/helpers/config.py:211
+msgid "Bullets are deflected by some strong wind"
+msgstr "Kule są odbijane przez jakiś silny wiatr"
+
+#: cogs/helpers/config.py:218
+msgid "public danger"
+msgstr "Zagrożenie publiczne"
+
+#: cogs/helpers/config.py:219
+msgid "tourist"
+msgstr "Turysta"
+
+#: cogs/helpers/config.py:220
+msgid "noob"
+msgstr "Noob"
+
+#: cogs/helpers/config.py:221
+msgid "trainee"
+msgstr "Stażysta"
+
+#: cogs/helpers/config.py:222
+msgid "duck misser"
+msgstr "Panna młoda kaczka"
+
+#: cogs/helpers/config.py:223
+msgid "member of the Comitee Against Ducks"
+msgstr "Członek Komitetu Przeciwko Kaczkom"
+
+#: cogs/helpers/config.py:224
+msgid "duck hater"
+msgstr "Nienawiść do kaczek"
+
+#: cogs/helpers/config.py:225
+msgid "duck pest"
+msgstr "Szkodnik kaczek"
+
+#: cogs/helpers/config.py:226
+msgid "duck hassler"
+msgstr "kaczkowy hassler"
+
+#: cogs/helpers/config.py:227
+msgid "duck plucker"
+msgstr "skubaczka do kaczek"
+
+#: cogs/helpers/config.py:228
+msgid "hunter"
+msgstr "Myśliwy"
+
+#: cogs/helpers/config.py:229
+msgid "duck inside out turner"
+msgstr "kaczko wywracacz"
+
+#: cogs/helpers/config.py:230
+msgid "duck clobber"
+msgstr "Pazur kaczki"
+
+#: cogs/helpers/config.py:231
+msgid "duck chewer"
+msgstr "czajnik do kaczek"
+
+#: cogs/helpers/config.py:232
+msgid "duck eater"
+msgstr "Zjadacz kaczek"
+
+#: cogs/helpers/config.py:233
+msgid "duck flattener"
+msgstr "spłaszczarka do kaczek"
+
+#: cogs/helpers/config.py:234
+msgid "duck disassembler"
+msgstr "demontownik kaczek"
+
+#: cogs/helpers/config.py:235
+msgid "duck demolisher"
+msgstr "wyburzaczarka kaczek"
+
+#: cogs/helpers/config.py:236
+msgid "duck killer"
+msgstr "Zabójca kaczek"
+
+#: cogs/helpers/config.py:237
+msgid "duck skinner"
+msgstr "kaczko zdejmowacz skór"
+
+#: cogs/helpers/config.py:238
+msgid "duck predator"
+msgstr "drapieżnik kaczki"
+
+#: cogs/helpers/config.py:239
+msgid "duck chopper"
+msgstr "Tasak do kaczek"
+
+#: cogs/helpers/config.py:240
+msgid "duck decorticator"
+msgstr "dekortykator kaczek"
+
+#: cogs/helpers/config.py:241
+msgid "duck fragger"
+msgstr "kaczko zabijacz"
+
+#: cogs/helpers/config.py:242
+msgid "duck shatterer"
+msgstr "Niszczyciel kaczek"
+
+#: cogs/helpers/config.py:243
+msgid "duck smasher"
+msgstr "rozwalacz kaczek"
+
+#: cogs/helpers/config.py:244
+msgid "duck breaker"
+msgstr "kruszarka do kaczek"
+
+#: cogs/helpers/config.py:245
+msgid "duck wrecker"
+msgstr "Wrak kaczki"
+
+#: cogs/helpers/config.py:246
+msgid "duck impaler"
+msgstr "palnik do kaczek"
+
+#: cogs/helpers/config.py:247
+msgid "duck eviscerator"
+msgstr "Wytrząsarka do kaczek"
+
+#: cogs/helpers/config.py:248
+msgid "ducks terror"
+msgstr "kaczkowy terror"
+
+#: cogs/helpers/config.py:249
+msgid "duck exploder"
+msgstr "eksploder do kaczek"
+
+#: cogs/helpers/config.py:250
+msgid "duck destructor"
+msgstr "Niszczyciel kaczek"
+
+#: cogs/helpers/config.py:251
+msgid "duck blaster"
+msgstr "Toster do kaczek"
+
+#: cogs/helpers/config.py:252
+msgid "duck pulverizer"
+msgstr "rozpylacz do kaczek"
+
+#: cogs/helpers/config.py:253
+msgid "duck disintegrator"
+msgstr "rozpadlinacz do kaczek"
+
+#: cogs/helpers/config.py:254
+msgid "duck atomizer"
+msgstr "rozpylacz do kaczek"
+
+#: cogs/helpers/config.py:255
+msgid "duck annihilator"
+msgstr "anihilator kaczek"
+
+#: cogs/helpers/config.py:256
+msgid "serial duck killer"
+msgstr "Zabójca kaczek"
+
+#: cogs/helpers/config.py:257
+msgid "duck genocider"
+msgstr "kaczkowe ludobójstwo"
+
+#: cogs/helpers/config.py:258
+msgid "old noob"
+msgstr "Stary Noob"
+
+#: cogs/helpers/config.py:259
+msgid "duck toaster"
+msgstr "Toster do kaczek"
+
+#: cogs/helpers/config.py:260
+msgid "unemployed due to extinction of the duck species"
+msgstr "bezrobotni z powodu wyginięcia gatunku kaczki"
+
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
+msgid "Level of {player} on #{channel}"
+msgstr "Poziom {player} na #{channel}"
+
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
+msgid "You leveled down!"
+msgstr "Spadł Ci poziom!"
+
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
+msgid "You leveled up!"
+msgstr "Awansowałeś!"
+
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
+msgid "Current level"
+msgstr "Twój poziom"
+
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
+msgid "nom"
+msgstr "nom"
+
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
+msgid "Previous level"
+msgstr "Poprzedni poziom"
+
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
+msgid "Shots accuracy"
+msgstr "Dokładność strzałów"
+
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
+msgid "Weapon reliability"
+msgstr "Niezawodność broni"
+
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
+msgid "Exp points"
+msgstr "Doświadczenie"
+
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
+msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ""
+":Ostrzeżenie: Wystąpił błąd podczas wysyłania embedu, proszę sprawdzić czy "
+"bot ma pozwolenie `embed_links` i spróbować ponownie!"
+
+#: cogs/helpers/ducks.py:36
+msgid "Nothing"
+msgstr "Nic"
+
+#: cogs/helpers/ducks.py:40
+msgid "a lot of bushes."
+msgstr "mnóstwo krzaków."
+
+#: cogs/helpers/ducks.py:43
+msgid "a duck pin."
+msgstr "szpilka do kaczek."
+
+#: cogs/helpers/ducks.py:47
+msgid "a bullet"
+msgstr "pocisk"
+
+#: cogs/helpers/ducks.py:59
+msgid "a full magazine"
+msgstr "pełny magazynek"
+
+#: cogs/helpers/ducks.py:71
+msgid "a box of explosive ammo"
+msgstr "skrzynka z amunicją wybuchową"
+
+#: cogs/helpers/ducks.py:84
+msgid "an almost empty box of explosive ammo"
+msgstr "prawie puste pudełko z amunicją wybuchową"
+
+#: cogs/helpers/ducks.py:98
+msgid "some duck-grease"
+msgstr "trochę tłuszczu z kaczek"
+
+#: cogs/helpers/ducks.py:107
+msgid "a full-featured silencer"
+msgstr "w pełni funkcjonalny tłumik"
+
+#: cogs/helpers/ducks.py:116
+msgid "a fully functional infrared detector"
+msgstr "w pełni funkcjonalna czujka podczerwieni"
+
+#: cogs/helpers/ducks.py:233
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
+"xp]"
+msgstr ""
+"**TRZEPOT** Przestraszona przez tyle hałasu, kaczka uciekła! GRATULACJE! "
+"[chybiał: -1 xp]"
+
+#: cogs/helpers/ducks.py:244
+msgid "BPAM"
+msgstr "BPAM"
+
+#: cogs/helpers/ducks.py:248
+msgid "BAAM"
+msgstr "BAAM"
+
+#: cogs/helpers/ducks.py:252
+msgid "BOUM"
+msgstr "BUM"
+
+#: cogs/helpers/ducks.py:252
+msgid "SPROTCH"
+msgstr "SPROTCH"
+
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
+msgid "Searching the bushes around the duck, you found..."
+msgstr "Szukając krzaków wokół kaczki, znalazłeś..."
+
+#: cogs/helpers/ducks.py:307
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "tego nie mogłeś wziąć, ponieważ twój plecak jest pełny."
+
+#: cogs/helpers/ducks.py:342
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr ""
+"Było blisko, prawie zabiłeś kaczkę, ale inny łowca zrobił to pierwszy! "
+"[tracisz: -1 xp]"
+
+#: cogs/helpers/ducks.py:376
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985> Łiiii przytulna kaczka!"
+
+#: cogs/helpers/ducks.py:381
+msgid ""
+":heart: You try to hug the duck, but it knows you killed its brother, so it "
+"fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Próbujesz przytulić kaczkę, ale ona wie, że zabiłeś/aś jej brata, "
+"więc uciekła od Ciebie i poleciała  z powrotem do stawu! [-2 exp]"
+
+#: cogs/helpers/ducks.py:383
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ""
+":heart: Próbujesz przytulić kaczkę, ale ona wie, że zabiłeś/aś jej brata, "
+"więc uciekła od Ciebie i poleciała  z powrotem do stawu! [-2 exp]"
+
+#: cogs/helpers/ducks.py:385
+msgid ""
+":heart: You try to hug the duck, but it saw the weapon you hid behind your "
+"back, so it fled from you and flew back into the pond! [-2 exp]"
+msgstr ""
+":serce: Próbujesz przytulić kaczkę, ale zobaczyła broń, którą schowałeś za "
+"plecami, więc uciekła od ciebie i wleciała z powrotem do stawu! [-2 exp]"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":Skull_crossbones: **{onomatopeja}****Zabiłeś kaczkę w {time} sekundy, masz "
+"teraz w sumie {total} kaczki (z których {supercanards} były super-kaczki) "
+"zabity na {channel}.     \\_X<   *COUAC*   {exp}"
+
+#: cogs/helpers/ducks.py:402
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+":gun: Kaczka przeżyła, spróbuj jeszcze raz! *WYKRYTO MEGA KACZKE* [life: -"
+"{vie} ({current_life} / {max_life})]"
+
+#: cogs/helpers/ducks.py:404
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
+msgstr ""
+":gun: Kaczka przeżyła spróbuj jeszcze raz! *WYKRYTO MEGA KACZKE* [life: -"
+"{vie}]"
+
+#: cogs/helpers/ducks.py:600
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr ""
+"Zostałeś oszukany przez {user_mention} aby zabić mechaniczną kaczkę. To "
+"oczywiście nie zadziałało, a ty straciłeś 1 exp za ten chybiony strzał"
+
+#: cogs/helpers/ducks.py:650
+msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczuszka poszła się gdzieś zdrzemnąć ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/ducks.py:670
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
+"seconds, and you shouldn't have done this! You'll lose some exp, because you "
+"shouldn't kill babies\\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **onomatopoeia** Zabiłeś małą kaczkę w kila sekund, a nie "
+"powinieneś tego robić! Stracisz trochę expa, bo nie powinieneś zabijać "
+"dzieci."
+
+#: cogs/helpers/ducks.py:686
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451>**PLASK** Przytuliłeś małą kaczkę, a teraz "
+"jest naprawdę szczęśliwa! [3 exp]\n"
+"Kaczka odeszła, czując się kochana"
+
+#: cogs/helpers/ducks.py:710
+msgid "**I AM...** Your mother"
+msgstr "**JESTEM...** Twoją matką"
+
+#: cogs/helpers/ducks.py:718
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
+"you won't kill my children! \\_X<   *COUAC*   {exp}"
+msgstr ""
+":Skull_crossbones: **Zabiłeś mnie w kilka sekund, ale nie zabijesz moich "
+"dzieci! \\_X< *KWAK* {exp}"

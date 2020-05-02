@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: 必須の引数がありません。"
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: 経験値が足りません。"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: あなたはサーバーの管理者ではありません。"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: あなたはスーパー管理者ではありません。"
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,11 +41,11 @@ msgstr ""
 "このコマンドは、botのオーナー用に設定されています。これがエラーだと思われる場合、DuckHuntサポートサーバーでオーナーに連絡してください "
 "(`dh!help`)。"
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: DiscordBotListでDuckHuntにしばらく投票していません。"
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -56,11 +56,11 @@ msgstr ""
 "duckhunt>で投票し、サポートすることでこのコマンドを使えます。投票の確認には数分かかる場合があります。これがエラーだと思われる場合、DuckHuntサポートサーバーでオーナーに連絡してください "
 "(`dh!help`)。"
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "クールダウンになっています。{seconds}後にもう一度試してください。"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: ヒント:"
 

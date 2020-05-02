@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Липсва необходим аргумент."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Нямате достатъчно exp точки"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Вие не сте администратор на сървър"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Вие не сте супер администратор."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "грешка, моля свържете се с моя собственик в DuckHunt Server за поддръжка "
 "(вижте `dh! Help`)."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Не сте гласували за DuckHunt на DiscordBotList за известно време."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -59,12 +59,12 @@ msgstr ""
 "моля свържете се с моя собственик на DuckHunt Server за поддръжка (вижте "
 "`dh! Help`)."
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
 "Вие сте в режим на охлаждане :(, опитайте отново след {seconds} секунди!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: СЪВЕТ:"
 
@@ -232,17 +232,7 @@ msgstr ""
 "Ботът често се рестартира за актуализации. Не се притеснявайте, има 99,8% от "
 "времето на работа."
 
-#: cogs/meta.py:69
-msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
-"anything, feel free to join the support server at https://discordapp.com/"
-"invite/2BksEkV"
-msgstr ""
-"Ето списъка с команди: http://duckhunt.me/command-list/ | Ако имате нужда от "
-"нещо, не се колебайте да се присъедините към сървъра за поддръжка на https://"
-"discordapp.com/invite/2BksEkV"
-
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -253,7 +243,7 @@ msgstr ""
 "Можете да използвате този уебсайт, за да го сравните с Вашия: https://time."
 "is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -261,7 +251,7 @@ msgstr ""
 "Можете да използвате командата `dh!freetime`, за да видите кога ще получите "
 "оръжията си безплатно"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -271,25 +261,9 @@ msgstr ""
 "конфискувано), но това не засяга куршумите в сегашната ви касетa. Ако "
 "можете, презаредете предварително!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Използвате {shard} елитри от общо {total} елитри"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"Резултатите са онлайн на адрес http://duckhunt.api-d.com/web/duckstats."
-"php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Вашите патици ви очакват на адрес http://duckhunt.api-d.com/web/duckstats."
-"php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Hiányzik egy szükséges paraméter."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Nincs elég tapasztalatod ehhez."
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Nem vagy adminisztrátor ezen a szerveren."
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Nem vagy szuperadminisztrátor."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "ez egy hiba, vegye fel a kapcsolatot a tulajdonosommal a hivatalos DuckHunt "
 "szerveren (lásd: \"dh!help\")."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Egy ideje nem szavaztál a DuckHunt-ra a DiscordBotList-en."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -59,11 +59,11 @@ msgstr ""
 "gondolod, hogy ez egy hiba, vedd fel a kapcsolatot a tulajdonosommal a "
 "DuckHunt támogatási szerveren (lásd: \"dh!help\")."
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "El vagy fáradva, próbáld újra {seconds} másodperc múlva!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: NYOM:"
 
@@ -230,25 +230,9 @@ msgstr ""
 "A bot gyakran újraindul a frissítések miatt. Ne aggódj, az örökkévalóság "
 "99,8%-ában a rendelkezésedre áll."
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "A {shard}es számú szilánkot használod az összes {total} szilánkból"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"A pontszámok fent vannak online a http://duckhunt.api-d.com/web/duckstats."
-"php?cid={channel_id} oldalon."
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Kacsastatok várnak rád a http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}&pid={player_id} oldalon"
 
 #: cogs/setup_wizzard.py:135
 msgid ""
@@ -607,44 +591,44 @@ msgstr ""
 ":money_with_wings: Robotkacsát tettél, 40 tapasztalatért. Ez gonosz, de "
 "annyira vicces!  "
 
-#: cogs/user_commands.py:72 cogs/user_commands.py:159
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."
 msgstr "Nincsen fegyvered."
 
-#: cogs/user_commands.py:78
+#: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
 msgstr "Kilazítottad a fegyvered."
 
-#: cogs/user_commands.py:92
+#: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
 msgstr "Újratöltötted a fegyvered."
 
-#: cogs/user_commands.py:94
+#: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
 msgstr "Nincs több lőszered! "
 
-#: cogs/user_commands.py:97
+#: cogs/user_commands.py:96
 msgid "You don't need to reload your weapon."
 msgstr "Nem kell újratöltened a fegyvered. "
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr "Nem vagy száraz, nem mehetsz vadászni! Várj {temps_restant} percet."
 
-#: cogs/user_commands.py:168
+#: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr "A fegyveredet ellopták, köszönd meg ezt a viccet {assaillant}-nek."
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:224
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "A fegyvered beragadt, újra kell töltened hogy kilazítsd."
 
-#: cogs/user_commands.py:252
+#: cogs/user_commands.py:251
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -652,11 +636,11 @@ msgstr ""
 "Itt egyáltalán nincsenek kacsák, de a lövedéket nem lőtted ki, mert az "
 "infravörös detektor amit hozzáadtál a fegyverhez teszi a dolgát!"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PIEWW** Nem találtad el a kacsát! [-1 tapasztalatpont]"
 
-#: cogs/user_commands.py:431
+#: cogs/user_commands.py:430
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
@@ -664,15 +648,15 @@ msgstr ""
 "Olyan erősen ölelted meg {mention}-t amennyire csak tudtad. Megtelt "
 "elszántsággal."
 
-#: cogs/user_commands.py:444
+#: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Megöleltél egy fát, fütty?!"
 
-#: cogs/user_commands.py:447
+#: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Nincs itt semmilyen kacsa, mit akartál átölelni, egy fát?!"
 
-#: cogs/user_commands.py:463
+#: cogs/user_commands.py:462
 msgid "**Current event**"
 msgstr "**Aktuális esemény**"
 
@@ -1225,40 +1209,40 @@ msgstr "kacsapirító"
 msgid "unemployed due to extinction of the duck species"
 msgstr "munkanélküli a teljes kacsapopuláció kiirtása miatt"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "{player} szintje {channel}-en"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Szintet estél!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Szintet léptél!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Jelenlegi szint"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
 msgid "nom"
 msgstr "nyami"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Előző szint"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Lövések pontossága"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
 msgid "Weapon reliability"
 msgstr "Fegyver hatékonysága"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Tapasztalatpontok"
 

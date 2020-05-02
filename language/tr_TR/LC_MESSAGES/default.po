@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Gerekli bir argüman eksik."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Bunun için yeterli exp puanın yok"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Sen bir sunucu yöneticisi değilsin."
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Sen bir süper yönetici değilsin."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "düşünüyorsanız, lütfen DuckHunt Destek Sunucusu'ndaki sahibimle iletişime "
 "geçin (bkz. `dh! help`)."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Bir süredir DiscordBotList'te DuckHunt için oy kullanmadın."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -58,11 +58,11 @@ msgstr ""
 "dakika kadar sürebilir. Eğer bunun bir hata olduğunu düşünüyorsanız lütfen "
 "Duckhunt Destek Sunucusu'ndaki sahibimle iletişime geçin."
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "Bekleme süresindesiniz :(, {seconds} saniye içinde tekrar deneyin!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: İPUCU:"
 
@@ -230,17 +230,7 @@ msgstr ""
 "Bot sık sık güncellemeler için yeniden başlatılıyor. Endişelenmeyin, % 99.8 "
 "çalışma süresi var."
 
-#: cogs/meta.py:69
-msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
-"anything, feel free to join the support server at https://discordapp.com/"
-"invite/2BksEkV"
-msgstr ""
-"İşte komut listesi: http://duckhunt.me/command-list/ | Bir şeye ihtiyacınız "
-"olursa, https://discordapp.com/invite/2BksEkV adresinden destek sunucusuna "
-"katılmaktan çekinmeyin"
-
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -251,7 +241,7 @@ msgstr ""
 "Bu web sitesini sizinkiyle karşılaştırmak için kullanabilirsiniz: https://"
 "time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -259,7 +249,7 @@ msgstr ""
 "Silahınızı ne zaman ücretsiz alacağınızı görmek için `dh!freetime` komutunu "
 "kullanabilirsiniz."
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
@@ -267,7 +257,7 @@ msgstr ""
 ":alarm_clock: Bir sonraki silah ve şarjörleri {sec} saniye ({hours} saat and "
 "{minutes} dakika) içinde geri alacaksınız."
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -277,26 +267,10 @@ msgstr ""
 "(el koyulmuşsa), ancak mevcut şarjörünüzdeki mermileri etkilemez. "
 "Yapabiliyorsanız, önceden şarjör doldurun!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr ""
 "{total} toplam shards arasından {shard} shard numarası kullanıyorsunuz"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"Skorlar http://duckhunt.api-d.com/web/duckstats.php?cid={channel_id} "
-"adresinde çevrimiçi olarak bakılabilir."
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Ördek istatikleriniz sizi http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}&pid={player_id} adresinde bekliyor"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -917,27 +891,27 @@ msgstr ""
 ":money_with_wings: Kanalda 40 exp için mekanik bir ördek hazırladınız. "
 "Yanlış, ama çok komik!"
 
-#: cogs/user_commands.py:72 cogs/user_commands.py:159
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."
 msgstr "Senin silahın yok."
 
-#: cogs/user_commands.py:78
+#: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
 msgstr "Silahını çözdün."
 
-#: cogs/user_commands.py:92
+#: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
 msgstr "Silahının şarjörünü yeniden yükledin."
 
-#: cogs/user_commands.py:94
+#: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
 msgstr "Hiç cephaneniz kalmadı!"
 
-#: cogs/user_commands.py:97
+#: cogs/user_commands.py:96
 msgid "You don't need to reload your weapon."
 msgstr "Silahını tekrar doldurmana gerek yok."
 
-#: cogs/user_commands.py:100
+#: cogs/user_commands.py:99
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -945,21 +919,21 @@ msgstr ""
 "{greet} | Silahtaki cephane: {balles_actuelles} / {balles_max} | Kalan "
 "şarjör: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr "Kıyafetlerin ıslak, avlanamazsın! {Temps_restant} dakika bekleyin."
 
-#: cogs/user_commands.py:168
+#: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Silahın sıkıştı, onu açmak için yeniden doldurulmalısın."
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Silahınız sabote edildi, bu kötü şaka için {assaillant} teşekkür ederim."
 
-#: cogs/user_commands.py:191
+#: cogs/user_commands.py:190
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -967,11 +941,11 @@ msgstr ""
 "** ŞARJÖR BOŞ ** | Silahtaki mühimmat: {balles_actuelles} / {balles_max} | "
 "Kalan dergiler: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:224
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Silahın daha yeni sıkışmış, açmak için yeniden doldur."
 
-#: cogs/user_commands.py:252
+#: cogs/user_commands.py:251
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -979,7 +953,7 @@ msgstr ""
 "Burada hiç ördek yok, ama mermi ateşlenmedi çünkü silahınıza eklediğiniz "
 "kızılötesi dedektör işini yapıyor!"
 
-#: cogs/user_commands.py:267
+#: cogs/user_commands.py:266
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -987,7 +961,7 @@ msgstr ""
 "Neyse ki hedefi kaçırdınız, ama tam olarak neyi hedefliyorsunuz? Burada hiç "
 "ördek yok ... [karavana: -1 xp] [boş atış: -1 xp]"
 
-#: cogs/user_commands.py:375
+#: cogs/user_commands.py:374
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -997,7 +971,7 @@ msgstr ""
 "sefere ateş etmeden önce silahını biraz çevirmelisin? [karavana: -1 xp] [av "
 "kazası: -2 xp] [** silaha el konuldu **]"
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:381
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1005,7 +979,7 @@ msgstr ""
 "** BANG ** Ördeği kaçırdın ... ve {player} vurdun! [karavana: -1 xp] [av "
 "kazası: -2 xp] [** silaha el konuldu **]"
 
-#: cogs/user_commands.py:391
+#: cogs/user_commands.py:390
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -1013,26 +987,26 @@ msgstr ""
 "Silahınızı mağazadan geri satın alabilirsiniz (`dh! Shop 5`) veya ücretsiz "
 "olarak geri dönene kadar bekleyin (`! Freetime` ile ne zaman kontrol edin)"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "** PIEWW ** Ördeği kaçırdın! [karavana: -1 xp]"
 
-#: cogs/user_commands.py:431
+#: cogs/user_commands.py:430
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
 msgstr ""
 "Olabildiğince güçlü bir şekilde {mention}. Kararlılıkla doldurulurlar."
 
-#: cogs/user_commands.py:444
+#: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Ağaca sarıldın mı Wizzz ?!"
 
-#: cogs/user_commands.py:447
+#: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Burada hiç ördek yok, bir ağacamı sarılmayı düşünüyorsun ?!"
 
-#: cogs/user_commands.py:463
+#: cogs/user_commands.py:462
 msgid "**Current event**"
 msgstr "**Güncel olay**"
 
@@ -1645,44 +1619,44 @@ msgstr "ördek kızartma makinesi"
 msgid "unemployed due to extinction of the duck species"
 msgstr "ördek türlerinin neslinin tükenmesi nedeniyle işsiz"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "#{channel} üzerindeki {player}'in seviyesi"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Seviyen düştü!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Seviye atladın!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Mevcut seviye"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Önceki seviye"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Atış doğruluğu"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
 msgid "Weapon reliability"
 msgstr "Silah güvenilirliği"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Tecrübe puanı"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"

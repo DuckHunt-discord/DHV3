@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Ένα απαιτούμενο στοιχείο λείπει."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Δεν έχετε αρκετή εμπειρία για αυτό"
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Δεν είστε διαχειριστής του διακομιστή"
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Δεν είστε διαχειριστής του συστήματος."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -42,11 +42,11 @@ msgstr ""
 "για σφάλμα, επικοινωνήστε με τον ιδιοκτήτη μου στο διακομιστή υποστήριξης "
 "DuckHunt (δείτε `dh! Help`)."
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Δεν ψηφίσατε το DuckHunt στο Discordbotlist για λίγο καιρό."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -59,7 +59,7 @@ msgstr ""
 "νομίζετε ότι πρόκειται για λάθος, επικοινωνήστε με τον ιδιοκτήτη μου στο "
 "διακομιστή υποστήριξης DuckHunt (βλ. `dh! Help`)."
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: ΣΥΜΒΟΥΛΗ:"
 
@@ -230,7 +230,7 @@ msgstr ""
 "Το σύστημα επανεκκινείται συχνά για ενημερώσεις. Μην ανησυχείτε, έχει 99,8% "
 "χρόνο λειτουργίας."
 
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -241,7 +241,7 @@ msgstr ""
 "Μπορείτε να χρησιμοποιήσετε αυτόν τον ιστότοπο για να το συγκρίνετε με τη "
 "δική σας: https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -249,7 +249,7 @@ msgstr ""
 "Μπορείτε να χρησιμοποιήσετε την εντολή `dh!freetime` για να δείτε πότε θα "
 "πάρετε τα όπλα σας πίσω δωρεάν"
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -259,25 +259,9 @@ msgstr ""
 "(αν έχει κατασχεθεί), αλλά δεν επηρεάζει τις σφαίρες στο τρέχον περιοδικό "
 "σας. Εάν μπορείτε, οπλίστε ξαλνα εκ των προτέρων!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Χρησιμοποιείτε αριθμό shard {shard} από {σύνολο} συνολικών κομματιών"
-
-#: cogs/scores.py:52
-msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
-"{channel_id}"
-msgstr ""
-"Τα αποτελέσματα είναι τώρα διαθέσιμα στο διαδίκτυο στη διεύθυνση http://"
-"duckhunt.api-d.com/web/duckstats.php?cid={channel_id}"
-
-#: cogs/scores.py:259
-msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
-msgstr ""
-"Τα Duckstats είναι τώρα διαθέσιμα στο διαδίκτυο στη διεύθυνση http://"
-"duckhunt.api-d.com/web/duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""

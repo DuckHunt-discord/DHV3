@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-14 22:01+0000\n"
+"POT-Creation-Date: 2020-04-29 09:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
 
-#: bot.py:145
+#: bot.py:155
 msgid ":x: A required argument is missing."
 msgstr ":x: Ett obligatorisk argument saknas."
 
-#: bot.py:149
+#: bot.py:159
 msgid ":x: You don't have enough exp for this"
 msgstr ":x: Du har inte tillräckligt med erfarenhetspoäng för detta."
 
-#: bot.py:152
+#: bot.py:162
 msgid ":x: You are not a server admin"
 msgstr ":x: Du är inte en serveradministratör."
 
-#: bot.py:155
+#: bot.py:165
 msgid ":x: You are not a super admin."
 msgstr ":x: Du är inte en superadministratör."
 
-#: bot.py:156
+#: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
@@ -41,11 +41,11 @@ msgstr ""
 "Detta kommando är reserverat för ägarna av botten. Om du tycker detta är ett "
 "misstag, kontakta min ägare på DuckHunts Support Server (se `dh!help`)"
 
-#: bot.py:160
+#: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ":x: Du har inte röstat på DuckHunt på DiscordBotList på ett tag."
 
-#: bot.py:161
+#: bot.py:171
 msgid ""
 "Support the bot to use this command by voting at <https://discordbots.org/"
 "bot/duckhunt>. Be aware that the votes can take a minute to be registered by "
@@ -57,11 +57,11 @@ msgstr ""
 "att registreras av Duckhunt. Om du tycker att detta är ett fel, vänligen "
 "kontakta min ägare vid DuckHunt Support Server (se `dh!help`)."
 
-#: bot.py:173
+#: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr "Du är på nedkylning :(, försök igen om {seconds} sekunder!"
 
-#: bot.py:179
+#: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: TIPS:"
 
@@ -244,17 +244,34 @@ msgstr ""
 "Boten startar om regelbundet för uppdateringar. Oroa dig inte, boten har 99."
 "8% drifttid. "
 
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
 #: cogs/meta.py:69
 msgid ""
-"Here is the command list: http://duckhunt.me/command-list/ | If you need "
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Följ denna länk för att bjuda in mig till din server: https://docs.duckhunt."
+"me/bot-administration/admin-quickstart"
+
+#: cogs/meta.py:75
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
 "anything, feel free to join the support server at https://discordapp.com/"
 "invite/2BksEkV"
 msgstr ""
-"Här är kommandolistan: http://duckhunt.me/command-list/ | Om du behöver "
-"något annat så kan du gå med i supportservern på https://discordapp.com/"
-"invite/2BksEkV"
+"Om du är en ny spelare, läs detta: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Annars är här spelarens kommandolista <https://docs."
+"duckhunt.me/players-guide/player-commands> och admin-kommandona <https://"
+"docs.duckhunt.me/bot-administration/admin-commands> | Om du behöver något "
+"kan du gå med i supportservern på https://discordapp.com/invite/2BksEkV"
 
-#: cogs/meta.py:82
+#: cogs/meta.py:88
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -264,7 +281,7 @@ msgstr ""
 "00), vilket är den som används av boten. Du kan använda den här webbplatsen "
 "för att jämföra den med din tidszon: https://time.is/compare/GMT"
 
-#: cogs/meta.py:85
+#: cogs/meta.py:91
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -272,7 +289,7 @@ msgstr ""
 "Du kan använda kommandot `dh!freetime` för att se när du får tillbaka dina "
 "vapen gratis"
 
-#: cogs/meta.py:100
+#: cogs/meta.py:106
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
@@ -280,7 +297,7 @@ msgstr ""
 ":alarm_clock: Nästa återgivning av vapen och \n"
 "vapenmagasin på {sec} sekunder ({hours} timmar och {minuter} minuter)."
 
-#: cogs/meta.py:103
+#: cogs/meta.py:109
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -290,24 +307,24 @@ msgstr ""
 "tillbaka gratis (om det konfiskeras), men det påverkar inte kulorna i ditt "
 "nuvarande magasin. Om du kan, ladda om i förväg!"
 
-#: cogs/meta.py:117
+#: cogs/meta.py:123
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Du använder skärvsnummer {shard} av {total} totala skärvor"
 
 #: cogs/scores.py:52
 msgid ""
-"The scores are online at http://duckhunt.api-d.com/web/duckstats.php?cid="
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
 "{channel_id}"
 msgstr ""
-"Poängen är online på http://duckhunt.api-d.com/web/duckstats.php?cid="
+"Betygen finns online på https://duckstats.api-d.com/duckstats.php?cid="
 "{channel_id}"
 
 #: cogs/scores.py:259
 msgid ""
-"Your duckstats are waiting for you at http://duckhunt.api-d.com/web/"
-"duckstats.php?cid={channel_id}&pid={player_id}"
+"Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
 msgstr ""
-"Dina duckstatser väntar på dig http://duckhunt.api-d.com/web/duckstats."
+"Dina ankstatuser väntar på dig på https://duckstats.api-d.com/duckstats."
 "php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
@@ -929,27 +946,27 @@ msgstr ""
 ":money_with_wings: Du förberedde en mekanisk anka på kanalen för 40 exp. Det "
 "är fel, men så roligt!"
 
-#: cogs/user_commands.py:72 cogs/user_commands.py:159
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."
 msgstr "Du har inte ett gevär."
 
-#: cogs/user_commands.py:78
+#: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
 msgstr "Du har avblockerat ditt vapen."
 
-#: cogs/user_commands.py:92
+#: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
 msgstr "Du laddade om ditt vapen."
 
-#: cogs/user_commands.py:94
+#: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
 msgstr "Du har ingen ammunition kvar!"
 
-#: cogs/user_commands.py:97
+#: cogs/user_commands.py:96
 msgid "You don't need to reload your weapon."
 msgstr "Du behöver inte ladda om ditt vapen."
 
-#: cogs/user_commands.py:100
+#: cogs/user_commands.py:99
 msgid ""
 "{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
 "{chargeurs_actuels}/{chargeurs_max}"
@@ -957,23 +974,23 @@ msgstr ""
 "{greet} | Ammunition i vapen: {balles_actuelles} / {balles_max} | Magasin "
 "kvar: {chargeurs_actuels}/{chargeurs_max}"
 
-#: cogs/user_commands.py:149
+#: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
 msgstr ""
 "Dina kläder är blöta, det går inte att jaga ännu! Du får vänta "
 "{temps_restant} minuter."
 
-#: cogs/user_commands.py:168
+#: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
 msgstr "Ditt vapen har fastnat, du måste ladda om för att fixa vapnet."
 
-#: cogs/user_commands.py:178
+#: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
 msgstr ""
 "Ditt vapen har varit saboterad, tacka {assaillant} för detta dåliga skämt."
 
-#: cogs/user_commands.py:191
+#: cogs/user_commands.py:190
 msgid ""
 "** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
 "{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
@@ -981,11 +998,11 @@ msgstr ""
 "**MAGASIN SLUT** | Ammunition i vapnet: {balles_actuelles} / {balles_max} | "
 "Återstående magasin: {chargeurs_actuels} / {chargeurs_max}"
 
-#: cogs/user_commands.py:225
+#: cogs/user_commands.py:224
 msgid "Your weapon just jammed, reload it to unjam it."
 msgstr "Ditt vapen har fastnat, ladda om för att fixa det."
 
-#: cogs/user_commands.py:252
+#: cogs/user_commands.py:251
 msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
@@ -993,7 +1010,7 @@ msgstr ""
 "Det finns ingen anka här, men skottet har inte avfyrats eftersom infraröd "
 "sensorn du köpte för ditt vapen gör sitt jobb!"
 
-#: cogs/user_commands.py:267
+#: cogs/user_commands.py:266
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
@@ -1001,7 +1018,7 @@ msgstr ""
 "Som tur att du missade, men vad var det att du försökte skjuta? Det finns "
 "ingen anka här... [Miss: -1 xp] [Slumpmässig skott: -1 xp]"
 
-#: cogs/user_commands.py:375
+#: cogs/user_commands.py:374
 msgid ""
 "**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
 "turn your weapon a little before shooting the next time? [missed: -1 xp] "
@@ -1011,7 +1028,7 @@ msgstr ""
 "ditt vapen lite innan du skjuter nästa gång? [missat: -1 xp] [jaktolycka: -2 "
 "xp] [**vapen konfiskerat**]"
 
-#: cogs/user_commands.py:382
+#: cogs/user_commands.py:381
 msgid ""
 "**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
 "accident: -2 xp] [**weapon confiscated**]"
@@ -1019,7 +1036,7 @@ msgstr ""
 "**BANG** Du missade ankan... och sköt {spelare}! [missat: -1 xp] [jaktolycka:"
 " -2 xp] [**vapen konfiskerat**]"
 
-#: cogs/user_commands.py:391
+#: cogs/user_commands.py:390
 msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
@@ -1027,26 +1044,26 @@ msgstr ""
 "Du kan köpa ditt vapen tillbaka i butiken (`dh!shop 5`) eller vänta tills du "
 "får tillbaka det gratis (kontrollera när med`dh!freetime`)"
 
-#: cogs/helpers/ducks.py:230 cogs/user_commands.py:399
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
 msgstr "**PANG** Du missade ankan! [Miss: -1 xp]"
 
-#: cogs/user_commands.py:431
+#: cogs/user_commands.py:430
 msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
 msgstr ""
 "Du kramade {mention} så starkt som du kunde. De är fyllda med beslutsamhet."
 
-#: cogs/user_commands.py:444
+#: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
 msgstr "Du kramade ett träd, Konstigt?!"
 
-#: cogs/user_commands.py:447
+#: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
 msgstr "Det finns ingen anka här, vad tänkte du krama, ett träd?"
 
-#: cogs/user_commands.py:463
+#: cogs/user_commands.py:462
 msgid "**Current event**"
 msgstr "**Nuvarande händelse**"
 
@@ -1658,44 +1675,44 @@ msgstr "ankrostare"
 msgid "unemployed due to extinction of the duck species"
 msgstr "arbetslös på grund av utrotning av ankarter"
 
-#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:247
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
 msgstr "Nivå på {player} i #{channel}"
 
-#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:250
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
 msgid "You leveled down!"
 msgstr "Du gick ner en nivå!"
 
-#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:253
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
 msgid "You leveled up!"
 msgstr "Du gick upp en nivå!"
 
-#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:261
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
 msgstr "Nuvarande nivå"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
-#: cogs/helpers/database.py:261 cogs/helpers/database.py:262
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
 msgid "nom"
 msgstr "nom"
 
-#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:262
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
 msgstr "Föregående nivå"
 
-#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:263
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
 msgstr "Skott träffsäkerhet"
 
-#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:264
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
 msgid "Weapon reliability"
 msgstr "Vapen trovärdighet"
 
-#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:265
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
 msgid "Exp points"
 msgstr "Erfarenhetspoäng"
 
-#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:271
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
 msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
