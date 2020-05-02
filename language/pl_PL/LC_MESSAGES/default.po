@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-29 09:05+0000\n"
+"POT-Creation-Date: 2020-05-02 09:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -820,6 +820,282 @@ msgstr ""
 "Ten zły ruch nadal zabrał 5 expa z twojego konta, ponieważ musiałeś kupić "
 "lustro."
 
+#: cogs/shop.py:331
+msgid ""
+":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
+"accuracy!"
+msgstr ""
+":money_with_wings: Oślepiłeś {mention}! Ich następny straci 50% celności!"
+
+#: cogs/shop.py:332
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you?"
+msgstr ""
+"Ta wzmianka jest tu celowo. Nie zrobiłbyś tego za ich plecami, prawda?"
+
+#: cogs/shop.py:346
+msgid ":champagne: You threw sand in {mention}'s weapon!"
+msgstr ":champagne: Wrzuciłeś piasek do broni {mention}!"
+
+#: cogs/shop.py:347
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr ""
+"Wspomnienie jest tutaj celowe. Nie zrobiłbyś tego za ich plecami, prawda?"
+
+#: cogs/shop.py:360
+msgid ""
+":money_with_wings: You dropped a bucket full of water on {target}, forcing "
+"them to wait 1 hour for their clothes to dry before they can return hunting."
+msgstr ""
+":money_with_wings: Upuściłeś wiadro pełne wody na {target}, zmuszając ich do "
+"czekania 1 godzinę na wyschnięcie ubrań, zanim będą mogli wrócić na "
+"polowanie."
+
+#: cogs/shop.py:379
+msgid ""
+":money_with_wings: You dropped a **SPECIAL** bucket full of water on "
+"{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
+"they can return hunting."
+msgstr ""
+"Pieniądze ze skrzydłami: Upuściłeś **SPECJALNE** wiadro pełne wody na "
+"{target}, zmuszając ich do czekania 2 godziny (!) na wyschnięcie ich ubrań "
+"zanim będą mogli wrócić na polowanie."
+
+#: cogs/shop.py:393
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "Nie sabotowałbyś siebie, prawda?"
+
+#: cogs/shop.py:399
+msgid ""
+":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
+msgstr ""
+":ok: {target} broń jest teraz sabotowana... ale oni o tym nie wiedzą (14 "
+"exp)!"
+
+#: cogs/shop.py:402
+msgid ""
+"Don't use a mention for this. You can give me user ids or the full username "
+"in \"quotes\""
+msgstr ""
+"Nie używaj do tego wzmianki. Możesz mi podać numer użytkownika lub pełną "
+"nazwę użytkownika w \"cytatach\""
+
+#: cogs/shop.py:406
+msgid ":ok: {target}'s weapon is already sabotaged!"
+msgstr ":ok: {target}'s jest już sabotowana!"
+
+#: cogs/shop.py:411 cogs/shop.py:524
+msgid ""
+"If you ask a server admin to give me the `manage_message` permission, I will "
+"be able to delete that kind of shop commands ;)"
+msgstr ""
+"Jeśli poprosisz administratora serwera o nadanie mi uprawnienia "
+"`manage_message`, będę mógł usunąć tego typu komendy sklepowe ;)"
+
+#: cogs/shop.py:428
+msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
+msgstr ""
+":money_with_wings: Kupiłeś ubezpieczenie na życie na tydzień za 10expa."
+
+#: cogs/shop.py:429
+msgid "If you get killed, you'll earn half the level of the killer in exp."
+msgstr "Jeśli zostaniesz zabity, zarobisz połowę poziomu zabójcy w expie."
+
+#: cogs/shop.py:432
+msgid ":champagne: You're already insured."
+msgstr ":champagne: Jesteś już ubezpieczony."
+
+#: cogs/shop.py:469
+msgid ""
+":money_with_wings: Ducks are resting right now, so your decoy probably "
+"didn't work..."
+msgstr ""
+":money_with_wings: Kaczki teraz odpoczywają, więc twoja przynęta "
+"prawdopodobnie nie zadziałała..."
+
+#: cogs/shop.py:473
+msgid ""
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to {mention}'s decoy. They bought it for 8 exp!"
+msgstr ""
+":money_with_wings: Kaczka pojawi się na kanale w ciągu najbliższych 10 "
+"minut, dzięki wabikowi {mention}. Kupili ją za 8 exp!"
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ""
+":money_with_wings: Położyłeś troche chelba na kanale, żeby przyciągnąć "
+"kaczki."
+
+#: cogs/shop.py:505
+msgid ""
+":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
+msgstr ""
+":money_with_wings: Chleb można stackować! Kup więcej aby zmaksymalizować "
+"efekty!"
+
+#: cogs/shop.py:529
+msgid ""
+":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
+"It's wrong, but so funny!"
+msgstr ""
+":money_with_wings: Przygotowałeś mechaniczną kaczkę na kanale za 40expa. To "
+"jest złe ale takie zabawne!"
+
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
+msgid "You don't have a weapon."
+msgstr "Nie masz broni."
+
+#: cogs/user_commands.py:77
+msgid "You unjammed your weapon."
+msgstr "Odblokowałeś swoją broń."
+
+#: cogs/user_commands.py:91
+msgid "You reloaded your weapon."
+msgstr "Przeładowałeś swoją broń."
+
+#: cogs/user_commands.py:93
+msgid "You don't have any ammo left!"
+msgstr "Nie posiadasz już więcej amunicji!"
+
+#: cogs/user_commands.py:96
+msgid "You don't need to reload your weapon."
+msgstr "Nie musisz przeładowywać swojej broni."
+
+#: cogs/user_commands.py:99
+msgid ""
+"{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
+"{chargeurs_actuels}/{chargeurs_max}"
+msgstr ""
+"{greet} | Amunicja w broni: {balles_actuelles}/{balles_max} | Pozostało "
+"magazynków: {chargeurs_actuels}/{chargeurs_max}"
+
+#: cogs/user_commands.py:148
+msgid ""
+"Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
+msgstr ""
+"Twoje ubrania są mokre, nie możesz iść na polowanie! Poczekaj "
+"{temps_restant} minut."
+
+#: cogs/user_commands.py:167
+msgid "Your weapon is jammed, it must be reloaded to unjam it."
+msgstr ""
+"Twoja broń jest zablokowana, musisz ją przeładować, żeby ją odblokować."
+
+#: cogs/user_commands.py:177
+msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
+msgstr "Twoja broń jest sabotowana, dziękuję {assaillant} za ten zły żart."
+
+#: cogs/user_commands.py:190
+msgid ""
+"** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
+msgstr ""
+"**MAGAZYNEK PUSTY** | Amunicja w broni: {balles_actuelles} / {balles_max} | "
+"Pozostało magazynków: {chargeurs_actuels} / {chargeurs_max}"
+
+#: cogs/user_commands.py:224
+msgid "Your weapon just jammed, reload it to unjam it."
+msgstr "Twoja broń właśnie się zacięła, przeładuj ją aby odblokować broń."
+
+#: cogs/user_commands.py:251
+msgid ""
+"There isn't any duck in here, but the bullet wasn't fired because the "
+"infrared detector you added to your weapon is doing its job!"
+msgstr ""
+"Nie ma tu żadnej kaczki, ale kula nie została wystrzelona, ponieważ detektor "
+"podczerwieni, który zamontowałeś do swojej broni wykonuje swoje zadanie!"
+
+#: cogs/user_commands.py:266
+msgid ""
+"Luckily you missed, but what were you aiming at exactly? There isn't any "
+"duck in here... [missed: -1 xp] [wild shot: -1 xp]"
+msgstr ""
+"Na szczęscie nikogo nie trafiłeś, ale w co celowałeś? Nie ma tutaj żadnej "
+"kaczki... [missed: -1 xp] [wild shot: -1 xp]\n"
+
+#: cogs/user_commands.py:374
+msgid ""
+"**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
+"turn your weapon a little before shooting the next time? [missed: -1 xp] "
+"[hunting accident: -2 xp] [**weapon confiscated**]"
+msgstr ""
+"**BANG** Nie trafiłeś kaczki... i zastrzeliłeś **siebie**! Może powinieneś "
+"obrócić trochę broń przed następnym strzałem? [missed: -1 xp][Wypadek na "
+"polowaniu: -2xp][**Broń skonfiskowana**]"
+
+#: cogs/user_commands.py:381
+msgid ""
+"**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
+"accident: -2 xp] [**weapon confiscated**]"
+msgstr ""
+"**BANG** Nie trafiłeś kaczki... i zastrzeliłeś {player}! [missed: -"
+"1xp][Wypadek na polowaniu: -2xp][**Broń skonfiskowana**]"
+
+#: cogs/user_commands.py:390
+msgid ""
+"You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
+"get it back for free (check when with `!freetime`)"
+msgstr ""
+"Możesz ponownie kupić broń w sklepie (`dh!shop 5`) lub poczekać, aż "
+"dostaniesz ją z powrotem za darmo (sprawdź kiedy `!freetime`)"
+
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
+msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
+msgstr "**PIEWW** Przegapiłeś kaczkę! [missed: -1 xp]"
+
+#: cogs/user_commands.py:430
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr "Przytuliłeś {mention} tak mocno, jak mogłeś."
+
+#: cogs/user_commands.py:443
+msgid "You hugged a tree, Wizzz?!"
+msgstr "Przytuliłeś drzewo, Wizzz?"
+
+#: cogs/user_commands.py:446
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Nie ma tu żadnej kaczki. Co zamierzałeś przytulić, drzewo?!"
+
+#: cogs/user_commands.py:462
+msgid "**Current event**"
+msgstr "**Obecny event**"
+
+#: cogs/helpers/config.py:67
+msgid "*cries*"
+msgstr "*płacz*"
+
+#: cogs/helpers/config.py:67
+msgid "Hello world"
+msgstr "Witaj świecie."
+
+#: cogs/helpers/config.py:67
+msgid "How are you today?"
+msgstr "Jak się dzisiaj masz?"
+
+#: cogs/helpers/config.py:67
+msgid "Please don't kill me..."
+msgstr "Proszę, nie zabijaj mnie..."
+
+#: cogs/helpers/config.py:67
+msgid "I love you too!"
+msgstr "Ja też Cię kocham!"
+
+#: cogs/helpers/config.py:67
+msgid "Don't shoot me! I'm a fake duck!"
+msgstr "Nie strzelajcie do mnie! Jestem fałszywą kaczką!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr ""
+"**Duck fact**: Niektóre kaczki mogą przelecież do 534km w ciągu jednego "
+"dnia!"
+
 #: cogs/helpers/config.py:68
 msgid "**Duck fact**: The feathers on a ducks back are waterproof."
 msgstr "**Duck fact** Pióra na grzbiecie kaczki są wodoodporne."
@@ -970,7 +1246,7 @@ msgstr "Kaczka nie chce zostać zestrzelona. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Kaczka podeszła do stoiska z lemoniadą. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Kaczka odeszła do stoiska z lemoniadą. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:79
 msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1004,7 +1280,7 @@ msgstr "Przeżuta guma do żucia."
 
 #: cogs/helpers/config.py:84
 msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
-msgstr "ulotkę od CACAD (Koalicja przeciwko Komitecie przeciwko Kaczkom)."
+msgstr "ulotkę od KPKPK (Koalicja przeciwko Komitecie przeciwko Kaczkom)."
 
 #: cogs/helpers/config.py:84
 msgid "an old shoe."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-29 09:05+0000\n"
+"POT-Creation-Date: 2020-05-02 09:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,6 +246,34 @@ msgid ""
 msgstr ""
 "De bot wordt vaak opnieuw opgestart voor updates. Maak je geen zorgen, de "
 "bot heeft een uptime van 99,8%."
+
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
+#: cogs/meta.py:69
+msgid ""
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Volg deze link om me uit te nodigen voor je server: https://docs.duckhunt.me/"
+"bot-administration/admin-quickstart"
+
+#: cogs/meta.py:75
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Als je een nieuwe speler bent, lees dan dit: <https://docs.duckhunt.me/"
+"players-guide/players-quickstart>. Anders is hier de spelerscommandolijst "
+"<https://docs.duckhunt.me/players-guide/player-commands> en de "
+"admincommando's <https://docs.duckhunt.me/bot-administration/admin-commands> "
+"| Als je iets nodig hebt, voel je vrij om je aan te sluiten bij de "
+"supportserver op https://discordapp.com/invite/2BksEkV"
 
 #: cogs/meta.py:88
 msgid ""
