@@ -191,7 +191,7 @@ class Experience(commands.Cog):
             await self.bot.send_message(ctx=ctx, message=_(":champagne: You already have a sight on your weapon.", language))
 
     @shop.command(name="8", aliases=["infrared", "infrared_detector", "infrareddetector", "detector"])
-    @checks.have_exp(5)
+    @checks.have_exp(15)
     async def item8(self, ctx):
         """Buy an infrared detector (15 exp)
         !shop 8"""
