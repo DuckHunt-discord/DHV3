@@ -486,22 +486,22 @@ class Experience(commands.Cog):
         message = ctx.message
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
-        
+
         tempmsg = ""
         if random.randint(1, 6) == 1:
             self.bot.ducks_planning[message.channel] += 1
-            tempmsg = "The ducks are sensing your delicious wafers..."
-            
+            tempmsg = _("The ducks are sensing your delicious wafers...", language)
+
         # TODO : For real, make it !
         # commons.bread[message.channel] += 20
         await self.bot.db.add_to_stat(message.channel, message.author, "exp", -2)
 
         await self.bot.send_message(ctx=ctx,
-                                    message=_(":money_with_wings: You put some bread on the channel to attract ducks. " + tempmsg, language))
-        
+                                    message=_(":money_with_wings: You put some bread on the channel to attract ducks. ", language) + tempmsg)
+
         #TODO: put this back in to the message above when it works:  lol
-        # They'll stay 20 seconds longer before leaving for the rest of the day!", language))   
-        
+        # They'll stay 20 seconds longer before leaving for the rest of the day!", language))
+
         await self.bot.hint(ctx=ctx, message=_(":money_with_wings: Bread can stack! Buy some more to maximise the effects!", language))
 
     @shop.command(name="22", aliases=["NOT2"])
