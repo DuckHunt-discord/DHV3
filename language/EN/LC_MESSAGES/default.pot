@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-05 06:36+0000\n"
+"POT-Creation-Date: 2020-05-13 07:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -713,6 +713,10 @@ msgstr ""
 msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the "
 "channel, thanks to {mention}'s decoy. They bought it for 8 exp!"
+msgstr ""
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
 msgstr ""
 
 #: cogs/shop.py:500
