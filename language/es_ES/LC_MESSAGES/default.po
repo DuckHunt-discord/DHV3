@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-13 07:24+0000\n"
+"POT-Creation-Date: 2020-05-16 19:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -958,6 +958,10 @@ msgid ""
 msgstr ""
 ":money_with_wings: Aparecerá un pato en los próximos 10 minutos en el canal, "
 "gracias al señuelo de {mention}. ¡Lo compró por 8 de exp!"
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Los patos sienten tus deliciosas obleas..."
 
 #: cogs/shop.py:500
 msgid ""
