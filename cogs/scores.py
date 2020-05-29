@@ -10,6 +10,7 @@ from discord.ext.commands import BucketType
 
 from cogs.helpers import checks
 
+
 class Get_Stats:
     def __init__(self, bot, channel, target):
         self.channel = channel
@@ -25,8 +26,8 @@ class Scores(commands.Cog):
         self.bot = bot
 
     async def objectTD(self, gs, object):
-        date_expiration = datetime.fromtimestamp(await gs(object))
-        td = date_expiration - datetime.now(timezone.utc)
+        date_expiration = datetime.datetime.fromtimestamp(await gs(object))
+        td = date_expiration - datetime.datetime.now(datetime.timezone.utc)
         _ = gs.bot._
         language = await self.bot.db.get_pref(gs.channel, "language")
 
@@ -35,8 +36,6 @@ class Scores(commands.Cog):
                "dans_jours": _("{dans} days ", language).format(**{"dans": td.days}) if td.days else "",
                "dans_heures": _("{dans} hours", language).format(**{"dans": td.seconds // 3600}),
                "dans_minutes": _("{dans} minutes", language).format(**{"dans": (td.seconds // 60) % 60})})
-
-
 
     @commands.command(aliases=["topscores", "leaderboard", "top_scores"])
     @checks.is_channel_enabled()
@@ -47,9 +46,8 @@ class Scores(commands.Cog):
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.channel, "language")
 
-
-
-        await self.bot.send_message(ctx=ctx, message=_("The scores are online at https://duckstats.api-d.com/duckstats.php?cid={channel_id}", language).format(
+        await self.bot.send_message(ctx=ctx, message=_(
+            "The scores are online at https://duckstats.api-d.com/duckstats.php?cid={channel_id}", language).format(
             channel_id=channel.id))
         # await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
 
@@ -241,13 +239,11 @@ class Scores(commands.Cog):
                     reaction = False
 """
 
-
     @commands.command(aliases=["stats", "duck_stats"])
     @checks.is_channel_enabled()
     @commands.cooldown(2, 60, BucketType.user)
     @checks.had_giveback()
-    async def duckstats(self, ctx, target: discord.Member=None):
-
+    async def duckstats(self, ctx, target: discord.Member = None):
         message = ctx.message
         channel = message.channel
         _ = self.bot._
@@ -256,9 +252,11 @@ class Scores(commands.Cog):
         if not target:
             target = ctx.message.author
 
-        await self.bot.send_message(ctx=ctx, message=_("Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats.php?cid={channel_id}&pid={player_id}", language).format(
+        await self.bot.send_message(ctx=ctx, message=_(
+            "Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats.php?cid={channel_id}&pid={player_id}",
+            language).format(
             channel_id=ctx.channel.id, player_id=target.id))
-        #await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
+        # await self.bot.hint(ctx=ctx, message="The following will disappear in a few days. If you notice a bug, please report it on the DuckHunt server : <https://discord.gg/G4skWae>. Thanks! ")
 
         # Old version of the command
         """
@@ -441,6 +439,7 @@ class Scores(commands.Cog):
                     pass
                 return
 """
+
 
 def setup(bot):
     bot.add_cog(Scores(bot))

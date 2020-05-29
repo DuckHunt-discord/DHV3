@@ -217,34 +217,5 @@ class SuperAdmin(commands.Cog):
             await ctx.send(content="Done.", file=discord.File(fp=f, filename="server_owners.txt"))
 
 
-    @commands.command(pass_context=True)
-    @checks.is_super_admin()
-    async def broadcast(self, ctx, *, bc: str):
-        """!broadcast [message]"""
-        await self.bot.send_message(ctx=ctx, message="Starting the broadcast...")
-        ctx.logger.warning(f"Starting broadcast with message : \n{bc}")
-        channels = list(self.bot.ducks_planning.keys())
-        total = len(channels)
-        i = 0
-        f = 0
-        for channel in channels:
-            i += 1
-            if channel.guild.id in [268479971410837504, 336642139381301249]:
-                continue
-            try:
-                await channel.send(content=bc.format(channel_id=channel.id))
-                ctx.logger.debug(f"Broadcast : {i}/{total}")
-                await asyncio.sleep(3)
-                if i % 50 == 0:
-                    await self.bot.send_message(ctx=ctx, message=f"{i}/{total} ({f} failed)")
-            except Exception as e:
-                f += 1
-                ctx.logger.info(f"Error broadcasting to {channel.name} : {e}")
-                pass
-
-        ctx.logger.info("Broadcast done.")
-        await self.bot.send_message(ctx=ctx, message="Broadcast finished!", return_message=True)  # Rate limits
-
-
 def setup(bot):
     bot.add_cog(SuperAdmin(bot))

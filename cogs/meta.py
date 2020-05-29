@@ -64,6 +64,13 @@ class Meta(commands.Cog):
         await self.bot.send_message(ctx=ctx, message=_("https://docs.duckhunt.me/"))
 
     @commands.command()
+    @checks.is_channel_enabled()
+    async def pee(self, ctx):
+        _ = self.bot._
+        # Translators : This is a pun on pew/pee...
+        await self.bot.send_message(ctx=ctx, message=_("You don't have to go right now..."))
+
+    @commands.command()
     async def invite(self, ctx):
         _ = self.bot._
         await self.bot.send_message(ctx=ctx, message=_("Follow this link to invite me to your server: https://docs.duckhunt.me/bot-administration/admin-quickstart"))

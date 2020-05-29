@@ -1,3 +1,5 @@
+import time
+
 import discord
 from discord.ext import commands
 from discord.ext.commands import BucketType
@@ -62,7 +64,9 @@ class Admin(commands.Cog):
         language = await self.bot.db.get_pref(ctx.channel, "language")
         await ctx.bot.db.enable_channel(ctx.channel)
         await spawning.planifie(self.bot, ctx.channel, new_day=False)
-        await self.bot.send_message(ctx=ctx, message=_("<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to the game! Have fun!", language).format(**{"channel": ctx.channel.mention}))
+        await self.bot.send_message(ctx=ctx, message=_(
+            "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to the game! Have fun!",
+            language).format(**{"channel": ctx.channel.mention}))
 
     @commands.command(aliases=["del_channel", "delchannel"])
     @checks.is_server_admin()
@@ -78,8 +82,11 @@ class Admin(commands.Cog):
             if duck.channel == ctx.channel:
                 duck.delete()
 
-        await self.bot.send_message(ctx=ctx, message=_("<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed from the game. Bye!", language).format(**{"channel": ctx.channel.mention}))
-        await self.bot.hint(ctx=ctx, message="This does not remove the scores. Use `dh!removeallscoresandstatsonthischannel` to remove them.")
+        await self.bot.send_message(ctx=ctx, message=_(
+            "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed from the game. Bye!",
+            language).format(**{"channel": ctx.channel.mention}))
+        await self.bot.hint(ctx=ctx,
+                            message="This does not remove the scores. Use `dh!removeallscoresandstatsonthischannel` to remove them.")
 
     @commands.command(aliases=["addadmin"])
     @checks.is_server_admin()
@@ -87,7 +94,9 @@ class Admin(commands.Cog):
         _ = self.bot._
         language = await self.bot.db.get_pref(ctx.channel, "language")
         await ctx.bot.db.add_admin(ctx.guild, new_admin)
-        await self.bot.send_message(ctx=ctx, message=_("<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the guild!", language).format(**{"admin": new_admin.mention}))
+        await self.bot.send_message(ctx=ctx, message=_(
+            "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the guild!", language).format(
+            **{"admin": new_admin.mention}))
 
     @commands.command(aliases=["deladmin"])
     @checks.is_server_admin()
@@ -95,14 +104,16 @@ class Admin(commands.Cog):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
         await ctx.bot.db.del_admin(ctx.guild, old_admin)
-        await self.bot.send_message(ctx=ctx, message=_("<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild admins.", language).format(**{"admin": old_admin.mention}))
+        await self.bot.send_message(ctx=ctx, message=_(
+            "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild admins.", language).format(
+            **{"admin": old_admin.mention}))
 
     @commands.command(aliases=["spawnduck", "coin"])
     @checks.is_server_admin()
     @checks.is_channel_enabled()
     @commands.cooldown(5, 30, BucketType.guild)
     async def spawn_duck(self, ctx, *, args: str = ""):
-        args = args.replace("—", "--")  #Fix for mobile users
+        args = args.replace("—", "--")  # Fix for mobile users
         args = args.split()
         parser = argparse.ArgumentParser(description='Parse the spawn ducks command.')
         parser.add_argument('--super-duck', dest='super_duck', action='store_true', help='Is the duck a super duck ?')
@@ -113,8 +124,9 @@ class Admin(commands.Cog):
         try:
             args = parser.parse_args(args)
         except SystemExit:
-            await self.bot.hint(ctx=ctx, message=f"You have to use `--super-duck`, `--baby-duck`, `--moad` & `--life X` here.\n For example `{ctx.prefix}coin --super-duck --life 4` for a super duck "
-            f"with 4 HP")
+            await self.bot.hint(ctx=ctx,
+                                message=f"You have to use `--super-duck`, `--baby-duck`, `--moad` & `--life X` here.\n For example `{ctx.prefix}coin --super-duck --life 4` for a super duck "
+                                        f"with 4 HP")
             return
 
         if args.baby_duck:
@@ -144,7 +156,8 @@ class Admin(commands.Cog):
         await self.bot.hint(ctx=ctx, message="You can delete a user that left if you have his ID. Use `dh!del_user_id`")
 
     @commands.command(
-        aliases=["remove_all_scores_and_stats_on_this_channel", "remove_scores_and_stats_on_this_channel", "delete_all_scores_and_stats_on_this_channel", "delete_scores_and_stats_on_this_channel"])
+        aliases=["remove_all_scores_and_stats_on_this_channel", "remove_scores_and_stats_on_this_channel",
+                 "delete_all_scores_and_stats_on_this_channel", "delete_scores_and_stats_on_this_channel"])
     @checks.is_server_admin()
     @commands.cooldown(1, 20, BucketType.guild)
     async def removeallscoresandstatsonthischannel(self, ctx):
@@ -155,6 +168,30 @@ class Admin(commands.Cog):
 
         await self.bot.send_message(ctx=ctx, message=_("Done. All channel data was removed.", language))
         await self.bot.hint(ctx=ctx, message="This does not stop the game. Use `dh!remove_channel` to stop it.")
+
+    @commands.command()
+    @checks.is_channel_enabled()
+    @checks.is_server_admin()
+    @commands.cooldown(1, 20, BucketType.guild)
+    async def cheat_user_for_real(self, ctx, user: discord.Member = None):
+        DAY = (60 * 60 * 24)
+        next_day = int(time.time() + DAY)
+        if not user:
+            user = ctx.author
+        await self.bot.db.set_stat(ctx.channel, user, "balles", 99)
+        await self.bot.db.set_stat(ctx.channel, user, "exp", 99999)
+        clover = await self.bot.db.get_pref(ctx.channel, "clover_max_exp")
+        await self.bot.db.set_stat(ctx.channel, user, "trefle", next_day)
+        await self.bot.db.set_stat(ctx.channel, user, "trefle_exp", clover)
+        await self.bot.db.set_stat(ctx.channel, user, "explosive_ammo", next_day)
+        await self.bot.db.set_stat(ctx.channel, user, "graisse", next_day)
+        await self.bot.db.set_stat(ctx.channel, user, "sight", 100)
+        await self.bot.db.set_stat(ctx.channel, user, "detecteur_infra_shots_left", 100)
+        await self.bot.db.set_stat(ctx.channel, user, "detecteurInfra", next_day)
+        await self.bot.db.set_stat(ctx.channel, user, "silencieux", next_day)
+        await self.bot.db.set_stat(ctx.channel, user, "sunglasses", next_day)
+        await ctx.send("👌 Lol okay")
+
 
     @commands.command(aliases=["reset_user_id"])
     @checks.is_channel_enabled()
@@ -172,13 +209,13 @@ class Admin(commands.Cog):
 
     @commands.group()
     @checks.is_channel_enabled()
-
     async def settings(self, ctx):
         _ = self.bot._;
         language = await self.bot.db.get_pref(ctx.channel, "language")
 
         if not ctx.invoked_subcommand:
-            await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] [setting]`", language))
+            await self.bot.send_message(ctx=ctx, message=_(
+                ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] [setting]`", language))
 
     @settings.command(name='view')
     @commands.cooldown(5, 20, BucketType.guild)
@@ -191,7 +228,8 @@ class Admin(commands.Cog):
             await self.bot.send_message(ctx=ctx, message=_("Unknown setting...", language))
             return
 
-        await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} is set to `{value}` on this guild.", language).format(
+        await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} is set to `{value}` on this guild.",
+                                                       language).format(
             **{"value": await self.bot.db.get_pref(ctx.message.channel, pref), "pref": pref}))
 
     @settings.command(name='set')
@@ -213,7 +251,9 @@ class Admin(commands.Cog):
                 if int(value) > maxCJ:
                     if ctx.message.author.id in self.bot.admins:
                         await self.bot.send_message(ctx=ctx,
-                                                    message=_("Bypassing the max_ducks_per_day check as you are the bot owner. It would have been `{max}`.", language).format(**{"max": maxCJ}))
+                                                    message=_(
+                                                        "Bypassing the max_ducks_per_day check as you are the bot owner. It would have been `{max}`.",
+                                                        language).format(**{"max": maxCJ}))
                     elif await self.bot.db.get_pref(ctx.channel, "vip"):
                         await self.bot.send_message(ctx=ctx, message=_(
                             "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please don't abuse that. For information, the limit would have been set at `{max}` ducks per day.",
@@ -223,9 +263,11 @@ class Admin(commands.Cog):
 
             elif pref == "vip":
                 if ctx.message.author.id in self.bot.admins:
-                    await self.bot.send_message(ctx=ctx, message=_("<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP status!", language))
+                    await self.bot.send_message(ctx=ctx, message=_(
+                        "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP status!", language))
                 else:
-                    await self.bot.send_message(ctx=ctx, message=_(":x: Unauthorised to set the VIP status! You are not an owner.", language))
+                    await self.bot.send_message(ctx=ctx, message=_(
+                        ":x: Unauthorised to set the VIP status! You are not an owner.", language))
                     return False
             elif pref == "time_before_ducks_leave":
                 if int(value) > 3600:
@@ -238,8 +280,11 @@ class Admin(commands.Cog):
             if pref == "ducks_per_day":
                 await spawning.planifie(self.bot, channel=ctx.message.channel, new_day=False)
 
-            await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} has been set to `{value}` on this guild.", language).format(
-                **{"value": await self.bot.db.get_pref(ctx.message.channel, pref), "pref": pref}))
+            await self.bot.send_message(ctx=ctx,
+                                        message=_(":ok: The setting {pref} has been set to `{value}` on this guild.",
+                                                  language).format(
+                                            **{"value": await self.bot.db.get_pref(ctx.message.channel, pref),
+                                               "pref": pref}))
             return True
         else:
             await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect value.", language))
@@ -263,13 +308,15 @@ class Admin(commands.Cog):
             if pref == "ducks_per_day":
                 await spawning.planifie(self.bot, channel=ctx.message.channel, new_day=False)
 
-            await self.bot.send_message(ctx=ctx, message=_(":ok: The setting {pref} has been set to `{value}` on this guild.", language).format(
-                **{"value": await self.bot.db.get_pref(ctx.message.channel, pref), "pref": pref}))
+            await self.bot.send_message(ctx=ctx,
+                                        message=_(":ok: The setting {pref} has been set to `{value}` on this guild.",
+                                                  language).format(
+                                            **{"value": await self.bot.db.get_pref(ctx.message.channel, pref),
+                                               "pref": pref}))
             return True
         else:
             await self.bot.send_message(ctx=ctx, message=_(":x: Incorrect value.", language))
             return False
-
 
 
 def setup(bot):

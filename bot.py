@@ -347,7 +347,7 @@ logger.debug("Loading cogs : ")
 ##############   #####
 
 cogs = ['jishaku', 'cogs.admin_commands', 'cogs.analytics', 'cogs.experience_related_commands', 'cogs.helpers.database', 'cogs.meta', 'cogs.scores', 'cogs.setup_wizzard', 'cogs.shop', 'cogs.superadmin_commands',
-        'cogs.user_commands', 'cogs.evals', 'cogs.api'  # This must be the last to run, comment if you don't need it
+        'cogs.user_commands', 'cogs.api'  # This must be the last to run, comment if you don't need it
         ]
 
 for extension in cogs:
