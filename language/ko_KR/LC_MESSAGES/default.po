@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-16 19:47+0000\n"
+"POT-Creation-Date: 2020-05-29 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,31 +19,31 @@ msgstr ""
 
 #: bot.py:155
 msgid ":x: A required argument is missing."
-msgstr ":x: 필수 인수가 누락되었습니다."
+msgstr ":x: 커맨드가 잘못되었습니다."
 
 #: bot.py:159
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: 이에 대한 포인트가 부족합니다."
+msgstr ":x: 를 사용하기 위한 포인트가 부족합니다."
 
 #: bot.py:162
 msgid ":x: You are not a server admin"
-msgstr ":x: 당신은 서버 관리자가 아닙니다."
+msgstr ":x: 서버 관리자 권한이 필요합니다."
 
 #: bot.py:165
 msgid ":x: You are not a super admin."
-msgstr ":x: 너는 최고 관리자가 아니다."
+msgstr ":x: 최고 관리자 권한이 필요합니다."
 
 #: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"이 명령은 보트 소유자를 위해 예약되어 있습니다. 이것이 오류라고 생각되면 DuckHunt 지원 서버 (Dh! help 참조)에 "
+"이 명령은 봇 소유자를 위해 금지되어 있습니다. 이것이 오류라고 생각되면 DuckHunt 지원 서버 (Dh! help 참조)에 "
 "문의하십시오."
 
 #: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
-msgstr "당신은 DuckHunt를 봇 리스트에서 오랫동안 투표를 안하쎴습니다  "
+msgstr "당신은 DuckHunt를 봇 리스트에서 오랫동안 투표하시지 않았습니다"
 
 #: bot.py:171
 msgid ""
@@ -53,83 +53,83 @@ msgid ""
 "DuckHunt Support Server (see `dh!help`)."
 msgstr ""
 "<https://discordbots.org/bot/duckhunt>에서 투표하여 이 명령을 사용하도록 봇을 지원하십시오. "
-"Duckhunt에 의해 투표가 등록 되려면 1 분이 걸릴 수 있습니다. 이것이 잘못되었다고 생각되면 DuckHunt 지원 서버의 "
-"소유자에게 문의하십시오 (`dh! 도움말`참조)."
+"Duckhunt에 의해 투표가 등록 되려면 1 분이 걸릴 수 있습니다. 에러가 날 경우 DuckHunt 지원 서버의 소유자에게 "
+"문의하십시오 (`dh!help`참조)."
 
 #: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
-msgstr "재사용 대기 시간이 남아있습니다  : ({seconds} 초 후에 다시 시도하십시오!"
+msgstr "쿨다운  : ({seconds} 초 후에 다시 시도하십시오!"
 
 #: bot.py:189
 msgid ":bulb: HINT: "
 msgstr ":bulb: 힌트"
 
-#: cogs/admin_commands.py:27
+#: cogs/admin_commands.py:29
 msgid ":ok: Done, user banned. :gun:"
-msgstr ":ok: 끝난, 이 사용자는 차단되었습니다. :gun:"
+msgstr ":ok: 밴 :gun:"
 
-#: cogs/admin_commands.py:39
+#: cogs/admin_commands.py:41
 msgid ":ok: Done, user unbanned. :eyes:"
-msgstr ":ok: 끝난, 사용자가 금지되지 않은 사용자 :eyes:"
+msgstr ":ok: 벤이 해제되었습니다 :eyes:"
 
-#: cogs/admin_commands.py:65
+#: cogs/admin_commands.py:67
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
 msgstr ""
-"<:cmd_ChannelAdded_01:439546719143723019> 끝난, 채널 {channel} 게임에 추가됨! 재밌게 놀아!"
+"<:cmd_ChannelAdded_01:439546719143723019> 설정완료! {channel}에 게임에 추가됬어 GG!"
 
-#: cogs/admin_commands.py:81
+#: cogs/admin_commands.py:85
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
 msgstr ""
-"<:cmd_ChannelRemoved_01:439546718737137674> 완료 , 채널 {channel} 게임에서 제거하다. 안녕!"
+"<:cmd_ChannelRemoved_01:439546718737137674> 설정완료! {channel}에서 게임이 제거됬어"
 
-#: cogs/admin_commands.py:90
+#: cogs/admin_commands.py:97
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
 msgstr ""
 "<:cmd_AdminAdded_01:439549846622568466>{admin}에 인해서  길드에 관리자로 추가되었습니다!"
 
-#: cogs/admin_commands.py:98
+#: cogs/admin_commands.py:107
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
 msgstr "<:cmd_AdminRemoved_01:439549845519335440>{admin}가 길드 관리자에서 제거되었습니다"
 
-#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+#: cogs/admin_commands.py:155 cogs/admin_commands.py:206
 msgid "Done. User removed from the database, if he was in."
-msgstr "완료 사용자가 데이터베이스에있는 경우 데이터베이스에서 제거했습니다."
+msgstr "사용자를 데이터베이스에서 제거하였습니다"
 
-#: cogs/admin_commands.py:156
+#: cogs/admin_commands.py:169
 msgid "Done. All channel data was removed."
-msgstr "완료 이 채널에 기록은 지워졌습니다 "
+msgstr "채널로그가 삭제되었습니다"
 
-#: cogs/admin_commands.py:181
+#: cogs/admin_commands.py:217
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
 "[setting]`"
 msgstr ""
 "잘못된 명령어 입니다. 다음과 같은 명령을 사용하십시오 :`! settings [view / set / reset] [setting]`"
 
-#: cogs/admin_commands.py:191 cogs/admin_commands.py:206
-#: cogs/admin_commands.py:257
+#: cogs/admin_commands.py:228 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:302
 msgid "Unknown setting..."
 msgstr "이 설정은 존재하지 않습니다 "
 
-#: cogs/admin_commands.py:194
+#: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ": ok :이 길드에서는 {pref} 설정이`{value}`로 설정되었습니다."
 
-#: cogs/admin_commands.py:216
+#: cogs/admin_commands.py:254
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr "당신은 봇 소유자 임으로 max_ducks_per_day 확인을 무시합니다. 아니면 `{max}`였을 것입니다."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:258
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -138,22 +138,22 @@ msgstr ""
 "VIP 길드에있을 때는 max_ducks_per_day 확인을 무시하고 넘어 갑니다. 그것을 남용하지 마십시오. 자세한설명을 위해 "
 "한도는`{max}`오리로 설정되었을 것입니다"
 
-#: cogs/admin_commands.py:226
+#: cogs/admin_commands.py:266
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
 msgstr "<:official_Duck_01_reversed:439576463436546050> 는 VIP 를 설정할 권한이 있습니다"
 
-#: cogs/admin_commands.py:228
+#: cogs/admin_commands.py:269
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr "당신은 봇의 소유자가 아니여서 VIP를 설정 할수 없습니다  "
 
-#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
-#: cogs/admin_commands.py:270
+#: cogs/admin_commands.py:276 cogs/admin_commands.py:290
+#: cogs/admin_commands.py:318
 msgid ":x: Incorrect value."
 msgstr ": x : 잘못된 값입니다."
 
-#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
+#: cogs/admin_commands.py:284 cogs/admin_commands.py:312
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ": ok :이 길드에서는 {pref} 설정이`{value}`로 설정되었습니다."
 
@@ -194,24 +194,24 @@ msgstr "경험치가 충분하지 않습니다"
 msgid ":x: Sending exp is disabled on this server"
 msgstr ": x :이 서버에서는  경험치를 보낼 수 없습니다"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:34
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (안에{dans_jours} {dans_heures} 그리고 {dans_minutes}) "
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m/%d at %H:%M:%S"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:36
 msgid "{dans} days "
 msgstr "{dans} 일"
 
-#: cogs/experience_related_commands.py:96 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} hours"
 msgstr "{dans} 시간"
 
-#: cogs/experience_related_commands.py:96 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:38
 msgid "{dans} minutes"
 msgstr "{dans} 분"
 
@@ -226,7 +226,7 @@ msgstr "봇은 종종 업데이트를 위해 재부팅합니다. 걱정하지 �
 msgid "https://docs.duckhunt.me/"
 msgstr "https://docs.duckhunt.me/"
 
-#: cogs/meta.py:69
+#: cogs/meta.py:76
 msgid ""
 "Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
 "administration/admin-quickstart"
@@ -234,7 +234,7 @@ msgstr ""
 "이 링크를 따라 나를 서버로 초대하십시오 : https://docs.duckhunt.me/bot-administration/admin-"
 "quickstart"
 
-#: cogs/meta.py:75
+#: cogs/meta.py:82
 msgid ""
 "If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
 "players-quickstart>. Otherwise, here is the players command list <https://"
@@ -249,7 +249,7 @@ msgstr ""
 "commands> | 필요한 것이 있으면 https://discordapp.com/invite/2BksEkV에서 지원 서버에 가입하십시오."
 ""
 
-#: cogs/meta.py:88
+#: cogs/meta.py:95
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -258,20 +258,20 @@ msgstr ""
 "봇이 사용하는 GMT 시간대 (UTC ± 00 : 00)`{hour} : {minutes} : {seconds}`입니다. 이 웹 사이트를 "
 "사용하여 귀하의 웹 사이트와 비교할 수 있습니다: https://time.is/compare/GMT"
 
-#: cogs/meta.py:91
+#: cogs/meta.py:98
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr "`dh! freetime` 명령을 사용하여 압수된 무기를 언제 무료로받을 수 있는지 확인할 수 있습니다"
 
-#: cogs/meta.py:106
+#: cogs/meta.py:113
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
 ": alarm_clock : {sec} 초 ({hours} 시간 및 {minutes} 분) 후 무기와 탄창을 다음으로 되돌립니다."
 
-#: cogs/meta.py:109
+#: cogs/meta.py:116
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -280,11 +280,11 @@ msgstr ""
 "자유시간 에는 찬탕을 채워주고 무기를 무료로 돌려줍니다 (압수 된 경우) 현재 총의 총알에는 영향을 미치지 않습니다. 가능하면 미리 재 "
 "장전 하십시오!"
 
-#: cogs/meta.py:123
+#: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "{total} 총 샤드 중 샤드 번호 {shard}를 사용하고 있습니다."
 
-#: cogs/scores.py:52
+#: cogs/scores.py:49
 msgid ""
 "The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
 "{channel_id}"

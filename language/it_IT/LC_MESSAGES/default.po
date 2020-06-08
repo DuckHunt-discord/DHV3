@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-16 19:47+0000\n"
+"POT-Creation-Date: 2020-05-29 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,15 +67,15 @@ msgstr "Sei in cooldown :(, riprova tra {seconds} secondi!"
 msgid ":bulb: HINT: "
 msgstr ":bulb: SUGGERIMENTO:"
 
-#: cogs/admin_commands.py:27
+#: cogs/admin_commands.py:29
 msgid ":ok: Done, user banned. :gun:"
 msgstr ":ok: Fatto, utente bannato. :gun:"
 
-#: cogs/admin_commands.py:39
+#: cogs/admin_commands.py:41
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ":ok: Fatto, rimosso il ban dall’utente. :eyes:"
 
-#: cogs/admin_commands.py:65
+#: cogs/admin_commands.py:67
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
@@ -83,7 +83,7 @@ msgstr ""
 "<:cmd_ChannelAdded_01:439546719143723019>Fatto, il canale {channel} è stato "
 "aggiunto al gioco! Divertiti!"
 
-#: cogs/admin_commands.py:81
+#: cogs/admin_commands.py:85
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
@@ -91,7 +91,7 @@ msgstr ""
 "<:cmd_ChannelRemoved_01:439546718737137674>Fatto, il canale {channel} è "
 "stato rimosso dal gioco. Ciao!"
 
-#: cogs/admin_commands.py:90
+#: cogs/admin_commands.py:97
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
@@ -99,7 +99,7 @@ msgstr ""
 "<:cmd_AdminAdded_01:439549846622568466>{admin} è stato aggiunto come un "
 "amministratore della gilda!"
 
-#: cogs/admin_commands.py:98
+#: cogs/admin_commands.py:107
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
@@ -107,15 +107,15 @@ msgstr ""
 "<:cmd_AdminRemoved_01:439549845519335440>{admin} rimosso dagli "
 "amministratori della gilda."
 
-#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+#: cogs/admin_commands.py:155 cogs/admin_commands.py:206
 msgid "Done. User removed from the database, if he was in."
 msgstr "Fatto. Utente rimosso dal database, se presente."
 
-#: cogs/admin_commands.py:156
+#: cogs/admin_commands.py:169
 msgid "Done. All channel data was removed."
 msgstr "Fatto. Tutti i dati del canale sono stati rimossi."
 
-#: cogs/admin_commands.py:181
+#: cogs/admin_commands.py:217
 msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
 "[setting]`"
@@ -123,16 +123,16 @@ msgstr ""
 ":x: Sintassi errata. Usa il comando in questo modo: `!settings [view/set/"
 "reset] [setting]`"
 
-#: cogs/admin_commands.py:191 cogs/admin_commands.py:206
-#: cogs/admin_commands.py:257
+#: cogs/admin_commands.py:228 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:302
 msgid "Unknown setting..."
 msgstr "Impostazione sconosciuta..."
 
-#: cogs/admin_commands.py:194
+#: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ":ok: L’impostazione {pref} è impostata su `{value}` in questa gilda."
 
-#: cogs/admin_commands.py:216
+#: cogs/admin_commands.py:254
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -140,7 +140,7 @@ msgstr ""
 "Stai bypassando il max_ducks_per_day come se fossi il proprietario. Sarebbe "
 "stato `{max}`."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:258
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
@@ -150,7 +150,7 @@ msgstr ""
 "VIP. Per piacere non abusarne. Per tua informazione, il limite sarebbe stato "
 "fissato a `{max}`anatre al giorno."
 
-#: cogs/admin_commands.py:226
+#: cogs/admin_commands.py:266
 msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
@@ -158,17 +158,17 @@ msgstr ""
 "<:official_Duck_01_reversed:439576463436546050>Autorizzato ad impostare lo "
 "stato VIP!"
 
-#: cogs/admin_commands.py:228
+#: cogs/admin_commands.py:269
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
 ":x: Non autorizzato ad impostare lo stato VIP! Non sei un proprietario."
 
-#: cogs/admin_commands.py:234 cogs/admin_commands.py:245
-#: cogs/admin_commands.py:270
+#: cogs/admin_commands.py:276 cogs/admin_commands.py:290
+#: cogs/admin_commands.py:318
 msgid ":x: Incorrect value."
 msgstr ":x: Valore incorretto."
 
-#: cogs/admin_commands.py:241 cogs/admin_commands.py:266
+#: cogs/admin_commands.py:284 cogs/admin_commands.py:312
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
 msgstr ""
 ":ok: l’impostazione {pref} è stata impostata a `{value}` in questa gilda."
@@ -216,24 +216,24 @@ msgstr "Non hai abbastanza punti esperienza "
 msgid ":x: Sending exp is disabled on this server"
 msgstr ":x: l'invio di exp è disabilitato su questo server"
 
-#: cogs/experience_related_commands.py:94 cogs/scores.py:33
+#: cogs/experience_related_commands.py:94 cogs/scores.py:34
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
 msgstr "{date} (in {dans_jours} {dans_heures} e {dans_minutes})"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:34
+#: cogs/experience_related_commands.py:95 cogs/scores.py:35
 #, python-format
 msgid "%m/%d at %H:%M:%S"
 msgstr "%m /%d %H:%M:%S"
 
-#: cogs/experience_related_commands.py:95 cogs/scores.py:35
+#: cogs/experience_related_commands.py:95 cogs/scores.py:36
 msgid "{dans} days "
 msgstr "{dans} giorni"
 
-#: cogs/experience_related_commands.py:96 cogs/scores.py:36
+#: cogs/experience_related_commands.py:96 cogs/scores.py:37
 msgid "{dans} hours"
 msgstr "{dans} ore"
 
-#: cogs/experience_related_commands.py:96 cogs/scores.py:37
+#: cogs/experience_related_commands.py:96 cogs/scores.py:38
 msgid "{dans} minutes"
 msgstr "{dans} minuti"
 
@@ -250,7 +250,11 @@ msgstr ""
 msgid "https://docs.duckhunt.me/"
 msgstr "https://docs.duckhunt.me/"
 
-#: cogs/meta.py:69
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Non hai bisogno di andartene adesso..."
+
+#: cogs/meta.py:76
 msgid ""
 "Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
 "administration/admin-quickstart"
@@ -258,7 +262,7 @@ msgstr ""
 "Segui questo link per invitarmi nel tuo server: https://docs.duckhunt.me/bot-"
 "administration/admin-quickstart"
 
-#: cogs/meta.py:75
+#: cogs/meta.py:82
 msgid ""
 "If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
 "players-quickstart>. Otherwise, here is the players command list <https://"
@@ -274,7 +278,7 @@ msgstr ""
 "admin-commands> | Se avete bisogno di qualcosa, sentitevi liberi di unirvi "
 "al server di supporto all'indirizzo https://discordapp.com/invite/2BksEkV"
 
-#: cogs/meta.py:88
+#: cogs/meta.py:95
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
 "00), which is the one used by the bot. \n"
@@ -285,7 +289,7 @@ msgstr ""
 "Puoi utilizzare questo sito Web per confrontarlo con il tuo: https://time.is/"
 "compare/GMT"
 
-#: cogs/meta.py:91
+#: cogs/meta.py:98
 msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
@@ -293,7 +297,7 @@ msgstr ""
 "Puoi usare il comando `dh!freetime` per vedere quando potrai recuperare le "
 "tue armi gratuitamente"
 
-#: cogs/meta.py:106
+#: cogs/meta.py:113
 msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
@@ -301,7 +305,7 @@ msgstr ""
 ":alarm_clock: La prossima ridistribuzione di armi e cartucce avverrà tra "
 "{sec} secondi ({hours} ora(e) e {minutes} minuto(i))."
 
-#: cogs/meta.py:109
+#: cogs/meta.py:116
 msgid ""
 "A giveback tops up your magazines and gives you your weapon back for free "
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
@@ -311,11 +315,11 @@ msgstr ""
 "l'arma gratuitamente (se confiscata), ma non influisce sui proiettili nel "
 "tuo caricatore attuale. Se puoi, ricarica prima!"
 
-#: cogs/meta.py:123
+#: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Stai usando {shard} shards su un totale di {total} shards"
 
-#: cogs/scores.py:52
+#: cogs/scores.py:49
 msgid ""
 "The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
 "{channel_id}"
@@ -323,7 +327,7 @@ msgstr ""
 "I punteggi sono disponibili online all'indirizzo web https://duckstats.api-d."
 "com/duckstats.php?cid={channel_id}"
 
-#: cogs/scores.py:259
+#: cogs/scores.py:255
 msgid ""
 "Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
 "php?cid={channel_id}&pid={player_id}"
@@ -938,6 +942,10 @@ msgid ""
 msgstr ""
 ":money_with_wings: Un'anatra apparirà nei prossimi 10 minuti sul canale, "
 "grazie all'esca di {mention}. L'hanno acquistata per 8 exp!"
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Le anatre stanno percependo i tuoi deliziosi wafer..."
 
 #: cogs/shop.py:500
 msgid ""

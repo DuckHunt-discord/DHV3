@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-16 19:47+0000\n"
+"POT-Creation-Date: 2020-05-29 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,15 +68,15 @@ msgstr ""
 msgid ":bulb: HINT: "
 msgstr ":bec: INDICARE"
 
-#: cogs/admin_commands.py:27
+#: cogs/admin_commands.py:29
 msgid ":ok: Done, user banned. :gun:"
 msgstr ": ok: Done, interzis de utilizator.  : Gun:"
 
-#: cogs/admin_commands.py:39
+#: cogs/admin_commands.py:41
 msgid ":ok: Done, user unbanned. :eyes:"
 msgstr ": ok: Efectuat, utilizator neînregistrat.  : Ochi:"
 
-#: cogs/admin_commands.py:65
+#: cogs/admin_commands.py:67
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
@@ -84,7 +84,7 @@ msgstr ""
 "<: cmd_ChannelAdded_01: 439546719143723019> Gata, canalul {canal} adăugat la "
 "joc!  Distreaza-te!"
 
-#: cogs/admin_commands.py:81
+#: cogs/admin_commands.py:85
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
@@ -92,7 +92,7 @@ msgstr ""
 "<: cmd_ChannelRemoved_01: 439546718737137674> Gata, canalul {canal} eliminat "
 "din joc.  Pa!<:cmd_ChannelRemoved_01:439546718737137674>"
 
-#: cogs/admin_commands.py:90
+#: cogs/admin_commands.py:97
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
@@ -100,7 +100,7 @@ msgstr ""
 "<: cmd_AdminAdded_01: 439549846622568466> {admin} adăugat ca admin la "
 "breaslă!"
 
-#: cogs/admin_commands.py:98
+#: cogs/admin_commands.py:107
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
@@ -108,20 +108,20 @@ msgstr ""
 "<: cmd_AdminRemoved_01: 439549845519335440> {admin} eliminat din "
 "administratorii breslei."
 
-#: cogs/admin_commands.py:143 cogs/admin_commands.py:169
+#: cogs/admin_commands.py:155 cogs/admin_commands.py:206
 msgid "Done. User removed from the database, if he was in."
 msgstr ""
 "Efectuat.  Utilizatorul a fost eliminat din baza de date, dacă se afla."
 
-#: cogs/admin_commands.py:156
+#: cogs/admin_commands.py:169
 msgid "Done. All channel data was removed."
 msgstr "Efectuat.  Toate datele canalului au fost eliminate."
 
-#: cogs/admin_commands.py:194
+#: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ": ok: Setarea {pref} este setată pe `{value}` pe această breaslă."
 
-#: cogs/admin_commands.py:216
+#: cogs/admin_commands.py:254
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
@@ -129,7 +129,7 @@ msgstr ""
 "Evitarea verificării max_ducks_per_day, deoarece sunteți proprietarul "
 "botului.  Ar fi fost {{max} `."
 
-#: cogs/admin_commands.py:218
+#: cogs/admin_commands.py:258
 msgid ""
 "Bypassing the max_ducks_per_day check as you are in a VIP guild. Please "
 "don't abuse that. For information, the limit would have been set at `{max}` "
