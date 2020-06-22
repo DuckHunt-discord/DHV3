@@ -115,7 +115,20 @@ msgstr "C'est fait, l'utilisateur a été retiré de la base de données."
 
 #: cogs/admin_commands.py:169
 msgid "Done. All channel data was removed."
-msgstr "C'est fait, toutes les données de ce canal ont été supprimées."
+msgstr "C'est fait, toutes les données de ce salon ont été supprimées."
+
+#: cogs/admin_commands.py:217
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
+"[setting]`"
+msgstr ""
+":x: Syntaxe incorrecte. Utilisation correcte de la commande : `!settings "
+"[view/set/reset] [setting]`"
+
+#: cogs/admin_commands.py:228 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:302
+msgid "Unknown setting..."
+msgstr "Paramètre non reconnu..."
 
 #: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
@@ -235,6 +248,38 @@ msgstr ""
 "Le bot redémarre fréquemment pour effectuer des mises à jour. Ne vous "
 "inquiétez pas, il est en ligne 99.8% du temps."
 
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Vous n'avez pas besoin d'y aller maintenant..."
+
+#: cogs/meta.py:76
+msgid ""
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Suivez ce lien pour m'inviter dans votre serveur: https://docs.duckhunt.me/"
+"bot-administration/admin-quickstart"
+
+#: cogs/meta.py:82
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Si vous êtes un nouveau joueur, lisez ceci : <https://docs.duckhunt.me/"
+"players-guide/players-quickstart>. Sinon, voici la liste des commandes des "
+"joueurs <https://docs.duckhunt.me/players-guide/player-commands> et des "
+"commandes d'administration <https://docs.duckhunt.me/bot-administration/"
+"admin-commands> | Si vous avez besoin de quoi que ce soit, n'hésitez pas à "
+"rejoindre le serveur d'assistance ici: https://discordapp.com/invite/2BksEkV"
+
 #: cogs/meta.py:95
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
@@ -276,6 +321,22 @@ msgstr ""
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Vous êtes sur la partition n°{shard}/{total}."
 
+#: cogs/scores.py:49
+msgid ""
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Les scores sont disponibles en ligne sur http://duckhunt.api-d.com/web/"
+"duckstats.php?cid={channel_id}"
+
+#: cogs/scores.py:255
+msgid ""
+"Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Vos Duckstats vous attendent sur http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+
 #: cogs/setup_wizzard.py:24
 msgid ""
 "Hello!\n"
@@ -285,7 +346,7 @@ msgid ""
 msgstr ""
 "Coucou !\n"
 "Merci de m'avoir ajouté ici ! Je suis presque prêt à démarrer le jeu.\n"
-"Est-ce-que l'on peut aller dans le canal où vous voulez que le jeu soit "
+"Est-ce-que l'on peut aller dans le salon où vous voulez que le jeu soit "
 "activé ? Une fois là-bas, réveillez-moi avec la commande `dh!setup` <:"
 "event_GuildAdded_01:439550913112309781>"
 
@@ -465,7 +526,7 @@ msgstr ""
 "Si vous êtes prêts à continuer avec le paramétrage du bot, utilisez la "
 "commande `dh!setup_settings`. Si vous préférez commencer à jouer dès "
 "maintenant, utilisez la commande `dh!add_channel`. Une fois utilisée, des "
-"canards apparaîtront automatiquement sur le canal.\n"
+"canards apparaîtront automatiquement dans le salon.\n"
 "Merci de profiter de DuckHunt, si vous avez une question, toute l'équipe est "
 "présente pour vous aider sur le serveur de support à l'adresse https://"
 "discord.gg/2BksEkV "
@@ -517,7 +578,7 @@ msgstr ""
 "vous pouvez commencer à jouer dès maintenant à l'aide de la commande "
 "`dh!add_channel`.\n"
 "\n"
-"**Avant de commencer, assurez-vous que vous êtes bien sur le canal que vous "
+"**Avant de commencer, assurez-vous que vous êtes bien dans le salon que vous "
 "souhaitez utiliser, puis tapez `dh!add_channel` afin de l'activer.**\n"
 "\n"
 "**1/ Langage utilisé**:\n"
@@ -912,8 +973,19 @@ msgid ""
 ":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
 "thanks to {mention}'s decoy. They bought it for 8 exp!"
 msgstr ""
-":money_with_wings: Un canard apparaîtra dans les 10 prochaines minutes sur "
-"le canal, grâce à l'appeau de {mention}. Il l'a payé 8xp !"
+":money_with_wings: Un canard apparaîtra dans les 10 prochaines minutes dans "
+"le salon, grâce à l'appeau de {mention}. Il l'a payé 8xp !"
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Les canards sentent vos délicieuses gaufrettes..."
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ""
+":money_with_wings: Vous placez du pain dans le salon pour attirer les "
+"canards."
 
 #: cogs/shop.py:505
 msgid ""
@@ -927,8 +999,8 @@ msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
 msgstr ""
-":money_with_wings: Vous préparez un canard mécanique qui sera déposé sur le "
-"canal. Cela vous a coûté 40 exp, c'est bien méchant, mais très drôle aussi."
+":money_with_wings: Vous préparez un canard mécanique qui sera déposé dans le "
+"salon. Cela vous a coûté 40 exp, c'est bien méchant, mais très drôle aussi."
 
 #: cogs/user_commands.py:71 cogs/user_commands.py:158
 msgid "You don't have a weapon."

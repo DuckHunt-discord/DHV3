@@ -73,7 +73,7 @@ msgstr ":ok: Kész, felhasználó tilitva. :gun:"
 
 #: cogs/admin_commands.py:41
 msgid ":ok: Done, user unbanned. :eyes:"
-msgstr ":ok: Kész, felhasználó visszavéve. :eyes:"
+msgstr ":ok: Kész, felhasználó tiltása feloldva. :eyes:"
 
 #: cogs/admin_commands.py:67
 msgid ""
@@ -229,6 +229,45 @@ msgid ""
 msgstr ""
 "A bot gyakran újraindul a frissítések miatt. Ne aggódj, az örökkévalóság "
 "99,8%-ában a rendelkezésedre áll."
+
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
+#: cogs/meta.py:82
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Ha új játékos vagy, olvasd el ezt: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Máskülönben itt a játékosok parancsai <https://docs."
+"duckhunt.me/players-guide/player-commands> illetve az admin parancsok <https:"
+"//docs.duckhunt.me/bot-administration/admin-commands>. | Ha kell akármi, "
+"nyugodtan csatlakozz Discord szerverünkre itt: https://discordapp.com/invite/"
+"2BksEkV"
+
+#: cogs/meta.py:95
+msgid ""
+"It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
+"00), which is the one used by the bot. \n"
+"You can use this website to compare it to yours: https://time.is/compare/GMT"
+msgstr ""
+"Jelenleg `{hour}:{minutes}:{seconds}`van a GMT időzónában (másképp tudva "
+"UTC±00:00), amit ez a bot használ.\n"
+"Használhatod ezt a webhelyet, hogy összehasonlítsd a tiéddel: https://time."
+"is/compare/GMT"
+
+#: cogs/meta.py:98
+msgid ""
+"You can use the `dh!freetime` command to see when you'll get your weapons "
+"back for free"
+msgstr ""
+"A „dh!freetime” paranccsal megnézheted, mikor kapod vissza a fegyvered "
+"ingyen"
 
 #: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
@@ -703,6 +742,10 @@ msgid "I am invisible, don't bother killing me"
 msgstr "Láthatatlan vagyok, ne is próbálj megölni."
 
 #: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Ki volt az a kis ████ itt aki megölte a barátomat?"
+
+#: cogs/helpers/config.py:69
 msgid "You can't aim for good..."
 msgstr "Béna a célzásod..."
 
@@ -779,6 +822,12 @@ msgstr "*Szürcs*"
 #: cogs/helpers/config.py:72
 msgid "Hopefully you are all AFK..."
 msgstr "Remélhetőleg mind AFK vagytok..."
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr ""
+"**DuckHunt ProTip®**: Használj infraredes érzékelőket hogy ne legyenek "
+"haszontalan lövéseid."
 
 #: cogs/helpers/config.py:73
 msgid "I'm just doing my job..."
@@ -1278,6 +1327,10 @@ msgstr "egy majdnem üres doboz, benne pár robbanólőszerrel."
 msgid "some duck-grease"
 msgstr "némi kacsazsír"
 
+#: cogs/helpers/ducks.py:116
+msgid "a fully functional infrared detector"
+msgstr "egy teljesen funkcionális infraredes észlelőt"
+
 #: cogs/helpers/ducks.py:233
 msgid ""
 "**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
@@ -1310,6 +1363,14 @@ msgstr "Miközben keresgéltél a bokrok közt, a kezedbe akadt..."
 msgid "that you unfortunately couldn't take, because your backpack is full."
 msgstr "amit sajnos nem tudtál elvenni, mert a hátizsákod tele van."
 
+#: cogs/helpers/ducks.py:342
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr ""
+"Az közel volt, majdnem megölted a kacsát, de a másik vadásznak sikerült "
+"előbb! [nem talált: -1 xp]"
+
 #: cogs/helpers/ducks.py:376
 msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
 msgstr "<:Wizzz:365870248554921985> Gyere kiskacsa!"
@@ -1330,9 +1391,44 @@ msgstr ""
 ":heart: Megpróbáltad átölelni a kacsát, de úgy érezte, hogy valami nincs "
 "rendben veled, ezért elmenekült tőled és visszatért a tóba! [-2 tapasztalat]"
 
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Megölted a kacsát {time} másodperc "
+"alatt, mostmár összesen {total} megölt kacsánál vagy (amiből {supercanards} "
+"szuperkacsa volt) a {channel} csatornán.      \\_X<   *COUAC*   {exp}"
+
+#: cogs/helpers/ducks.py:402
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+":gun: A kacsa túlélte, próbáld újra! *SZUPERKACSA ÉSZLELVE* [élet: -{vie}] "
+"({current_life} / {max_life})]"
+
+#: cogs/helpers/ducks.py:404
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
+msgstr ""
+":gun: A kacsa túlélte, próbáld újra! *SZUPERKACSA ÉSZLELVE* [élet: -{vie}]"
+
 #: cogs/helpers/ducks.py:650
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A bébikacsa elkacsázott, hogy valahol ledőlhessen ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/ducks.py:686
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451> **SMACK** Megölelted a babakacsát, aki most "
+"nagyon boldog! [3 xp]\n"
+"A babakacsa elment, vidáman érezve magát"
 
 #: cogs/helpers/ducks.py:710
 msgid "**I AM...** Your mother"

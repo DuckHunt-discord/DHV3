@@ -63,7 +63,7 @@ msgstr ""
 #: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
-"Estás con tiempo de enfriamiento :(, inténtalo de nuevo en  {seconds} "
+"Estás con tiempo de enfriamiento :(, inténtalo de nuevo en {seconds} "
 "segundos!"
 
 #: bot.py:189
@@ -254,6 +254,10 @@ msgstr ""
 msgid "https://docs.duckhunt.me/"
 msgstr "https://docs.duckhunt.me/"
 
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "No tiene que irse ahora mismo..."
+
 #: cogs/meta.py:76
 msgid ""
 "Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
@@ -272,11 +276,11 @@ msgid ""
 "invite/2BksEkV"
 msgstr ""
 "Si eres un jugador nuevo, lee esto: <https://docs.duckhunt.me/players-guide/"
-"players-quickstart> . De lo contrario, aquí está la lista de comandos para "
-"los jugadores <https://docs.duckhunt.me/players-guide/player-commands> y los "
-"comandos para los admins <https://docs.duckhunt.me/bot-administration/admin-"
-"commands> | Si necesitas algo, puedes unirte al servidor oficial en https://"
-"discordapp.com/invite/2BksEkV"
+"players-quickstart>. De lo contrario, aquí está la lista de comandos de los "
+"jugadores <https://docs.duckhunt.me/players-guide/player-commands> y de "
+"administración <https://docs.duckhunt.me/bot-administration/admin-commands> "
+"| Si necesitas algo, siéntete libre de unirte al servidor de soporte en "
+"https://discordapp.com/invite/2BksEkV"
 
 #: cogs/meta.py:95
 msgid ""
@@ -302,8 +306,8 @@ msgid ""
 ":alarm_clock: Next giveback of weapons and magazines in {sec} seconds "
 "({hours} hour(s) and {minutes} minute(s))."
 msgstr ""
-":alarm_clock: La siguiente devolución de Armas y Cargadores es en {sec} "
-"segundos ({hours} hora(s) y {minutes} minuto(s))."
+":alarm_clock: Siguiente devolución de armas y cargadores en {sec} segundos "
+"({hours} hora(s) y {minutes} minuto(s))."
 
 #: cogs/meta.py:116
 msgid ""
@@ -836,8 +840,8 @@ msgid ""
 "Next time someone sabotages you, just shoot. It won't do much damage except "
 "for hurting your reputation"
 msgstr ""
-"La próxima vez que alguien te sabotee, solo dispara. No hará mucho daño "
-"aparte de dañar tu reputación."
+"La próxima vez que alguien te sabotee, dispara. No hará mucho daño excepto a "
+"tu reputación"
 
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
@@ -893,7 +897,7 @@ msgid ""
 "{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
 "they can return hunting."
 msgstr ""
-":money_with_wings: Arrojaste una cubeta **ESPECIAL** llena de agua para "
+":money_with_wings: Arrojaste un cubo **ESPECIAL** lleno de agua para "
 "{target}, forzándolo a esperar 2 horas (!) hasta que su ropa se seque antes "
 "de que pueda volver a cazar."
 
@@ -1097,7 +1101,7 @@ msgstr ""
 
 #: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
-msgstr "Abrazaste un árbol, Wizzz?!"
+msgstr "¡¿Abrazaste un árbol, Wizzz?!"
 
 #: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
@@ -1134,8 +1138,8 @@ msgstr "¡No dispares! ¡Soy un pato falso!"
 #: cogs/helpers/config.py:68
 msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
 msgstr ""
-"**Dato curioso**: Algunos patos pueden volar hasta 332 millas/534 kilómetros "
-"en un solo día!"
+"**Dato curioso**: Algunos patos pueden volar hasta 534 kilómetros en un solo "
+"día!"
 
 #: cogs/helpers/config.py:68
 msgid "**Duck fact**: The feathers on a ducks back are waterproof."
@@ -1156,7 +1160,7 @@ msgstr ""
 
 #: cogs/helpers/config.py:69
 msgid "I am invisible, don't bother killing me"
-msgstr "Yo soy invisible, ni te molestes en matarme"
+msgstr "Yo soy invisible, no te molestes en matarme"
 
 #: cogs/helpers/config.py:69
 msgid "Who is the little ████ here that killed my friend ?"
@@ -1168,15 +1172,15 @@ msgstr "Ni siquiera apuntas bien..."
 
 #: cogs/helpers/config.py:69
 msgid "The duck left."
-msgstr "El pato a la izquierda."
+msgstr "El pato se fue."
 
 #: cogs/helpers/config.py:69
 msgid "The duck right."
-msgstr "El pato a la derecha."
+msgstr "El pato ha volvido."
 
 #: cogs/helpers/config.py:69
 msgid "STOP! It's not what you think!"
-msgstr "PARA! No es lo que piensas!"
+msgstr "¡DETÉNGATE! ¡No es lo que piensas!"
 
 #: cogs/helpers/config.py:70
 msgid "Killing me will cost you 1562 experience points."
@@ -1187,12 +1191,12 @@ msgid ""
 "I have a secret plan to kill all hunters but I'm already short on breath I "
 "don't think I'll be able to explain it all to you before..."
 msgstr ""
-"Tengo un plan secreto para matar a todos los cazadores pero me falta el "
-"aliento y pienso que no voy a poder explicártelo todo antes de que..."
+"Tengo un plan secreto para matar a todos los cazadores, pero me falta el "
+"aliento, y pienso que no voy a poder explicártelo todo antes de que..."
 
 #: cogs/helpers/config.py:70
 msgid "[INSERT DUCK NOISE HERE]"
-msgstr "[INSERTE RUIDO DE PATO.mp3 AQUÍ]"
+msgstr "[INSERTAR RUIDO DE PATO AQUÍ]"
 
 #: cogs/helpers/config.py:71
 msgid "It's rabbit season."
@@ -1200,7 +1204,7 @@ msgstr "Es temporada de conejos."
 
 #: cogs/helpers/config.py:71
 msgid "Got a spare cape?"
-msgstr "Tienes una capa que te sobre?"
+msgstr "¿Tienes una capa de repuesto?"
 
 #: cogs/helpers/config.py:71
 msgid "Which side of a duck has more feathers? The outside."
@@ -1208,7 +1212,7 @@ msgstr "Qué lado del pato tiene más plumas? El exterior."
 
 #: cogs/helpers/config.py:71
 msgid "I steal money. I'm a robber ducky."
-msgstr "Yo robo dinero. Soy un pato ladrón."
+msgstr "Robo dinero. Soy un pato ladrón."
 
 #: cogs/helpers/config.py:71
 msgid "I'm a very special duck."
@@ -1240,12 +1244,12 @@ msgstr "Gracias a Dios todos ustedes están AFK..."
 #: cogs/helpers/config.py:72
 msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
 msgstr ""
-"**DuckHunt ProTip®**: Usa detectores infrarrojos para prevenir disparos "
-"innecesarios."
+"**DuckHunt ProTip®**: usa detectores infrarrojos para evitar disparos "
+"inútiles."
 
 #: cogs/helpers/config.py:73
 msgid "I'm just doing my job..."
-msgstr "Sólo hago mi trabajo..."
+msgstr "Sólo estoy haciendo mi trabajo..."
 
 #: cogs/helpers/config.py:73
 msgid ""
@@ -1455,7 +1459,7 @@ msgstr "incluso más arbustos."
 
 #: cogs/helpers/config.py:90
 msgid "Is your hand bigger than your face ?"
-msgstr "Es tu mano más grande que tu cara?"
+msgstr "¿Es tu mano más grande que tu cara?"
 
 #: cogs/helpers/config.py:203
 msgid "Everything is calm"
@@ -1788,19 +1792,19 @@ msgstr "un cartucho cargado"
 
 #: cogs/helpers/ducks.py:71
 msgid "a box of explosive ammo"
-msgstr "una caja de munición Explosiva"
+msgstr "una caja de munición explosiva"
 
 #: cogs/helpers/ducks.py:84
 msgid "an almost empty box of explosive ammo"
-msgstr "una caja casi vacía de munición Explosiva"
+msgstr "una caja casi vacía de munición explosiva"
 
 #: cogs/helpers/ducks.py:98
 msgid "some duck-grease"
-msgstr "algo de grasa de Pato"
+msgstr "un poco de grasa de pato"
 
 #: cogs/helpers/ducks.py:107
 msgid "a full-featured silencer"
-msgstr "un silenciador con todas las funciones"
+msgstr "un silenciador nuevo"
 
 #: cogs/helpers/ducks.py:116
 msgid "a fully functional infrared detector"
@@ -1864,8 +1868,8 @@ msgid ""
 ":heart: You try to hug the duck, but it feels someting wrong about you, so "
 "it fled from you and flew back into the pond![-2 exp]"
 msgstr ""
-":heart: Tratas de abrazar al pato, pero él siente desconfianza de ti, así "
-"que escapó y voló de vuelta al estanque! [-2 exp]"
+":heart: Intentas abrazar al pato, pero él siente desconfianza de ti, así que "
+"escapó y voló de vuelta al estanque! [-2 exp]"
 
 #: cogs/helpers/ducks.py:385
 msgid ""
@@ -1882,9 +1886,9 @@ msgid ""
 "{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
 "{exp}"
 msgstr ""
-":skull_crossbones: ** {onomatopoeia} ** Mataste al pato en {time} segundos, "
+":skull_crossbones: **{onomatopoeia}** Mataste al pato en {time} segundos, "
 "ahora tienes un gran total de {total} patos (de los cuales {supercanards} "
-"fueron super-patos) asesinados en #{channel}.     \\_X<   *COUAC*   {exp}"
+"fueron super-patos) asesinados en {channel}.     \\_X<   *COUAC*   {exp}"
 
 #: cogs/helpers/ducks.py:402
 msgid ""

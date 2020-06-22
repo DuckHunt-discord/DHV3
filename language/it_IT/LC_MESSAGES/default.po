@@ -1156,6 +1156,10 @@ msgid "The duck left."
 msgstr "L'anatra se n'è andata."
 
 #: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "L'anatra è tornata."
+
+#: cogs/helpers/config.py:69
 msgid "STOP! It's not what you think!"
 msgstr "SMETTILA! Non è come pensi!"
 

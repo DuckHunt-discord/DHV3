@@ -243,6 +243,38 @@ msgid ""
 msgstr ""
 "Иногда бот перезагружается для загрузки обновления. Наш uptime — 99.8%."
 
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Тебе не нужно уходить прямо сейчас..."
+
+#: cogs/meta.py:76
+msgid ""
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Перейдите по этой ссылке, чтобы пригласить меня на свой сервер: https://docs."
+"duckhunt.me/bot-administration/admin-quickstart"
+
+#: cogs/meta.py:82
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Если вы новый игрок, прочтите это: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. В противном случае, вот список элементов управления "
+"игрока <https://docs.duckhunt.me/players-guide/player-commands> и команды "
+"администратора <https://docs.duckhunt.me/bot-administration/admin-commands> "
+"| Если вам что-то нужно, не стесняйтесь присоединиться к серверу поддержки "
+"https://discordapp.com/invite/2BksEkV"
+
 #: cogs/meta.py:95
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
@@ -282,6 +314,22 @@ msgstr ""
 #: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Вы используете сервер под номером {shard}. Всего доступно {total}."
+
+#: cogs/scores.py:49
+msgid ""
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Результаты онлайн на https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:255
+msgid ""
+"Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Ваша утка статистика ждет вас на https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -877,6 +925,10 @@ msgid ""
 msgstr ""
 ":money_with_wings: Утка появится в этом канале в ближайшие 10 минут "
 "благодаря приманке, которую купил охотник {mention} за 8 очков опыта."
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Утки чувствуют твои вкусные вафли..."
 
 #: cogs/shop.py:500
 msgid ""

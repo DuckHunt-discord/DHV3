@@ -249,6 +249,10 @@ msgstr ""
 msgid "https://docs.duckhunt.me/"
 msgstr "https://docs.duckhunt.me/"
 
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Nie musisz teraz iść..."
+
 #: cogs/meta.py:76
 msgid ""
 "Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
@@ -923,6 +927,10 @@ msgid ""
 msgstr ""
 ":money_with_wings: Kaczka pojawi się na kanale w ciągu najbliższych 10 "
 "minut, dzięki wabikowi {mention}. Kupili ją za 8 exp!"
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Kaczki wyczuwają twoje pyszne wafelki..."
 
 #: cogs/shop.py:500
 msgid ""
