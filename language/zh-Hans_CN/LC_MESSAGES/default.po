@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-29 22:16+0000\n"
+"POT-Creation-Date: 2020-06-22 09:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -593,7 +593,7 @@ msgstr ":champagne: 你已经有你的武器了，你打算买什么？:p "
 
 #: cogs/shop.py:166
 msgid ":money_with_wings: You added grease in your weapon."
-msgstr ":cogs/shop.py:166: 您在您的武器里添加了油"
+msgstr ":money_with_wings: 您在您的武器里添加了油"
 
 #: cogs/shop.py:167
 msgid ""
@@ -611,15 +611,63 @@ msgstr ":champagne: 您的武器已经哼润滑，您不再需要更多的油。
 
 #: cogs/shop.py:187
 msgid ":money_with_wings: You added a sight to your weapon."
-msgstr ":cogs/shop.py:187 您在您的武器上添加了瞄准镜"
+msgstr ":money_with_wings: 您在您的武器上添加了瞄准镜"
+
+#: cogs/shop.py:188
+msgid ""
+"Your aiming was improved using this formula: (100 - current accuracy) / 3."
+msgstr "您的准确性被这个公式提高: (100 - 现在的准确性) /3"
 
 #: cogs/shop.py:191
 msgid ":champagne: You already have a sight on your weapon."
-msgstr " :cogs/shop.py:191: 您的武器上已经有瞄准镜了"
+msgstr ":champagne: 您的武器上已经有瞄准镜了"
+
+#: cogs/shop.py:208
+msgid ""
+":money_with_wings: You added an infrared detector to your weapon, it will "
+"prevent any waste of ammo for a day. Cost: 15 exp points."
+msgstr ":money_with_wings: 您在武器上添加了一个红外探测器，它将在一天之内防止您浪费子弹。 费用：15点经验值。"
+
+#: cogs/shop.py:210
+msgid ":champagne: You already have an infrared detector on your weapon."
+msgstr ":champagne: 您的武器上已经有红外探测器了。"
+
+#: cogs/shop.py:224
+msgid ":money_with_wings: You added a silencer to your weapon."
+msgstr ":money_with_wings: 您在您的武器上添加了消音器。"
+
+#: cogs/shop.py:225
+msgid ""
+"The silencer works best if every hunter uses one, or if you're alone. With "
+"it, no ducks will fly away before you can kill them. What a good deal, they "
+"only cost 5 exp!"
+msgstr "如果每个猎人都使用消音器，或者只有您一个人，消音器效果会最佳。 有了它，没有鸭子会飞走。而且他们只需要5经验值购买！"
 
 #: cogs/shop.py:229
 msgid ":champagne: You already have a silencer on your weapon"
 msgstr ":cogs/shop.py:229 您的武器上已经有消音器了。"
+
+#: cogs/shop.py:253
+msgid ""
+":money_with_wings: You bought a fresh 4-leaf clover, which will give you "
+"{exp} more exp points for each killed duck for the next day."
+msgstr ":money_with_wings: 您购买了新鲜的4叶三叶草，这将为您在第二天为每只被杀死的鸭子提供{exp} 更多的exp积分。"
+
+#: cogs/shop.py:257
+msgid ":champagne: You already have 4-leaf clover on your weapon"
+msgstr ":champagne: 您的武器上已经有4叶三叶草了。"
+
+#: cogs/shop.py:273
+msgid ""
+":money_with_wings: You bought a pair of sunglasses for 5 exp! You now won't "
+"be dazzled for a day."
+msgstr ":money_with_wings: 您使用5个经验值购买了一副太阳镜！您将不会目眩一天。"
+
+#: cogs/shop.py:277
+msgid ""
+":money_with_wings: You bought brand new sunglasses, the only point of it "
+"being that you're much swagger now. :cool:"
+msgstr ":money_with_wings: 您购买了崭新的太阳镜，唯一的作用就是您现在看起来很酷。:cool:"
 
 #: cogs/shop.py:278
 msgid ""
