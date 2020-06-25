@@ -304,7 +304,7 @@ class BaseDuck:
                 await self.bot.send_message(ctx=ctx, message=(_("Searching the bushes around the duck, you found...", language) + "**" + _(choosen.name, language) + "**"))
             else:
                 await self.bot.send_message(ctx=ctx, message=(
-                        _("Searching the bushes around the duck, you found...", language) + "**" + choosen.name + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",
+                        _("Searching the bushes around the duck, you found...", language) + "**" + _(choosen.name, language) + "**, " + _("that you unfortunately couldn't take, because your backpack is full.",
                                                                                                                              language)))
 
     async def post_kill(self, ctx, exp):
