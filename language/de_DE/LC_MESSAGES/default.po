@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-22 09:38+0000\n"
+"POT-Creation-Date: 2020-06-24 19:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1311,7 +1311,7 @@ msgstr ""
 
 #: cogs/helpers/config.py:79
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Ente wollte nicht erschossen werden.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Die Ente wollte nicht erschossen werden. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:79
 msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1496,7 +1496,7 @@ msgstr "Enten migrieren"
 
 #: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
-msgstr "Bereite Dich darauf vor, in der nächsten Stunde mehr Enten zu sehen."
+msgstr "Bereite dich darauf vor, in der nächsten Stunde mehr Enten zu sehen."
 
 #: cogs/helpers/config.py:205
 msgid "Foggy weather"

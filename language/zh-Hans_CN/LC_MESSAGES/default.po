@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-22 09:38+0000\n"
+"POT-Creation-Date: 2020-06-24 19:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -690,6 +690,34 @@ msgid ""
 "Don't buy dry clothes if you aren't wet! They won't do anything, but will "
 "still cost you exp"
 msgstr "您的衣服不湿的时候不要买多余的衣服！它们没有什么作用，但还需要经验值。"
+
+#: cogs/shop.py:311
+msgid ""
+":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, "
+"or if your weapon was sabotaged, it's fixed now!"
+msgstr ":money_with_wings: 您使用6经验值清理了武器。如果里面有沙子，或者您的武器遭到破坏，现在已经被修复！"
+
+#: cogs/shop.py:312
+msgid ""
+"Next time someone sabotages you, just shoot. It won't do much damage except "
+"for hurting your reputation"
+msgstr "下次有人破坏您的武器时，就直接开枪。除了损害您的名誉以外，不会造成太大损害。"
+
+#: cogs/shop.py:325
+msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
+msgstr ":x: 没门！ {mention}戴着墨镜！他们因此没有受到影响！"
+
+#: cogs/shop.py:326
+msgid ""
+"That bad move still took 5 exp from your account, due to you having to buy a "
+"mirror"
+msgstr "由于您购买镜子，该举动仍然使您花费了5 exp"
+
+#: cogs/shop.py:331
+msgid ""
+":money_with_wings: You dazzled {mention}! Their next shot will lose 50% "
+"accuracy!"
+msgstr ":money_with_wings: 您使{mention}眼花！他们下一次射击时将失去50％的精准度！"
 
 #: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
