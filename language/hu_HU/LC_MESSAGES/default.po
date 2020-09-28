@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-02 16:03+0000\n"
+"POT-Creation-Date: 2020-07-10 20:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -234,6 +234,18 @@ msgstr ""
 msgid "https://docs.duckhunt.me/"
 msgstr "https://docs.duckhunt.me/"
 
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Most nem kell elmenned..."
+
+#: cogs/meta.py:76
+msgid ""
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Kövesd ezt a linket hogy meghívj a szerveredre: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+
 #: cogs/meta.py:82
 msgid ""
 "If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
@@ -272,6 +284,14 @@ msgstr ""
 #: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "A {shard}es számú szilánkot használod az összes {total} szilánkból"
+
+#: cogs/scores.py:49
+msgid ""
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"A pontszámok fent vannak online a http://duckhunt.api-d.com/web/duckstats."
+"php?cid={channel_id} oldalon."
 
 #: cogs/setup_wizzard.py:135
 msgid ""
@@ -576,6 +596,14 @@ msgid ""
 msgstr ""
 ":ok:  {target} fegyverét elrontottad... de nem is tudja! :D (14 "
 "tapasztalatpont)"
+
+#: cogs/shop.py:402
+msgid ""
+"Don't use a mention for this. You can give me user ids or the full username "
+"in \"quotes\""
+msgstr ""
+"Ne használj egy említést ehhez. Adhatsz nekem felhasználói ID-ket vagy a "
+"teljes felhasználónevet \"idézetekben\"."
 
 #: cogs/shop.py:406
 msgid ":ok: {target}'s weapon is already sabotaged!"
@@ -1046,6 +1074,10 @@ msgstr "Jelenleg semmi sem történik."
 msgid "Ducks are migrating"
 msgstr "Kacsák vándorolnak."
 
+#: cogs/helpers/config.py:204
+msgid "Prepare to see more ducks in the next hour."
+msgstr "Készülj fel több kacsára a következő órában."
+
 #: cogs/helpers/config.py:205
 msgid "Foggy weather"
 msgstr "Ködös idő."
@@ -1327,6 +1359,10 @@ msgstr "egy majdnem üres doboz, benne pár robbanólőszerrel."
 msgid "some duck-grease"
 msgstr "némi kacsazsír"
 
+#: cogs/helpers/ducks.py:107
+msgid "a full-featured silencer"
+msgstr "egy teljes hangtompítót"
+
 #: cogs/helpers/ducks.py:116
 msgid "a fully functional infrared detector"
 msgstr "egy teljesen funkcionális infraredes észlelőt"
@@ -1419,6 +1455,16 @@ msgstr ""
 #: cogs/helpers/ducks.py:650
 msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
 msgstr "A bébikacsa elkacsázott, hogy valahol ledőlhessen ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/ducks.py:670
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
+"seconds, and you shouldn't have done this! You'll lose some exp, because you "
+"shouldn't kill babies\\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** Megölted a babakacsát {time} másodperc "
+"alatt, és ezt nem kellett volna tenned! Veszteni fogsz náhány "
+"tapasztalatpontot, mert nem szabadna megölnöd babákat\\_X<   *COUAC*   {exp}"
 
 #: cogs/helpers/ducks.py:686
 msgid ""

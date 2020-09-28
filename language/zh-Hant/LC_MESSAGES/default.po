@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-02 16:03+0000\n"
+"POT-Creation-Date: 2020-07-10 20:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 "Content-Type: text/plain; charset=UTF-8"
+
+#: bot.py:155
+msgid ":x: A required argument is missing."
+msgstr ":x: 缺少必需的參數。"
+
+#: bot.py:159
+msgid ":x: You don't have enough exp for this"
+msgstr ":x: 您沒有足夠的經驗"
+
+#: bot.py:162
+msgid ":x: You are not a server admin"
+msgstr ":x: 您不是服務器管理員"
+
+#: bot.py:165
+msgid ":x: You are not a super admin."
+msgstr ":x: 您不是超級管理員。"
+
+#: bot.py:166
+msgid ""
+"This command is reserved for the bot owners. If you think this is an error, "
+"please contact my owner at the DuckHunt Support Server (see `dh!help`)."
+msgstr "該命令僅供機器人所有者使用。如果您認為這是一個錯誤，請與DuckHunt支持服務器上的我的所有者聯繫（請參閱dh！help）。"
+
+#: bot.py:170
+msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
+msgstr ":x: 您有一段時間沒有在DiscordBotList上投票贊成DuckHunt。"

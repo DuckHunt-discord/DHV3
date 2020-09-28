@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-02 16:03+0000\n"
+"POT-Creation-Date: 2020-07-10 20:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: bot.py:155
 msgid ":x: A required argument is missing."
-msgstr ":x: Ein notwendiges Argument fehlt."
+msgstr ":x: Ein notwendiges Befehlsdetail fehlt."
 
 #: bot.py:159
 msgid ":x: You don't have enough exp for this"
-msgstr ":x: Dafür hast nicht genügend Erfahrungs-Punkte"
+msgstr ":x: Dafür hast Du nicht genügend Erfahrungs-Punkte"
 
 #: bot.py:162
 msgid ":x: You are not a server admin"
@@ -31,21 +31,21 @@ msgstr ":x: Du bist kein Server-Administrator"
 
 #: bot.py:165
 msgid ":x: You are not a super admin."
-msgstr ":x: Du bist kein Super-Administrator"
+msgstr ":x: Du bist kein Super-Administrator."
 
 #: bot.py:166
 msgid ""
 "This command is reserved for the bot owners. If you think this is an error, "
 "please contact my owner at the DuckHunt Support Server (see `dh!help`)."
 msgstr ""
-"Dieser Befehl ist nur für Server-Besitzer. Wenn du denkst, dass es sich "
-"dabei um einen Fehler handelt, dann kontaktiere meinen Besitzer im DuckHunt "
-"Hilfe Server (siehe `dh!help`)."
+"Dieser Befehl kann nur von Server-Besitzern ausgeführt werden. Wenn Du "
+"denkst, dass es sich dabei um einen Fehler handelt, dann kontaktiere meinen "
+"Besitzer im DuckHunt Support Server (vgl. `dh!help`)."
 
 #: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
 msgstr ""
-":x: Du hast schon länger nicht mehr deine Stimme für DuckHunt auf der "
+":x: Du hast schon länger nicht mehr Deine Stimme für DuckHunt auf der "
 "DiscordBotList abgegeben."
 
 #: bot.py:171
@@ -65,8 +65,8 @@ msgstr ""
 #: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
 msgstr ""
-"Du bist noch in der Abklingzeit :( Versuch's einfach nochmal in {seconds} "
-"Sekunden!"
+"Du befindest Dich noch in der Abkühlphase :( Versuch's einfach nochmal in "
+"{seconds} Sekunden!"
 
 #: bot.py:189
 msgid ":bulb: HINT: "
@@ -101,8 +101,8 @@ msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
 msgstr ""
-"<:cmd_AdminAdded_01:439549846622568466> {admin} wurde von der Gilde als "
-"Administrator hinzugefügt!"
+"<:cmd_AdminAdded_01:439549846622568466> {admin} wurde als Admin des Servers "
+"hinzugefügt!"
 
 #: cogs/admin_commands.py:107
 msgid ""
@@ -127,8 +127,8 @@ msgid ""
 ":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
 "[setting]`"
 msgstr ""
-":x: Falsche Syntax. Verwenden Sie den Befehl wie folgt: `!settings [view/ "
-"set/ reset] [Einstellung]`"
+":x: Falsche Syntax. Verwende den Befehl wie folgt: `!settings [view/set/"
+"reset] [setting]`"
 
 #: cogs/admin_commands.py:228 cogs/admin_commands.py:244
 #: cogs/admin_commands.py:302
@@ -138,14 +138,14 @@ msgstr "Unbekannte Einstellung..."
 #: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
 msgstr ""
-":ok: Die Einstellung {pref} ist in dieser Gilde auf `{value}` gesetzt."
+":ok: Die Einstellung {pref} ist auf `{value}` gesetzt in dieser Gilde."
 
 #: cogs/admin_commands.py:254
 msgid ""
 "Bypassing the max_ducks_per_day check as you are the bot owner. It would "
 "have been `{max}`."
 msgstr ""
-"Umgehung der max_ducks_per_day Prüfung, da du der Bot-Besitzer bist. Es "
+"Umgehung der max_ducks_per_day Prüfung, da Du der Bot-Besitzer bist. Es "
 "wären `{max}` gewesen. "
 
 #: cogs/admin_commands.py:258
@@ -155,7 +155,7 @@ msgid ""
 "ducks per day."
 msgstr ""
 "Umgehung der max_ducks_per_day Prüfung, da du in einer VIP Gilde bist. Bitte "
-"missbrauche das nicht. Zur information: das Limit wäre `{max}`Enten pro Tag "
+"missbrauche das nicht. Zur Information: das Limit wären `{max}`Enten pro Tag "
 "gewesen."
 
 #: cogs/admin_commands.py:266
@@ -163,14 +163,14 @@ msgid ""
 "<:official_Duck_01_reversed:439576463436546050> Authorised to set the VIP "
 "status!"
 msgstr ""
-"<:official_Duck_01_reversed:439576463436546050> Berechtigt, den VIP Status "
-"zu vergeben!"
+"<:official_Duck_01_reversed:439576463436546050> Autorisiert, um den VIP-"
+"Status festzulegen!"
 
 #: cogs/admin_commands.py:269
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
 msgstr ""
-":x: Nicht autorisiert, den VIP Status zu vergeben! Du musst ein Eigentümer "
-"sein."
+":x: Nicht autorisiert, um den VIP-Status festzulegen! Du bist kein "
+"Eigentümer."
 
 #: cogs/admin_commands.py:276 cogs/admin_commands.py:290
 #: cogs/admin_commands.py:318
@@ -187,7 +187,7 @@ msgid ""
 "Congratulations, you sent / gave more experience than the maximum number I'm "
 "able to store."
 msgstr ""
-"Glückwunsch, du hast mehr Erfahrung vergeben/ versendet, als ich speichern "
+"Glückwunsch, Du hast mehr Erfahrung vergeben/ versendet, als ich speichern "
 "kann."
 
 #: cogs/experience_related_commands.py:30
@@ -197,8 +197,8 @@ msgstr ":ok:, er/ sie hat nun {newexp} Erfahrungs-Punkte!"
 #: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
 msgstr ""
-":x: Um Missbrauch zu verhindern, kannst du keine Erfahrungs-Punkte senden, "
-"während du keine Waffe hast."
+":x: Um Missbrauch zu verhindern, kannst Du keine Erfahrungs-Punkte "
+"versenden, während Du waffenlos bist."
 
 #: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
@@ -211,18 +211,18 @@ msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
 msgstr ""
-":x: Warte mal... Was? Versuchst du dir gerade SELBST Erfahrungs-Punkte zu "
-"senden? Das ergibt keinen Sinn."
+":x: Warte mal... Was? Versuchst Du Dir gerade SELBST Erfahrungs-Punkte zu "
+"geben? Das ergibt keinen Sinn."
 
 #: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
 msgstr ""
-"Du hast {amount} Erfahrungs-Punkte an {target} gesendet (und {taxes} "
-"Erfahrungs-Punkte Steuern gezahlt)!"
+"Du hast {amount} Erfahrungs-Punkte an {target} gesendet (und {taxes} dafür "
+"Erfahrungs-Punkte-Steuern bezahlt)!"
 
 #: cogs/experience_related_commands.py:84
 msgid "You don't have enough experience points"
-msgstr "Du hast nicht genug Erfahrungs-Punkte"
+msgstr "Du hast nicht genügend Erfahrungs-Punkte"
 
 #: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
@@ -274,7 +274,7 @@ msgid ""
 "Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
 "administration/admin-quickstart"
 msgstr ""
-"Folge diesem Link, um mich auf deinem Server einzuladen: https://docs."
+"Folge diesem Link, um mich auf Deinen Server einzuladen: https://docs."
 "duckhunt.me/bot-administration/admin-quickstart"
 
 #: cogs/meta.py:82
@@ -286,12 +286,12 @@ msgid ""
 "anything, feel free to join the support server at https://discordapp.com/"
 "invite/2BksEkV"
 msgstr ""
-"Wenn du ein neuer Spieler bist, lese Folgendes: <https://docs.duckhunt.me/"
-"players-guide/players-quickstart>. Andernfalls findest du die Spieler-"
+"Wenn Du ein neuer Spieler bist, lies Folgendes: <https://docs.duckhunt.me/"
+"players-guide/players-quickstart>. Ausserdem findest Du die Spieler-"
 "Befehlsliste unter: <https://docs.duckhunt.me/players-guide/player-commands> "
 "und die Administratorbefehle unter: <https://docs.duckhunt.me/bot-"
-"administration/admin-commands> | Wenn du etwas benötigst, kannst du dich "
-"gerne an den Support-Server wenden: https://discordapp.com/invite/2BksEkV"
+"administration/admin-commands> | Wenn Du etwas benötigst, kannst Du auch "
+"gerne in meinen Support-Server kommen: https://discordapp.com/invite/2BksEkV"
 
 #: cogs/meta.py:95
 msgid ""
@@ -301,7 +301,7 @@ msgid ""
 msgstr ""
 "Es ist `{hour}:{minutes}:{seconds}` in der GMT Zeitzone (auch bekannt als "
 "UTC±00:00), die vom Bot verwendet wird. \n"
-"Du kannst diese Webseite benutzen, um die Zeit mit deiner zu vergleichen: "
+"Du kannst diese Webseite benutzen, um diese Zeit mit Deiner zu vergleichen: "
 "https://time.is/compare/GMT"
 
 #: cogs/meta.py:98
@@ -309,7 +309,7 @@ msgid ""
 "You can use the `dh!freetime` command to see when you'll get your weapons "
 "back for free"
 msgstr ""
-"Du kannst den `dh!freetime` Befehl verwenden, um zu sehen, wann du deine "
+"Du kannst den `dh!freetime` Befehl verwenden, um zu sehen, wann Du deine "
 "Waffen gratis zurückbekommst"
 
 #: cogs/meta.py:113
@@ -326,9 +326,10 @@ msgid ""
 "(if confiscated), but it doesn't affect the bullets in your current magazine."
 " If you can, reload beforehand!"
 msgstr ""
-"Die Rückgabe füllt deine Magazine auf und gibt dir gratis deine Waffe (falls "
-"sie konfisziert wurde) wieder, beeinflusst aber nicht die Anzahl der "
-"Patronen in deinem momentanen Magazin. Wenn möglich, lade immer vorher nach!"
+"Eine Rückgabe füllt deine Magazine auf und gibt Dir (falls sie konfisziert "
+"wurde) deine Waffe gratis wieder. Dies beeinflusst aber nicht die Anzahl der "
+"Patronen in deinem momentanen Magazin. Wenn möglich, lade daher immer vorher "
+"nach!"
 
 #: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
@@ -347,7 +348,7 @@ msgid ""
 "Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
 "php?cid={channel_id}&pid={player_id}"
 msgstr ""
-"Deine Entenstatistik wartet auf dich unter: https://duckstats.api-d.com/"
+"Deine Entenstatistik wartet auf Dich unter: https://duckstats.api-d.com/"
 "duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
@@ -358,10 +359,10 @@ msgid ""
 "invoke me there by using `dh!setup`<:event_GuildAdded_01:439550913112309781>"
 msgstr ""
 "Hallo!\n"
-"Danke, dass du mich hierher gebracht hast! Ich bin fast bereit das Spiel zu "
+"Danke, dass Du mich hierher gebracht hast! Ich bin fast bereit das Spiel zu "
 "beginnen!\n"
 "Könnten wir bitte zuerst in den Kanal gehen, in dem das Spiel sein soll? "
-"Bitte, rufe mich dort mit dem Befehl `dh!setup`.<:event_GuildAdded_01:"
+"Bitte rufe mich dort mit dem Befehl `dh!setup`herbei.<:event_GuildAdded_01:"
 "439550913112309781>"
 
 #: cogs/setup_wizzard.py:35
@@ -372,7 +373,7 @@ msgid ""
 msgstr ""
 "Hallo nochmals!\n"
 "Ich führe nur eine kurze Berechtigungsprüfung durch und bin in ein paar "
-"Sekunden zurück! Bitte warte!"
+"Sekunden zurück! Bitte warte solange!"
 
 #: cogs/setup_wizzard.py:51
 msgid ""
@@ -384,7 +385,7 @@ msgstr ""
 ":small_red_triangle: Die Berechtigung `Nachrichtenverlauf lesen`fehlt. \n"
 "Diese ist wichtig für die normale Funktion des Bots, da ich Nachrichten "
 "lesen können muss.\n"
-"Du kannst ohne diese fortfahren, solltest aber nicht."
+"Du kannst ohne diese Funktion fortfahren, solltest dies aber nicht tun."
 
 #: cogs/setup_wizzard.py:56
 msgid ""
@@ -408,8 +409,8 @@ msgid ""
 "errors"
 msgstr ""
 ":small_red_triangle: Die Berechtigung `Dateien anhängen` fehlt.\n"
-"Es handelt sich um eine erforderliche Berechtigung für Einbettungen, und die "
-"gibt es fast überall.\n"
+"Es handelt sich um eine erforderliche Berechtigung für Einbettungen, die es "
+"fast überall gibt.\n"
 "Du kannst ohne sie fortfahren, aber das wird nicht empfohlen und könnte zu "
 "Fehlern führen."
 
@@ -458,7 +459,7 @@ msgid ""
 msgstr ""
 ":small_orange_diamond: Die Berechtigung`Nachrichten verwalten` fehlt.\n"
 "Diese wird verwendet um Nachrichten zu entfernen, die hinterhältige Befehle "
-"(Waffensabotage etc.) enthalten, aber auch wenn du die "
+"(Waffensabotage etc.) enthalten, aber auch wenn Du die "
 "`delete_commands`Einstellung verwendest.\n"
 "Du kannst ohne sie fortfahren, aber es ist nicht empfohlen, da es zu Fehlern "
 "führen könnte."
@@ -470,8 +471,8 @@ msgid ""
 "You could proceed with it safely."
 msgstr ""
 ":small_orange_diamond: Du hast mir die `Alle erwähnen` Berechtigung gegeben.\n"
-"Diese wird nicht verwendet, sollte aber im Falle einer Fehlfunktion nicht "
-"vergeben werden.\n"
+"Diese wird nicht verwendet, sollte aber - im Falle einer Fehlfunktion - "
+"nicht vergeben werden.\n"
 "Du kannst damit problemlos fortfahren."
 
 #: cogs/setup_wizzard.py:92
@@ -483,8 +484,9 @@ msgid ""
 msgstr ""
 ":small_orange_diamond: Die Berechtigung `Externe Emoji verwenden` fehlt. \n"
 "Diese wird seit DHV3 verwendet um nicht-standardisierte Emojis in "
-"Nachrichten einzusetzen. Du solltest mir diese wahrscheinlich geben.\n"
-"Du kannst ohne sie fortfahren, Fehlerbericht wären aber willkommen."
+"Nachrichten einzusetzen und Du solltest mir diese wahrscheinlich geben.\n"
+"Natürlich kannst Du ohne sie fortfahren, Fehlerberichte wären aber "
+"willkommen."
 
 #: cogs/setup_wizzard.py:110
 msgid ""
@@ -493,8 +495,8 @@ msgid ""
 "made then.\n"
 "You can safely proceed without it."
 msgstr ""
-":small_blue_diamond: Die Berechtigung `Nicknamen verwalten` fehlt.\n"
-"Diese wird noch nicht verwendet, ist in der Zukunft aber wahrscheinlich. "
+":small_blue_diamond: Die Berechtigung `Spitznamen verwalten` fehlt.\n"
+"Diese wird noch nicht verwendet, das könnte aber in der Zukunft noch kommen. "
 "Eine Ankündigung diesbezüglich wird erfolgen.\n"
 "Du kannst problemlos ohne sie fortfahren."
 
@@ -505,7 +507,7 @@ msgid ""
 "You can safely proceed without it, but the `tts_ducks` setting won't work"
 msgstr ""
 ":small_blue_diamond: Die Berechtigung `TTS-Nachrichten senden` fehlt.\n"
-"Diese wird verwendet, wenn du TTS-Enten aktivieren möchtest.\n"
+"Diese wird verwendet, falls du TTS-Enten aktivieren möchtest.\n"
 "Du kannst problemlos ohne sie fortfahren, aber die Einstellung `tts_ducks` "
 "wird nicht funktionieren."
 
@@ -523,15 +525,14 @@ msgid ""
 msgstr ""
 "Ich bin fertig! <:cmd_Setup_01:439551472804429836>\n"
 "Mögliche Warnungen wurden oben gesendet. Ich schlage vor, diese zu "
-"korrigieren, um dann den Befehl erneut auszuführen!\n"
-"Gibt es keine, dann herzlichen Glückwunsch! du hast den Test mit Bravour "
-"bestanden!\n"
-"Wenn du bereit bist, mit dem Setup weiterzumachen, verwende den Befehl "
-"`dh!setup_settings`. Wenn du einfach spielen möchtest, verwende "
+"korrigieren, um dann den Befehl erneut auszuführen.\n"
+"Gibt es keine, dann herzlichen Glückwunsch! In dem Fall hast Du den Test mit "
+"Bravour bestanden!\n"
+"Wenn Du bereit bist, mit dem Setup weiterzumachen, verwende den Befehl "
+"`dh!setup_settings`. Wenn Du einfach spielen möchtest, verwende "
 "`dh!add_channel`. Sobald dies geschehen ist, werden Enten automatisch "
-"erscheinen.\n"
-"Danke, dass sie mit DuckAir fliegen. Wenn du noch Fragen hast, helfen wir "
-"gerne hier: https://discord.gg/2BksEkV"
+"erscheinen. Danke, dass Sie mit DuckAir fliegen! \n"
+"Wenn Du noch Fragen hast, helfen wir gerne hier: https://discord.gg/2BksEkV"
 
 #: cogs/setup_wizzard.py:135
 msgid ""
@@ -574,47 +575,48 @@ msgid ""
 "Thanks for playing with me! <:official_Duck_01:439546719177539584>\n"
 msgstr ""
 "Hallo! Lass uns den Server konfigurieren!\n"
-"Ich gebe dir die am häufigsten verwendeten Parameter und du kannst sie "
-"ändern, wenn du möchtest. Jeder Befehl, der hier aufgelistet wird, ist "
-"freiwillig, und du kannst auch sofort jetzt mit dem Spielen beginnen indem "
-"du `dh!add_channel` verwendest.\n"
+"Ich gebe Dir die am häufigsten verwendeten Parameter und wenn Du möchtest, "
+"kannst Du sie ändern. Jeder Befehl, der hier aufgelistet wird, ist "
+"freiwillig. Du kannst auch sofort zu spielen beginnen, indem du "
+"`dh!add_channel` verwendest.\n"
 "\n"
-"** Stelle vor dem Start sicher, dass dies der Kanal ist, den du verwenden "
-"möchtest, und aktivieren ihn mit `dh!add_channel`. **\n"
+"** Stelle vor dem Start sicher, dass dies der Kanal ist, den Du verwenden "
+"möchtest, und aktiviere ihn mit `dh!add_channel`. **\n"
 "\n"
-"** 1 / verwendete Sprache **:\n"
-"    \\ * Wenn du Französisch sprichst, benutze `dh!settings set language "
+"** 1 / Verwendete Sprache **:\n"
+"    \\ * Wenn Du Französisch sprichst, benutze `dh!settings set language "
 "fr_FR`\n"
-"    \\ * Wenn du Spanisch sprichst, benutze `dh!settings set language es_ES`\n"
-"    \\ * Eine andere Sprache unterstützen wir noch nicht vollständig? Hilf "
-"uns, DuckHunt zu übersetzen! Finde uns unter https://discord.gg/2BksEkV.\n"
+"    \\ * Wenn Du Spanisch sprichst, benutze `dh!settings set language es_ES`\n"
+"    \\ * Vermißt Du eine andere Sprache die wir noch nicht vollständig "
+"unterstützen? Dann hilf uns, DuckHunt zu übersetzen! Finde uns unter https://"
+"discord.gg/2BksEkV.\n"
 "    \n"
 "** 2 / Enten pro Tag **:\n"
 "    Dies ist die Anzahl der Enten, die pro Tag erscheinen. Sie tun dies in "
-"zufälligen Intervallen, aber du kannst ihre Anzahl auch konfigurieren.\n"
+"zufälligen Intervallen, aber Du kannst ihre Anzahl auch konfigurieren.\n"
 "    \\ * Verwende den folgenden Befehl, um es zu ändern: \"dh!settings set "
 "ducks_per_day XX\", wobei \"XX\" für eine Zahl steht.\n"
 "    \\ * Um Missbrauch zu verhindern, gibt es ein Limit, das automatisch "
-"durchgesetzt wird. Wenn du es aufheben möchtest, kontaktiere meinen Besitzer "
+"durchgesetzt wird. Wenn Du es aufheben möchtest, kontaktiere meinen Besitzer "
 "auf dem Support-Server.\n"
 "    \n"
-"** 3 / Gewinne Erfahrungs-Punkte pro getöteter Ente **:\n"
-"    Dies ist die Erfahrung, die pro getöteter Ente gewonnen wurde. Wenn dein "
-"Server wirklich beliebt ist, lohnt es sich, ihn ein wenig höher anzusetzen, "
-"um neue Jäger schneller voranzubringen.\n"
+"** 3 / Erfahrungs-Punkte gewonnen pro getöteter Ente**:\n"
+"    Dies ist die Erfahrung, die Du pro getöteter Ente erhältst. Wenn Dein "
+"Server wirklich beliebt ist, lohnt es sich, diesen Wert ein wenig höher "
+"anzusetzen, um neue Jäger schneller voranzubringen.\n"
 "    \\ * Verwende den folgenden Befehl, um es zu ändern:  `dh!settings set "
 "exp_won_per_duck_killed XX`, wobei` XX` für eine Zahl steht.\n"
 "    \\ * :bulb: Stell es nicht zu hoch ein, es soll ja eine Herausforderung "
-"bleiben. 15 ist ein guter Anfang\n"
+"bleiben. 15 reicht für einen guten Anfang!\n"
 "    \n"
 "** 4 / Andere Einstellungen **:\n"
 "    Das fängt an, etwas langwierig zu werden, deshalb werde ich hier nicht "
-"näher auf weitere Details eingehen. Wahrscheinlich hast du auch alles "
-"erstmal so eingestellt um das Spiel starten zu können. Wenn du bereit bis "
+"näher auf weitere Details eingehen. Wahrscheinlich hast Du auch alles "
+"erstmal so eingestellt um das Spiel starten zu können. Wenn Du bereit bist, "
 "gib `dh!add_channel` ein.\n"
-"    Weitere Einstellungen findest du unter `dh!settings list`\n"
+"    Weitere Einstellungen findest Du unter `dh!settings list`\n"
 "    \n"
-"Danke, dass du mit mir spielst! \n"
+"Danke, dass Du mit mir spielst! \n"
 "<:official_Duck_01:439546719177539584>"
 
 #: cogs/shop.py:42
@@ -626,7 +628,7 @@ msgstr ""
 
 #: cogs/shop.py:52
 msgid "Right now you have a total of {exp} exp points."
-msgstr "Im Moment hast du insgesamt {exp} Erfahrungs-Punkte."
+msgstr "Im Moment hast Du insgesamt {exp} Erfahrungs-Punkte."
 
 #: cogs/shop.py:59
 msgid ""
@@ -639,7 +641,7 @@ msgstr ""
 #: cogs/shop.py:75
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
 msgstr ""
-":money_with_wings: Du hast für 7 Erfahrungs-Punkte eine Kugel für deine "
+":money_with_wings: Du hast für 7 Erfahrungs-Punkte eine Kugel für Deine "
 "Waffe gekauft."
 
 #: cogs/shop.py:78
@@ -650,23 +652,23 @@ msgstr ":champagne: Dein Magazin ist voll!"
 msgid ""
 ":money_with_wings: You added a magazine to your weapon for 13 exp points."
 msgstr ""
-":money_with_wings: Du hast für 13 Erfahrungs-Punkte ein Magazin für deine "
+":money_with_wings: Du hast für 13 Erfahrungs-Punkte ein Magazin für Deine "
 "Waffe gekauft."
 
 #: cogs/shop.py:97
 msgid ":champagne: You have enough magazines!"
-msgstr ":champagne: Du hast genug Magazine!"
+msgstr ":champagne: Du hast genügend Magazine!"
 
 #: cogs/shop.py:111
 msgid ":money_with_wings: You purchased AP ammo for your weapon."
-msgstr ":money_with_wings: Du hast AP-Munition für deine Waffe gekauft."
+msgstr ":money_with_wings: Du hast AP-Munition für Deine Waffe gekauft."
 
 #: cogs/shop.py:112
 msgid ""
 "For the next 24 hours, you will deal double damage to ducks. This does "
 "**not** stack with explosive ammo"
 msgstr ""
-"Für die nächsten 24 Stunden wirst du Enten den doppelten Schaden zufügen. "
+"Für die nächsten 24 Stunden wirst Du Enten den doppelten Schaden zufügen. "
 "Dies stapelt sich **nicht** mit explosiver Munition."
 
 #: cogs/shop.py:115
@@ -683,8 +685,8 @@ msgid ""
 "For the next 24 hours, you will deal triple damage to ducks. This does "
 "**not** stack with AP ammo and trumps it if you have any."
 msgstr ""
-"Für die nächsten 24 Stunden wirst du Enten den dreifachen Schaden zufügen. "
-"Dies stapelt sich **nicht** mit AP Munition,  übertrumpft diese aber wenn du "
+"Für die nächsten 24 Stunden wirst Du Enten den dreifachen Schaden zufügen. "
+"Dies stapelt sich **nicht** mit AP Munition,  übertrumpft diese aber wenn Du "
 "welche hast."
 
 #: cogs/shop.py:133
@@ -700,7 +702,7 @@ msgid ""
 "You can get your weapon back for free if you wait until the daily weapon & "
 "magazine giveback. Type `dh!freetime` to find out when the next giveback is"
 msgstr ""
-"Du kannst deine Waffe gratis zurückbekommen wenn du die tägliche Rückgabe "
+"Du kannst Deine Waffe gratis zurückbekommen wenn Du die tägliche Rückgabe "
 "abwartest. Gib `dh!freetime` ein, um herauszufinden, wann die nächste "
 "Rückgabe ist."
 
@@ -720,7 +722,7 @@ msgid ""
 "It's really useful for new players. Use `dh!duckstats` to check your level "
 "and accuracy"
 msgstr ""
-"Dies reduziert das Risiko, dass deine Waffe blockiert, für einen Tag um 50%, "
+"Dies reduziert für einen Tag das Risiko, dass deine Waffe blockiert um 50% - "
 "und das für nur 8 Erfahrungs-Punkte. Es ist wirklich nützlich für neue "
 "Spieler. Verwende `dh!duckstats` um Deinen Level und Deine Treffsicherheit "
 "zu überprüfen."
@@ -730,12 +732,12 @@ msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
 msgstr ""
-":champagne: Deine Waffe ist perfekt geschmiert, du brauchst nicht noch mehr "
+":champagne: Deine Waffe ist perfekt geschmiert, Du brauchst nicht noch mehr "
 "Fett."
 
 #: cogs/shop.py:187
 msgid ":money_with_wings: You added a sight to your weapon."
-msgstr ":money_with_wings: Du hast deiner Waffe eine Visier hinzugefügt."
+msgstr ":money_with_wings: Du hast Deiner Waffe ein Visier hinzugefügt."
 
 #: cogs/shop.py:188
 msgid ""
@@ -746,15 +748,15 @@ msgstr ""
 
 #: cogs/shop.py:191
 msgid ":champagne: You already have a sight on your weapon."
-msgstr ":champagne: Du hast bereits ein Visier auf deiner Waffe."
+msgstr ":champagne: Du hast bereits ein Visier auf Deiner Waffe."
 
 #: cogs/shop.py:208
 msgid ""
 ":money_with_wings: You added an infrared detector to your weapon, it will "
 "prevent any waste of ammo for a day. Cost: 15 exp points."
 msgstr ""
-":money_with_wings: Du hast einen Infrarot-Detektor zu deiner Waffe "
-"hinzugefügt, er wird dich einen Tag lang davor bewahren, Munition zu "
+":money_with_wings: Du hast einen Infrarot-Detektor zu Deiner Waffe "
+"hinzugefügt. Er wird Dich einen Tag lang davor bewahren, Munition zu "
 "verschwenden. Kosten: 15 Erfahrungs-Punkte."
 
 #: cogs/shop.py:210
@@ -772,9 +774,9 @@ msgid ""
 "it, no ducks will fly away before you can kill them. What a good deal, they "
 "only cost 5 exp!"
 msgstr ""
-"Der Schalldämpfer funktioniert am Besten wenn jeder Jäger einen benutzt oder "
-"du alleine bist. Damit fliegen keine Enten fort, bevor du sie töten kannst. "
-"Was für ein gutes Geschäft, denn sie kosten nur 5 Erfahrungs-Punkte!"
+"Der Schalldämpfer funktioniert am Besten, wenn jeder Jäger einen benutzt "
+"oder Du alleine bist. Damit fliegen keine Enten fort, bevor Du sie töten "
+"kannst. Was für ein gutes Geschäft, denn er kostet nur 5 Erfahrungs-Punkte!"
 
 #: cogs/shop.py:229
 msgid ":champagne: You already have a silencer on your weapon"
@@ -786,7 +788,7 @@ msgid ""
 "{exp} more exp points for each killed duck for the next day."
 msgstr ""
 ":money_with_wings: Du hast ein frisches 4-blättriges Kleeblatt gekauft, das "
-"Dir für die nächsten 24 Stunden {exp} mehr Erfahrungs-Punkte für jede "
+"Dir in den nächsten 24 Stunden {exp} mehr Erfahrungs-Punkte für jede "
 "getötete Ente geben wird."
 
 #: cogs/shop.py:257
@@ -808,14 +810,14 @@ msgid ""
 "being that you're much swagger now. :cool:"
 msgstr ""
 ":money_with_wings: Du hast eine brandneue Sonnenbrille gekauft. Der einzige "
-"Sinn dahinter ist, dass du jetzt noch cooler bist. :cool:"
+"Sinn dahinter ist, dass Du jetzt noch cooler aussiehst. :cool:"
 
 #: cogs/shop.py:278
 msgid ""
 "Don't buy sunglasses if you still have some! This doesn't extend the time "
 "you won't be dazzled, but still costs you some exp"
 msgstr ""
-"Kaufe keine Sonnenbrille wenn du schon eine besitzt! Eine Weitere verlängert "
+"Kaufe keine Sonnenbrille wenn Du schon eine besitzt! Eine Weitere verlängert "
 "nicht Deine Schutzzeit, kostet aber trotzdem Erfahrungs-Punkte."
 
 #: cogs/shop.py:292
@@ -830,14 +832,14 @@ msgid ""
 "that you're much swagger now. :cool:"
 msgstr ""
 ":money_with_wings: Du hast brandneue Kleidung gekauft, der einzige Sinn "
-"dahinter ist, dass du jetzt noch cooler bist. :cool:"
+"dahinter ist, dass Du jetzt noch cooler aussiehst. :cool:"
 
 #: cogs/shop.py:297
 msgid ""
 "Don't buy dry clothes if you aren't wet! They won't do anything, but will "
 "still cost you exp"
 msgstr ""
-"Kaufe keine trockene Kleidung, wenn du nicht nass bist. Sie macht keinen "
+"Kaufe keine trockene Kleidung, wenn Du nicht nass bist. Sie macht keinen "
 "Unterschied, kostet aber trotzdem Erfahrungs-Punkte."
 
 #: cogs/shop.py:311
@@ -845,7 +847,7 @@ msgid ""
 ":money_with_wings: You cleaned your weapon for 6 exp. If you had sand in it, "
 "or if your weapon was sabotaged, it's fixed now!"
 msgstr ""
-":money_with_wings: Du hast deine Waffe für 6 Erfahrungs-Punkte gereinigt. "
+":money_with_wings: Du hast Deine Waffe für 6 Erfahrungs-Punkte gereinigt. "
 "Wenn Sand darin war, oder die Waffe sabotiert wurde, dann ist sie jetzt "
 "wieder funktionstüchtig!"
 
@@ -854,20 +856,21 @@ msgid ""
 "Next time someone sabotages you, just shoot. It won't do much damage except "
 "for hurting your reputation"
 msgstr ""
-"Das nächste Mal wenn dich jemand sabotiert, schieß einfach! Es wird kaum "
-"etwas passieren - außer, dass es deinem Ruf schadet."
+"Das nächste Mal wenn Dich jemand sabotiert, schieß einfach! Es wird kaum "
+"etwas passieren - außer, dass es Deinem Ruf schadet."
 
 #: cogs/shop.py:325
 msgid ":x: No way! {mention} has sunglasses! They're immunised against this!"
 msgstr ""
-":x: Keine Chance! {mention} trägt eine Sonnenbrille und ist sicher davor! "
+":x: Keine Chance! {mention} trägt eine Sonnenbrille und vor Angriffen dieser "
+"Art geschützt! "
 
 #: cogs/shop.py:326
 msgid ""
 "That bad move still took 5 exp from your account, due to you having to buy a "
 "mirror"
 msgstr ""
-"Dieser schlechte Zug hat dich trotzdem 5 Erfahrungs-Punkte gekostet, da du "
+"Dieser schlechte Zug hat Dich trotzdem 5 Erfahrungs-Punkte gekostet, da Du "
 "einen Spiegel kaufen musstest."
 
 #: cogs/shop.py:331
@@ -913,14 +916,14 @@ msgid ""
 "{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
 "they can return hunting."
 msgstr ""
-":money_with_wings: Du hast einen **SPEZIELLEN** Eimer voll Wasser über "
+":money_with_wings: Du hast einen **BESONDEREN** Eimer voll Wasser über "
 "{target} geschüttet! Damit ist er/ sie gezwungen 2 Stunden (!) auszusetzen, "
 "bis die Kleidung wieder getrocknet ist - erst dann kann er/sie die Jagd "
 "fortsetzen."
 
 #: cogs/shop.py:393
 msgid "You wouldn't sabotage yourself, would you ?"
-msgstr "Du würdest dich doch nicht selbst sabotieren, oder?"
+msgstr "Du würdest Dich doch nicht selbst sabotieren, oder?"
 
 #: cogs/shop.py:399
 msgid ""
@@ -946,7 +949,7 @@ msgid ""
 "If you ask a server admin to give me the `manage_message` permission, I will "
 "be able to delete that kind of shop commands ;)"
 msgstr ""
-"Wenn du einen Administrator bittest, mir die`Nachrichten "
+"Wenn Du einen Administrator bittest, mir die`Nachrichten "
 "verwalten`Berechtigung zu geben, bin ich in der Lage diese Art von Shop-"
 "Befehlen zu löschen ;)"
 
@@ -971,7 +974,7 @@ msgid ""
 ":money_with_wings: Ducks are resting right now, so your decoy probably "
 "didn't work..."
 msgstr ""
-":money_with_wings: Die Enten schlafen im Moment, deine Attrappe wird also "
+":money_with_wings: Die Enten schlafen im Moment, Deine Attrappe wird also "
 "wahrscheinlich nicht funktionieren..."
 
 #: cogs/shop.py:473
@@ -984,19 +987,19 @@ msgstr ""
 
 #: cogs/shop.py:493
 msgid "The ducks are sensing your delicious wafers..."
-msgstr "Die Enten bemerken deinen leckeren Wafer..."
+msgstr "Die Enten bemerken Deine leckere Waffel..."
 
 #: cogs/shop.py:500
 msgid ""
 ":money_with_wings: You put some bread on the channel to attract ducks. "
 msgstr ""
-":money_with_wings: Du legst etwas Brot auf den Kanal, um Enten anzulocken."
+":money_with_wings: Du legst etwas Brot im Kanal aus, um Enten anzulocken."
 
 #: cogs/shop.py:505
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
 msgstr ""
-":money_with_wings: Brot kann gestappelt werden! Kauf etwas mehr, um den "
+":money_with_wings: Brot kann gestapelt werden! Kauf etwas mehr, um den "
 "Effekt zu steigern!"
 
 #: cogs/shop.py:529
@@ -1044,7 +1047,8 @@ msgstr ""
 
 #: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
-msgstr "Deine Waffe ist verklemmt, lade nach, um sie zu entsperren."
+msgstr ""
+"Deine Waffe hat sich verklemmt. Du musst nachladen, um sie zu entsperren."
 
 #: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
@@ -1069,16 +1073,16 @@ msgid ""
 "There isn't any duck in here, but the bullet wasn't fired because the "
 "infrared detector you added to your weapon is doing its job!"
 msgstr ""
-"Hier ist weit und breit keine Ente, aber dein Gewehr hat nicht geschossen, "
-"weil dein Infrarotdetektor seine Arbeit macht."
+"Hier ist weit und breit keine Ente, aber Dein Gewehr hat nicht geschossen, "
+"weil Dein Infrarotdetektor seine Arbeit macht."
 
 #: cogs/user_commands.py:266
 msgid ""
 "Luckily you missed, but what were you aiming at exactly? There isn't any "
 "duck in here... [missed: -1 xp] [wild shot: -1 xp]"
 msgstr ""
-"Zum Glück hast du verfehlt, aber auf was hast du genau gezielt?! Hier ist "
-"weit und breit keine Ente... [verfehlt: -1 xp] [Schuss ins Leere: -1 xp]"
+"Zum Glück hast Du verfehlt, aber auf was hast Du eigentlich gezielt?! Hier "
+"ist weit und breit keine Ente... [verfehlt: -1 xp] [Schuss ins Leere: -1 xp]"
 
 #: cogs/user_commands.py:374
 msgid ""
@@ -1103,8 +1107,8 @@ msgid ""
 "You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
 "get it back for free (check when with `!freetime`)"
 msgstr ""
-"Du kannst deine Waffe im Laden zurückkaufen (`dh!shop 5`) oder warten, bis "
-"du sie kostenlos zurückbekommst (Schau nach mit `!freetime`)"
+"Du kannst Deine Waffe im Laden zurückkaufen (`dh!shop 5`) oder warten, bis "
+"Du sie kostenlos zurückbekommst (Schau mit `!freetime` nach wann das ist.)"
 
 #: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
 msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
@@ -1115,8 +1119,8 @@ msgid ""
 "You hugged {mention} as strongly as you could. They are filled with "
 "determination."
 msgstr ""
-"Du hast {mention} so fest umarmt, wie du konntest. They are filled with "
-"determination."
+"Du hast {mention} so fest umarmt, wie Du konntest. Er/sie ist jetzt erfüllt "
+"von Zuversicht."
 
 #: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
@@ -1124,7 +1128,8 @@ msgstr "Du hast einen Baum umarmt, Wizzz?!"
 
 #: cogs/user_commands.py:446
 msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
-msgstr "Hier ist doch keine Ente! Was wolltest du denn umarmen, einen Baum?!"
+msgstr ""
+"Hier ist doch gar keine Ente! Was wolltest Du denn umarmen, einen Baum?!"
 
 #: cogs/user_commands.py:462
 msgid "**Current event**"
@@ -1178,7 +1183,7 @@ msgstr ""
 
 #: cogs/helpers/config.py:69
 msgid "I am invisible, don't bother killing me"
-msgstr "Ich bin unsichtbar. Mach dir also keine Mühe mich umzubringen."
+msgstr "Ich bin unsichtbar. Mach Dir also keine Mühe mich umzubringen."
 
 #: cogs/helpers/config.py:69
 msgid "Who is the little ████ here that killed my friend ?"
@@ -1198,11 +1203,11 @@ msgstr "Die Ente ... ist rechts."
 
 #: cogs/helpers/config.py:69
 msgid "STOP! It's not what you think!"
-msgstr "STOP! Es ist nicht was du denkst!"
+msgstr "STOP! Es ist nicht was Du denkst!"
 
 #: cogs/helpers/config.py:70
 msgid "Killing me will cost you 1562 experience points."
-msgstr "Wenn du mich tötest, kostet dich das 1562 Erfahrungspunkte."
+msgstr "Wenn Du mich tötest, kostet Dich das 1562 Erfahrungspunkte."
 
 #: cogs/helpers/config.py:70
 msgid ""
@@ -1211,11 +1216,11 @@ msgid ""
 msgstr ""
 "Ich habe einen geheimen Plan, alle Jäger umzubringen, allerdings bin ich "
 "schon jetzt so außer Atem dass ich nicht glaube, dass ich es schaffe, alles "
-"zu erklären, bevor du..."
+"zu erklären, bevor Du..."
 
 #: cogs/helpers/config.py:70
 msgid "[INSERT DUCK NOISE HERE]"
-msgstr "[Hier Entenlaute vorstellen]"
+msgstr "[STELLE DIR HIER ENTENLAUTE VOR]"
 
 #: cogs/helpers/config.py:71
 msgid "It's rabbit season."
@@ -1245,13 +1250,13 @@ msgstr ""
 #: cogs/helpers/config.py:72
 msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
 msgstr ""
-"**DuckHunt ProTipp®**: Verwende ein Visier, um auf unteren Levels deine "
+"**DuckHunt ProTipp®**: Verwende ein Visier, um auf unteren Levels Deine "
 "Treffsicherheit zu verbessern."
 
 #: cogs/helpers/config.py:72
 msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
 msgstr ""
-"**DuckHunt ProTip®**: Verwende Schmiermittel, wenn deine Waffe Ladehemmung "
+"**DuckHunt ProTip®**: Verwende Schmiermittel, wenn Deine Waffe Ladehemmung "
 "hat."
 
 #: cogs/helpers/config.py:72
@@ -1260,7 +1265,7 @@ msgstr "*schlürf*"
 
 #: cogs/helpers/config.py:72
 msgid "Hopefully you are all AFK..."
-msgstr "Hoffentlich seid ihr gerade alle AFK..."
+msgstr "Hoffentlich seid Ihr gerade alle AFK..."
 
 #: cogs/helpers/config.py:72
 msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
@@ -1277,8 +1282,8 @@ msgid ""
 "Hey there, DuckHunt quality insurance duck here. How would you rate your "
 "experience killing ducks so far ?"
 msgstr ""
-"Hallo! Ihre DuckHunt-Qualitätssicherungsente hier! Wie würden Sie Ihre "
-"Erfahrungen in Bezug auf das Töten von Enten bislang einschätzen?"
+"Hallo! Hier ist Ihre DuckHunt-Qualitäts-Versicherungsente! Wie würden Sie "
+"Ihre Erfahrungen in Bezug auf das Töten von Enten bislang einschätzen?"
 
 #: cogs/helpers/config.py:73
 msgid "YoU hAvE bEeN cOrRuPtEd."
@@ -1286,7 +1291,7 @@ msgstr "dU wUrDeSt BeScHäDiGt."
 
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr "Die Ente ist davongewatschelt. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Die Ente ist verschwundern. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:77
 msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1306,8 +1311,7 @@ msgstr "Die Ente löste sich in Raum und Zeit auf. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:78
 msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
-msgstr ""
-"Die Ente ist vor lauter Langeweile wieder verschwunden. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "Die Ente hat sich vor lauter Langeweile verzogen. ·°'\\`'°-.,¸¸.·°'\\`"
 
 #: cogs/helpers/config.py:79
 msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
@@ -1384,7 +1388,7 @@ msgstr "ein benutztes Kondom."
 
 #: cogs/helpers/config.py:85
 msgid "a broken sight."
-msgstr "ein gebrochenes Visier."
+msgstr "ein zerbrochenes Visier."
 
 #: cogs/helpers/config.py:85
 msgid "a broken infrared detector."
@@ -1392,7 +1396,7 @@ msgstr "ein zerbrochener Infrarotdetektor."
 
 #: cogs/helpers/config.py:85
 msgid "a bent silencer."
-msgstr "ein verbogener Knalldämpfer."
+msgstr "einen verbogener Schalldämpfer."
 
 #: cogs/helpers/config.py:86
 msgid "an empty box of AP ammo."
@@ -1428,15 +1432,15 @@ msgstr "Donald's Kappe."
 
 #: cogs/helpers/config.py:87
 msgid "a half-melted peppermint."
-msgstr "ein halb-geschmolzenes Pfefferminz."
+msgstr "ein halb-geschmolzenes Pfefferminzbonbon."
 
 #: cogs/helpers/config.py:87
 msgid "a box of Abraxo cleaner."
-msgstr "eine Box Abraxo Scheuermittel"
+msgstr "eine Box Abraxo Scheuermittel."
 
 #: cogs/helpers/config.py:88
 msgid "a gun with banana peeled barrel."
-msgstr "ein Waffenrohr, das aussieht wie eine geschälte Banane"
+msgstr "ein Waffenrohr, das aussieht wie eine geschälte Banane."
 
 #: cogs/helpers/config.py:88
 msgid "an old hunting knife."
@@ -1472,7 +1476,7 @@ msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
 
 #: cogs/helpers/config.py:90
 msgid "a fish."
-msgstr "Ein Fisch."
+msgstr "einen Fisch."
 
 #: cogs/helpers/config.py:90
 msgid "even more bushes."
@@ -1492,7 +1496,7 @@ msgstr "Nichts passiert im Moment"
 
 #: cogs/helpers/config.py:204
 msgid "Ducks are migrating"
-msgstr "Enten migrieren"
+msgstr "Enten wandern umher"
 
 #: cogs/helpers/config.py:204
 msgid "Prepare to see more ducks in the next hour."
@@ -1508,7 +1512,7 @@ msgid ""
 "you missed or not."
 msgstr ""
 "Es ist schwieriger tote Enten zu sehen. Du wirst ein paar Sekunden länger "
-"brauchen, um herauszufinden ob du verfehlt hast oder nicht."
+"brauchen, um herauszufinden ob Du verfehlt hast oder nicht."
 
 #: cogs/helpers/config.py:206
 msgid "Steroids in the lake"
@@ -1521,8 +1525,8 @@ msgid ""
 "water."
 msgstr ""
 "Ein Unternehmen für medizinische Abfälle hat Steroide in den Teich gekippt. "
-"Enten sind mutiert und du wirst weitaus mehr Superenten antreffen. Aber sei "
-"vorsichtig und trinke nicht das Wasser!"
+"Die Enten sind mutiert und Du wirst weitaus mehr Superenten antreffen. Aber "
+"sei vorsichtig und trinke bloss kein Wasser!"
 
 #: cogs/helpers/config.py:207
 msgid "Safety class canceled"
@@ -1531,7 +1535,7 @@ msgstr "Sicherheitskurs abgesagt"
 #: cogs/helpers/config.py:207
 msgid "The safety class was canceled, beware not to shoot others hunters!"
 msgstr ""
-"Der Sicherheitskurs wurde abgesagt. Hüte dich davor andere Jäger "
+"Der Sicherheitskurs wurde abgesagt. Hüte Dich davor andere Jäger "
 "anzuschießen!"
 
 #: cogs/helpers/config.py:208
@@ -1543,8 +1547,8 @@ msgid ""
 "Ducks cant find your computer due to connection problems, and there will be "
 "less of them until it's repaired"
 msgstr ""
-"Enten können deinen Computer auf Grund von Verbindungsproblemen nicht finden."
-" Bis dies repariert ist, wird es weniger von ihnen geben."
+"Die Enten können Deinen Computer auf Grund von Verbindungsproblemen nicht "
+"finden. Bis dies repariert ist, wird es weniger von ihnen geben."
 
 #: cogs/helpers/config.py:209
 msgid "A new florist in town"
@@ -1555,8 +1559,8 @@ msgid ""
 "A florist opened in town, and you can now find better 4-leaf-clovers. Go "
 "check them out!"
 msgstr ""
-"Ein neuer Blumenhändler hat in der Stadt eröffnet. Dort findest du jetzt "
-"viel bessere 4-blättrige Kleeblätter. Schau sie dir an!"
+"Ein neuer Blumenhändler hat in der Stadt eröffnet. Dort findest Du jetzt "
+"viel bessere 4-blättrige Kleeblätter. Schau sie Dir mal an!"
 
 #: cogs/helpers/config.py:210
 msgid "Mega-ducks"
@@ -1729,7 +1733,7 @@ msgstr "Enten-Auslöscher"
 
 #: cogs/helpers/config.py:256
 msgid "serial duck killer"
-msgstr "Massen-Enten-Mörder"
+msgstr "Enten-Massen-Mörder"
 
 #: cogs/helpers/config.py:257
 msgid "duck genocider"
@@ -1745,7 +1749,7 @@ msgstr "Enten-Röster"
 
 #: cogs/helpers/config.py:260
 msgid "unemployed due to extinction of the duck species"
-msgstr "arbeitslos, auf Grund des Aussterbens der Entenspezies"
+msgstr "Arbeitslos, auf Grund des Aussterbens der Entenspezies"
 
 #: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
 msgid "Level of {player} on #{channel}"
@@ -1761,7 +1765,7 @@ msgstr "Du bist aufgestiegen!"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
 msgid "Current level"
-msgstr "Aktuelles Level"
+msgstr "Aktueller Level"
 
 #: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
 #: cogs/helpers/database.py:283 cogs/helpers/database.py:284
@@ -1770,7 +1774,7 @@ msgstr "nom"
 
 #: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
 msgid "Previous level"
-msgstr "Vorheriges Level"
+msgstr "Vorheriger Level"
 
 #: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
 msgid "Shots accuracy"
@@ -1789,7 +1793,7 @@ msgid ""
 ":warning: There was an error while sending the embed, please check if the "
 "bot has the `embed_links` permission and try again!"
 msgstr ""
-":warning: Es trat ein Fehler beim Einbetten des Links auf, bitte überprüfe, "
+":warning: Es trat ein Fehler beim Einbetten des Links auf. Bitte überprüfe, "
 "ob der Bot die Berechtigung `Links einbetten` hat und versuche es erneut!"
 
 #: cogs/helpers/ducks.py:36
@@ -1798,7 +1802,7 @@ msgstr "Nichts!"
 
 #: cogs/helpers/ducks.py:40
 msgid "a lot of bushes."
-msgstr "eine Menge weiterer Büsche."
+msgstr "eine Menge Büsche."
 
 #: cogs/helpers/ducks.py:43
 msgid "a duck pin."
@@ -1810,11 +1814,11 @@ msgstr "eine Gewehrkugel."
 
 #: cogs/helpers/ducks.py:59
 msgid "a full magazine"
-msgstr "ein volles Magazin"
+msgstr "ein volles Magazin."
 
 #: cogs/helpers/ducks.py:71
 msgid "a box of explosive ammo"
-msgstr "eine Schachtel explosiver Munition"
+msgstr "eine Schachtel explosiver Munition."
 
 #: cogs/helpers/ducks.py:84
 msgid "an almost empty box of explosive ammo"
@@ -1826,7 +1830,7 @@ msgstr "etwas Entenschmiere."
 
 #: cogs/helpers/ducks.py:107
 msgid "a full-featured silencer"
-msgstr "ein vollwertiger Schalldämpfer."
+msgstr "einen vollwertiger Schalldämpfer."
 
 #: cogs/helpers/ducks.py:116
 msgid "a fully functional infrared detector"
@@ -1858,11 +1862,11 @@ msgstr "SPROTCH"
 
 #: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
 msgid "Searching the bushes around the duck, you found..."
-msgstr "Die Büsche rund um die Ente absuchend, findest du..."
+msgstr "Die Büsche rund um die Ente absuchend, findest du... "
 
 #: cogs/helpers/ducks.py:307
 msgid "that you unfortunately couldn't take, because your backpack is full."
-msgstr "aber leider kannst du nichts mitnehmen, da dein Rucksack voll ist."
+msgstr "aber leider kannst Du nichts mitnehmen, da Dein Rucksack voll ist."
 
 #: cogs/helpers/ducks.py:342
 msgid ""
@@ -1881,9 +1885,9 @@ msgid ""
 ":heart: You try to hug the duck, but it knows you killed its brother, so it "
 "fled from you and flew back into the pond![-2 exp]"
 msgstr ""
-":heart: Du versuchst die Ente zu umarmen, aber sie weiß genau, dass du ihren "
-"Bruder getötet hast und deshalb ist sie von dir weggeflogen - zurück zum "
-"Teich! [-2 exp]"
+":heart: Du versuchst die Ente zu umarmen, aber sie weiß genau, dass Du ihren "
+"Bruder getötet hast und deshalb ist sie vor Dir geflohen und zurück zum "
+"Teich geflogen! [-2 exp]"
 
 #: cogs/helpers/ducks.py:383
 msgid ""
@@ -1899,8 +1903,8 @@ msgid ""
 "back, so it fled from you and flew back into the pond! [-2 exp]"
 msgstr ""
 ":heart: Du versuchst die Ente zu umarmen, aber sie hat die Waffe hinter "
-"deinem Rücken entdeckt und deshalb ist sie von dir weggeflogen - zurück zum "
-"Teich! [-2 exp]"
+"deinem Rücken entdeckt und deshalb ist sie vor Dir geflohen und zurück zum "
+"Teich geflogen! [-2 exp]"
 
 #: cogs/helpers/ducks.py:394
 msgid ""
@@ -1918,14 +1922,14 @@ msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
 "({current_life} / {max_life})]"
 msgstr ""
-":gun: Die Ente hat überlebt, versuch es noch einmal! *SUPER ENTE GESICHTET* "
+":gun: Die Ente hat überlebt, versuch es noch einmal! *SUPERENTE GESICHTET* "
 "[life: -{vie} ({current_life} / {max_life})]"
 
 #: cogs/helpers/ducks.py:404
 msgid ""
 ":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
 msgstr ""
-":gun: Die Ente hat überlebt, versuch es noch einmal! *SUPER ENTE GESICHTET* "
+":gun: Die Ente hat überlebt, versuch es noch einmal! *SUPERENTE GESICHTET* "
 "[life: -{vie}]"
 
 #: cogs/helpers/ducks.py:600
@@ -1950,9 +1954,9 @@ msgid ""
 "shouldn't kill babies\\_X<   *COUAC*   {exp}"
 msgstr ""
 ":skull_crossbones: **{onomatopoeia}** Du hast die Baby-Ente in {time} "
-"Sekunden getötet, und das hättest Du nicht tun dürfen! Dadurch wirst du "
-"wirst einige Erfahrungs-Punkte verlieren, denn Babies solltest du einfach "
-"nicht töten! \\_X<   *COUAC*   {exp}"
+"Sekunden getötet, und das hättest Du nicht tun dürfen! Dadurch wirst Du "
+"einige Erfahrungs-Punkte verlieren, denn Babies bringt man einfach nicht um! "
+"\\_X<   *COUAC*   {exp}"
 
 #: cogs/helpers/ducks.py:686
 msgid ""
@@ -1966,7 +1970,7 @@ msgstr ""
 
 #: cogs/helpers/ducks.py:710
 msgid "**I AM...** Your mother"
-msgstr "**ICH BIN...** deine Mutter"
+msgstr "**ICH BIN...** Deine Mutter"
 
 #: cogs/helpers/ducks.py:718
 msgid ""

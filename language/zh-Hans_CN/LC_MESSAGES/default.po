@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-02 16:03+0000\n"
+"POT-Creation-Date: 2020-07-10 20:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: bot.py:155
 msgid ":x: A required argument is missing."
-msgstr ":x:缺少必要的参数。"
+msgstr ":x: 缺少必需的参数。"
 
 #: bot.py:159
 msgid ":x: You don't have enough exp for this"
-msgstr ":X: 你的经验值不够。"
+msgstr ":x: 你的经验值不够。"
 
 #: bot.py:162
 msgid ":x: You are not a server admin"
@@ -59,41 +59,42 @@ msgstr "您正在冷却:(，请在{seconds}之后重试！"
 
 #: bot.py:189
 msgid ":bulb: HINT: "
-msgstr "：bulb：提示："
+msgstr ":bulb: 提示："
 
 #: cogs/admin_commands.py:29
 msgid ":ok: Done, user banned. :gun:"
-msgstr "：ok：完成，用户被封锁。 ：枪："
+msgstr ":ok: 完成，用户被封锁。:gun:"
 
 #: cogs/admin_commands.py:41
 msgid ":ok: Done, user unbanned. :eyes:"
-msgstr "：ok：完成，用户已被解封。 ：眼睛"
+msgstr ":ok: 完成，用户已被解封。 :eyes:"
 
 #: cogs/admin_commands.py:67
 msgid ""
 "<:cmd_ChannelAdded_01:439546719143723019> Done, channel {channel} added to "
 "the game! Have fun!"
 msgstr ""
-"<:cmd_ChannelAdded_01:439546719143723019>完成， 已将DuckHunt加入到{channel}！祝你们玩得开心！"
+"<:cmd_ChannelAdded_01:439546719143723019> 完成， "
+"已将DuckHunt加入到{channel}！祝你们玩得开心！"
 
 #: cogs/admin_commands.py:85
 msgid ""
 "<:cmd_ChannelRemoved_01:439546718737137674> Done, channel {channel} removed "
 "from the game. Bye!"
 msgstr ""
-"<:cmd_ChannelRemoved_01:439546718737137674>完成，DuckHunt已从{channel}移除。再见！"
+"<:cmd_ChannelRemoved_01:439546718737137674> 完成，DuckHunt已从{channel}移除。再见！"
 
 #: cogs/admin_commands.py:97
 msgid ""
 "<:cmd_AdminAdded_01:439549846622568466> {admin} added as an admin to the "
 "guild!"
-msgstr "<:cmd_AdminAdded_01:439549846622568466>{admin}已添加为服务器管理员！"
+msgstr "<:cmd_AdminAdded_01:439549846622568466> {admin}已添加为服务器管理员！"
 
 #: cogs/admin_commands.py:107
 msgid ""
 "<:cmd_AdminRemoved_01:439549845519335440> {admin} removed from the guild "
 "admins."
-msgstr "<:cmd_AdminRemoved_01:439549845519335440>{admin}已从服务器管理员中移除。"
+msgstr "<:cmd_AdminRemoved_01:439549845519335440>{ admin}已从服务器管理员中移除。"
 
 #: cogs/admin_commands.py:155 cogs/admin_commands.py:206
 msgid "Done. User removed from the database, if he was in."
@@ -116,7 +117,7 @@ msgstr "未知设置。"
 
 #: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
-msgstr "：ok：在服务器上，{pref}已设置为`{value}`。"
+msgstr ":ok: 在服务器上，{pref}已设为`{value}`。"
 
 #: cogs/admin_commands.py:254
 msgid ""
@@ -140,16 +141,16 @@ msgstr "<:official_Duck_01_reversed:439576463436546050>已被授权设到VIP状�
 
 #: cogs/admin_commands.py:269
 msgid ":x: Unauthorised to set the VIP status! You are not an owner."
-msgstr "：x：未经授权设置VIP状态！您不是我的创造人。"
+msgstr ":x: 未经授权设置VIP状态！您不是我的创造人。"
 
 #: cogs/admin_commands.py:276 cogs/admin_commands.py:290
 #: cogs/admin_commands.py:318
 msgid ":x: Incorrect value."
-msgstr "：x：价值错误。"
+msgstr ":x: 价值错误。"
 
 #: cogs/admin_commands.py:284 cogs/admin_commands.py:312
 msgid ":ok: The setting {pref} has been set to `{value}` on this guild."
-msgstr "：ok：在服务器上，设置{pref}已设置为`{value}`。"
+msgstr ":ok: 在服务器上，设置{pref}已设置为`{value}`。"
 
 #: cogs/experience_related_commands.py:27
 msgid ""
@@ -159,21 +160,21 @@ msgstr "恭喜，您发送的经验值已超过我所可以容纳的！"
 
 #: cogs/experience_related_commands.py:30
 msgid ":ok:, he/she now has {newexp} exp points!"
-msgstr "：ok :，他/她现在有{newexp}经验值！"
+msgstr ":ok:，他/她现在有{newexp}经验值！"
 
 #: cogs/experience_related_commands.py:54
 msgid ":x: To prevent abuse, you can't send exp when you don't have a weapon."
-msgstr "：x：为防止滥用，如果没有武器，就不能发送exp。"
+msgstr ":x: 为防止滥用，如果没有武器，就不能发送exp。"
 
 #: cogs/experience_related_commands.py:58
 msgid ":x: The exp amount needs to be positive."
-msgstr "：x：exp量必须为正数。"
+msgstr ":x: exp量必须为正数。"
 
 #: cogs/experience_related_commands.py:62
 msgid ""
 ":x: Wait... What? Are you trying to send experience to YOURSELF? That "
 "doesn't make sense."
-msgstr "：x：等等...什么？您为什么向自己发送经验值？那完全不合逻辑。"
+msgstr ":x: 等等...什么？您为什么向自己发送经验值？那完全不合逻辑。"
 
 #: cogs/experience_related_commands.py:81
 msgid "You sent {amount} exp to {target} (and paid {taxes} exp of taxes)!"
@@ -185,7 +186,7 @@ msgstr "您的经验值不够。"
 
 #: cogs/experience_related_commands.py:86
 msgid ":x: Sending exp is disabled on this server"
-msgstr "：x：此服务器禁止发送exp。"
+msgstr ":x: 此服务器禁止发送exp。"
 
 #: cogs/experience_related_commands.py:94 cogs/scores.py:34
 msgid "{date} (in {dans_jours}{dans_heures} and {dans_minutes})"
@@ -316,7 +317,7 @@ msgid ""
 "to read messages.\n"
 "You can proceed without it, but shouldn't."
 msgstr ""
-"：small_red_triangle：缺少权限 `阅读消息历史` `read_message_history`。\n"
+":small_red_triangle: 缺少权限 `阅读消息历史` `read_message_history`。\n"
 "这对于机器人的正常功能非常重要，因为我需要阅读消息。\n"
 "您可以在没有它的情况下继续进行，但不应这样做。"
 
@@ -328,7 +329,7 @@ msgid ""
 "You could proceed without it, but it's not recommended and could lead to "
 "errors"
 msgstr ""
-"：small_red_triangle：缺少权限`添加反应` `add_reactions`。\n"
+":small_red_triangle: 缺少权限`添加反应` `add_reactions`。\n"
 "这是交互式嵌入的必需权限，它们几乎无处不在。\n"
 "您可以在没有它的情况下继续操作，但是不建议这样做，并可能导致失误"
 
@@ -339,7 +340,7 @@ msgid ""
 "You could proceed without it, but it's not recommended and could lead to "
 "errors"
 msgstr ""
-"：small_red_triangle：缺少权限 `添加附件` `attach_files`。\n"
+":small_red_triangle: 缺少权限 `添加附件` `attach_files`。\n"
 "这是必需要的权限，它们几乎无处不在。\n"
 "您可以在没有它的情况下继续操作，但是不建议这样做，并可能导致失误。"
 
@@ -349,7 +350,7 @@ msgid ""
 "This is used to send embeds\n"
 "You could proceed without it, but really shouldn't as it will lead to errors"
 msgstr ""
-"：small_red_triangle：缺少权限 ` embed_links` `嵌入链接`。\n"
+":small_red_triangle: 缺少权限 ` embed_links` `嵌入链接`。\n"
 "这用于嵌入文件\n"
 "您可以在没有它的情况下继续操作，但实际上不应该这样做，因为它会导致失误"
 
@@ -360,7 +361,7 @@ msgid ""
 "powerful permissions, especially if they don't need them.\n"
 "You can proceed with it."
 msgstr ""
-"：small_orange_diamond：您已给我 `administrator ` `管理员` 权限。\n"
+":small_orange_diamond: 您已给我 `administrator ` `管理员` 权限。\n"
 "尽管这不会引起问题，但授予机器人如此强大的权限是不安全的，尤其是在不需要它们的情况下。\n"
 "您可以继续进行。"
 
@@ -371,7 +372,7 @@ msgid ""
 "error reports.\n"
 "You can proceed without it."
 msgstr ""
-"：small_orange_diamond：缺少权限`创建邀请` `create_instant_invite`。\n"
+":small_orange_diamond: 缺少权限`创建邀请` `create_instant_invite`。\n"
 "对于机器人的正常功能并不是必不可少的，但对于错误报告来说则是必需的。\n"
 "您可以在没有它的情况下继续进行。"
 
@@ -383,7 +384,7 @@ msgid ""
 "You could proceed without it, but it's not recommended and could lead to "
 "errors"
 msgstr ""
-"：small_orange_diamond：缺少权限`管理消息` `manage_messages`。\n"
+":small_orange_diamond: 缺少权限`管理消息` `manage_messages`。\n"
 "这用于删除一些悄悄的的命令（武器破坏等）的消息，如果您使用`delete_commands`设置\n"
 "您可以在没有它的情况下继续操作，但是不建议这样做，并可能导致错误"
 
@@ -393,9 +394,9 @@ msgid ""
 "This not used, but should't be given in case of a bug\n"
 "You could proceed with it safely."
 msgstr ""
-"：small_orange_diamond：您已授予我 `提及everyone` `mention_everyone`的权限。\n"
+":small_orange_diamond: 您已授予我 `提及everyone` `mention_everyone`的权限。\n"
 "这不会被用到，但是在有漏洞的情况下不应该给出\n"
-"您可以安全地进行。"
+"您可以安全地继续。"
 
 #: cogs/setup_wizzard.py:92
 msgid ""
@@ -404,7 +405,7 @@ msgid ""
 "probably give it to me\n"
 "You could proceed without it, but bug reports would be appreciated."
 msgstr ""
-"：small_orange_diamond：缺少权限 `使用外部表情符号` `external_emojis`。\n"
+":small_orange_diamond: 缺少权限 `使用外部表情符号` `external_emojis`。\n"
 "从DHV3开始，就使用它来向消息中添加非标准表情符号。你应该把它给我\n"
 "您可以在没有它的情况下继续进行，但是错误报告将不胜感激。"
 
@@ -415,7 +416,7 @@ msgid ""
 "made then.\n"
 "You can safely proceed without it."
 msgstr ""
-"：small_blue_diamond：缺少权限 `更改昵称``change_nickname`。\n"
+":small_blue_diamond: 缺少权限 `更改昵称``change_nickname`。\n"
 "该功能尚未使用，但将来可能会使用。随后将发布公告。\n"
 "没有它，您可以安全地继续。"
 
@@ -425,7 +426,7 @@ msgid ""
 "This is used in case you want to enable tts ducks..\n"
 "You can safely proceed without it, but the `tts_ducks` setting won't work"
 msgstr ""
-"：small_blue_diamond：缺少权限`发送文字转语音消息``send_tts_messages`。\n"
+":small_blue_diamond: 缺少权限`发送文字转语音消息``send_tts_messages`。\n"
 "如果要启用tts ducks，则使用此方法。\n"
 "您可以在没有它的情况下安全地进行操作，但是`tts_ducks`设置将不起作用"
 
@@ -528,8 +529,7 @@ msgstr "现在您有{exp}点经验值。"
 msgid ""
 "Here is the list of all the shops items : https://duckhunt.me/shop-items/ . "
 "Thanks "
-msgstr "这里有所有商店售卖的东西：\n"
-"https://duckhunt.me/shop-items/. 谢谢"
+msgstr "这里有所有商店售卖的东西：https://duckhunt.me/shop-items/. 谢谢"
 
 #: cogs/shop.py:75
 msgid ":money_with_wings: You added a bullet to your weapon for 7 exp points."
@@ -593,7 +593,7 @@ msgstr ":champagne: 你已经有你的武器了，你打算买什么？:p "
 
 #: cogs/shop.py:166
 msgid ":money_with_wings: You added grease in your weapon."
-msgstr ":money_with_wings: 您在您的武器里添加了油"
+msgstr ":money_with_wings: 您在您的武器里添加了润滑油"
 
 #: cogs/shop.py:167
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 msgid ""
 ":champagne: Your weapon is perfectly lubricated, you don't need any more "
 "grease."
-msgstr ":champagne: 您的武器已经哼润滑，您不再需要更多的油。"
+msgstr ":champagne: 您的武器已经很润滑，您不再需要更多的油。"
 
 #: cogs/shop.py:187
 msgid ":money_with_wings: You added a sight to your weapon."
@@ -719,13 +719,117 @@ msgid ""
 "accuracy!"
 msgstr ":money_with_wings: 您使{mention}眼花！他们下一次射击时将失去50％的精准度！"
 
+#: cogs/shop.py:332
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you?"
+msgstr "这个提及是故意的的。 您不会在他们背后做这种事吧？"
+
+#: cogs/shop.py:346
+msgid ":champagne: You threw sand in {mention}'s weapon!"
+msgstr ":champagne: 你在{mention}的武器里扔了沙子！"
+
+#: cogs/shop.py:347
+msgid ""
+"The mention is here on purpose. You wouldn't do this behind their back, "
+"would you"
+msgstr "这里的提及是故意的。 你不会在他们背后做这件事吧"
+
+#: cogs/shop.py:360
+msgid ""
+":money_with_wings: You dropped a bucket full of water on {target}, forcing "
+"them to wait 1 hour for their clothes to dry before they can return hunting."
+msgstr ":money_with_wings：您将一桶水倒在{target}上，迫使他们等待1个小时使衣服变干，然后他们才能恢复打猎。"
+
+#: cogs/shop.py:379
+msgid ""
+":money_with_wings: You dropped a **SPECIAL** bucket full of water on "
+"{target}, forcing them to wait 2 hours (!) for their clothes to dry before "
+"they can return hunting."
+msgstr ""
+":money_with_wings：您在{target}上倒了一个装满水的**特殊的**桶，迫使他们等待2个小时使衣服（！）变干，才能恢复打猎。"
+
+#: cogs/shop.py:393
+msgid "You wouldn't sabotage yourself, would you ?"
+msgstr "你不会要损坏您自己的武器吧？"
+
+#: cogs/shop.py:399
+msgid ""
+":ok: {target} weapon is now sabotaged... but they don't know it (14 exp)!"
+msgstr ":ok：{目标}的武器现在被损坏了……但是他们不知道（14exp）！"
+
+#: cogs/shop.py:402
+msgid ""
+"Don't use a mention for this. You can give me user ids or the full username "
+"in \"quotes\""
+msgstr "请勿为此提及。您可以在“引号”中给我用户ID或完整的用户名"
+
+#: cogs/shop.py:406
+msgid ":ok: {target}'s weapon is already sabotaged!"
+msgstr ":ok: {target}的武器已经被损坏了！"
+
+#: cogs/shop.py:411 cogs/shop.py:524
+msgid ""
+"If you ask a server admin to give me the `manage_message` permission, I will "
+"be able to delete that kind of shop commands ;)"
+msgstr "如果您要求服务器管理员给我`管理消息`的权限，我就能删除这种商店命令 ;)"
+
+#: cogs/shop.py:428
+msgid ":money_with_wings: You bought a life insurance for a week for 10 exp."
+msgstr ":money_with_wings: 您使用10经验值购买了一个星期的人寿保险"
+
+#: cogs/shop.py:429
+msgid "If you get killed, you'll earn half the level of the killer in exp."
+msgstr "如果您被杀死，您将获得杀手的一半经验值。"
+
+#: cogs/shop.py:432
+msgid ":champagne: You're already insured."
+msgstr ":champagne: 您已经有保险了。"
+
+#: cogs/shop.py:469
+msgid ""
+":money_with_wings: Ducks are resting right now, so your decoy probably "
+"didn't work..."
+msgstr ":money_with_wings: 鸭子现在正在休息，所以您的诱饵可能没有发起作用..."
+
+#: cogs/shop.py:473
+msgid ""
+":money_with_wings: A duck will appear in the next 10 minutes on the channel, "
+"thanks to {mention}'s decoy. They bought it for 8 exp!"
+msgstr ""
+":money_with_wings: 由于{mention}的诱饵，在接下来的10分钟内一只鸭子会出现在频道上。 他们以8经验值的价格购买了诱饵！"
+
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "鸭子们感觉到了您的美味威化饼。"
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ":money_with_wings: 您在频道上放了一些面包来吸引鸭子。"
+
+#: cogs/shop.py:505
+msgid ""
+":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
+msgstr ":money_with_wings: 面包可以叠加！ 多买一些能够增强效果！"
+
+#: cogs/shop.py:529
+msgid ""
+":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
+"It's wrong, but so funny!"
+msgstr ":money_with_wings: 您以40经验值的价格在频道上准备了一只机械鸭子。这是不对的，但是很好笑！"
+
+#: cogs/user_commands.py:71 cogs/user_commands.py:158
+msgid "You don't have a weapon."
+msgstr "您没有武器。"
+
 #: cogs/user_commands.py:77
 msgid "You unjammed your weapon."
-msgstr "您把您的qian"
+msgstr "您把您的武器修好了。"
 
 #: cogs/user_commands.py:91
 msgid "You reloaded your weapon."
-msgstr "您进行了一次换弹。"
+msgstr "您已换弹。"
 
 #: cogs/user_commands.py:93
 msgid "You don't have any ammo left!"
@@ -735,6 +839,14 @@ msgstr "您的子弹已耗尽！"
 msgid "You don't need to reload your weapon."
 msgstr "您不需要换弹。"
 
+#: cogs/user_commands.py:99
+msgid ""
+"{greet} | Ammo in weapon: {balles_actuelles}/{balles_max} | Magazines left: "
+"{chargeurs_actuels}/{chargeurs_max}"
+msgstr ""
+"{greet} |武器里的弹药：{balles_actuelles} / {balles_max} | "
+"剩余的弹夹：{chargeurs_actuels}/{chargeurs_max}"
+
 #: cogs/user_commands.py:148
 msgid ""
 "Your clothes are wet, you can't go hunting! Wait {temps_restant} minutes."
@@ -742,27 +854,202 @@ msgstr "您还不能去打猎，因为您的衣服是湿的。剩余时间：{te
 
 #: cogs/user_commands.py:167
 msgid "Your weapon is jammed, it must be reloaded to unjam it."
-msgstr "您的武器已卡壳。使用 !reload 来手动退壳。"
+msgstr "您的武器卡住了。您需要使用 !reload 来修一下。"
 
 #: cogs/user_commands.py:177
 msgid "Your weapon is sabotaged, thank {assaillant} for this bad joke."
-msgstr "您的武器"
+msgstr "您的武器被损坏了。感谢 {assaillant} 的这个恶作剧"
+
+#: cogs/user_commands.py:190
+msgid ""
+"** MAGAZINE EMPTY ** | Ammunition in the weapon: {balles_actuelles} / "
+"{balles_max} | Magazines remaining: {chargeurs_actuels} / {chargeurs_max}"
+msgstr ""
+"**弹夹已空** | 武器里的弹药：{balles_actuelles} / {balles_max} | 剩余的弹夹： "
+"{chargeurs_actuels} / {chargeurs_max}"
+
+#: cogs/user_commands.py:224
+msgid "Your weapon just jammed, reload it to unjam it."
+msgstr "您的武器堵住了，使用 !reload 来修一下"
+
+#: cogs/user_commands.py:251
+msgid ""
+"There isn't any duck in here, but the bullet wasn't fired because the "
+"infrared detector you added to your weapon is doing its job!"
+msgstr "这里没有鸭子，但子弹没有被发射，因为您的武器上的红外探测器正在执行它的任务！"
+
+#: cogs/user_commands.py:266
+msgid ""
+"Luckily you missed, but what were you aiming at exactly? There isn't any "
+"duck in here... [missed: -1 xp] [wild shot: -1 xp]"
+msgstr "幸亏您射偏了，但是您的目标是什么？ 这里没有鸭子。[错过：-1xp] [乱打：-1xp]"
+
+#: cogs/user_commands.py:374
+msgid ""
+"**BANG**\tYou missed the duck... and shot **yourself**! Maybe you should "
+"turn your weapon a little before shooting the next time? [missed: -1 xp] "
+"[hunting accident: -2 xp] [**weapon confiscated**]"
+msgstr ""
+"**BANG**  您错过了鸭子……并射到了 **您自己**！也许您在下次射击前稍微转动一下武器？ [错过：-1 xp] [狩猎意外：-2 xp] "
+"[**武器已被没收**]"
+
+#: cogs/user_commands.py:381
+msgid ""
+"**BANG**\tYou missed the duck... and shot {player}! [missed: -1 xp] [hunting "
+"accident: -2 xp] [**weapon confiscated**]"
+msgstr "**BANG**  您错过了鸭子……并射到了 {player}！ [错过：-1 xp] [狩猎意外：-2 xp] [**武器已被没收**]"
+
+#: cogs/user_commands.py:390
+msgid ""
+"You can buy your weapon back in the store (`dh!shop 5`) or wait until you "
+"get it back for free (check when with `!freetime`)"
+msgstr "您可以在商店（`dh!shop 5`）里重新购买武器，或者等到还回武器后再使用（使用`!freetime`检查剩余时间）。"
+
+#: cogs/helpers/ducks.py:230 cogs/user_commands.py:398
+msgid "**PIEWW**\tYou missed the duck! [missed: -1 xp]"
+msgstr "**PIEWW** 您错过了鸭子！[错过：-1xp]"
+
+#: cogs/user_commands.py:430
+msgid ""
+"You hugged {mention} as strongly as you could. They are filled with "
+"determination."
+msgstr "您使出所有的力气拥抱{mention}。 他们充满了决心。"
+
+#: cogs/user_commands.py:443
+msgid "You hugged a tree, Wizzz?!"
+msgstr "您报了一棵树？！"
+
+#: cogs/user_commands.py:446
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "这里没有鸭子，您难道要抱树吗？"
+
+#: cogs/user_commands.py:462
+msgid "**Current event**"
+msgstr "**当前事件**"
+
+#: cogs/helpers/config.py:67
+msgid "*cries*"
+msgstr "*哭*"
+
+#: cogs/helpers/config.py:67
+msgid "Hello world"
+msgstr "你好，世界"
+
+#: cogs/helpers/config.py:67
+msgid "How are you today?"
+msgstr "你今天怎么样？"
+
+#: cogs/helpers/config.py:67
+msgid "Please don't kill me..."
+msgstr "请不要杀我......"
+
+#: cogs/helpers/config.py:67
+msgid "I love you too!"
+msgstr "我也爱你！"
+
+#: cogs/helpers/config.py:67
+msgid "Don't shoot me! I'm a fake duck!"
+msgstr "不要射我！我是一只假的鸭子！"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr "**鸭子知识**：有些鸭子一天可以飞332英里！"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**鸭子知识**：鸭子背上的羽毛是防水的。"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**鸭子知识**：鸭子有三个眼皮！ "
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr "**鸭子知识**：取决于不同种类的鸭子，它们的寿命在2至12岁之间。 但游戏上的鸭子可活不了多久......"
 
 #: cogs/helpers/config.py:69
 msgid "I am invisible, don't bother killing me"
-msgstr "我是隐形的，别打我"
+msgstr "我是隐形的，别射我"
 
 #: cogs/helpers/config.py:69
 msgid "Who is the little ████ here that killed my friend ?"
 msgstr "是哪个██杀死了我的朋友？"
 
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "你不能好好的瞄准......"
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "鸭子走了。"
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "鸭子没走。"
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "停！这不是你所想象的！"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "杀死我将使您失去1562点经验值。"
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr "我有个杀死所有猎人的秘密计划，但我已经喘不过气了，所以我觉得我无法向你解释一切......"
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[在此处插入鸭子的声音]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "现在是兔子的季节。"
+
+#: cogs/helpers/config.py:71
+msgid "Got a spare cape?"
+msgstr "有备用的披肩吗？"
+
+#: cogs/helpers/config.py:71
+msgid "Which side of a duck has more feathers? The outside."
+msgstr "鸭子的哪一边有更多的羽毛？ 外边。"
+
+#: cogs/helpers/config.py:71
+msgid "I steal money. I'm a robber ducky."
+msgstr "我偷钱。我是个鸭子小偷。"
+
 #: cogs/helpers/config.py:71
 msgid "I'm a very special duck."
-msgstr "我是一个很特殊的鸭子。"
+msgstr "我是一只很特殊的鸭子。"
+
+#: cogs/helpers/config.py:71 cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use clovers to get more experience."
+msgstr "**Duckhunt小贴士®**：使用三叶草获得更多经验。"
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use sights to improve accuracy at lower levels."
+msgstr "**Duckhunt小贴士®**：使用瞄准器来再低的等级是提高准确性。"
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use grease to prevent weapon jams"
+msgstr "**Duckhunt小贴士®**：使用润滑油来防止武器堵塞。"
+
+#: cogs/helpers/config.py:72
+msgid "*Slurp*"
+msgstr "*啧啧*"
 
 #: cogs/helpers/config.py:72
 msgid "Hopefully you are all AFK..."
-msgstr "希望你们都在挂机..."
+msgstr "希望你们都离线......"
+
+#: cogs/helpers/config.py:72
+msgid "**DuckHunt ProTip®**: use infrared detectors to prevent useless shots."
+msgstr "**DuckHunt 小贴士®**： 使用红外探测器来防止没用的射击。"
 
 #: cogs/helpers/config.py:73
 msgid "I'm just doing my job..."
@@ -772,4 +1059,660 @@ msgstr "我只是在干我该干的活..."
 msgid ""
 "Hey there, DuckHunt quality insurance duck here. How would you rate your "
 "experience killing ducks so far ?"
-msgstr "您好，DuckHunt质量保险客服鸭子。请问您现在"
+msgstr "您好，我是DuckHunt保险鸭子。请问您现在杀鸭子的经验如何？"
+
+#: cogs/helpers/config.py:73
+msgid "YoU hAvE bEeN cOrRuPtEd."
+msgstr "您已被贪污。"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子离开了。·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck went to another world.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子去了另一个世界。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:77
+msgid "The duck didn't have time for this.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子没有时间了。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子走了。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck dissipated in space and time.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子在时空中消散了。·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:78
+msgid "The duck left out of boredom.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子因很无聊而离开了。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck doesn't want to be sniped.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子不想被射。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck walked up to the lemonade stand.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子走到了柠檬水摊位。·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:79
+msgid "The duck flew over a disproportionately small gap. ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子飞过一个不成比例的小空隙。  ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:80
+msgid "The duck chickened out.  ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "鸭子混出去了。 ·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/config.py:83
+msgid "a stuffed duck."
+msgstr "一只毛绒鸭。"
+
+#: cogs/helpers/config.py:83
+msgid "a rubber ducky."
+msgstr "一只橡皮鸭。"
+
+#: cogs/helpers/config.py:83
+msgid "a vibrating duck."
+msgstr "一只震动的鸭子。"
+
+#: cogs/helpers/config.py:83
+msgid "a pile of feathers."
+msgstr "一堆羽毛。"
+
+#: cogs/helpers/config.py:83
+msgid "a chewed chewing gum."
+msgstr "被咀嚼的口香糖。"
+
+#: cogs/helpers/config.py:84
+msgid "a leaflet from CACAD (Coalition Against the Comitee Against Ducks)."
+msgstr "一张来自CACAD的传单 (Coalition Against the Comitee Against Ducks)."
+
+#: cogs/helpers/config.py:84
+msgid "an old shoe."
+msgstr "一个旧鞋。"
+
+#: cogs/helpers/config.py:84
+msgid "a spring thingy."
+msgstr "一个弹簧。"
+
+#: cogs/helpers/config.py:84
+msgid "cow dung."
+msgstr "牛粪。"
+
+#: cogs/helpers/config.py:84
+msgid "dog poop."
+msgstr "狗屎。"
+
+#: cogs/helpers/config.py:85
+msgid "an expired hunting license."
+msgstr "一张过期的狩猎许可证。"
+
+#: cogs/helpers/config.py:85
+msgid "a cartridge."
+msgstr "一个弹壳。"
+
+#: cogs/helpers/config.py:85
+msgid "a cigarette butt."
+msgstr "一个烟头。"
+
+#: cogs/helpers/config.py:85
+msgid "a used condom."
+msgstr "用过的避孕套。"
+
+#: cogs/helpers/config.py:85
+msgid "a broken sight."
+msgstr "一个损坏的瞄准镜。"
+
+#: cogs/helpers/config.py:85
+msgid "a broken infrared detector."
+msgstr "一个损坏的红外探测器。"
+
+#: cogs/helpers/config.py:85
+msgid "a bent silencer."
+msgstr "一个弯曲的消音器。"
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of AP ammo."
+msgstr "一盒空的AP弹药盒子。"
+
+#: cogs/helpers/config.py:86
+msgid "an empty box of explosive ammo."
+msgstr "一个空盒子的爆炸型子弹。"
+
+#: cogs/helpers/config.py:86
+msgid "a four-leaf clover with only 3 left."
+msgstr "一根掉了一片叶子的四叶草。"
+
+#: cogs/helpers/config.py:86
+msgid "a broken decoy."
+msgstr "损坏的诱饵"
+
+#: cogs/helpers/config.py:86
+msgid "a broken mirror."
+msgstr "一面损坏的镜子"
+
+#: cogs/helpers/config.py:87
+msgid "a rusty mechanical duck."
+msgstr "一只生锈的机械鸭。"
+
+#: cogs/helpers/config.py:87
+msgid "a pair of sunglasses without glasses."
+msgstr "一副没有镜片的太阳镜。"
+
+#: cogs/helpers/config.py:87
+msgid "Donald's beret."
+msgstr "唐老鸭的贝雷帽。"
+
+#: cogs/helpers/config.py:87
+msgid "a half-melted peppermint."
+msgstr "一片半融化的薄荷。"
+
+#: cogs/helpers/config.py:87
+msgid "a box of Abraxo cleaner."
+msgstr "一盒Abraxo清洁剂。"
+
+#: cogs/helpers/config.py:88
+msgid "a gun with banana peeled barrel."
+msgstr "一把用香蕉皮做的的枪管的枪。"
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting knife."
+msgstr "一把旧的猎刀。"
+
+#: cogs/helpers/config.py:88
+msgid "an old video recording: http://tinyurl.com/zbejktu"
+msgstr "一段旧的录像: http://tinyurl.com/zbejktu"
+
+#: cogs/helpers/config.py:88
+msgid "an old hunting photo: http://tinyurl.com/hmn4r88"
+msgstr "一张旧的打猎照片: http://tinyurl.com/hmn4r88"
+
+#: cogs/helpers/config.py:89
+msgid "an old postcard: http://tinyurl.com/hbnkpzr"
+msgstr "一张旧明信片: http://tinyurl.com/hbnkpzr"
+
+#: cogs/helpers/config.py:89
+msgid "a golden duck photo: http://tinyurl.com/hle8fjf"
+msgstr "一张金色鸭子的照片: http://tinyurl.com/hle8fjf"
+
+#: cogs/helpers/config.py:89
+msgid "a hunter pin: http://tinyurl.com/hqy7fhq"
+msgstr "一根猎人针: http://tinyurl.com/hqy7fhq"
+
+#: cogs/helpers/config.py:89
+msgid "bushes."
+msgstr "丛林。"
+
+#: cogs/helpers/config.py:90
+msgid "https://www.youtube.com/watch?v=HP362ccZBmY"
+msgstr "https://www.youtube.com/watch?v=HP362ccZBmY"
+
+#: cogs/helpers/config.py:90
+msgid "a fish."
+msgstr "一条鱼。"
+
+#: cogs/helpers/config.py:90
+msgid "even more bushes."
+msgstr "更多的丛林。"
+
+#: cogs/helpers/config.py:90
+msgid "Is your hand bigger than your face ?"
+msgstr "你的手比脸大吗？"
+
+#: cogs/helpers/config.py:203
+msgid "Everything is calm"
+msgstr "一切都平静"
+
+#: cogs/helpers/config.py:203
+msgid "Nothing is happening right now."
+msgstr "现在什么都没有发生。"
+
+#: cogs/helpers/config.py:204
+msgid "Ducks are migrating"
+msgstr "鸭子正在迁移。"
+
+#: cogs/helpers/config.py:204
+msgid "Prepare to see more ducks in the next hour."
+msgstr "准备在下一个小时看到更多的鸭子。"
+
+#: cogs/helpers/config.py:205
+msgid "Foggy weather"
+msgstr "大雾"
+
+#: cogs/helpers/config.py:205
+msgid ""
+"It's harder to see killed ducks. You'll need a few more seconds to know if "
+"you missed or not."
+msgstr "现在很难看到被杀的鸭子。 您需要几秒钟的时间才能知道自己是否射偏了。"
+
+#: cogs/helpers/config.py:206
+msgid "Steroids in the lake"
+msgstr "湖里有激素"
+
+#: cogs/helpers/config.py:206
+msgid ""
+"A medical waste company dumped steroids in the lake. Ducks have mutated, and "
+"you'll see a lot more super ducks. But, be careful, and don't drink that "
+"water."
+msgstr "一家医疗公司将激素倒入了湖中。 鸭子因此变异，您会看到更多的超级鸭子。 但是要小心，不要喝湖水。"
+
+#: cogs/helpers/config.py:207
+msgid "Safety class canceled"
+msgstr "安全等级取消"
+
+#: cogs/helpers/config.py:207
+msgid "The safety class was canceled, beware not to shoot others hunters!"
+msgstr "安全等级取消，请小心不要射击其他猎人！"
+
+#: cogs/helpers/config.py:208
+msgid "Connection problems"
+msgstr "连接问题"
+
+#: cogs/helpers/config.py:208
+msgid ""
+"Ducks cant find your computer due to connection problems, and there will be "
+"less of them until it's repaired"
+msgstr "鸭子由于连接问题而找不到您的电脑，在维修之前它们的数量会减少。"
+
+#: cogs/helpers/config.py:209
+msgid "A new florist in town"
+msgstr "镇上有新花店"
+
+#: cogs/helpers/config.py:209
+msgid ""
+"A florist opened in town, and you can now find better 4-leaf-clovers. Go "
+"check them out!"
+msgstr "小镇上开了一家花店，现在您可以找到更好的四叶草。快去看看吧！"
+
+#: cogs/helpers/config.py:210
+msgid "Mega-ducks"
+msgstr "巨型鸭子"
+
+#: cogs/helpers/config.py:210
+msgid "Someone inflated a super duck, and now they are EVEN BIGGER!!"
+msgstr "有人给一只超级鸭子充气，现在他们变得更大了！"
+
+#: cogs/helpers/config.py:211
+msgid "Windy weather"
+msgstr "大风"
+
+#: cogs/helpers/config.py:211
+msgid "Bullets are deflected by some strong wind"
+msgstr "子弹被强风偏斜"
+
+#: cogs/helpers/config.py:218
+msgid "public danger"
+msgstr "公众的危险。"
+
+#: cogs/helpers/config.py:219
+msgid "tourist"
+msgstr "游客"
+
+#: cogs/helpers/config.py:220
+msgid "noob"
+msgstr "菜鸡"
+
+#: cogs/helpers/config.py:221
+msgid "trainee"
+msgstr "实习生"
+
+#: cogs/helpers/config.py:222
+msgid "duck misser"
+msgstr "爱打偏鸭子的人。"
+
+#: cogs/helpers/config.py:223
+msgid "member of the Comitee Against Ducks"
+msgstr "反鸭委会的成员"
+
+#: cogs/helpers/config.py:224
+msgid "duck hater"
+msgstr "鸭子痛恨者"
+
+#: cogs/helpers/config.py:225
+msgid "duck pest"
+msgstr "鸭子害虫"
+
+#: cogs/helpers/config.py:226
+msgid "duck hassler"
+msgstr "鸭子骚扰者"
+
+#: cogs/helpers/config.py:227
+msgid "duck plucker"
+msgstr "摘羽毛机"
+
+#: cogs/helpers/config.py:228
+msgid "hunter"
+msgstr "猎人"
+
+#: cogs/helpers/config.py:229
+msgid "duck inside out turner"
+msgstr "鸭子翻面机"
+
+#: cogs/helpers/config.py:230
+msgid "duck clobber"
+msgstr "鸭子猛打机"
+
+#: cogs/helpers/config.py:231
+msgid "duck chewer"
+msgstr "鸭子咀嚼器"
+
+#: cogs/helpers/config.py:232
+msgid "duck eater"
+msgstr "鸭食者"
+
+#: cogs/helpers/config.py:233
+msgid "duck flattener"
+msgstr "鸭子扁机"
+
+#: cogs/helpers/config.py:234
+msgid "duck disassembler"
+msgstr "鸭子拆装机"
+
+#: cogs/helpers/config.py:235
+msgid "duck demolisher"
+msgstr "鸭子拆毁者"
+
+#: cogs/helpers/config.py:236
+msgid "duck killer"
+msgstr "鸭子杀手"
+
+#: cogs/helpers/config.py:237
+msgid "duck skinner"
+msgstr "鸭皮匠"
+
+#: cogs/helpers/config.py:238
+msgid "duck predator"
+msgstr "鸭子天敌"
+
+#: cogs/helpers/config.py:239
+msgid "duck chopper"
+msgstr "鸭子切碎机"
+
+#: cogs/helpers/config.py:240
+msgid "duck decorticator"
+msgstr "鸭子脱皮机"
+
+#: cogs/helpers/config.py:241
+msgid "duck fragger"
+msgstr "鸭子手榴弹"
+
+#: cogs/helpers/config.py:242
+msgid "duck shatterer"
+msgstr "鸭子碎裂器"
+
+#: cogs/helpers/config.py:243
+msgid "duck smasher"
+msgstr "鸭子粉碎机"
+
+#: cogs/helpers/config.py:244
+msgid "duck breaker"
+msgstr "鸭子损坏器"
+
+#: cogs/helpers/config.py:245
+msgid "duck wrecker"
+msgstr "鸭子毁灭器"
+
+#: cogs/helpers/config.py:246
+msgid "duck impaler"
+msgstr "鸭子刺穿者"
+
+#: cogs/helpers/config.py:247
+msgid "duck eviscerator"
+msgstr "鸭子内脏器"
+
+#: cogs/helpers/config.py:248
+msgid "ducks terror"
+msgstr "鸭子的恐惧"
+
+#: cogs/helpers/config.py:249
+msgid "duck exploder"
+msgstr "鸭子炸药"
+
+#: cogs/helpers/config.py:250
+msgid "duck destructor"
+msgstr "鸭子毁灭者"
+
+#: cogs/helpers/config.py:251
+msgid "duck blaster"
+msgstr "鸭子起爆器"
+
+#: cogs/helpers/config.py:252
+msgid "duck pulverizer"
+msgstr "鸭子磨粉机"
+
+#: cogs/helpers/config.py:253
+msgid "duck disintegrator"
+msgstr "鸭子解体机"
+
+#: cogs/helpers/config.py:254
+msgid "duck atomizer"
+msgstr "鸭子雾化器"
+
+#: cogs/helpers/config.py:255
+msgid "duck annihilator"
+msgstr "鸭歼灭者"
+
+#: cogs/helpers/config.py:256
+msgid "serial duck killer"
+msgstr "鸭子连环杀手"
+
+#: cogs/helpers/config.py:257
+msgid "duck genocider"
+msgstr "鸭子屠杀者"
+
+#: cogs/helpers/config.py:258
+msgid "old noob"
+msgstr "老菜鸟"
+
+#: cogs/helpers/config.py:259
+msgid "duck toaster"
+msgstr "烤鸭机"
+
+#: cogs/helpers/config.py:260
+msgid "unemployed due to extinction of the duck species"
+msgstr "因鸭种的灭绝而失业"
+
+#: cogs/helpers/data_store.py:182 cogs/helpers/database.py:269
+msgid "Level of {player} on #{channel}"
+msgstr "{player} 在 #{channel} 上的等级"
+
+#: cogs/helpers/data_store.py:185 cogs/helpers/database.py:272
+msgid "You leveled down!"
+msgstr "您降级了！"
+
+#: cogs/helpers/data_store.py:188 cogs/helpers/database.py:275
+msgid "You leveled up!"
+msgstr "您升级了！"
+
+#: cogs/helpers/data_store.py:196 cogs/helpers/database.py:283
+msgid "Current level"
+msgstr "当前等级"
+
+#: cogs/helpers/data_store.py:196 cogs/helpers/data_store.py:197
+#: cogs/helpers/database.py:283 cogs/helpers/database.py:284
+msgid "nom"
+msgstr "nom"
+
+#: cogs/helpers/data_store.py:197 cogs/helpers/database.py:284
+msgid "Previous level"
+msgstr "上一级"
+
+#: cogs/helpers/data_store.py:198 cogs/helpers/database.py:285
+msgid "Shots accuracy"
+msgstr "准确性"
+
+#: cogs/helpers/data_store.py:199 cogs/helpers/database.py:286
+msgid "Weapon reliability"
+msgstr "武器可靠性"
+
+#: cogs/helpers/data_store.py:200 cogs/helpers/database.py:287
+msgid "Exp points"
+msgstr "经验值"
+
+#: cogs/helpers/data_store.py:206 cogs/helpers/database.py:293
+msgid ""
+":warning: There was an error while sending the embed, please check if the "
+"bot has the `embed_links` permission and try again!"
+msgstr ":warning: 发送嵌入文件时出错，请检查我是否有`嵌入文件`的权限，然后重试！"
+
+#: cogs/helpers/ducks.py:36
+msgid "Nothing"
+msgstr "没有什么"
+
+#: cogs/helpers/ducks.py:40
+msgid "a lot of bushes."
+msgstr "很多草丛"
+
+#: cogs/helpers/ducks.py:43
+msgid "a duck pin."
+msgstr "鸭子针"
+
+#: cogs/helpers/ducks.py:47
+msgid "a bullet"
+msgstr "一颗子弹"
+
+#: cogs/helpers/ducks.py:59
+msgid "a full magazine"
+msgstr "一梭子装满的弹夹"
+
+#: cogs/helpers/ducks.py:71
+msgid "a box of explosive ammo"
+msgstr "一盒爆炸性子弹"
+
+#: cogs/helpers/ducks.py:84
+msgid "an almost empty box of explosive ammo"
+msgstr "一盒几乎是空的爆炸性子弹"
+
+#: cogs/helpers/ducks.py:98
+msgid "some duck-grease"
+msgstr "一些润滑油"
+
+#: cogs/helpers/ducks.py:107
+msgid "a full-featured silencer"
+msgstr "一个功能齐全的消音器"
+
+#: cogs/helpers/ducks.py:116
+msgid "a fully functional infrared detector"
+msgstr "一个功能齐全的红外探测器"
+
+#: cogs/helpers/ducks.py:233
+msgid ""
+"**FLAPP**\tFrightened by so much noise, the duck fled! CONGRATS! [missed: -1 "
+"xp]"
+msgstr "**FLAPP** 鸭因被这么大的声音吓到而逃跑了！ 恭喜！ [错过: -1 xp]"
+
+#: cogs/helpers/ducks.py:244
+msgid "BPAM"
+msgstr "BPAM"
+
+#: cogs/helpers/ducks.py:248
+msgid "BAAM"
+msgstr "BAAM"
+
+#: cogs/helpers/ducks.py:252
+msgid "BOUM"
+msgstr "BOUM"
+
+#: cogs/helpers/ducks.py:252
+msgid "SPROTCH"
+msgstr "SPROTCH"
+
+#: cogs/helpers/ducks.py:304 cogs/helpers/ducks.py:307
+msgid "Searching the bushes around the duck, you found..."
+msgstr "搜索鸭子周围的草丛，您发现了..."
+
+#: cogs/helpers/ducks.py:307
+msgid "that you unfortunately couldn't take, because your backpack is full."
+msgstr "可是您无法携带，因为您的背包已满。"
+
+#: cogs/helpers/ducks.py:342
+msgid ""
+"That was close, you almost killed the duck, but the other hunter got it "
+"first! [missed: -1 xp]"
+msgstr "您差点杀了那只鸭子，但另一个猎人先把它杀了！ [错过：-1 xp]"
+
+#: cogs/helpers/ducks.py:376
+msgid "<:Wizzz:365870248554921985> Wizzz huggy ducky!"
+msgstr "<:Wizzz:365870248554921985> 拥抱鸭子！"
+
+#: cogs/helpers/ducks.py:381
+msgid ""
+":heart: You try to hug the duck, but it knows you killed its brother, so it "
+"fled from you and flew back into the pond![-2 exp]"
+msgstr ":heart: 您尝试拥抱鸭子，但它知道您杀死了它的兄弟，所以它从您身上逃离并飞回了池塘！[-2 exp]"
+
+#: cogs/helpers/ducks.py:383
+msgid ""
+":heart: You try to hug the duck, but it feels someting wrong about you, so "
+"it fled from you and flew back into the pond![-2 exp]"
+msgstr ":heart: 您尝试拥抱鸭子，但是它感觉您有些不对劲，所以它从你身上逃离并飞回了池塘！[-2 exp]"
+
+#: cogs/helpers/ducks.py:385
+msgid ""
+":heart: You try to hug the duck, but it saw the weapon you hid behind your "
+"back, so it fled from you and flew back into the pond! [-2 exp]"
+msgstr ":heart: 您试图拥抱鸭子，但是它看到了您藏在背后的武器，所以它从您身上逃离并飞回了池塘！ [-2 exp]"
+
+#: cogs/helpers/ducks.py:394
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the duck in {time} "
+"seconds, you are now at a grand total of {total} ducks (of which "
+"{supercanards} were super-ducks) killed on {channel}.     \\_X<   *COUAC*   "
+"{exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** "
+"您在{time}秒内杀死了鸭子，现在您在{channel}里总共杀死了{total}只鸭子（其中有{supercanards}是超级鸭子）。"
+
+#: cogs/helpers/ducks.py:402
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie} "
+"({current_life} / {max_life})]"
+msgstr ""
+":gun: 鸭子幸存了下来，再试一次！ *已探测到超级鸭子* [life: -{vie} ({current_life} / {max_life})]"
+
+#: cogs/helpers/ducks.py:404
+msgid ""
+":gun: The duck survived, try again! *SUPER DUCK DETECTED* [life: -{vie}]"
+msgstr ":gun: 鸭子幸存了下来，再试一次！ *已探测到超级鸭子*  [life: -{vie}]"
+
+#: cogs/helpers/ducks.py:600
+msgid ""
+"You have been tricked by {user_mention} to kill a mechanical duck. It "
+"obviously won't work, and you lost 1 exp for this missed shot"
+msgstr "{user_mention} 骗了你杀死了一只机械鸭子。 这明显的不会有作用，您因此为射偏了鸭子而损失了1点经验值。"
+
+#: cogs/helpers/ducks.py:650
+msgid "The baby duck left to take a little nap somewhere ·°'\\`'°-.,¸¸.·°'\\`"
+msgstr "小鸭去找地方睡觉了。·°'\\`'°-.,¸¸.·°'\\`"
+
+#: cogs/helpers/ducks.py:670
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\tYou killed the baby duck in {time} "
+"seconds, and you shouldn't have done this! You'll lose some exp, because you "
+"shouldn't kill babies\\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** 您在{time}秒内杀死了小鸭子，但您不应该这样做！ "
+"您会损失一些经验，因为您不应该杀死小鸭 "
+
+#: cogs/helpers/ducks.py:686
+msgid ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**\tYou hugged the baby duck, and "
+"now it is really happy! [3 exp]\n"
+"The baby duck left, feeling loved"
+msgstr ""
+"<:cmd_Hug_01:442695336348221451> **SMACK**  您擁抱了小鴨子，現在真的很開心！ [3 exp]\n"
+"小鴨子走了，感覺很愛"
+
+#: cogs/helpers/ducks.py:710
+msgid "**I AM...** Your mother"
+msgstr "**我是......** 你妈"
+
+#: cogs/helpers/ducks.py:718
+msgid ""
+":skull_crossbones: **{onomatopoeia}**\t You killed me in {time} seconds, but "
+"you won't kill my children! \\_X<   *COUAC*   {exp}"
+msgstr ""
+":skull_crossbones: **{onomatopoeia}** 您在{time}秒之内杀死了我，但您不会杀死我的孩子们的！ \\ _X <* "
+"COUAC * {exp}"
