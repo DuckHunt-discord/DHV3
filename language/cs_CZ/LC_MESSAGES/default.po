@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-10 20:29+0000\n"
+"POT-Creation-Date: 2020-09-28 11:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: bot.py:170
 msgid ":x: You haven't voted for DuckHunt on DiscordBotList for a while."
-msgstr ":x: Nějakou dobu jsi nevolil pro DuckHunt na DiscordBotList."
+msgstr ":x: Nějakou dobu jsi nevolil pro DuckHunt na DiscordBotListu."
 
 #: bot.py:171
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 
 #: bot.py:183
 msgid "You are on cooldown :(, try again in {seconds} seconds!"
-msgstr "Jsi na ?? :(, zkus to znovu za {seconds} sekunda/sekundy/sekund."
+msgstr "Počkej chvilku, zkus to znovu za {seconds} sekunda/sekundy/sekund."
 
 #: bot.py:189
 msgid ":bulb: HINT: "
@@ -113,6 +113,19 @@ msgstr "Hotovo. Pokud byl uživatel v databázi, byl z ní odstraněn."
 #: cogs/admin_commands.py:169
 msgid "Done. All channel data was removed."
 msgstr "Hotovo. Všechna data kanálu byla odstraněna."
+
+#: cogs/admin_commands.py:217
+msgid ""
+":x: Incorrect syntax. Use the command this way: `!settings [view/set/reset] "
+"[setting]`"
+msgstr ""
+":x: Nesprávný syntax. Používej tento příkaz tímto způsobem: `!settings [view/"
+"set/reset] [setting]`"
+
+#: cogs/admin_commands.py:228 cogs/admin_commands.py:244
+#: cogs/admin_commands.py:302
+msgid "Unknown setting..."
+msgstr "Neznámé nastavení..."
 
 #: cogs/admin_commands.py:231
 msgid ":ok: The setting {pref} is set to `{value}` on this guild."
@@ -228,6 +241,37 @@ msgstr ""
 "Bot se pravidelně restartuje kvůli updatům, ale žádné strachy, je 99.8% času "
 "online."
 
+#: cogs/meta.py:64
+msgid "https://docs.duckhunt.me/"
+msgstr "https://docs.duckhunt.me/"
+
+#: cogs/meta.py:71
+msgid "You don't have to go right now..."
+msgstr "Nepotřebuješ zrovna teď..."
+
+#: cogs/meta.py:76
+msgid ""
+"Follow this link to invite me to your server: https://docs.duckhunt.me/bot-"
+"administration/admin-quickstart"
+msgstr ""
+"Následuj tento link abys mě pozval do tvého serveru:\n"
+"https://docs.duckhunt.me/bot-administration/admin-quickstart"
+
+#: cogs/meta.py:82
+msgid ""
+"If you are a new player, read this: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Otherwise, here is the players command list <https://"
+"docs.duckhunt.me/players-guide/player-commands> and the admin commands "
+"<https://docs.duckhunt.me/bot-administration/admin-commands> | If you need "
+"anything, feel free to join the support server at https://discordapp.com/"
+"invite/2BksEkV"
+msgstr ""
+"Pokud jsi nový hráč, přečti si toto: <https://docs.duckhunt.me/players-guide/"
+"players-quickstart>. Jinak je zde seznam příkazů <https://docs.duckhunt.me/"
+"players-guide/player-commands> a příkazy pro adminy <https://docs.duckhunt."
+"me/bot-administration/admin-commands> | Pokud něco potřebuješ, můžeš se "
+"připojit na server podpory zde: https://discordapp.com/invite/2BksEkV"
+
 #: cogs/meta.py:95
 msgid ""
 "It's `{hour}:{minutes}:{seconds}` in the GMT timezone (also known as UTC±00:"
@@ -267,6 +311,22 @@ msgstr ""
 #: cogs/meta.py:130
 msgid "You are using shard number {shard} out of {total} total shards"
 msgstr "Používáš shard číslo {shard} z {total} shardů celkem."
+
+#: cogs/scores.py:49
+msgid ""
+"The scores are online at https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+msgstr ""
+"Skóre je online zde: https://duckstats.api-d.com/duckstats.php?cid="
+"{channel_id}"
+
+#: cogs/scores.py:255
+msgid ""
+"Your duckstats are waiting for you at https://duckstats.api-d.com/duckstats."
+"php?cid={channel_id}&pid={player_id}"
+msgstr ""
+"Tvoje kačeří statistiky na teebe čekají zde: https://duckstats.api-d.com/"
+"duckstats.php?cid={channel_id}&pid={player_id}"
 
 #: cogs/setup_wizzard.py:24
 msgid ""
@@ -866,6 +926,16 @@ msgstr ""
 ":money_with_wings: Kachna se objeví v dalších 10 minutách v tomto kanále, "
 "díky návnadě {mention}. Koupili ji za 8 expů!"
 
+#: cogs/shop.py:493
+msgid "The ducks are sensing your delicious wafers..."
+msgstr "Kachny cítí tvoje vynikající sušenky..."
+
+#: cogs/shop.py:500
+msgid ""
+":money_with_wings: You put some bread on the channel to attract ducks. "
+msgstr ""
+":money_with_wings: Dal si na kanál nějaký chleba abys přilákal kachny. "
+
 #: cogs/shop.py:505
 msgid ""
 ":money_with_wings: Bread can stack! Buy some more to maximise the effects!"
@@ -878,7 +948,7 @@ msgid ""
 ":money_with_wings: You prepared a mechanical duck on the channel for 40 exp. "
 "It's wrong, but so funny!"
 msgstr ""
-":money_with_wings: Připravil si mechanickou kachnu na kanál za 40 expů. Je "
+":money_with_wings: Připravil sis mechanickou kachnu na kanál za 40 expů. Je "
 "to špatné, ale tak vtipné!"
 
 #: cogs/user_commands.py:71 cogs/user_commands.py:158
@@ -991,7 +1061,11 @@ msgstr ""
 
 #: cogs/user_commands.py:443
 msgid "You hugged a tree, Wizzz?!"
-msgstr "Objal jsi strom, ?? ?!"
+msgstr "Objal jsi strom, Wizzi ?!"
+
+#: cogs/user_commands.py:446
+msgid "There isn't any duck in here, what did you plan to hug, a tree?!"
+msgstr "Není tu žádná kachna, co jsi plánoval obejmout, strom?"
 
 #: cogs/user_commands.py:462
 msgid "**Current event**"
@@ -1020,6 +1094,70 @@ msgstr "Já tě taky miluji!"
 #: cogs/helpers/config.py:67
 msgid "Don't shoot me! I'm a fake duck!"
 msgstr "Nestřílej mě! Já jsem falešná kachna!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Some ducks can fly up to 332 miles in a single day!"
+msgstr "**Kachní fakt**: Nějaké kachny dokážou letět až 534 km za den!"
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: The feathers on a ducks back are waterproof."
+msgstr "**Kachní fakt**: Pírka na kachních zádech jsou vodotěsná. "
+
+#: cogs/helpers/config.py:68
+msgid "**Duck fact**: Ducks have three eyelids!"
+msgstr "**Kachní fakt**: Kachny mají tři oční víčka!"
+
+#: cogs/helpers/config.py:68
+msgid ""
+"**Duck fact**: Depending on the species, a duck can live between 2 and 12 "
+"years. Not the ducks on this game tho..."
+msgstr ""
+"**Kachní fakt**: Podle druhu se kachny mohou dožít až 12-ti let. Ale ne v "
+"této hře..."
+
+#: cogs/helpers/config.py:69
+msgid "I am invisible, don't bother killing me"
+msgstr "Jsem neviditelná, neobtěžuj se mě zabíjet"
+
+#: cogs/helpers/config.py:69
+msgid "Who is the little ████ here that killed my friend ?"
+msgstr "Jaký malý █████████ tady zabil mého přítele?"
+
+#: cogs/helpers/config.py:69
+msgid "You can't aim for good..."
+msgstr "Nemůžeš zamířit dobře..."
+
+#: cogs/helpers/config.py:69
+msgid "The duck left."
+msgstr "Kachna odešla. "
+
+#: cogs/helpers/config.py:69
+msgid "The duck right."
+msgstr "Správná kachna. "
+
+#: cogs/helpers/config.py:69
+msgid "STOP! It's not what you think!"
+msgstr "POČKEJ! Není to co si myslíš!"
+
+#: cogs/helpers/config.py:70
+msgid "Killing me will cost you 1562 experience points."
+msgstr "Zabíjení mne tě bude stát 1562 expů. "
+
+#: cogs/helpers/config.py:70
+msgid ""
+"I have a secret plan to kill all hunters but I'm already short on breath I "
+"don't think I'll be able to explain it all to you before..."
+msgstr ""
+"Mám tajný plán jak zabít všechny lovce, ale už mi dochází dech, myslím, že "
+"ti ho nebudu moci vysvětlit předtím než..."
+
+#: cogs/helpers/config.py:70
+msgid "[INSERT DUCK NOISE HERE]"
+msgstr "[SEM VLOŽTE KACHNÍ ZVUK]"
+
+#: cogs/helpers/config.py:71
+msgid "It's rabbit season."
+msgstr "Je králičí sezóna. "
 
 #: cogs/helpers/config.py:77
 msgid "The duck went away.  ·°'\\`'°-.,¸¸.·°'\\`"
