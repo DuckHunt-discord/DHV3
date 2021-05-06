@@ -1,3 +1,9 @@
+⚠️ DuckHunt V3 is obselete and no longer maintained. The public bot has been migrated to [DuckHunt V4](https://github.com/DuckHunt-discord/DHV4) a while ago, and the DHV3 maintenance period is now over. If you selfhost the bot, you are encoraged to migrate to V4 as soon as possible. ⚠️
+
+The following is left for historical purposes.
+
+
+
 Choose your language : [FR](README_FR.md)
 
 # DuckHunt Version 3
